@@ -98,9 +98,6 @@ export function Header() {
 
         {/* Desktop Nav */}
         <nav className="hidden lg:flex items-center gap-8">
-          <Link to="/products" className="text-sm text-gray hover:text-sand transition-colors duration-200">
-            Products
-          </Link>
           <DropdownMenu
             label="Products"
             items={productsMenu}
