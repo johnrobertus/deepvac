@@ -1,97 +1,73 @@
 import { Layout } from "@/components/Layout";
-import { PageShell, PageHero, Section, CTABand } from "@/components/PageShell";
-import { PlaceholderImage } from "@/components/PlaceholderImage";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import { BentoGrid, BentoCard } from "@/components/BentoGrid";
-import { SectionHeader } from "@/components/SectionHeader";
-import { Crosshair, Gauge, Thermometer, Box, Wrench, Shield } from "lucide-react";
+import { PageShell } from "@/components/PageShell";
+import { HeroSection } from "@/components/home/HeroSection";
+import { TrustBarSection } from "@/components/home/TrustBarSection";
+import { CapabilitiesSection } from "@/components/home/CapabilitiesSection";
+import { ProductPortfolioSection } from "@/components/home/ProductPortfolioSection";
+import { ApplicationsSection } from "@/components/home/ApplicationsSection";
+import { ServicesSection } from "@/components/home/ServicesSection";
+import { WhyDeepvacSection } from "@/components/home/WhyDeepvacSection";
+import { TeamSection } from "@/components/home/TeamSection";
+import { CataloguesSection } from "@/components/home/CataloguesSection";
+import { ReferencesSection } from "@/components/home/ReferencesSection";
+import { LeadCaptureCTA } from "@/components/home/LeadCaptureCTA";
+import { ContactSection } from "@/components/home/ContactSection";
+import { FundingSection } from "@/components/home/FundingSection";
 
 const Index = () => {
   return (
     <Layout>
       <PageShell>
-        {/* Hero */}
-        <PageHero
-          eyebrow="Precision Vacuum Engineering"
-          title="Thermal Vacuum Chambers. Engineered in Germany."
-          description="DEEPVAC develops advanced thermal vacuum systems for aerospace simulation, environmental testing, and research applications."
-        >
-          <div className="flex flex-wrap gap-4 pt-4">
-            <Button asChild size="lg" className="font-mono text-xs tracking-wide">
-              <Link to="/contact">Request Technical Consultation</Link>
-            </Button>
-            <Button asChild variant="outline" size="lg">
-              <Link to="/products">Explore Products</Link>
-            </Button>
-          </div>
-        </PageHero>
+        {/* S1: Hero */}
+        <HeroSection />
 
-        {/* Hero Image */}
-        <Section>
-          <PlaceholderImage assetId="HERO_01" type="CHAMBER_RENDER" aspectRatio="21/9" />
-        </Section>
+        {/* S2: Trust Bar */}
+        <TrustBarSection />
 
-        {/* Trust Bar */}
-        <div className="border-y border-gray/10 py-8 px-6">
-          <div className="container max-w-6xl flex flex-wrap items-center justify-center gap-8 md:gap-16">
-            {["Aerospace", "Research", "Industrial", "Defense", "Space Simulation"].map((item) => (
-              <span key={item} className="mono-label text-gray/50">{item}</span>
-            ))}
-          </div>
-        </div>
+        {/* S3: Capabilities Bento */}
+        <CapabilitiesSection />
 
-        {/* Capabilities Bento */}
-        <Section>
-          <SectionHeader
-            eyebrow="Capabilities"
-            title="Engineering Excellence at Every Scale"
-            description="From standard chamber platforms to fully custom thermal vacuum solutions."
-            className="mb-12"
-          />
-          <BentoGrid>
-            <BentoCard span="2x1" className="flex flex-col justify-between gap-6">
-              <div className="flex items-start gap-4">
-                <Crosshair className="w-6 h-6 text-blue flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-lg font-medium text-sand">Standard Series Chambers</h3>
-                  <p className="text-sm text-gray mt-1">Pre-engineered TVAC platforms for proven performance and rapid deployment.</p>
-                </div>
-              </div>
-              <PlaceholderImage assetId="STD_01" type="PRODUCT" aspectRatio="16/7" />
-            </BentoCard>
-            <BentoCard>
-              <Gauge className="w-6 h-6 text-blue mb-4" />
-              <h3 className="text-base font-medium text-sand">Control Systems</h3>
-              <p className="text-sm text-gray mt-2">Advanced automation and monitoring for precision test environments.</p>
-            </BentoCard>
-            <BentoCard>
-              <Thermometer className="w-6 h-6 text-blue mb-4" />
-              <h3 className="text-base font-medium text-sand">Testing Services</h3>
-              <p className="text-sm text-gray mt-2">Thermal vacuum testing executed with engineering rigor.</p>
-            </BentoCard>
-            <BentoCard>
-              <Box className="w-6 h-6 text-blue mb-4" />
-              <h3 className="text-base font-medium text-sand">Custom TVAC</h3>
-              <p className="text-sm text-gray mt-2">Bespoke chamber design for unique mission requirements.</p>
-            </BentoCard>
-            <BentoCard>
-              <Wrench className="w-6 h-6 text-blue mb-4" />
-              <h3 className="text-base font-medium text-sand">Retrofit & Maintenance</h3>
-              <p className="text-sm text-gray mt-2">Modernisation, repair, and lifecycle extension of existing systems.</p>
-            </BentoCard>
-          </BentoGrid>
-        </Section>
+        {/* Divider */}
+        <div className="section-divider" />
 
-        {/* CTA */}
-        <CTABand
-          title="Start Your Next TVAC Project"
-          description="Speak directly with our engineering team about your thermal vacuum requirements."
-        >
-          <Button asChild size="lg" className="font-mono text-xs tracking-wide">
-            <Link to="/contact">Get in Touch</Link>
-          </Button>
-        </CTABand>
+        {/* S4: Product Portfolio */}
+        <ProductPortfolioSection />
+
+        {/* S5: Applications */}
+        <ApplicationsSection />
+
+        {/* Divider */}
+        <div className="section-divider" />
+
+        {/* S6: Services */}
+        <ServicesSection />
+
+        {/* S7: Why DEEPVAC */}
+        <WhyDeepvacSection />
+
+        {/* Divider */}
+        <div className="section-divider" />
+
+        {/* S8: Team */}
+        <TeamSection />
+
+        {/* S9: Catalogues */}
+        <CataloguesSection />
+
+        {/* S10: References */}
+        <ReferencesSection />
+
+        {/* S11: Lead Capture CTA */}
+        <LeadCaptureCTA />
+
+        {/* Divider */}
+        <div className="section-divider" />
+
+        {/* S12: Contact */}
+        <ContactSection />
+
+        {/* S13: Funding */}
+        <FundingSection />
       </PageShell>
     </Layout>
   );
