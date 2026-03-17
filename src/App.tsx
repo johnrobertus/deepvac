@@ -3,8 +3,25 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import Index from "./pages/Index.tsx";
-import NotFound from "./pages/NotFound.tsx";
+import Index from "./pages/Index";
+import Products from "./pages/Products";
+import StandardSeries from "./pages/StandardSeries";
+import CustomTVAC from "./pages/CustomTVAC";
+import Services from "./pages/Services";
+import {
+  TestingServices,
+  ControlSystemsDesign,
+  MechanicalDesign,
+  RetrofitModernisation,
+  MaintenanceRepair,
+  SubsystemIntegration,
+} from "./pages/ServicePages";
+import Team from "./pages/Team";
+import Catalogues from "./pages/Catalogues";
+import Careers from "./pages/Careers";
+import References from "./pages/References";
+import Contact from "./pages/Contact";
+import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
@@ -16,7 +33,21 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/products" element={<Products />} />
+          <Route path="/products/standard-series" element={<StandardSeries />} />
+          <Route path="/products/custom-tvac" element={<CustomTVAC />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/services/testing-services" element={<TestingServices />} />
+          <Route path="/services/control-systems-design" element={<ControlSystemsDesign />} />
+          <Route path="/services/mechanical-design" element={<MechanicalDesign />} />
+          <Route path="/services/retrofit-modernisation" element={<RetrofitModernisation />} />
+          <Route path="/services/maintenance-repair" element={<MaintenanceRepair />} />
+          <Route path="/services/subsystem-integration" element={<SubsystemIntegration />} />
+          <Route path="/team" element={<Team />} />
+          <Route path="/catalogues" element={<Catalogues />} />
+          <Route path="/careers" element={<Careers />} />
+          <Route path="/references" element={<References />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
