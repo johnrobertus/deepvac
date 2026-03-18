@@ -1,10 +1,11 @@
 import { Layout } from "@/components/Layout";
 import { PageShell, PageHero, Section, CTABand } from "@/components/PageShell";
-import { PlaceholderImage } from "@/components/PlaceholderImage";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Linkedin, Cpu, Thermometer, Settings, Users } from "lucide-react";
+import johnPhoto from "@/assets/john-robertus.jpg";
+import antonPhoto from "@/assets/anton-opalikhin.jpg";
 
 const founders = [
   {
