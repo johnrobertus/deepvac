@@ -1,18 +1,21 @@
 import { SectionHeader } from "@/components/SectionHeader";
-import { PlaceholderImage } from "@/components/PlaceholderImage";
 import { Reveal } from "@/components/Reveal";
 import { Linkedin } from "lucide-react";
+import johnPhoto from "@/assets/john-robertus.jpg";
+import antonPhoto from "@/assets/anton-opalikhin.jpg";
 
 const team = [
   {
     name: "John Robertus",
     role: "CEO | Co-Founder",
     description: "Electrical engineer specialized in AI integration for mechatronic systems.",
+    photo: johnPhoto,
   },
   {
     name: "Anton Opalikhin",
     role: "CTO | Co-Founder",
     description: "Mechanical engineer specialized in refrigeration and test chamber development.",
+    photo: antonPhoto,
   },
 ];
 
@@ -34,12 +37,14 @@ export function TeamSection() {
           {team.map((member, i) => (
             <Reveal key={member.name} delay={i * 100}>
               <div className="bento-card rounded-lg overflow-hidden group h-full">
-                <PlaceholderImage
-                  assetId={member.name.split(" ")[1]?.toUpperCase() || "TEAM"}
-                  type="PORTRAIT"
-                  aspectRatio="4/5"
-                  className="rounded-none"
-                />
+                <div className="aspect-[4/5] overflow-hidden">
+                  <img
+                    src={member.photo}
+                    alt={`${member.name} — ${member.role}`}
+                    className="w-full h-full object-cover object-top"
+                    loading="lazy"
+                  />
+                </div>
                 <div className="p-5 space-y-2">
                   <div className="flex items-center justify-between">
                     <h3 className="text-base font-medium text-sand">{member.name}</h3>
