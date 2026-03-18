@@ -65,7 +65,7 @@ export function ProductPortfolioSection() {
                   <div className={`relative overflow-hidden ${i % 2 === 1 ? "lg:order-2" : ""}`}>
                     <img
                       src={product.image}
-                      alt={`DEEPVAC ${product.title} — ${product.subtitle}`}
+                      alt={`Deepvac ${product.title} — ${product.subtitle}`}
                       className="w-full h-full object-cover min-h-[280px] lg:min-h-[360px] transition-transform duration-500 group-hover:scale-[1.02]"
                       loading="lazy"
                     />

@@ -18,7 +18,7 @@ export function CataloguesSection() {
           />
         </Reveal>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {["DEEPVAC Company Overview", "TVAC Product Brochure", "Technical Specifications"].map((title, i) => (
+          {["Deepvac Company Overview", "TVAC Product Brochure", "Technical Specifications"].map((title, i) => (
             <Reveal key={title} delay={i * 80}>
               <div className="bento-card rounded-lg overflow-hidden group cursor-pointer h-full">
                 <PlaceholderImage assetId="BROCHURE" type="PDF_COVER" aspectRatio="3/4" className="rounded-none" />

@@ -27,7 +27,7 @@ export function TeamSection() {
             className="mb-6"
           />
           <p className="text-sm text-gray leading-relaxed max-w-3xl mb-14">
-            DEEPVAC is led by a founding team with more than 15 years of combined experience in the development and manufacturing of test chamber systems. Combining electrical engineering, mechatronics, refrigeration expertise, and chamber development know-how, the team brings complementary competencies required for advanced thermal vacuum system design.
+            Deepvac is led by a founding team with more than 15 years of combined experience in the development and manufacturing of test chamber systems. Combining electrical engineering, mechatronics, refrigeration expertise, and chamber development know-how, the team brings complementary competencies required for advanced thermal vacuum system design.
           </p>
         </Reveal>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl">

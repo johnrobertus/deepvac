@@ -26,7 +26,7 @@ export function ApplicationsSection() {
           <SectionHeader
             eyebrow="Applications"
             title="Built for Critical Test Campaigns"
-            description="DEEPVAC chamber platforms support a range of aerospace, research, and industrial test scenarios."
+            description="Deepvac chamber platforms support a range of aerospace, research, and industrial test scenarios."
             className="mb-14"
           />
         </Reveal>

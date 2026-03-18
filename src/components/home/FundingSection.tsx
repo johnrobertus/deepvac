@@ -1,4 +1,3 @@
-import { PlaceholderImage } from "@/components/PlaceholderImage";
 import { Reveal } from "@/components/Reveal";
 
 export function FundingSection() {
@@ -18,7 +17,7 @@ export function FundingSection() {
             <div>
               <span className="mono-label text-blue">Funded & Supported</span>
               <p className="text-xs text-gray/60 mt-1 leading-relaxed">
-                DEEPVAC is supported through public funding programs. Institutional and program logos will be displayed as formal approvals are confirmed.
+                Deepvac is supported through public funding programs. Institutional and program logos will be displayed as formal approvals are confirmed.
               </p>
             </div>
           </div>
