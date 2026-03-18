@@ -70,7 +70,9 @@ const Team = () => (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl">
           {founders.map((member) => (
             <div key={member.name} className="bento-card rounded-lg overflow-hidden">
-              <PlaceholderImage assetId={member.name.split(" ")[1]?.toUpperCase() || "TEAM"} type="PORTRAIT" aspectRatio="4/5" className="rounded-none" />
+              <div className="aspect-[4/5] overflow-hidden">
+                <img src={member.photo} alt={`${member.name} — ${member.role}`} className="w-full h-full object-cover object-top" loading="lazy" />
+              </div>
               <div className="p-6 space-y-4">
                 <div className="flex items-center justify-between">
                   <div>
