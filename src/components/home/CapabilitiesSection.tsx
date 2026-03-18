@@ -1,5 +1,6 @@
 import { SectionHeader } from "@/components/SectionHeader";
 import { BentoGrid, BentoCard } from "@/components/BentoGrid";
+import { Reveal } from "@/components/Reveal";
 import {
   Crosshair,
   Settings,
@@ -58,24 +59,30 @@ export function CapabilitiesSection() {
   return (
     <section className="py-20 md:py-28 px-6">
       <div className="container max-w-6xl">
-        <SectionHeader
-          eyebrow="Core Capabilities"
-          title="Engineering Excellence at Every Scale"
-          description="From standardised chamber platforms to fully bespoke thermal vacuum solutions — designed, built, and supported by DEEPVAC."
-          className="mb-14"
-        />
+        <Reveal>
+          <SectionHeader
+            eyebrow="Core Capabilities"
+            title="Engineering Excellence at Every Scale"
+            description="From standardised chamber platforms to fully bespoke thermal vacuum solutions — designed, built, and supported by DEEPVAC."
+            className="mb-14"
+          />
+        </Reveal>
         <BentoGrid className="lg:grid-cols-4">
-          {capabilities.map((cap) => (
-            <BentoCard key={cap.title} span={cap.span} className="flex flex-col gap-4">
-              <div className="text-blue">{cap.icon}</div>
-              <div>
-                <h3 className="text-base font-medium text-sand">{cap.title}</h3>
-                <p className="text-sm text-gray mt-2 leading-relaxed">{cap.description}</p>
-              </div>
-              <span className="mono-label text-gray/30 mt-auto">
-                [{cap.title.split(" ")[0].toUpperCase()}]
-              </span>
-            </BentoCard>
+          {capabilities.map((cap, i) => (
+            <Reveal key={cap.title} delay={i * 60}>
+              <BentoCard span={cap.span} className="flex flex-col gap-4 h-full">
+                <div className="w-9 h-9 rounded-sm bg-blue/10 border border-blue/20 flex items-center justify-center text-blue">
+                  {cap.icon}
+                </div>
+                <div>
+                  <h3 className="text-base font-medium text-sand">{cap.title}</h3>
+                  <p className="text-sm text-gray mt-2 leading-relaxed">{cap.description}</p>
+                </div>
+                <span className="mono-label text-gray/20 mt-auto">
+                  [{cap.title.split(" ")[0].toUpperCase()}]
+                </span>
+              </BentoCard>
+            </Reveal>
           ))}
         </BentoGrid>
       </div>
