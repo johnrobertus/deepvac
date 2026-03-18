@@ -4,17 +4,17 @@ import { Reveal } from "@/components/Reveal";
 import heroChamber from "@/assets/hero-chamber.jpg";
 
 const specChips = [
-"High-Vacuum Environments",
-"Thermal Cycling Workflows",
-"Custom Chamber Architectures",
-"Integrated Control Systems"];
+"HIGH-VACUUM ENVIRONMENTS",
+"THERMAL CYCLING WORKFLOWS",
+"CUSTOM CHAMBER ARCHITECTURES",
+"INTEGRATED CONTROL SYSTEMS"];
 
 
 const trustCues = [
-"Modular Systems",
-"Custom Engineering",
-"Aerospace Applications",
-"Service & Retrofit"];
+"MODULAR SYSTEMS",
+"CUSTOM ENGINEERING",
+"AEROSPACE APPLICATIONS",
+"SERVICE & RETROFIT"];
 
 
 export function HeroSection() {
@@ -27,19 +27,16 @@ export function HeroSection() {
             <div className="space-y-8">
               <Reveal>
                 <div className="space-y-4">
-                  <span className="mono-label text-blue">Precision Vacuum Engineering — Made in Germany</span>
+                  <span className="mono-label text-blue">PRECISION VACUUM ENGINEERING. MADE IN GERMANY.</span>
                   <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] font-medium tracking-tight text-sand leading-[1.1]">
                     Thermal Vacuum Chamber Systems for Space Qualification
                   </h1>
-                  <p className="text-xl md:text-2xl text-gray font-light tracking-tight">
-                    Thermal Vacuum Testing. Reimagined.
-                  </p>
                 </div>
               </Reveal>
 
               <Reveal delay={100}>
                 <p className="text-sm text-gray leading-relaxed max-w-lg">
-                  Deepvac develops advanced thermal vacuum systems for the qualification, validation, and environmental simulation of aerospace hardware. Our chamber platforms are engineered to recreate controlled high-vacuum and thermal test conditions for components, subsystems, and mission-critical assemblies.
+                  Deepvac develops modular and custom thermal vacuum chamber systems for the qualification, validation, and environmental simulation of aerospace hardware. Our platforms combine high-vacuum performance, precise thermal control, and application-specific system integration for reliable test execution in research, institutional, and commercial space programs
                 </p>
               </Reveal>
 
@@ -78,22 +75,22 @@ export function HeroSection() {
 
                   {/* Floating Spec Cards */}
                   <div className="absolute top-4 left-4 glass-overlay rounded-md px-3 py-2">
-                    <span className="mono-label text-blue-light">Vacuum</span>
+                    <span className="mono-label text-blue-light">VACUUM</span>
                     <p className="font-mono text-xs text-sand mt-0.5">High-Vacuum Regime</p>
                   </div>
 
                   <div className="absolute top-4 right-4 glass-overlay rounded-md px-3 py-2">
-                    <span className="mono-label text-blue-light">Thermal</span>
+                    <span className="mono-label text-blue-light">THERMAL</span>
                     <p className="font-mono text-xs text-sand mt-0.5">Precision Cycling</p>
                   </div>
 
                   <div className="absolute bottom-4 left-4 glass-overlay rounded-md px-3 py-2">
-                    <span className="mono-label text-blue-light">Controls</span>
+                    <span className="mono-label text-blue-light">CONTROLS</span>
                     <p className="font-mono text-xs text-sand mt-0.5">Intelligent Automation</p>
                   </div>
 
                   <div className="absolute bottom-4 right-4 glass-overlay rounded-md px-3 py-2">
-                    <span className="mono-label text-blue-light">Integration</span>
+                    <span className="mono-label text-blue-light">INTEGRATION</span>
                     <p className="font-mono text-xs text-sand mt-0.5">Custom Interfaces</p>
                   </div>
                 </div>
