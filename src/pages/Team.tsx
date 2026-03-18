@@ -14,6 +14,7 @@ const founders = [
     description: "Electrical engineer specialized in AI integration for mechatronic systems. John brings deep expertise in control architecture design, intelligent automation, and system-level integration for complex test environments.",
     focus: ["Control Systems & Automation", "AI-Driven Mechatronics", "System Architecture"],
     icon: Cpu,
+    photo: johnPhoto,
   },
   {
     name: "Anton Opalikhin",
@@ -21,6 +22,7 @@ const founders = [
     description: "Mechanical engineer specialized in refrigeration and test chamber development. Anton leads the design and engineering of thermal vacuum chamber platforms, thermal subsystems, and mechanical integration.",
     focus: ["Chamber Development", "Refrigeration Engineering", "Mechanical Design"],
     icon: Thermometer,
+    photo: antonPhoto,
   },
 ];
 
