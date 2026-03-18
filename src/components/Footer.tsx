@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
+import { Phone, Mail } from "lucide-react";
 
 const footerNav = {
   Products: [
     { label: "Standard Series", href: "/products/standard-series" },
     { label: "Custom TVAC", href: "/products/custom-tvac" },
+    { label: "All Products", href: "/products" },
   ],
   Services: [
     { label: "Testing Services", href: "/services/testing-services" },
@@ -33,11 +35,17 @@ export function Footer() {
               DEEPVAC
             </span>
             <p className="text-sm text-gray leading-relaxed">
-              Precision Vacuum Engineering.
-              <br />
-              Made in Germany.
+              Advanced thermal vacuum chamber systems for aerospace qualification, space simulation, and environmental testing.
             </p>
-            <div className="pt-2">
+            <div className="space-y-2 pt-2">
+              <a href="tel:+4915783027099" className="flex items-center gap-2 text-xs text-gray hover:text-sand transition-colors">
+                <Phone className="w-3 h-3 text-blue" /> +49 157 830 270 99
+              </a>
+              <a href="mailto:info@deepvac.space" className="flex items-center gap-2 text-xs text-gray hover:text-sand transition-colors">
+                <Mail className="w-3 h-3 text-blue" /> info@deepvac.space
+              </a>
+            </div>
+            <div className="pt-1">
               <a
                 href="https://linkedin.com"
                 target="_blank"
@@ -86,12 +94,6 @@ export function Footer() {
             <Link to="/privacy" className="text-xs text-gray/50 hover:text-gray transition-colors">
               Privacy Policy
             </Link>
-          </div>
-          <div className="flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-            <span className="font-mono text-[10px] text-gray/40 uppercase tracking-widest">
-              System Status: Nominal
-            </span>
           </div>
         </div>
       </div>
