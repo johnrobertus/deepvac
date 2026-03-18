@@ -5,11 +5,13 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const productsMenu = [
+  { label: "Overview", href: "/products" },
   { label: "Standard Series", href: "/products/standard-series" },
   { label: "Custom TVAC", href: "/products/custom-tvac" },
 ];
 
 const servicesMenu = [
+  { label: "Overview", href: "/services" },
   { label: "Testing Services", href: "/services/testing-services" },
   { label: "Control Systems Design", href: "/services/control-systems-design" },
   { label: "Mechanical Design", href: "/services/mechanical-design" },
@@ -60,12 +62,15 @@ function DropdownMenu({
       {open && (
         <div className="absolute top-full left-0 mt-3 min-w-[220px] bg-surface border border-gray/15 border-t-2 border-t-blue rounded-lg shadow-lg z-50 animate-fade-in">
           <div className="py-2">
-            {items.map((item) => (
+            {items.map((item, i) => (
               <Link
                 key={item.href}
                 to={item.href}
                 onClick={onClose}
-                className="block px-4 py-2.5 text-sm text-gray hover:text-sand hover:bg-surface-raised transition-colors duration-150"
+                className={cn(
+                  "block px-4 py-2.5 text-sm text-gray hover:text-sand hover:bg-surface-raised transition-colors duration-150",
+                  i === 0 && "font-medium text-sand"
+                )}
               >
                 {item.label}
               </Link>
@@ -82,7 +87,6 @@ export function Header() {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const location = useLocation();
 
-  // Close mobile menu on route change
   useEffect(() => {
     setMobileOpen(false);
     setOpenDropdown(null);
@@ -91,12 +95,10 @@ export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-gray/10">
       <div className="container max-w-6xl flex items-center justify-between h-16 px-6">
-        {/* Logo */}
         <Link to="/" className="text-sand font-semibold text-lg tracking-tight">
           DEEPVAC
         </Link>
 
-        {/* Desktop Nav */}
         <nav className="hidden lg:flex items-center gap-8">
           <DropdownMenu
             label="Products"
@@ -123,14 +125,12 @@ export function Header() {
           ))}
         </nav>
 
-        {/* Desktop CTA */}
         <div className="hidden lg:block">
           <Button asChild size="sm" className="font-mono text-xs tracking-wide">
             <Link to="/contact">Request Technical Consultation</Link>
           </Button>
         </div>
 
-        {/* Mobile Toggle */}
         <button
           className="lg:hidden text-sand"
           onClick={() => setMobileOpen(!mobileOpen)}
@@ -139,11 +139,9 @@ export function Header() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
       {mobileOpen && (
         <div className="lg:hidden bg-surface border-t border-gray/10 animate-fade-in">
           <div className="container max-w-6xl px-6 py-6 space-y-6">
-            {/* Products */}
             <MobileSection label="Products" items={productsMenu} />
             <MobileSection label="Services" items={servicesMenu} />
             {navLinks.map((link) => (
