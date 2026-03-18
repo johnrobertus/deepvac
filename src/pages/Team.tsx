@@ -1,10 +1,11 @@
 import { Layout } from "@/components/Layout";
 import { PageShell, PageHero, Section, CTABand } from "@/components/PageShell";
-import { PlaceholderImage } from "@/components/PlaceholderImage";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Linkedin, Cpu, Thermometer, Settings, Users } from "lucide-react";
+import johnPhoto from "@/assets/john-robertus.jpg";
+import antonPhoto from "@/assets/anton-opalikhin.jpg";
 
 const founders = [
   {
@@ -13,6 +14,7 @@ const founders = [
     description: "Electrical engineer specialized in AI integration for mechatronic systems. John brings deep expertise in control architecture design, intelligent automation, and system-level integration for complex test environments.",
     focus: ["Control Systems & Automation", "AI-Driven Mechatronics", "System Architecture"],
     icon: Cpu,
+    photo: johnPhoto,
   },
   {
     name: "Anton Opalikhin",
@@ -20,6 +22,7 @@ const founders = [
     description: "Mechanical engineer specialized in refrigeration and test chamber development. Anton leads the design and engineering of thermal vacuum chamber platforms, thermal subsystems, and mechanical integration.",
     focus: ["Chamber Development", "Refrigeration Engineering", "Mechanical Design"],
     icon: Thermometer,
+    photo: antonPhoto,
   },
 ];
 
@@ -67,7 +70,9 @@ const Team = () => (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl">
           {founders.map((member) => (
             <div key={member.name} className="bento-card rounded-lg overflow-hidden">
-              <PlaceholderImage assetId={member.name.split(" ")[1]?.toUpperCase() || "TEAM"} type="PORTRAIT" aspectRatio="4/5" className="rounded-none" />
+              <div className="aspect-[4/5] overflow-hidden">
+                <img src={member.photo} alt={`${member.name} — ${member.role}`} className="w-full h-full object-cover object-top" loading="lazy" />
+              </div>
               <div className="p-6 space-y-4">
                 <div className="flex items-center justify-between">
                   <div>
