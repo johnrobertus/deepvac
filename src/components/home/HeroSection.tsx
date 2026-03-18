@@ -4,17 +4,17 @@ import { Reveal } from "@/components/Reveal";
 import heroChamber from "@/assets/hero-chamber.jpg";
 
 const specChips = [
-"High-Vacuum Environments",
-"Thermal Cycling Workflows",
-"Custom Chamber Architectures",
-"Integrated Control Systems"];
+"HIGH-VACUUM ENVIRONMENTS",
+"THERMAL CYCLING WORKFLOWS",
+"CUSTOM CHAMBER ARCHITECTURES",
+"INTEGRATED CONTROL SYSTEMS"];
 
 
 const trustCues = [
-"Modular Systems",
-"Custom Engineering",
-"Aerospace Applications",
-"Service & Retrofit"];
+"MODULAR SYSTEMS",
+"CUSTOM ENGINEERING",
+"AEROSPACE APPLICATIONS",
+"SERVICE & RETROFIT"];
 
 
 export function HeroSection() {
