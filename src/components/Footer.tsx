@@ -33,14 +33,11 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <Link to="/">
-              <img
-                src={deepvacLogo}
-                alt="Deepvac"
-                className="h-6 w-auto"
-              />
+              <img src={deepvacLogo} alt="Deepvac" className="h-6 w-auto" />
             </Link>
             <p className="text-sm text-gray leading-relaxed">
-              Advanced thermal vacuum chamber systems for aerospace qualification, space simulation, and environmental testing.
+              Advanced thermal vacuum chamber systems for aerospace qualification, space simulation, and environmental
+              testing.
             </p>
             <div className="space-y-2 pt-2 text-xs text-gray">
               <div className="flex items-start gap-2">
@@ -56,7 +53,7 @@ export function Footer() {
             </div>
             <div className="pt-1">
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/deepvac-gmbh/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mono-label text-gray hover:text-blue transition-colors"
@@ -73,10 +70,7 @@ export function Footer() {
               <ul className="space-y-2.5">
                 {links.map((link) => (
                   <li key={link.href}>
-                    <Link
-                      to={link.href}
-                      className="text-sm text-gray hover:text-sand transition-colors duration-150"
-                    >
+                    <Link to={link.href} className="text-sm text-gray hover:text-sand transition-colors duration-150">
                       {link.label}
                     </Link>
                   </li>
