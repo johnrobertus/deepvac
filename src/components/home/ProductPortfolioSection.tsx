@@ -3,7 +3,7 @@ import { SectionHeader } from "@/components/SectionHeader";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/Reveal";
 import { ArrowRight } from "lucide-react";
-import tseriesImg from "@/assets/tseries-chamber.jpg";
+import tseriesImg from "@/assets/tseries-chamber.png";
 import cseriesImg from "@/assets/cseries-chamber.jpg";
 import customImg from "@/assets/custom-chamber.jpg";
 
