@@ -87,10 +87,12 @@ const Careers = () =>
       </Section>
 
       <Section className="bg-surface/30">
-        
-
-
-
+        <SectionHeader
+          eyebrow="Culture"
+          title="How We Work"
+          description="Deepvac operates with a hands-on engineering culture where technical depth and collaborative problem-solving drive every project forward."
+        />
+      </Section>
 
 
 
