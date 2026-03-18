@@ -4,18 +4,18 @@ import { Reveal } from "@/components/Reveal";
 import heroChamber from "@/assets/hero-chamber.jpg";
 
 const specChips = [
-  "High-Vacuum Environments",
-  "Thermal Cycling Workflows",
-  "Custom Chamber Architectures",
-  "Integrated Control Systems",
-];
+"High-Vacuum Environments",
+"Thermal Cycling Workflows",
+"Custom Chamber Architectures",
+"Integrated Control Systems"];
+
 
 const trustCues = [
-  "Modular Systems",
-  "Custom Engineering",
-  "Aerospace Applications",
-  "Service & Retrofit",
-];
+"Modular Systems",
+"Custom Engineering",
+"Aerospace Applications",
+"Service & Retrofit"];
+
 
 export function HeroSection() {
   return (
@@ -50,27 +50,27 @@ export function HeroSection() {
               </Reveal>
 
               <Reveal delay={200}>
-                <div className="flex flex-wrap gap-3 pt-2">
-                  <Button asChild size="lg" className="font-mono text-xs tracking-wide">
-                    <Link to="/contact">Request a Technical Consultation</Link>
-                  </Button>
-                  <Button asChild variant="outline" size="lg">
-                    <Link to="/products">Explore TVAC Platforms</Link>
-                  </Button>
-                </div>
+                
+
+
+
+
+
+
+                
               </Reveal>
 
               <Reveal delay={250}>
                 <div className="flex flex-wrap gap-3 pt-4">
-                  {trustCues.map((cue) => (
-                    <span
-                      key={cue}
-                      className="inline-flex items-center gap-1.5 rounded-sm border border-gray/15 bg-surface px-3 py-1.5 font-mono text-[10px] uppercase tracking-widest text-gray/60"
-                    >
+                  {trustCues.map((cue) =>
+                  <span
+                    key={cue}
+                    className="inline-flex items-center gap-1.5 rounded-sm border border-gray/15 bg-surface px-3 py-1.5 font-mono text-[10px] uppercase tracking-widest text-gray/60">
+                    
                       <span className="w-1 h-1 rounded-full bg-blue/60" />
                       {cue}
                     </span>
-                  ))}
+                  )}
                 </div>
               </Reveal>
             </div>
@@ -83,8 +83,8 @@ export function HeroSection() {
                     src={heroChamber}
                     alt="Deepvac thermal vacuum chamber system for aerospace qualification and space simulation testing"
                     className="w-full h-auto object-cover"
-                    loading="eager"
-                  />
+                    loading="eager" />
+                  
 
                   {/* Floating Spec Cards */}
                   <div className="absolute top-4 left-4 glass-overlay rounded-md px-3 py-2">
@@ -110,20 +110,20 @@ export function HeroSection() {
 
                 {/* Spec Chips Below Image */}
                 <div className="flex flex-wrap gap-2 mt-4">
-                  {specChips.map((chip) => (
-                    <span
-                      key={chip}
-                      className="inline-flex items-center rounded-sm border border-blue/20 bg-surface px-2.5 py-1 font-mono text-[9px] uppercase tracking-widest text-blue/70"
-                    >
+                  {specChips.map((chip) =>
+                  <span
+                    key={chip}
+                    className="inline-flex items-center rounded-sm border border-blue/20 bg-surface px-2.5 py-1 font-mono text-[9px] uppercase tracking-widest text-blue/70">
+                    
                       {chip}
                     </span>
-                  ))}
+                  )}
                 </div>
               </div>
             </Reveal>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 }
