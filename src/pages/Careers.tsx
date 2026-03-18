@@ -7,12 +7,12 @@ import { ArrowRight, MapPin, Clock, Wrench, Cpu, Settings, Users } from "lucide-
 
 const openings = [
   {
-    title: "Initiativbewerbung",
+    title: "General Application",
     type: "Full-time",
     location: "Garbsen, Germany",
-    department: "Engineering / Operations",
+    department: "Engineering",
     description:
-      "You would like to join Deepvac, but there is no matching open role at the moment? We would still be glad to hear from you. Send us your initiative application and tell us how you can contribute to our team.",
+      "We are always interested in hearing from talented people who want to contribute to Deepvac. If there is no suitable position listed at the moment, feel free to send us your application.",
   },
 ];
 
@@ -114,9 +114,9 @@ const Careers = () => (
         />
         <div className="space-y-4">
           {openings.map((role) => (
-            <Link
-              to="/contact"
+            <a
               key={role.title}
+              href="mailto:careers@deepvac.space?subject=General%20Application"
               className="bento-card rounded-lg p-6 flex flex-col md:flex-row md:items-center gap-4 md:gap-8 cursor-pointer group block"
             >
               <div className="flex-1 space-y-2">
@@ -142,7 +142,7 @@ const Careers = () => (
                   <ArrowRight className="w-4 h-4" />
                 </span>
               </div>
-            </Link>
+            </a>
           ))}
         </div>
       </Section>
