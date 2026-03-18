@@ -97,14 +97,17 @@ export function ContactSection() {
 
               {/* Map placeholder */}
               <div className="bento-card rounded-lg overflow-hidden">
-                <div className="h-48 blueprint-grid flex items-center justify-center relative">
-                  <div className="text-center space-y-2">
-                    <MapPin className="w-6 h-6 text-blue/40 mx-auto" />
-                    <span className="mono-label text-gray/30">[MAP — Garbsen, Germany]</span>
-                  </div>
-                  <div className="absolute bottom-3 right-3 glass-overlay rounded-sm px-2 py-1">
-                    <span className="mono-label text-blue-light/60">30823 Garbsen</span>
-                  </div>
+                <div className="h-48" style={{ filter: "invert(0.9) hue-rotate(180deg)" }}>
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2434.0!2d9.7069!3d52.3911!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b074d80e5b6d4b%3A0x4a5c4b4e4e4e4e4e!2sAn+der+Universit%C3%A4t+1%2C+30823+Garbsen!5e0!3m2!1sde!2sde!4v1700000000000"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Deepvac GmbH Location"
+                  />
                 </div>
               </div>
 
