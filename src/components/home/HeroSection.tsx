@@ -45,7 +45,7 @@ export function HeroSection() {
 
               <Reveal delay={150}>
                 <p className="text-sm text-gray/70 leading-relaxed max-w-lg">
-                  Combining modular chamber architectures, precision thermal control, and intelligent system integration, DEEPVAC supports repeatable test workflows, low-contamination environments, and application-specific system configurations for demanding space and research programs.
+                  Combining modular chamber architectures, precision thermal control, and intelligent system integration, Deepvac supports repeatable test workflows, low-contamination environments, and application-specific system configurations for demanding space and research programs.
                 </p>
               </Reveal>
 
