@@ -8,7 +8,7 @@ import { PlaceholderImage } from "@/components/PlaceholderImage";
 import { TechChip } from "@/components/TechChip";
 import { ArrowRight, Maximize, Circle, Thermometer, Gauge, Wrench, Cpu } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import tseriesImg from "@/assets/tseries-chamber.jpg";
+import tseriesImg from "@/assets/tseries-chamber.png";
 import cseriesImg from "@/assets/cseries-chamber.jpg";
 
 const tSeriesFeatures = [

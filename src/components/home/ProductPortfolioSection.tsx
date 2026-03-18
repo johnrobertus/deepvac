@@ -3,7 +3,7 @@ import { SectionHeader } from "@/components/SectionHeader";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/Reveal";
 import { ArrowRight } from "lucide-react";
-import tseriesImg from "@/assets/tseries-chamber.jpg";
+import tseriesImg from "@/assets/tseries-chamber.png";
 import cseriesImg from "@/assets/cseries-chamber.jpg";
 import customImg from "@/assets/custom-chamber.jpg";
 
@@ -62,11 +62,11 @@ export function ProductPortfolioSection() {
               <div className="bento-card rounded-lg overflow-hidden group">
                 <div className="grid grid-cols-1 lg:grid-cols-2">
                   {/* Image */}
-                  <div className={`relative overflow-hidden ${i % 2 === 1 ? "lg:order-2" : ""}`}>
+                  <div className={`relative overflow-hidden bg-[#0a0a0a] flex items-center justify-center ${i % 2 === 1 ? "lg:order-2" : ""}`}>
                     <img
                       src={product.image}
                       alt={`Deepvac ${product.title} — ${product.subtitle}`}
-                      className="w-full h-full object-cover min-h-[280px] lg:min-h-[360px] transition-transform duration-500 group-hover:scale-[1.02]"
+                      className="w-full h-full object-contain max-h-[400px] lg:max-h-[420px] p-4 transition-transform duration-500 group-hover:scale-[1.02]"
                       loading="lazy"
                     />
                     <div className="absolute bottom-3 left-3 flex flex-wrap gap-1.5">
