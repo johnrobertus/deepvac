@@ -15,10 +15,10 @@ const qualifierOptions = {
 };
 
 const faqs = [
-  { q: "What information should I prepare before contacting DEEPVAC?", a: "A productive initial conversation typically covers: test article dimensions and mass, required pressure and temperature ranges, thermal cycling requirements, feedthrough and instrumentation needs, facility constraints, and project timeline. DEEPVAC can guide this requirements definition process if needed." },
-  { q: "What is the typical response time?", a: "DEEPVAC aims to respond to technical inquiries within two business days. Complex configuration requests may require additional time for initial technical assessment." },
-  { q: "Can DEEPVAC support projects outside Germany?", a: "Yes. DEEPVAC provides engineering, delivery, installation, and commissioning services internationally. Project logistics are discussed during the initial consultation." },
-  { q: "Is there a minimum project size?", a: "DEEPVAC serves projects ranging from standard chamber deliveries to complex custom system developments. Contact us to discuss your specific requirements and scope." },
+  { q: "What information should I prepare before contacting Deepvac?", a: "A productive initial conversation typically covers: test article dimensions and mass, required pressure and temperature ranges, thermal cycling requirements, feedthrough and instrumentation needs, facility constraints, and project timeline. Deepvac can guide this requirements definition process if needed." },
+  { q: "What is the typical response time?", a: "Deepvac aims to respond to technical inquiries within two business days. Complex configuration requests may require additional time for initial technical assessment." },
+  { q: "Can Deepvac support projects outside Germany?", a: "Yes. Deepvac provides engineering, delivery, installation, and commissioning services internationally. Project logistics are discussed during the initial consultation." },
+  { q: "Is there a minimum project size?", a: "Deepvac serves projects ranging from standard chamber deliveries to complex custom system developments. Contact us to discuss your specific requirements and scope." },
 ];
 
 function FormField({
@@ -156,7 +156,7 @@ const Contact = () => {
                     <div>
                       <span className="mono-label mb-1 block">Address</span>
                       <p className="text-sm text-gray leading-relaxed">
-                        DEEPVAC GmbH<br />
+                        Deepvac GmbH<br />
                         An der Universität 1<br />
                         30823 Garbsen<br />
                         Germany
@@ -209,7 +209,7 @@ const Contact = () => {
 
               {/* LinkedIn */}
               <div className="bento-card rounded-lg p-4 flex items-center justify-between">
-                <span className="text-sm text-gray">Follow DEEPVAC</span>
+                <span className="text-sm text-gray">Follow Deepvac</span>
                 <a
                   href="https://linkedin.com"
                   target="_blank"

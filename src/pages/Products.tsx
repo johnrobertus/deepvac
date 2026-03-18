@@ -45,9 +45,9 @@ const decisionFactors = [
 
 const faqs = [
   { q: "What distinguishes a standard chamber from a custom configuration?", a: "Standard Series chambers use pre-engineered designs with proven architectures, offering shorter lead times and established performance envelopes. Custom TVAC systems are engineered from concept to commissioning around application-specific requirements including geometry, thermal profile, instrumentation, and interface constraints." },
-  { q: "Can standard chambers be modified for specific test requirements?", a: "Standard Series platforms support a range of configuration options within their design envelope. For requirements beyond the standard platform scope, DEEPVAC offers custom engineering to develop application-specific solutions." },
-  { q: "What support does DEEPVAC provide after chamber delivery?", a: "DEEPVAC offers lifecycle services including preventive maintenance, repair, retrofit and modernisation, control system upgrades, and subsystem integration support for all chamber systems." },
-  { q: "Does DEEPVAC provide testing services alongside chamber systems?", a: "Yes. DEEPVAC offers thermal vacuum testing services including test campaign execution, data acquisition, and engineering support for qualification, validation, and development programs." },
+  { q: "Can standard chambers be modified for specific test requirements?", a: "Standard Series platforms support a range of configuration options within their design envelope. For requirements beyond the standard platform scope, Deepvac offers custom engineering to develop application-specific solutions." },
+  { q: "What support does Deepvac provide after chamber delivery?", a: "Deepvac offers lifecycle services including preventive maintenance, repair, retrofit and modernisation, control system upgrades, and subsystem integration support for all chamber systems." },
+  { q: "Does Deepvac provide testing services alongside chamber systems?", a: "Yes. Deepvac offers thermal vacuum testing services including test campaign execution, data acquisition, and engineering support for qualification, validation, and development programs." },
 ];
 
 const Products = () => (
@@ -56,7 +56,7 @@ const Products = () => (
       <PageHero
         eyebrow="Product Range"
         title="Thermal Vacuum Chamber Systems"
-        description="DEEPVAC develops standardised and custom-engineered thermal vacuum systems for aerospace qualification, environmental simulation, and research applications. Our chamber platforms address a range of test requirements — from established workflows using modular standard systems to fully bespoke configurations for complex mission profiles."
+        description="Deepvac develops standardised and custom-engineered thermal vacuum systems for aerospace qualification, environmental simulation, and research applications. Our chamber platforms address a range of test requirements — from established workflows using modular standard systems to fully bespoke configurations for complex mission profiles."
       >
         <div className="flex flex-wrap gap-3 pt-4">
           <Button asChild size="lg" className="font-mono text-xs tracking-wide">
@@ -77,7 +77,7 @@ const Products = () => (
                 <div className={`relative overflow-hidden ${i % 2 === 1 ? "lg:order-2" : ""}`}>
                   <img
                     src={product.image}
-                    alt={`DEEPVAC ${product.title}`}
+                    alt={`Deepvac ${product.title}`}
                     className="w-full h-full object-cover min-h-[280px] lg:min-h-[380px] transition-transform duration-500 group-hover:scale-[1.02]"
                     loading="lazy"
                   />
@@ -140,7 +140,7 @@ const Products = () => (
         <SectionHeader
           eyebrow="Integrated Capabilities"
           title="Beyond the Chamber"
-          description="DEEPVAC provides engineering services across the full lifecycle — from control systems design and mechanical engineering to testing, retrofit, and subsystem integration."
+          description="Deepvac provides engineering services across the full lifecycle — from control systems design and mechanical engineering to testing, retrofit, and subsystem integration."
           className="mb-8"
         />
         <div className="flex flex-wrap gap-4">
@@ -168,7 +168,7 @@ const Products = () => (
 
       <CTABand
         title="Discuss Your Chamber Requirements"
-        description="Whether you need a modular standard platform or a custom-engineered TVAC system, DEEPVAC can help define the right configuration for your application."
+        description="Whether you need a modular standard platform or a custom-engineered TVAC system, Deepvac can help define the right configuration for your application."
       >
         <Button asChild size="lg" className="font-mono text-xs tracking-wide">
           <Link to="/contact">Request a Quote</Link>

@@ -81,7 +81,7 @@ export function HeroSection() {
                 <div className="relative rounded-lg overflow-hidden border border-gray/10">
                   <img
                     src={heroChamber}
-                    alt="DEEPVAC thermal vacuum chamber system for aerospace qualification and space simulation testing"
+                    alt="Deepvac thermal vacuum chamber system for aerospace qualification and space simulation testing"
                     className="w-full h-auto object-cover"
                     loading="eager"
                   />
