@@ -49,16 +49,6 @@ export function HeroSection() {
                 </p>
               </Reveal>
 
-              <Reveal delay={200}>
-                
-
-
-
-
-
-
-                
-              </Reveal>
 
               <Reveal delay={250}>
                 <div className="flex flex-wrap gap-3 pt-4">
