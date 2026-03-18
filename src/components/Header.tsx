@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
+import deepvacLogo from "@/assets/deepvac-logo.png";
 
 const productsMenu = [
   { label: "Overview", href: "/products" },
@@ -95,8 +96,12 @@ export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-gray/10">
       <div className="container max-w-6xl flex items-center justify-between h-16 px-6">
-        <Link to="/" className="text-sand font-semibold text-lg tracking-tight">
-          DEEPVAC
+        <Link to="/" className="flex items-center">
+          <img
+            src={deepvacLogo}
+            alt="Deepvac — Advanced Thermal Vacuum Chamber Systems"
+            className="h-7 w-auto"
+          />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-8">

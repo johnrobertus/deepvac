@@ -72,7 +72,7 @@ export function ContactSection() {
                   <div>
                     <span className="mono-label mb-1 block">Address</span>
                     <p className="text-sm text-gray leading-relaxed">
-                      DEEPVAC GmbH<br />
+                      Deepvac GmbH<br />
                       An der Universität 1<br />
                       30823 Garbsen<br />
                       Germany
@@ -114,7 +114,7 @@ export function ContactSection() {
                 rel="noopener noreferrer"
                 className="bento-card rounded-lg p-4 flex items-center justify-between group block"
               >
-                <span className="text-sm text-gray group-hover:text-sand transition-colors">Follow DEEPVAC</span>
+                <span className="text-sm text-gray group-hover:text-sand transition-colors">Follow Deepvac</span>
                 <span className="text-sm text-blue font-mono">LinkedIn →</span>
               </a>
             </div>

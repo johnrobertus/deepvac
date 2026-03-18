@@ -39,13 +39,13 @@ export function HeroSection() {
 
               <Reveal delay={100}>
                 <p className="text-sm text-gray leading-relaxed max-w-lg">
-                  DEEPVAC develops advanced thermal vacuum systems for the qualification, validation, and environmental simulation of aerospace hardware. Our chamber platforms are engineered to recreate controlled high-vacuum and thermal test conditions for components, subsystems, and mission-critical assemblies.
+                  Deepvac develops advanced thermal vacuum systems for the qualification, validation, and environmental simulation of aerospace hardware. Our chamber platforms are engineered to recreate controlled high-vacuum and thermal test conditions for components, subsystems, and mission-critical assemblies.
                 </p>
               </Reveal>
 
               <Reveal delay={150}>
                 <p className="text-sm text-gray/70 leading-relaxed max-w-lg">
-                  Combining modular chamber architectures, precision thermal control, and intelligent system integration, DEEPVAC supports repeatable test workflows, low-contamination environments, and application-specific system configurations for demanding space and research programs.
+                  Combining modular chamber architectures, precision thermal control, and intelligent system integration, Deepvac supports repeatable test workflows, low-contamination environments, and application-specific system configurations for demanding space and research programs.
                 </p>
               </Reveal>
 
@@ -81,7 +81,7 @@ export function HeroSection() {
                 <div className="relative rounded-lg overflow-hidden border border-gray/10">
                   <img
                     src={heroChamber}
-                    alt="DEEPVAC thermal vacuum chamber system for aerospace qualification and space simulation testing"
+                    alt="Deepvac thermal vacuum chamber system for aerospace qualification and space simulation testing"
                     className="w-full h-auto object-cover"
                     loading="eager"
                   />

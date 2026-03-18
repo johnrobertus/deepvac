@@ -63,7 +63,7 @@ export function CapabilitiesSection() {
           <SectionHeader
             eyebrow="Core Capabilities"
             title="Engineering Excellence at Every Scale"
-            description="From standardised chamber platforms to fully bespoke thermal vacuum solutions — designed, built, and supported by DEEPVAC."
+            description="From standardised chamber platforms to fully bespoke thermal vacuum solutions — designed, built, and supported by Deepvac."
             className="mb-14"
           />
         </Reveal>

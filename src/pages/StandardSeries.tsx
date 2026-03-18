@@ -35,10 +35,10 @@ const applications = [
 ];
 
 const faqs = [
-  { q: "What chamber sizes are available in the Standard Series?", a: "The Standard Series encompasses a range of chamber volumes in both cubic (T Series) and cylindrical (C Series) formats. Specific dimensions are configured based on test envelope requirements. Contact DEEPVAC for available size options." },
+  { q: "What chamber sizes are available in the Standard Series?", a: "The Standard Series encompasses a range of chamber volumes in both cubic (T Series) and cylindrical (C Series) formats. Specific dimensions are configured based on test envelope requirements. Contact Deepvac for available size options." },
   { q: "Can Standard Series chambers achieve high-vacuum conditions?", a: "Yes. Standard Series chambers are designed with pumping architectures capable of reaching high-vacuum pressure regimes. Specific achievable pressures depend on chamber volume, pumping configuration, and application requirements." },
   { q: "What thermal control options are available?", a: "Standard Series platforms include integrated thermal shroud and platen systems supporting controlled heating and cooling cycles. Temperature ranges and ramp rates are configuration-dependent." },
-  { q: "How are Standard Series chambers delivered and commissioned?", a: "DEEPVAC provides full delivery, installation, and commissioning support including system integration, acceptance testing, and operator training." },
+  { q: "How are Standard Series chambers delivered and commissioned?", a: "Deepvac provides full delivery, installation, and commissioning support including system integration, acceptance testing, and operator training." },
 ];
 
 const StandardSeries = () => (
@@ -69,7 +69,7 @@ const StandardSeries = () => (
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <div>
             <div className="relative rounded-lg overflow-hidden border border-gray/10">
-              <img src={tseriesImg} alt="DEEPVAC T Series Cubic Thermal Vacuum Chamber" className="w-full h-auto object-cover" loading="lazy" />
+              <img src={tseriesImg} alt="Deepvac T Series Cubic Thermal Vacuum Chamber" className="w-full h-auto object-cover" loading="lazy" />
               <div className="absolute top-3 left-3 glass-overlay rounded-md px-3 py-1.5">
                 <span className="mono-label text-blue-light">T Series</span>
               </div>
@@ -106,7 +106,7 @@ const StandardSeries = () => (
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <div className="lg:order-2">
             <div className="relative rounded-lg overflow-hidden border border-gray/10">
-              <img src={cseriesImg} alt="DEEPVAC C Series Cylindrical Thermal Vacuum Chamber" className="w-full h-auto object-cover" loading="lazy" />
+              <img src={cseriesImg} alt="Deepvac C Series Cylindrical Thermal Vacuum Chamber" className="w-full h-auto object-cover" loading="lazy" />
               <div className="absolute top-3 right-3 glass-overlay rounded-md px-3 py-1.5">
                 <span className="mono-label text-blue-light">C Series</span>
               </div>
@@ -164,7 +164,7 @@ const StandardSeries = () => (
               <span className="mono-label text-blue">Beyond Standard</span>
               <h3 className="text-xl md:text-2xl font-medium text-sand tracking-tight">Need a Custom Configuration?</h3>
               <p className="text-sm text-gray leading-relaxed max-w-xl">
-                When test requirements exceed the standard platform scope — including non-standard geometries, specialised feedthrough configurations, or application-specific thermal profiles — DEEPVAC offers fully custom-engineered TVAC solutions.
+                When test requirements exceed the standard platform scope — including non-standard geometries, specialised feedthrough configurations, or application-specific thermal profiles — Deepvac offers fully custom-engineered TVAC solutions.
               </p>
             </div>
             <Button asChild variant="outline" className="self-start group/btn">
@@ -192,7 +192,7 @@ const StandardSeries = () => (
 
       <CTABand
         title="Discuss Your Test Requirements"
-        description="Contact DEEPVAC to identify the right Standard Series configuration for your application."
+        description="Contact Deepvac to identify the right Standard Series configuration for your application."
       >
         <Button asChild size="lg" className="font-mono text-xs tracking-wide">
           <Link to="/contact">Request a Quote</Link>

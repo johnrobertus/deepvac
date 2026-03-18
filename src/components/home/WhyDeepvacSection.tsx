@@ -9,15 +9,15 @@ const differentiators = [
   },
   {
     title: "Engineering-Led System Design",
-    description: "Every DEEPVAC project is driven by engineering discipline — not by sales. Chamber architecture, interface design, and integration concepts start from first principles.",
+    description: "Every Deepvac project is driven by engineering discipline — not by sales. Chamber architecture, interface design, and integration concepts start from first principles.",
   },
   {
     title: "Hardware, Controls & Services — Integrated",
-    description: "DEEPVAC delivers chamber hardware, control system design, and lifecycle services as a unified offering, reducing integration risk and vendor complexity.",
+    description: "Deepvac delivers chamber hardware, control system design, and lifecycle services as a unified offering, reducing integration risk and vendor complexity.",
   },
   {
     title: "Proximity to Demanding Applications",
-    description: "Born from direct experience with aerospace qualification and research programs, DEEPVAC understands the technical requirements of mission-critical test environments.",
+    description: "Born from direct experience with aerospace qualification and research programs, Deepvac understands the technical requirements of mission-critical test environments.",
   },
   {
     title: "Design, Build, Retrofit & Operate",
@@ -31,7 +31,7 @@ export function WhyDeepvacSection() {
       <div className="container max-w-6xl">
         <Reveal>
           <SectionHeader
-            eyebrow="Why DEEPVAC"
+            eyebrow="Why Deepvac"
             title="Engineered for the Mission"
             description="Technical credibility built on engineering fundamentals, not marketing claims."
             className="mb-14"
