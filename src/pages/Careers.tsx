@@ -95,8 +95,6 @@ const Careers = () =>
       </Section>
 
 
-      </Section>
-
       <CTABand title="Questions About Working at Deepvac?" description="Reach out to learn more about the team, the work, and current opportunities.">
         <Button asChild><Link to="/contact">Contact Us</Link></Button>
       </CTABand>
