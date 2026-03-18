@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Button } from "@/components/ui/button";
+import { Reveal } from "@/components/Reveal";
 import { ArrowRight, Thermometer, Gauge, Settings, RefreshCw, Wrench, Box } from "lucide-react";
 
 const services = [
@@ -46,29 +47,32 @@ export function ServicesSection() {
   return (
     <section className="py-20 md:py-28 px-6 bg-surface/30">
       <div className="container max-w-6xl">
-        <SectionHeader
-          eyebrow="Engineering Services"
-          title="End-to-End TVAC Expertise"
-          description="From chamber design and test execution to retrofit, maintenance, and subsystem integration."
-          className="mb-14"
-        />
+        <Reveal>
+          <SectionHeader
+            eyebrow="Engineering Services"
+            title="End-to-End TVAC Expertise"
+            description="From chamber design and test execution to retrofit, maintenance, and subsystem integration."
+            className="mb-14"
+          />
+        </Reveal>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((s) => (
-            <div
-              key={s.title}
-              className="bento-card rounded-lg p-6 border-l-2 border-l-blue/40 group cursor-pointer flex flex-col justify-between gap-5"
-            >
-              <div className="space-y-3">
-                <div className="text-blue">{s.icon}</div>
-                <h3 className="text-base font-medium text-sand">{s.title}</h3>
-                <p className="text-xs text-gray leading-relaxed">{s.description}</p>
+          {services.map((s, i) => (
+            <Reveal key={s.title} delay={i * 60}>
+              <div className="bento-card rounded-lg p-6 border-l-2 border-l-blue/40 group cursor-pointer flex flex-col justify-between gap-5 h-full">
+                <div className="space-y-3">
+                  <div className="w-9 h-9 rounded-sm bg-blue/10 border border-blue/20 flex items-center justify-center text-blue">
+                    {s.icon}
+                  </div>
+                  <h3 className="text-base font-medium text-sand">{s.title}</h3>
+                  <p className="text-xs text-gray leading-relaxed">{s.description}</p>
+                </div>
+                <Button asChild variant="tertiary" className="self-start">
+                  <Link to={s.href}>
+                    Learn More <ArrowRight className="w-3 h-3 ml-1" />
+                  </Link>
+                </Button>
               </div>
-              <Button asChild variant="tertiary" className="self-start">
-                <Link to={s.href}>
-                  Learn More <ArrowRight className="w-3 h-3 ml-1" />
-                </Link>
-              </Button>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>

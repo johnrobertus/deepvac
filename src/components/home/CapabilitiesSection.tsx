@@ -69,20 +69,22 @@ export function CapabilitiesSection() {
         </Reveal>
         <BentoGrid className="lg:grid-cols-4">
           {capabilities.map((cap, i) => (
-            <Reveal key={cap.title} delay={i * 60}>
-              <BentoCard span={cap.span} className="flex flex-col gap-4 h-full">
-                <div className="w-9 h-9 rounded-sm bg-blue/10 border border-blue/20 flex items-center justify-center text-blue">
-                  {cap.icon}
+            <BentoCard key={cap.title} span={cap.span}>
+              <Reveal delay={i * 60}>
+                <div className="flex flex-col gap-4 h-full">
+                  <div className="w-9 h-9 rounded-sm bg-blue/10 border border-blue/20 flex items-center justify-center text-blue">
+                    {cap.icon}
+                  </div>
+                  <div>
+                    <h3 className="text-base font-medium text-sand">{cap.title}</h3>
+                    <p className="text-sm text-gray mt-2 leading-relaxed">{cap.description}</p>
+                  </div>
+                  <span className="mono-label text-gray/20 mt-auto">
+                    [{cap.title.split(" ")[0].toUpperCase()}]
+                  </span>
                 </div>
-                <div>
-                  <h3 className="text-base font-medium text-sand">{cap.title}</h3>
-                  <p className="text-sm text-gray mt-2 leading-relaxed">{cap.description}</p>
-                </div>
-                <span className="mono-label text-gray/20 mt-auto">
-                  [{cap.title.split(" ")[0].toUpperCase()}]
-                </span>
-              </BentoCard>
-            </Reveal>
+              </Reveal>
+            </BentoCard>
           ))}
         </BentoGrid>
       </div>

@@ -1,4 +1,5 @@
 import { SectionHeader } from "@/components/SectionHeader";
+import { Reveal } from "@/components/Reveal";
 import {
   Satellite,
   Rocket,
@@ -21,19 +22,25 @@ export function ApplicationsSection() {
   return (
     <section className="py-20 md:py-28 px-6">
       <div className="container max-w-6xl">
-        <SectionHeader
-          eyebrow="Applications"
-          title="Built for Critical Test Campaigns"
-          description="DEEPVAC chamber platforms support a range of aerospace, research, and industrial test scenarios."
-          className="mb-14"
-        />
+        <Reveal>
+          <SectionHeader
+            eyebrow="Applications"
+            title="Built for Critical Test Campaigns"
+            description="DEEPVAC chamber platforms support a range of aerospace, research, and industrial test scenarios."
+            className="mb-14"
+          />
+        </Reveal>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {useCases.map((uc) => (
-            <div key={uc.title} className="bento-card rounded-lg p-6 space-y-3">
-              <div className="text-blue">{uc.icon}</div>
-              <h3 className="text-sm font-medium text-sand">{uc.title}</h3>
-              <p className="text-xs text-gray leading-relaxed">{uc.description}</p>
-            </div>
+          {useCases.map((uc, i) => (
+            <Reveal key={uc.title} delay={i * 60}>
+              <div className="bento-card rounded-lg p-6 space-y-3 h-full">
+                <div className="w-9 h-9 rounded-sm bg-blue/10 border border-blue/20 flex items-center justify-center text-blue">
+                  {uc.icon}
+                </div>
+                <h3 className="text-sm font-medium text-sand">{uc.title}</h3>
+                <p className="text-xs text-gray leading-relaxed">{uc.description}</p>
+              </div>
+            </Reveal>
           ))}
         </div>
       </div>

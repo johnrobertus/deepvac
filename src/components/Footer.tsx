@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 
 const footerNav = {
   Products: [
@@ -9,7 +9,7 @@ const footerNav = {
   ],
   Services: [
     { label: "Testing Services", href: "/services/testing-services" },
-    { label: "Control Systems Design", href: "/services/control-systems-design" },
+    { label: "Control Systems", href: "/services/control-systems-design" },
     { label: "Mechanical Design", href: "/services/mechanical-design" },
     { label: "Retrofit & Modernisation", href: "/services/retrofit-modernisation" },
     { label: "Maintenance & Repair", href: "/services/maintenance-repair" },
@@ -31,17 +31,21 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="space-y-4">
-            <span className="text-sand font-semibold text-lg tracking-tight">
+            <Link to="/" className="text-sand font-semibold text-lg tracking-tight">
               DEEPVAC
-            </span>
+            </Link>
             <p className="text-sm text-gray leading-relaxed">
               Advanced thermal vacuum chamber systems for aerospace qualification, space simulation, and environmental testing.
             </p>
-            <div className="space-y-2 pt-2">
-              <a href="tel:+4915783027099" className="flex items-center gap-2 text-xs text-gray hover:text-sand transition-colors">
+            <div className="space-y-2 pt-2 text-xs text-gray">
+              <div className="flex items-start gap-2">
+                <MapPin className="w-3 h-3 text-blue mt-0.5 shrink-0" />
+                <span>DEEPVAC GmbH · An der Universität 1 · 30823 Garbsen, Germany</span>
+              </div>
+              <a href="tel:+4915783027099" className="flex items-center gap-2 hover:text-sand transition-colors">
                 <Phone className="w-3 h-3 text-blue" /> +49 157 830 270 99
               </a>
-              <a href="mailto:info@deepvac.space" className="flex items-center gap-2 text-xs text-gray hover:text-sand transition-colors">
+              <a href="mailto:info@deepvac.space" className="flex items-center gap-2 hover:text-sand transition-colors">
                 <Mail className="w-3 h-3 text-blue" /> info@deepvac.space
               </a>
             </div>
