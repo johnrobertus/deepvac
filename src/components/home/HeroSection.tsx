@@ -29,7 +29,7 @@ export function HeroSection() {
                 <div className="space-y-4">
                   <span className="mono-label text-blue">PRECISION VACUUM ENGINEERING. MADE IN GERMANY.</span>
                   <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] font-medium tracking-tight text-sand leading-[1.1]">
-                    Thermal Vacuum Systems for Aerospace Qualification
+                    Thermal Vacuum&nbsp; Systems for Aerospace Qualification
                   </h1>
                 </div>
               </Reveal>
