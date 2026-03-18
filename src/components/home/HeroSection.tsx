@@ -39,7 +39,7 @@ export function HeroSection() {
 
               <Reveal delay={100}>
                 <p className="text-sm text-gray leading-relaxed max-w-lg">
-                  DEEPVAC develops advanced thermal vacuum systems for the qualification, validation, and environmental simulation of aerospace hardware. Our chamber platforms are engineered to recreate controlled high-vacuum and thermal test conditions for components, subsystems, and mission-critical assemblies.
+                  Deepvac develops advanced thermal vacuum systems for the qualification, validation, and environmental simulation of aerospace hardware. Our chamber platforms are engineered to recreate controlled high-vacuum and thermal test conditions for components, subsystems, and mission-critical assemblies.
                 </p>
               </Reveal>
 
