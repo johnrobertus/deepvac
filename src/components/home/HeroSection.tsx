@@ -27,19 +27,16 @@ export function HeroSection() {
             <div className="space-y-8">
               <Reveal>
                 <div className="space-y-4">
-                  <span className="mono-label text-blue">Precision Vacuum Engineering — Made in Germany</span>
+                  <span className="mono-label text-blue">PRECISION VACUUM ENGINEERING. MADE IN GERMANY.</span>
                   <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] font-medium tracking-tight text-sand leading-[1.1]">
                     Thermal Vacuum Chamber Systems for Space Qualification
                   </h1>
-                  <p className="text-xl md:text-2xl text-gray font-light tracking-tight">
-                    Thermal Vacuum Testing. Reimagined.
-                  </p>
                 </div>
               </Reveal>
 
               <Reveal delay={100}>
                 <p className="text-sm text-gray leading-relaxed max-w-lg">
-                  Deepvac develops advanced thermal vacuum systems for the qualification, validation, and environmental simulation of aerospace hardware. Our chamber platforms are engineered to recreate controlled high-vacuum and thermal test conditions for components, subsystems, and mission-critical assemblies.
+                  Deepvac develops modular and custom thermal vacuum chamber systems for the qualification, validation, and environmental simulation of aerospace hardware. Our platforms combine high-vacuum performance, precise thermal control, and application-specific system integration for reliable test execution in research, institutional, and commercial space programs
                 </p>
               </Reveal>
 
