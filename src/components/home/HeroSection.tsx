@@ -75,22 +75,22 @@ export function HeroSection() {
 
                   {/* Floating Spec Cards */}
                   <div className="absolute top-4 left-4 glass-overlay rounded-md px-3 py-2">
-                    <span className="mono-label text-blue-light">Vacuum</span>
+                    <span className="mono-label text-blue-light">VACUUM</span>
                     <p className="font-mono text-xs text-sand mt-0.5">High-Vacuum Regime</p>
                   </div>
 
                   <div className="absolute top-4 right-4 glass-overlay rounded-md px-3 py-2">
-                    <span className="mono-label text-blue-light">Thermal</span>
+                    <span className="mono-label text-blue-light">THERMAL</span>
                     <p className="font-mono text-xs text-sand mt-0.5">Precision Cycling</p>
                   </div>
 
                   <div className="absolute bottom-4 left-4 glass-overlay rounded-md px-3 py-2">
-                    <span className="mono-label text-blue-light">Controls</span>
+                    <span className="mono-label text-blue-light">CONTROLS</span>
                     <p className="font-mono text-xs text-sand mt-0.5">Intelligent Automation</p>
                   </div>
 
                   <div className="absolute bottom-4 right-4 glass-overlay rounded-md px-3 py-2">
-                    <span className="mono-label text-blue-light">Integration</span>
+                    <span className="mono-label text-blue-light">INTEGRATION</span>
                     <p className="font-mono text-xs text-sand mt-0.5">Custom Interfaces</p>
                   </div>
                 </div>
