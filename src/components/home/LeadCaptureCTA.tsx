@@ -13,7 +13,8 @@ export function LeadCaptureCTA() {
             Discuss Your Thermal Vacuum Test Requirements
           </h2>
           <p className="text-sm text-gray max-w-2xl mx-auto leading-relaxed mt-4">
-            Whether you need a modular chamber platform, a custom TVAC configuration, or support for modernisation and subsystem integration — DEEPVAC can help define the right system architecture for your application.
+            Whether you need a modular chamber platform, a custom TVAC configuration, or support for modernisation and
+            subsystem integration — Deepvac can help define the right system architecture for your application.
           </p>
           <div className="flex flex-wrap justify-center gap-4 pt-6">
             <Button asChild size="lg" className="font-mono text-xs tracking-wide">
