@@ -27,8 +27,8 @@ const founders = [
     focus: ["Chamber Development", "Refrigeration Engineering", "Mechanical Design"],
     icon: Thermometer,
     photo: antonPhoto,
-    photoPosition: "50% 16%",
-    photoScale: 1.03,
+    photoPosition: "50% 12%",
+    photoScale: 1.15,
   },
 ];
 
