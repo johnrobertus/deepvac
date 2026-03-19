@@ -10,6 +10,8 @@ const team = [
     role: "CEO | Co-Founder",
     description: "Electrical engineer specialized in AI integration for mechatronic systems.",
     photo: johnPhoto,
+    photoPosition: "50% 18%",
+    photoScale: 1.23,
   },
   {
     name: "Anton Opalikhin",
@@ -24,13 +26,12 @@ export function TeamSection() {
     <section className="py-20 md:py-28 px-6 bg-surface/30">
       <div className="container max-w-6xl">
         <Reveal>
-          <SectionHeader
-            eyebrow="Leadership"
-            title="Engineering-Led from Day One"
-            className="mb-6"
-          />
+          <SectionHeader eyebrow="Leadership" title="Engineering-Led from Day One" className="mb-6" />
           <p className="text-sm text-gray leading-relaxed max-w-3xl mb-14">
-            Deepvac is led by a founding team with more than 15 years of combined experience in the development and manufacturing of test chamber systems. Combining electrical engineering, mechatronics, refrigeration expertise, and chamber development know-how, the team brings complementary competencies required for advanced thermal vacuum system design.
+            Deepvac is led by a founding team with more than 15 years of combined experience in the development and
+            manufacturing of test chamber systems. Combining electrical engineering, mechatronics, refrigeration
+            expertise, and chamber development know-how, the team brings complementary competencies required for
+            advanced thermal vacuum system design.
           </p>
         </Reveal>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl">
