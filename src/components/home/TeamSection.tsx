@@ -18,6 +18,8 @@ const team = [
     role: "CTO | Co-Founder",
     description: "Mechanical engineer specialized in refrigeration and test chamber development.",
     photo: antonPhoto,
+    photoPosition: "50% 16%",
+    photoScale: 1.05,
   },
 ];
 
@@ -38,12 +40,17 @@ export function TeamSection() {
           {team.map((member, i) => (
             <Reveal key={member.name} delay={i * 100}>
               <div className="bento-card rounded-lg overflow-hidden group h-full">
-                <div className="aspect-[4/5] overflow-hidden">
+                <div className="aspect-[4/5] overflow-hidden bg-black">
                   <img
                     src={member.photo}
-                    alt={`${member.name} — ${member.role}`}
-                    className="w-full h-full object-cover object-top"
+                    alt={`${member.name} | ${member.role}`}
+                    className="w-full h-full object-cover"
                     loading="lazy"
+                    style={{
+                      objectPosition: member.photoPosition || "50% 16%",
+                      transform: `scale(${member.photoScale || 1})`,
+                      transformOrigin: "center top",
+                    }}
                   />
                 </div>
                 <div className="p-5 space-y-2">
