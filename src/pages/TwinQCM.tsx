@@ -102,7 +102,7 @@ const TwinQCM = () => (
               <img
                 src={heroImg}
                 alt="Twin-QCM sensor module and sensing unit for integrated outgassing analysis"
-                className="block w-full h-[260px] lg:h-[320px] object-cover object-center scale-[1.08]"
+                className="block w-full h-auto max-h-[320px] object-contain"
               />
             </div>
           </div>
