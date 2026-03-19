@@ -10,16 +10,16 @@ const team = [
     role: "CEO | Co-Founder",
     description: "Electrical engineer specialized in AI integration for mechatronic systems.",
     photo: johnPhoto,
-    photoPosition: "50% 15%",
-    photoScale: 1.35,
+    photoPosition: "50% 18%",
+    photoScale: 1.23,
   },
   {
     name: "Anton Opalikhin",
     role: "CTO | Co-Founder",
     description: "Mechanical engineer specialized in refrigeration and test chamber development.",
     photo: antonPhoto,
-    photoPosition: "50% 12%",
-    photoScale: 1.15,
+    photoPosition: "50% 16%",
+    photoScale: 1.05,
   },
 ];
 
