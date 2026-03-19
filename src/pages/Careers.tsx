@@ -147,7 +147,13 @@ const Careers = () => (
         </div>
       </Section>
 
-      <Section className="bg-surface/30"></Section>
+      <Section className="bg-surface/30">
+        <SectionHeader
+          eyebrow="Culture"
+          title="How We Work"
+          description="Deepvac operates at the intersection of engineering precision and entrepreneurial agility. We value technical depth, collaborative problem-solving, and hands-on ownership."
+        />
+      </Section>
 
       <CTABand
         title="Questions About Working at Deepvac?"

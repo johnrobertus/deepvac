@@ -9,6 +9,7 @@ const productsMenu = [
   { label: "Overview", href: "/products" },
   { label: "Standard Series", href: "/products/standard-series" },
   { label: "Custom TVAC", href: "/products/custom-tvac" },
+  { label: "Twin-QCM Outgassing Analysis", href: "/products/twin-qcm" },
 ];
 
 const servicesMenu = [
