@@ -98,11 +98,13 @@ const TwinQCM = () => (
                 </Button>
               </div>
             </div>
-            <img
-              src={heroImg}
-              alt="Twin-QCM sensor module and sensing unit for integrated outgassing analysis"
-              className="w-full h-auto object-contain"
-            />
+            <div className="w-full overflow-hidden">
+              <img
+                src={heroImg}
+                alt="Twin-QCM sensor module and sensing unit for integrated outgassing analysis"
+                className="block w-full h-[260px] lg:h-[320px] object-cover object-center scale-[1.08]"
+              />
+            </div>
           </div>
         </div>
       </section>
