@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import Products from "./pages/Products";
 import StandardSeries from "./pages/StandardSeries";
 import CustomTVAC from "./pages/CustomTVAC";
+import TwinQCM from "./pages/TwinQCM";
 import Services from "./pages/Services";
 import {
   TestingServices,
