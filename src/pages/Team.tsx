@@ -16,8 +16,8 @@ const founders = [
     focus: ["Control Systems & Automation", "AI-Driven Mechatronics", "System Architecture"],
     icon: Cpu,
     photo: johnPhoto,
-    photoPosition: "50% 18%",
-    photoScale: 1.23,
+    photoPosition: "50% 15%",
+    photoScale: 1.35,
   },
   {
     name: "Anton Opalikhin",
