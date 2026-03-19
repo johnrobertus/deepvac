@@ -17,7 +17,7 @@ const founders = [
     icon: Cpu,
     photo: johnPhoto,
     photoPosition: "50% 18%",
-    photoScale: 1.1,
+    photoScale: 1.3,
   },
   {
     name: "Anton Opalikhin",
