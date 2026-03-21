@@ -1,9 +1,9 @@
 export function TrustBarSection() {
   const items = [
-    "Built for demanding aerospace and laboratory test environments",
-    "Engineered for repeatable thermal vacuum workflows",
-    "Custom configurations for geometry, interfaces, and test profiles",
-    "Service, retrofit, and subsystem integration from one source",
+    "High-vacuum testing down to ≤ 1 × 10^-6 mbar",
+    "Thermal control down to -190 °C",
+    "Standard series and custom TVAC systems",
+    "Retrofit, service, and subsystem integration",
   ];
 
   return (
