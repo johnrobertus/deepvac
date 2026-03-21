@@ -13,42 +13,54 @@ const products = [
     title: "T Series TVAC",
     subtitle: "Cubic Thermal Vacuum Chambers",
     description:
-      "Compact cubic thermal vacuum chamber platforms for repeatable space simulation, subsystem validation, and research workflows where accessibility, modularity, and controlled test conditions are essential.",
+      "Vacuum-tight rectangular stainless-steel thermal vacuum chambers for qualification and verification testing of space hardware under controlled high-vacuum and thermal conditions. The T Series combines a modular chamber architecture, integrated pumping hardware, and a thermal plate design for repeatable laboratory and aerospace test workflows.",
     image: tseriesImg,
-    overlays: ["Shroud", "Feedthroughs", "Control Cabinet"],
+    overlays: ["Front Door Access", "Thermal Plate", "Modular Pumping"],
     href: "/products/standard-series",
     cta: "View Platform",
-    chamberType: "Cubic",
-    configuration: "Standard",
-    integration: "Full System",
+    specs: [
+      { label: "Volume Range", value: "65 to 2000 L" },
+      { label: "Vacuum Level", value: "≤ 1 × 10^-6 mbar" },
+      { label: "Thermal Control", value: "LN2, GN2 or mechanical" },
+      { label: "Control System", value: "PLC + 7 in touchscreen" },
+    ],
+    note: "Depending on the selected thermal control concept, temperature ranges down to -180 °C and up to +150 °C are available.",
   },
   {
     id: "c-series",
     title: "C Series TVAC",
     subtitle: "Cylindrical Thermal Vacuum Chambers",
     description:
-      "Cylindrical thermal vacuum systems designed for robust vacuum performance, scalable system integration, and demanding qualification campaigns involving aerospace components and sensitive hardware.",
+      "Hermetically sealed cylindrical stainless-steel thermal vacuum chambers designed for high-vacuum testing and controlled temperature operation. The C Series is suited for demanding qualification campaigns and can be configured with front-hinged door access or roll-out trolley loading for larger or heavier test articles.",
     image: cseriesImg,
-    overlays: ["Pumping Train", "Thermal Shroud", "Instrumentation"],
+    overlays: ["Hinged Door / Trolley", "Tech Ports", "Thermal Plate"],
     href: "/products/standard-series",
     cta: "View Platform",
-    chamberType: "Cylindrical",
-    configuration: "Standard",
-    integration: "Full System",
+    specs: [
+      { label: "Volume Range", value: "65 to 2000 L" },
+      { label: "Vacuum Level", value: "≤ 1 × 10^-6 mbar" },
+      { label: "Access Type", value: "Door or roll-out trolley" },
+      { label: "Control System", value: "PLC + 7 in touchscreen" },
+    ],
+    note: "Thermal control concepts include direct LN2, GN2 circulation, or mechanical refrigeration, depending on the required test profile and site infrastructure.",
   },
   {
     id: "custom",
     title: "Custom TVAC",
     subtitle: "Application-Specific Thermal Vacuum Systems",
     description:
-      "Custom thermal vacuum systems configured around mission-specific geometries, feedthrough requirements, thermal profiles, instrumentation concepts, and integration constraints.",
+      "Application-specific thermal vacuum systems engineered around mission-specific geometries, feedthrough layouts, thermal profiles, instrumentation concepts, and integration constraints. Custom configurations can extend the standard platform architecture with cryogenic shrouds, infrared heaters, dry pumping concepts, contamination-control options, and advanced automation interfaces.",
     image: customImg,
-    overlays: ["Custom Geometry", "Interface Design", "System Integration"],
+    overlays: ["Cryogenic Shrouds", "IR Heaters", "Custom Interfaces"],
     href: "/products/custom-tvac",
     cta: "Discuss Configuration",
-    chamberType: "Application-Specific",
-    configuration: "Bespoke",
-    integration: "Full System",
+    specs: [
+      { label: "System Basis", value: "T / C platform or bespoke" },
+      { label: "Vacuum Options", value: "Turbo, dry pumps, booster, traps" },
+      { label: "Control & Data", value: "LAN, Modbus TCP, OPC UA" },
+      { label: "Optional Features", value: "RGA, water cooling, QCM" },
+    ],
+    note: "Available options include bake-out wall heating, viewing windows, helium leak test preparation, remote monitoring, additional control zones, and contamination-sensitive configurations.",
   },
 ];
 
@@ -60,7 +72,7 @@ export function ProductPortfolioSection() {
           <SectionHeader
             eyebrow="Product Portfolio"
             title="Chamber Platforms"
-            description="Standardised and custom-engineered thermal vacuum systems for aerospace qualification, research, and environmental simulation."
+            description="Standardised and custom-engineered thermal vacuum systems for qualification and verification testing of space hardware under controlled high-vacuum and thermal conditions."
             className="mb-14"
           />
         </Reveal>
@@ -77,7 +89,7 @@ export function ProductPortfolioSection() {
                   >
                     <img
                       src={product.image}
-                      alt={`Deepvac ${product.title} - ${product.subtitle}`}
+                      alt={`Deepvac ${product.title}, ${product.subtitle}`}
                       className="w-full h-full object-contain max-h-[400px] lg:max-h-[420px] p-4 transition-transform duration-500 group-hover:scale-[1.02]"
                       loading="lazy"
                     />
@@ -105,26 +117,16 @@ export function ProductPortfolioSection() {
 
                     <p className="text-sm text-gray leading-relaxed">{product.description}</p>
 
-                    <div className="flex flex-wrap gap-3 py-2">
-                      <div className="space-y-0.5">
-                        <span className="mono-label">Chamber Type</span>
-                        <p className="font-mono text-xs text-sand">{product.chamberType}</p>
-                      </div>
-
-                      <div className="w-px bg-gray/15" />
-
-                      <div className="space-y-0.5">
-                        <span className="mono-label">Configuration</span>
-                        <p className="font-mono text-xs text-sand">{product.configuration}</p>
-                      </div>
-
-                      <div className="w-px bg-gray/15" />
-
-                      <div className="space-y-0.5">
-                        <span className="mono-label">Integration</span>
-                        <p className="font-mono text-xs text-sand">{product.integration}</p>
-                      </div>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 py-2">
+                      {product.specs.map((spec) => (
+                        <div key={spec.label} className="rounded-md border border-gray/10 bg-background/20 px-4 py-3">
+                          <span className="mono-label">{spec.label}</span>
+                          <p className="font-mono text-xs text-sand mt-1">{spec.value}</p>
+                        </div>
+                      ))}
                     </div>
+
+                    <p className="text-[11px] text-gray/70 leading-relaxed">{product.note}</p>
 
                     <div>
                       <Button asChild variant="outline" className="group/btn">
