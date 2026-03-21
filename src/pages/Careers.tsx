@@ -12,7 +12,7 @@ const openings = [
     location: "Garbsen, Germany",
     department: "Engineering",
     description:
-      "We are always interested in hearing from talented people who want to contribute to Deepvac. If there is no suitable position listed at the moment, feel free to send us your application.",
+      "We are always interested in hearing from engineers who want to contribute to the design, development, integration, and commissioning of advanced thermal vacuum systems. If there is no specific role listed that matches your background, we still encourage you to get in touch.",
   },
 ];
 
