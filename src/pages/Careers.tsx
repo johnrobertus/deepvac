@@ -45,7 +45,7 @@ const Careers = () => (
       <PageHero
         eyebrow="Careers"
         title="Build Systems That Test Space Hardware"
-        description="Deepvac is looking for engineers who want to work on the full technical scope of thermal vacuum system design, from concept through commissioning."
+        description="Deepvac is looking for engineers who want to work across the full technical scope of thermal vacuum system development, from concept and subsystem design to integration and commissioning."
       />
 
       <Section>
