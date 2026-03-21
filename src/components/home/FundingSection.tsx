@@ -11,10 +11,10 @@ export function FundingSection() {
             <p className="text-xs text-gray/60 leading-relaxed max-w-2xl">
               Deepvac is supported through public funding programs.
             </p>
-            <div className="mt-6 rounded-lg overflow-hidden bg-white/95 p-6 max-w-3xl">
+            <div className="mt-6 rounded-lg overflow-hidden bg-white/95 p-6 max-w-3xl mx-auto">
               <img
                 src={existFunding}
-                alt="EXIST funding programme — supported by the Federal Ministry for Economic Affairs and Energy and co-funded by the European Union"
+                alt="EXIST funding programme, supported by the Federal Ministry for Economic Affairs and Energy and co-funded by the European Union"
                 className="w-full h-auto"
                 loading="lazy"
               />
