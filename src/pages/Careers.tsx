@@ -58,12 +58,14 @@ const Careers = () => (
             <div className="space-y-4 text-sm text-gray leading-relaxed">
               <p>
                 Deepvac develops advanced thermal vacuum systems for aerospace, research, and industrial test
-                environments. Our work spans the full engineering scope: mechanical design, thermal subsystems, vacuum
-                architecture, control systems, instrumentation, and system integration.
+                environments. Our work covers the full engineering scope of these systems, including mechanical design,
+                thermal subsystems, vacuum architecture, control systems, instrumentation, and overall system
+                integration.
               </p>
               <p>
                 We are building a team of engineers who are comfortable working across disciplines, who take ownership
-                of technical problems, and who care about the long-term performance of the systems they design.
+                of technical decisions, and who care about the long-term performance and reliability of the systems they
+                design.
               </p>
             </div>
           </div>
@@ -71,11 +73,11 @@ const Careers = () => (
             <span className="mono-label text-blue">What We Value</span>
             <div className="space-y-3">
               {[
-                "Technical depth over superficial breadth",
+                "Technical depth and sound engineering judgement",
                 "Clear communication and honest assessment",
-                "Ownership of engineering decisions",
+                "Ownership of technical decisions and outcomes",
                 "Willingness to work across system boundaries",
-                "Attention to detail in design and documentation",
+                "Precision in design, documentation, and execution",
               ].map((value) => (
                 <div key={value} className="flex items-start gap-3 text-sm text-gray">
                   <span className="w-1 h-1 rounded-full bg-blue mt-2 flex-shrink-0" />
