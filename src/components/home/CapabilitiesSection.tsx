@@ -9,64 +9,56 @@ const capabilities = [
     title: "Thermal Vacuum Chamber Systems",
     description:
       "Standardised and custom thermal vacuum chamber systems for qualification, validation, and environmental simulation of aerospace hardware.",
-    label: "SYSTEMS",
-    span: "2x1" as const,
+    span: "1x1" as const,
   },
   {
     icon: <Cpu className="w-5 h-5" />,
     title: "Control Systems Design",
     description:
-      "PLC-based control architectures, data acquisition, automation, and AI-enabled system logic for transparent, reproducible, and efficient test execution.",
-    label: "CONTROL",
+      "PLC-based control architectures, automation, data acquisition, and AI-enabled system logic for reproducible and efficient test execution.",
     span: "1x1" as const,
   },
   {
     icon: <Settings className="w-5 h-5" />,
     title: "Mechanical Design",
     description:
-      "Mechanical design of chamber layouts, fixtures, support structures, interfaces, and feedthrough concepts for application-specific test requirements.",
-    label: "MECHANICAL",
+      "Mechanical design of chamber layouts, fixtures, interfaces, feedthroughs, and support structures for application-specific test requirements.",
     span: "1x1" as const,
   },
   {
     icon: <Thermometer className="w-5 h-5" />,
     title: "Thermal Control",
     description:
-      "Thermal plate, shroud, and temperature-control concepts for stable thermal profiles, cycling, bake-out workflows, and qualification testing.",
-    label: "THERMAL",
+      "Thermal plate, shroud, and temperature-control concepts for stable thermal profiles, cycling, bake-out, and qualification workflows.",
     span: "1x1" as const,
   },
   {
     icon: <Gauge className="w-5 h-5" />,
     title: "High-Vacuum Systems",
     description:
-      "Vacuum architectures with pumping systems, valves, sensors, and protection logic for reliable high-vacuum and contamination-sensitive test environments.",
-    label: "VACUUM",
+      "Vacuum architectures with pumps, valves, sensors, and protection logic for reliable high-vacuum and contamination-sensitive testing.",
     span: "1x1" as const,
   },
   {
     icon: <Wrench className="w-5 h-5" />,
     title: "Testing Services",
     description:
-      "Support for thermal vacuum test campaigns, including test preparation, execution support, and reliable operation under controlled environmental conditions.",
-    label: "TESTING",
+      "Support for thermal vacuum test campaigns, including preparation, execution support, and reliable operation under controlled conditions.",
     span: "1x1" as const,
   },
   {
     icon: <Workflow className="w-5 h-5" />,
     title: "Subsystem Integration",
     description:
-      "Integration of thermal, vacuum, instrumentation, and control subsystems into coherent test environments tailored to customer-specific requirements.",
-    label: "INTEGRATION",
+      "Integration of thermal, vacuum, instrumentation, and control subsystems into coherent customer-specific test environments.",
     span: "1x1" as const,
   },
   {
     icon: <RefreshCw className="w-5 h-5" />,
     title: "Retrofit, Maintenance & Repair",
     description:
-      "Modernisation, maintenance, repair, and technical upgrades for existing thermal vacuum infrastructure to improve performance, reliability, and long-term availability.",
-    label: "LIFECYCLE",
-    span: "2x1" as const,
+      "Modernisation, maintenance, repair, and technical upgrades for existing thermal vacuum infrastructure.",
+    span: "1x1" as const,
   },
 ];
 
@@ -95,7 +87,6 @@ export function CapabilitiesSection() {
                     <h3 className="text-base font-medium text-sand">{cap.title}</h3>
                     <p className="text-sm text-gray mt-2 leading-relaxed">{cap.description}</p>
                   </div>
-                  <span className="mono-label text-gray/20 mt-auto">[{cap.label}]</span>
                 </div>
               </Reveal>
             </BentoCard>
