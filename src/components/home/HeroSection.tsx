@@ -17,8 +17,7 @@ export function HeroSection() {
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
   const timerRef = useRef<ReturnType<typeof setTimeout>>();
   const prefersReducedMotion =
-    typeof window !== "undefined" &&
-    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   const scheduleNext = useCallback(() => {
     if (prefersReducedMotion) return;
@@ -71,13 +70,11 @@ export function HeroSection() {
             style={{
               opacity: isNext && transitioning ? 1 : isActive ? 1 : 0,
               zIndex: isNext ? 2 : isActive ? 1 : 0,
-              transition: isNext
-                ? `opacity ${FADE_DURATION}ms cubic-bezier(0.4, 0, 0.2, 1)`
-                : "none",
+              transition: isNext ? `opacity ${FADE_DURATION}ms cubic-bezier(0.4, 0, 0.2, 1)` : "none",
             }}
             aria-hidden={!isActive}
           >
-            {/* Poster fallback — always behind the video */}
+            {/* Poster fallback, always behind the video */}
             <img
               src={slide.poster}
               alt=""
@@ -127,38 +124,34 @@ export function HeroSection() {
             <Reveal>
               <div className="space-y-4">
                 <span className="mono-label text-blue-light/90 tracking-[0.08em]">
-                  PRECISION VACUUM ENGINEERING. MADE IN GERMANY.
+                  INTELLIGENT THERMAL VACUUM SYSTEMS. ENGINEERED IN GERMANY.
                 </span>
                 <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] font-medium tracking-tight text-sand leading-[1.08]">
-                  Thermal Vacuum&nbsp; Systems for Aerospace Qualification
+                  Intelligent Thermal Vacuum Systems for Aerospace Qualification
                 </h1>
               </div>
             </Reveal>
 
             <Reveal delay={100}>
               <p className="text-sm md:text-base text-sand/70 leading-relaxed max-w-lg">
-                Deepvac develops modular and custom thermal vacuum systems for
-                the qualification, validation, and environmental simulation of
-                aerospace hardware. Our platforms combine high-vacuum
-                performance, precise thermal control, and application-specific
-                integration for reliable test execution in research,
-                institutional, and commercial space programs.
+                Deepvac develops modular and custom thermal vacuum systems for the qualification, validation, and
+                environmental simulation of aerospace hardware. Our platforms combine high-vacuum performance, precise
+                thermal control, intelligent automation, and application-specific integration for reproducible and
+                operationally robust test execution in research, institutional, and commercial space programs.
               </p>
             </Reveal>
 
             <Reveal delay={200}>
               <div className="flex flex-wrap gap-3 pt-2">
-                {["MODULAR SYSTEMS", "CUSTOM ENGINEERING", "AEROSPACE APPLICATIONS", "SERVICE & RETROFIT"].map(
-                  (cue) => (
-                    <span
-                      key={cue}
-                      className="inline-flex items-center gap-1.5 rounded-sm border border-sand/15 bg-background/30 backdrop-blur-sm px-3 py-1.5 font-mono text-[10px] uppercase tracking-widest text-sand/60"
-                    >
-                      <span className="w-1 h-1 rounded-full bg-blue/60" />
-                      {cue}
-                    </span>
-                  )
-                )}
+                {["MODULAR PLATFORMS", "CUSTOM ENGINEERING", "DATA-DRIVEN CONTROL", "SERVICE & RETROFIT"].map((cue) => (
+                  <span
+                    key={cue}
+                    className="inline-flex items-center gap-1.5 rounded-sm border border-sand/15 bg-background/30 backdrop-blur-sm px-3 py-1.5 font-mono text-[10px] uppercase tracking-widest text-sand/60"
+                  >
+                    <span className="w-1 h-1 rounded-full bg-blue/60" />
+                    {cue}
+                  </span>
+                ))}
               </div>
             </Reveal>
           </div>
@@ -169,8 +162,7 @@ export function HeroSection() {
       <div
         className="absolute bottom-0 left-0 right-0 z-20 h-24 pointer-events-none"
         style={{
-          background:
-            "linear-gradient(to bottom, hsl(0 0% 0% / 0) 0%, hsl(var(--background)) 100%)",
+          background: "linear-gradient(to bottom, hsl(0 0% 0% / 0) 0%, hsl(var(--background)) 100%)",
         }}
       />
     </section>
