@@ -1,7 +1,7 @@
 import { SectionHeader } from "@/components/SectionHeader";
 import { BentoGrid, BentoCard } from "@/components/BentoGrid";
 import { Reveal } from "@/components/Reveal";
-import { Crosshair, Settings, Thermometer, Gauge, Cpu, RefreshCw } from "lucide-react";
+import { Crosshair, Settings, Thermometer, Gauge, Cpu, RefreshCw, Wrench, Workflow } from "lucide-react";
 
 const capabilities = [
   {
@@ -13,18 +13,26 @@ const capabilities = [
     span: "2x1" as const,
   },
   {
-    icon: <Settings className="w-5 h-5" />,
-    title: "Custom Engineering",
+    icon: <Cpu className="w-5 h-5" />,
+    title: "Control Systems Design",
     description:
-      "Application-specific chamber layouts, interfaces, feedthroughs, and mechanical integration concepts tailored to demanding test requirements.",
-    label: "CUSTOM",
+      "PLC-based control architectures, data acquisition, automation, and AI-enabled system logic for transparent, reproducible, and efficient test execution.",
+    label: "CONTROL",
+    span: "1x1" as const,
+  },
+  {
+    icon: <Settings className="w-5 h-5" />,
+    title: "Mechanical Design",
+    description:
+      "Mechanical design of chamber layouts, fixtures, support structures, interfaces, and feedthrough concepts for application-specific test requirements.",
+    label: "MECHANICAL",
     span: "1x1" as const,
   },
   {
     icon: <Thermometer className="w-5 h-5" />,
     title: "Thermal Control",
     description:
-      "Thermal plate, shroud, and temperature-control concepts for stable, repeatable thermal profiles, cycling, and qualification workflows.",
+      "Thermal plate, shroud, and temperature-control concepts for stable thermal profiles, cycling, bake-out workflows, and qualification testing.",
     label: "THERMAL",
     span: "1x1" as const,
   },
@@ -32,23 +40,31 @@ const capabilities = [
     icon: <Gauge className="w-5 h-5" />,
     title: "High-Vacuum Systems",
     description:
-      "Vacuum architectures designed for reliable high-vacuum performance, contamination-sensitive testing, and qualification-grade operating conditions.",
+      "Vacuum architectures with pumping systems, valves, sensors, and protection logic for reliable high-vacuum and contamination-sensitive test environments.",
     label: "VACUUM",
     span: "1x1" as const,
   },
   {
-    icon: <Cpu className="w-5 h-5" />,
-    title: "Control Systems & AI-Enabled Automation",
+    icon: <Wrench className="w-5 h-5" />,
+    title: "Testing Services",
     description:
-      "PLC-based control architectures with data acquisition, automation, and AI-enabled system logic for reproducible, transparent, and efficient test execution.",
-    label: "CONTROL",
+      "Support for thermal vacuum test campaigns, including test preparation, execution support, and reliable operation under controlled environmental conditions.",
+    label: "TESTING",
+    span: "1x1" as const,
+  },
+  {
+    icon: <Workflow className="w-5 h-5" />,
+    title: "Subsystem Integration",
+    description:
+      "Integration of thermal, vacuum, instrumentation, and control subsystems into coherent test environments tailored to customer-specific requirements.",
+    label: "INTEGRATION",
     span: "1x1" as const,
   },
   {
     icon: <RefreshCw className="w-5 h-5" />,
-    title: "Retrofit, Service & Modernisation",
+    title: "Retrofit, Maintenance & Repair",
     description:
-      "Maintenance, repair, retrofit, and system upgrades for existing thermal vacuum infrastructure to improve performance, operability, and long-term availability.",
+      "Modernisation, maintenance, repair, and technical upgrades for existing thermal vacuum infrastructure to improve performance, reliability, and long-term availability.",
     label: "LIFECYCLE",
     span: "2x1" as const,
   },
@@ -61,8 +77,8 @@ export function CapabilitiesSection() {
         <Reveal>
           <SectionHeader
             eyebrow="Core Capabilities"
-            title="Engineering for Advanced Thermal Vacuum Infrastructure"
-            description="From standard series chambers to custom systems, control architectures, retrofit, and lifecycle support."
+            title="From Chamber Design to Intelligent Test Infrastructure"
+            description="Deepvac combines chamber development, control systems, mechanical design, subsystem integration, and lifecycle support in one engineering-driven offering."
             className="mb-14"
           />
         </Reveal>
