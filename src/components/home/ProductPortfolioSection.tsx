@@ -55,7 +55,7 @@ const products = [
     href: "/products/custom-tvac",
     cta: "Discuss Configuration",
     specs: [
-      { label: "Design Scope", value: "Outside standard T and C series" },
+      { label: "Design Scope", value: "Outside standard series" },
       { label: "Volume", value: "Extended beyond standard range" },
       { label: "Temperature", value: "Extended beyond standard range" },
       { label: "System Features", value: "Project-specific subsystems" },
