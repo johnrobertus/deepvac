@@ -124,10 +124,10 @@ export function HeroSection() {
             <Reveal>
               <div className="space-y-4">
                 <span className="mono-label text-blue-light/90 tracking-[0.08em]">
-                  INTELLIGENT THERMAL VACUUM SYSTEMS. ENGINEERED IN GERMANY.
+                  AI-ENABLED THERMAL VACUUM SYSTEMS. ENGINEERED IN GERMANY.
                 </span>
                 <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] font-medium tracking-tight text-sand leading-[1.08]">
-                  Intelligent Thermal Vacuum Systems for Aerospace Qualification
+                  AI-Enabled Thermal Vacuum Systems for Aerospace Qualification
                 </h1>
               </div>
             </Reveal>
@@ -135,15 +135,15 @@ export function HeroSection() {
             <Reveal delay={100}>
               <p className="text-sm md:text-base text-sand/70 leading-relaxed max-w-lg">
                 Deepvac develops modular and custom thermal vacuum systems for the qualification, validation, and
-                environmental simulation of aerospace hardware. Our platforms combine high-vacuum performance, precise
-                thermal control, intelligent automation, and application-specific integration for reproducible and
-                operationally robust test execution in research, institutional, and commercial space programs.
+                environmental simulation of aerospace hardware. Our platforms combine high vacuum, precise thermal
+                control, and AI-enabled control architectures to improve reproducibility, process transparency, and
+                operational robustness across research, institutional, and commercial space programs.
               </p>
             </Reveal>
 
             <Reveal delay={200}>
               <div className="flex flex-wrap gap-3 pt-2">
-                {["MODULAR PLATFORMS", "CUSTOM ENGINEERING", "DATA-DRIVEN CONTROL", "SERVICE & RETROFIT"].map((cue) => (
+                {["MODULAR PLATFORMS", "CUSTOM TVAC SYSTEMS", "AI-ENABLED CONTROL", "RETROFIT & SERVICE"].map((cue) => (
                   <span
                     key={cue}
                     className="inline-flex items-center gap-1.5 rounded-sm border border-sand/15 bg-background/30 backdrop-blur-sm px-3 py-1.5 font-mono text-[10px] uppercase tracking-widest text-sand/60"
