@@ -19,22 +19,26 @@ const openings = [
 const reasons = [
   {
     title: "Work on Real Hardware",
-    description: "Design, build, and commission physical test systems that support space qualification programs.",
+    description:
+      "Design, build, and commission physical test systems that support aerospace qualification, research missions, and demanding development programs..",
     icon: Wrench,
   },
   {
     title: "Engineering Ownership",
-    description: "Take responsibility for technical decisions in a small, high-autonomy team.",
+    description:
+      "Take responsibility for technical decisions in a small team where engineering quality, speed, and accountability matter.",
     icon: Settings,
   },
   {
     title: "Multidisciplinary Scope",
-    description: "Work across mechanical, thermal, vacuum, electrical, and software domains within a single system.",
+    description:
+      "Work across mechanical, thermal, vacuum, electrical, and software-related interfaces within one integrated system.",
     icon: Cpu,
   },
   {
     title: "Direct Customer Impact",
-    description: "Your engineering work directly enables test campaigns for aerospace and research programs.",
+    description:
+      "Your work directly enables test campaigns for aerospace and research customers and has visible impact on project outcomes.",
     icon: Users,
   },
 ];
