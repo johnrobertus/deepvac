@@ -1,56 +1,55 @@
 import { SectionHeader } from "@/components/SectionHeader";
 import { BentoGrid, BentoCard } from "@/components/BentoGrid";
 import { Reveal } from "@/components/Reveal";
-import {
-  Crosshair,
-  Settings,
-  Thermometer,
-  Gauge,
-  Cpu,
-  RefreshCw,
-} from "lucide-react";
+import { Crosshair, Settings, Thermometer, Gauge, Cpu, RefreshCw } from "lucide-react";
 
 const capabilities = [
   {
     icon: <Crosshair className="w-5 h-5" />,
-    title: "Thermal Vacuum Chamber Platforms",
+    title: "Thermal Vacuum Chamber Systems",
     description:
-      "Standard and custom-engineered TVAC systems designed for controlled environmental simulation of aerospace hardware across a range of test profiles and payload geometries.",
+      "Standardised and custom thermal vacuum chamber systems for qualification, validation, and environmental simulation of aerospace hardware.",
+    label: "SYSTEMS",
     span: "2x1" as const,
   },
   {
     icon: <Settings className="w-5 h-5" />,
-    title: "Custom Engineering & Integration",
+    title: "Custom Engineering",
     description:
-      "Application-specific system design, interface engineering, fixture integration, and feedthrough configurations tailored to individual mission and test requirements.",
+      "Application-specific chamber layouts, interfaces, feedthroughs, and mechanical integration concepts tailored to demanding test requirements.",
+    label: "CUSTOM",
     span: "1x1" as const,
   },
   {
     icon: <Thermometer className="w-5 h-5" />,
-    title: "Precision Thermal Control",
+    title: "Thermal Control",
     description:
-      "Thermal shroud and platen design with accurate temperature regulation for stable, repeatable thermal cycling and bake-out workflows.",
+      "Thermal plate, shroud, and temperature-control concepts for stable, repeatable thermal profiles, cycling, and qualification workflows.",
+    label: "THERMAL",
     span: "1x1" as const,
   },
   {
     icon: <Gauge className="w-5 h-5" />,
-    title: "High-Vacuum Test Environments",
+    title: "High-Vacuum Systems",
     description:
-      "Chamber and pumping architectures designed to achieve and maintain high-vacuum conditions for contamination-sensitive and qualification-grade testing.",
+      "Vacuum architectures designed for reliable high-vacuum performance, contamination-sensitive testing, and qualification-grade operating conditions.",
+    label: "VACUUM",
     span: "1x1" as const,
   },
   {
     icon: <Cpu className="w-5 h-5" />,
-    title: "Control Systems & Automation",
+    title: "Control Systems & AI-Enabled Automation",
     description:
-      "Integrated control platforms with data acquisition, process automation, and user interfaces designed for reliable and efficient test execution.",
+      "PLC-based control architectures with data acquisition, automation, and AI-enabled system logic for reproducible, transparent, and efficient test execution.",
+    label: "CONTROL",
     span: "1x1" as const,
   },
   {
     icon: <RefreshCw className="w-5 h-5" />,
-    title: "Lifecycle Service & Modernisation",
+    title: "Retrofit, Service & Modernisation",
     description:
-      "Maintenance, retrofit, and technical upgrades for existing thermal vacuum systems to extend operational life and improve performance.",
+      "Maintenance, repair, retrofit, and system upgrades for existing thermal vacuum infrastructure to improve performance, operability, and long-term availability.",
+    label: "LIFECYCLE",
     span: "2x1" as const,
   },
 ];
@@ -62,11 +61,12 @@ export function CapabilitiesSection() {
         <Reveal>
           <SectionHeader
             eyebrow="Core Capabilities"
-            title="Engineering Excellence at Every Scale"
-            description="From standardised chamber platforms to fully bespoke thermal vacuum solutions — designed, built, and supported by Deepvac."
+            title="Engineering for Advanced Thermal Vacuum Infrastructure"
+            description="From standard series chambers to custom systems, control architectures, retrofit, and lifecycle support."
             className="mb-14"
           />
         </Reveal>
+
         <BentoGrid className="lg:grid-cols-4">
           {capabilities.map((cap, i) => (
             <BentoCard key={cap.title} span={cap.span}>
@@ -79,9 +79,7 @@ export function CapabilitiesSection() {
                     <h3 className="text-base font-medium text-sand">{cap.title}</h3>
                     <p className="text-sm text-gray mt-2 leading-relaxed">{cap.description}</p>
                   </div>
-                  <span className="mono-label text-gray/20 mt-auto">
-                    [{cap.title.split(" ")[0].toUpperCase()}]
-                  </span>
+                  <span className="mono-label text-gray/20 mt-auto">[{cap.label}]</span>
                 </div>
               </Reveal>
             </BentoCard>
