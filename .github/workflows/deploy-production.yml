@@ -1,0 +1,80 @@
+name: deploy-production
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Verify build output
+        run: test -f dist/index.html
+
+      - name: Package artifact
+        run: tar -czf release.tar.gz -C dist .
+
+      - name: Start SSH agent
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Add server host key
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -p "${{ secrets.DEPLOY_PORT }}" "${{ secrets.DEPLOY_HOST }}" >> ~/.ssh/known_hosts
+
+      - name: Upload artifact
+        run: |
+          scp -P "${{ secrets.DEPLOY_PORT }}" release.tar.gz \
+            "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:/tmp/release-${{ github.sha }}.tar.gz"
+
+      - name: Deploy release
+        run: |
+          ssh -p "${{ secrets.DEPLOY_PORT }}" "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}" "
+            set -euo pipefail
+            APP_DIR=/var/www/deepvac
+            RELEASE_DIR=\$APP_DIR/releases/${{ github.sha }}
+            ARTIFACT=/tmp/release-${{ github.sha }}.tar.gz
+
+            mkdir -p \$RELEASE_DIR
+
+            if [ -L \$APP_DIR/current ]; then
+              CURRENT_TARGET=\$(readlink -f \$APP_DIR/current)
+              ln -sfn \$CURRENT_TARGET \$APP_DIR/previous
+            fi
+
+            tar -xzf \$ARTIFACT -C \$RELEASE_DIR
+            test -f \$RELEASE_DIR/index.html
+
+            ln -sfn \$RELEASE_DIR \$APP_DIR/current
+            rm -f \$ARTIFACT
+
+            ls -1dt \$APP_DIR/releases/* | tail -n +6 | xargs -r rm -rf
+          "
+
+      - name: Smoke test
+        run: |
+          curl -fsS "http://${{ secrets.DEPLOY_HOST }}/healthz"
+          curl -fsS "http://${{ secrets.DEPLOY_HOST }}/" | grep -qi "<html"
+
+
+
