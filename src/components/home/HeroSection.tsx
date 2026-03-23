@@ -56,7 +56,7 @@ export function HeroSection() {
   }, []);
 
   return (
-    <section className="relative w-full h-[100svh] min-h-[600px] max-h-[1100px] overflow-hidden">
+    <section className="relative w-full h-[100svh] min-h-[500px] max-h-[1100px] overflow-hidden">
       {/* Video layers */}
       {slides.map((slide, i) => {
         const isActive = i === activeIndex;
