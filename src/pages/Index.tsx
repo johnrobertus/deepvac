@@ -17,7 +17,7 @@ import { FundingSection } from "@/components/home/FundingSection";
 const Index = () => {
   return (
     <Layout>
-      <PageShell>
+      <PageShell className="pt-0">
         {/* S1: Hero */}
         <HeroSection />
 

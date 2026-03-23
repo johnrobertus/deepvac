@@ -56,7 +56,7 @@ export function HeroSection() {
   }, []);
 
   return (
-    <section className="relative w-full h-[100svh] min-h-[600px] max-h-[1100px] overflow-hidden">
+    <section className="relative w-full h-[100svh] min-h-[500px] max-h-[1100px] overflow-hidden">
       {/* Video layers */}
       {slides.map((slide, i) => {
         const isActive = i === activeIndex;
@@ -118,7 +118,7 @@ export function HeroSection() {
       />
 
       {/* Content */}
-      <div className="relative z-20 flex items-end h-full pb-20 md:pb-28 pt-32 md:pt-40 px-6">
+      <div className="relative z-20 flex items-end h-full pb-16 md:pb-28 pt-24 md:pt-40 px-6">
         <div className="container max-w-6xl">
           <div className="max-w-2xl space-y-6">
             <Reveal>
@@ -126,7 +126,7 @@ export function HeroSection() {
                 <span className="mono-label text-blue-light/90 tracking-[0.08em]">
                   AI-ENABLED THERMAL VACUUM SYSTEMS. ENGINEERED IN GERMANY.{" "}
                 </span>
-                <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] font-medium tracking-tight text-sand leading-[1.08]">
+                <h1 className="text-3xl md:text-5xl lg:text-[3.5rem] font-medium tracking-tight text-sand leading-[1.08]">
                   AI-Enabled Thermal Vacuum Systems for Aerospace Qualification
                 </h1>
               </div>
