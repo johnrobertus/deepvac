@@ -6,7 +6,8 @@ import { SectionHeader } from "@/components/SectionHeader";
 import { Button } from "@/components/ui/button";
 import { PlaceholderImage } from "@/components/PlaceholderImage";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Phone, Mail, MapPin, Clock, Shield, ArrowRight } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Shield, ArrowRight, CheckCircle } from "lucide-react";
+import { toast } from "sonner";
 
 const qualifierOptions = {
   chamberType: ["Standard T Series", "Standard C Series", "Custom TVAC", "Not sure yet"],
@@ -26,11 +27,17 @@ function FormField({
   placeholder,
   type = "text",
   required = false,
+  name,
+  value,
+  onChange,
 }: {
   label: string;
   placeholder: string;
   type?: string;
   required?: boolean;
+  name: string;
+  value: string;
+  onChange: (val: string) => void;
 }) {
   return (
     <div className="space-y-2">
@@ -40,7 +47,10 @@ function FormField({
       </label>
       <input
         type={type}
+        name={name}
         required={required}
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
         className="w-full bg-background border border-gray/15 rounded-sm px-4 py-3 text-sm text-sand placeholder:text-gray/30 focus:outline-none focus:border-blue/40 focus:ring-1 focus:ring-blue/20 transition-all duration-200"
         placeholder={placeholder}
       />
@@ -51,14 +61,22 @@ function FormField({
 function SelectField({
   label,
   options,
+  value,
+  onChange,
 }: {
   label: string;
   options: string[];
+  value: string;
+  onChange: (val: string) => void;
 }) {
   return (
     <div className="space-y-2">
       <label className="mono-label">{label}</label>
-      <select className="w-full bg-background border border-gray/15 rounded-sm px-4 py-3 text-sm text-sand focus:outline-none focus:border-blue/40 focus:ring-1 focus:ring-blue/20 transition-all duration-200 appearance-none">
+      <select
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+        className="w-full bg-background border border-gray/15 rounded-sm px-4 py-3 text-sm text-sand focus:outline-none focus:border-blue/40 focus:ring-1 focus:ring-blue/20 transition-all duration-200 appearance-none"
+      >
         <option value="" className="bg-surface text-gray">Select...</option>
         {options.map((opt) => (
           <option key={opt} value={opt} className="bg-surface text-sand">{opt}</option>
@@ -68,8 +86,91 @@ function SelectField({
   );
 }
 
+interface FormData {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
+  company: string;
+  project: string;
+  chamberType: string;
+  applicationArea: string;
+  timeline: string;
+  message: string;
+}
+
+const initialForm: FormData = {
+  firstName: "", lastName: "", email: "", phone: "",
+  company: "", project: "", chamberType: "", applicationArea: "",
+  timeline: "", message: "",
+};
+
 const Contact = () => {
   const [consent, setConsent] = useState(false);
+  const [form, setForm] = useState<FormData>(initialForm);
+  const [submitted, setSubmitted] = useState(false);
+
+  const set = (field: keyof FormData) => (val: string) =>
+    setForm((prev) => ({ ...prev, [field]: val }));
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!consent) {
+      toast.error("Please accept the data processing consent to proceed.");
+      return;
+    }
+
+    const lines = [
+      `First Name: ${form.firstName}`,
+      `Last Name: ${form.lastName}`,
+      `Email: ${form.email}`,
+      form.phone && `Phone: ${form.phone}`,
+      `Company: ${form.company}`,
+      form.project && `Project: ${form.project}`,
+      form.chamberType && `Chamber Type: ${form.chamberType}`,
+      form.applicationArea && `Application Area: ${form.applicationArea}`,
+      form.timeline && `Timeline: ${form.timeline}`,
+      "",
+      form.message || "(No message provided)",
+    ].filter(Boolean).join("\n");
+
+    const subject = encodeURIComponent(
+      `Engineering Inquiry – ${form.company || "New Contact"}`
+    );
+    const body = encodeURIComponent(lines);
+
+    window.location.href = `mailto:info@deepvac.space?subject=${subject}&body=${body}`;
+    setSubmitted(true);
+  };
+
+  if (submitted) {
+    return (
+      <Layout>
+        <PageShell>
+          <Section>
+            <div className="max-w-xl mx-auto text-center space-y-6 py-20">
+              <CheckCircle className="w-12 h-12 text-blue mx-auto" />
+              <h2 className="text-3xl font-medium text-sand tracking-tight">
+                Thank You for Your Inquiry
+              </h2>
+              <p className="text-gray text-sm leading-relaxed">
+                Your email client should have opened with your inquiry details pre-filled.
+                Please send the email to complete your submission. Our engineering team
+                typically responds within two business days.
+              </p>
+              <Button
+                variant="outline"
+                onClick={() => { setSubmitted(false); setForm(initialForm); setConsent(false); }}
+              >
+                Submit Another Inquiry
+              </Button>
+            </div>
+          </Section>
+        </PageShell>
+      </Layout>
+    );
+  }
 
   return (
     <Layout>
@@ -90,31 +191,33 @@ const Contact = () => {
                 <p className="text-sm text-gray">Provide your project context and we'll follow up with relevant technical information.</p>
               </div>
 
-              <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
+              <form className="space-y-5" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                  <FormField label="First Name" placeholder="First name" required />
-                  <FormField label="Last Name" placeholder="Last name" required />
+                  <FormField label="First Name" placeholder="First name" required name="firstName" value={form.firstName} onChange={set("firstName")} />
+                  <FormField label="Last Name" placeholder="Last name" required name="lastName" value={form.lastName} onChange={set("lastName")} />
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                  <FormField label="Work Email" placeholder="your@company.com" type="email" required />
-                  <FormField label="Phone Number" placeholder="+49 ..." type="tel" />
+                  <FormField label="Work Email" placeholder="your@company.com" type="email" required name="email" value={form.email} onChange={set("email")} />
+                  <FormField label="Phone Number" placeholder="+49 ..." type="tel" name="phone" value={form.phone} onChange={set("phone")} />
                 </div>
-                <FormField label="Company" placeholder="Organisation" required />
-                <FormField label="Project / Application" placeholder="e.g. Satellite subsystem qualification, custom TVAC for research program" />
+                <FormField label="Company" placeholder="Organisation" required name="company" value={form.company} onChange={set("company")} />
+                <FormField label="Project / Application" placeholder="e.g. Satellite subsystem qualification, custom TVAC for research program" name="project" value={form.project} onChange={set("project")} />
 
                 {/* Qualifier Fields */}
                 <div className="border-t border-gray/10 pt-5 space-y-5">
                   <span className="mono-label text-blue">Optional — Help Us Prepare</span>
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-                    <SelectField label="Chamber Type" options={qualifierOptions.chamberType} />
-                    <SelectField label="Application Area" options={qualifierOptions.applicationArea} />
-                    <SelectField label="Timeline" options={qualifierOptions.timeline} />
+                    <SelectField label="Chamber Type" options={qualifierOptions.chamberType} value={form.chamberType} onChange={set("chamberType")} />
+                    <SelectField label="Application Area" options={qualifierOptions.applicationArea} value={form.applicationArea} onChange={set("applicationArea")} />
+                    <SelectField label="Timeline" options={qualifierOptions.timeline} value={form.timeline} onChange={set("timeline")} />
                   </div>
                 </div>
 
                 <div className="space-y-2">
                   <label className="mono-label">Message</label>
                   <textarea
+                    value={form.message}
+                    onChange={(e) => set("message")(e.target.value)}
                     className="w-full bg-background border border-gray/15 rounded-sm px-4 py-3 text-sm text-sand placeholder:text-gray/30 focus:outline-none focus:border-blue/40 focus:ring-1 focus:ring-blue/20 transition-all duration-200 min-h-[120px] resize-y"
                     placeholder="Describe your test requirements, chamber specifications, or integration needs..."
                   />
