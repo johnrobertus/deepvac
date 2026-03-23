@@ -6,7 +6,7 @@ import { BentoGrid, BentoCard } from "@/components/BentoGrid";
 import { Button } from "@/components/ui/button";
 import { PlaceholderImage } from "@/components/PlaceholderImage";
 import { TechChip } from "@/components/TechChip";
-import { ArrowRight, Maximize, Circle, Thermometer, Gauge, Wrench, Cpu } from "lucide-react";
+import { ArrowRight, Maximize, Circle, Thermometer, Gauge, Wrench, Cpu, Download } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import tseriesImg from "@/assets/tseries-chamber.png";
 import cseriesImg from "@/assets/cseries-chamber.jpg";
