@@ -6,7 +6,7 @@ import { Phone, Mail, MapPin, Shield, Loader2, CheckCircle } from "lucide-react"
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 
-const TURNSTILE_SITE_KEY = "0x4AAAAAABfMsterMM0oIjpN"; // Replace with your actual site key
+const TURNSTILE_SITE_KEY = "0x4AAAAAACu_Uqbd5b8IkXxU";
 
 function FormField({
   label, placeholder, type = "text", required = false, value, onChange,
