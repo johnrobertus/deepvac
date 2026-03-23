@@ -6,7 +6,8 @@ import { SectionHeader } from "@/components/SectionHeader";
 import { Button } from "@/components/ui/button";
 import { PlaceholderImage } from "@/components/PlaceholderImage";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Phone, Mail, MapPin, Clock, Shield, ArrowRight } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Shield, ArrowRight, CheckCircle } from "lucide-react";
+import { toast } from "sonner";
 
 const qualifierOptions = {
   chamberType: ["Standard T Series", "Standard C Series", "Custom TVAC", "Not sure yet"],
@@ -26,11 +27,17 @@ function FormField({
   placeholder,
   type = "text",
   required = false,
+  name,
+  value,
+  onChange,
 }: {
   label: string;
   placeholder: string;
   type?: string;
   required?: boolean;
+  name: string;
+  value: string;
+  onChange: (val: string) => void;
 }) {
   return (
     <div className="space-y-2">
@@ -40,7 +47,10 @@ function FormField({
       </label>
       <input
         type={type}
+        name={name}
         required={required}
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
         className="w-full bg-background border border-gray/15 rounded-sm px-4 py-3 text-sm text-sand placeholder:text-gray/30 focus:outline-none focus:border-blue/40 focus:ring-1 focus:ring-blue/20 transition-all duration-200"
         placeholder={placeholder}
       />
