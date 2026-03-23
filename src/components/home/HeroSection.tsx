@@ -126,7 +126,7 @@ export function HeroSection() {
                 <span className="mono-label text-blue-light/90 tracking-[0.08em]">
                   AI-ENABLED THERMAL VACUUM SYSTEMS. ENGINEERED IN GERMANY.{" "}
                 </span>
-                <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] font-medium tracking-tight text-sand leading-[1.08]">
+                <h1 className="text-3xl md:text-5xl lg:text-[3.5rem] font-medium tracking-tight text-sand leading-[1.08]">
                   AI-Enabled Thermal Vacuum Systems for Aerospace Qualification
                 </h1>
               </div>
