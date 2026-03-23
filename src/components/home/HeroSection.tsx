@@ -118,7 +118,7 @@ export function HeroSection() {
       />
 
       {/* Content */}
-      <div className="relative z-20 flex items-end h-full pb-20 md:pb-28 pt-32 md:pt-40 px-6">
+      <div className="relative z-20 flex items-end h-full pb-16 md:pb-28 pt-24 md:pt-40 px-6">
         <div className="container max-w-6xl">
           <div className="max-w-2xl space-y-6">
             <Reveal>
