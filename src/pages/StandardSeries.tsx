@@ -6,7 +6,7 @@ import { BentoGrid, BentoCard } from "@/components/BentoGrid";
 import { Button } from "@/components/ui/button";
 import { PlaceholderImage } from "@/components/PlaceholderImage";
 import { TechChip } from "@/components/TechChip";
-import { ArrowRight, Maximize, Circle, Thermometer, Gauge, Wrench, Cpu } from "lucide-react";
+import { ArrowRight, Maximize, Circle, Thermometer, Gauge, Wrench, Cpu, Download } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import tseriesImg from "@/assets/tseries-chamber.png";
 import cseriesImg from "@/assets/cseries-chamber.jpg";
@@ -173,6 +173,37 @@ const StandardSeries = () => (
                 <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover/btn:translate-x-1" />
               </Link>
             </Button>
+          </div>
+        </div>
+      </Section>
+
+      {/* Brochure Download */}
+      <Section>
+        <div className="bento-card rounded-lg overflow-hidden grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-0">
+          <div className="relative bg-surface overflow-hidden">
+            <img
+              src="/brochures/deepvac-standard-series-cover.jpg"
+              alt="Deepvac Standard Series Catalogue"
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div className="p-8 lg:p-10 flex flex-col justify-center space-y-4">
+            <span className="mono-label text-blue">Download Standard Series Brochure</span>
+            <h3 className="text-xl md:text-2xl font-medium text-sand tracking-tight">
+              Deepvac Standard Series Catalogue
+            </h3>
+            <p className="text-sm text-gray leading-relaxed max-w-xl">
+              Explore the Deepvac Standard Series in more detail, including common technical characteristics, chamber configurations, control system features, and optional upgrades.
+            </p>
+            <div className="pt-2">
+              <Button asChild>
+                <a href="/brochures/deepvac-standard-series-catalogue-2026.pdf" target="_blank" rel="noopener noreferrer">
+                  <Download className="w-4 h-4 mr-2" />
+                  Download PDF
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       </Section>
