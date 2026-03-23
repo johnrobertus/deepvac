@@ -76,11 +76,43 @@ const initialForm: FormData = {
   timeline: "", message: "",
 };
 
+const TURNSTILE_SITE_KEY = "0x4AAAAAABfMsterMM0oIjpN"; // Replace with your actual site key
+
 const Contact = () => {
   const [consent, setConsent] = useState(false);
   const [form, setForm] = useState<FormData>(initialForm);
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
+  const [honeypot, setHoneypot] = useState("");
+  const turnstileRef = useRef<HTMLDivElement>(null);
+  const turnstileWidgetId = useRef<string | null>(null);
+
+  useEffect(() => {
+    // Load Turnstile script
+    if (!document.getElementById("cf-turnstile-script")) {
+      const script = document.createElement("script");
+      script.id = "cf-turnstile-script";
+      script.src = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
+      script.async = true;
+      script.defer = true;
+      document.head.appendChild(script);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (!turnstileRef.current) return;
+    const interval = setInterval(() => {
+      if (window.turnstile && turnstileRef.current && !turnstileWidgetId.current) {
+        turnstileWidgetId.current = window.turnstile.render(turnstileRef.current, {
+          sitekey: TURNSTILE_SITE_KEY,
+          callback: () => {},
+          size: "invisible",
+        });
+        clearInterval(interval);
+      }
+    }, 200);
+    return () => clearInterval(interval);
+  }, [submitted]);
 
   const set = (field: keyof FormData) => (val: string) =>
     setForm((prev) => ({ ...prev, [field]: val }));
@@ -96,6 +128,12 @@ const Contact = () => {
 
     setSending(true);
     try {
+      // Get Turnstile token
+      let turnstileToken = "";
+      if (window.turnstile && turnstileWidgetId.current) {
+        turnstileToken = window.turnstile.getResponse(turnstileWidgetId.current) || "";
+      }
+
       const { data, error } = await supabase.functions.invoke("send-inquiry", {
         body: {
           firstName: form.firstName,
@@ -109,6 +147,8 @@ const Contact = () => {
           timeline: form.timeline || undefined,
           message: form.message || undefined,
           source: "contact-page",
+          _website: honeypot,
+          turnstileToken: turnstileToken || undefined,
         },
       });
 
@@ -116,10 +156,19 @@ const Contact = () => {
       if (data?.error) throw new Error(data.error);
 
       setSubmitted(true);
+      turnstileWidgetId.current = null;
       toast.success("Your inquiry has been sent successfully.");
-    } catch (err) {
+    } catch (err: any) {
       console.error("Submission error:", err);
-      toast.error("Failed to send your inquiry. Please try again or contact us directly at info@deepvac.space.");
+      if (err?.message?.includes("Too many requests")) {
+        toast.error("Too many submissions. Please try again later.");
+      } else {
+        toast.error("Submission failed. Please try again later or contact us directly at info@deepvac.space.");
+      }
+      // Reset Turnstile for retry
+      if (window.turnstile && turnstileWidgetId.current) {
+        window.turnstile.reset(turnstileWidgetId.current);
+      }
     } finally {
       setSending(false);
     }
