@@ -191,31 +191,33 @@ const Contact = () => {
                 <p className="text-sm text-gray">Provide your project context and we'll follow up with relevant technical information.</p>
               </div>
 
-              <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
+              <form className="space-y-5" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                  <FormField label="First Name" placeholder="First name" required />
-                  <FormField label="Last Name" placeholder="Last name" required />
+                  <FormField label="First Name" placeholder="First name" required name="firstName" value={form.firstName} onChange={set("firstName")} />
+                  <FormField label="Last Name" placeholder="Last name" required name="lastName" value={form.lastName} onChange={set("lastName")} />
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                  <FormField label="Work Email" placeholder="your@company.com" type="email" required />
-                  <FormField label="Phone Number" placeholder="+49 ..." type="tel" />
+                  <FormField label="Work Email" placeholder="your@company.com" type="email" required name="email" value={form.email} onChange={set("email")} />
+                  <FormField label="Phone Number" placeholder="+49 ..." type="tel" name="phone" value={form.phone} onChange={set("phone")} />
                 </div>
-                <FormField label="Company" placeholder="Organisation" required />
-                <FormField label="Project / Application" placeholder="e.g. Satellite subsystem qualification, custom TVAC for research program" />
+                <FormField label="Company" placeholder="Organisation" required name="company" value={form.company} onChange={set("company")} />
+                <FormField label="Project / Application" placeholder="e.g. Satellite subsystem qualification, custom TVAC for research program" name="project" value={form.project} onChange={set("project")} />
 
                 {/* Qualifier Fields */}
                 <div className="border-t border-gray/10 pt-5 space-y-5">
                   <span className="mono-label text-blue">Optional — Help Us Prepare</span>
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-                    <SelectField label="Chamber Type" options={qualifierOptions.chamberType} />
-                    <SelectField label="Application Area" options={qualifierOptions.applicationArea} />
-                    <SelectField label="Timeline" options={qualifierOptions.timeline} />
+                    <SelectField label="Chamber Type" options={qualifierOptions.chamberType} value={form.chamberType} onChange={set("chamberType")} />
+                    <SelectField label="Application Area" options={qualifierOptions.applicationArea} value={form.applicationArea} onChange={set("applicationArea")} />
+                    <SelectField label="Timeline" options={qualifierOptions.timeline} value={form.timeline} onChange={set("timeline")} />
                   </div>
                 </div>
 
                 <div className="space-y-2">
                   <label className="mono-label">Message</label>
                   <textarea
+                    value={form.message}
+                    onChange={(e) => set("message")(e.target.value)}
                     className="w-full bg-background border border-gray/15 rounded-sm px-4 py-3 text-sm text-sand placeholder:text-gray/30 focus:outline-none focus:border-blue/40 focus:ring-1 focus:ring-blue/20 transition-all duration-200 min-h-[120px] resize-y"
                     placeholder="Describe your test requirements, chamber specifications, or integration needs..."
                   />
