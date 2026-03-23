@@ -22,6 +22,9 @@ import Catalogues from "./pages/Catalogues";
 import Careers from "./pages/Careers";
 import References from "./pages/References";
 import Contact from "./pages/Contact";
+import Imprint from "./pages/Imprint";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsAndConditions from "./pages/TermsAndConditions";
 import NotFound from "./pages/NotFound";
 import { ScrollToTop } from "./components/ScrollToTop";
 
@@ -52,6 +55,9 @@ const App = () => (
           <Route path="/careers" element={<Careers />} />
           <Route path="/references" element={<References />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/imprint" element={<Imprint />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

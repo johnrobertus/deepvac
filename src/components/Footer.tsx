@@ -91,10 +91,10 @@ export function Footer() {
             <Link to="/imprint" className="text-xs text-gray/50 hover:text-gray transition-colors">
               Imprint
             </Link>
-            <Link to="/terms" className="text-xs text-gray/50 hover:text-gray transition-colors">
-              General Terms & Conditions
+            <Link to="/terms-and-conditions" className="text-xs text-gray/50 hover:text-gray transition-colors">
+              General Terms &amp; Conditions
             </Link>
-            <Link to="/privacy" className="text-xs text-gray/50 hover:text-gray transition-colors">
+            <Link to="/privacy-policy" className="text-xs text-gray/50 hover:text-gray transition-colors">
               Privacy Policy
             </Link>
           </div>
