@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/Reveal";
 import { Phone, Mail, MapPin, Shield, Loader2, CheckCircle } from "lucide-react";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
+
+const TURNSTILE_SITE_KEY = "0x4AAAAAABfMsterMM0oIjpN"; // Replace with your actual site key
 
 function FormField({
   label, placeholder, type = "text", required = false, value, onChange,
@@ -42,6 +44,35 @@ export function ContactSection() {
   const [form, setForm] = useState<FormData>(initialForm);
   const [sending, setSending] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [honeypot, setHoneypot] = useState("");
+  const turnstileRef = useRef<HTMLDivElement>(null);
+  const turnstileWidgetId = useRef<string | null>(null);
+
+  useEffect(() => {
+    if (!document.getElementById("cf-turnstile-script")) {
+      const script = document.createElement("script");
+      script.id = "cf-turnstile-script";
+      script.src = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
+      script.async = true;
+      script.defer = true;
+      document.head.appendChild(script);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (!turnstileRef.current) return;
+    const interval = setInterval(() => {
+      if ((window as any).turnstile && turnstileRef.current && !turnstileWidgetId.current) {
+        turnstileWidgetId.current = (window as any).turnstile.render(turnstileRef.current, {
+          sitekey: TURNSTILE_SITE_KEY,
+          callback: () => {},
+          size: "invisible",
+        });
+        clearInterval(interval);
+      }
+    }, 200);
+    return () => clearInterval(interval);
+  }, [submitted]);
 
   const set = (field: keyof FormData) => (val: string) =>
     setForm((prev) => ({ ...prev, [field]: val }));
@@ -56,6 +87,11 @@ export function ContactSection() {
 
     setSending(true);
     try {
+      let turnstileToken = "";
+      if ((window as any).turnstile && turnstileWidgetId.current) {
+        turnstileToken = (window as any).turnstile.getResponse(turnstileWidgetId.current) || "";
+      }
+
       const { data, error } = await supabase.functions.invoke("send-inquiry", {
         body: {
           firstName: form.firstName,
@@ -66,6 +102,8 @@ export function ContactSection() {
           project: form.project || undefined,
           message: form.message || undefined,
           source: "homepage-contact",
+          _website: honeypot,
+          turnstileToken: turnstileToken || undefined,
         },
       });
 
@@ -73,10 +111,18 @@ export function ContactSection() {
       if (data?.error) throw new Error(data.error);
 
       setSubmitted(true);
+      turnstileWidgetId.current = null;
       toast.success("Your inquiry has been sent successfully.");
-    } catch (err) {
+    } catch (err: any) {
       console.error("Submission error:", err);
-      toast.error("Failed to send your inquiry. Please try again or contact us at info@deepvac.space.");
+      if (err?.message?.includes("Too many requests")) {
+        toast.error("Too many submissions. Please try again later.");
+      } else {
+        toast.error("Submission failed. Please try again later or contact us at info@deepvac.space.");
+      }
+      if ((window as any).turnstile && turnstileWidgetId.current) {
+        (window as any).turnstile.reset(turnstileWidgetId.current);
+      }
     } finally {
       setSending(false);
     }
@@ -132,6 +178,18 @@ export function ContactSection() {
                   placeholder="Describe your requirements..."
                 />
               </div>
+
+              {/* Honeypot - invisible to users */}
+              <div aria-hidden="true" style={{ position: "absolute", left: "-9999px", top: "-9999px", opacity: 0, height: 0, overflow: "hidden" }}>
+                <label htmlFor="hp-website">Website</label>
+                <input
+                  type="text" id="hp-website" name="website" tabIndex={-1} autoComplete="off"
+                  value={honeypot} onChange={(e) => setHoneypot(e.target.value)}
+                />
+              </div>
+
+              {/* Turnstile invisible widget */}
+              <div ref={turnstileRef} />
 
               <label className="flex items-start gap-3 cursor-pointer group">
                 <input

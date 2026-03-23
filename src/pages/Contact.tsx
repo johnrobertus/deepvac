@@ -258,6 +258,18 @@ const Contact = () => {
                   />
                 </div>
 
+                {/* Honeypot - invisible to users */}
+                <div aria-hidden="true" style={{ position: "absolute", left: "-9999px", top: "-9999px", opacity: 0, height: 0, overflow: "hidden" }}>
+                  <label htmlFor="website">Website</label>
+                  <input
+                    type="text" id="website" name="website" tabIndex={-1} autoComplete="off"
+                    value={honeypot} onChange={(e) => setHoneypot(e.target.value)}
+                  />
+                </div>
+
+                {/* Turnstile invisible widget */}
+                <div ref={turnstileRef} />
+
                 <label className="flex items-start gap-3 cursor-pointer group">
                   <input
                     type="checkbox" checked={consent}
