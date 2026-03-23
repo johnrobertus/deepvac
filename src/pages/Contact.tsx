@@ -61,14 +61,22 @@ function FormField({
 function SelectField({
   label,
   options,
+  value,
+  onChange,
 }: {
   label: string;
   options: string[];
+  value: string;
+  onChange: (val: string) => void;
 }) {
   return (
     <div className="space-y-2">
       <label className="mono-label">{label}</label>
-      <select className="w-full bg-background border border-gray/15 rounded-sm px-4 py-3 text-sm text-sand focus:outline-none focus:border-blue/40 focus:ring-1 focus:ring-blue/20 transition-all duration-200 appearance-none">
+      <select
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+        className="w-full bg-background border border-gray/15 rounded-sm px-4 py-3 text-sm text-sand focus:outline-none focus:border-blue/40 focus:ring-1 focus:ring-blue/20 transition-all duration-200 appearance-none"
+      >
         <option value="" className="bg-surface text-gray">Select...</option>
         {options.map((opt) => (
           <option key={opt} value={opt} className="bg-surface text-sand">{opt}</option>
@@ -78,8 +86,91 @@ function SelectField({
   );
 }
 
+interface FormData {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
+  company: string;
+  project: string;
+  chamberType: string;
+  applicationArea: string;
+  timeline: string;
+  message: string;
+}
+
+const initialForm: FormData = {
+  firstName: "", lastName: "", email: "", phone: "",
+  company: "", project: "", chamberType: "", applicationArea: "",
+  timeline: "", message: "",
+};
+
 const Contact = () => {
   const [consent, setConsent] = useState(false);
+  const [form, setForm] = useState<FormData>(initialForm);
+  const [submitted, setSubmitted] = useState(false);
+
+  const set = (field: keyof FormData) => (val: string) =>
+    setForm((prev) => ({ ...prev, [field]: val }));
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!consent) {
+      toast.error("Please accept the data processing consent to proceed.");
+      return;
+    }
+
+    const lines = [
+      `First Name: ${form.firstName}`,
+      `Last Name: ${form.lastName}`,
+      `Email: ${form.email}`,
+      form.phone && `Phone: ${form.phone}`,
+      `Company: ${form.company}`,
+      form.project && `Project: ${form.project}`,
+      form.chamberType && `Chamber Type: ${form.chamberType}`,
+      form.applicationArea && `Application Area: ${form.applicationArea}`,
+      form.timeline && `Timeline: ${form.timeline}`,
+      "",
+      form.message || "(No message provided)",
+    ].filter(Boolean).join("\n");
+
+    const subject = encodeURIComponent(
+      `Engineering Inquiry – ${form.company || "New Contact"}`
+    );
+    const body = encodeURIComponent(lines);
+
+    window.location.href = `mailto:info@deepvac.space?subject=${subject}&body=${body}`;
+    setSubmitted(true);
+  };
+
+  if (submitted) {
+    return (
+      <Layout>
+        <PageShell>
+          <Section>
+            <div className="max-w-xl mx-auto text-center space-y-6 py-20">
+              <CheckCircle className="w-12 h-12 text-blue mx-auto" />
+              <h2 className="text-3xl font-medium text-sand tracking-tight">
+                Thank You for Your Inquiry
+              </h2>
+              <p className="text-gray text-sm leading-relaxed">
+                Your email client should have opened with your inquiry details pre-filled.
+                Please send the email to complete your submission. Our engineering team
+                typically responds within two business days.
+              </p>
+              <Button
+                variant="outline"
+                onClick={() => { setSubmitted(false); setForm(initialForm); setConsent(false); }}
+              >
+                Submit Another Inquiry
+              </Button>
+            </div>
+          </Section>
+        </PageShell>
+      </Layout>
+    );
+  }
 
   return (
     <Layout>
