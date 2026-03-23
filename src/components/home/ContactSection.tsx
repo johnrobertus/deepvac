@@ -2,10 +2,104 @@ import { useState } from "react";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/Reveal";
-import { Phone, Mail, MapPin, Shield } from "lucide-react";
+import { Phone, Mail, MapPin, Shield, Loader2, CheckCircle } from "lucide-react";
+import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
+
+function FormField({
+  label, placeholder, type = "text", required = false, value, onChange,
+}: {
+  label: string; placeholder: string; type?: string; required?: boolean; value: string; onChange: (val: string) => void;
+}) {
+  return (
+    <div className="space-y-2">
+      <label className="mono-label">
+        {label}
+        {required && <span className="text-blue ml-1">*</span>}
+      </label>
+      <input
+        type={type} required={required} value={value}
+        onChange={(e) => onChange(e.target.value)}
+        className="w-full bg-background border border-gray/15 rounded-sm px-4 py-3 text-sm text-sand placeholder:text-gray/30 focus:outline-none focus:border-blue/40 focus:ring-1 focus:ring-blue/20 transition-all duration-200"
+        placeholder={placeholder}
+      />
+    </div>
+  );
+}
+
+interface FormData {
+  firstName: string; lastName: string; email: string;
+  company: string; phone: string; project: string; message: string;
+}
+
+const initialForm: FormData = {
+  firstName: "", lastName: "", email: "",
+  company: "", phone: "", project: "", message: "",
+};
 
 export function ContactSection() {
   const [consent, setConsent] = useState(false);
+  const [form, setForm] = useState<FormData>(initialForm);
+  const [sending, setSending] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+
+  const set = (field: keyof FormData) => (val: string) =>
+    setForm((prev) => ({ ...prev, [field]: val }));
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!consent) {
+      toast.error("Please accept the data processing consent to proceed.");
+      return;
+    }
+    if (sending) return;
+
+    setSending(true);
+    try {
+      const { data, error } = await supabase.functions.invoke("send-inquiry", {
+        body: {
+          firstName: form.firstName,
+          lastName: form.lastName,
+          email: form.email,
+          phone: form.phone || undefined,
+          company: form.company,
+          project: form.project || undefined,
+          message: form.message || undefined,
+          source: "homepage-contact",
+        },
+      });
+
+      if (error) throw error;
+      if (data?.error) throw new Error(data.error);
+
+      setSubmitted(true);
+      toast.success("Your inquiry has been sent successfully.");
+    } catch (err) {
+      console.error("Submission error:", err);
+      toast.error("Failed to send your inquiry. Please try again or contact us at info@deepvac.space.");
+    } finally {
+      setSending(false);
+    }
+  };
+
+  if (submitted) {
+    return (
+      <section className="py-20 md:py-28 px-6 bg-surface/30">
+        <div className="container max-w-6xl">
+          <div className="max-w-xl mx-auto text-center space-y-6">
+            <CheckCircle className="w-12 h-12 text-blue mx-auto" />
+            <h2 className="text-3xl font-medium text-sand tracking-tight">Thank You</h2>
+            <p className="text-gray text-sm leading-relaxed">
+              Your inquiry has been received. Our team typically responds within two business days.
+            </p>
+            <Button variant="outline" onClick={() => { setSubmitted(false); setForm(initialForm); setConsent(false); }}>
+              Submit Another Inquiry
+            </Button>
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="py-20 md:py-28 px-6 bg-surface/30">
@@ -19,30 +113,29 @@ export function ContactSection() {
           />
         </Reveal>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Form */}
           <Reveal delay={100}>
-            <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
+            <form className="space-y-5" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                <FormField label="First Name" placeholder="First name" required />
-                <FormField label="Last Name" placeholder="Last name" required />
+                <FormField label="First Name" placeholder="First name" required value={form.firstName} onChange={set("firstName")} />
+                <FormField label="Last Name" placeholder="Last name" required value={form.lastName} onChange={set("lastName")} />
               </div>
-              <FormField label="Work Email" placeholder="your@company.com" type="email" required />
-              <FormField label="Company" placeholder="Organisation" required />
-              <FormField label="Phone Number" placeholder="+49 ..." type="tel" />
-              <FormField label="Project / Application" placeholder="Satellite TVAC, Research Chamber, etc." />
+              <FormField label="Work Email" placeholder="your@company.com" type="email" required value={form.email} onChange={set("email")} />
+              <FormField label="Company" placeholder="Organisation" required value={form.company} onChange={set("company")} />
+              <FormField label="Phone Number" placeholder="+49 ..." type="tel" value={form.phone} onChange={set("phone")} />
+              <FormField label="Project / Application" placeholder="Satellite TVAC, Research Chamber, etc." value={form.project} onChange={set("project")} />
               <div className="space-y-2">
                 <label className="mono-label">Message</label>
                 <textarea
+                  value={form.message}
+                  onChange={(e) => set("message")(e.target.value)}
                   className="w-full bg-background border border-gray/15 rounded-sm px-4 py-3 text-sm text-sand placeholder:text-gray/30 focus:outline-none focus:border-blue/40 focus:ring-1 focus:ring-blue/20 transition-all duration-200 min-h-[100px] resize-y"
                   placeholder="Describe your requirements..."
                 />
               </div>
 
-              {/* Consent */}
               <label className="flex items-start gap-3 cursor-pointer group">
                 <input
-                  type="checkbox"
-                  checked={consent}
+                  type="checkbox" checked={consent}
                   onChange={(e) => setConsent(e.target.checked)}
                   className="mt-0.5 w-4 h-4 accent-blue"
                 />
@@ -52,8 +145,12 @@ export function ContactSection() {
               </label>
 
               <div className="flex items-center gap-4">
-                <Button size="lg" className="font-mono text-xs tracking-wide">
-                  Send Inquiry
+                <Button size="lg" className="font-mono text-xs tracking-wide" disabled={sending}>
+                  {sending ? (
+                    <><Loader2 className="w-4 h-4 mr-2 animate-spin" /> Sending...</>
+                  ) : (
+                    "Send Inquiry"
+                  )}
                 </Button>
                 <div className="flex items-center gap-1.5 text-gray/40">
                   <Shield className="w-3 h-3" />
@@ -63,7 +160,6 @@ export function ContactSection() {
             </form>
           </Reveal>
 
-          {/* Contact Info */}
           <Reveal delay={200}>
             <div className="space-y-6 lg:pl-8">
               <div className="bento-card rounded-lg p-6 space-y-5">
@@ -72,10 +168,7 @@ export function ContactSection() {
                   <div>
                     <span className="mono-label mb-1 block">Address</span>
                     <p className="text-sm text-gray leading-relaxed">
-                      Deepvac GmbH<br />
-                      An der Universität 1<br />
-                      30823 Garbsen<br />
-                      Germany
+                      Deepvac GmbH<br />An der Universität 1<br />30823 Garbsen<br />Germany
                     </p>
                   </div>
                 </div>
@@ -95,28 +188,19 @@ export function ContactSection() {
                 </div>
               </div>
 
-              {/* Map placeholder */}
               <div className="bento-card rounded-lg overflow-hidden">
                 <div className="h-48" style={{ filter: "invert(0.9) hue-rotate(180deg)" }}>
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2434.0!2d9.7069!3d52.3911!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b074d80e5b6d4b%3A0x4a5c4b4e4e4e4e4e!2sAn+der+Universit%C3%A4t+1%2C+30823+Garbsen!5e0!3m2!1sde!2sde!4v1700000000000"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
+                    width="100%" height="100%" style={{ border: 0 }}
+                    allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"
                     title="Deepvac GmbH Location"
                   />
                 </div>
               </div>
 
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bento-card rounded-lg p-4 flex items-center justify-between group block"
-              >
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+                className="bento-card rounded-lg p-4 flex items-center justify-between group block">
                 <span className="text-sm text-gray group-hover:text-sand transition-colors">Follow Deepvac</span>
                 <span className="text-sm text-blue font-mono">LinkedIn →</span>
               </a>
@@ -125,32 +209,5 @@ export function ContactSection() {
         </div>
       </div>
     </section>
-  );
-}
-
-function FormField({
-  label,
-  placeholder,
-  type = "text",
-  required = false,
-}: {
-  label: string;
-  placeholder: string;
-  type?: string;
-  required?: boolean;
-}) {
-  return (
-    <div className="space-y-2">
-      <label className="mono-label">
-        {label}
-        {required && <span className="text-blue ml-1">*</span>}
-      </label>
-      <input
-        type={type}
-        required={required}
-        className="w-full bg-background border border-gray/15 rounded-sm px-4 py-3 text-sm text-sand placeholder:text-gray/30 focus:outline-none focus:border-blue/40 focus:ring-1 focus:ring-blue/20 transition-all duration-200"
-        placeholder={placeholder}
-      />
-    </div>
   );
 }
