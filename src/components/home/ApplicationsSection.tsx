@@ -1,21 +1,44 @@
 import { SectionHeader } from "@/components/SectionHeader";
 import { Reveal } from "@/components/Reveal";
-import {
-  Satellite,
-  Rocket,
-  FlaskConical,
-  Thermometer,
-  ShieldCheck,
-  Boxes,
-} from "lucide-react";
+import { Satellite, Rocket, FlaskConical, Thermometer, ShieldCheck, Boxes } from "lucide-react";
 
 const useCases = [
-  { icon: <Satellite className="w-5 h-5" />, title: "Satellite Subsystem Qualification", description: "Thermal vacuum testing of satellite components and subsystems under representative space conditions." },
-  { icon: <Rocket className="w-5 h-5" />, title: "Payload Component Validation", description: "Environmental simulation and validation of payload-critical hardware before flight integration." },
-  { icon: <FlaskConical className="w-5 h-5" />, title: "Research & Laboratory Testing", description: "Flexible chamber configurations for academic and institutional vacuum research programs." },
-  { icon: <Thermometer className="w-5 h-5" />, title: "Thermal Cycling Under Vacuum", description: "Controlled thermal cycling workflows in high-vacuum conditions for materials and component durability testing." },
-  { icon: <ShieldCheck className="w-5 h-5" />, title: "Contamination-Sensitive Testing", description: "Low-outgassing environments designed for contamination-critical test campaigns and cleanroom-adjacent workflows." },
-  { icon: <Boxes className="w-5 h-5" />, title: "Custom Environmental Simulation", description: "Application-specific test conditions configured around unique geometries, interfaces, and thermal profiles." },
+  {
+    icon: <Satellite className="w-5 h-5" />,
+    title: "Satellite Subsystem Qualification",
+    description:
+      "Thermal vacuum qualification of satellite components and subsystems under representative space conditions.",
+  },
+  {
+    icon: <Rocket className="w-5 h-5" />,
+    title: "Payload and Instrument Validation",
+    description:
+      "Environmental simulation and thermal verification of payload-critical hardware before integration and deployment.",
+  },
+  {
+    icon: <Thermometer className="w-5 h-5" />,
+    title: "Thermal Cycling and Durability Testing",
+    description:
+      "Controlled thermal cycling under high vacuum for material, assembly, and component durability verification.",
+  },
+  {
+    icon: <ShieldCheck className="w-5 h-5" />,
+    title: "Contamination-Controlled Test Environments",
+    description:
+      "High-purity, low-outgassing test conditions for contamination-sensitive hardware and reproducible vacuum test campaigns.",
+  },
+  {
+    icon: <FlaskConical className="w-5 h-5" />,
+    title: "R&D and Prototype Verification",
+    description:
+      "Flexible chamber configurations for development programs, pilot setups, early validation, and iterative hardware testing.",
+  },
+  {
+    icon: <Boxes className="w-5 h-5" />,
+    title: "Custom Space Environment Simulation",
+    description:
+      "Application-specific chamber configurations for unique geometries, interfaces, radiative conditions, and thermal profiles.",
+  },
 ];
 
 export function ApplicationsSection() {
@@ -25,11 +48,12 @@ export function ApplicationsSection() {
         <Reveal>
           <SectionHeader
             eyebrow="Applications"
-            title="Built for Critical Test Campaigns"
-            description="Deepvac chamber platforms support a range of aerospace, research, and industrial test scenarios."
+            title="Built for Qualification, Thermal Cycling, and Mission-Critical Verification"
+            description="Deepvac chamber platforms support qualification, validation, and development testing of space and high-performance hardware under controlled thermal and high-vacuum conditions."
             className="mb-14"
           />
         </Reveal>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {useCases.map((uc, i) => (
             <Reveal key={uc.title} delay={i * 60}>
