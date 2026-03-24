@@ -6,12 +6,14 @@ import { BentoGrid, BentoCard } from "@/components/BentoGrid";
 import { Button } from "@/components/ui/button";
 import { PlaceholderImage } from "@/components/PlaceholderImage";
 import { ArrowRight } from "lucide-react";
+import mechanicalDesignHero from "@/assets/mechanical-design-hero.png";
 
 interface ServicePageProps {
   eyebrow: string;
   title: string;
   description: string;
   overview: string;
+  heroImage?: string;
   deliverables: { title: string; description: string }[];
   scenarios: string[];
   crossLinks: { label: string; href: string; description: string }[];
@@ -20,7 +22,7 @@ interface ServicePageProps {
 }
 
 function ServicePageTemplate({
-  eyebrow, title, description, overview, deliverables, scenarios, crossLinks, ctaTitle, ctaDescription,
+  eyebrow, title, description, overview, heroImage, deliverables, scenarios, crossLinks, ctaTitle, ctaDescription,
 }: ServicePageProps) {
   return (
     <Layout>
@@ -42,7 +44,14 @@ function ServicePageTemplate({
               <SectionHeader eyebrow="Overview" title="Service Scope" />
               <p className="text-sm text-gray leading-relaxed">{overview}</p>
             </div>
-            <PlaceholderImage assetId="SVC_HERO" type="PROCESS" aspectRatio="4/3" />
+            {heroImage ? (
+              <div className="relative w-full overflow-hidden rounded-lg" style={{ aspectRatio: "4/3" }}>
+                <img src={heroImage} alt={title} className="w-full h-full object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent pointer-events-none" />
+              </div>
+            ) : (
+              <PlaceholderImage assetId="SVC_HERO" type="PROCESS" aspectRatio="4/3" />
+            )}
           </div>
         </Section>
 
@@ -152,6 +161,7 @@ export const MechanicalDesign = () => (
   <ServicePageTemplate
     eyebrow="Services"
     title="Mechanical Design"
+    heroImage={mechanicalDesignHero}
     description="Engineering of chamber assemblies, interfaces, fixturing, support structures, and customer-specific mechanical integration concepts for thermal vacuum systems."
     overview="Deepvac provides mechanical design services for thermal vacuum chamber systems — from structural analysis and chamber geometry definition to fixture engineering, feedthrough integration, and interface specification. Our mechanical design work supports both new system development and modifications to existing chamber infrastructure, with focus on structural integrity, thermal performance, and practical accessibility."
     deliverables={[
