@@ -58,13 +58,9 @@ const Catalogues = () => {
               </div>
               <div className="p-8 lg:p-10 flex flex-col justify-center space-y-5">
                 <span className="mono-label text-blue">Featured Brochure</span>
-                <h2 className="text-2xl md:text-3xl font-medium text-sand tracking-tight">
-                  {featured.title}
-                </h2>
+                <h2 className="text-2xl md:text-3xl font-medium text-sand tracking-tight">{featured.title}</h2>
                 {featured.subtitle && (
-                  <p className="text-sm text-blue/80 font-mono uppercase tracking-wider">
-                    {featured.subtitle}
-                  </p>
+                  <p className="text-sm text-blue/80 font-mono uppercase tracking-wider">{featured.subtitle}</p>
                 )}
                 <p className="text-sm text-gray leading-relaxed">{featured.description}</p>
                 <div className="flex flex-wrap gap-2">
@@ -126,7 +122,8 @@ const Catalogues = () => {
             <FileText className="w-8 h-8 text-gray/30 mx-auto" />
             <h3 className="text-base font-medium text-sand">More Documentation Coming Soon</h3>
             <p className="text-sm text-gray max-w-lg mx-auto">
-              Additional technical specifications, data sheets, and platform-specific documentation will be published as they become available.
+              Additional technical specifications, data sheets, and platform-specific documentation will be published as
+              they become available.
             </p>
             <Button asChild variant="outline" size="sm">
               <Link to="/contact">Request Specific Documentation</Link>
@@ -154,12 +151,7 @@ function BrochureCard({ doc }: { doc: Brochure }) {
     <div className="bento-card rounded-lg overflow-hidden flex flex-col">
       {doc.coverUrl ? (
         <div className="relative bg-surface overflow-hidden" style={{ aspectRatio: "3/4" }}>
-          <img
-            src={doc.coverUrl}
-            alt={doc.title}
-            className="w-full h-full object-cover"
-            loading="lazy"
-          />
+          <img src={doc.coverUrl} alt={doc.title} className="w-full h-full object-cover" loading="lazy" />
         </div>
       ) : (
         <div

@@ -29,7 +29,7 @@ const servicesMenu: NavItem[] = [
 
 const navLinks: NavItem[] = [
   { label: "Team", href: "/team" },
-  { label: "Resources", href: "/resources" },
+  { label: "Resources", href: "/catalogs" },
   { label: "Careers", href: "/careers" },
   { label: "References", href: "/references" },
 ];

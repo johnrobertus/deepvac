@@ -157,9 +157,9 @@ export function HeroSection() {
         }}
       />
 
-      <div className="relative z-20 flex h-full flex-col justify-end px-6 pb-16 pt-20 md:pb-28 md:pt-40">
+      <div className="relative z-20 flex h-full flex-col justify-end px-6 pb-14 pt-20 md:pb-24 md:pt-40">
         <div className="container max-w-6xl">
-          <div className="max-w-3xl space-y-6">
+          <div className="max-w-3xl space-y-5">
             <Reveal>
               <div className="space-y-4">
                 <span className="mono-label text-blue-light/90 tracking-[0.08em]">
@@ -174,22 +174,19 @@ export function HeroSection() {
 
             <Reveal delay={100}>
               <p className="max-w-2xl text-sm leading-relaxed text-sand/72 md:text-base">
-                Deepvac develops modular and custom thermal vacuum systems for aerospace qualification, thermal cycling,
-                and environmental simulation. Our platforms combine high vacuum, precise thermal control, and
-                engineering-led control architectures to support reliable, reproducible, and scalable test
-                infrastructure.
+                Deepvac develops modular and custom thermal vacuum systems for aerospace qualification, thermal cycling, and space environment simulation — combining high vacuum, precise thermal control, and engineering-led automation.
               </p>
             </Reveal>
 
             <Reveal delay={200}>
-              <div className="flex flex-wrap gap-3 pt-2">
+              <div className="flex flex-wrap gap-3 pt-1">
                 {["MODULAR PLATFORMS", "CUSTOM TVAC SYSTEMS", "CONTROL & AUTOMATION", "RETROFIT & SERVICE"].map(
                   (cue) => (
                     <span
                       key={cue}
-                      className="inline-flex items-center gap-1.5 rounded-sm border border-sand/15 bg-background/30 px-3 py-1.5 font-mono text-[10px] uppercase tracking-widest text-sand/65 backdrop-blur-sm"
+                      className="inline-flex items-center gap-1.5 rounded-sm border border-sand/20 bg-background/30 px-3 py-1.5 font-mono text-[11px] uppercase tracking-widest text-sand/75 backdrop-blur-sm"
                     >
-                      <span className="h-1 w-1 rounded-full bg-blue/60" />
+                      <span className="h-1.5 w-1.5 rounded-full bg-blue/70" />
                       {cue}
                     </span>
                   ),
@@ -201,7 +198,7 @@ export function HeroSection() {
       </div>
 
       <div
-        className="absolute bottom-0 left-0 right-0 z-20 h-24 pointer-events-none"
+        className="absolute bottom-0 left-0 right-0 z-20 h-20 pointer-events-none"
         style={{
           background: "linear-gradient(to bottom, hsl(0 0% 0% / 0) 0%, hsl(var(--background)) 100%)",
         }}

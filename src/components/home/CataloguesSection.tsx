@@ -34,9 +34,7 @@ export function CataloguesSection() {
               <div className="p-6 flex flex-col justify-center space-y-3">
                 <span className="mono-label text-blue text-[10px]">Featured Brochure</span>
                 <h3 className="text-base font-medium text-sand">{featured.title}</h3>
-                <p className="text-xs text-gray leading-relaxed line-clamp-3">
-                  {featured.description}
-                </p>
+                <p className="text-xs text-gray leading-relaxed line-clamp-3">{featured.description}</p>
                 <div className="pt-1">
                   <Button asChild size="sm">
                     <a href={featured.pdfUrl} target="_blank" rel="noopener noreferrer">
