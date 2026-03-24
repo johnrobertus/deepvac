@@ -73,7 +73,7 @@ const CustomTVAC = () => (
       {/* Hero Image */}
       <Section>
         <div className="rounded-lg overflow-hidden border border-gray/10">
-          <img src={customImg} alt="Deepvac Custom Thermal Vacuum Chamber System" className="w-full h-auto object-cover max-h-[480px]" loading="lazy" />
+          <img src={customImg} alt="Deepvac Custom Thermal Vacuum Chamber System" className="w-full h-auto object-contain max-h-[360px]" loading="lazy" />
         </div>
         <p className="mt-3 font-mono text-xs text-gray text-center">Custom thermal vacuum chamber — engineered, integrated, and commissioned by Deepvac.</p>
       </Section>
