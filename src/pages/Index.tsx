@@ -34,11 +34,8 @@ const Index = () => {
         {/* Divider */}
         <div className="section-divider" />
 
-        {/* S4: Product Portfolio */}
-        <ProductPortfolioSection />
 
-        {/* S5: System Architecture */}
-        <SystemArchitectureSection />
+        {/* S4: Product Portfolio */}
 
         {/* S6: Applications */}
         <ApplicationsSection />
