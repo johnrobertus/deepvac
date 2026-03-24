@@ -51,7 +51,7 @@ export function CataloguesSection() {
         <Reveal delay={200}>
           <div className="text-center">
             <Button asChild variant="outline">
-              <Link to="/catalogues">View All Resources</Link>
+              <Link to="/resources">View All Resources</Link>
             </Button>
           </div>
         </Reveal>
