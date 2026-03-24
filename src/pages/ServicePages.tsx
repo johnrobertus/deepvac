@@ -181,7 +181,8 @@ export const MechanicalDesign = () => {
     ctaTitle="Discuss Your Mechanical Engineering Requirements"
     ctaDescription="Contact Deepvac for chamber structural design, fixture engineering, or mechanical integration support."
   />
-);
+  );
+};
 
 export const RetrofitModernisation = () => (
   <ServicePageTemplate
