@@ -33,17 +33,13 @@ export function HeroSection() {
 
   useEffect(() => {
     if (typeof window === "undefined") return;
-
     const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
     const updatePreference = () => setPrefersReducedMotion(mediaQuery.matches);
-
     updatePreference();
-
     if (typeof mediaQuery.addEventListener === "function") {
       mediaQuery.addEventListener("change", updatePreference);
       return () => mediaQuery.removeEventListener("change", updatePreference);
     }
-
     mediaQuery.addListener(updatePreference);
     return () => mediaQuery.removeListener(updatePreference);
   }, []);
@@ -51,7 +47,6 @@ export function HeroSection() {
   const playVideo = useCallback((index: number) => {
     const video = videoRefs.current[index];
     if (!video) return;
-
     video.currentTime = 0;
     video.play().catch(() => {});
   }, []);
@@ -59,21 +54,16 @@ export function HeroSection() {
   const pauseInactiveVideos = useCallback((keepIndexes: number[]) => {
     videoRefs.current.forEach((video, index) => {
       if (!video) return;
-      if (!keepIndexes.includes(index)) {
-        video.pause();
-      }
+      if (!keepIndexes.includes(index)) video.pause();
     });
   }, []);
 
   const startTransition = useCallback(() => {
     if (slides.length <= 1 || prefersReducedMotion) return;
-
     const upcomingIndex = (activeIndex + 1) % slides.length;
     setNextIndex(upcomingIndex);
     setTransitioning(true);
-
     playVideo(upcomingIndex);
-
     fadeTimerRef.current = window.setTimeout(() => {
       setActiveIndex(upcomingIndex);
       setNextIndex(null);
@@ -84,16 +74,13 @@ export function HeroSection() {
 
   useEffect(() => {
     clearTimers();
-
     playVideo(activeIndex);
     pauseInactiveVideos(nextIndex !== null ? [activeIndex, nextIndex] : [activeIndex]);
-
     if (!prefersReducedMotion && slides.length > 1) {
       sceneTimerRef.current = window.setTimeout(() => {
         startTransition();
       }, SCENE_DURATION);
     }
-
     return clearTimers;
   }, [activeIndex, nextIndex, prefersReducedMotion, startTransition, clearTimers, playVideo, pauseInactiveVideos]);
 
@@ -122,11 +109,8 @@ export function HeroSection() {
               className="absolute inset-0 h-full w-full object-cover"
               loading={i === 0 ? "eager" : "lazy"}
             />
-
             <video
-              ref={(el) => {
-                videoRefs.current[i] = el;
-              }}
+              ref={(el) => { videoRefs.current[i] = el; }}
               src={shouldLoad ? slide.video : undefined}
               poster={slide.poster}
               muted
@@ -140,6 +124,7 @@ export function HeroSection() {
         );
       })}
 
+      {/* Overlays */}
       <div
         className="absolute inset-0 z-10"
         style={{
@@ -149,42 +134,40 @@ export function HeroSection() {
           ].join(", "),
         }}
       />
-
       <div
         className="absolute inset-0 z-10 pointer-events-none"
-        style={{
-          boxShadow: "inset 0 0 140px 42px hsl(0 0% 0% / 0.28)",
-        }}
+        style={{ boxShadow: "inset 0 0 140px 42px hsl(0 0% 0% / 0.28)" }}
       />
 
+      {/* Content */}
       <div className="relative z-20 flex h-full flex-col justify-end px-6 pb-14 pt-20 md:pb-24 md:pt-40">
         <div className="container max-w-6xl">
           <div className="max-w-3xl space-y-5">
             <Reveal>
               <div className="space-y-4">
                 <span className="mono-label text-blue-light/90 tracking-[0.08em]">
-                  THERMAL VACUUM SYSTEMS FOR AEROSPACE. ENGINEERED IN GERMANY.
+                  INTELLIGENT TVAC INFRASTRUCTURE. ENGINEERED IN GERMANY.
                 </span>
 
                 <h1 className="text-3xl font-medium leading-[1.04] tracking-tight text-sand md:text-5xl lg:text-[3.5rem]">
-                  Thermal Vacuum Systems for Aerospace Qualification
+                  Thermal Vacuum Infrastructure for Aerospace Qualification
                 </h1>
               </div>
             </Reveal>
 
             <Reveal delay={100}>
               <p className="max-w-2xl text-sm leading-relaxed text-sand/72 md:text-base">
-                Deepvac develops modular and custom thermal vacuum systems for aerospace qualification, thermal cycling, and space environment simulation — combining high vacuum, precise thermal control, and engineering-led automation.
+                Deepvac integrates chamber engineering, thermal control, automation, and lifecycle support into intelligent TVAC systems — built for qualification, modernization, and long-term operational performance.
               </p>
             </Reveal>
 
             <Reveal delay={200}>
               <div className="flex flex-wrap gap-3 pt-1">
-                {["MODULAR PLATFORMS", "CUSTOM TVAC SYSTEMS", "CONTROL & AUTOMATION", "RETROFIT & SERVICE"].map(
+                {["CHAMBER PLATFORMS", "THERMAL CONTROL", "CONTROL & AUTOMATION", "RETROFIT & LIFECYCLE"].map(
                   (cue) => (
                     <span
                       key={cue}
-                      className="inline-flex items-center gap-1.5 rounded-sm border border-sand/20 bg-background/30 px-3 py-1.5 font-mono text-[11px] uppercase tracking-widest text-sand/75 backdrop-blur-sm"
+                      className="inline-flex items-center gap-1.5 rounded-sm border border-sand/24 bg-background/30 px-3 py-1.5 font-mono text-[11px] uppercase tracking-widest text-sand/80 backdrop-blur-sm"
                     >
                       <span className="h-1.5 w-1.5 rounded-full bg-blue/70" />
                       {cue}
@@ -197,6 +180,7 @@ export function HeroSection() {
         </div>
       </div>
 
+      {/* Bottom fade */}
       <div
         className="absolute bottom-0 left-0 right-0 z-20 h-20 pointer-events-none"
         style={{
