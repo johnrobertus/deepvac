@@ -4,24 +4,29 @@ import { CheckCircle } from "lucide-react";
 
 const differentiators = [
   {
-    title: "Modular Platforms & Custom Builds",
-    description: "Pre-engineered standard systems and fully bespoke chamber designs — from compact test cells to large-scale TVAC installations.",
+    title: "Modular Platforms & Custom Systems",
+    description:
+      "Standardized chamber platforms and custom TVAC systems, from compact test cells to large-scale qualification infrastructure.",
   },
   {
     title: "Engineering-Led System Design",
-    description: "Every Deepvac project is driven by engineering discipline — not by sales. Chamber architecture, interface design, and integration concepts start from first principles.",
+    description:
+      "Projects start from technical requirements, system architecture, interface design, and integration logic to create coherent application-specific test environments.",
   },
   {
-    title: "Hardware, Controls & Services — Integrated",
-    description: "Deepvac delivers chamber hardware, control system design, and lifecycle services as a unified offering, reducing integration risk and vendor complexity.",
+    title: "Integrated Hardware, Controls & Lifecycle Support",
+    description:
+      "Deepvac combines chamber hardware, control systems, subsystem integration, modernization, and service in one engineering-driven offering.",
   },
   {
-    title: "Proximity to Demanding Applications",
-    description: "Born from direct experience with aerospace qualification and research programs, Deepvac understands the technical requirements of mission-critical test environments.",
+    title: "Built for Demanding Test Environments",
+    description:
+      "Designed around the requirements of aerospace qualification, thermal cycling, contamination-sensitive testing, and advanced research applications.",
   },
   {
-    title: "Design, Build, Retrofit & Operate",
-    description: "Full project lifecycle support — from concept design through manufacturing, commissioning, modernisation, and long-term maintenance.",
+    title: "From Design to Modernization",
+    description:
+      "Support across concept development, manufacturing, commissioning, retrofit, maintenance, and long-term system improvement.",
   },
 ];
 
@@ -32,19 +37,20 @@ export function WhyDeepvacSection() {
         <Reveal>
           <SectionHeader
             eyebrow="Why Deepvac"
-            title="Engineered for the Mission"
-            description="Technical credibility built on engineering fundamentals, not marketing claims."
+            title="Built on Engineering Depth"
+            description="Deepvac combines engineering discipline, integrated system design, and lifecycle support for reliable thermal vacuum infrastructure."
             className="mb-14"
           />
         </Reveal>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {differentiators.map((d, i) => (
-            <Reveal key={d.title} delay={i * 60}>
+          {differentiators.map((item, i) => (
+            <Reveal key={item.title} delay={i * 60}>
               <div className="flex gap-4 p-6 bento-card rounded-lg h-full">
                 <CheckCircle className="w-5 h-5 text-blue flex-shrink-0 mt-0.5" />
                 <div>
-                  <h3 className="text-sm font-medium text-sand">{d.title}</h3>
-                  <p className="text-xs text-gray mt-2 leading-relaxed">{d.description}</p>
+                  <h3 className="text-sm font-medium text-sand">{item.title}</h3>
+                  <p className="text-xs text-gray mt-2 leading-relaxed">{item.description}</p>
                 </div>
               </div>
             </Reveal>
