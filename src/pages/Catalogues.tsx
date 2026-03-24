@@ -192,4 +192,4 @@ function BrochureCard({ doc }: { doc: Brochure }) {
   );
 }
 
-export default resources;
+export default Catalogues;
