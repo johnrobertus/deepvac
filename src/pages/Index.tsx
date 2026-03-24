@@ -24,52 +24,49 @@ const Index = () => {
         {/* S2: Trust Bar */}
         <TrustBarSection />
 
-        {/* Divider */}
-        <div className="section-divider" />
-
         {/* S3: Capabilities Bento */}
         <CapabilitiesSection />
 
         {/* Divider */}
         <div className="section-divider" />
 
-
         {/* S4: Product Portfolio */}
+        <ProductPortfolioSection />
 
-        {/* S6: Applications */}
+        {/* S5: Applications */}
         <ApplicationsSection />
 
         {/* Divider */}
         <div className="section-divider" />
 
-        {/* S7: Services */}
+        {/* S6: Services */}
         <ServicesSection />
 
-        {/* S8: Why Deepvac */}
+        {/* S7: Why DEEPVAC */}
         <WhyDeepvacSection />
 
         {/* Divider */}
         <div className="section-divider" />
 
-        {/* S9: Team */}
+        {/* S8: Team */}
         <TeamSection />
 
-        {/* S10: Catalogs */}
+        {/* S9: Catalogues */}
         <CataloguesSection />
 
-        {/* S11: References */}
+        {/* S10: References */}
         <ReferencesSection />
 
-        {/* S12: Lead Capture CTA */}
+        {/* S11: Lead Capture CTA */}
         <LeadCaptureCTA />
 
         {/* Divider */}
         <div className="section-divider" />
 
-        {/* S13: Contact */}
+        {/* S12: Contact */}
         <ContactSection />
 
-        {/* S14: Funding */}
+        {/* S13: Funding */}
         <FundingSection />
       </PageShell>
     </Layout>

@@ -52,7 +52,7 @@ const services = [
     title: "Retrofit & Modernization",
     description:
       "Technical upgrades for legacy TVAC systems to improve reliability, operability, safety, control precision, and lifecycle performance.",
-    href: "/services/retrofit-modernization",
+    href: "/services/retrofit-modernisation",
   },
   {
     icon: <Wrench className="h-5 w-5" />,
