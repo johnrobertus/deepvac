@@ -6,7 +6,6 @@ import { CapabilitiesSection } from "@/components/home/CapabilitiesSection";
 import { ProductPortfolioSection } from "@/components/home/ProductPortfolioSection";
 import { ApplicationsSection } from "@/components/home/ApplicationsSection";
 import { ServicesSection } from "@/components/home/ServicesSection";
-import { ServicesSection } from "@/components/home/ServicesSection";
 import { WhyDeepvacSection } from "@/components/home/WhyDeepvacSection";
 import { TeamSection } from "@/components/home/TeamSection";
 import { CataloguesSection } from "@/components/home/CataloguesSection";
