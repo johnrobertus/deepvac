@@ -6,21 +6,17 @@ export function TrustBarSection() {
     "Supported through retrofit, service, and subsystem integration",
   ];
   return (
-    <div className="border-y border-gray/10 py-10 px-6 bg-surface/50">
-      {" "}
+    <div className="border-y border-gray/10 py-8 px-6 bg-surface/50">
       <div className="container max-w-6xl">
-        {" "}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {" "}
           {items.map((item, i) => (
             <div key={i} className="flex items-start gap-3">
-              {" "}
-              <span className="w-1.5 h-1.5 rounded-full bg-blue/60 mt-1.5 flex-shrink-0" />{" "}
-              <p className="text-xs text-gray/70 leading-relaxed">{item}</p>{" "}
+              <span className="w-1.5 h-1.5 rounded-full bg-blue/70 mt-1.5 flex-shrink-0" />
+              <p className="text-xs text-gray leading-relaxed">{item}</p>
             </div>
-          ))}{" "}
-        </div>{" "}
-      </div>{" "}
+          ))}
+        </div>
+      </div>
     </div>
   );
 }

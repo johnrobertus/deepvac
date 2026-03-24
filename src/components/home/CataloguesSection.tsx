@@ -15,14 +15,14 @@ export function CataloguesSection() {
           <SectionHeader
             eyebrow="Resources"
             title="Technical Documentation"
-            description="Download product overviews, technical specifications, and company brochures."
+            description="Access product overviews, technical specifications, and company brochures."
             className="mb-14"
           />
         </Reveal>
 
         {featured && (
           <Reveal delay={80}>
-            <div className="bento-card rounded-lg overflow-hidden grid grid-cols-1 md:grid-cols-[240px_1fr] gap-0 mb-8">
+            <div className="bento-card rounded-lg overflow-hidden grid grid-cols-1 md:grid-cols-[280px_1fr] gap-0 mb-8">
               <div className="relative bg-surface overflow-hidden">
                 <img
                   src={featured.coverUrl}
@@ -31,18 +31,21 @@ export function CataloguesSection() {
                   loading="lazy"
                 />
               </div>
-              <div className="p-6 flex flex-col justify-center space-y-3">
+              <div className="p-7 flex flex-col justify-center space-y-3">
                 <span className="mono-label text-blue text-[10px]">Featured Brochure</span>
                 <h3 className="text-base font-medium text-sand">{featured.title}</h3>
                 <p className="text-xs text-gray leading-relaxed line-clamp-3">
                   {featured.description}
                 </p>
-                <div className="pt-1">
+                <div className="flex flex-wrap items-center gap-3 pt-1">
                   <Button asChild size="sm">
                     <a href={featured.pdfUrl} target="_blank" rel="noopener noreferrer">
                       <Download className="w-3 h-3 mr-1.5" />
                       Download PDF
                     </a>
+                  </Button>
+                  <Button asChild variant="outline" size="sm">
+                    <Link to="/catalogues">View All Resources</Link>
                   </Button>
                 </div>
               </div>
@@ -50,13 +53,15 @@ export function CataloguesSection() {
           </Reveal>
         )}
 
-        <Reveal delay={200}>
-          <div className="text-center">
-            <Button asChild variant="outline">
-              <Link to="/catalogues">View All Resources</Link>
-            </Button>
-          </div>
-        </Reveal>
+        {!featured && (
+          <Reveal delay={200}>
+            <div className="text-center">
+              <Button asChild variant="outline">
+                <Link to="/catalogues">View All Resources</Link>
+              </Button>
+            </div>
+          </Reveal>
+        )}
       </div>
     </section>
   );
