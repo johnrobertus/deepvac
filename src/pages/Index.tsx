@@ -2,7 +2,6 @@ import { Layout } from "@/components/Layout";
 import { PageShell } from "@/components/PageShell";
 import { HeroSection } from "@/components/home/HeroSection";
 import { TrustBarSection } from "@/components/home/TrustBarSection";
-import { USPBlock } from "@/components/home/USPBlock";
 import { CapabilitiesSection } from "@/components/home/CapabilitiesSection";
 import { ProductPortfolioSection } from "@/components/home/ProductPortfolioSection";
 import { SystemArchitectureSection } from "@/components/home/SystemArchitectureSection";
@@ -26,58 +25,55 @@ const Index = () => {
         {/* S2: Trust Bar */}
         <TrustBarSection />
 
-        {/* S3: USP Positioning Block */}
-        <USPBlock />
-
         {/* Divider */}
         <div className="section-divider" />
 
-        {/* S4: Capabilities Bento */}
+        {/* S3: Capabilities Bento */}
         <CapabilitiesSection />
 
         {/* Divider */}
         <div className="section-divider" />
 
-        {/* S5: Product Portfolio */}
+        {/* S4: Product Portfolio */}
         <ProductPortfolioSection />
 
-        {/* S6: System Architecture */}
+        {/* S5: System Architecture */}
         <SystemArchitectureSection />
 
-        {/* S7: Applications */}
+        {/* S6: Applications */}
         <ApplicationsSection />
 
         {/* Divider */}
         <div className="section-divider" />
 
-        {/* S8: Services */}
+        {/* S7: Services */}
         <ServicesSection />
 
-        {/* S9: Why Deepvac */}
+        {/* S8: Why Deepvac */}
         <WhyDeepvacSection />
 
         {/* Divider */}
         <div className="section-divider" />
 
-        {/* S10: Team */}
+        {/* S9: Team */}
         <TeamSection />
 
-        {/* S11: Catalogs */}
+        {/* S10: Catalogs */}
         <CataloguesSection />
 
-        {/* S12: References */}
+        {/* S11: References */}
         <ReferencesSection />
 
-        {/* S13: Lead Capture CTA */}
+        {/* S12: Lead Capture CTA */}
         <LeadCaptureCTA />
 
         {/* Divider */}
         <div className="section-divider" />
 
-        {/* S14: Contact */}
+        {/* S13: Contact */}
         <ContactSection />
 
-        {/* S15: Funding */}
+        {/* S14: Funding */}
         <FundingSection />
       </PageShell>
     </Layout>
