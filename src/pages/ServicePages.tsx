@@ -6,6 +6,7 @@ import { BentoGrid, BentoCard } from "@/components/BentoGrid";
 import { Button } from "@/components/ui/button";
 import { PlaceholderImage } from "@/components/PlaceholderImage";
 import { ArrowRight } from "lucide-react";
+import mechanicalDesignHero from "@/assets/mechanical-design-hero.png";
 
 interface ServicePageProps {
   eyebrow: string;
