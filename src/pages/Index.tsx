@@ -4,7 +4,6 @@ import { HeroSection } from "@/components/home/HeroSection";
 import { TrustBarSection } from "@/components/home/TrustBarSection";
 import { CapabilitiesSection } from "@/components/home/CapabilitiesSection";
 import { ProductPortfolioSection } from "@/components/home/ProductPortfolioSection";
-import { SystemArchitectureSection } from "@/components/home/SystemArchitectureSection";
 import { ApplicationsSection } from "@/components/home/ApplicationsSection";
 import { ServicesSection } from "@/components/home/ServicesSection";
 import { WhyDeepvacSection } from "@/components/home/WhyDeepvacSection";
@@ -34,11 +33,8 @@ const Index = () => {
         {/* Divider */}
         <div className="section-divider" />
 
-        {/* S4: Product Portfolio */}
-        <ProductPortfolioSection />
 
-        {/* S5: System Architecture */}
-        <SystemArchitectureSection />
+        {/* S4: Product Portfolio */}
 
         {/* S6: Applications */}
         <ApplicationsSection />
