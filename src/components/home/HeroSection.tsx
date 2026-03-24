@@ -183,20 +183,17 @@ export function HeroSection() {
 
             <Reveal delay={200}>
               <div className="flex flex-wrap gap-3 pt-2">
-                {[
-                  "MODULAR PLATFORMS",
-                  "CUSTOM TVAC SYSTEMS",
-                  "ADVANCED CONTROL ARCHITECTURES",
-                  "RETROFIT & SERVICE",
-                ].map((cue) => (
-                  <span
-                    key={cue}
-                    className="inline-flex items-center gap-1.5 rounded-sm border border-sand/15 bg-background/30 px-3 py-1.5 font-mono text-[10px] uppercase tracking-widest text-sand/65 backdrop-blur-sm"
-                  >
-                    <span className="h-1 w-1 rounded-full bg-blue/60" />
-                    {cue}
-                  </span>
-                ))}
+                {["MODULAR PLATFORMS", "CUSTOM TVAC SYSTEMS", "CONTROL & AUTOMATION", "RETROFIT & SERVICE"].map(
+                  (cue) => (
+                    <span
+                      key={cue}
+                      className="inline-flex items-center gap-1.5 rounded-sm border border-sand/15 bg-background/30 px-3 py-1.5 font-mono text-[10px] uppercase tracking-widest text-sand/65 backdrop-blur-sm"
+                    >
+                      <span className="h-1 w-1 rounded-full bg-blue/60" />
+                      {cue}
+                    </span>
+                  ),
+                )}
               </div>
             </Reveal>
           </div>
