@@ -6,9 +6,9 @@ import { Crosshair, Settings, Thermometer, Gauge, Cpu, RefreshCw, Wrench, Workfl
 const capabilities = [
   {
     icon: <Crosshair className="w-5 h-5" />,
-    title: "TVAC Chamber Systems",
+    title: "TVAC Chamber Platforms",
     description:
-      "Standardized and custom thermal vacuum chamber systems for aerospace qualification, thermal cycling, and space environment simulation.",
+      "Standardized and custom thermal vacuum chamber platforms for aerospace qualification, thermal cycling, and space environment simulation.",
     span: "1x1" as const,
   },
   {
@@ -22,14 +22,14 @@ const capabilities = [
     icon: <Settings className="w-5 h-5" />,
     title: "Mechanical Design & Interfaces",
     description:
-      "Engineering of chamber layouts, fixtures, feedthroughs, mounting concepts, and support structures for customer-specific test setups.",
+      "Engineering of chamber layouts, fixtures, feedthroughs, mounting concepts, and support structures for customer-specific test configurations.",
     span: "1x1" as const,
   },
   {
     icon: <Thermometer className="w-5 h-5" />,
-    title: "Thermal Control Concepts",
+    title: "Thermal Control Systems",
     description:
-      "Thermal plate, shroud, and temperature-control solutions for stable thermal profiles, cycling, bake-out, and qualification workflows.",
+      "Thermal plate, shroud, and temperature control solutions for stable thermal profiles, cycling, bake-out, and qualification workflows.",
     span: "1x1" as const,
   },
   {
@@ -41,7 +41,7 @@ const capabilities = [
   },
   {
     icon: <Wrench className="w-5 h-5" />,
-    title: "Thermal Vacuum Testing Support",
+    title: "Test Campaign Support",
     description:
       "Engineering and operational support for thermal vacuum test campaigns, from setup and preparation to execution and repeatable test operation.",
     span: "1x1" as const,
@@ -64,29 +64,29 @@ const capabilities = [
 
 export function CapabilitiesSection() {
   return (
-    <section className="py-20 md:py-28 px-6">
+    <section className="px-6 py-20 md:py-28">
       <div className="container max-w-6xl">
         <Reveal>
           <SectionHeader
             eyebrow="Core Capabilities"
-            title="From TVAC Chamber Design to Lifecycle Support"
-            description="Deepvac combines chamber systems, control engineering, mechanical design, subsystem integration, and lifecycle support in one engineering-driven offering for thermal vacuum infrastructure."
+            title="Engineering Capabilities Across the Full TVAC Lifecycle"
+            description="Deepvac combines chamber platforms, control engineering, mechanical design, subsystem integration, and lifecycle support in one engineering-driven offering for thermal vacuum infrastructure."
             className="mb-14"
           />
         </Reveal>
 
         <BentoGrid className="lg:grid-cols-4">
-          {capabilities.map((capability, i) => (
-            <BentoCard key={capability.title} span={capability.span}>
+          {capabilities.map((item, i) => (
+            <BentoCard key={item.title} span={item.span}>
               <Reveal delay={i * 60}>
-                <div className="flex flex-col gap-4 h-full">
-                  <div className="w-9 h-9 rounded-sm bg-blue/10 border border-blue/20 flex items-center justify-center text-blue">
-                    {capability.icon}
+                <div className="flex h-full flex-col gap-4">
+                  <div className="flex h-9 w-9 items-center justify-center rounded-sm border border-blue/20 bg-blue/10 text-blue">
+                    {item.icon}
                   </div>
 
-                  <div>
-                    <h3 className="text-base font-medium text-sand">{capability.title}</h3>
-                    <p className="text-sm text-gray mt-2 leading-relaxed">{capability.description}</p>
+                  <div className="space-y-2">
+                    <h3 className="text-base font-medium text-sand">{item.title}</h3>
+                    <p className="text-sm leading-relaxed text-gray">{item.description}</p>
                   </div>
                 </div>
               </Reveal>
