@@ -10,8 +10,8 @@ import tseriesImg from "@/assets/tseries-chamber.png";
 import cseriesImg from "@/assets/cseries-chamber.jpg";
 
 const standardSeriesSpecs = {
-  ultimateVacuum: "[INSERT ULTIMATE VACUUM]",
-  minTemperature: "[INSERT MIN. TEMPERATURE]",
+  ultimateVacuum: "< 1 × 10⁻⁶ mbar",
+  minTemperature: "-190 °C",
 };
 
 const tSeriesFeatures = [
