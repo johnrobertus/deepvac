@@ -213,7 +213,7 @@ const CustomTVAC = () => (
           <img
             src={customImg}
             alt="Deepvac Custom Thermal Vacuum Chamber System"
-            className="w-full h-auto object-contain max-h-[800px]"
+            className="w-full h-auto object-contain max-h-[1000px]"
             loading="lazy"
           />
         </div>
