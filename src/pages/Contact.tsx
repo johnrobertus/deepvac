@@ -216,7 +216,7 @@ const Contact = () => {
         <PageHero
           eyebrow="Contact"
           title="Discuss Your Thermal Vacuum Requirements"
-          description="Whether you need a chamber platform, a custom TVAC configuration, or engineering support for modernisation and integration — our team is ready to discuss your project."
+          description="Whether you need a chamber platform, a custom TVAC configuration, or engineering support for modernization and integration — our team is ready to discuss your project."
         />
 
         <Section>
@@ -236,8 +236,8 @@ const Contact = () => {
                   <FormField label="Work Email" placeholder="your@company.com" type="email" required name="email" value={form.email} onChange={set("email")} />
                   <FormField label="Phone Number" placeholder="+49 ..." type="tel" name="phone" value={form.phone} onChange={set("phone")} />
                 </div>
-                <FormField label="Company" placeholder="Organisation" required name="company" value={form.company} onChange={set("company")} />
-                <FormField label="Project / Application" placeholder="e.g. Satellite subsystem qualification, custom TVAC for research program" name="project" value={form.project} onChange={set("project")} />
+                <FormField label="Company" placeholder="Company name" required name="company" value={form.company} onChange={set("company")} />
+                <FormField label="Project / Application" placeholder="e.g. Satellite qualification chamber, custom TVAC system, retrofit project" name="project" value={form.project} onChange={set("project")} />
 
                 <div className="border-t border-gray/10 pt-5 space-y-5">
                   <span className="mono-label text-blue">Optional — Help Us Prepare</span>
@@ -291,7 +291,7 @@ const Contact = () => {
                   </Button>
                   <div className="flex items-center gap-1.5 text-gray/40">
                     <Shield className="w-3 h-3" />
-                    <span className="text-[10px] font-mono">Your data is handled securely</span>
+                    <span className="text-[10px] font-mono leading-snug">Your inquiry will be handled confidentially by our engineering team.</span>
                   </div>
                 </div>
               </form>

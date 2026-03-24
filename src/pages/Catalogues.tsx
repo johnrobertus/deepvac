@@ -40,8 +40,8 @@ const Catalogues = () => {
       <PageShell>
         <PageHero
           eyebrow="Technical Documentation"
-          title="Catalogues & Resources"
-          description="Download product brochures, technical overviews, and engineering documentation. Additional spec sheets and data sheets will be published as they become available."
+          title="Catalogs & Resources"
+          description="Access product brochures, technical overviews, and engineering documentation. Additional spec sheets and data sheets will be published as they become available."
         />
 
         {/* Featured Brochure */}

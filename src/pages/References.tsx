@@ -13,7 +13,7 @@ const applicationAreas = [
   { title: "Scientific Instrumentation", icon: Microscope, description: "Testing of optical, electronic, and precision instrumentation under representative space or vacuum conditions." },
 ];
 
-const projectTypes = ["Standard Chamber Delivery", "Custom TVAC Development", "Control System Integration", "Retrofit & Modernisation", "Test Campaign Support", "Subsystem Integration"];
+const projectTypes = ["Standard Chamber Delivery", "Custom TVAC Development", "Control System Integration", "Retrofit & Modernization", "Test Campaign Support", "Subsystem Integration"];
 
 const References = () => (
   <Layout>
