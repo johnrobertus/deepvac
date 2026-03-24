@@ -7,44 +7,181 @@ import { Button } from "@/components/ui/button";
 import { PlaceholderImage } from "@/components/PlaceholderImage";
 import { TechChip } from "@/components/TechChip";
 import {
-  ArrowRight, Ruler, Thermometer, Gauge, Cpu, Cable, FlaskConical, Settings, MessageSquare, FileCheck, Truck, Wrench,
+  ArrowRight,
+  Ruler,
+  Thermometer,
+  Gauge,
+  Cpu,
+  Cable,
+  FlaskConical,
+  Settings,
+  MessageSquare,
+  FileCheck,
+  Truck,
+  Wrench,
 } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import customImg from "@/assets/custom-chamber.jpg";
 
 const projectDrivers = [
-  { icon: <Ruler className="w-5 h-5" />, title: "Non-Standard Geometries", description: "Test articles that exceed standard chamber dimensions or require specialised access, orientation, or mounting configurations." },
-  { icon: <Thermometer className="w-5 h-5" />, title: "Specific Thermal Profiles", description: "Applications demanding precise temperature ranges, ramp rates, uniformity requirements, or multi-zone thermal control." },
-  { icon: <Cable className="w-5 h-5" />, title: "Complex Feedthrough Requirements", description: "Electrical, optical, fluid, or mechanical feedthrough configurations that exceed standard port layouts." },
-  { icon: <FlaskConical className="w-5 h-5" />, title: "Contamination-Sensitive Testing", description: "Hardware requiring low-outgassing environments, clean interfaces, and controlled material compatibility." },
-  { icon: <Cpu className="w-5 h-5" />, title: "Specialised Control Architecture", description: "Custom automation logic, advanced data acquisition, or integration with existing facility control systems." },
-  { icon: <Settings className="w-5 h-5" />, title: "Subsystem & Interface Constraints", description: "Integration with existing infrastructure, specific utility connections, or project-defined mechanical and electrical interfaces." },
+  {
+    icon: <Ruler className="w-5 h-5" />,
+    title: "Non-Standard Geometries",
+    description:
+      "Test articles that exceed standard chamber dimensions or require specialised access, orientation, or mounting configurations.",
+  },
+  {
+    icon: <Thermometer className="w-5 h-5" />,
+    title: "Specific Thermal Profiles",
+    description:
+      "Applications demanding precise temperature ranges, ramp rates, uniformity requirements, or multi-zone thermal control.",
+  },
+  {
+    icon: <Cable className="w-5 h-5" />,
+    title: "Complex Feedthrough Requirements",
+    description:
+      "Electrical, optical, fluid, or mechanical feedthrough configurations that exceed standard port layouts.",
+  },
+  {
+    icon: <FlaskConical className="w-5 h-5" />,
+    title: "Contamination-Sensitive Testing",
+    description:
+      "Hardware requiring low-outgassing environments, clean interfaces, and controlled material compatibility.",
+  },
+  {
+    icon: <Cpu className="w-5 h-5" />,
+    title: "Specialised Control Architecture",
+    description:
+      "Custom automation logic, advanced data acquisition, or integration with existing facility control systems.",
+  },
+  {
+    icon: <Settings className="w-5 h-5" />,
+    title: "Subsystem & Interface Constraints",
+    description:
+      "Integration with existing infrastructure, specific utility connections, or project-defined mechanical and electrical interfaces.",
+  },
 ];
 
 const configDimensions = [
-  { label: "Chamber Geometry", items: ["Custom dimensions and volumes", "Horizontal or vertical orientation", "Application-specific access ports", "Multi-door or removable end-cap configurations"] },
-  { label: "Thermal System", items: ["Shroud and platen design", "Multi-zone thermal control", "Application-specific temperature ranges", "Bake-out capability"] },
-  { label: "Vacuum Architecture", items: ["Pumping train configuration", "Application-dependent pressure regimes", "Leak-tight chamber design", "Clean vacuum environments"] },
-  { label: "Instrumentation & Control", items: ["Sensor and measurement integration", "Custom automation and HMI", "Data acquisition systems", "Remote monitoring capability"] },
-  { label: "Feedthroughs & Interfaces", items: ["Electrical and signal feedthroughs", "Fluid and gas connections", "Optical access ports", "Mechanical motion feedthroughs"] },
-  { label: "Integration & Infrastructure", items: ["Facility interface engineering", "Utility and service connections", "Fixture and mounting systems", "Safety and interlock integration"] },
+  {
+    label: "Chamber Geometry",
+    items: [
+      "Custom dimensions and volumes",
+      "Horizontal or vertical orientation",
+      "Application-specific access ports",
+      "Multi-door or removable end-cap configurations",
+    ],
+  },
+  {
+    label: "Thermal System",
+    items: [
+      "Shroud and platen design",
+      "Multi-zone thermal control",
+      "Application-specific temperature ranges",
+      "Bake-out capability",
+    ],
+  },
+  {
+    label: "Vacuum Architecture",
+    items: [
+      "Pumping train configuration",
+      "Application-dependent pressure regimes",
+      "Leak-tight chamber design",
+      "Clean vacuum environments",
+    ],
+  },
+  {
+    label: "Instrumentation & Control",
+    items: [
+      "Sensor and measurement integration",
+      "Custom automation and HMI",
+      "Data acquisition systems",
+      "Remote monitoring capability",
+    ],
+  },
+  {
+    label: "Feedthroughs & Interfaces",
+    items: [
+      "Electrical and signal feedthroughs",
+      "Fluid and gas connections",
+      "Optical access ports",
+      "Mechanical motion feedthroughs",
+    ],
+  },
+  {
+    label: "Integration & Infrastructure",
+    items: [
+      "Facility interface engineering",
+      "Utility and service connections",
+      "Fixture and mounting systems",
+      "Safety and interlock integration",
+    ],
+  },
 ];
 
 const processSteps = [
-  { icon: <MessageSquare className="w-5 h-5" />, step: "01", title: "Requirements Discussion", description: "Technical consultation to understand your test requirements, payload characteristics, operational constraints, and integration context." },
-  { icon: <Settings className="w-5 h-5" />, step: "02", title: "Concept & System Design", description: "Engineering concept development including chamber geometry, thermal architecture, vacuum design, instrumentation, and control system specification." },
-  { icon: <FileCheck className="w-5 h-5" />, step: "03", title: "Detailed Engineering", description: "Detailed mechanical, electrical, and control system design with documentation, interface specifications, and design review milestones." },
-  { icon: <Wrench className="w-5 h-5" />, step: "04", title: "Manufacturing & Assembly", description: "Precision manufacturing, subsystem assembly, and integration with quality control and testing throughout the build process." },
-  { icon: <Truck className="w-5 h-5" />, step: "05", title: "Commissioning & Support", description: "Delivery, installation, acceptance testing, operator training, and transition to lifecycle support services." },
+  {
+    icon: <MessageSquare className="w-5 h-5" />,
+    step: "01",
+    title: "Requirements Discussion",
+    description:
+      "Technical consultation to understand your test requirements, payload characteristics, operational constraints, and integration context.",
+  },
+  {
+    icon: <Settings className="w-5 h-5" />,
+    step: "02",
+    title: "Concept & System Design",
+    description:
+      "Engineering concept development including chamber geometry, thermal architecture, vacuum design, instrumentation, and control system specification.",
+  },
+  {
+    icon: <FileCheck className="w-5 h-5" />,
+    step: "03",
+    title: "Detailed Engineering",
+    description:
+      "Detailed mechanical, electrical, and control system design with documentation, interface specifications, and design review milestones.",
+  },
+  {
+    icon: <Wrench className="w-5 h-5" />,
+    step: "04",
+    title: "Manufacturing & Assembly",
+    description:
+      "Precision manufacturing, subsystem assembly, and integration with quality control and testing throughout the build process.",
+  },
+  {
+    icon: <Truck className="w-5 h-5" />,
+    step: "05",
+    title: "Commissioning & Support",
+    description:
+      "Delivery, installation, acceptance testing, operator training, and transition to lifecycle support services.",
+  },
 ];
 
 const faqs = [
-  { q: "When should I consider a custom TVAC system instead of a standard platform?", a: "A custom configuration is appropriate when your test requirements include non-standard chamber dimensions, specific thermal profiles, complex feedthrough or instrumentation needs, contamination-sensitive hardware, or integration with existing facility infrastructure that exceeds the scope of standard platform options." },
-  { q: "What information does Deepvac need to develop a custom system concept?", a: "A productive initial discussion typically covers test article characteristics, required pressure and temperature ranges, thermal cycling requirements, feedthrough and instrumentation needs, facility constraints, and project timeline. Deepvac can guide this requirements definition process." },
-  { q: "What is the typical timeline for a custom TVAC project?", a: "Project timelines depend on system complexity, component lead times, and engineering scope. Deepvac provides project-specific timelines during the concept development phase." },
-  { q: "Does Deepvac provide control systems for custom chambers?", a: "Yes. Deepvac designs and integrates custom control architectures including automation logic, user interfaces, data acquisition, and instrumentation integration as part of the system delivery." },
-  { q: "Can Deepvac integrate custom chambers with existing facility infrastructure?", a: "Yes. Interface engineering and facility integration are core elements of Deepvac's custom chamber development process, including utility connections, safety systems, and control system interoperability." },
-  { q: "What lifecycle support is available for custom systems?", a: "Deepvac provides comprehensive lifecycle support including preventive maintenance, repair services, control system upgrades, retrofit and modernisation, and subsystem integration for all custom-engineered systems." },
+  {
+    q: "When should I consider a custom TVAC system instead of a standard platform?",
+    a: "A custom configuration is appropriate when your test requirements include non-standard chamber dimensions, specific thermal profiles, complex feedthrough or instrumentation needs, contamination-sensitive hardware, or integration with existing facility infrastructure that exceeds the scope of standard platform options.",
+  },
+  {
+    q: "What information does Deepvac need to develop a custom system concept?",
+    a: "A productive initial discussion typically covers test article characteristics, required pressure and temperature ranges, thermal cycling requirements, feedthrough and instrumentation needs, facility constraints, and project timeline. Deepvac can guide this requirements definition process.",
+  },
+  {
+    q: "What is the typical timeline for a custom TVAC project?",
+    a: "Project timelines depend on system complexity, component lead times, and engineering scope. Deepvac provides project-specific timelines during the concept development phase.",
+  },
+  {
+    q: "Does Deepvac provide control systems for custom chambers?",
+    a: "Yes. Deepvac designs and integrates custom control architectures including automation logic, user interfaces, data acquisition, and instrumentation integration as part of the system delivery.",
+  },
+  {
+    q: "Can Deepvac integrate custom chambers with existing facility infrastructure?",
+    a: "Yes. Interface engineering and facility integration are core elements of Deepvac's custom chamber development process, including utility connections, safety systems, and control system interoperability.",
+  },
+  {
+    q: "What lifecycle support is available for custom systems?",
+    a: "Deepvac provides comprehensive lifecycle support including preventive maintenance, repair services, control system upgrades, retrofit and modernisation, and subsystem integration for all custom-engineered systems.",
+  },
 ];
 
 const CustomTVAC = () => (
@@ -73,9 +210,16 @@ const CustomTVAC = () => (
       {/* Hero Image */}
       <Section>
         <div className="rounded-lg overflow-hidden border border-gray/10">
-          <img src={customImg} alt="Deepvac Custom Thermal Vacuum Chamber System" className="w-full h-auto object-contain max-h-[360px]" loading="lazy" />
+          <img
+            src={customImg}
+            alt="Deepvac Custom Thermal Vacuum Chamber System"
+            className="w-full h-auto object-contain max-h-[500px]"
+            loading="lazy"
+          />
         </div>
-        <p className="mt-3 font-mono text-xs text-gray text-center">Custom thermal vacuum chamber — engineered, integrated, and commissioned by Deepvac.</p>
+        <p className="mt-3 font-mono text-xs text-gray text-center">
+          Custom thermal vacuum chamber — engineered, integrated, and commissioned by Deepvac.
+        </p>
       </Section>
 
       <div className="section-divider" />
@@ -168,17 +312,27 @@ const CustomTVAC = () => (
           <div className="bento-card rounded-lg p-6 border-l-2 border-l-blue/60 space-y-4">
             <span className="mono-label text-blue">Related Products</span>
             <h3 className="text-lg font-medium text-sand">Standard Series Platforms</h3>
-            <p className="text-xs text-gray leading-relaxed">For established test requirements, Deepvac's Standard Series offers pre-engineered T Series and C Series platforms.</p>
+            <p className="text-xs text-gray leading-relaxed">
+              For established test requirements, Deepvac's Standard Series offers pre-engineered T Series and C Series
+              platforms.
+            </p>
             <Button asChild variant="tertiary" className="self-start">
-              <Link to="/products/standard-series">View Standard Series <ArrowRight className="w-3 h-3 ml-1" /></Link>
+              <Link to="/products/standard-series">
+                View Standard Series <ArrowRight className="w-3 h-3 ml-1" />
+              </Link>
             </Button>
           </div>
           <div className="bento-card rounded-lg p-6 border-l-2 border-l-blue/60 space-y-4">
             <span className="mono-label text-blue">Engineering Services</span>
             <h3 className="text-lg font-medium text-sand">Design, Testing & Integration</h3>
-            <p className="text-xs text-gray leading-relaxed">Deepvac provides control systems design, mechanical engineering, testing services, and lifecycle support alongside chamber development.</p>
+            <p className="text-xs text-gray leading-relaxed">
+              Deepvac provides control systems design, mechanical engineering, testing services, and lifecycle support
+              alongside chamber development.
+            </p>
             <Button asChild variant="tertiary" className="self-start">
-              <Link to="/services">Explore Services <ArrowRight className="w-3 h-3 ml-1" /></Link>
+              <Link to="/services">
+                Explore Services <ArrowRight className="w-3 h-3 ml-1" />
+              </Link>
             </Button>
           </div>
         </div>
