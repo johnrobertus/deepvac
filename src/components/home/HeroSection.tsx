@@ -167,7 +167,7 @@ export function HeroSection() {
                 </span>
 
                 <h1 className="text-3xl font-medium leading-[1.04] tracking-tight text-sand md:text-5xl lg:text-[3.5rem]">
-                  Data-Driven Thermal Vacuum Systems for Aerospace Qualification
+                  Thermal Vacuum Systems for Aerospace Qualification
                 </h1>
               </div>
             </Reveal>
