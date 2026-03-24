@@ -28,6 +28,11 @@ const differentiators = [
     description:
       "Support across concept development, manufacturing, commissioning, retrofit, maintenance, and long-term system improvement.",
   },
+  {
+    title: "System Integration with Practical Focus",
+    description:
+      "Thermal, vacuum, instrumentation, and control subsystems are developed as part of one functional test environment to reduce interfaces, complexity, and integration risk.",
+  },
 ];
 
 export function WhyDeepvacSection() {
