@@ -69,7 +69,7 @@ export function CapabilitiesSection() {
         <Reveal>
           <SectionHeader
             eyebrow="Core Capabilities"
-            title="Engineering Capabilities Across the Full TVAC Lifecycle"
+            title="From TVAC Chamber Design to Lifecycle Support"
             description="Deepvac combines chamber systems, control engineering, mechanical design, subsystem integration, and lifecycle support in one engineering-driven offering for thermal vacuum infrastructure."
             className="mb-14"
           />
