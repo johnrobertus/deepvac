@@ -6,56 +6,56 @@ const differentiators = [
   {
     title: "Modular Platforms & Custom Systems",
     description:
-      "Standardized chamber platforms and custom TVAC systems, from compact test cells to large-scale qualification infrastructure.",
+      "Deepvac offers standardized chamber platforms and custom thermal vacuum systems, from compact test setups to large-scale qualification infrastructure.",
   },
   {
-    title: "Engineering-Led System Design",
+    title: "Engineering-Driven System Design",
     description:
-      "Projects start from technical requirements, system architecture, interface design, and integration logic to create coherent application-specific test environments.",
+      "Projects start from technical requirements, system architecture, interface definition, and integration logic to create robust application-specific test environments.",
   },
   {
-    title: "Integrated Hardware, Controls & Lifecycle Support",
+    title: "Integrated Hardware, Controls & Support",
     description:
-      "Deepvac combines chamber hardware, control systems, subsystem integration, modernization, and service in one engineering-driven offering.",
+      "Chamber hardware, control systems, subsystem integration, modernization, and service are combined in one coordinated engineering approach.",
   },
   {
-    title: "Built for Demanding Test Environments",
+    title: "Built for Qualification-Grade Environments",
     description:
-      "Designed around the requirements of aerospace qualification, thermal cycling, contamination-sensitive testing, and advanced research applications.",
+      "System concepts are developed around the requirements of aerospace qualification, thermal cycling, contamination-sensitive testing, and advanced research use cases.",
   },
   {
-    title: "From Design to Modernization",
+    title: "From New Systems to Modernization",
     description:
-      "Support across concept development, manufacturing, commissioning, retrofit, maintenance, and long-term system improvement.",
+      "Deepvac supports projects across concept development, manufacturing, commissioning, retrofit, maintenance, and long-term technical improvement.",
   },
   {
-    title: "System Integration with Practical Focus",
+    title: "Reduced Interface Complexity",
     description:
-      "Thermal, vacuum, instrumentation, and control subsystems are developed as part of one functional test environment to reduce interfaces, complexity, and integration risk.",
+      "Thermal, vacuum, instrumentation, and control subsystems are designed as one functional environment to reduce coordination effort, integration risk, and technical friction.",
   },
 ];
 
 export function WhyDeepvacSection() {
   return (
-    <section className="py-20 md:py-28 px-6">
+    <section className="px-6 py-20 md:py-28">
       <div className="container max-w-6xl">
         <Reveal>
           <SectionHeader
             eyebrow="Why Deepvac"
             title="Built on Engineering Depth"
-            description="Deepvac combines engineering discipline, integrated system design, and lifecycle support for reliable thermal vacuum infrastructure."
+            description="Deepvac combines engineering discipline, integrated system design, and lifecycle support to deliver reliable thermal vacuum infrastructure."
             className="mb-14"
           />
         </Reveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           {differentiators.map((item, i) => (
             <Reveal key={item.title} delay={i * 60}>
-              <div className="flex gap-4 p-6 bento-card rounded-lg h-full">
-                <CheckCircle className="w-5 h-5 text-blue flex-shrink-0 mt-0.5" />
-                <div>
+              <div className="bento-card flex h-full gap-4 rounded-lg p-6">
+                <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-blue" />
+                <div className="space-y-2">
                   <h3 className="text-sm font-medium text-sand">{item.title}</h3>
-                  <p className="text-xs text-gray mt-2 leading-relaxed">{item.description}</p>
+                  <p className="text-xs leading-relaxed text-gray">{item.description}</p>
                 </div>
               </div>
             </Reveal>
