@@ -36,8 +36,8 @@ export function Footer() {
               <img src={deepvacLogo} alt="Deepvac" className="h-6 w-auto" />
             </Link>
             <p className="text-sm text-gray leading-relaxed">
-              Advanced thermal vacuum chamber systems for aerospace qualification, space simulation, and environmental
-              testing.
+              Data-driven thermal vacuum chamber systems for aerospace qualification, space simulation, and
+              environmental testing.
             </p>
             <div className="space-y-2 pt-2 text-xs text-gray">
               <div className="flex items-start gap-2">
