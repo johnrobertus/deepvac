@@ -71,7 +71,7 @@ const References = () => (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {[
             { category: "Custom TVAC", summary: "Application-specific chamber development for a demanding test environment with custom feedthrough and instrumentation requirements." },
-            { category: "Retrofit Project", summary: "Modernisation of an existing thermal vacuum system including control system upgrade, safety improvements, and extended lifecycle support." },
+            { category: "Retrofit Project", summary: "Modernization of an existing thermal vacuum system including control system upgrade, safety improvements, and extended lifecycle support." },
           ].map((study, i) => (
             <div key={i} className="bento-card rounded-lg overflow-hidden">
               <PlaceholderImage assetId={`CASE_${String(i + 1).padStart(2, "0")}`} type="PROJECT" aspectRatio="16/9" className="rounded-none" />
