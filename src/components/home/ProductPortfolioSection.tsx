@@ -49,7 +49,7 @@ const products = [
     title: "Custom TVAC",
     subtitle: "Application-Specific Thermal Vacuum Systems",
     description:
-      "Custom thermal vacuum systems for applications that fall outside the standard T and C series. These systems are developed for non-standard geometries, specific chamber volumes, temperature requirements additional subsystems tailored to specific test and qualification tasks.",
+      "Custom thermal vacuum systems for applications that fall outside the standard. These systems are developed for non-standard geometries, specific chamber volumes, temperature requirements additional subsystems tailored to specific test and qualification tasks.",
     image: customImg,
     overlays: ["Beyond Standard Series", "Custom Geometry", "Special TVAC Systems"],
     href: "/products/custom-tvac",
