@@ -30,7 +30,7 @@ export function USPBlock() {
       <div className="container max-w-6xl">
         <Reveal>
           <p className="mono-label text-blue mb-8 text-[11px] tracking-[0.06em]">
-            WHY DEEPVAC
+            WHAT WE DO
           </p>
         </Reveal>
 
