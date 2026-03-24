@@ -13,7 +13,8 @@ const products = [
     title: "T Series TVAC",
     subtitle: "Cubic Thermal Vacuum Chambers",
     description:
-      "Cubic thermal vacuum chambers for qualification, validation, and environmental simulation of aerospace hardware. The T Series provides a standardized chamber platform for controlled thermal vacuum testing across research, institutional, and commercial space applications.",
+      "Cubic thermal vacuum chambers for qualification, validation, and environmental simulation. The T Series offers a compact integration format with straightforward internal layout — suited for standard qualification tasks and efficient test setups.",
+    positioning: "Compact integration, straightforward internal layout, standard qualification tasks.",
     image: tseriesImg,
     overlays: ["Cubic Geometry", "Standard Series", "Thermal Vacuum Testing"],
     href: "/products/standard-series",
@@ -31,7 +32,8 @@ const products = [
     title: "C Series TVAC",
     subtitle: "Cylindrical Thermal Vacuum Chambers",
     description:
-      "Cylindrical thermal vacuum chambers for qualification, validation, and environmental simulation of aerospace hardware. The C Series provides a standardized chamber platform for controlled thermal vacuum testing across research, institutional, and commercial space applications.",
+      "Cylindrical thermal vacuum chambers for qualification, validation, and environmental simulation. The C Series provides a classical vacuum chamber format with strong suitability for specific access and mounting concepts.",
+    positioning: "Classical chamber format, geometry-specific setups, flexible access configurations.",
     image: cseriesImg,
     overlays: ["Cylindrical Geometry", "Standard Series", "Thermal Vacuum Testing"],
     href: "/products/standard-series",
@@ -49,7 +51,8 @@ const products = [
     title: "Custom TVAC",
     subtitle: "Application-Specific Thermal Vacuum Systems",
     description:
-      "Custom thermal vacuum systems for applications beyond the standard series. These systems are developed for non-standard geometries, specific chamber volumes, extended temperature requirements, and additional subsystems tailored to dedicated test and qualification tasks.",
+      "Custom thermal vacuum systems for applications beyond the standard series — non-standard geometries, extended temperature requirements, and dedicated subsystems for specialized qualification and research tasks.",
+    positioning: "Extended requirements, project-specific subsystems, non-standard geometries.",
     image: customImg,
     overlays: ["Beyond Standard Series", "Custom Geometry", "Special TVAC Systems"],
     href: "/products/custom-tvac",
@@ -93,7 +96,6 @@ export function ProductPortfolioSection() {
                       className="h-full max-h-[400px] w-full object-contain p-4 transition-transform duration-500 group-hover:scale-[1.02] lg:max-h-[420px]"
                       loading="lazy"
                     />
-
                     <div className="absolute bottom-3 left-3 flex flex-wrap gap-1.5">
                       {product.overlays.map((label) => (
                         <span
@@ -116,7 +118,13 @@ export function ProductPortfolioSection() {
                       </h3>
                     </div>
 
-                    <p className="text-sm leading-relaxed text-gray">{product.description}</p>
+                    <p className="text-[13px] leading-relaxed text-gray">{product.description}</p>
+
+                    {/* Positioning aid */}
+                    <div className="rounded-md border border-blue/12 bg-blue/5 px-4 py-3">
+                      <span className="font-mono text-[10px] uppercase tracking-[0.06em] text-blue">Best suited for</span>
+                      <p className="mt-1 text-[13px] text-sand/85">{product.positioning}</p>
+                    </div>
 
                     <div className="grid grid-cols-1 gap-4 py-2 sm:grid-cols-2">
                       {product.specs.map((spec) => (

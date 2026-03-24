@@ -2,8 +2,10 @@ import { Layout } from "@/components/Layout";
 import { PageShell } from "@/components/PageShell";
 import { HeroSection } from "@/components/home/HeroSection";
 import { TrustBarSection } from "@/components/home/TrustBarSection";
+import { USPBlock } from "@/components/home/USPBlock";
 import { CapabilitiesSection } from "@/components/home/CapabilitiesSection";
 import { ProductPortfolioSection } from "@/components/home/ProductPortfolioSection";
+import { SystemArchitectureSection } from "@/components/home/SystemArchitectureSection";
 import { ApplicationsSection } from "@/components/home/ApplicationsSection";
 import { ServicesSection } from "@/components/home/ServicesSection";
 import { WhyDeepvacSection } from "@/components/home/WhyDeepvacSection";
@@ -24,49 +26,58 @@ const Index = () => {
         {/* S2: Trust Bar */}
         <TrustBarSection />
 
-        {/* S3: Capabilities Bento */}
+        {/* S3: USP Positioning Block */}
+        <USPBlock />
+
+        {/* Divider */}
+        <div className="section-divider" />
+
+        {/* S4: Capabilities Bento */}
         <CapabilitiesSection />
 
         {/* Divider */}
         <div className="section-divider" />
 
-        {/* S4: Product Portfolio */}
+        {/* S5: Product Portfolio */}
         <ProductPortfolioSection />
 
-        {/* S5: Applications */}
+        {/* S6: System Architecture */}
+        <SystemArchitectureSection />
+
+        {/* S7: Applications */}
         <ApplicationsSection />
 
         {/* Divider */}
         <div className="section-divider" />
 
-        {/* S6: Services */}
+        {/* S8: Services */}
         <ServicesSection />
 
-        {/* S7: Why DEEPVAC */}
+        {/* S9: Why Deepvac */}
         <WhyDeepvacSection />
 
         {/* Divider */}
         <div className="section-divider" />
 
-        {/* S8: Team */}
+        {/* S10: Team */}
         <TeamSection />
 
-        {/* S9: Catalogues */}
+        {/* S11: Catalogs */}
         <CataloguesSection />
 
-        {/* S10: References */}
+        {/* S12: References */}
         <ReferencesSection />
 
-        {/* S11: Lead Capture CTA */}
+        {/* S13: Lead Capture CTA */}
         <LeadCaptureCTA />
 
         {/* Divider */}
         <div className="section-divider" />
 
-        {/* S12: Contact */}
+        {/* S14: Contact */}
         <ContactSection />
 
-        {/* S13: Funding */}
+        {/* S15: Funding */}
         <FundingSection />
       </PageShell>
     </Layout>
