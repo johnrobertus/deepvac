@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, ArrowUpRight } from "lucide-react";
 import deepvacLogo from "@/assets/deepvac-logo.png";
 
 const footerNav = {
@@ -10,9 +10,9 @@ const footerNav = {
   ],
   Services: [
     { label: "Testing Services", href: "/services/testing-services" },
-    { label: "Control Systems", href: "/services/control-systems-design" },
+    { label: "Control Systems Design", href: "/services/control-systems-design" },
     { label: "Mechanical Design", href: "/services/mechanical-design" },
-    { label: "Retrofit & Modernisation", href: "/services/retrofit-modernisation" },
+    { label: "Retrofit & Modernization", href: "/services/retrofit-modernisation" },
     { label: "Maintenance & Repair", href: "/services/maintenance-repair" },
     { label: "Subsystem Integration", href: "/services/subsystem-integration" },
   ],
@@ -20,7 +20,7 @@ const footerNav = {
     { label: "Team", href: "/team" },
     { label: "Careers", href: "/careers" },
     { label: "References", href: "/references" },
-    { label: "Catalogues", href: "/catalogues" },
+    { label: "Resources", href: "/catalogues" },
     { label: "Contact", href: "/contact" },
   ],
 };
@@ -28,73 +28,84 @@ const footerNav = {
 export function Footer() {
   return (
     <footer className="border-t border-gray/10 bg-surface">
-      <div className="container max-w-6xl px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* Brand */}
-          <div className="space-y-4">
-            <Link to="/">
+      <div className="container max-w-6xl px-6 py-16 md:py-20">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-[1.35fr_repeat(3,minmax(0,1fr))]">
+          <div className="space-y-5">
+            <Link to="/" className="inline-flex items-center" aria-label="Deepvac home">
               <img src={deepvacLogo} alt="Deepvac" className="h-6 w-auto" />
             </Link>
-            <p className="text-sm text-gray leading-relaxed">
-              Data-driven thermal vacuum chamber systems for aerospace qualification, space simulation, and
-              environmental testing.
+
+            <p className="max-w-sm text-sm leading-relaxed text-gray">
+              Advanced thermal vacuum systems for aerospace qualification, space simulation, and environmental testing.
             </p>
-            <div className="space-y-2 pt-2 text-xs text-gray">
-              <div className="flex items-start gap-2">
-                <MapPin className="w-3 h-3 text-blue mt-0.5 shrink-0" />
-                <span>Deepvac GmbH · An der Universität 1 · 30823 Garbsen, Germany</span>
+
+            <div className="space-y-3 pt-1 text-sm text-gray">
+              <div className="flex items-start gap-3">
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-blue" />
+                <address className="not-italic leading-relaxed">
+                  Deepvac GmbH
+                  <br />
+                  An der Universität 1
+                  <br />
+                  30823 Garbsen, Germany
+                </address>
               </div>
-              <a href="tel:+4915783027099" className="flex items-center gap-2 hover:text-sand transition-colors">
-                <Phone className="w-3 h-3 text-blue" /> +49 157 830 270 99
+
+              <a href="tel:+4915783027099" className="flex items-center gap-3 transition-colors hover:text-sand">
+                <Phone className="h-4 w-4 shrink-0 text-blue" />
+                <span>+49 157 830 270 99</span>
               </a>
-              <a href="mailto:info@deepvac.space" className="flex items-center gap-2 hover:text-sand transition-colors">
-                <Mail className="w-3 h-3 text-blue" /> info@deepvac.space
+
+              <a href="mailto:info@deepvac.space" className="flex items-center gap-3 transition-colors hover:text-sand">
+                <Mail className="h-4 w-4 shrink-0 text-blue" />
+                <span>info@deepvac.space</span>
               </a>
             </div>
+
             <div className="pt-1">
               <a
                 href="https://www.linkedin.com/company/deepvac-gmbh/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mono-label text-gray hover:text-blue transition-colors"
+                className="inline-flex items-center gap-1.5 text-sm text-gray transition-colors hover:text-blue"
               >
-                LinkedIn →
+                <span className="mono-label">LinkedIn</span>
+                <ArrowUpRight className="h-3.5 w-3.5" />
               </a>
             </div>
           </div>
 
-          {/* Nav Clusters */}
           {Object.entries(footerNav).map(([section, links]) => (
-            <div key={section}>
-              <h4 className="mono-label text-blue mb-4">{section}</h4>
-              <ul className="space-y-2.5">
+            <nav key={section} aria-label={section}>
+              <h4 className="mb-4 mono-label text-blue">{section}</h4>
+              <ul className="space-y-3">
                 {links.map((link) => (
                   <li key={link.href}>
-                    <Link to={link.href} className="text-sm text-gray hover:text-sand transition-colors duration-150">
+                    <Link to={link.href} className="text-sm text-gray transition-colors duration-150 hover:text-sand">
                       {link.label}
                     </Link>
                   </li>
                 ))}
               </ul>
-            </div>
+            </nav>
           ))}
         </div>
       </div>
 
-      {/* Bottom Bar */}
-      <div className="border-t border-gray/10 py-5 px-6">
-        <div className="container max-w-6xl flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-gray/50 font-mono">
+      <div className="border-t border-gray/10 px-6 py-5">
+        <div className="container flex max-w-6xl flex-col gap-4 md:flex-row md:items-center md:justify-between">
+          <p className="font-mono text-xs text-gray/50">
             © {new Date().getFullYear()} Deepvac GmbH. All rights reserved.
           </p>
-          <div className="flex items-center gap-6">
-            <Link to="/imprint" className="text-xs text-gray/50 hover:text-gray transition-colors">
+
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
+            <Link to="/imprint" className="text-xs text-gray/50 transition-colors hover:text-gray">
               Imprint
             </Link>
-            <Link to="/terms-and-conditions" className="text-xs text-gray/50 hover:text-gray transition-colors">
+            <Link to="/terms-and-conditions" className="text-xs text-gray/50 transition-colors hover:text-gray">
               General Terms &amp; Conditions
             </Link>
-            <Link to="/privacy-policy" className="text-xs text-gray/50 hover:text-gray transition-colors">
+            <Link to="/privacy-policy" className="text-xs text-gray/50 transition-colors hover:text-gray">
               Privacy Policy
             </Link>
           </div>
