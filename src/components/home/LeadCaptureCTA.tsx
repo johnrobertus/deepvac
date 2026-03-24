@@ -4,25 +4,32 @@ import { Reveal } from "@/components/Reveal";
 
 export function LeadCaptureCTA() {
   return (
-    <section className="py-20 md:py-28 px-6 relative">
+    <section className="relative px-6 py-20 md:py-28">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-surface/40 to-transparent" />
-      <div className="container max-w-4xl text-center space-y-8 relative z-10">
+
+      <div className="container relative z-10 max-w-4xl text-center">
         <Reveal>
-          <span className="mono-label text-blue">Start a Conversation</span>
-          <h2 className="text-3xl md:text-4xl font-medium tracking-tight text-sand mt-3">
-            Discuss Your Thermal Vacuum Test Requirements
-          </h2>
-          <p className="text-sm text-gray max-w-2xl mx-auto leading-relaxed mt-4">
-            Whether you need a modular chamber platform, a custom TVAC configuration, or support for modernisation and
-            subsystem integration — Deepvac can help define the right system architecture for your application.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4 pt-6">
-            <Button asChild size="lg" className="font-mono text-xs tracking-wide">
-              <Link to="/contact">Request a Quote</Link>
-            </Button>
-            <Button asChild variant="outline" size="lg">
-              <Link to="/contact">Talk to an Engineer</Link>
-            </Button>
+          <div className="space-y-5">
+            <span className="mono-label text-blue">Start a Conversation</span>
+
+            <h2 className="mt-3 text-3xl font-medium tracking-tight text-sand md:text-4xl">
+              Discuss Your Thermal Vacuum Requirements
+            </h2>
+
+            <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-gray">
+              Whether you need a modular chamber platform, a custom TVAC configuration, or support for modernization and
+              subsystem integration, Deepvac can help define the right system architecture for your application.
+            </p>
+
+            <div className="flex flex-wrap justify-center gap-4 pt-4">
+              <Button asChild size="lg" className="font-mono text-xs tracking-wide">
+                <Link to="/contact">Request a Quote</Link>
+              </Button>
+
+              <Button asChild variant="outline" size="lg" className="font-mono text-xs tracking-wide">
+                <Link to="/contact">Talk to an Engineer</Link>
+              </Button>
+            </div>
           </div>
         </Reveal>
       </div>

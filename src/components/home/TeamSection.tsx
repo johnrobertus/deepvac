@@ -8,43 +8,47 @@ const team = [
   {
     name: "John Robertus",
     role: "CEO | Co-Founder",
-    description: "Electrical engineer specialized in AI integration for mechatronic systems.",
+    description:
+      "Electrical engineer focused on intelligent system integration, control architecture, and data-driven automation for mechatronic systems.",
     photo: johnPhoto,
     photoPosition: "50% 18%",
     photoScale: 1.23,
+    linkedin: "",
   },
   {
     name: "Anton Opalikhin",
     role: "CTO | Co-Founder",
-    description: "Mechanical engineer specialized in refrigeration and test chamber development.",
+    description:
+      "Mechanical engineer focused on refrigeration systems, chamber development, and thermal vacuum infrastructure for demanding test applications.",
     photo: antonPhoto,
     photoPosition: "50% 16%",
     photoScale: 1.05,
+    linkedin: "",
   },
 ];
 
 export function TeamSection() {
   return (
-    <section className="py-20 md:py-28 px-6 bg-surface/30">
+    <section className="bg-surface/30 px-6 py-20 md:py-28">
       <div className="container max-w-6xl">
         <Reveal>
-          <SectionHeader eyebrow="Leadership" title="Engineering-Led from Day One" className="mb-6" />
-          <p className="text-sm text-gray leading-relaxed max-w-3xl mb-14">
-            Deepvac is led by a founding team with more than 15 years of combined experience in the development and
-            manufacturing of test chamber systems. Combining electrical engineering, mechatronics, refrigeration
-            expertise, and chamber development know-how, the team brings complementary competencies required for
-            advanced thermal vacuum systems design.
-          </p>
+          <SectionHeader
+            eyebrow="Leadership"
+            title="Engineering-Led from Day One"
+            description="Deepvac is led by a founding team with complementary expertise in electrical engineering, mechatronics, refrigeration systems, and chamber development. This combination supports the development of advanced thermal vacuum infrastructure with strong technical depth across system design and implementation."
+            className="mb-14 max-w-3xl"
+          />
         </Reveal>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl">
+
+        <div className="grid max-w-4xl grid-cols-1 gap-8 md:grid-cols-2">
           {team.map((member, i) => (
             <Reveal key={member.name} delay={i * 100}>
-              <div className="bento-card rounded-lg overflow-hidden group h-full">
+              <div className="bento-card group h-full overflow-hidden rounded-lg">
                 <div className="aspect-[4/5] overflow-hidden bg-black">
                   <img
                     src={member.photo}
-                    alt={`${member.name} | ${member.role}`}
-                    className="w-full h-full object-cover"
+                    alt={member.name}
+                    className="h-full w-full object-cover"
                     loading="lazy"
                     style={{
                       objectPosition: member.photoPosition || "50% 16%",
@@ -53,21 +57,28 @@ export function TeamSection() {
                     }}
                   />
                 </div>
-                <div className="p-5 space-y-2">
-                  <div className="flex items-center justify-between">
-                    <h3 className="text-base font-medium text-sand">{member.name}</h3>
-                    <a
-                      href="https://linkedin.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray/40 hover:text-blue transition-colors"
-                      aria-label={`${member.name} LinkedIn profile`}
-                    >
-                      <Linkedin className="w-4 h-4" />
-                    </a>
+
+                <div className="space-y-3 p-5">
+                  <div className="flex items-start justify-between gap-4">
+                    <div className="space-y-1">
+                      <h3 className="text-base font-medium text-sand">{member.name}</h3>
+                      <span className="mono-label text-blue">{member.role}</span>
+                    </div>
+
+                    {member.linkedin ? (
+                      <a
+                        href={member.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-0.5 text-gray/40 transition-colors hover:text-blue"
+                        aria-label={`${member.name} LinkedIn profile`}
+                      >
+                        <Linkedin className="h-4 w-4" />
+                      </a>
+                    ) : null}
                   </div>
-                  <span className="mono-label text-blue">{member.role}</span>
-                  <p className="text-xs text-gray leading-relaxed">{member.description}</p>
+
+                  <p className="text-xs leading-relaxed text-gray">{member.description}</p>
                 </div>
               </div>
             </Reveal>

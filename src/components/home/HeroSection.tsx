@@ -7,158 +7,199 @@ const slides = [
   { video: "/videos/hero-slide-3.mp4", poster: "/videos/hero-slide-3-poster.jpg" },
 ];
 
-const SCENE_DURATION = 8000; // ms per scene
-const FADE_DURATION = 1800; // ms crossfade
+const SCENE_DURATION = 8000;
+const FADE_DURATION = 1800;
 
 export function HeroSection() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [nextIndex, setNextIndex] = useState<number | null>(null);
   const [transitioning, setTransitioning] = useState(false);
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
-  const timerRef = useRef<ReturnType<typeof setTimeout>>();
-  const prefersReducedMotion =
-    typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const sceneTimerRef = useRef<number | null>(null);
+  const fadeTimerRef = useRef<number | null>(null);
 
-  const scheduleNext = useCallback(() => {
-    if (prefersReducedMotion) return;
-    timerRef.current = setTimeout(() => {
-      const next = (activeIndex + 1) % slides.length;
-      setNextIndex(next);
-      setTransitioning(true);
-
-      // Start playing the next video before it becomes visible
-      const nextVideo = videoRefs.current[next];
-      if (nextVideo) {
-        nextVideo.currentTime = 0;
-        nextVideo.play().catch(() => {});
-      }
-
-      // After crossfade completes, swap active
-      setTimeout(() => {
-        setActiveIndex(next);
-        setNextIndex(null);
-        setTransitioning(false);
-      }, FADE_DURATION);
-    }, SCENE_DURATION);
-  }, [activeIndex, prefersReducedMotion]);
-
-  useEffect(() => {
-    scheduleNext();
-    return () => clearTimeout(timerRef.current);
-  }, [scheduleNext]);
-
-  // Start playing the first video on mount
-  useEffect(() => {
-    const first = videoRefs.current[0];
-    if (first) {
-      first.play().catch(() => {});
+  const clearTimers = useCallback(() => {
+    if (sceneTimerRef.current) {
+      window.clearTimeout(sceneTimerRef.current);
+      sceneTimerRef.current = null;
+    }
+    if (fadeTimerRef.current) {
+      window.clearTimeout(fadeTimerRef.current);
+      fadeTimerRef.current = null;
     }
   }, []);
 
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const updatePreference = () => setPrefersReducedMotion(mediaQuery.matches);
+
+    updatePreference();
+
+    if (typeof mediaQuery.addEventListener === "function") {
+      mediaQuery.addEventListener("change", updatePreference);
+      return () => mediaQuery.removeEventListener("change", updatePreference);
+    }
+
+    mediaQuery.addListener(updatePreference);
+    return () => mediaQuery.removeListener(updatePreference);
+  }, []);
+
+  const playVideo = useCallback((index: number) => {
+    const video = videoRefs.current[index];
+    if (!video) return;
+
+    video.currentTime = 0;
+    video.play().catch(() => {});
+  }, []);
+
+  const pauseInactiveVideos = useCallback((keepIndexes: number[]) => {
+    videoRefs.current.forEach((video, index) => {
+      if (!video) return;
+      if (!keepIndexes.includes(index)) {
+        video.pause();
+      }
+    });
+  }, []);
+
+  const startTransition = useCallback(() => {
+    if (slides.length <= 1 || prefersReducedMotion) return;
+
+    const upcomingIndex = (activeIndex + 1) % slides.length;
+    setNextIndex(upcomingIndex);
+    setTransitioning(true);
+
+    playVideo(upcomingIndex);
+
+    fadeTimerRef.current = window.setTimeout(() => {
+      setActiveIndex(upcomingIndex);
+      setNextIndex(null);
+      setTransitioning(false);
+      pauseInactiveVideos([upcomingIndex]);
+    }, FADE_DURATION);
+  }, [activeIndex, pauseInactiveVideos, playVideo, prefersReducedMotion]);
+
+  useEffect(() => {
+    clearTimers();
+
+    playVideo(activeIndex);
+    pauseInactiveVideos(nextIndex !== null ? [activeIndex, nextIndex] : [activeIndex]);
+
+    if (!prefersReducedMotion && slides.length > 1) {
+      sceneTimerRef.current = window.setTimeout(() => {
+        startTransition();
+      }, SCENE_DURATION);
+    }
+
+    return clearTimers;
+  }, [activeIndex, nextIndex, prefersReducedMotion, startTransition, clearTimers, playVideo, pauseInactiveVideos]);
+
   return (
-    <section className="relative w-full h-[100svh] min-h-[500px] max-h-[1100px] overflow-hidden">
-      {/* Video layers */}
+    <section className="relative w-full h-[100svh] min-h-[560px] max-h-[1100px] overflow-hidden">
       {slides.map((slide, i) => {
         const isActive = i === activeIndex;
         const isNext = i === nextIndex;
-        const visible = isActive || isNext;
+        const isVisible = isActive || isNext;
+        const shouldLoad = isVisible || i === (activeIndex + 1) % slides.length;
 
         return (
           <div
-            key={i}
-            className="absolute inset-0 w-full h-full"
+            key={slide.video}
+            className="absolute inset-0 h-full w-full"
             style={{
-              opacity: isNext && transitioning ? 1 : isActive ? 1 : 0,
+              opacity: isActive || (isNext && transitioning) ? 1 : 0,
               zIndex: isNext ? 2 : isActive ? 1 : 0,
-              transition: isNext ? `opacity ${FADE_DURATION}ms cubic-bezier(0.4, 0, 0.2, 1)` : "none",
+              transition: `opacity ${FADE_DURATION}ms cubic-bezier(0.4, 0, 0.2, 1)`,
             }}
             aria-hidden={!isActive}
           >
-            {/* Poster fallback, always behind the video */}
             <img
               src={slide.poster}
               alt=""
-              className="absolute inset-0 w-full h-full object-cover"
+              className="absolute inset-0 h-full w-full object-cover"
               loading={i === 0 ? "eager" : "lazy"}
             />
+
             <video
               ref={(el) => {
                 videoRefs.current[i] = el;
               }}
-              src={visible || i === (activeIndex + 1) % slides.length ? slide.video : undefined}
+              src={shouldLoad ? slide.video : undefined}
               poster={slide.poster}
               muted
               playsInline
-              loop={slides.length === 1}
               preload={i === 0 ? "auto" : "metadata"}
-              className="absolute inset-0 w-full h-full object-cover"
+              loop={slides.length === 1}
+              className="absolute inset-0 h-full w-full object-cover"
               aria-hidden="true"
             />
           </div>
         );
       })}
 
-      {/* Cinematic gradient overlay for text readability */}
       <div
         className="absolute inset-0 z-10"
         style={{
           background: [
-            "linear-gradient(to bottom, hsl(0 0% 0% / 0.55) 0%, hsl(0 0% 0% / 0.25) 40%, hsl(0 0% 0% / 0.15) 60%, hsl(0 0% 0% / 0.6) 100%)",
-            "linear-gradient(to right, hsl(0 0% 0% / 0.45) 0%, hsl(0 0% 0% / 0) 60%)",
+            "linear-gradient(to bottom, hsl(0 0% 0% / 0.68) 0%, hsl(0 0% 0% / 0.34) 34%, hsl(0 0% 0% / 0.18) 58%, hsl(0 0% 0% / 0.72) 100%)",
+            "linear-gradient(to right, hsl(0 0% 0% / 0.58) 0%, hsl(0 0% 0% / 0.18) 42%, hsl(0 0% 0% / 0) 72%)",
           ].join(", "),
         }}
       />
 
-      {/* Subtle vignette */}
       <div
         className="absolute inset-0 z-10 pointer-events-none"
         style={{
-          boxShadow: "inset 0 0 120px 40px hsl(0 0% 0% / 0.3)",
+          boxShadow: "inset 0 0 140px 42px hsl(0 0% 0% / 0.28)",
         }}
       />
 
-      {/* Content */}
-      <div className="relative z-20 flex flex-col justify-end h-full pb-16 md:pb-28 pt-20 md:pt-40 px-6 overflow-hidden">
+      <div className="relative z-20 flex h-full flex-col justify-end px-6 pb-16 pt-20 md:pb-28 md:pt-40">
         <div className="container max-w-6xl">
-          <div className="max-w-2xl space-y-6">
+          <div className="max-w-3xl space-y-6">
             <Reveal>
               <div className="space-y-4">
                 <span className="mono-label text-blue-light/90 tracking-[0.08em]">
-                  AI-ENABLED THERMAL VACUUM SYSTEMS. ENGINEERED IN GERMANY.{" "}
+                  THERMAL VACUUM SYSTEMS FOR AEROSPACE. ENGINEERED IN GERMANY.
                 </span>
-                <h1 className="text-3xl md:text-5xl lg:text-[3.5rem] font-medium tracking-tight text-sand leading-[1.08]">
-                  AI-Enabled Thermal Vacuum Systems for Aerospace Qualification
+
+                <h1 className="text-3xl font-medium leading-[1.04] tracking-tight text-sand md:text-5xl lg:text-[3.5rem]">
+                  Thermal Vacuum Systems for Aerospace Qualification
                 </h1>
               </div>
             </Reveal>
 
             <Reveal delay={100}>
-              <p className="text-sm md:text-base text-sand/70 leading-relaxed max-w-lg">
-                Deepvac develops modular and custom thermal vacuum systems for the qualification, validation, and
-                environmental simulation of aerospace hardware. Our platforms combine high vacuum, precise thermal
-                control, and AI-enabled control architectures to improve reproducibility, process transparency, and
-                operational robustness across research, institutional, and commercial space programs.
+              <p className="max-w-2xl text-sm leading-relaxed text-sand/72 md:text-base">
+                Deepvac develops modular and custom thermal vacuum systems for aerospace qualification, thermal cycling,
+                and environmental simulation. Our platforms combine high vacuum, precise thermal control, and
+                engineering-led control architectures to support reliable, reproducible, and scalable test
+                infrastructure.
               </p>
             </Reveal>
 
             <Reveal delay={200}>
               <div className="flex flex-wrap gap-3 pt-2">
-                {["MODULAR PLATFORMS", "CUSTOM TVAC SYSTEMS", "AI-ENABLED CONTROL", "RETROFIT & SERVICE"].map((cue) => (
-                  <span
-                    key={cue}
-                    className="inline-flex items-center gap-1.5 rounded-sm border border-sand/15 bg-background/30 backdrop-blur-sm px-3 py-1.5 font-mono text-[10px] uppercase tracking-widest text-sand/60"
-                  >
-                    <span className="w-1 h-1 rounded-full bg-blue/60" />
-                    {cue}
-                  </span>
-                ))}
+                {["MODULAR PLATFORMS", "CUSTOM TVAC SYSTEMS", "CONTROL & AUTOMATION", "RETROFIT & SERVICE"].map(
+                  (cue) => (
+                    <span
+                      key={cue}
+                      className="inline-flex items-center gap-1.5 rounded-sm border border-sand/15 bg-background/30 px-3 py-1.5 font-mono text-[10px] uppercase tracking-widest text-sand/65 backdrop-blur-sm"
+                    >
+                      <span className="h-1 w-1 rounded-full bg-blue/60" />
+                      {cue}
+                    </span>
+                  ),
+                )}
               </div>
             </Reveal>
           </div>
         </div>
       </div>
 
-      {/* Bottom edge fade into page background */}
       <div
         className="absolute bottom-0 left-0 right-0 z-20 h-24 pointer-events-none"
         style={{

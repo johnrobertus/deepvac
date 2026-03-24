@@ -1,9 +1,9 @@
 export function TrustBarSection() {
   const items = [
     "Built for demanding aerospace and laboratory test environments",
-    "Engineered for repeatable thermal vacuum workflows",
-    "Custom configurations for geometry, interfaces, and test profiles",
-    "Service, retrofit, and subsystem integration from one source",
+    "Designed for repeatable thermal vacuum workflows",
+    "Configured for geometry, interfaces, and test profiles",
+    "Supported through retrofit, service, and subsystem integration",
   ];
   return (
     <div className="border-y border-gray/10 py-10 px-6 bg-surface/50">

@@ -7,37 +7,37 @@ const useCases = [
     icon: <Satellite className="w-5 h-5" />,
     title: "Satellite Subsystem Qualification",
     description:
-      "Thermal vacuum qualification of satellite components and subsystems under representative space conditions.",
+      "Thermal vacuum testing of satellite components and subsystems under representative space conditions for qualification and performance verification.",
   },
   {
     icon: <Rocket className="w-5 h-5" />,
-    title: "Payload and Instrument Validation",
+    title: "Payload & Instrument Qualification",
     description:
-      "Environmental simulation and thermal verification of payload-critical hardware before integration and deployment.",
+      "Environmental simulation and thermal vacuum verification of payload and instrument hardware before integration, launch, and mission use.",
   },
   {
     icon: <Thermometer className="w-5 h-5" />,
-    title: "Thermal Cycling and Durability Testing",
+    title: "Thermal Cycling & Durability Testing",
     description:
-      "Controlled thermal cycling under high vacuum for material, assembly, and component durability verification.",
+      "Controlled thermal cycling under high vacuum for durability testing of materials, assemblies, and critical hardware components.",
   },
   {
     icon: <ShieldCheck className="w-5 h-5" />,
-    title: "Contamination-Controlled Test Environments",
+    title: "Contamination-Controlled Testing",
     description:
-      "High-purity, low-outgassing test conditions for contamination-sensitive hardware and reproducible vacuum test campaigns.",
+      "High-purity, low-outgassing test conditions for contamination-sensitive hardware and reproducible thermal vacuum test campaigns.",
   },
   {
     icon: <FlaskConical className="w-5 h-5" />,
-    title: "R&D and Prototype Verification",
+    title: "Development & Prototype Testing",
     description:
-      "Flexible chamber configurations for development programs, pilot setups, early validation, and iterative hardware testing.",
+      "Flexible chamber configurations for development programs, prototype validation, early-stage testing, and iterative hardware refinement.",
   },
   {
     icon: <Boxes className="w-5 h-5" />,
-    title: "Custom Space Environment Simulation",
+    title: "Custom TVAC Configurations",
     description:
-      "Application-specific chamber configurations for unique geometries, interfaces, radiative conditions, and thermal profiles.",
+      "Application-specific thermal vacuum systems tailored to unique geometries, interfaces, thermal profiles, and test requirements.",
   },
 ];
 
@@ -48,21 +48,23 @@ export function ApplicationsSection() {
         <Reveal>
           <SectionHeader
             eyebrow="Applications"
-            title="Built for Qualification, Thermal Cycling, and Mission-Critical Verification"
-            description="Deepvac chamber platforms support qualification, validation, and development testing of space and high-performance hardware under controlled thermal and high-vacuum conditions."
+            title="Built for Aerospace Qualification and Thermal Vacuum Testing"
+            description="Deepvac systems support qualification, thermal cycling, development testing, and custom space environment simulation for spacecraft hardware, subsystems, and high-performance components."
             className="mb-14"
           />
         </Reveal>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {useCases.map((uc, i) => (
-            <Reveal key={uc.title} delay={i * 60}>
+          {useCases.map((useCase, i) => (
+            <Reveal key={useCase.title} delay={i * 60}>
               <div className="bento-card rounded-lg p-6 space-y-3 h-full">
                 <div className="w-9 h-9 rounded-sm bg-blue/10 border border-blue/20 flex items-center justify-center text-blue">
-                  {uc.icon}
+                  {useCase.icon}
                 </div>
-                <h3 className="text-sm font-medium text-sand">{uc.title}</h3>
-                <p className="text-xs text-gray leading-relaxed">{uc.description}</p>
+
+                <h3 className="text-sm font-medium text-sand">{useCase.title}</h3>
+
+                <p className="text-xs text-gray leading-relaxed">{useCase.description}</p>
               </div>
             </Reveal>
           ))}
