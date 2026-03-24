@@ -166,9 +166,9 @@ export function ContactSection() {
                 <FormField label="Last Name" placeholder="Last name" required value={form.lastName} onChange={set("lastName")} />
               </div>
               <FormField label="Work Email" placeholder="your@company.com" type="email" required value={form.email} onChange={set("email")} />
-              <FormField label="Company" placeholder="Organisation" required value={form.company} onChange={set("company")} />
+              <FormField label="Company" placeholder="Company name" required value={form.company} onChange={set("company")} />
               <FormField label="Phone Number" placeholder="+49 ..." type="tel" value={form.phone} onChange={set("phone")} />
-              <FormField label="Project / Application" placeholder="Satellite TVAC, Research Chamber, etc." value={form.project} onChange={set("project")} />
+              <FormField label="Project / Application" placeholder="e.g. Satellite qualification chamber, custom TVAC system, retrofit project" value={form.project} onChange={set("project")} />
               <div className="space-y-2">
                 <label className="mono-label">Message</label>
                 <textarea
@@ -210,16 +210,15 @@ export function ContactSection() {
                     "Send Inquiry"
                   )}
                 </Button>
-                <div className="flex items-center gap-1.5 text-gray/40">
-                  <Shield className="w-3 h-3" />
-                  <span className="text-[10px] font-mono">Secure & confidential</span>
-                </div>
+                <p className="text-[10px] text-gray/40 leading-snug max-w-[200px]">
+                  Your inquiry will be handled confidentially by our engineering team.
+                </p>
               </div>
             </form>
           </Reveal>
 
           <Reveal delay={200}>
-            <div className="space-y-6 lg:pl-8">
+            <div className="space-y-5 lg:pl-8">
               <div className="bento-card rounded-lg p-6 space-y-5">
                 <div className="flex items-start gap-3">
                   <MapPin className="w-4 h-4 text-blue mt-0.5 shrink-0" />
@@ -247,7 +246,7 @@ export function ContactSection() {
               </div>
 
               <div className="bento-card rounded-lg overflow-hidden">
-                <div className="h-48" style={{ filter: "invert(0.9) hue-rotate(180deg)" }}>
+                <div className="h-44" style={{ filter: "invert(0.9) hue-rotate(180deg)" }}>
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2434.0!2d9.7069!3d52.3911!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b074d80e5b6d4b%3A0x4a5c4b4e4e4e4e4e!2sAn+der+Universit%C3%A4t+1%2C+30823+Garbsen!5e0!3m2!1sde!2sde!4v1700000000000"
                     width="100%" height="100%" style={{ border: 0 }}
@@ -257,7 +256,7 @@ export function ContactSection() {
                 </div>
               </div>
 
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+              <a href="https://www.linkedin.com/company/deepvac-gmbh/" target="_blank" rel="noopener noreferrer"
                 className="bento-card rounded-lg p-4 flex items-center justify-between group block">
                 <span className="text-sm text-gray group-hover:text-sand transition-colors">Follow Deepvac</span>
                 <span className="text-sm text-blue font-mono">LinkedIn →</span>

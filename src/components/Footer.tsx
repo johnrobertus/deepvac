@@ -12,7 +12,7 @@ const footerNav = {
     { label: "Testing Services", href: "/services/testing-services" },
     { label: "Control Systems Design", href: "/services/control-systems-design" },
     { label: "Mechanical Design", href: "/services/mechanical-design" },
-    { label: "Retrofit & Modernization", href: "/services/retrofit-modernisation" },
+    { label: "Retrofit & Modernization", href: "/services/retrofit-modernization" },
     { label: "Maintenance & Repair", href: "/services/maintenance-repair" },
     { label: "Subsystem Integration", href: "/services/subsystem-integration" },
   ],

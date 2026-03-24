@@ -12,7 +12,7 @@ export interface Brochure {
 export const brochures: Brochure[] = [
   {
     id: "standard-series-2026",
-    title: "Deepvac Standard Series Catalogue",
+    title: "Deepvac Standard Series Catalog",
     subtitle: "Intelligent Thermal Vacuum Chambers",
     description:
       "Technical brochure for the Deepvac Standard Series, including common chamber characteristics, T Series and C Series platforms, thermal control concepts, control system architecture, and optional feature packages.",

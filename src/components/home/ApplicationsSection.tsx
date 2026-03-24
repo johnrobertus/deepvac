@@ -57,8 +57,8 @@ export function ApplicationsSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {useCases.map((useCase, i) => (
             <Reveal key={useCase.title} delay={i * 60}>
-              <div className="bento-card rounded-lg p-6 space-y-3 h-full">
-                <div className="w-9 h-9 rounded-sm bg-blue/10 border border-blue/20 flex items-center justify-center text-blue">
+              <div className="bento-card rounded-lg p-7 space-y-4 h-full">
+                <div className="w-10 h-10 rounded-sm bg-blue/10 border border-blue/20 flex items-center justify-center text-blue">
                   {useCase.icon}
                 </div>
 

@@ -121,10 +121,10 @@ export const TestingServices = () => (
       { title: "Qualification & Acceptance Testing", description: "Support for formal qualification and acceptance test procedures aligned with project-specific requirements and standards." },
       { title: "Engineering Support", description: "Technical advisory during test planning, anomaly investigation, and test result interpretation." },
     ]}
-    scenarios={["Satellite subsystem qualification campaigns", "Component-level environmental screening", "Research and development test programs", "Thermal cycling under high-vacuum conditions", "Outgassing and contamination characterisation", "Hardware acceptance testing"]}
+    scenarios={["Satellite subsystem qualification campaigns", "Component-level environmental screening", "Research and development test programs", "Thermal cycling under high-vacuum conditions", "Outgassing and contamination characterization", "Hardware acceptance testing"]}
     crossLinks={[
       { label: "Standard Series Chambers", href: "/products/standard-series", description: "Pre-engineered TVAC platforms suitable for standard test campaign requirements." },
-      { label: "Custom TVAC Systems", href: "/products/custom-tvac", description: "Application-specific chamber systems for specialised test requirements." },
+      { label: "Custom TVAC Systems", href: "/products/custom-tvac", description: "Application-specific chamber systems for specialized test requirements." },
       { label: "Control Systems Design", href: "/services/control-systems-design", description: "Integrated control and data acquisition architectures for test environments." },
       { label: "Subsystem Integration", href: "/services/subsystem-integration", description: "Integration of test environment subsystems for coherent operation." },
     ]}
@@ -145,10 +145,10 @@ export const ControlSystemsDesign = () => (
       { title: "Instrumentation Integration", description: "Sensor specification, signal conditioning, and integration of temperature, pressure, flow, and application-specific measurement systems." },
       { title: "System Commissioning", description: "On-site commissioning, functional testing, performance verification, and operator training." },
     ]}
-    scenarios={["New chamber builds requiring integrated control systems", "Legacy systems needing control modernisation", "Facilities expanding data acquisition capabilities", "Projects with specific automation requirements", "Multi-chamber control integration", "Remote monitoring and diagnostics needs"]}
+    scenarios={["New chamber builds requiring integrated control systems", "Legacy systems needing control modernization", "Facilities expanding data acquisition capabilities", "Projects with specific automation requirements", "Multi-chamber control integration", "Remote monitoring and diagnostics needs"]}
     crossLinks={[
       { label: "Custom TVAC Systems", href: "/products/custom-tvac", description: "Custom chamber development with integrated control architecture." },
-      { label: "Retrofit & Modernisation", href: "/services/retrofit-modernisation", description: "Control system upgrades for existing chamber infrastructure." },
+      { label: "Retrofit & Modernization", href: "/services/retrofit-modernization", description: "Control system upgrades for existing chamber infrastructure." },
       { label: "Testing Services", href: "/services/testing-services", description: "Test execution leveraging Deepvac control system expertise." },
       { label: "Subsystem Integration", href: "/services/subsystem-integration", description: "Integration of control systems with thermal, vacuum, and instrumentation subsystems." },
     ]}
@@ -185,23 +185,23 @@ export const MechanicalDesign = () => (
 export const RetrofitModernisation = () => (
   <ServicePageTemplate
     eyebrow="Services"
-    title="Retrofit & Modernisation"
+    title="Retrofit & Modernization"
     description="Technical upgrades for legacy TVAC systems to improve reliability, safety, control precision, usability, and lifecycle value."
-    overview="Deepvac retrofits and modernises existing thermal vacuum systems — addressing control system obsolescence, safety improvements, operational efficiency, and performance enhancement. Our approach begins with a systematic assessment of the existing system, followed by engineering of targeted upgrades that maximise return on the installed base while minimising disruption to ongoing operations."
+    overview="Deepvac retrofits and modernizes existing thermal vacuum systems — addressing control system obsolescence, safety improvements, operational efficiency, and performance enhancement. Our approach begins with a systematic assessment of the existing system, followed by engineering of targeted upgrades that maximize return on the installed base while minimizing disruption to ongoing operations."
     deliverables={[
       { title: "System Assessment", description: "Comprehensive evaluation of existing chamber systems including controls, instrumentation, mechanical condition, and safety compliance." },
       { title: "Upgrade Engineering", description: "Design of retrofit solutions including hardware specifications, system architecture updates, and implementation planning." },
-      { title: "Control System Modernisation", description: "Replacement or upgrade of legacy control hardware, software, HMI, and data acquisition systems." },
+      { title: "Control System Modernization", description: "Replacement or upgrade of legacy control hardware, software, HMI, and data acquisition systems." },
       { title: "Safety & Compliance Improvements", description: "Implementation of safety system upgrades, interlock modifications, and alignment with current standards and regulations." },
     ]}
-    scenarios={["Chambers with obsolete control systems", "Facilities requiring safety upgrades", "Systems with degraded performance or reliability", "Organisations expanding test capabilities on existing platforms", "Legacy systems needing modern data acquisition", "Equipment approaching end-of-life requiring lifecycle extension"]}
+    scenarios={["Chambers with obsolete control systems", "Facilities requiring safety upgrades", "Systems with degraded performance or reliability", "Organizations expanding test capabilities on existing platforms", "Legacy systems needing modern data acquisition", "Equipment approaching end-of-life requiring lifecycle extension"]}
     crossLinks={[
-      { label: "Control Systems Design", href: "/services/control-systems-design", description: "New control architectures for modernised chamber systems." },
-      { label: "Maintenance & Repair", href: "/services/maintenance-repair", description: "Ongoing maintenance to sustain modernised system performance." },
+      { label: "Control Systems Design", href: "/services/control-systems-design", description: "New control architectures for modernized chamber systems." },
+      { label: "Maintenance & Repair", href: "/services/maintenance-repair", description: "Ongoing maintenance to sustain modernized system performance." },
       { label: "Standard Series", href: "/products/standard-series", description: "When replacement with a new platform is more effective than retrofit." },
       { label: "Subsystem Integration", href: "/services/subsystem-integration", description: "Integration of upgraded subsystems into existing infrastructure." },
     ]}
-    ctaTitle="Assess Your System for Modernisation"
+    ctaTitle="Assess Your System for Modernization"
     ctaDescription="Contact Deepvac to evaluate your existing thermal vacuum infrastructure and identify upgrade opportunities."
   />
 );
@@ -220,7 +220,7 @@ export const MaintenanceRepair = () => (
     ]}
     scenarios={["Scheduled preventive maintenance programs", "Unplanned chamber system failures", "Vacuum integrity degradation", "Sensor or instrumentation malfunction", "Pump system servicing requirements", "Seal replacement and leak repair"]}
     crossLinks={[
-      { label: "Retrofit & Modernisation", href: "/services/retrofit-modernisation", description: "When maintenance reveals the need for system-level upgrades." },
+      { label: "Retrofit & Modernization", href: "/services/retrofit-modernization", description: "When maintenance reveals the need for system-level upgrades." },
       { label: "Control Systems Design", href: "/services/control-systems-design", description: "Control system troubleshooting and replacement support." },
       { label: "Subsystem Integration", href: "/services/subsystem-integration", description: "Replacement or upgrade of integrated subsystem components." },
       { label: "Standard Series", href: "/products/standard-series", description: "Maintenance programs for Deepvac Standard Series platforms." },
