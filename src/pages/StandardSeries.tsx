@@ -2,31 +2,34 @@ import { Link } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import { PageShell, PageHero, Section, CTABand } from "@/components/PageShell";
 import { SectionHeader } from "@/components/SectionHeader";
-import { BentoGrid, BentoCard } from "@/components/BentoGrid";
 import { Button } from "@/components/ui/button";
-import { PlaceholderImage } from "@/components/PlaceholderImage";
 import { TechChip } from "@/components/TechChip";
 import { ArrowRight, Maximize, Circle, Thermometer, Gauge, Cpu, Download } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import tseriesImg from "@/assets/tseries-chamber.png";
 import cseriesImg from "@/assets/cseries-chamber.jpg";
 
+const standardSeriesSpecs = {
+  ultimateVacuum: "[INSERT ULTIMATE VACUUM]",
+  minTemperature: "[INSERT MIN. TEMPERATURE]",
+};
+
 const tSeriesFeatures = [
   {
     icon: <Maximize className="w-4 h-4" />,
     label: "Cubic Geometry",
     detail:
-      "Shared Standard Series platform in a cubic chamber format for straightforward access, efficient volume use, and flexible fixturing.",
+      "Cube-based chamber layout for straightforward payload access, efficient internal volume usage, and flexible fixture integration.",
   },
   {
     icon: <Thermometer className="w-4 h-4" />,
-    label: "Thermal Control",
-    detail: "Integrated shroud and platen systems for controlled thermal cycling and bake-out readiness.",
+    label: "Low Temperature Capability",
+    detail: `Configured for thermal operation down to ${standardSeriesSpecs.minTemperature}, depending on system configuration and test setup.`,
   },
   {
     icon: <Gauge className="w-4 h-4" />,
-    label: "Vacuum Performance",
-    detail: "High-vacuum capable pumping architecture with leak-tight chamber integrity.",
+    label: "Ultimate Vacuum",
+    detail: `Designed for vacuum performance down to ${standardSeriesSpecs.ultimateVacuum}, depending on chamber size and pumping package.`,
   },
   {
     icon: <Cpu className="w-4 h-4" />,
@@ -40,17 +43,17 @@ const cSeriesFeatures = [
     icon: <Circle className="w-4 h-4" />,
     label: "Cylindrical Geometry",
     detail:
-      "Shared Standard Series platform in a cylindrical chamber format for conventional vacuum layouts, symmetric shroud integration, and efficient pumping integration.",
+      "Cylindrical chamber layout suited for uniform radial design, efficient shroud integration, and classic vacuum chamber configurations.",
   },
   {
     icon: <Thermometer className="w-4 h-4" />,
-    label: "Thermal Control",
-    detail: "Integrated shroud and platen systems for controlled thermal cycling and bake-out readiness.",
+    label: "Low Temperature Capability",
+    detail: `Configured for thermal operation down to ${standardSeriesSpecs.minTemperature}, depending on system configuration and test setup.`,
   },
   {
     icon: <Gauge className="w-4 h-4" />,
-    label: "Vacuum Performance",
-    detail: "High-vacuum capable pumping architecture with leak-tight chamber integrity.",
+    label: "Ultimate Vacuum",
+    detail: `Designed for vacuum performance down to ${standardSeriesSpecs.ultimateVacuum}, depending on chamber size and pumping package.`,
   },
   {
     icon: <Cpu className="w-4 h-4" />,
@@ -70,20 +73,16 @@ const applications = [
 
 const faqs = [
   {
-    q: "What is the difference between the T Series and C Series?",
-    a: "Both are based on the same Deepvac Standard Series platform, including the same design philosophy for thermal control, vacuum performance, control integration, and modular configuration. The primary difference is chamber geometry. The T Series uses a cubic chamber, while the C Series uses a cylindrical chamber.",
-  },
-  {
     q: "What chamber sizes are available in the Standard Series?",
-    a: "The Standard Series is available in both cubic (T Series) and cylindrical (C Series) chamber formats across a range of chamber volumes. Specific dimensions are selected according to the required test envelope, payload size, and integration needs.",
+    a: "The Standard Series is available in both cubic and cylindrical chamber formats across a range of chamber volumes. Specific dimensions are selected according to the required test envelope, payload size, and integration needs.",
   },
   {
-    q: "Can Standard Series chambers achieve high-vacuum conditions?",
-    a: "Yes. Standard Series chambers are designed with pumping architectures capable of reaching high-vacuum pressure regimes. Specific achievable pressures depend on chamber volume, pumping configuration, and application requirements.",
+    q: "What vacuum level can Standard Series chambers achieve?",
+    a: `Standard Series chambers are designed for vacuum performance down to ${standardSeriesSpecs.ultimateVacuum}, depending on chamber volume, pumping configuration, and application requirements.`,
   },
   {
     q: "What thermal control options are available?",
-    a: "Standard Series platforms include integrated thermal shroud and platen systems supporting controlled heating and cooling cycles. Temperature ranges and ramp rates are configuration-dependent.",
+    a: `Standard Series platforms include integrated thermal shroud and platen systems supporting controlled heating and cooling cycles. Minimum temperature capability can be configured down to ${standardSeriesSpecs.minTemperature}, depending on the selected system configuration.`,
   },
   {
     q: "How are Standard Series chambers delivered and commissioned?",
@@ -97,7 +96,7 @@ const StandardSeries = () => (
       <PageHero
         eyebrow="Products / Standard Series"
         title="Pre-Engineered TVAC Platforms"
-        description="Shared thermal vacuum chamber platforms available in cubic and cylindrical configurations, combining standardised architecture, modular integration, and repeatable performance for aerospace qualification, environmental simulation, and research testing."
+        description="Standardised thermal vacuum chamber platforms with modular configurations and repeatable performance for aerospace qualification, environmental simulation, and research testing."
       >
         <div className="flex flex-wrap gap-3 pt-4">
           <Button asChild size="lg" className="font-mono text-xs tracking-wide">
@@ -109,8 +108,8 @@ const StandardSeries = () => (
         </div>
         <div className="flex flex-wrap gap-2 pt-4">
           <TechChip label="Architecture" value="Modular" />
-          <TechChip label="Config" value="Standard" />
-          <TechChip label="Support" value="Full Lifecycle" />
+          <TechChip label="Vacuum" value={standardSeriesSpecs.ultimateVacuum} />
+          <TechChip label="Min Temp" value={standardSeriesSpecs.minTemperature} />
         </div>
       </PageHero>
 
@@ -136,13 +135,15 @@ const StandardSeries = () => (
               <h2 className="text-3xl md:text-4xl font-medium text-sand mt-2 tracking-tight">T Series TVAC</h2>
             </div>
             <p className="text-sm text-gray leading-relaxed">
-              The T Series is the cubic configuration of the Deepvac Standard Series. It uses the same core thermal
-              vacuum platform, control philosophy, and modular subsystem architecture as the C Series, configured for
-              repeatable environmental simulation, subsystem validation, and laboratory workflows.
+              Compact cubic thermal vacuum chamber platforms designed for repeatable environmental simulation, subsystem
+              validation, and laboratory workflows. The T Series combines controlled thermal and vacuum conditions with
+              a standardised architecture for research and qualification applications.
             </p>
             <p className="text-sm text-gray/70 leading-relaxed">
-              Its cubic chamber geometry supports straightforward payload access, efficient use of internal space, and
-              flexible fixture mounting for test articles with box-shaped or space-efficient layouts.
+              The cubic chamber geometry provides straightforward payload access, efficient interior utilisation, and
+              flexible fixture mounting. Standard configurations support vacuum performance down to{" "}
+              {standardSeriesSpecs.ultimateVacuum} and thermal operation down to {standardSeriesSpecs.minTemperature},
+              depending on the selected system setup.
             </p>
             <div className="grid grid-cols-2 gap-4 pt-2">
               {tSeriesFeatures.map((f) => (
@@ -181,13 +182,15 @@ const StandardSeries = () => (
               <h2 className="text-3xl md:text-4xl font-medium text-sand mt-2 tracking-tight">C Series TVAC</h2>
             </div>
             <p className="text-sm text-gray leading-relaxed">
-              The C Series is the cylindrical configuration of the Deepvac Standard Series. It uses the same core
-              thermal vacuum platform, control philosophy, and modular subsystem architecture as the T Series,
-              configured for repeatable environmental simulation, subsystem validation, and qualification workflows.
+              Cylindrical thermal vacuum chamber platforms designed for repeatable environmental simulation, subsystem
+              qualification, and robust laboratory operation. The C Series combines controlled thermal and vacuum
+              conditions with a standardised architecture for research and qualification applications.
             </p>
             <p className="text-sm text-gray/70 leading-relaxed">
-              Its cylindrical chamber geometry supports conventional vacuum chamber layouts, symmetric shroud
-              integration, and an overall form factor often preferred for classic cylindrical test setups.
+              The cylindrical chamber geometry supports classic vacuum chamber layouts, efficient shroud integration,
+              and a structurally efficient form factor. Standard configurations support vacuum performance down to{" "}
+              {standardSeriesSpecs.ultimateVacuum} and thermal operation down to {standardSeriesSpecs.minTemperature},
+              depending on the selected system setup.
             </p>
             <div className="grid grid-cols-2 gap-4 pt-2">
               {cSeriesFeatures.map((f) => (
