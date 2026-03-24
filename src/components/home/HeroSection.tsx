@@ -174,10 +174,10 @@ export function HeroSection() {
 
             <Reveal delay={100}>
               <p className="max-w-2xl text-sm leading-relaxed text-sand/72 md:text-base">
-                Deepvac develops modular and custom thermal vacuum systems for qualification, thermal cycling, and
-                environmental simulation of aerospace hardware. Our platforms combine high vacuum, precise thermal
-                control, and advanced control architectures with AI-based development pathways for improved monitoring,
-                process transparency, and future-ready test infrastructure.
+                Deepvac develops modular and custom thermal vacuum systems for aerospace qualification, thermal cycling,
+                and environmental simulation. Our platforms combine high vacuum, precise thermal control, and
+                engineering-led control architectures to support reliable, reproducible, and scalable test
+                infrastructure.
               </p>
             </Reveal>
 
