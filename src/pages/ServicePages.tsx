@@ -157,13 +157,11 @@ export const ControlSystemsDesign = () => (
   />
 );
 
-export const MechanicalDesign = () => {
-  const heroImg = new URL("@/assets/mechanical-design-hero.png", import.meta.url).href;
-  return (
+export const MechanicalDesign = () => (
   <ServicePageTemplate
     eyebrow="Services"
     title="Mechanical Design"
-    heroImage={heroImg}
+    heroImage={mechanicalDesignHero}
     description="Engineering of chamber assemblies, interfaces, fixturing, support structures, and customer-specific mechanical integration concepts for thermal vacuum systems."
     overview="Deepvac provides mechanical design services for thermal vacuum chamber systems — from structural analysis and chamber geometry definition to fixture engineering, feedthrough integration, and interface specification. Our mechanical design work supports both new system development and modifications to existing chamber infrastructure, with focus on structural integrity, thermal performance, and practical accessibility."
     deliverables={[
