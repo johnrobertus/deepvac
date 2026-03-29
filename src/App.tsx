@@ -27,6 +27,7 @@ import Contact from "./pages/Contact";
 import Imprint from "./pages/Imprint";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
+import MediaCredits from "./pages/MediaCredits";
 import NotFound from "./pages/NotFound";
 import { ScrollToTop } from "./components/ScrollToTop";
 
