@@ -256,7 +256,9 @@ export default function TermsAndConditions() {
 function LS({ n, title, children }: { n: string; title: string; children: React.ReactNode }) {
   return (
     <div className="space-y-3">
-      <h2 className="text-sand text-base font-medium">{n}. {title}</h2>
+      <h2 className="text-sand text-base font-medium">
+        {n}. {title}
+      </h2>
       {children}
     </div>
   );
