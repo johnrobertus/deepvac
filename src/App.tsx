@@ -66,6 +66,7 @@ const App = () => (
               <Route path="/imprint" element={<Imprint />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+              <Route path="/media-credits" element={<MediaCredits />} />
 
               {/* German routes — /de prefix with localized slugs */}
               <Route path="/de" element={<Index />} />
@@ -87,6 +88,7 @@ const App = () => (
               <Route path="/de/impressum" element={<Imprint />} />
               <Route path="/de/datenschutz" element={<PrivacyPolicy />} />
               <Route path="/de/agb" element={<TermsAndConditions />} />
+              <Route path="/de/medienquellen" element={<MediaCredits />} />
 
               <Route path="*" element={<NotFound />} />
             </Routes>

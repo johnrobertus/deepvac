@@ -29,6 +29,7 @@ export const routeMap: readonly RouteEntry[] = [
   { en: "/imprint", de: "/de/impressum" },
   { en: "/privacy-policy", de: "/de/datenschutz" },
   { en: "/terms-and-conditions", de: "/de/agb" },
+  { en: "/media-credits", de: "/de/medienquellen" },
 ] as const;
 
 // English alias routes (kept for backward compatibility, no DE equivalents needed)
