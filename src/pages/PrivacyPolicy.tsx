@@ -16,7 +16,7 @@ export default function PrivacyPolicy() {
               <p>An der Universität 1 (Building 8141)</p>
               <p>30823 Garbsen</p>
               <p>Germany</p>
-              <p className="pt-2">Registered office: Hanover, Germany</p>
+              <p className="pt-2">Registered office: Garbsen, Germany</p>
               <p>Email: info@deepvac.space</p>
               <p>Phone: +49 157 830 270 99</p>
             </LegalSection>
