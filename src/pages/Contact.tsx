@@ -199,6 +199,7 @@ const Contact = () => {
       }
 
       setSubmitted(true);
+      setValidationErrors({});
       turnstileWidgetId.current = null;
       toast.success("Your inquiry has been sent successfully.");
     } catch (err: any) {
