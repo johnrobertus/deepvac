@@ -73,8 +73,8 @@ jobs:
 
       - name: Smoke test
         run: |
-          curl -fsS "http://${{ secrets.DEPLOY_HOST }}/healthz"
-          curl -fsS "http://${{ secrets.DEPLOY_HOST }}/" | grep -qi "<html"
+          curl -fsS https://deepvac.space/healthz
+          curl -fsS https://deepvac.space/ | grep -qi "<html"
 
 
 
