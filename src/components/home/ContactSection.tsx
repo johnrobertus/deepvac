@@ -46,6 +46,7 @@ export function ContactSection() {
   const [sending, setSending] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [honeypot, setHoneypot] = useState("");
+  const [validationErrors, setValidationErrors] = useState<Partial<Record<keyof FormData, string>>>({});
   const turnstileRef = useRef<HTMLDivElement>(null);
   const turnstileWidgetId = useRef<string | null>(null);
 
@@ -78,12 +79,40 @@ export function ContactSection() {
   const set = (field: keyof FormData) => (val: string) =>
     setForm((prev) => ({ ...prev, [field]: val }));
 
+  const validateForm = (): boolean => {
+    const errors: Partial<Record<keyof FormData, string>> = {};
+    if (!form.firstName.trim()) errors.firstName = "First name is required.";
+    if (!form.lastName.trim()) errors.lastName = "Last name is required.";
+    if (!form.email.trim()) {
+      errors.email = "Email is required.";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(form.email.trim())) {
+      errors.email = "Please enter a valid email address.";
+    }
+    if (!form.company.trim()) errors.company = "Company is required.";
+    if (form.message.trim().length > 0 && form.message.trim().length < 10) {
+      errors.message = "Please enter a more detailed message (minimum 10 characters).";
+    }
+    setValidationErrors(errors);
+    return Object.keys(errors).length === 0;
+  };
+
+  const clearFieldError = (field: keyof FormData) => {
+    if (validationErrors[field]) {
+      setValidationErrors((prev) => {
+        const next = { ...prev };
+        delete next[field];
+        return next;
+      });
+    }
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!consent) {
       toast.error("Please accept the data processing consent to proceed.");
       return;
     }
+    if (!validateForm()) return;
     if (sending) return;
 
     setSending(true);
