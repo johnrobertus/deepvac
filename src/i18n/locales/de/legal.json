@@ -1,103 +1,109 @@
-"privacy": {
-  "eyebrow": "Rechtliches",
-  "title": "Datenschutzerklärung",
-  "lastUpdated": "Zuletzt aktualisiert: 29. März 2026",
-  "sections": {
-    "controller": "Verantwortlicher",
-
-    "generalInfo": "Allgemeine Hinweise zur Datenverarbeitung",
-    "generalInfoText": "Wir verarbeiten personenbezogene Daten nur, soweit dies zur Bereitstellung einer funktionsfähigen Website, zur Beantwortung von Anfragen, zur Darstellung unserer Leistungen sowie zur sicheren und effizienten Durchführung unserer Geschäftskommunikation erforderlich ist.",
-    "generalInfoText2": "Die Verarbeitung erfolgt in Übereinstimmung mit der Datenschutz-Grundverordnung (DSGVO) und den geltenden deutschen Datenschutzgesetzen.",
-    "generalInfoText3": "Personenbezogene Daten werden nicht an Dritte weitergegeben, es sei denn, dies ist für den technischen Betrieb der Website, die Vertragserfüllung oder vorvertragliche Maßnahmen, die Einhaltung gesetzlicher Verpflichtungen, auf Grundlage Ihrer Einwilligung oder auf anderer gesetzlicher Grundlage erforderlich.",
-
-    "legalBases": "Rechtsgrundlagen der Verarbeitung",
-    "legalBasesIntro": "Bei der Verarbeitung personenbezogener Daten stützen wir uns insbesondere auf folgende Rechtsgrundlagen:",
-    "legalBasesList": [
-      "Art. 6 Abs. 1 lit. a DSGVO: Einwilligung",
-      "Art. 6 Abs. 1 lit. b DSGVO: Vertragserfüllung oder vorvertragliche Maßnahmen",
-      "Art. 6 Abs. 1 lit. c DSGVO: Erfüllung einer rechtlichen Verpflichtung",
-      "Art. 6 Abs. 1 lit. f DSGVO: Berechtigte Interessen"
-    ],
-    "legalBasesNote": "Soweit die Verarbeitung auf Art. 6 Abs. 1 lit. f DSGVO beruht, liegen unsere berechtigten Interessen im sicheren, stabilen, effizienten und nutzerorientierten Betrieb unserer Website, in der professionellen Darstellung unseres Unternehmens sowie in unserer Geschäftskommunikation.",
-
-    "serverLogs": "Website-Zugriffsdaten und Server-Logfiles",
-    "serverLogsIntro": "Beim Zugriff auf unsere Website werden automatisch Informationen durch unseren Hosting-Anbieter in sogenannten Server-Logfiles erfasst. Dies kann umfassen:",
-    "serverLogsList": [
-      "IP-Adresse",
-      "Datum und Uhrzeit des Zugriffs",
-      "Angeforderte Inhalte",
-      "Zugriffsstatus und HTTP-Statuscode",
-      "Übertragene Datenmenge",
-      "Referrer-URL",
-      "Browsertyp und -version",
-      "Betriebssystem"
-    ],
-    "serverLogsNote": "Diese Daten werden verarbeitet, um die Stabilität, Sicherheit und technische Funktionsfähigkeit der Website zu gewährleisten sowie um Missbrauch und sicherheitsrelevante Vorfälle zu erkennen, zu verhindern und zu untersuchen.",
-    "serverLogsLegal": "Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO.",
-    "serverLogsRetention": "Server-Logdaten werden in der Regel für maximal 7 Tage gespeichert, es sei denn, eine längere Aufbewahrung ist zur Untersuchung sicherheitsrelevanter Vorfälle oder zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen erforderlich.",
-
-    "contactForm": "Kontaktaufnahme per E-Mail oder Kontaktformular",
-    "contactFormText": "Wenn Sie uns per E-Mail kontaktieren oder eine Anfrage über unser Kontaktformular stellen, verarbeiten wir die von Ihnen bereitgestellten personenbezogenen Daten zum Zweck der Bearbeitung Ihrer Anfrage und der Kommunikation mit Ihnen.",
-    "contactFormDataIntro": "Dies kann insbesondere folgende Daten umfassen:",
-    "contactFormDataList": [
-      "Vorname",
-      "Nachname",
-      "geschäftliche E-Mail-Adresse",
-      "Firmenname",
-      "Telefonnummer, sofern freiwillig angegeben",
-      "Projekt- oder Anwendungsinformationen",
-      "Nachrichteninhalt"
-    ],
-    "contactFormRequired": "Pflichtfelder im Kontaktformular sind entsprechend gekennzeichnet. Diese Daten sind erforderlich, um Ihre Anfrage bearbeiten zu können.",
-    "contactFormLegal": "Rechtsgrundlage:",
-    "contactFormLegalList": [
-      "Art. 6 Abs. 1 lit. b DSGVO, wenn sich Ihre Anfrage auf vorvertragliche Maßnahmen oder die Vertragserfüllung bezieht",
-      "Art. 6 Abs. 1 lit. f DSGVO für allgemeine geschäftliche Kommunikation und sonstige Anfragen"
-    ],
-    "contactFormNote": "Ihre Daten werden nicht an Dritte weitergegeben, es sei denn, dies ist zur Bearbeitung Ihrer Anfrage erforderlich, gesetzlich vorgeschrieben oder anderweitig rechtlich zulässig.",
-    "contactFormRetention": "Wir speichern Ihre Anfrage nur so lange, wie dies zur Bearbeitung erforderlich ist. Soweit gesetzliche Aufbewahrungspflichten bestehen, erfolgt eine Speicherung für die gesetzlich vorgeschriebene Dauer.",
-
-    "provisionOfData": "Bereitstellung personenbezogener Daten",
-    "provisionOfDataText": "Die Bereitstellung personenbezogener Daten ist weder gesetzlich noch vertraglich vorgeschrieben. Bestimmte Angaben können jedoch erforderlich sein, um Ihre Anfrage zu bearbeiten. Ohne diese Daten können wir Ihre Anfrage möglicherweise nicht bearbeiten.",
-
-    "hosting": "Hosting",
-    "hostingIntro": "Diese Website wird gehostet von:",
-    "hostingNote": "Hetzner Online GmbH verarbeitet personenbezogene Daten in unserem Auftrag auf Grundlage eines Auftragsverarbeitungsvertrags gemäß Art. 28 DSGVO. Die Datenverarbeitung erfolgt auf Servern in Nürnberg, Deutschland.",
-
-    "cookies": "Cookies",
-    "cookiesText": "Diese Website verwendet ausschließlich technisch notwendige Cookies, die für den sicheren und ordnungsgemäßen Betrieb der Website erforderlich sind.",
-    "cookiesText2": "Es werden keine Marketing-, Profiling-, Analyse- oder Werbetracking-Technologien eingesetzt.",
-    "cookiesLegal": "Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO. Unser berechtigtes Interesse liegt in der sicheren und effizienten Bereitstellung unserer Website.",
-
-    "dataRetention": "Datenspeicherung",
-    "dataRetentionText": "Personenbezogene Daten werden nur so lange gespeichert, wie dies für den jeweiligen Verarbeitungszweck erforderlich ist oder gesetzliche Aufbewahrungsfristen nach deutschem Recht dies verlangen.",
-    "dataRetentionText2": "Geschäftskorrespondenz kann gemäß den geltenden handels- und steuerrechtlichen Aufbewahrungspflichten aufbewahrt werden.",
-
-    "dataSecurity": "Datensicherheit",
-    "dataSecurityText": "Wir setzen geeignete technische und organisatorische Maßnahmen ein, um personenbezogene Daten gegen zufällige oder unrechtmäßige Zerstörung, Verlust, Veränderung, unbefugte Offenlegung oder unbefugten Zugang zu schützen.",
-    "dataSecurityText2": "Die Datenübertragung zwischen Ihrem Browser und unserer Website wird mittels SSL- bzw. TLS-Technologie verschlüsselt.",
-
-    "yourRights": "Ihre Rechte",
-    "yourRightsIntro": "Sie haben nach der DSGVO folgende Rechte:",
-    "yourRightsList": [
-      "Auskunftsrecht gemäß Art. 15 DSGVO",
-      "Recht auf Berichtigung gemäß Art. 16 DSGVO",
-      "Recht auf Löschung gemäß Art. 17 DSGVO",
-      "Recht auf Einschränkung der Verarbeitung gemäß Art. 18 DSGVO",
-      "Recht auf Datenübertragbarkeit gemäß Art. 20 DSGVO",
-      "Widerspruchsrecht gemäß Art. 21 DSGVO",
-      "Recht auf Widerruf der Einwilligung jederzeit gemäß Art. 7 Abs. 3 DSGVO"
-    ],
-    "yourRightsNote": "Soweit personenbezogene Daten auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO verarbeitet werden, haben Sie jederzeit das Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, Widerspruch einzulegen.",
-
-    "supervisoryAuthority": "Aufsichtsbehörde",
-    "supervisoryAuthorityText": "Wenn Sie der Auffassung sind, dass die Verarbeitung Ihrer personenbezogenen Daten gegen geltendes Datenschutzrecht verstößt, haben Sie das Recht, sich bei einer Aufsichtsbehörde zu beschweren.",
-    "supervisoryAuthorityCompetent": "Die zuständige Aufsichtsbehörde für die Deepvac GmbH ist:",
-
-    "noAutomatedDecisionMaking": "Keine automatisierte Entscheidungsfindung",
-    "noAutomatedDecisionMakingText": "Wir verwenden im Zusammenhang mit dieser Website keine automatisierte Entscheidungsfindung einschließlich Profiling im Sinne von Art. 22 DSGVO.",
-
-    "changes": "Änderungen dieser Datenschutzerklärung",
-    "changesText": "Wir behalten uns vor, diese Datenschutzerklärung zu aktualisieren, um Änderungen der Rechtslage oder Änderungen unserer Website oder unserer Leistungen zu berücksichtigen. Es gilt die jeweils auf unserer Website veröffentlichte Fassung."
+{
+  "imprint": {
+    "eyebrow": "Rechtliches",
+    "title": "Impressum",
+    "representedBy": "Vertreten durch den Geschäftsführer John Robertus",
+    "registeredOffice": "Sitz der Gesellschaft",
+    "registeredOfficeValue": "Hannover, Deutschland",
+    "businessAddress": "Geschäftsadresse",
+    "contact": "Kontakt",
+    "commercialRegister": "Handelsregister",
+    "shareCapital": "Stammkapital",
+    "shareCapitalValue": "25.000,00 EUR"
+  },
+  "privacy": {
+    "eyebrow": "Rechtliches",
+    "title": "Datenschutzerklärung",
+    "lastUpdated": "Zuletzt aktualisiert: 29. März 2026",
+    "sections": {
+      "controller": "Verantwortlicher",
+      "generalInfo": "Allgemeine Hinweise zur Datenverarbeitung",
+      "generalInfoText": "Wir verarbeiten personenbezogene Daten nur, soweit dies zur Bereitstellung einer funktionsfähigen Website, zur Beantwortung von Anfragen, zur Darstellung unserer Leistungen sowie zur sicheren und effizienten Durchführung unserer Geschäftskommunikation erforderlich ist.",
+      "generalInfoText2": "Die Verarbeitung erfolgt in Übereinstimmung mit der Datenschutz-Grundverordnung (DSGVO) und den geltenden deutschen Datenschutzgesetzen.",
+      "generalInfoText3": "Personenbezogene Daten werden nicht an Dritte weitergegeben, es sei denn, dies ist für den technischen Betrieb der Website, die Vertragserfüllung oder vorvertragliche Maßnahmen, die Einhaltung gesetzlicher Verpflichtungen, auf Grundlage Ihrer Einwilligung oder auf anderer gesetzlicher Grundlage erforderlich.",
+      "legalBases": "Rechtsgrundlagen der Verarbeitung",
+      "legalBasesIntro": "Bei der Verarbeitung personenbezogener Daten stützen wir uns insbesondere auf folgende Rechtsgrundlagen:",
+      "legalBasesList": [
+        "Art. 6 Abs. 1 lit. a DSGVO: Einwilligung",
+        "Art. 6 Abs. 1 lit. b DSGVO: Vertragserfüllung oder vorvertragliche Maßnahmen",
+        "Art. 6 Abs. 1 lit. c DSGVO: Erfüllung einer rechtlichen Verpflichtung",
+        "Art. 6 Abs. 1 lit. f DSGVO: Berechtigte Interessen"
+      ],
+      "legalBasesNote": "Soweit die Verarbeitung auf Art. 6 Abs. 1 lit. f DSGVO beruht, liegen unsere berechtigten Interessen im sicheren, stabilen, effizienten und nutzerorientierten Betrieb unserer Website, in der professionellen Darstellung unseres Unternehmens sowie in unserer Geschäftskommunikation.",
+      "serverLogs": "Website-Zugriffsdaten und Server-Logfiles",
+      "serverLogsIntro": "Beim Zugriff auf unsere Website werden automatisch Informationen durch unseren Hosting-Anbieter in sogenannten Server-Logfiles erfasst. Dies kann umfassen:",
+      "serverLogsList": [
+        "IP-Adresse",
+        "Datum und Uhrzeit des Zugriffs",
+        "Angeforderte Inhalte",
+        "Zugriffsstatus und HTTP-Statuscode",
+        "Übertragene Datenmenge",
+        "Referrer-URL",
+        "Browsertyp und -version",
+        "Betriebssystem"
+      ],
+      "serverLogsNote": "Diese Daten werden verarbeitet, um die Stabilität, Sicherheit und technische Funktionsfähigkeit der Website zu gewährleisten sowie um Missbrauch und sicherheitsrelevante Vorfälle zu erkennen, zu verhindern und zu untersuchen.",
+      "serverLogsLegal": "Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO.",
+      "serverLogsRetention": "Server-Logdaten werden in der Regel für maximal 7 Tage gespeichert, es sei denn, eine längere Aufbewahrung ist zur Untersuchung sicherheitsrelevanter Vorfälle oder zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen erforderlich.",
+      "contactForm": "Kontaktaufnahme per E-Mail oder Kontaktformular",
+      "contactFormText": "Wenn Sie uns per E-Mail kontaktieren oder eine Anfrage über unser Kontaktformular stellen, verarbeiten wir die von Ihnen bereitgestellten personenbezogenen Daten zum Zweck der Bearbeitung Ihrer Anfrage und der Kommunikation mit Ihnen.",
+      "contactFormDataIntro": "Dies kann insbesondere folgende Daten umfassen:",
+      "contactFormDataList": [
+        "Vorname",
+        "Nachname",
+        "geschäftliche E-Mail-Adresse",
+        "Firmenname",
+        "Telefonnummer, sofern freiwillig angegeben",
+        "Projekt- oder Anwendungsinformationen",
+        "Nachrichteninhalt"
+      ],
+      "contactFormRequired": "Pflichtfelder im Kontaktformular sind entsprechend gekennzeichnet. Diese Daten sind erforderlich, um Ihre Anfrage bearbeiten zu können.",
+      "contactFormLegal": "Rechtsgrundlage:",
+      "contactFormLegalList": [
+        "Art. 6 Abs. 1 lit. b DSGVO, wenn sich Ihre Anfrage auf vorvertragliche Maßnahmen oder die Vertragserfüllung bezieht",
+        "Art. 6 Abs. 1 lit. f DSGVO für allgemeine geschäftliche Kommunikation und sonstige Anfragen"
+      ],
+      "contactFormNote": "Ihre Daten werden nicht an Dritte weitergegeben, es sei denn, dies ist zur Bearbeitung Ihrer Anfrage erforderlich, gesetzlich vorgeschrieben oder anderweitig rechtlich zulässig.",
+      "contactFormRetention": "Wir speichern Ihre Anfrage nur so lange, wie dies zur Bearbeitung erforderlich ist. Soweit gesetzliche Aufbewahrungspflichten bestehen, erfolgt eine Speicherung für die gesetzlich vorgeschriebene Dauer.",
+      "provisionOfData": "Bereitstellung personenbezogener Daten",
+      "provisionOfDataText": "Die Bereitstellung personenbezogener Daten ist weder gesetzlich noch vertraglich vorgeschrieben. Bestimmte Angaben können jedoch erforderlich sein, um Ihre Anfrage zu bearbeiten. Ohne diese Daten können wir Ihre Anfrage möglicherweise nicht bearbeiten.",
+      "hosting": "Hosting",
+      "hostingIntro": "Diese Website wird gehostet von:",
+      "hostingNote": "Hetzner Online GmbH verarbeitet personenbezogene Daten in unserem Auftrag auf Grundlage eines Auftragsverarbeitungsvertrags gemäß Art. 28 DSGVO. Die Datenverarbeitung erfolgt auf Servern in Nürnberg, Deutschland.",
+      "cookies": "Cookies",
+      "cookiesText": "Diese Website verwendet ausschließlich technisch notwendige Cookies, die für den sicheren und ordnungsgemäßen Betrieb der Website erforderlich sind.",
+      "cookiesText2": "Es werden keine Marketing-, Profiling-, Analyse- oder Werbetracking-Technologien eingesetzt.",
+      "cookiesLegal": "Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO. Unser berechtigtes Interesse liegt in der sicheren und effizienten Bereitstellung unserer Website.",
+      "dataRetention": "Datenspeicherung",
+      "dataRetentionText": "Personenbezogene Daten werden nur so lange gespeichert, wie dies für den jeweiligen Verarbeitungszweck erforderlich ist oder gesetzliche Aufbewahrungsfristen nach deutschem Recht dies verlangen.",
+      "dataRetentionText2": "Geschäftskorrespondenz kann gemäß den geltenden handels- und steuerrechtlichen Aufbewahrungspflichten aufbewahrt werden.",
+      "dataSecurity": "Datensicherheit",
+      "dataSecurityText": "Wir setzen geeignete technische und organisatorische Maßnahmen ein, um personenbezogene Daten gegen zufällige oder unrechtmäßige Zerstörung, Verlust, Veränderung, unbefugte Offenlegung oder unbefugten Zugang zu schützen.",
+      "dataSecurityText2": "Die Datenübertragung zwischen Ihrem Browser und unserer Website wird mittels SSL- bzw. TLS-Technologie verschlüsselt.",
+      "yourRights": "Ihre Rechte",
+      "yourRightsIntro": "Sie haben nach der DSGVO folgende Rechte:",
+      "yourRightsList": [
+        "Auskunftsrecht gemäß Art. 15 DSGVO",
+        "Recht auf Berichtigung gemäß Art. 16 DSGVO",
+        "Recht auf Löschung gemäß Art. 17 DSGVO",
+        "Recht auf Einschränkung der Verarbeitung gemäß Art. 18 DSGVO",
+        "Recht auf Datenübertragbarkeit gemäß Art. 20 DSGVO",
+        "Widerspruchsrecht gemäß Art. 21 DSGVO",
+        "Recht auf Widerruf der Einwilligung jederzeit gemäß Art. 7 Abs. 3 DSGVO"
+      ],
+      "yourRightsNote": "Soweit personenbezogene Daten auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO verarbeitet werden, haben Sie jederzeit das Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, Widerspruch einzulegen.",
+      "supervisoryAuthority": "Aufsichtsbehörde",
+      "supervisoryAuthorityText": "Wenn Sie der Auffassung sind, dass die Verarbeitung Ihrer personenbezogenen Daten gegen geltendes Datenschutzrecht verstößt, haben Sie das Recht, sich bei einer Aufsichtsbehörde zu beschweren.",
+      "supervisoryAuthorityCompetent": "Die zuständige Aufsichtsbehörde für die Deepvac GmbH ist:",
+      "noAutomatedDecisionMaking": "Keine automatisierte Entscheidungsfindung",
+      "noAutomatedDecisionMakingText": "Wir verwenden im Zusammenhang mit dieser Website keine automatisierte Entscheidungsfindung einschließlich Profiling im Sinne von Art. 22 DSGVO.",
+      "changes": "Änderungen dieser Datenschutzerklärung",
+      "changesText": "Wir behalten uns vor, diese Datenschutzerklärung zu aktualisieren, um Änderungen der Rechtslage oder Änderungen unserer Website oder unserer Leistungen zu berücksichtigen. Es gilt die jeweils auf unserer Website veröffentlichte Fassung."
+    }
+  },
+  "terms": {
+    "eyebrow": "Rechtliches",
+    "title": "Allgemeine Geschäftsbedingungen",
+    "effectiveDate": "Gültig ab: 27.02.2026"
   }
 }
