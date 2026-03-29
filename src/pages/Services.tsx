@@ -1,136 +1,163 @@
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet-async";
+import { useLocation } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import { PageShell, PageHero, Section, CTABand } from "@/components/PageShell";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Button } from "@/components/ui/button";
-import {
-  ArrowRight, Thermometer, Gauge, Settings, RefreshCw, Wrench, Box,
-} from "lucide-react";
+import { ArrowRight, Thermometer, Gauge, Settings, RefreshCw, Wrench, Box } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { useLanguage } from "@/components/LanguageProvider";
+import { getHreflangs, getCanonical, localizedPath } from "@/lib/routes";
 
-const services = [
-  { icon: <Thermometer className="w-6 h-6" />, title: "Testing Services", description: "Execution and support of thermal vacuum test campaigns for qualification, validation, and development programs requiring stable environmental control and repeatable workflows.", deliverables: ["Test campaign execution", "Data acquisition and reporting", "Qualification and acceptance testing", "Engineering support"], href: "/services/testing-services" },
-  { icon: <Gauge className="w-6 h-6" />, title: "Control Systems Design", description: "Design of chamber control architectures, automation logic, user interfaces, instrumentation integration, and reliable operating concepts for TVAC environments.", deliverables: ["Control architecture design", "Automation and HMI development", "Instrumentation integration", "System commissioning"], href: "/services/control-systems-design" },
-  { icon: <Settings className="w-6 h-6" />, title: "Mechanical Design", description: "Engineering of chamber assemblies, interfaces, fixturing, support structures, and customer-specific mechanical integration concepts.", deliverables: ["Chamber structural design", "Fixture engineering", "Interface specification", "Integration concepts"], href: "/services/mechanical-design" },
-  { icon: <RefreshCw className="w-6 h-6" />, title: "Retrofit & Modernization", description: "Technical upgrades for legacy TVAC systems to improve reliability, safety, control precision, usability, and lifecycle value.", deliverables: ["System assessment", "Upgrade engineering", "Control system modernization", "Safety improvements"], href: "/services/retrofit-modernization" },
-  { icon: <Wrench className="w-6 h-6" />, title: "Maintenance & Repair", description: "Diagnostics, preventive servicing, repair, and technical support to reduce downtime and sustain chamber availability.", deliverables: ["Preventive maintenance", "Diagnostics and repair", "Spare parts support", "On-site service"], href: "/services/maintenance-repair" },
-  { icon: <Box className="w-6 h-6" />, title: "Subsystem Integration", description: "Integration of thermal, vacuum, instrumentation, and control subsystems into coherent test environments tailored to project-specific requirements.", deliverables: ["Subsystem specification", "Interface engineering", "System integration", "Acceptance testing"], href: "/services/subsystem-integration" },
+const serviceIcons = [
+  <Thermometer className="w-6 h-6" />,
+  <Gauge className="w-6 h-6" />,
+  <Settings className="w-6 h-6" />,
+  <RefreshCw className="w-6 h-6" />,
+  <Wrench className="w-6 h-6" />,
+  <Box className="w-6 h-6" />,
 ];
 
-const faqs = [
-  { q: "Does Deepvac provide services for chambers from other manufacturers?", a: "Yes. Deepvac's service capabilities — including retrofit, maintenance, repair, and control system upgrades — can be applied to thermal vacuum systems from various manufacturers." },
-  { q: "Can Deepvac support test campaigns at customer facilities?", a: "Deepvac provides testing services including on-site support for thermal vacuum test campaigns, depending on project requirements and facility access." },
-  { q: "How does Deepvac's service offering relate to its chamber products?", a: "Deepvac's engineering services are designed to complement its chamber products, providing integrated support from initial system design through long-term operation. Services are also available independently for existing chamber infrastructure." },
+const serviceHrefs = [
+  "/services/testing-services",
+  "/services/control-systems-design",
+  "/services/mechanical-design",
+  "/services/retrofit-modernization",
+  "/services/maintenance-repair",
+  "/services/subsystem-integration",
 ];
 
-const Services = () => (
-  <Layout>
-    <PageShell>
-      <PageHero
-        eyebrow="Engineering Services"
-        title="End-to-End TVAC Engineering Support"
-        description="Deepvac provides engineering services across the full lifecycle of thermal vacuum systems — from control architecture design and test campaign execution to retrofit, maintenance, and subsystem integration. Each service is grounded in practical chamber engineering experience."
-      >
-        <div className="flex flex-wrap gap-3 pt-4">
-          <Button asChild size="lg" className="font-mono text-xs tracking-wide">
-            <Link to="/contact">Discuss Your Requirements</Link>
-          </Button>
-          <Button asChild variant="outline" size="lg">
-            <Link to="/products">Explore Chamber Products</Link>
-          </Button>
-        </div>
-      </PageHero>
+const Services = () => {
+  const { t } = useTranslation("services");
+  const { t: tSeo } = useTranslation("seo");
+  const { t: tc } = useTranslation("common");
+  const { lang } = useLanguage();
+  const { pathname } = useLocation();
+  const hreflangs = getHreflangs(pathname);
+  const canonical = getCanonical(pathname, lang);
 
-      {/* Service Cards */}
-      <Section>
-        <div className="space-y-6">
-          {services.map((s) => (
-            <div key={s.title} className="bento-card rounded-lg overflow-hidden group">
-              <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-0">
-                <div className="p-8 lg:p-10 space-y-5">
-                  <div className="flex items-center gap-4">
-                    <div className="w-10 h-10 rounded-lg bg-surface-raised border border-gray/15 flex items-center justify-center text-blue">
-                      {s.icon}
+  const serviceItems = t("overview.items", { returnObjects: true }) as Array<{
+    title: string; description: string; deliverables: string[];
+  }>;
+  const faqItems = t("overview.faq.items", { returnObjects: true }) as Array<{ q: string; a: string }>;
+
+  return (
+    <Layout>
+      <Helmet>
+        <html lang={lang} />
+        <title>{tSeo("services.title")}</title>
+        <meta name="description" content={tSeo("services.description")} />
+        <link rel="canonical" href={canonical} />
+        {hreflangs.map((h) => (
+          <link key={h.lang} rel="alternate" hrefLang={h.lang} href={h.href} />
+        ))}
+      </Helmet>
+      <PageShell>
+        <PageHero
+          eyebrow={t("overview.eyebrow")}
+          title={t("overview.title")}
+          description={t("overview.description")}
+        >
+          <div className="flex flex-wrap gap-3 pt-4">
+            <Button asChild size="lg" className="font-mono text-xs tracking-wide">
+              <Link to={localizedPath("/contact", lang)}>{tc("buttons.discussRequirements")}</Link>
+            </Button>
+            <Button asChild variant="outline" size="lg">
+              <Link to={localizedPath("/products", lang)}>{tc("buttons.exploreChamberProducts")}</Link>
+            </Button>
+          </div>
+        </PageHero>
+
+        {/* Service Cards */}
+        <Section>
+          <div className="space-y-6">
+            {serviceItems.map((s, i) => (
+              <div key={s.title} className="bento-card rounded-lg overflow-hidden group">
+                <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-0">
+                  <div className="p-8 lg:p-10 space-y-5">
+                    <div className="flex items-center gap-4">
+                      <div className="w-10 h-10 rounded-lg bg-surface-raised border border-gray/15 flex items-center justify-center text-blue">
+                        {serviceIcons[i]}
+                      </div>
+                      <div>
+                        <span className="mono-label text-blue">{t("overview.serviceLabel")}</span>
+                        <h2 className="text-xl md:text-2xl font-medium text-sand tracking-tight">{s.title}</h2>
+                      </div>
                     </div>
-                    <div>
-                      <span className="mono-label text-blue">Service</span>
-                      <h2 className="text-xl md:text-2xl font-medium text-sand tracking-tight">{s.title}</h2>
-                    </div>
+                    <p className="text-sm text-gray leading-relaxed max-w-2xl">{s.description}</p>
+                    <Button asChild variant="outline" className="self-start group/btn">
+                      <Link to={localizedPath(serviceHrefs[i], lang)}>
+                        {tc("buttons.learnMore")}
+                        <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover/btn:translate-x-1" />
+                      </Link>
+                    </Button>
                   </div>
-                  <p className="text-sm text-gray leading-relaxed max-w-2xl">{s.description}</p>
-                  <Button asChild variant="outline" className="self-start group/btn">
-                    <Link to={s.href}>
-                      Learn More
-                      <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover/btn:translate-x-1" />
-                    </Link>
-                  </Button>
-                </div>
-                <div className="border-l border-gray/10 p-8 bg-surface-raised/30 flex flex-col justify-center">
-                  <span className="mono-label text-gray/50 mb-3">Key Deliverables</span>
-                  <ul className="space-y-2.5">
-                    {s.deliverables.map((d) => (
-                      <li key={d} className="flex items-start gap-2 text-xs text-gray leading-relaxed">
-                        <span className="w-1 h-1 rounded-full bg-blue mt-1.5 shrink-0" />
-                        {d}
-                      </li>
-                    ))}
-                  </ul>
+                  <div className="border-l border-gray/10 p-8 bg-surface-raised/30 flex flex-col justify-center">
+                    <span className="mono-label text-gray/50 mb-3">{t("overview.keyDeliverables")}</span>
+                    <ul className="space-y-2.5">
+                      {s.deliverables.map((d: string) => (
+                        <li key={d} className="flex items-start gap-2 text-xs text-gray leading-relaxed">
+                          <span className="w-1 h-1 rounded-full bg-blue mt-1.5 shrink-0" />
+                          {d}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </div>
+            ))}
+          </div>
+        </Section>
+
+        <div className="section-divider" />
+
+        {/* Cross-link Products */}
+        <Section className="bg-surface/30">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div className="space-y-4">
+              <SectionHeader
+                eyebrow={t("overview.integrated.eyebrow")}
+                title={t("overview.integrated.title")}
+                description={t("overview.integrated.description")}
+              />
             </div>
-          ))}
-        </div>
-      </Section>
-
-      <div className="section-divider" />
-
-      {/* Cross-link Products */}
-      <Section className="bg-surface/30">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          <div className="space-y-4">
-            <SectionHeader
-              eyebrow="Integrated Offering"
-              title="Services + Chamber Systems"
-              description="Deepvac's engineering services are designed to integrate with our Standard Series and Custom TVAC platforms — or to support existing chamber infrastructure from any manufacturer."
-            />
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button asChild variant="outline" className="group/btn">
+                <Link to={localizedPath("/products/standard-series", lang)}>Standard Series <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover/btn:translate-x-1" /></Link>
+              </Button>
+              <Button asChild variant="outline" className="group/btn">
+                <Link to={localizedPath("/products/custom-tvac", lang)}>Custom TVAC <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover/btn:translate-x-1" /></Link>
+              </Button>
+            </div>
           </div>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Button asChild variant="outline" className="group/btn">
-              <Link to="/products/standard-series">Standard Series <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover/btn:translate-x-1" /></Link>
-            </Button>
-            <Button asChild variant="outline" className="group/btn">
-              <Link to="/products/custom-tvac">Custom TVAC <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover/btn:translate-x-1" /></Link>
-            </Button>
-          </div>
-        </div>
-      </Section>
+        </Section>
 
-      {/* FAQ */}
-      <Section>
-        <SectionHeader eyebrow="FAQ" title="Service Questions" className="mb-10" />
-        <Accordion type="single" collapsible className="max-w-3xl">
-          {faqs.map((faq, i) => (
-            <AccordionItem key={i} value={`faq-${i}`} className="border-gray/15">
-              <AccordionTrigger className="text-sand text-sm text-left hover:no-underline">{faq.q}</AccordionTrigger>
-              <AccordionContent className="text-gray text-sm leading-relaxed">{faq.a}</AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
-      </Section>
+        {/* FAQ */}
+        <Section>
+          <SectionHeader eyebrow={t("overview.faq.eyebrow")} title={t("overview.faq.title")} className="mb-10" />
+          <Accordion type="single" collapsible className="max-w-3xl">
+            {faqItems.map((faq, i) => (
+              <AccordionItem key={i} value={`faq-${i}`} className="border-gray/15">
+                <AccordionTrigger className="text-sand text-sm text-left hover:no-underline">{faq.q}</AccordionTrigger>
+                <AccordionContent className="text-gray text-sm leading-relaxed">{faq.a}</AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </Section>
 
-      <CTABand
-        title="Discuss Your Engineering Requirements"
-        description="Whether you need testing support, control system design, or lifecycle services for your thermal vacuum infrastructure, Deepvac can help."
-      >
-        <Button asChild size="lg" className="font-mono text-xs tracking-wide">
-          <Link to="/contact">Talk to an Engineer</Link>
-        </Button>
-        <Button asChild variant="outline" size="lg">
-          <Link to="/contact">Request a Quote</Link>
-        </Button>
-      </CTABand>
-    </PageShell>
-  </Layout>
-);
+        <CTABand title={t("overview.cta.title")} description={t("overview.cta.description")}>
+          <Button asChild size="lg" className="font-mono text-xs tracking-wide">
+            <Link to={localizedPath("/contact", lang)}>{tc("buttons.talkToEngineer")}</Link>
+          </Button>
+          <Button asChild variant="outline" size="lg">
+            <Link to={localizedPath("/contact", lang)}>{tc("buttons.requestQuote")}</Link>
+          </Button>
+        </CTABand>
+      </PageShell>
+    </Layout>
+  );
+};
 
 export default Services;
