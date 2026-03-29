@@ -1,0 +1,257 @@
+{
+  "hero": {
+    "eyebrow": "THERMOVAKUUMSYSTEME FÜR DIE RAUMFAHRT. ENTWICKELT IN DEUTSCHLAND.",
+    "title": "Thermovakuumsysteme für die Raumfahrtqualifikation",
+    "description": "Deepvac entwickelt modulare und kundenspezifische Thermovakuumsysteme für die Raumfahrtqualifikation, thermische Zyklierung und Weltraumumgebungssimulation – mit Hochvakuum, präziser Temperaturregelung und ingenieurgeführter Automatisierung.",
+    "cues": ["MODULARE PLATTFORMEN", "CUSTOM-TVAC-SYSTEME", "STEUERUNG & AUTOMATISIERUNG", "RETROFIT & SERVICE"],
+    "source": "Quelle: NASA"
+  },
+  "trustBar": {
+    "items": [
+      "Konzipiert für anspruchsvolle Raumfahrt- und Laborumgebungen",
+      "Ausgelegt für reproduzierbare Thermovakuum-Workflows",
+      "Konfigurierbar für Geometrie, Schnittstellen und Testprofile",
+      "Unterstützt durch Retrofit, Service und Subsystem-Integration"
+    ]
+  },
+  "capabilities": {
+    "eyebrow": "Kernkompetenzen",
+    "title": "Engineering-Kompetenzen über den gesamten TVAC-Lebenszyklus",
+    "description": "Deepvac vereint Kammerplattformen, Steuerungstechnik, mechanische Konstruktion, Subsystem-Integration und Lifecycle-Support in einem ingenieurgetriebenen Gesamtangebot.",
+    "items": [
+      {
+        "title": "TVAC-Kammerplattformen",
+        "description": "Standardisierte und kundenspezifische Thermovakuumkammern für Raumfahrtqualifikation, thermische Zyklierung und Weltraumumgebungssimulation."
+      },
+      {
+        "title": "Steuerungs- & Automatisierungssysteme",
+        "description": "SPS-basierte Steuerungsarchitekturen, Automatisierung, Datenerfassung und Überwachungslogik für stabile, reproduzierbare Testdurchführung."
+      },
+      {
+        "title": "Mechanische Konstruktion & Schnittstellen",
+        "description": "Kammerlayouts, Vorrichtungen, Durchführungen, Montagekonzepte und Tragstrukturen für kundenspezifische Testkonfigurationen."
+      },
+      {
+        "title": "Thermische Regelsysteme",
+        "description": "Thermalplatten-, Shroud- und Temperaturregellösungen für stabile Profile, Zyklierung, Ausheizen und Qualifikationsabläufe."
+      },
+      {
+        "title": "Vakuumsystemtechnik",
+        "description": "Vakuumarchitekturen mit Pumpen, Ventilen, Sensoren und Schutzlogik für zuverlässigen Hochvakuumbetrieb."
+      },
+      {
+        "title": "Testkampagnen-Unterstützung",
+        "description": "Engineering- und Betriebsunterstützung für Thermovakuum-Testkampagnen, von der Vorbereitung bis zur Durchführung."
+      },
+      {
+        "title": "Subsystem-Integration",
+        "description": "Integration von thermischen, Vakuum-, Instrumentierungs- und Steuerungssubsystemen zu kohärenten Testumgebungen."
+      },
+      {
+        "title": "Retrofit, Wartung & Reparatur",
+        "description": "Modernisierung, Wartung, Reparatur und gezielte Upgrades für bestehende Thermovakuum-Infrastruktur."
+      }
+    ]
+  },
+  "productPortfolio": {
+    "eyebrow": "Produktportfolio",
+    "title": "Kammerplattformen",
+    "description": "Standardisierte und kundenspezifisch entwickelte Thermovakuumsysteme für die Qualifikations- und Verifikationsprüfung von Raumfahrthardware unter kontrollierten Hochvakuum- und Thermalbedingungen.",
+    "tSeries": {
+      "title": "T Serie TVAC",
+      "subtitle": "Kubische Thermovakuumkammern",
+      "description": "Kubische Thermovakuumkammern für die Qualifikation, Validierung und Umweltsimulation von Raumfahrthardware. Die T Serie bietet eine standardisierte Kammerplattform für kontrollierte Thermovakuumtests in Forschung, institutionellen und kommerziellen Raumfahrtanwendungen.",
+      "overlays": ["Kubische Geometrie", "Standard Serie", "Thermovakuumprüfung"],
+      "cta": "Plattform ansehen",
+      "specs": {
+        "geometry": { "label": "Geometrie", "value": "Kubisch" },
+        "volume": { "label": "Volumenbereich", "value": "65 bis 2000 L" },
+        "pressure": { "label": "Enddruck", "value": "≤ 1 × 10⁻⁶ mbar" },
+        "temperature": { "label": "Temperaturbereich", "value": "-190 °C bis +150 °C*" }
+      },
+      "note": "*Abhängig vom gewählten Thermalkonzept, einschließlich direkter LN₂-Kühlung, GN₂-Umwälzung oder mechanischer Kühlung."
+    },
+    "cSeries": {
+      "title": "C Serie TVAC",
+      "subtitle": "Zylindrische Thermovakuumkammern",
+      "description": "Zylindrische Thermovakuumkammern für die Qualifikation, Validierung und Umweltsimulation von Raumfahrthardware. Die C Serie bietet eine standardisierte Kammerplattform für kontrollierte Thermovakuumtests in Forschung, institutionellen und kommerziellen Raumfahrtanwendungen.",
+      "overlays": ["Zylindrische Geometrie", "Standard Serie", "Thermovakuumprüfung"],
+      "cta": "Plattform ansehen",
+      "specs": {
+        "geometry": { "label": "Geometrie", "value": "Zylindrisch" },
+        "volume": { "label": "Volumenbereich", "value": "65 bis 2000 L" },
+        "pressure": { "label": "Enddruck", "value": "≤ 1 × 10⁻⁶ mbar" },
+        "temperature": { "label": "Temperaturbereich", "value": "-190 °C bis +150 °C*" }
+      },
+      "note": "*Abhängig vom gewählten Thermalkonzept, einschließlich direkter LN₂-Kühlung, GN₂-Umwälzung oder mechanischer Kühlung."
+    },
+    "custom": {
+      "title": "Custom TVAC",
+      "subtitle": "Anwendungsspezifische Thermovakuumsysteme",
+      "description": "Kundenspezifische Thermovakuumsysteme für Anwendungen außerhalb der Standard Serie. Diese Systeme werden für nicht-standardmäßige Geometrien, spezifische Kammervolumina, erweiterte Temperaturanforderungen und zusätzliche Subsysteme entwickelt.",
+      "overlays": ["Über die Standard Serie hinaus", "Custom-Geometrie", "Spezielle TVAC-Systeme"],
+      "cta": "Konfiguration besprechen",
+      "specs": {
+        "scope": { "label": "Auslegungsumfang", "value": "Außerhalb der Standard Serie" },
+        "volume": { "label": "Volumen", "value": "Über den Standardbereich hinaus" },
+        "temperature": { "label": "Temperatur", "value": "Über den Standardbereich hinaus" },
+        "features": { "label": "Systemmerkmale", "value": "Projektspezifische Subsysteme" }
+      },
+      "note": "Custom-Systeme können dedizierte Schnittstellen, kryogene Shrouds, Infrarotheizungen, zusätzliche Diagnostik und weitere anwendungsspezifische Systemerweiterungen umfassen."
+    }
+  },
+  "applications": {
+    "eyebrow": "Anwendungen",
+    "title": "Entwickelt für Raumfahrtqualifikation und Thermovakuumprüfung",
+    "description": "Deepvac-Systeme unterstützen Qualifikation, thermische Zyklierung, Entwicklungstests und kundenspezifische Weltraumumgebungssimulation für Raumfahrthardware, Subsysteme und Hochleistungskomponenten.",
+    "items": [
+      {
+        "title": "Qualifikation von Satellitensubsystemen",
+        "description": "Thermovakuumprüfung von Satellitenkomponenten und -subsystemen unter repräsentativen Weltraumbedingungen zur Qualifikation und Leistungsverifikation."
+      },
+      {
+        "title": "Payload- & Instrumentenqualifikation",
+        "description": "Umweltsimulation und Thermovakuumverifikation von Nutzlast- und Instrumentenhardware vor Integration, Start und Missionseinsatz."
+      },
+      {
+        "title": "Thermische Zyklierung & Dauerfestigkeitsprüfung",
+        "description": "Kontrollierte thermische Zyklierung unter Hochvakuum zur Dauerfestigkeitsprüfung von Materialien, Baugruppen und kritischen Hardwarekomponenten."
+      },
+      {
+        "title": "Kontaminationskontrollierte Prüfung",
+        "description": "Hochreine, ausgasungsarme Testbedingungen für kontaminationsempfindliche Hardware und reproduzierbare Thermovakuum-Testkampagnen."
+      },
+      {
+        "title": "Entwicklungs- & Prototypenprüfung",
+        "description": "Flexible Kammerkonfigurationen für Entwicklungsprogramme, Prototypenvalidierung, Frühphasentests und iterative Hardwareverfeinerung."
+      },
+      {
+        "title": "Custom-TVAC-Konfigurationen",
+        "description": "Anwendungsspezifische Thermovakuumsysteme, zugeschnitten auf besondere Geometrien, Schnittstellen, Thermalprofile und Testanforderungen."
+      }
+    ]
+  },
+  "services": {
+    "eyebrow": "Engineering-Leistungen",
+    "title": "Unterstützung über den gesamten TVAC-Lebenszyklus",
+    "description": "Von der Neuentwicklung über Modernisierung und Wartung bis zur Subsystem-Integration – Deepvac unterstützt Thermovakuum-Infrastruktur in Planung, Umsetzung und langfristigem Betrieb.",
+    "pillars": [
+      {
+        "title": "Neuentwicklung von Kammern",
+        "description": "Unterstützung bei Planung und Realisierung neuer Thermovakuum-Infrastruktur, vom frühen Engineering bis zur Systemumsetzung."
+      },
+      {
+        "title": "Modernisierung & Upgrades",
+        "description": "Gezielte Upgrades für Bestandssysteme zur Verbesserung von Steuerungsqualität, Zuverlässigkeit, Bedienbarkeit und langfristiger technischer Leistungsfähigkeit."
+      },
+      {
+        "title": "Betrieb & Lifecycle-Support",
+        "description": "Wartung, Reparatur und Kampagnenunterstützung, um Testinfrastruktur verfügbar, stabil und einsatzbereit zu halten."
+      }
+    ],
+    "items": [
+      {
+        "label": "Kampagnenunterstützung",
+        "title": "Prüfdienstleistungen",
+        "description": "Unterstützung bei Qualifikations-, Validierungs- und Entwicklungskampagnen, die stabile Umgebungskontrolle und reproduzierbare Workflows erfordern."
+      },
+      {
+        "label": "Steuerungsarchitektur",
+        "title": "Steuerungstechnik",
+        "description": "Entwicklung von Kammersteuerungsarchitekturen, Automatisierungslogik, Benutzerschnittstellen und Instrumentierungsintegration für zuverlässigen Systembetrieb."
+      },
+      {
+        "label": "Mechanisches Engineering",
+        "title": "Mechanische Konstruktion",
+        "description": "Engineering von Kammerbaugruppen, Schnittstellen, Vorrichtungen, Tragstrukturen und anwendungsspezifischen mechanischen Integrationskonzepten."
+      },
+      {
+        "label": "Bestandssystem-Upgrades",
+        "title": "Retrofit & Modernisierung",
+        "description": "Technische Upgrades für bestehende TVAC-Systeme zur Verbesserung von Zuverlässigkeit, Bedienbarkeit, Sicherheit, Regelgenauigkeit und Lebensdauerleistung."
+      },
+      {
+        "label": "Verfügbarkeitsunterstützung",
+        "title": "Wartung & Reparatur",
+        "description": "Diagnostik, vorbeugende Wartung, Instandsetzung und Reparatur zur Sicherstellung langfristiger Kammerverfügbarkeit und reduzierter Ausfallzeiten."
+      },
+      {
+        "label": "Systemintegration",
+        "title": "Subsystem-Integration",
+        "description": "Integration von thermischen, Vakuum-, Instrumentierungs- und Steuerungssubsystemen zu kohärenten Testumgebungen, zugeschnitten auf spezifische Kundenanforderungen."
+      }
+    ]
+  },
+  "whyDeepvac": {
+    "eyebrow": "Warum Deepvac",
+    "title": "Gegründet auf Engineering-Tiefe",
+    "description": "Deepvac vereint Ingenieurdisziplin, integrierte Systemauslegung und Lifecycle-Support für zuverlässige Thermovakuum-Infrastruktur.",
+    "items": [
+      {
+        "title": "Modulare Plattformen & Custom-Systeme",
+        "description": "Deepvac bietet standardisierte Kammerplattformen und kundenspezifische Thermovakuumsysteme – von kompakten Testaufbauten bis zu großskaliger Qualifikationsinfrastruktur."
+      },
+      {
+        "title": "Ingenieurgetriebene Systemauslegung",
+        "description": "Projekte beginnen mit technischen Anforderungen, Systemarchitektur, Schnittstellendefinition und Integrationslogik für robuste, anwendungsspezifische Testumgebungen."
+      },
+      {
+        "title": "Integrierte Hardware, Steuerung & Support",
+        "description": "Kammerhardware, Steuerungssysteme, Subsystem-Integration, Modernisierung und Service werden in einem koordinierten Engineering-Ansatz kombiniert."
+      },
+      {
+        "title": "Ausgelegt für qualifikationsgerechte Umgebungen",
+        "description": "Systemkonzepte werden um die Anforderungen der Raumfahrtqualifikation, thermischen Zyklierung, kontaminationssensitiven Prüfung und fortgeschrittenen Forschungsanwendungen entwickelt."
+      },
+      {
+        "title": "Von Neusystemen bis zur Modernisierung",
+        "description": "Deepvac unterstützt Projekte über Konzeptentwicklung, Fertigung, Inbetriebnahme, Retrofit, Wartung und langfristige technische Verbesserung."
+      },
+      {
+        "title": "Reduzierte Schnittstellenkomplexität",
+        "description": "Thermische, Vakuum-, Instrumentierungs- und Steuerungssubsysteme werden als eine funktionale Umgebung konzipiert, um Koordinationsaufwand, Integrationsrisiko und technische Reibung zu minimieren."
+      }
+    ]
+  },
+  "team": {
+    "eyebrow": "Geschäftsführung",
+    "title": "Ingenieurgeführt von Anfang an",
+    "description": "Deepvac wird von einem Gründerteam mit komplementärer Expertise in Elektrotechnik, Mechatronik, Kältetechnik und Kammerentwicklung geführt. Diese Kombination ermöglicht die Entwicklung fortschrittlicher Thermovakuum-Infrastruktur mit hoher technischer Tiefe in Systemauslegung und Umsetzung.",
+    "members": [
+      {
+        "name": "John Robertus",
+        "role": "CEO | Mitgründer",
+        "description": "Elektroingenieur mit Schwerpunkt auf intelligenter Systemintegration, Steuerungsarchitektur und datengetriebener Automatisierung für mechatronische Systeme."
+      },
+      {
+        "name": "Anton Opalikhin",
+        "role": "CTO | Mitgründer",
+        "description": "Maschinenbauingenieur mit Schwerpunkt auf Kältetechnik, Kammerentwicklung und Thermovakuum-Infrastruktur für anspruchsvolle Testanwendungen."
+      }
+    ]
+  },
+  "catalogues": {
+    "eyebrow": "Ressourcen",
+    "title": "Technische Dokumentation",
+    "description": "Produktübersichten, technische Spezifikationen und Unternehmensbroschüren zum Download.",
+    "featuredBrochure": "Ausgewählte Broschüre"
+  },
+  "leadCapture": {
+    "eyebrow": "Gespräch beginnen",
+    "title": "Besprechen Sie Ihre Thermovakuum-Anforderungen",
+    "description": "Ob Sie eine modulare Kammerplattform, eine kundenspezifische TVAC-Konfiguration oder Unterstützung bei Modernisierung und Subsystem-Integration benötigen – Deepvac hilft bei der Definition der richtigen Systemarchitektur für Ihre Anwendung."
+  },
+  "contact": {
+    "eyebrow": "Kontakt",
+    "title": "Besprechen Sie Ihre Anforderungen",
+    "description": "Teilen Sie uns Ihre Kammer-, Test- oder Integrationsanforderungen mit.",
+    "address": "Adresse",
+    "phone": "Telefon",
+    "email": "E-Mail"
+  },
+  "funding": {
+    "eyebrow": "Gefördert & Unterstützt",
+    "description": "Deepvac wird durch öffentliche Förderprogramme unterstützt.",
+    "altText": "EXIST-Förderprogramm, gefördert durch das Bundesministerium für Wirtschaft und Energie und kofinanziert durch die Europäische Union"
+  }
+}

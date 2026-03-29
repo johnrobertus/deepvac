@@ -1,0 +1,78 @@
+{
+  "eyebrow": "Our Team",
+  "title": "Engineering-Led from Day One",
+  "description": "Deepvac is built by engineers who have spent their careers developing, manufacturing, and commissioning thermal vacuum test systems.",
+  "story": {
+    "eyebrow": "Our Story",
+    "title": "Founded on Complementary Expertise",
+    "paragraphs": [
+      "Deepvac was founded with a clear conviction: that thermal vacuum systems require a level of engineering integration that most equipment suppliers fail to deliver. Too often, chambers are designed in isolation from their control systems, thermal subsystems are bolted on as afterthoughts, and instrumentation is left to the end-user to figure out.",
+      "The founding team brings more than 15 years of combined experience in the development and manufacturing of test chamber systems. By combining electrical engineering, mechatronics, refrigeration expertise, and chamber development know-how, Deepvac addresses the full system scope from a single engineering source.",
+      "This integrated approach enables chamber platforms that are designed for repeatability, serviceability, and long-term operational value, not just initial commissioning."
+    ],
+    "competenciesTitle": "Combined Competencies",
+    "competencies": [
+      "Electrical Engineering",
+      "Mechanical Design",
+      "Refrigeration Systems",
+      "Control Architecture",
+      "AI & Automation",
+      "Chamber Development",
+      "System Integration",
+      "Test Operations"
+    ]
+  },
+  "leadership": {
+    "eyebrow": "Leadership",
+    "title": "Founding Team",
+    "description": "Two engineers with complementary expertise in the core disciplines required for advanced thermal vacuum system design.",
+    "focusAreas": "Focus Areas"
+  },
+  "founders": [
+    {
+      "name": "John Robertus",
+      "role": "CEO | Co-Founder",
+      "description": "Electrical engineer specialized in AI integration for mechatronic systems. John brings deep expertise in control architecture design, intelligent automation, and system-level integration for complex test environments.",
+      "focus": ["Control Systems & Automation", "AI-Driven Mechatronics", "System Architecture"]
+    },
+    {
+      "name": "Anton Opalikhin",
+      "role": "CTO | Co-Founder",
+      "description": "Mechanical engineer specialized in refrigeration and test chamber development. Anton leads the design and engineering of thermal vacuum chamber platforms, thermal subsystems, and mechanical integration.",
+      "focus": ["Chamber Development", "Refrigeration Engineering", "Mechanical Design"]
+    }
+  ],
+  "philosophy": {
+    "eyebrow": "Philosophy",
+    "title": "How We Engineer",
+    "description": "Our approach to thermal vacuum system design is shaped by three principles.",
+    "items": [
+      {
+        "title": "System-Level Thinking",
+        "description": "Every chamber is a system, not just a vessel. We design thermal, vacuum, control, and mechanical subsystems as an integrated whole."
+      },
+      {
+        "title": "Engineering-Led Decisions",
+        "description": "Technical rigor drives our architecture choices. We prioritize repeatability, serviceability, and long-term operational value over short-term optimization."
+      },
+      {
+        "title": "Collaborative Development",
+        "description": "We work closely with our customers' engineering teams to define requirements, interfaces, and integration constraints before committing to a design."
+      }
+    ]
+  },
+  "partnership": {
+    "eyebrow": "Partnership",
+    "title": "Why Work with Deepvac",
+    "items": [
+      { "title": "Single Engineering Source", "text": "Thermal, vacuum, control, and mechanical subsystems designed by one team with shared system understanding." },
+      { "title": "Full Lifecycle Support", "text": "From initial concept through commissioning, operation, maintenance, and modernization." },
+      { "title": "Application-Specific Design", "text": "Every system is configured around the customer's test requirements, not around a fixed catalog product." },
+      { "title": "Hands-On Engineering Culture", "text": "Our founders are practicing engineers who remain directly involved in technical decisions and customer projects." }
+    ]
+  },
+  "cta": {
+    "title": "Interested in Working Together?",
+    "description": "Whether you need a thermal vacuum system, engineering support, or a technical consultation, we'd like to hear about your project."
+  }
+}

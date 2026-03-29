@@ -1,0 +1,200 @@
+{
+  "overview": {
+    "eyebrow": "Product Range",
+    "title": "Thermal Vacuum Chamber Systems",
+    "description": "Deepvac develops standardised and custom-engineered thermal vacuum systems for aerospace qualification, environmental simulation, and research applications. Our chamber platforms address a range of test requirements — from established workflows using modular standard systems to fully bespoke configurations for complex mission profiles.",
+    "standardSeries": {
+      "title": "Standard Series",
+      "subtitle": "Pre-Engineered TVAC Platforms",
+      "description": "Modular thermal vacuum chamber systems with proven architectures, standardised interfaces, and repeatable performance for established test requirements. Available in cubic (T Series) and cylindrical (C Series) configurations.",
+      "cta": "Explore Standard Series",
+      "chips": ["Modular Design", "Proven Architecture", "Standardised Interfaces"]
+    },
+    "customTvac": {
+      "title": "Custom TVAC",
+      "subtitle": "Application-Specific Chamber Engineering",
+      "description": "Fully bespoke thermal vacuum systems configured around mission-specific geometries, feedthrough requirements, thermal profiles, instrumentation needs, and integration constraints. Engineered from concept through commissioning.",
+      "cta": "Discuss a Custom Configuration",
+      "chips": ["Custom Geometry", "Interface Engineering", "Full Integration"]
+    },
+    "configGuide": {
+      "eyebrow": "Configuration Guide",
+      "title": "Standard Platform vs. Custom Configuration",
+      "description": "Use the comparison below to determine which approach best fits your test requirements, timeline, and integration constraints.",
+      "headers": {
+        "requirement": "Requirement",
+        "standard": "Standard Series",
+        "custom": "Custom TVAC"
+      },
+      "factors": [
+        { "label": "Test Profile", "standard": "Established thermal and vacuum requirements", "custom": "Application-specific pressure, temperature, or cycling profiles" },
+        { "label": "Chamber Geometry", "standard": "Standard cubic or cylindrical chamber volumes", "custom": "Non-standard dimensions, access requirements, or payload geometries" },
+        { "label": "Feedthroughs & Interfaces", "standard": "Pre-configured port layouts and feedthrough options", "custom": "Custom interface engineering and specialised feedthrough integration" },
+        { "label": "Instrumentation", "standard": "Standard sensor and measurement configurations", "custom": "Application-specific instrumentation and data acquisition requirements" },
+        { "label": "Timeline", "standard": "Shorter delivery timelines with proven designs", "custom": "Engineering-led development with project-specific milestones" }
+      ]
+    },
+    "integrated": {
+      "eyebrow": "Integrated Capabilities",
+      "title": "Beyond the Chamber",
+      "description": "Deepvac provides engineering services across the full lifecycle — from control systems design and mechanical engineering to testing, retrofit, and subsystem integration."
+    },
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "Frequently Asked Questions",
+      "items": [
+        { "q": "What distinguishes a standard chamber from a custom configuration?", "a": "Standard Series chambers use pre-engineered designs with proven architectures, offering shorter lead times and established performance envelopes. Custom TVAC systems are engineered from concept to commissioning around application-specific requirements including geometry, thermal profile, instrumentation, and interface constraints." },
+        { "q": "Can standard chambers be modified for specific test requirements?", "a": "Standard Series platforms support a range of configuration options within their design envelope. For requirements beyond the standard platform scope, Deepvac offers custom engineering to develop application-specific solutions." },
+        { "q": "What support does Deepvac provide after chamber delivery?", "a": "Deepvac offers lifecycle services including preventive maintenance, repair, retrofit and modernisation, control system upgrades, and subsystem integration support for all chamber systems." },
+        { "q": "Does Deepvac provide testing services alongside chamber systems?", "a": "Yes. Deepvac offers thermal vacuum testing services including test campaign execution, data acquisition, and engineering support for qualification, validation, and development programs." }
+      ]
+    },
+    "cta": {
+      "title": "Discuss Your Chamber Requirements",
+      "description": "Whether you need a modular standard platform or a custom-engineered TVAC system, Deepvac can help define the right configuration for your application."
+    }
+  },
+  "standardSeries": {
+    "eyebrow": "Products / Standard Series",
+    "title": "Pre-Engineered TVAC Platforms",
+    "description": "Standardised thermal vacuum chamber platforms with modular configurations and repeatable performance for aerospace qualification, environmental simulation, and research testing.",
+    "tSeries": {
+      "eyebrow": "Cubic Thermal Vacuum Chambers",
+      "title": "T Series TVAC",
+      "description": "Compact cubic thermal vacuum chamber platforms designed for repeatable environmental simulation, subsystem validation, and laboratory workflows. The T Series combines controlled thermal and vacuum conditions with a standardised architecture for research and qualification applications.",
+      "descriptionExtended": "The cubic chamber geometry provides straightforward payload access, efficient interior utilisation, and flexible fixture mounting. Standard configurations support vacuum performance down to {{vacuum}} and thermal operation down to {{minTemp}}, depending on the selected system setup.",
+      "features": [
+        { "label": "Cubic Geometry", "detail": "Cube-based chamber layout for straightforward payload access, efficient internal volume usage, and flexible fixture integration." },
+        { "label": "Low Temperature Capability", "detail": "Configured for thermal operation down to {{minTemp}}, depending on system configuration and test setup." },
+        { "label": "Ultimate Vacuum", "detail": "Designed for vacuum performance down to {{vacuum}}, depending on chamber size and pumping package." },
+        { "label": "Control Integration", "detail": "Pre-engineered control system interface with data acquisition and automation support." }
+      ]
+    },
+    "cSeries": {
+      "eyebrow": "Cylindrical Thermal Vacuum Chambers",
+      "title": "C Series TVAC",
+      "description": "Cylindrical thermal vacuum chamber platforms designed for repeatable environmental simulation, subsystem qualification, and robust laboratory operation. The C Series combines controlled thermal and vacuum conditions with a standardised architecture for research and qualification applications.",
+      "descriptionExtended": "The cylindrical chamber geometry supports classic vacuum chamber layouts, efficient shroud integration, and a structurally efficient form factor. Standard configurations support vacuum performance down to {{vacuum}} and thermal operation down to {{minTemp}}, depending on the selected system setup.",
+      "features": [
+        { "label": "Cylindrical Geometry", "detail": "Cylindrical chamber layout suited for uniform radial design, efficient shroud integration, and classic vacuum chamber configurations." },
+        { "label": "Low Temperature Capability", "detail": "Configured for thermal operation down to {{minTemp}}, depending on system configuration and test setup." },
+        { "label": "Ultimate Vacuum", "detail": "Designed for vacuum performance down to {{vacuum}}, depending on chamber size and pumping package." },
+        { "label": "Control Integration", "detail": "Pre-engineered control system interface with data acquisition and automation support." }
+      ]
+    },
+    "applicationFit": {
+      "eyebrow": "Application Fit",
+      "title": "Designed for Demanding Test Environments",
+      "description": "Standard Series platforms serve a wide range of aerospace, research, and industrial test applications.",
+      "items": [
+        "Subsystem qualification testing",
+        "Component-level environmental simulation",
+        "Research and development campaigns",
+        "Thermal cycling under vacuum",
+        "Material outgassing characterisation",
+        "Payload integration validation"
+      ]
+    },
+    "beyondStandard": {
+      "eyebrow": "Beyond Standard",
+      "title": "Need a Custom Configuration?",
+      "description": "When test requirements exceed the standard platform scope, including non-standard geometries, specialised feedthrough configurations, or application-specific thermal profiles, Deepvac offers fully custom-engineered TVAC solutions."
+    },
+    "brochure": {
+      "eyebrow": "Download Standard Series Brochure",
+      "title": "Deepvac Standard Series Catalogue",
+      "description": "Explore the Deepvac Standard Series in more detail, including common technical characteristics, chamber configurations, control system features, and optional upgrades."
+    },
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "Standard Series Questions",
+      "items": [
+        { "q": "What chamber sizes are available in the Standard Series?", "a": "The Standard Series is available in both cubic and cylindrical chamber formats across a range of chamber volumes. Specific dimensions are selected according to the required test envelope, payload size, and integration needs." },
+        { "q": "What vacuum level can Standard Series chambers achieve?", "a": "Standard Series chambers are designed for vacuum performance down to {{vacuum}}, depending on chamber volume, pumping configuration, and application requirements." },
+        { "q": "What thermal control options are available?", "a": "Standard Series platforms include integrated thermal shroud and platen systems supporting controlled heating and cooling cycles. Minimum temperature capability can be configured down to {{minTemp}}, depending on the selected system configuration." },
+        { "q": "How are Standard Series chambers delivered and commissioned?", "a": "Deepvac provides full delivery, installation, and commissioning support including system integration, acceptance testing, and operator training." }
+      ]
+    },
+    "cta": {
+      "title": "Discuss Your Test Requirements",
+      "description": "Contact Deepvac to identify the right Standard Series configuration for your application."
+    }
+  },
+  "customTvac": {
+    "eyebrow": "Products — Custom TVAC",
+    "title": "Application-Specific Thermal Vacuum Engineering",
+    "description": "When standard chamber platforms cannot meet your test requirements, Deepvac develops fully custom thermal vacuum systems — engineered from concept through commissioning around your specific geometry, thermal profile, instrumentation, and integration constraints.",
+    "heroCaption": "Custom thermal vacuum chamber — engineered, integrated, and commissioned by Deepvac.",
+    "projectDrivers": {
+      "eyebrow": "Project Drivers",
+      "title": "When Standard Isn't Enough",
+      "description": "Custom thermal vacuum systems are engineered when your application demands capabilities, geometries, or integration requirements beyond the scope of standardised chamber platforms.",
+      "items": [
+        { "title": "Non-Standard Geometries", "description": "Test articles that exceed standard chamber dimensions or require specialised access, orientation, or mounting configurations." },
+        { "title": "Specific Thermal Profiles", "description": "Applications demanding precise temperature ranges, ramp rates, uniformity requirements, or multi-zone thermal control." },
+        { "title": "Complex Feedthrough Requirements", "description": "Electrical, optical, fluid, or mechanical feedthrough configurations that exceed standard port layouts." },
+        { "title": "Contamination-Sensitive Testing", "description": "Hardware requiring low-outgassing environments, clean interfaces, and controlled material compatibility." },
+        { "title": "Specialised Control Architecture", "description": "Custom automation logic, advanced data acquisition, or integration with existing facility control systems." },
+        { "title": "Subsystem & Interface Constraints", "description": "Integration with existing infrastructure, specific utility connections, or project-defined mechanical and electrical interfaces." }
+      ]
+    },
+    "midCta": {
+      "title": "Have a Specific Test Requirement?",
+      "description": "Deepvac's engineering team can help evaluate your requirements and develop a system concept."
+    },
+    "configDimensions": {
+      "eyebrow": "System Configuration",
+      "title": "Configurable System Dimensions",
+      "description": "Every custom TVAC system is defined across multiple engineering dimensions to match your specific application requirements.",
+      "items": [
+        { "label": "Chamber Geometry", "items": ["Custom dimensions and volumes", "Horizontal or vertical orientation", "Application-specific access ports", "Multi-door or removable end-cap configurations"] },
+        { "label": "Thermal System", "items": ["Shroud and platen design", "Multi-zone thermal control", "Application-specific temperature ranges", "Bake-out capability"] },
+        { "label": "Vacuum Architecture", "items": ["Pumping train configuration", "Application-dependent pressure regimes", "Leak-tight chamber design", "Clean vacuum environments"] },
+        { "label": "Instrumentation & Control", "items": ["Sensor and measurement integration", "Custom automation and HMI", "Data acquisition systems", "Remote monitoring capability"] },
+        { "label": "Feedthroughs & Interfaces", "items": ["Electrical and signal feedthroughs", "Fluid and gas connections", "Optical access ports", "Mechanical motion feedthroughs"] },
+        { "label": "Integration & Infrastructure", "items": ["Facility interface engineering", "Utility and service connections", "Fixture and mounting systems", "Safety and interlock integration"] }
+      ]
+    },
+    "process": {
+      "eyebrow": "Project Workflow",
+      "title": "From Concept to Commissioning",
+      "description": "Deepvac supports the full development lifecycle of custom thermal vacuum systems — from initial requirements discussion through engineering, manufacturing, and installation.",
+      "steps": [
+        { "step": "01", "title": "Requirements Discussion", "description": "Technical consultation to understand your test requirements, payload characteristics, operational constraints, and integration context." },
+        { "step": "02", "title": "Concept & System Design", "description": "Engineering concept development including chamber geometry, thermal architecture, vacuum design, instrumentation, and control system specification." },
+        { "step": "03", "title": "Detailed Engineering", "description": "Detailed mechanical, electrical, and control system design with documentation, interface specifications, and design review milestones." },
+        { "step": "04", "title": "Manufacturing & Assembly", "description": "Precision manufacturing, subsystem assembly, and integration with quality control and testing throughout the build process." },
+        { "step": "05", "title": "Commissioning & Support", "description": "Delivery, installation, acceptance testing, operator training, and transition to lifecycle support services." }
+      ]
+    },
+    "crossLinks": {
+      "relatedProducts": "Related Products",
+      "standardSeriesTitle": "Standard Series Platforms",
+      "standardSeriesDescription": "For established test requirements, Deepvac's Standard Series offers pre-engineered T Series and C Series platforms.",
+      "engineeringServices": "Engineering Services",
+      "engineeringServicesTitle": "Design, Testing & Integration",
+      "engineeringServicesDescription": "Deepvac provides control systems design, mechanical engineering, testing services, and lifecycle support alongside chamber development."
+    },
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "Custom TVAC Questions",
+      "items": [
+        { "q": "When should I consider a custom TVAC system instead of a standard platform?", "a": "A custom configuration is appropriate when your test requirements include non-standard chamber dimensions, specific thermal profiles, complex feedthrough or instrumentation needs, contamination-sensitive hardware, or integration with existing facility infrastructure that exceeds the scope of standard platform options." },
+        { "q": "What information does Deepvac need to develop a custom system concept?", "a": "A productive initial discussion typically covers test article characteristics, required pressure and temperature ranges, thermal cycling requirements, feedthrough and instrumentation needs, facility constraints, and project timeline. Deepvac can guide this requirements definition process." },
+        { "q": "What is the typical timeline for a custom TVAC project?", "a": "Project timelines depend on system complexity, component lead times, and engineering scope. Deepvac provides project-specific timelines during the concept development phase." },
+        { "q": "Does Deepvac provide control systems for custom chambers?", "a": "Yes. Deepvac designs and integrates custom control architectures including automation logic, user interfaces, data acquisition, and instrumentation integration as part of the system delivery." },
+        { "q": "Can Deepvac integrate custom chambers with existing facility infrastructure?", "a": "Yes. Interface engineering and facility integration are core elements of Deepvac's custom chamber development process, including utility connections, safety systems, and control system interoperability." },
+        { "q": "What lifecycle support is available for custom systems?", "a": "Deepvac provides comprehensive lifecycle support including preventive maintenance, repair services, control system upgrades, retrofit and modernisation, and subsystem integration for all custom-engineered systems." }
+      ]
+    },
+    "cta": {
+      "title": "Ready to Discuss Your Custom TVAC Project?",
+      "description": "Contact Deepvac to start the technical consultation process and define the right system architecture for your application."
+    },
+    "techChips": {
+      "engineering": { "label": "Engineering", "value": "Bespoke" },
+      "integration": { "label": "Integration", "value": "Full System" },
+      "support": { "label": "Support", "value": "Concept → Operation" }
+    }
+  }
+}

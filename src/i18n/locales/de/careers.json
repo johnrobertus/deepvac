@@ -1,0 +1,107 @@
+{
+  "eyebrow": "Karriere",
+  "title": "Bauen Sie Systeme, die Raumfahrthardware testen",
+  "description": "Deepvac sucht Ingenieure, die den gesamten technischen Umfang der Thermovakuumsystem-Entwicklung abdecken möchten – vom Konzept und Subsystem-Design bis zu Integration und Inbetriebnahme.",
+  "mission": {
+    "eyebrow": "Unsere Mission",
+    "title": "Engineering von Thermovakuumsystemen für anspruchsvolle Anwendungen",
+    "paragraphs": [
+      "Deepvac entwickelt fortschrittliche Thermovakuumsysteme für Raumfahrt-, Forschungs- und industrielle Testumgebungen. Unsere Arbeit umfasst den gesamten Engineering-Umfang dieser Systeme – einschließlich mechanischer Konstruktion, thermischer Subsysteme, Vakuumarchitektur, Steuerungssysteme, Instrumentierung und Gesamtsystemintegration.",
+      "Wir bauen ein Team von Ingenieuren auf, die disziplinübergreifend arbeiten, Verantwortung für technische Entscheidungen übernehmen und Wert auf langfristige Leistung und Zuverlässigkeit der von ihnen konstruierten Systeme legen."
+    ],
+    "valuesTitle": "Was uns wichtig ist",
+    "values": [
+      "Technische Tiefe und fundiertes Engineering-Urteilsvermögen",
+      "Klare Kommunikation und ehrliche Einschätzung",
+      "Übernahme von Verantwortung für technische Entscheidungen und Ergebnisse",
+      "Bereitschaft, über Systemgrenzen hinweg zu arbeiten",
+      "Präzision in Konstruktion, Dokumentation und Umsetzung"
+    ]
+  },
+  "workAreas": {
+    "eyebrow": "Ihre Arbeit",
+    "title": "Woran Sie arbeiten werden",
+    "items": [
+      { "title": "Systemkonzeptentwicklung", "description": "Überführung von Kundenanforderungen in technisch fundierte Systemkonzepte für Thermovakuum- und Weltraumsimulationsanwendungen." },
+      { "title": "Subsystem-Engineering", "description": "Konstruktion und Spezifikation von Vakuum-, Thermal-, Mechanik-, Steuerungs- und Instrumentierungssubsystemen einschließlich Schnittstellen und Komponentenauswahl." },
+      { "title": "Integration & Inbetriebnahme", "description": "Unterstützung bei Aufbau, Abnahmeprüfung, Fehlersuche und Inbetriebnahme vollständiger Systeme in realen Projektumgebungen." },
+      { "title": "Dokumentation & Reviews", "description": "Erstellung von Engineering-Dokumentation, Berechnungen, Spezifikationen und Design-Review-Material mit Fokus auf Klarheit und Zuverlässigkeit." }
+    ]
+  },
+  "reasons": {
+    "eyebrow": "Warum Deepvac",
+    "title": "Gründe für einen Einstieg",
+    "items": [
+      { "title": "Arbeit an realer Hardware", "description": "Konstruieren, bauen und nehmen Sie physische Testsysteme in Betrieb, die Raumfahrtqualifikation, Forschungsmissionen und anspruchsvolle Entwicklungsprogramme unterstützen." },
+      { "title": "Engineering-Verantwortung", "description": "Übernehmen Sie Verantwortung für technische Entscheidungen in einem kleinen Team, in dem Engineering-Qualität, Geschwindigkeit und Rechenschaftspflicht zählen." },
+      { "title": "Multidisziplinärer Umfang", "description": "Arbeiten Sie über mechanische, thermische, Vakuum-, elektrische und softwarebezogene Schnittstellen innerhalb eines integrierten Systems hinweg." },
+      { "title": "Direkter Kundeneinfluss", "description": "Ihre Arbeit ermöglicht direkt Testkampagnen für Raumfahrt- und Forschungskunden und hat sichtbaren Einfluss auf Projektergebnisse." }
+    ]
+  },
+  "fit": {
+    "eyebrow": "Wer gut zu uns passt",
+    "title": "Ingenieure, die bei Deepvac aufblühen",
+    "paragraphs": [
+      "Deepvac ist ideal für Ingenieure, die an technisch anspruchsvollen Systemen mit realen Randbedingungen und realen betrieblichen Konsequenzen arbeiten möchten.",
+      "Wir suchen besonders Menschen, die Engineering-Substanz über Präsentation stellen, selbstständig arbeiten können und motiviert sind, Systeme zu bauen, die in anspruchsvollen Umgebungen zuverlässig funktionieren müssen."
+    ],
+    "fitTitle": "Sie passen wahrscheinlich gut, wenn",
+    "fitPoints": [
+      "Sie gerne praktische Engineering-Probleme an realer Hardware lösen.",
+      "Sie sich wohl fühlen, disziplinübergreifend und an technischen Schnittstellen zu arbeiten.",
+      "Sie zwischen Analyse, Konstruktion, Implementierung und Fehlersuche wechseln können.",
+      "Sie klar kommunizieren und technisch fundierte Entscheidungen treffen.",
+      "Ihnen Dokumentation, Zuverlässigkeit und langfristige Systemleistung wichtig sind."
+    ]
+  },
+  "opportunities": {
+    "eyebrow": "Möglichkeiten",
+    "title": "Möglichkeiten bei Deepvac",
+    "description": "Wir bauen derzeit unser Team auf und freuen uns über Bewerbungen von Ingenieuren mit relevantem technischen Hintergrund, die in Garbsen, Deutschland, mitarbeiten möchten.",
+    "generalApplication": {
+      "title": "Initiativbewerbung",
+      "description": "Wir sind immer daran interessiert, von Ingenieuren zu hören, die zur Konstruktion, Entwicklung, Integration und Inbetriebnahme fortschrittlicher Thermovakuumsysteme beitragen möchten. Auch wenn keine spezifische Stelle ausgeschrieben ist, die zu Ihrem Hintergrund passt, ermutigen wir Sie, Kontakt aufzunehmen.",
+      "location": "Garbsen, Deutschland",
+      "type": "Vollzeit",
+      "department": "Engineering",
+      "relevantBackgrounds": "Relevante Hintergründe können Maschinenbau, Thermotechnik, Vakuumsysteme, Steuerungstechnik, Instrumentierung, Systemintegration, Testengineering oder angrenzende technische Bereiche umfassen.",
+      "whatToSend": "Was Sie senden sollten",
+      "sendItems": [
+        "Ihren Lebenslauf",
+        "Eine kurze Beschreibung Ihres technischen Hintergrunds",
+        "Relevante Projekt- oder Hardware-Erfahrung"
+      ]
+    }
+  },
+  "process": {
+    "eyebrow": "Bewerbungsprozess",
+    "title": "Wie wir einstellen",
+    "description": "Wir streben einen unkomplizierten und transparenten Prozess mit klarer Kommunikation an.",
+    "steps": [
+      { "step": "01", "title": "Bewerbungsprüfung", "description": "Wir prüfen Ihren Hintergrund, Ihre Erfahrung und Ihre technische Eignung für die Arbeit bei Deepvac." },
+      { "step": "02", "title": "Kennenlern-Gespräch", "description": "Ein erstes Gespräch zum gegenseitigen Kennenlernen, um Ihre Interessen zu besprechen und erste Fragen zu beantworten." },
+      { "step": "03", "title": "Technisches Gespräch", "description": "Ein fokussierter Austausch über Ihre Engineering-Erfahrung, Problemlösungsansatz und relevante Projektarbeit." },
+      { "step": "04", "title": "Vor-Ort-Gespräch", "description": "Ein Gespräch in Garbsen, um die Rolle detaillierter zu besprechen und Ihnen einen besseren Eindruck vom Team und der Arbeitsumgebung zu vermitteln." },
+      { "step": "05", "title": "Entscheidung & nächste Schritte", "description": "Wir melden uns zeitnah zurück und kommunizieren klar über das Ergebnis und mögliche nächste Schritte." }
+    ]
+  },
+  "culture": {
+    "eyebrow": "Kultur",
+    "title": "Wie wir arbeiten",
+    "paragraphs": [
+      "Deepvac arbeitet an der Schnittstelle von Engineering-Präzision und unternehmerischer Umsetzung. Wir arbeiten in einer Hands-On-Umgebung, in der technische Tiefe, disziplinübergreifende Zusammenarbeit und persönliche Verantwortung zählen.",
+      "Von Ingenieuren bei Deepvac wird erwartet, über ihre unmittelbare Disziplin hinaus zu denken, klar zu kommunizieren und zu Systemen beizutragen, die in anspruchsvollen realen Anwendungen zuverlässig funktionieren müssen."
+    ],
+    "environmentTitle": "Arbeitsumgebung",
+    "environmentItems": [
+      "Kleines Team mit direkter technischer Verantwortung",
+      "Hands-On-Arbeit über Konzept, Konstruktion, Integration und Inbetriebnahme",
+      "Enge Interaktion mit realen Projekten, Kunden und Systemebenen-Entscheidungen",
+      "Engineering-Kultur mit Fokus auf Substanz, Klarheit und Zuverlässigkeit"
+    ]
+  },
+  "cta": {
+    "title": "Fragen zur Arbeit bei Deepvac?",
+    "description": "Nehmen Sie Kontakt auf, um mehr über das Team, die Arbeit und aktuelle Möglichkeiten zu erfahren."
+  }
+}

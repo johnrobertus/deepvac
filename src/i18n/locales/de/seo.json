@@ -1,0 +1,82 @@
+{
+  "home": {
+    "title": "Deepvac | Thermovakuumsysteme für die Raumfahrtqualifikation",
+    "description": "Deepvac entwickelt modulare und kundenspezifische Thermovakuumsysteme für Raumfahrtqualifikation, thermische Zyklierung und Weltraumumgebungssimulation. Entwickelt in Deutschland."
+  },
+  "products": {
+    "title": "Thermovakuumkammer-Systeme | Deepvac",
+    "description": "Standardisierte und kundenspezifisch konstruierte Thermovakuumsysteme für Raumfahrtqualifikation, Umweltsimulation und Forschungsanwendungen."
+  },
+  "standardSeries": {
+    "title": "Standard Serie TVAC-Plattformen | Deepvac",
+    "description": "Vorkonstruierte Thermovakuumkammer-Plattformen mit modularen Konfigurationen für Raumfahrtqualifikation, Umweltsimulation und Forschungsprüfung."
+  },
+  "customTvac": {
+    "title": "Kundenspezifische Thermovakuumsysteme | Deepvac",
+    "description": "Anwendungsspezifisches Thermovakuum-Engineering – kundenspezifische Kammersysteme vom Konzept bis zur Inbetriebnahme für anspruchsvolle Testanforderungen."
+  },
+  "services": {
+    "title": "TVAC-Engineering-Leistungen | Deepvac",
+    "description": "Durchgängige Engineering-Leistungen für Thermovakuumsysteme – von Steuerungstechnik und Testing bis zu Retrofit, Wartung und Subsystem-Integration."
+  },
+  "testingServices": {
+    "title": "Thermovakuum-Prüfdienstleistungen | Deepvac",
+    "description": "Durchführung von Thermovakuum-Testkampagnen mit Engineering-Präzision für Qualifikations-, Validierungs- und Entwicklungsprogramme."
+  },
+  "controlSystems": {
+    "title": "Steuerungstechnik für TVAC | Deepvac",
+    "description": "Auslegung von Kammersteuerungsarchitekturen, Automatisierungslogik, Instrumentierungsintegration und zuverlässigen Betriebskonzepten für Thermovakuumumgebungen."
+  },
+  "mechanicalDesign": {
+    "title": "Mechanische Konstruktion für TVAC-Systeme | Deepvac",
+    "description": "Engineering von Kammerbaugruppen, Schnittstellen, Vorrichtungen und mechanischen Integrationskonzepten für Thermovakuumsysteme."
+  },
+  "retrofitModernization": {
+    "title": "TVAC Retrofit & Modernisierung | Deepvac",
+    "description": "Technische Upgrades für bestehende Thermovakuumsysteme zur Verbesserung von Zuverlässigkeit, Sicherheit, Regelgenauigkeit und Lebensdauerwert."
+  },
+  "maintenanceRepair": {
+    "title": "TVAC Wartung & Reparatur | Deepvac",
+    "description": "Diagnostik, vorbeugende Wartung, Reparatur und technischer Support für Thermovakuumkammersysteme."
+  },
+  "subsystemIntegration": {
+    "title": "Subsystem-Integration für TVAC | Deepvac",
+    "description": "Integration von thermischen, Vakuum-, Instrumentierungs- und Steuerungssubsystemen zu kohärenten Testumgebungen."
+  },
+  "team": {
+    "title": "Unser Team | Deepvac",
+    "description": "Lernen Sie das Engineering-Team hinter Deepvac kennen – Spezialisten für Thermovakuumsystem-Auslegung, Steuerungsarchitektur und Kammerentwicklung."
+  },
+  "catalogs": {
+    "title": "Kataloge & Ressourcen | Deepvac",
+    "description": "Produktbroschüren, technische Übersichten und Engineering-Dokumentation für Deepvac Thermovakuumsysteme zum Download."
+  },
+  "careers": {
+    "title": "Karriere bei Deepvac | Engineering-Stellen",
+    "description": "Werden Sie Teil von Deepvac und bauen Sie Thermovakuumsysteme für die Raumfahrtqualifikation. Engineering-Positionen in Garbsen, Deutschland."
+  },
+  "references": {
+    "title": "Referenzen & Projekterfahrung | Deepvac",
+    "description": "Projektkategorien, Anwendungsbereiche und Kooperationsformate, die den Thermovakuum-Engineering-Umfang von Deepvac demonstrieren."
+  },
+  "contact": {
+    "title": "Deepvac kontaktieren | Engineering-Anfrage",
+    "description": "Besprechen Sie Ihre Thermovakuum-Anforderungen mit unserem Engineering-Team. Angebot, technische Beratung oder Projektevaluierung anfragen."
+  },
+  "imprint": {
+    "title": "Impressum | Deepvac GmbH",
+    "description": "Rechtliche Informationen und Unternehmensangaben der Deepvac GmbH, Garbsen, Deutschland."
+  },
+  "privacyPolicy": {
+    "title": "Datenschutzerklärung | Deepvac GmbH",
+    "description": "Datenschutzerklärung und Datenschutzinformationen der Deepvac GmbH."
+  },
+  "termsAndConditions": {
+    "title": "Allgemeine Geschäftsbedingungen | Deepvac GmbH",
+    "description": "Allgemeine Geschäftsbedingungen der Deepvac GmbH für Lieferungen und Engineering-Leistungen."
+  },
+  "notFound": {
+    "title": "Seite nicht gefunden | Deepvac",
+    "description": "Die gesuchte Seite existiert nicht oder wurde verschoben."
+  }
+}

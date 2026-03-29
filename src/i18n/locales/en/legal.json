@@ -1,0 +1,86 @@
+{
+  "imprint": {
+    "eyebrow": "Legal",
+    "title": "Imprint",
+    "representedBy": "Represented by the Managing Director John Robertus",
+    "registeredOffice": "Registered office",
+    "registeredOfficeValue": "Hanover, Germany",
+    "businessAddress": "Business address",
+    "contact": "Contact",
+    "commercialRegister": "Commercial Register",
+    "shareCapital": "Share Capital",
+    "shareCapitalValue": "EUR 25,000.00"
+  },
+  "privacy": {
+    "eyebrow": "Legal",
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: 29 March 2026",
+    "sections": {
+      "controller": "Controller",
+      "generalInfo": "General Information on Data Processing",
+      "generalInfoText": "We process personal data only to the extent necessary to provide a functional website and our services. Processing is carried out in accordance with the General Data Protection Regulation (GDPR) and applicable German data protection laws.",
+      "generalInfoText2": "Personal data is not transferred to third parties unless this is required for technical operation, contractual performance, compliance with legal obligations, or based on another lawful basis.",
+      "legalBases": "Legal Bases for Processing",
+      "legalBasesIntro": "Where we process personal data, we rely in particular on the following legal bases:",
+      "legalBasesList": [
+        "Art. 6(1)(a) GDPR: consent",
+        "Art. 6(1)(b) GDPR: performance of a contract or pre contractual measures",
+        "Art. 6(1)(c) GDPR: compliance with a legal obligation",
+        "Art. 6(1)(f) GDPR: legitimate interests"
+      ],
+      "legalBasesNote": "Where processing is based on legitimate interests, our interest lies in the secure, stable, and efficient operation of our website and business communication.",
+      "serverLogs": "Website Access Data and Server Log Files",
+      "serverLogsIntro": "When accessing our website, information is automatically collected by our hosting provider. This may include:",
+      "serverLogsList": ["IP address", "Date and time of access", "Requested content", "Access status and HTTP status code", "Amount of data transferred", "Referrer URL", "Browser type and version", "Operating system"],
+      "serverLogsNote": "This data is necessary to ensure the stability, security, and proper technical operation of the website.",
+      "serverLogsLegal": "Legal basis: Art. 6(1)(f) GDPR.",
+      "serverLogsRetention": "Server log data is stored for a maximum of 7 days unless longer retention is required for the investigation of security related incidents.",
+      "contactForm": "Contact by Email or Contact Form",
+      "contactFormText": "If you contact us by email or via a contact form, the data you provide, such as name, email address, company name, and message content, will be processed solely for the purpose of handling your request and communicating with you.",
+      "contactFormLegal": "Legal basis:",
+      "contactFormLegalList": [
+        "Art. 6(1)(b) GDPR if your request relates to pre contractual measures or contract performance.",
+        "Art. 6(1)(f) GDPR for general business inquiries."
+      ],
+      "contactFormNote": "Your data will not be shared with third parties unless required for processing your request or due to legal obligations.",
+      "contactFormRetention": "The data will be deleted once the purpose of storage no longer applies and statutory retention obligations do not prevent deletion.",
+      "provisionOfData": "Provision of Data",
+      "provisionOfDataText": "The provision of personal data is neither legally nor contractually required. However, certain information may be necessary to process your inquiry. Failure to provide such data may result in us being unable to respond to your request.",
+      "hosting": "Hosting",
+      "hostingIntro": "This website is hosted by:",
+      "hostingNote": "Hetzner Online GmbH processes personal data on our behalf on the basis of a data processing agreement pursuant to Art. 28 GDPR. Data processing takes place on servers located in Nuremberg, Germany.",
+      "cookies": "Cookies",
+      "cookiesText": "This website uses only technically necessary cookies required for the secure and proper operation of the website.",
+      "cookiesText2": "No marketing, profiling, analytics, or advertising tracking technologies are used.",
+      "cookiesLegal": "Legal basis: Art. 6(1)(f) GDPR. Our legitimate interest lies in the secure and efficient provision of our website.",
+      "dataRetention": "Data Retention",
+      "dataRetentionText": "Personal data is stored only for as long as necessary for the respective processing purpose or as required by statutory retention periods under German law.",
+      "dataRetentionText2": "Business correspondence may be retained in accordance with applicable commercial and tax retention obligations.",
+      "dataSecurity": "Data Security",
+      "dataSecurityText": "We implement appropriate technical and organizational measures to protect personal data against accidental or unlawful destruction, loss, alteration, unauthorized disclosure, or unauthorized access.",
+      "dataSecurityText2": "Data transmission between your browser and our website is encrypted using SSL or TLS technology.",
+      "yourRights": "Your Rights",
+      "yourRightsIntro": "You have the following rights under the GDPR:",
+      "yourRightsList": [
+        "Right of access pursuant to Art. 15 GDPR",
+        "Right to rectification pursuant to Art. 16 GDPR",
+        "Right to erasure pursuant to Art. 17 GDPR",
+        "Right to restriction of processing pursuant to Art. 18 GDPR",
+        "Right to data portability pursuant to Art. 20 GDPR",
+        "Right to object pursuant to Art. 21 GDPR",
+        "Right to withdraw consent at any time pursuant to Art. 7(3) GDPR"
+      ],
+      "yourRightsNote": "Where personal data is processed on the basis of Art. 6(1)(f) GDPR, you have the right to object at any time on grounds relating to your particular situation.",
+      "supervisoryAuthority": "Supervisory Authority",
+      "supervisoryAuthorityText": "If you believe that the processing of your personal data violates applicable data protection law, you have the right to lodge a complaint with a supervisory authority.",
+      "supervisoryAuthorityCompetent": "The competent supervisory authority for Deepvac GmbH is:",
+      "changes": "Changes to this Privacy Policy",
+      "changesText": "We reserve the right to update this Privacy Policy in order to reflect changes in legal requirements or in our services. The version published on our website shall apply."
+    }
+  },
+  "terms": {
+    "eyebrow": "Legal",
+    "title": "General Terms and Conditions",
+    "effectiveDate": "Effective Date: 27.02.2026"
+  }
+}
