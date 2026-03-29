@@ -164,7 +164,6 @@ export function ContactSection() {
       } else {
         toast.error("Submission failed. Please try again later or contact us at info@deepvac.space.");
       }
-      }
       if ((window as any).turnstile && turnstileWidgetId.current) {
         (window as any).turnstile.reset(turnstileWidgetId.current);
       }
