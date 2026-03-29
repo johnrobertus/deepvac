@@ -199,12 +199,6 @@ export function HeroSection() {
         </div>
       </div>
 
-      <div className="absolute bottom-5 right-6 z-30 pointer-events-none md:bottom-7 md:right-8">
-        <span className="font-mono text-[10px] uppercase tracking-[0.12em] text-sand/50 md:text-[11px]">
-          Source: NASA
-        </span>
-      </div>
-
       <div
         className="absolute bottom-0 left-0 right-0 z-20 h-20 pointer-events-none"
         style={{
