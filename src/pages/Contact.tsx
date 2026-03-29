@@ -34,9 +34,9 @@ const faqs = [
 ];
 
 function FormField({
-  label, placeholder, type = "text", required = false, name, value, onChange,
+  label, placeholder, type = "text", required = false, name, value, onChange, error,
 }: {
-  label: string; placeholder: string; type?: string; required?: boolean; name: string; value: string; onChange: (val: string) => void;
+  label: string; placeholder: string; type?: string; required?: boolean; name: string; value: string; onChange: (val: string) => void; error?: string;
 }) {
   return (
     <div className="space-y-2">
@@ -47,9 +47,11 @@ function FormField({
       <input
         type={type} name={name} required={required} value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="w-full bg-background border border-gray/15 rounded-sm px-4 py-3 text-sm text-sand placeholder:text-gray/30 focus:outline-none focus:border-blue/40 focus:ring-1 focus:ring-blue/20 transition-all duration-200"
+        className={`w-full bg-background border rounded-sm px-4 py-3 text-sm text-sand placeholder:text-gray/30 focus:outline-none focus:border-blue/40 focus:ring-1 focus:ring-blue/20 transition-all duration-200 ${error ? "border-red-400/60" : "border-gray/15"}`}
         placeholder={placeholder}
+        aria-invalid={!!error}
       />
+      {error && <p className="text-xs text-red-400">{error}</p>}
     </div>
   );
 }
