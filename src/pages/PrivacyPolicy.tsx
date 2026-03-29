@@ -72,8 +72,6 @@ export default function PrivacyPolicy() {
 
             <LegalSection title={t(`${s}.serverLogs`)}>
               <p>{t(`${s}.serverLogsIntro`)}</p>
-
-
               <ul className="list-disc pl-5 space-y-1">
                 {serverLogsList.map((item: string, i: number) => <li key={i}>{item}</li>)}
               </ul>
@@ -99,6 +97,11 @@ export default function PrivacyPolicy() {
             <LegalSection title={t(`${s}.hosting`)}>
               <p>{t(`${s}.hostingIntro`)}</p>
               <div className="pt-1">
+                <p>Hetzner Online GmbH</p>
+                <p>Industriestr. 25</p>
+                <p>91710 Gunzenhausen</p>
+                <p>Germany</p>
+              </div>
               <p>{t(`${s}.hostingNote`)}</p>
             </LegalSection>
 
