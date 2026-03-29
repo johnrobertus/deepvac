@@ -188,7 +188,15 @@ const Contact = () => {
       });
 
       if (error) throw error;
-      if (data?.error) throw new Error(data.error);
+      if (data?.error) {
+        const msg = data.error as string;
+        if (msg.includes("Message must be") || msg.includes("Missing required") || msg.includes("Invalid email")) {
+          toast.error(msg);
+        } else {
+          throw new Error(msg);
+        }
+        return;
+      }
 
       setSubmitted(true);
       turnstileWidgetId.current = null;
@@ -254,14 +262,14 @@ const Contact = () => {
 
               <form className="space-y-5" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                  <FormField label="First Name" placeholder="First name" required name="firstName" value={form.firstName} onChange={set("firstName")} />
-                  <FormField label="Last Name" placeholder="Last name" required name="lastName" value={form.lastName} onChange={set("lastName")} />
-                </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                  <FormField label="Work Email" placeholder="your@company.com" type="email" required name="email" value={form.email} onChange={set("email")} />
-                  <FormField label="Phone Number" placeholder="+49 ..." type="tel" name="phone" value={form.phone} onChange={set("phone")} />
-                </div>
-                <FormField label="Company" placeholder="Company name" required name="company" value={form.company} onChange={set("company")} />
+                   <FormField label="First Name" placeholder="First name" required name="firstName" value={form.firstName} onChange={set("firstName")} error={validationErrors.firstName} />
+                   <FormField label="Last Name" placeholder="Last name" required name="lastName" value={form.lastName} onChange={set("lastName")} error={validationErrors.lastName} />
+                 </div>
+                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                   <FormField label="Work Email" placeholder="your@company.com" type="email" required name="email" value={form.email} onChange={set("email")} error={validationErrors.email} />
+                   <FormField label="Phone Number" placeholder="+49 ..." type="tel" name="phone" value={form.phone} onChange={set("phone")} />
+                 </div>
+                 <FormField label="Company" placeholder="Company name" required name="company" value={form.company} onChange={set("company")} error={validationErrors.company} />
                 <FormField label="Project / Application" placeholder="e.g. Satellite qualification chamber, custom TVAC system, retrofit project" name="project" value={form.project} onChange={set("project")} />
 
                 <div className="border-t border-gray/10 pt-5 space-y-5">
