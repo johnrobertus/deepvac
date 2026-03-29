@@ -174,7 +174,9 @@ export function HeroSection() {
 
             <Reveal delay={100}>
               <p className="max-w-2xl text-sm leading-relaxed text-sand/72 md:text-base">
-                Deepvac develops modular and custom thermal vacuum systems for aerospace qualification, thermal cycling, and space environment simulation — combining high vacuum, precise thermal control, and engineering-led automation.
+                Deepvac develops modular and custom thermal vacuum systems for aerospace qualification, thermal cycling,
+                and space environment simulation, combining high vacuum, precise thermal control, and engineering-led
+                automation.
               </p>
             </Reveal>
 
@@ -195,6 +197,12 @@ export function HeroSection() {
             </Reveal>
           </div>
         </div>
+      </div>
+
+      <div className="absolute bottom-5 right-6 z-30 pointer-events-none md:bottom-7 md:right-8">
+        <span className="font-mono text-[10px] uppercase tracking-[0.12em] text-sand/50 md:text-[11px]">
+          Source: NASA
+        </span>
       </div>
 
       <div
