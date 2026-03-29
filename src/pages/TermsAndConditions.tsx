@@ -245,7 +245,20 @@ export default function TermsAndConditions() {
               <p>26.1 If any provision is invalid or unenforceable, the remaining provisions remain effective.</p>
               <p>26.2 The parties shall replace the invalid provision with a valid provision that comes closest to the economic intent of the invalid provision.</p>
             </LS>
-          </div>
+
+            {/* 27 */}
+            <LS n="27" title="Project-Specific Offer Documents">
+              <p>
+                27.1 For project-specific offers, order confirmations, and supply contracts of Deepvac GmbH,
+                the individually referenced offer documents and the commercial and legal offer conditions
+                contained therein shall take precedence over these General Terms and Conditions to the extent
+                of any conflict.
+              </p>
+              <p>
+                27.2 To the extent that the relevant offer documents do not contain specific provisions, these
+                General Terms and Conditions shall apply on a supplementary basis.
+              </p>
+            </LS>          </div>
         </Section>
       </PageShell>
     </Layout>
