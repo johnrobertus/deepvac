@@ -206,11 +206,11 @@ export function ContactSection() {
           <Reveal delay={100}>
             <form className="space-y-5" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                <FormField label="First Name" placeholder="First name" required value={form.firstName} onChange={set("firstName")} />
-                <FormField label="Last Name" placeholder="Last name" required value={form.lastName} onChange={set("lastName")} />
+                <FormField label="First Name" placeholder="First name" required value={form.firstName} onChange={set("firstName")} error={validationErrors.firstName} />
+                <FormField label="Last Name" placeholder="Last name" required value={form.lastName} onChange={set("lastName")} error={validationErrors.lastName} />
               </div>
-              <FormField label="Work Email" placeholder="your@company.com" type="email" required value={form.email} onChange={set("email")} />
-              <FormField label="Company" placeholder="Company name" required value={form.company} onChange={set("company")} />
+              <FormField label="Work Email" placeholder="your@company.com" type="email" required value={form.email} onChange={set("email")} error={validationErrors.email} />
+              <FormField label="Company" placeholder="Company name" required value={form.company} onChange={set("company")} error={validationErrors.company} />
               <FormField label="Phone Number" placeholder="+49 ..." type="tel" value={form.phone} onChange={set("phone")} />
               <FormField label="Project / Application" placeholder="e.g. Satellite qualification chamber, custom TVAC system, retrofit project" value={form.project} onChange={set("project")} />
               <div className="space-y-2">
@@ -218,9 +218,11 @@ export function ContactSection() {
                 <textarea
                   value={form.message}
                   onChange={(e) => set("message")(e.target.value)}
-                  className="w-full bg-background border border-gray/15 rounded-sm px-4 py-3 text-sm text-sand placeholder:text-gray/30 focus:outline-none focus:border-blue/40 focus:ring-1 focus:ring-blue/20 transition-all duration-200 min-h-[100px] resize-y"
+                  className={`w-full bg-background border rounded-sm px-4 py-3 text-sm text-sand placeholder:text-gray/30 focus:outline-none focus:border-blue/40 focus:ring-1 focus:ring-blue/20 transition-all duration-200 min-h-[100px] resize-y ${validationErrors.message ? "border-red-400/60" : "border-gray/15"}`}
                   placeholder="Describe your requirements..."
+                  aria-invalid={!!validationErrors.message}
                 />
+                {validationErrors.message && <p className="text-xs text-red-400">{validationErrors.message}</p>}
               </div>
 
               {/* Honeypot - invisible to users */}
