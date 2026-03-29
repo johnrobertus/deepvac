@@ -10,9 +10,9 @@ import { ConsentMap } from "@/components/ConsentMap";
 const TURNSTILE_SITE_KEY = "0x4AAAAAACu_Uqbd5b8IkXxU";
 
 function FormField({
-  label, placeholder, type = "text", required = false, value, onChange,
+  label, placeholder, type = "text", required = false, value, onChange, error,
 }: {
-  label: string; placeholder: string; type?: string; required?: boolean; value: string; onChange: (val: string) => void;
+  label: string; placeholder: string; type?: string; required?: boolean; value: string; onChange: (val: string) => void; error?: string;
 }) {
   return (
     <div className="space-y-2">
@@ -23,9 +23,11 @@ function FormField({
       <input
         type={type} required={required} value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="w-full bg-background border border-gray/15 rounded-sm px-4 py-3 text-sm text-sand placeholder:text-gray/30 focus:outline-none focus:border-blue/40 focus:ring-1 focus:ring-blue/20 transition-all duration-200"
+        className={`w-full bg-background border rounded-sm px-4 py-3 text-sm text-sand placeholder:text-gray/30 focus:outline-none focus:border-blue/40 focus:ring-1 focus:ring-blue/20 transition-all duration-200 ${error ? "border-red-400/60" : "border-gray/15"}`}
         placeholder={placeholder}
+        aria-invalid={!!error}
       />
+      {error && <p className="text-xs text-red-400">{error}</p>}
     </div>
   );
 }
@@ -76,8 +78,10 @@ export function ContactSection() {
     return () => clearInterval(interval);
   }, [submitted]);
 
-  const set = (field: keyof FormData) => (val: string) =>
+  const set = (field: keyof FormData) => (val: string) => {
     setForm((prev) => ({ ...prev, [field]: val }));
+    clearFieldError(field);
+  };
 
   const validateForm = (): boolean => {
     const errors: Partial<Record<keyof FormData, string>> = {};
@@ -138,9 +142,19 @@ export function ContactSection() {
       });
 
       if (error) throw error;
-      if (data?.error) throw new Error(data.error);
+      if (data?.error) {
+        // Surface server validation errors as user-friendly toasts, not crash states
+        const msg = data.error as string;
+        if (msg.includes("Message must be") || msg.includes("Missing required") || msg.includes("Invalid email")) {
+          toast.error(msg);
+        } else {
+          throw new Error(msg);
+        }
+        return;
+      }
 
       setSubmitted(true);
+      setValidationErrors({});
       turnstileWidgetId.current = null;
       toast.success("Your inquiry has been sent successfully.");
     } catch (err: any) {
@@ -149,6 +163,7 @@ export function ContactSection() {
         toast.error("Too many submissions. Please try again later.");
       } else {
         toast.error("Submission failed. Please try again later or contact us at info@deepvac.space.");
+      }
       }
       if ((window as any).turnstile && turnstileWidgetId.current) {
         (window as any).turnstile.reset(turnstileWidgetId.current);
