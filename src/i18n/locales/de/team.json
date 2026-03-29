@@ -1,0 +1,78 @@
+{
+  "eyebrow": "Unser Team",
+  "title": "Ingenieurgeführt von Anfang an",
+  "description": "Deepvac wird von Ingenieuren aufgebaut, die ihre Karriere der Entwicklung, Fertigung und Inbetriebnahme von Thermovakuum-Testsystemen gewidmet haben.",
+  "story": {
+    "eyebrow": "Unsere Geschichte",
+    "title": "Gegründet auf komplementärer Expertise",
+    "paragraphs": [
+      "Deepvac wurde mit einer klaren Überzeugung gegründet: dass Thermovakuumsysteme ein Maß an Engineering-Integration erfordern, das die meisten Anlagenbauer nicht liefern. Zu oft werden Kammern isoliert von ihren Steuerungssystemen konstruiert, thermische Subsysteme nachträglich aufgebaut und die Instrumentierung dem Endanwender überlassen.",
+      "Das Gründerteam bringt mehr als 15 Jahre kombinierte Erfahrung in der Entwicklung und Fertigung von Testkammersystemen mit. Durch die Kombination von Elektrotechnik, Mechatronik, Kältetechnik-Expertise und Kammerentwicklungs-Know-how deckt Deepvac den gesamten Systemumfang aus einer Engineering-Quelle ab.",
+      "Dieser integrierte Ansatz ermöglicht Kammerplattformen, die auf Reproduzierbarkeit, Wartungsfreundlichkeit und langfristigen Betriebswert ausgelegt sind – nicht nur auf die Erstinbetriebnahme."
+    ],
+    "competenciesTitle": "Kombinierte Kompetenzen",
+    "competencies": [
+      "Elektrotechnik",
+      "Mechanische Konstruktion",
+      "Kältetechnik",
+      "Steuerungsarchitektur",
+      "KI & Automatisierung",
+      "Kammerentwicklung",
+      "Systemintegration",
+      "Testbetrieb"
+    ]
+  },
+  "leadership": {
+    "eyebrow": "Geschäftsführung",
+    "title": "Gründerteam",
+    "description": "Zwei Ingenieure mit komplementärer Expertise in den Kerndisziplinen für fortschrittliche Thermovakuumsystem-Auslegung.",
+    "focusAreas": "Schwerpunkte"
+  },
+  "founders": [
+    {
+      "name": "John Robertus",
+      "role": "CEO | Mitgründer",
+      "description": "Elektroingenieur spezialisiert auf KI-Integration für mechatronische Systeme. John bringt tiefgreifende Expertise in Steuerungsarchitektur-Design, intelligenter Automatisierung und systemebenen Integration für komplexe Testumgebungen mit.",
+      "focus": ["Steuerungssysteme & Automatisierung", "KI-gesteuerte Mechatronik", "Systemarchitektur"]
+    },
+    {
+      "name": "Anton Opalikhin",
+      "role": "CTO | Mitgründer",
+      "description": "Maschinenbauingenieur spezialisiert auf Kältetechnik und Testkammerentwicklung. Anton leitet die Konstruktion und das Engineering von Thermovakuumkammer-Plattformen, thermischen Subsystemen und mechanischer Integration.",
+      "focus": ["Kammerentwicklung", "Kältetechnik", "Mechanische Konstruktion"]
+    }
+  ],
+  "philosophy": {
+    "eyebrow": "Philosophie",
+    "title": "Unser Engineering-Ansatz",
+    "description": "Unser Ansatz zur Thermovakuumsystem-Auslegung wird von drei Prinzipien geprägt.",
+    "items": [
+      {
+        "title": "Systemebenen-Denken",
+        "description": "Jede Kammer ist ein System, nicht nur ein Behälter. Wir konstruieren thermische, Vakuum-, Steuerungs- und mechanische Subsysteme als integriertes Ganzes."
+      },
+      {
+        "title": "Ingenieurgeführte Entscheidungen",
+        "description": "Technische Stringenz treibt unsere Architekturentscheidungen. Wir priorisieren Reproduzierbarkeit, Wartungsfreundlichkeit und langfristigen Betriebswert vor kurzfristiger Optimierung."
+      },
+      {
+        "title": "Kollaborative Entwicklung",
+        "description": "Wir arbeiten eng mit den Engineering-Teams unserer Kunden zusammen, um Anforderungen, Schnittstellen und Integrationsbedingungen zu definieren, bevor wir uns auf ein Design festlegen."
+      }
+    ]
+  },
+  "partnership": {
+    "eyebrow": "Partnerschaft",
+    "title": "Warum mit Deepvac arbeiten",
+    "items": [
+      { "title": "Eine Engineering-Quelle", "text": "Thermische, Vakuum-, Steuerungs- und mechanische Subsysteme von einem Team mit gemeinsamem Systemverständnis ausgelegt." },
+      { "title": "Voller Lifecycle-Support", "text": "Vom ersten Konzept über Inbetriebnahme, Betrieb, Wartung bis zur Modernisierung." },
+      { "title": "Anwendungsspezifische Auslegung", "text": "Jedes System wird um die Testanforderungen des Kunden konfiguriert – nicht um ein festes Katalogprodukt." },
+      { "title": "Hands-On Engineering-Kultur", "text": "Unsere Gründer sind praktizierende Ingenieure, die direkt in technische Entscheidungen und Kundenprojekte eingebunden bleiben." }
+    ]
+  },
+  "cta": {
+    "title": "Interesse an einer Zusammenarbeit?",
+    "description": "Ob Sie ein Thermovakuumsystem, Engineering-Unterstützung oder eine technische Beratung benötigen – wir möchten mehr über Ihr Projekt erfahren."
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "eyebrow": "Kontakt",
+  "title": "Besprechen Sie Ihre Thermovakuum-Anforderungen",
+  "description": "Ob Sie eine Kammerplattform, eine kundenspezifische TVAC-Konfiguration oder Engineering-Unterstützung für Modernisierung und Integration benötigen – unser Team steht bereit, Ihr Projekt zu besprechen.",
+  "formTitle": "Engineering-Anfrage",
+  "formDescription": "Teilen Sie uns Ihren Projektkontext mit und wir melden uns mit relevanten technischen Informationen zurück.",
+  "qualifiers": {
+    "eyebrow": "Optional — Helfen Sie uns bei der Vorbereitung",
+    "chamberType": "Kammertyp",
+    "applicationArea": "Anwendungsbereich",
+    "timeline": "Zeitrahmen",
+    "select": "Auswählen...",
+    "chamberOptions": ["Standard T Serie", "Standard C Serie", "Custom TVAC", "Noch nicht sicher"],
+    "applicationOptions": ["Satellit / Raumfahrzeug", "Nutzlast / Komponente", "Forschung / Labor", "Industrie / Prozess", "Sonstiges"],
+    "timelineOptions": ["Sofort (< 3 Monate)", "Kurzfristig (3–6 Monate)", "Planungsphase (6–12 Monate)", "Explorativ"]
+  },
+  "contactDetails": "Kontaktdaten",
+  "address": "Adresse",
+  "phone": "Telefon",
+  "email": "E-Mail",
+  "responseTime": "Antwortzeit",
+  "responseTimeValue": "In der Regel innerhalb von 2 Werktagen",
+  "followDeepvac": "Deepvac folgen",
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Kontakt- & Projektfragen",
+    "items": [
+      { "q": "Welche Informationen sollte ich vor der Kontaktaufnahme mit Deepvac vorbereiten?", "a": "Ein produktives Erstgespräch umfasst typischerweise: Prüflingsabmessungen und -masse, erforderliche Druck- und Temperaturbereiche, thermische Zyklusanforderungen, Durchführungs- und Instrumentierungsbedürfnisse, Anlagenbedingungen und Projektzeitplan. Deepvac kann bei Bedarf bei der Anforderungsdefinition unterstützen." },
+      { "q": "Wie ist die typische Antwortzeit?", "a": "Deepvac strebt an, auf technische Anfragen innerhalb von zwei Werktagen zu antworten. Komplexe Konfigurationsanfragen können zusätzliche Zeit für eine erste technische Bewertung erfordern." },
+      { "q": "Kann Deepvac Projekte außerhalb Deutschlands unterstützen?", "a": "Ja. Deepvac bietet Engineering, Lieferung, Installation und Inbetriebnahme international an. Projektlogistik wird während der Erstberatung besprochen." },
+      { "q": "Gibt es eine Mindestprojektgröße?", "a": "Deepvac bedient Projekte von Standardkammer-Lieferungen bis zu komplexen Custom-Systementwicklungen. Kontaktieren Sie uns, um Ihre spezifischen Anforderungen und den Umfang zu besprechen." }
+    ]
+  },
+  "cta": {
+    "title": "Bevorzugen Sie ein direktes Gespräch?",
+    "description": "Rufen Sie unser Engineering-Team an oder schreiben Sie uns eine E-Mail, um Ihre Thermovakuum-Testanforderungen zu besprechen."
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "nav": {
+    "products": "Produkte",
+    "services": "Leistungen",
+    "team": "Team",
+    "resources": "Ressourcen",
+    "careers": "Karriere",
+    "references": "Referenzen",
+    "overview": "Übersicht",
+    "standardSeries": "Standard Serie",
+    "customTvac": "Custom TVAC",
+    "testingServices": "Prüfdienstleistungen",
+    "controlSystemsDesign": "Steuerungstechnik",
+    "mechanicalDesign": "Mechanische Konstruktion",
+    "retrofitModernization": "Retrofit & Modernisierung",
+    "maintenanceRepair": "Wartung & Reparatur",
+    "subsystemIntegration": "Subsystem-Integration",
+    "talkToEngineer": "Ingenieur kontaktieren"
+  },
+  "footer": {
+    "description": "Hochentwickelte Thermovakuumsysteme für die Raumfahrtqualifikation, Weltraumsimulation und Umweltprüfung.",
+    "allProducts": "Alle Produkte",
+    "copyright": "© {{year}} Deepvac GmbH. Alle Rechte vorbehalten.",
+    "imprint": "Impressum",
+    "termsAndConditions": "Allgemeine Geschäftsbedingungen",
+    "privacyPolicy": "Datenschutzerklärung",
+    "followDeepvac": "Deepvac folgen",
+    "company": "Unternehmen",
+    "contact": "Kontakt"
+  },
+  "buttons": {
+    "requestQuote": "Angebot anfragen",
+    "talkToEngineer": "Ingenieur kontaktieren",
+    "requestConsultation": "Technische Beratung anfragen",
+    "exploreServices": "Engineering-Leistungen entdecken",
+    "downloadPdf": "PDF herunterladen",
+    "viewAllResources": "Alle Ressourcen anzeigen",
+    "submitAnotherInquiry": "Weitere Anfrage senden",
+    "sendInquiry": "Anfrage senden",
+    "sending": "Wird gesendet...",
+    "contactEngineering": "Engineering kontaktieren",
+    "learnMore": "Mehr erfahren",
+    "exploreService": "Leistung entdecken",
+    "returnToHomepage": "Zur Startseite",
+    "contactUs": "Kontakt aufnehmen",
+    "allServices": "Alle Leistungen",
+    "discussRequirements": "Anforderungen besprechen",
+    "downloadBrochure": "Broschüre herunterladen",
+    "requestTechnicalDetails": "Technische Details anfragen",
+    "discussConfiguration": "Konfiguration besprechen",
+    "exploreChamberProducts": "Kammerprodukte entdecken",
+    "viewPlatform": "Plattform ansehen",
+    "viewStandardSeries": "Standard Serie ansehen",
+    "exploreCustomTvac": "Custom TVAC entdecken",
+    "viewOpenPositions": "Offene Stellen ansehen",
+    "exploreProducts": "TVAC-Plattformen entdecken",
+    "downloadProductOverview": "Produktübersicht herunterladen",
+    "requestSpecificDocumentation": "Spezifische Dokumentation anfragen",
+    "emailUs": "E-Mail senden",
+    "contactPage": "Kontaktseite",
+    "applyNow": "Jetzt bewerben"
+  },
+  "consent": {
+    "mapTitle": "Google Maps laden",
+    "mapDescription": "Zur Anzeige der interaktiven Karte müssen Inhalte von Google Maps geladen werden. Nach der Aktivierung können personenbezogene Daten wie Ihre IP-Adresse an Google übermittelt werden.",
+    "acceptAndLoad": "Akzeptieren und Karte laden",
+    "withdrawConsent": "Einwilligung widerrufen und Karte ausblenden",
+    "copyAddress": "Adresse kopieren",
+    "copied": "Kopiert",
+    "addressCopied": "Adresse in die Zwischenablage kopiert",
+    "couldNotCopy": "Adresse konnte nicht kopiert werden"
+  },
+  "form": {
+    "firstName": "Vorname",
+    "lastName": "Nachname",
+    "workEmail": "Geschäftliche E-Mail",
+    "company": "Unternehmen",
+    "phoneNumber": "Telefonnummer",
+    "projectApplication": "Projekt / Anwendung",
+    "message": "Nachricht",
+    "consentText": "Ich stimme zu, dass diese Daten zum Zweck der Kontaktaufnahme gespeichert und verarbeitet werden dürfen. Mir ist bekannt, dass ich meine Einwilligung jederzeit widerrufen kann.",
+    "confidentialNote": "Ihre Anfrage wird vertraulich von unserem Engineering-Team bearbeitet.",
+    "placeholders": {
+      "firstName": "Vorname",
+      "lastName": "Nachname",
+      "email": "ihre@firma.com",
+      "company": "Firmenname",
+      "phone": "+49 ...",
+      "project": "z. B. Satellitenqualifikationskammer, Custom-TVAC-System, Retrofit-Projekt",
+      "message": "Beschreiben Sie Ihre Anforderungen...",
+      "messageDetailed": "Beschreiben Sie Ihre Testanforderungen, Kammerspezifikationen oder Integrationsbedürfnisse..."
+    },
+    "validation": {
+      "firstNameRequired": "Vorname ist erforderlich.",
+      "lastNameRequired": "Nachname ist erforderlich.",
+      "emailRequired": "E-Mail-Adresse ist erforderlich.",
+      "emailInvalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+      "companyRequired": "Unternehmen ist erforderlich.",
+      "messageMinLength": "Bitte geben Sie eine ausführlichere Nachricht ein (mindestens 10 Zeichen).",
+      "consentRequired": "Bitte akzeptieren Sie die Einwilligung zur Datenverarbeitung."
+    },
+    "success": {
+      "title": "Vielen Dank",
+      "titleInquiry": "Vielen Dank für Ihre Anfrage",
+      "message": "Ihre Anfrage ist eingegangen. Unser Team antwortet in der Regel innerhalb von zwei Werktagen.",
+      "messagePage": "Ihre Nachricht ist eingegangen. Unser Engineering-Team antwortet in der Regel innerhalb von zwei Werktagen.",
+      "toast": "Ihre Anfrage wurde erfolgreich gesendet."
+    },
+    "errors": {
+      "tooManyRequests": "Zu viele Anfragen. Bitte versuchen Sie es später erneut.",
+      "submissionFailed": "Übermittlung fehlgeschlagen. Bitte versuchen Sie es später erneut oder kontaktieren Sie uns unter info@deepvac.space.",
+      "submissionFailedDirect": "Übermittlung fehlgeschlagen. Bitte versuchen Sie es später erneut oder kontaktieren Sie uns direkt unter info@deepvac.space."
+    }
+  },
+  "lang": {
+    "en": "EN",
+    "de": "DE"
+  }
+}

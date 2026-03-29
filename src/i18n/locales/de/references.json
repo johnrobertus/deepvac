@@ -1,0 +1,48 @@
+{
+  "eyebrow": "Referenzen",
+  "title": "Referenzen & Projekterfahrung",
+  "description": "Ausgewählte Projektkategorien und Kooperationsformate, die den Engineering-Umfang von Deepvac demonstrieren. Spezifische Referenzen und Fallstudien werden veröffentlicht, sobald sie verfügbar sind.",
+  "industries": {
+    "eyebrow": "Branchen",
+    "title": "Anwendungsbereiche",
+    "description": "Deepvac entwickelt Thermovakuumsysteme für Kunden in diesen primären Anwendungsdomänen.",
+    "items": [
+      { "title": "Raumfahrt & Weltraum", "description": "Qualifikations- und Validierungsprüfung für Satellitensubsysteme, Nutzlasten und missionskritische Baugruppen." },
+      { "title": "Forschung & Entwicklung", "description": "Thermovakuumprüfung im Labor- und Entwicklungsmaßstab für akademische und institutionelle Forschungsprogramme." },
+      { "title": "Industrielle Anwendungen", "description": "Umweltsimulation und Prozessvalidierung für industrielle Komponenten unter kontrollierten Vakuum- und Thermalbedingungen." },
+      { "title": "Wissenschaftliche Instrumentierung", "description": "Prüfung optischer, elektronischer und Präzisionsinstrumentierung unter repräsentativen Weltraum- oder Vakuumbedingungen." }
+    ]
+  },
+  "projectScope": {
+    "eyebrow": "Projektumfang",
+    "title": "Arten von Beauftragungen",
+    "description": "Deepvac unterstützt Projekte über den gesamten Lebenszyklus von Thermovakuumsystemen.",
+    "types": ["Standardkammer-Lieferung", "Custom-TVAC-Entwicklung", "Steuerungssystem-Integration", "Retrofit & Modernisierung", "Testkampagnen-Support", "Subsystem-Integration"]
+  },
+  "collaborations": {
+    "eyebrow": "Kooperationen",
+    "title": "Partner & Kunden",
+    "description": "Logos und Referenzen ausgewählter Partner und Kunden werden veröffentlicht, sobald sie verfügbar sind.",
+    "logoPlaceholder": "Logo",
+    "placeholderText": "[PARTNER_LOGOS — Platzhalter für zukünftige Kunden- und Kooperationspartner-Logos]"
+  },
+  "caseStudies": {
+    "eyebrow": "Fallstudien",
+    "title": "Ausgewählte Projektreferenzen",
+    "description": "Detaillierte Fallstudien werden veröffentlicht, sobald Projektreferenzen für die öffentliche Kommunikation verfügbar werden.",
+    "items": [
+      { "category": "Custom TVAC", "title": "Referenzprojekt 1", "summary": "Anwendungsspezifische Kammerentwicklung für eine anspruchsvolle Testumgebung mit kundenspezifischen Durchführungs- und Instrumentierungsanforderungen." },
+      { "category": "Retrofit-Projekt", "title": "Referenzprojekt 2", "summary": "Modernisierung eines bestehenden Thermovakuumsystems einschließlich Steuerungssystem-Upgrade, Sicherheitsverbesserungen und erweitertem Lifecycle-Support." }
+    ],
+    "comingSoon": "Vollständige Fallstudie demnächst verfügbar"
+  },
+  "testimonials": {
+    "eyebrow": "Kundenstimmen",
+    "placeholder": "\"Kundenstimmen und Projektempfehlungen werden ergänzt, sobald Referenzen zur Veröffentlichung verfügbar werden.\"",
+    "label": "[KUNDENSTIMME — Platzhalter]"
+  },
+  "cta": {
+    "title": "Besprechen Sie Ihre Projektanforderungen",
+    "description": "Ob Sie Kammerplattformen evaluieren, ein kundenspezifisches System planen oder Service- und Retrofit-Optionen prüfen – wir sind bereit, Ihre Anforderungen zu besprechen."
+  }
+}
