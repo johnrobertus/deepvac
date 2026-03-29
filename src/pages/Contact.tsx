@@ -286,9 +286,11 @@ const Contact = () => {
                   <textarea
                     value={form.message}
                     onChange={(e) => set("message")(e.target.value)}
-                    className="w-full bg-background border border-gray/15 rounded-sm px-4 py-3 text-sm text-sand placeholder:text-gray/30 focus:outline-none focus:border-blue/40 focus:ring-1 focus:ring-blue/20 transition-all duration-200 min-h-[120px] resize-y"
+                    className={`w-full bg-background border rounded-sm px-4 py-3 text-sm text-sand placeholder:text-gray/30 focus:outline-none focus:border-blue/40 focus:ring-1 focus:ring-blue/20 transition-all duration-200 min-h-[120px] resize-y ${validationErrors.message ? "border-red-400/60" : "border-gray/15"}`}
                     placeholder="Describe your test requirements, chamber specifications, or integration needs..."
+                    aria-invalid={!!validationErrors.message}
                   />
+                  {validationErrors.message && <p className="text-xs text-red-400">{validationErrors.message}</p>}
                 </div>
 
                 {/* Honeypot - invisible to users */}
