@@ -59,14 +59,18 @@ export default function PrivacyPolicy() {
 
             <LegalSection title="General Information on Data Processing">
               <p>
-                We process personal data only to the extent necessary to provide a functional website and our
-                services. Processing is carried out in accordance with the General Data Protection Regulation
-                (GDPR) and applicable German data protection laws.
+                We process personal data only to the extent necessary to provide a functional website, respond
+                to inquiries, present our services, and operate our business communication in a secure and
+                efficient manner.
               </p>
               <p>
-                Personal data is not transferred to third parties unless this is required for technical
-                operation, contractual performance, compliance with legal obligations, or based on another
-                lawful basis.
+                Personal data is processed in accordance with the General Data Protection Regulation (GDPR) and
+                applicable German data protection laws.
+              </p>
+              <p>
+                We do not transfer personal data to third parties unless this is necessary for the technical
+                operation of the website, for the performance of a contract or pre-contractual measures, for
+                compliance with a legal obligation, on the basis of your consent, or otherwise permitted by law.
               </p>
             </LegalSection>
 
@@ -74,20 +78,21 @@ export default function PrivacyPolicy() {
               <p>Where we process personal data, we rely in particular on the following legal bases:</p>
               <ul className="list-disc pl-5 space-y-1">
                 <li>Art. 6(1)(a) GDPR: consent</li>
-                <li>Art. 6(1)(b) GDPR: performance of a contract or pre contractual measures</li>
+                <li>Art. 6(1)(b) GDPR: performance of a contract or pre-contractual measures</li>
                 <li>Art. 6(1)(c) GDPR: compliance with a legal obligation</li>
                 <li>Art. 6(1)(f) GDPR: legitimate interests</li>
               </ul>
               <p>
-                Where processing is based on legitimate interests, our interest lies in the secure, stable,
-                and efficient operation of our website and business communication.
+                Where processing is based on Art. 6(1)(f) GDPR, our legitimate interests lie in the secure,
+                stable, efficient, and user-oriented operation of our website, the professional presentation of
+                our company, and our business communication.
               </p>
             </LegalSection>
 
             <LegalSection title="Website Access Data and Server Log Files">
               <p>
-                When accessing our website, information is automatically collected by our hosting provider.
-                This may include:
+                When you access our website, information is automatically collected by our hosting provider in
+                server log files. This may include:
               </p>
               <ul className="list-disc pl-5 space-y-1">
                 <li>IP address</li>
@@ -100,42 +105,59 @@ export default function PrivacyPolicy() {
                 <li>Operating system</li>
               </ul>
               <p>
-                This data is necessary to ensure the stability, security, and proper technical operation of the
-                website.
+                This data is processed to ensure the stability, security, and technical functionality of the
+                website and to detect, prevent, and investigate misuse or security-related incidents.
               </p>
               <p>Legal basis: Art. 6(1)(f) GDPR.</p>
               <p>
-                Server log data is stored for a maximum of 7 days unless longer retention is required for the
-                investigation of security related incidents.
+                Server log data is generally stored for a maximum of 7 days, unless longer retention is required
+                for the investigation of security-related incidents or to assert, exercise, or defend legal
+                claims.
               </p>
             </LegalSection>
 
-            <LegalSection title="Contact by Email or Contact Form">
+            <LegalSection title="Contact by Email and Contact Form">
               <p>
-                If you contact us by email or via a contact form, the data you provide, such as name, email
-                address, company name, and message content, will be processed solely for the purpose of
-                handling your request and communicating with you.
+                If you contact us by email or submit an inquiry via our contact form, we process the personal
+                data you provide for the purpose of handling your inquiry and communicating with you.
+              </p>
+              <p>This may include in particular:</p>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>first name</li>
+                <li>last name</li>
+                <li>business email address</li>
+                <li>company name</li>
+                <li>phone number, where voluntarily provided</li>
+                <li>project or application information</li>
+                <li>message content</li>
+              </ul>
+              <p>
+                Mandatory fields in the contact form are marked accordingly. These data are required in order to
+                process your request.
               </p>
               <p>Legal basis:</p>
               <ul className="list-disc pl-5 space-y-1">
-                <li>Art. 6(1)(b) GDPR if your request relates to pre contractual measures or contract performance</li>
-                <li>Art. 6(1)(f) GDPR for general business inquiries</li>
+                <li>
+                  Art. 6(1)(b) GDPR, if your inquiry relates to pre-contractual measures or the performance of a
+                  contract
+                </li>
+                <li>Art. 6(1)(f) GDPR, for general business communication and other inquiries</li>
               </ul>
               <p>
-                Your data will not be shared with third parties unless required for processing your request or
-                due to legal obligations.
+                Your data will not be shared with third parties unless this is necessary to process your request,
+                required by law, or otherwise legally permitted.
               </p>
               <p>
-                The data will be deleted once the purpose of storage no longer applies and statutory retention
-                obligations do not prevent deletion.
+                We store your inquiry only for as long as necessary to process it. Where statutory retention
+                obligations apply, storage may continue for the duration required by applicable law.
               </p>
             </LegalSection>
 
-            <LegalSection title="Provision of Data">
+            <LegalSection title="Provision of Personal Data">
               <p>
                 The provision of personal data is neither legally nor contractually required. However, certain
-                information may be necessary to process your inquiry. Failure to provide such data may result
-                in us being unable to respond to your request.
+                information may be necessary for us to process and respond to your inquiry. If you do not provide
+                the relevant data, we may be unable to handle your request.
               </p>
             </LegalSection>
 
@@ -220,10 +242,18 @@ export default function PrivacyPolicy() {
               </div>
             </LegalSection>
 
+            <LegalSection title="No Automated Decision-Making">
+              <p>
+                We do not use automated decision-making, including profiling, within the meaning of Art. 22 GDPR
+                in connection with this website.
+              </p>
+            </LegalSection>
+
             <LegalSection title="Changes to this Privacy Policy">
               <p>
                 We reserve the right to update this Privacy Policy in order to reflect changes in legal
-                requirements or in our services. The version published on our website shall apply.
+                requirements or changes to our website or services. The version published on this website shall
+                apply.
               </p>
             </LegalSection>
           </div>
