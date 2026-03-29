@@ -10,9 +10,9 @@ import { ConsentMap } from "@/components/ConsentMap";
 const TURNSTILE_SITE_KEY = "0x4AAAAAACu_Uqbd5b8IkXxU";
 
 function FormField({
-  label, placeholder, type = "text", required = false, value, onChange,
+  label, placeholder, type = "text", required = false, value, onChange, error,
 }: {
-  label: string; placeholder: string; type?: string; required?: boolean; value: string; onChange: (val: string) => void;
+  label: string; placeholder: string; type?: string; required?: boolean; value: string; onChange: (val: string) => void; error?: string;
 }) {
   return (
     <div className="space-y-2">
@@ -23,9 +23,11 @@ function FormField({
       <input
         type={type} required={required} value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="w-full bg-background border border-gray/15 rounded-sm px-4 py-3 text-sm text-sand placeholder:text-gray/30 focus:outline-none focus:border-blue/40 focus:ring-1 focus:ring-blue/20 transition-all duration-200"
+        className={`w-full bg-background border rounded-sm px-4 py-3 text-sm text-sand placeholder:text-gray/30 focus:outline-none focus:border-blue/40 focus:ring-1 focus:ring-blue/20 transition-all duration-200 ${error ? "border-red-400/60" : "border-gray/15"}`}
         placeholder={placeholder}
+        aria-invalid={!!error}
       />
+      {error && <p className="text-xs text-red-400">{error}</p>}
     </div>
   );
 }
@@ -46,6 +48,7 @@ export function ContactSection() {
   const [sending, setSending] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [honeypot, setHoneypot] = useState("");
+  const [validationErrors, setValidationErrors] = useState<Partial<Record<keyof FormData, string>>>({});
   const turnstileRef = useRef<HTMLDivElement>(null);
   const turnstileWidgetId = useRef<string | null>(null);
 
@@ -75,8 +78,37 @@ export function ContactSection() {
     return () => clearInterval(interval);
   }, [submitted]);
 
-  const set = (field: keyof FormData) => (val: string) =>
+  const set = (field: keyof FormData) => (val: string) => {
     setForm((prev) => ({ ...prev, [field]: val }));
+    clearFieldError(field);
+  };
+
+  const validateForm = (): boolean => {
+    const errors: Partial<Record<keyof FormData, string>> = {};
+    if (!form.firstName.trim()) errors.firstName = "First name is required.";
+    if (!form.lastName.trim()) errors.lastName = "Last name is required.";
+    if (!form.email.trim()) {
+      errors.email = "Email is required.";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(form.email.trim())) {
+      errors.email = "Please enter a valid email address.";
+    }
+    if (!form.company.trim()) errors.company = "Company is required.";
+    if (form.message.trim().length > 0 && form.message.trim().length < 10) {
+      errors.message = "Please enter a more detailed message (minimum 10 characters).";
+    }
+    setValidationErrors(errors);
+    return Object.keys(errors).length === 0;
+  };
+
+  const clearFieldError = (field: keyof FormData) => {
+    if (validationErrors[field]) {
+      setValidationErrors((prev) => {
+        const next = { ...prev };
+        delete next[field];
+        return next;
+      });
+    }
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -84,6 +116,7 @@ export function ContactSection() {
       toast.error("Please accept the data processing consent to proceed.");
       return;
     }
+    if (!validateForm()) return;
     if (sending) return;
 
     setSending(true);
@@ -109,9 +142,19 @@ export function ContactSection() {
       });
 
       if (error) throw error;
-      if (data?.error) throw new Error(data.error);
+      if (data?.error) {
+        // Surface server validation errors as user-friendly toasts, not crash states
+        const msg = data.error as string;
+        if (msg.includes("Message must be") || msg.includes("Missing required") || msg.includes("Invalid email")) {
+          toast.error(msg);
+        } else {
+          throw new Error(msg);
+        }
+        return;
+      }
 
       setSubmitted(true);
+      setValidationErrors({});
       turnstileWidgetId.current = null;
       toast.success("Your inquiry has been sent successfully.");
     } catch (err: any) {
@@ -163,11 +206,11 @@ export function ContactSection() {
           <Reveal delay={100}>
             <form className="space-y-5" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                <FormField label="First Name" placeholder="First name" required value={form.firstName} onChange={set("firstName")} />
-                <FormField label="Last Name" placeholder="Last name" required value={form.lastName} onChange={set("lastName")} />
+                <FormField label="First Name" placeholder="First name" required value={form.firstName} onChange={set("firstName")} error={validationErrors.firstName} />
+                <FormField label="Last Name" placeholder="Last name" required value={form.lastName} onChange={set("lastName")} error={validationErrors.lastName} />
               </div>
-              <FormField label="Work Email" placeholder="your@company.com" type="email" required value={form.email} onChange={set("email")} />
-              <FormField label="Company" placeholder="Company name" required value={form.company} onChange={set("company")} />
+              <FormField label="Work Email" placeholder="your@company.com" type="email" required value={form.email} onChange={set("email")} error={validationErrors.email} />
+              <FormField label="Company" placeholder="Company name" required value={form.company} onChange={set("company")} error={validationErrors.company} />
               <FormField label="Phone Number" placeholder="+49 ..." type="tel" value={form.phone} onChange={set("phone")} />
               <FormField label="Project / Application" placeholder="e.g. Satellite qualification chamber, custom TVAC system, retrofit project" value={form.project} onChange={set("project")} />
               <div className="space-y-2">
@@ -175,9 +218,11 @@ export function ContactSection() {
                 <textarea
                   value={form.message}
                   onChange={(e) => set("message")(e.target.value)}
-                  className="w-full bg-background border border-gray/15 rounded-sm px-4 py-3 text-sm text-sand placeholder:text-gray/30 focus:outline-none focus:border-blue/40 focus:ring-1 focus:ring-blue/20 transition-all duration-200 min-h-[100px] resize-y"
+                  className={`w-full bg-background border rounded-sm px-4 py-3 text-sm text-sand placeholder:text-gray/30 focus:outline-none focus:border-blue/40 focus:ring-1 focus:ring-blue/20 transition-all duration-200 min-h-[100px] resize-y ${validationErrors.message ? "border-red-400/60" : "border-gray/15"}`}
                   placeholder="Describe your requirements..."
+                  aria-invalid={!!validationErrors.message}
                 />
+                {validationErrors.message && <p className="text-xs text-red-400">{validationErrors.message}</p>}
               </div>
 
               {/* Honeypot - invisible to users */}
