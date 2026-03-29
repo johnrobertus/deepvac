@@ -158,6 +158,7 @@ const Contact = () => {
       toast.error("Please accept the data processing consent to proceed.");
       return;
     }
+    if (!validateForm()) return;
     if (sending) return;
 
     setSending(true);
