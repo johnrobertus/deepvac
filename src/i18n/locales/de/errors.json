@@ -1,0 +1,7 @@
+{
+  "notFound": {
+    "eyebrow": "Fehler 404",
+    "title": "Seite nicht gefunden",
+    "description": "Die gesuchte Seite existiert nicht oder wurde verschoben. Nutzen Sie die Navigation oben oder kehren Sie zur Startseite zurück."
+  }
+}

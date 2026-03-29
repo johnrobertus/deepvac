@@ -1,0 +1,130 @@
+{
+  "nav": {
+    "products": "Products",
+    "services": "Services",
+    "team": "Team",
+    "resources": "Resources",
+    "careers": "Careers",
+    "references": "References",
+    "overview": "Overview",
+    "standardSeries": "Standard Series",
+    "customTvac": "Custom TVAC",
+    "testingServices": "Testing Services",
+    "controlSystemsDesign": "Control Systems Design",
+    "mechanicalDesign": "Mechanical Design",
+    "retrofitModernization": "Retrofit & Modernization",
+    "maintenanceRepair": "Maintenance & Repair",
+    "subsystemIntegration": "Subsystem Integration",
+    "talkToEngineer": "Talk to an Engineer"
+  },
+  "footer": {
+    "description": "Advanced thermal vacuum systems for aerospace qualification, space simulation, and environmental testing.",
+    "allProducts": "All Products",
+    "copyright": "© {{year}} Deepvac GmbH. All rights reserved.",
+    "imprint": "Imprint",
+    "termsAndConditions": "General Terms & Conditions",
+    "privacyPolicy": "Privacy Policy",
+    "followDeepvac": "Follow Deepvac",
+    "company": "Company",
+    "contact": "Contact"
+  },
+  "buttons": {
+    "requestQuote": "Request a Quote",
+    "talkToEngineer": "Talk to an Engineer",
+    "requestConsultation": "Request a Technical Consultation",
+    "exploreServices": "Explore Engineering Services",
+    "downloadPdf": "Download PDF",
+    "viewAllResources": "View All Resources",
+    "submitAnotherInquiry": "Submit Another Inquiry",
+    "sendInquiry": "Send Inquiry",
+    "sending": "Sending...",
+    "contactEngineering": "Contact Engineering",
+    "learnMore": "Learn More",
+    "exploreService": "Explore Service",
+    "returnToHomepage": "Return to Homepage",
+    "contactUs": "Contact Us",
+    "allServices": "All Services",
+    "discussRequirements": "Discuss Your Requirements",
+    "downloadBrochure": "Download Brochure",
+    "requestTechnicalDetails": "Request Technical Details",
+    "discussConfiguration": "Discuss a Custom Configuration",
+    "exploreChamberProducts": "Explore Chamber Products",
+    "viewPlatform": "View Platform",
+    "viewStandardSeries": "View Standard Series",
+    "exploreCustomTvac": "Explore Custom TVAC",
+    "viewOpenPositions": "View Open Positions",
+    "exploreProducts": "Explore TVAC Platforms",
+    "downloadProductOverview": "Download Product Overview",
+    "requestSpecificDocumentation": "Request Specific Documentation",
+    "emailUs": "Email Us",
+    "contactPage": "Contact Page",
+    "applyNow": "Apply Now"
+  },
+  "consent": {
+    "mapTitle": "Load Google Maps",
+    "mapDescription": "To display the interactive map, content from Google Maps must be loaded. After activation, personal data such as your IP address may be transmitted to Google.",
+    "acceptAndLoad": "Accept and load map",
+    "withdrawConsent": "Withdraw consent and hide map",
+    "copyAddress": "Copy address",
+    "copied": "Copied",
+    "addressCopied": "Address copied to clipboard",
+    "couldNotCopy": "Could not copy address"
+  },
+  "form": {
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "workEmail": "Work Email",
+    "company": "Company",
+    "phoneNumber": "Phone Number",
+    "projectApplication": "Project / Application",
+    "message": "Message",
+    "consentText": "I agree that this data may be stored and processed for the purpose of contacting me. I am aware that I can withdraw my consent at any time.",
+    "confidentialNote": "Your inquiry will be handled confidentially by our engineering team.",
+    "placeholders": {
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "your@company.com",
+      "company": "Company name",
+      "phone": "+49 ...",
+      "project": "e.g. Satellite qualification chamber, custom TVAC system, retrofit project",
+      "message": "Describe your requirements...",
+      "messageDetailed": "Describe your test requirements, chamber specifications, or integration needs..."
+    },
+    "validation": {
+      "firstNameRequired": "First name is required.",
+      "lastNameRequired": "Last name is required.",
+      "emailRequired": "Email is required.",
+      "emailInvalid": "Please enter a valid email address.",
+      "companyRequired": "Company is required.",
+      "messageMinLength": "Please enter a more detailed message (minimum 10 characters).",
+      "consentRequired": "Please accept the data processing consent to proceed."
+    },
+    "success": {
+      "title": "Thank You",
+      "titleInquiry": "Thank You for Your Inquiry",
+      "message": "Your inquiry has been received. Our team typically responds within two business days.",
+      "messagePage": "Your message has been received. Our engineering team typically responds within two business days.",
+      "toast": "Your inquiry has been sent successfully."
+    },
+    "errors": {
+      "tooManyRequests": "Too many submissions. Please try again later.",
+      "submissionFailed": "Submission failed. Please try again later or contact us at info@deepvac.space.",
+      "submissionFailedDirect": "Submission failed. Please try again later or contact us directly at info@deepvac.space."
+    }
+  },
+  "lang": {
+    "en": "EN",
+    "de": "DE"
+  },
+  "mediaCredits": {
+    "seoTitle": "Media Credits | Deepvac",
+    "seoDescription": "Source references and attribution for media used on the Deepvac website.",
+    "eyebrow": "Attribution",
+    "title": "Media Credits",
+    "intro": "This website uses selected background video material from publicly available NASA-related sources. All source references and credits for the homepage hero media are listed below.",
+    "heroVideosHeading": "Homepage Hero Videos",
+    "viewSource": "View source",
+    "disclaimer": "All trademarks, names, logos, insignia, and other protected identifiers remain the property of their respective owners. Source references are provided for attribution and identification purposes only.",
+    "footerLink": "Media Credits"
+  }
+}

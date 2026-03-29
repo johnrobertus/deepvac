@@ -1,0 +1,86 @@
+{
+  "home": {
+    "title": "Deepvac | Thermal Vacuum Systems for Space Qualification",
+    "description": "Deepvac develops modular and custom thermal vacuum systems for aerospace qualification, thermal cycling, and space environment simulation. Engineered in Germany."
+  },
+  "products": {
+    "title": "Thermal Vacuum Chamber Systems | Deepvac",
+    "description": "Standardized and custom-engineered thermal vacuum systems for aerospace qualification, environmental simulation, and research applications."
+  },
+  "standardSeries": {
+    "title": "Standard Series TVAC Platforms | Deepvac",
+    "description": "Pre-engineered thermal vacuum chamber platforms with modular configurations for aerospace qualification, environmental simulation, and research testing."
+  },
+  "customTvac": {
+    "title": "Custom Thermal Vacuum Systems | Deepvac",
+    "description": "Application-specific thermal vacuum engineering — custom chamber systems engineered from concept through commissioning for demanding test requirements."
+  },
+  "services": {
+    "title": "TVAC Engineering Services | Deepvac",
+    "description": "End-to-end engineering services for thermal vacuum systems — from control systems design and testing to retrofit, maintenance, and subsystem integration."
+  },
+  "testingServices": {
+    "title": "Thermal Vacuum Testing Services | Deepvac",
+    "description": "Thermal vacuum test campaign execution with engineering precision for qualification, validation, and development programs."
+  },
+  "controlSystems": {
+    "title": "Control Systems Design for TVAC | Deepvac",
+    "description": "Design of chamber control architectures, automation logic, instrumentation integration, and reliable operating concepts for thermal vacuum environments."
+  },
+  "mechanicalDesign": {
+    "title": "Mechanical Design for TVAC Systems | Deepvac",
+    "description": "Engineering of chamber assemblies, interfaces, fixturing, and mechanical integration concepts for thermal vacuum systems."
+  },
+  "retrofitModernization": {
+    "title": "TVAC Retrofit & Modernization | Deepvac",
+    "description": "Technical upgrades for legacy thermal vacuum systems to improve reliability, safety, control precision, and lifecycle value."
+  },
+  "maintenanceRepair": {
+    "title": "TVAC Maintenance & Repair | Deepvac",
+    "description": "Diagnostics, preventive servicing, repair, and technical support for thermal vacuum chamber systems."
+  },
+  "subsystemIntegration": {
+    "title": "Subsystem Integration for TVAC | Deepvac",
+    "description": "Integration of thermal, vacuum, instrumentation, and control subsystems into coherent test environments."
+  },
+  "team": {
+    "title": "Our Team | Deepvac",
+    "description": "Meet the engineering team behind Deepvac — specialists in thermal vacuum system design, control architecture, and chamber development."
+  },
+  "catalogs": {
+    "title": "Catalogues & Resources | Deepvac",
+    "description": "Download product brochures, technical overviews, and engineering documentation for Deepvac thermal vacuum systems."
+  },
+  "careers": {
+    "title": "Careers at Deepvac | Engineering Jobs",
+    "description": "Join Deepvac and build thermal vacuum systems for aerospace qualification. Engineering positions in Garbsen, Germany."
+  },
+  "references": {
+    "title": "References & Project Experience | Deepvac",
+    "description": "Project categories, application areas, and collaboration formats demonstrating Deepvac's thermal vacuum engineering scope."
+  },
+  "contact": {
+    "title": "Contact Deepvac | Engineering Inquiry",
+    "description": "Discuss your thermal vacuum requirements with our engineering team. Request a quote, technical consultation, or project evaluation."
+  },
+  "imprint": {
+    "title": "Imprint | Deepvac GmbH",
+    "description": "Legal information and company details for Deepvac GmbH, Garbsen, Germany."
+  },
+  "privacyPolicy": {
+    "title": "Privacy Policy | Deepvac GmbH",
+    "description": "Privacy policy and data protection information for Deepvac GmbH."
+  },
+  "termsAndConditions": {
+    "title": "General Terms and Conditions | Deepvac GmbH",
+    "description": "General terms and conditions of Deepvac GmbH for deliverables and engineering services."
+  },
+  "notFound": {
+    "title": "Page Not Found | Deepvac",
+    "description": "The page you are looking for does not exist or has been moved."
+  },
+  "mediaCredits": {
+    "title": "Media Credits | Deepvac",
+    "description": "Source references and attribution for media used on the Deepvac website."
+  }
+}

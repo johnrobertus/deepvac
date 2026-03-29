@@ -1,0 +1,38 @@
+{
+  "eyebrow": "Contact",
+  "title": "Discuss Your Thermal Vacuum Requirements",
+  "description": "Whether you need a chamber platform, a custom TVAC configuration, or engineering support for modernization and integration — our team is ready to discuss your project.",
+  "formTitle": "Engineering Inquiry",
+  "formDescription": "Provide your project context and we'll follow up with relevant technical information.",
+  "qualifiers": {
+    "eyebrow": "Optional — Help Us Prepare",
+    "chamberType": "Chamber Type",
+    "applicationArea": "Application Area",
+    "timeline": "Timeline",
+    "select": "Select...",
+    "chamberOptions": ["Standard T Series", "Standard C Series", "Custom TVAC", "Not sure yet"],
+    "applicationOptions": ["Satellite / Spacecraft", "Payload / Component", "Research / Laboratory", "Industrial / Process", "Other"],
+    "timelineOptions": ["Immediate (< 3 months)", "Near-term (3–6 months)", "Planning phase (6–12 months)", "Exploratory"]
+  },
+  "contactDetails": "Contact Details",
+  "address": "Address",
+  "phone": "Phone",
+  "email": "Email",
+  "responseTime": "Response Time",
+  "responseTimeValue": "Typically within 2 business days",
+  "followDeepvac": "Follow Deepvac",
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Contact & Project Questions",
+    "items": [
+      { "q": "What information should I prepare before contacting Deepvac?", "a": "A productive initial conversation typically covers: test article dimensions and mass, required pressure and temperature ranges, thermal cycling requirements, feedthrough and instrumentation needs, facility constraints, and project timeline. Deepvac can guide this requirements definition process if needed." },
+      { "q": "What is the typical response time?", "a": "Deepvac aims to respond to technical inquiries within two business days. Complex configuration requests may require additional time for initial technical assessment." },
+      { "q": "Can Deepvac support projects outside Germany?", "a": "Yes. Deepvac provides engineering, delivery, installation, and commissioning services internationally. Project logistics are discussed during the initial consultation." },
+      { "q": "Is there a minimum project size?", "a": "Deepvac serves projects ranging from standard chamber deliveries to complex custom system developments. Contact us to discuss your specific requirements and scope." }
+    ]
+  },
+  "cta": {
+    "title": "Prefer a Direct Conversation?",
+    "description": "Call or email our engineering team to discuss your thermal vacuum test requirements."
+  }
+}

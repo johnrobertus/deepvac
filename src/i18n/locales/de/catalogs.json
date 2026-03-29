@@ -1,0 +1,39 @@
+{
+  "eyebrow": "Technische Dokumentation",
+  "title": "Kataloge & Ressourcen",
+  "description": "Produktbroschüren, technische Übersichten und Engineering-Dokumentation zum Download. Weitere Datenblätter und Spezifikationen werden veröffentlicht, sobald sie verfügbar sind.",
+  "featuredBrochure": "Ausgewählte Broschüre",
+  "documentLibrary": {
+    "eyebrow": "Dokumentenbibliothek",
+    "title": "Alle Ressourcen",
+    "description": "Technische Dokumentation nach Kategorie durchsuchen und herunterladen."
+  },
+  "categories": {
+    "all": "Alle",
+    "tvac": "TVAC",
+    "standardSeries": "Standard Serie",
+    "custom": "Custom",
+    "service": "Service",
+    "overview": "Übersicht"
+  },
+  "comingSoon": "Demnächst verfügbar",
+  "availableSoon": "Bald verfügbar",
+  "moreDocumentation": {
+    "title": "Weitere Dokumentation in Kürze",
+    "description": "Zusätzliche technische Spezifikationen, Datenblätter und plattformspezifische Dokumentation werden veröffentlicht, sobald sie verfügbar sind."
+  },
+  "cta": {
+    "title": "Technische Spezifikationen benötigt?",
+    "description": "Wenn Sie spezifische technische Daten für eine Projektevaluierung oder einen Beschaffungsprozess benötigen, kontaktieren Sie unser Engineering-Team direkt."
+  },
+  "placeholderDocs": {
+    "customTvac": {
+      "title": "Custom-TVAC-Systeme",
+      "description": "Übersicht der Deepvac Custom-Thermovakuumkammer-Engineering-Fähigkeiten."
+    },
+    "servicePortfolio": {
+      "title": "Leistungsportfolio-Übersicht",
+      "description": "Zusammenfassung der Engineering-Leistungen einschließlich Testing, Retrofit, Wartung und Subsystem-Integration."
+    }
+  }
+}
