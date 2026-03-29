@@ -1,0 +1,39 @@
+{
+  "eyebrow": "Technical Documentation",
+  "title": "Catalogues & Resources",
+  "description": "Download product brochures, technical overviews, and engineering documentation. Additional spec sheets and data sheets will be published as they become available.",
+  "featuredBrochure": "Featured Brochure",
+  "documentLibrary": {
+    "eyebrow": "Document Library",
+    "title": "All Resources",
+    "description": "Browse and download technical documentation by category."
+  },
+  "categories": {
+    "all": "All",
+    "tvac": "TVAC",
+    "standardSeries": "Standard Series",
+    "custom": "Custom",
+    "service": "Service",
+    "overview": "Overview"
+  },
+  "comingSoon": "Coming Soon",
+  "availableSoon": "Available soon",
+  "moreDocumentation": {
+    "title": "More Documentation Coming Soon",
+    "description": "Additional technical specifications, data sheets, and platform-specific documentation will be published as they become available."
+  },
+  "cta": {
+    "title": "Need Technical Specifications?",
+    "description": "If you require specific technical data for a project evaluation or procurement process, contact our engineering team directly."
+  },
+  "placeholderDocs": {
+    "customTvac": {
+      "title": "Custom TVAC Systems",
+      "description": "Overview of Deepvac custom thermal vacuum chamber engineering capabilities."
+    },
+    "servicePortfolio": {
+      "title": "Service Portfolio Overview",
+      "description": "Summary of engineering services including testing, retrofit, maintenance, and subsystem integration."
+    }
+  }
+}

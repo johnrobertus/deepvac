@@ -1,0 +1,48 @@
+{
+  "eyebrow": "Track Record",
+  "title": "References & Project Experience",
+  "description": "Selected project categories and collaboration formats demonstrating Deepvac's engineering scope. Specific references and case studies will be published as they become available.",
+  "industries": {
+    "eyebrow": "Industries",
+    "title": "Application Areas",
+    "description": "Deepvac develops thermal vacuum systems for customers across these primary application domains.",
+    "items": [
+      { "title": "Aerospace & Space", "description": "Qualification and validation testing for satellite subsystems, payloads, and mission-critical assemblies." },
+      { "title": "Research & Development", "description": "Laboratory-scale and development-phase thermal vacuum testing for academic and institutional research programs." },
+      { "title": "Industrial Applications", "description": "Environmental simulation and process validation for industrial components requiring controlled vacuum and thermal conditions." },
+      { "title": "Scientific Instrumentation", "description": "Testing of optical, electronic, and precision instrumentation under representative space or vacuum conditions." }
+    ]
+  },
+  "projectScope": {
+    "eyebrow": "Project Scope",
+    "title": "Types of Engagements",
+    "description": "Deepvac supports projects across the full lifecycle of thermal vacuum systems.",
+    "types": ["Standard Chamber Delivery", "Custom TVAC Development", "Control System Integration", "Retrofit & Modernization", "Test Campaign Support", "Subsystem Integration"]
+  },
+  "collaborations": {
+    "eyebrow": "Collaborations",
+    "title": "Partners & Customers",
+    "description": "Logos and references of selected partners and customers will be published as they become available.",
+    "logoPlaceholder": "Logo",
+    "placeholderText": "[PARTNER_LOGOS — Placeholder for future customer and collaborator logos]"
+  },
+  "caseStudies": {
+    "eyebrow": "Case Studies",
+    "title": "Selected Project References",
+    "description": "Detailed case studies will be published as project references become available for public communication.",
+    "items": [
+      { "category": "Custom TVAC", "title": "Reference Project 1", "summary": "Application-specific chamber development for a demanding test environment with custom feedthrough and instrumentation requirements." },
+      { "category": "Retrofit Project", "title": "Reference Project 2", "summary": "Modernization of an existing thermal vacuum system including control system upgrade, safety improvements, and extended lifecycle support." }
+    ],
+    "comingSoon": "Full case study coming soon"
+  },
+  "testimonials": {
+    "eyebrow": "Testimonials",
+    "placeholder": "\"Customer testimonials and project endorsements will be added as references become available for publication.\"",
+    "label": "[TESTIMONIAL — Placeholder]"
+  },
+  "cta": {
+    "title": "Discuss Your Project Requirements",
+    "description": "Whether you're evaluating chamber platforms, planning a custom system, or exploring service and retrofit options — we're ready to discuss your requirements."
+  }
+}
