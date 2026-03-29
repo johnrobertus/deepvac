@@ -8,7 +8,7 @@ export default function PrivacyPolicy() {
         <PageHero eyebrow="Legal" title="Privacy Policy" description="Deepvac GmbH" />
         <Section>
           <div className="max-w-3xl space-y-8 text-gray text-sm leading-relaxed">
-            <p className="text-xs text-gray/60">Last updated: 27 February 2026</p>
+            <p className="text-xs text-gray/60">Last updated: 29 March 2026</p>
 
             <LegalSection title="Controller">
               <p>Deepvac GmbH</p>
