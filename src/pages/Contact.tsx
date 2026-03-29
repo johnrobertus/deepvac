@@ -8,6 +8,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Phone, Mail, MapPin, Clock, Shield, ArrowRight, CheckCircle, Loader2 } from "lucide-react";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
+import { ConsentMap } from "@/components/ConsentMap";
 
 declare global {
   interface Window {
