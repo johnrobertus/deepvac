@@ -115,6 +115,9 @@ export function Footer() {
             <Link to={lp("/privacy-policy")} className="text-xs text-gray/50 transition-colors hover:text-gray">
               {t("footer.privacyPolicy")}
             </Link>
+            <Link to={lp("/media-credits")} className="text-xs text-gray/50 transition-colors hover:text-gray">
+              {t("mediaCredits.footerLink")}
+            </Link>
           </div>
         </div>
       </div>

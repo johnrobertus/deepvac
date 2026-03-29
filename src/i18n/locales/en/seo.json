@@ -78,5 +78,9 @@
   "notFound": {
     "title": "Page Not Found | Deepvac",
     "description": "The page you are looking for does not exist or has been moved."
+  },
+  "mediaCredits": {
+    "title": "Media Credits | Deepvac",
+    "description": "Source references and attribution for media used on the Deepvac website."
   }
 }

@@ -78,5 +78,9 @@
   "notFound": {
     "title": "Seite nicht gefunden | Deepvac",
     "description": "Die gesuchte Seite existiert nicht oder wurde verschoben."
+  },
+  "mediaCredits": {
+    "title": "Medienquellen | Deepvac",
+    "description": "Quellenangaben und Nachweise für auf der Deepvac-Website verwendete Medien."
   }
 }

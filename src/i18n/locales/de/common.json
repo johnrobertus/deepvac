@@ -115,5 +115,16 @@
   "lang": {
     "en": "EN",
     "de": "DE"
+  },
+  "mediaCredits": {
+    "seoTitle": "Medienquellen | Deepvac",
+    "seoDescription": "Quellenangaben und Nachweise für auf der Deepvac-Website verwendete Medien.",
+    "eyebrow": "Quellenangaben",
+    "title": "Medienquellen",
+    "intro": "Diese Website verwendet ausgewähltes Hintergrund-Videomaterial aus öffentlich zugänglichen NASA-bezogenen Quellen. Alle Quellenangaben und Nachweise für die Hero-Medien der Startseite sind nachfolgend aufgeführt.",
+    "heroVideosHeading": "Startseiten-Hero-Videos",
+    "viewSource": "Quelle ansehen",
+    "disclaimer": "Alle Marken, Namen, Logos, Insignien und sonstigen geschützten Kennzeichen verbleiben im Eigentum ihrer jeweiligen Inhaber. Quellenangaben dienen ausschließlich der Zuordnung und Identifikation.",
+    "footerLink": "Medienquellen"
   }
 }
