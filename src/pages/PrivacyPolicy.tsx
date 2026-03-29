@@ -15,6 +15,13 @@ function LegalSection({ title, children }: { title: string; children: React.Reac
   );
 }
 
+function asStringArray(value: unknown): string[] {
+  if (Array.isArray(value)) {
+    return value.filter((item): item is string => typeof item === "string");
+  }
+  return [];
+}
+
 export default function PrivacyPolicy() {
   const { t } = useTranslation("legal");
   const { t: tSeo } = useTranslation("seo");
@@ -23,29 +30,23 @@ export default function PrivacyPolicy() {
   const hreflangs = getHreflangs(pathname);
   const canonical = getCanonical(pathname, lang);
 
-  const legalBasesList = t("privacy.sections.legalBasesList", {
-    returnObjects: true,
-  }) as string[];
+  const legalBasesList = asStringArray(t("privacy.sections.legalBasesList", { returnObjects: true }));
 
-  const serverLogsList = t("privacy.sections.serverLogsList", {
-    returnObjects: true,
-  }) as string[];
+  const serverLogsList = asStringArray(t("privacy.sections.serverLogsList", { returnObjects: true }));
 
-  const contactFormDataList = t("privacy.sections.contactFormDataList", {
-    returnObjects: true,
-  }) as string[];
+  const contactFormDataList = asStringArray(t("privacy.sections.contactFormDataList", { returnObjects: true }));
 
-  const contactFormLegalList = t("privacy.sections.contactFormLegalList", {
-    returnObjects: true,
-  }) as string[];
+  const contactFormLegalList = asStringArray(t("privacy.sections.contactFormLegalList", { returnObjects: true }));
 
-  const yourRightsList = t("privacy.sections.yourRightsList", {
-    returnObjects: true,
-  }) as string[];
+  const yourRightsList = asStringArray(t("privacy.sections.yourRightsList", { returnObjects: true }));
 
   const emailLabel = lang === "de" ? "E-Mail" : "Email";
   const phoneLabel = lang === "de" ? "Telefon" : "Phone";
   const countryLabel = lang === "de" ? "Deutschland" : "Germany";
+  const supervisoryAuthorityName =
+    lang === "de"
+      ? "Die Landesbeauftragte für den Datenschutz Niedersachsen"
+      : "The State Commissioner for Data Protection of Lower Saxony";
 
   return (
     <Layout>
@@ -171,11 +172,7 @@ export default function PrivacyPolicy() {
               <p>{t("privacy.sections.supervisoryAuthorityText")}</p>
               <p>{t("privacy.sections.supervisoryAuthorityCompetent")}</p>
               <div className="pt-1 space-y-1">
-                <p>
-                  {lang === "de"
-                    ? "Die Landesbeauftragte für den Datenschutz Niedersachsen"
-                    : "The State Commissioner for Data Protection of Lower Saxony"}
-                </p>
+                <p>{supervisoryAuthorityName}</p>
                 <p>Prinzenstraße 5</p>
                 <p>30159 Hannover</p>
                 <p>{countryLabel}</p>
