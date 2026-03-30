@@ -486,7 +486,7 @@ export default function TermsAndConditions() {
               <p>
                 {t("terms.sections.15.1", {
                   defaultValue:
-                    "15.1 The Customer shall inspect Deliverables without undue delay and notify defects in text form. Apparent defects must be notified within fourteen calendar days after delivery or completion. Hidden defects must be notified without undue delay and in any case within fourteen calendar days after discovery.",
+                    "15.1 The Customer shall inspect Deliverables without undue delay after delivery, insofar as this is feasible in the ordinary course of business. If Section 377 HGB applies, the Customer shall inspect the Deliverables and notify defects in accordance with that provision. In all other cases, the Customer shall notify apparent defects and hidden defects in text form without undue delay after becoming aware of them.",
                 })}
               </p>
               <p>
@@ -498,7 +498,7 @@ export default function TermsAndConditions() {
               <p>
                 {t("terms.sections.15.3", {
                   defaultValue:
-                    "15.3 The limitation period for defect claims is twelve months from delivery or completion, unless mandatory law requires longer periods.",
+                    "15.3 The limitation period for defect claims is twelve months from delivery in the case of goods and twelve months from acceptance in the case of work results, unless mandatory law requires a longer period. Where acceptance is excluded by the nature of the work, the limitation period begins upon completion. This does not apply in cases of fraudulent concealment, assumption of a guarantee, injury to life, body, or health, intentional misconduct, gross negligence, or mandatory liability under applicable product liability law.",
                 })}
               </p>
               <p>
@@ -746,7 +746,7 @@ export default function TermsAndConditions() {
                 <li>
                   {t("terms.sections.22.2c", {
                     defaultValue:
-                      "a reasonable cancellation fee reflecting the lost contribution margin, unless the Customer proves that Deepvac suffered no or lower loss.",
+                      "a reasonable cancellation fee reflecting the portion of the Order not yet performed, taking into account saved expenses and any other use of resources, unless the Customer proves that Deepvac suffered no or lower loss.",
                   })}
                 </li>
               </ol>
