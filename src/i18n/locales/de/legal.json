@@ -214,15 +214,15 @@
         "14.1": "14.1 Gelieferte Waren bleiben bis zur vollständigen Bezahlung aller gegenwärtigen und zukünftigen Forderungen aus der Geschäftsbeziehung Eigentum von Deepvac.",
         "14.2": "14.2 Der Kunde hat Vorbehaltsware sorgfältig zu behandeln und angemessen zu versichern.",
         "14.3": "14.3 Der Kunde darf die Ware im ordnungsgemäßen Geschäftsverkehr weiterveräußern. Der Kunde tritt Deepvac bereits jetzt sicherungshalber alle aus der Weiterveräußerung entstehenden Forderungen bis zur Höhe der offenen Forderungen von Deepvac ab. Deepvac nimmt diese Abtretung an."
-      },
-      "15": {
-        "title": "Gewährleistung und Mängelansprüche",
-        "15.1": "15.1 Der Kunde hat Liefergegenstände unverzüglich zu untersuchen und Mängel in Textform anzuzeigen. Offensichtliche Mängel sind innerhalb von vierzehn Kalendertagen nach Lieferung oder Fertigstellung anzuzeigen. Versteckte Mängel sind unverzüglich nach Entdeckung, spätestens jedoch innerhalb von vierzehn Kalendertagen nach Entdeckung, anzuzeigen.",
-        "15.2": "15.2 Bei berechtigten Mängeln wird Deepvac nach eigener Wahl den mangelhaften Liefergegenstand nachbessern oder ersetzen bzw. die mangelhafte Leistung erneut erbringen.",
-        "15.3": "15.3 Die Verjährungsfrist für Mängelansprüche beträgt zwölf Monate ab Lieferung oder Fertigstellung, soweit nicht zwingendes Recht längere Fristen vorschreibt.",
-        "15.4": "15.4 Ein Mangelanspruch besteht nicht bei unerheblichen Abweichungen, normalem Verschleiß, Mängeln infolge unsachgemäßer Nutzung, unbefugter Änderungen, Installationsfehlern durch den Kunden oder Dritte, ungeeigneten Betriebsbedingungen oder äußeren Einflüssen außerhalb der Kontrolle von Deepvac.",
-        "15.5": "15.5 Führen der Kunde oder Dritte ohne vorherige Zustimmung von Deepvac Nachbesserungsmaßnahmen durch, sind Mängelansprüche ausgeschlossen, sofern der Kunde nicht nachweist, dass diese Maßnahmen den Mangel weder verursacht noch verschlimmert haben."
-      },
+{
+  "15": {
+    "title": "Gewährleistung und Mängelansprüche",
+    "15.1": "15.1 Der Kunde hat Liefergegenstände unverzüglich nach Lieferung zu untersuchen, soweit dies im ordnungsgemäßen Geschäftsgang tunlich ist. Soweit § 377 HGB Anwendung findet, hat der Kunde die Liefergegenstände nach Maßgabe dieser Vorschrift zu untersuchen und Mängel anzuzeigen. In allen anderen Fällen hat der Kunde offensichtliche und versteckte Mängel in Textform unverzüglich nach Kenntniserlangung anzuzeigen.",
+    "15.2": "15.2 Bei berechtigten Mängeln wird Deepvac nach eigener Wahl den mangelhaften Liefergegenstand nachbessern oder ersetzen bzw. die mangelhafte Leistung erneut erbringen.",
+    "15.3": "15.3 Die Verjährungsfrist für Mängelansprüche beträgt bei Waren zwölf Monate ab Lieferung und bei Werkleistungen zwölf Monate ab Abnahme, soweit nicht zwingendes Recht eine längere Frist vorschreibt. Ist eine Abnahme nach der Art der Werkleistung ausgeschlossen, beginnt die Verjährungsfrist mit der Fertigstellung. Dies gilt nicht bei arglistigem Verschweigen, Übernahme einer Garantie, Verletzung des Lebens, des Körpers oder der Gesundheit, vorsätzlichem Verhalten, grober Fahrlässigkeit oder zwingender Haftung nach dem anwendbaren Produkthaftungsrecht.",
+    "15.4": "15.4 Ein Mangelanspruch besteht nicht bei unerheblichen Abweichungen, normalem Verschleiß, Mängeln infolge unsachgemäßer Nutzung, unbefugter Änderungen, Installationsfehlern durch den Kunden oder Dritte, ungeeigneten Betriebsbedingungen oder äußeren Einflüssen außerhalb der Kontrolle von Deepvac.",
+    "15.5": "15.5 Führen der Kunde oder Dritte ohne vorherige Zustimmung von Deepvac Nachbesserungsmaßnahmen durch, sind Mängelansprüche ausgeschlossen, sofern der Kunde nicht nachweist, dass diese Maßnahmen den Mangel weder verursacht noch verschlimmert haben."
+  },
       "16": {
         "title": "Haftung",
         "16.1": "16.1 Deepvac haftet unbeschränkt für Vorsatz, grobe Fahrlässigkeit sowie für Schäden aus der Verletzung des Lebens, des Körpers oder der Gesundheit.",
@@ -272,15 +272,16 @@
         "21.2": "21.2 Stellt der Kunde Gefahrstoffe bereit, hat er vorab vollständige Sicherheitsdatenblätter und Handhabungsanweisungen zu übermitteln.",
         "21.3": "21.3 Der Kunde stellt sicher, dass sämtliches Personal, das Einrichtungen von Deepvac besucht, ordnungsgemäß unterwiesen und entsprechend den geltenden Sicherheitsregeln ausgerüstet ist."
       },
-      "22": {
-        "title": "Aussetzung, Kündigung und Stornierung",
-        "22.1": "22.1 Deepvac darf die Leistung aussetzen, wenn der Kunde mit Zahlungen in Verzug ist oder Mitwirkungspflichten wesentlich verletzt, nachdem eine angemessene Frist gesetzt wurde.",
-        "22.2intro": "22.2 Storniert der Kunde einen Auftrag nach Vertragsschluss, ist Deepvac berechtigt, Folgendes in Rechnung zu stellen:",
-        "22.2a": "sämtliche bereits erbrachten Leistungen und entstandenen Kosten sowie",
-        "22.2b": "sämtliche verbindlich eingegangenen Drittkosten und nicht stornierbare Beschaffungen sowie",
-        "22.2c": "eine angemessene Stornogebühr, die den entgangenen Deckungsbeitrag widerspiegelt, es sei denn, der Kunde weist nach, dass Deepvac kein oder ein geringerer Schaden entstanden ist.",
-        "22.3": "22.3 Gesetzliche Rechte zur außerordentlichen Kündigung aus wichtigem Grund bleiben unberührt."
-      },
+  "22": {
+    "title": "Aussetzung, Kündigung und Stornierung",
+    "22.1": "22.1 Deepvac darf die Leistung aussetzen, wenn der Kunde mit Zahlungen in Verzug ist oder Mitwirkungspflichten wesentlich verletzt, nachdem eine angemessene Frist gesetzt wurde.",
+    "22.2intro": "22.2 Storniert der Kunde einen Auftrag nach Vertragsschluss, ist Deepvac berechtigt, Folgendes in Rechnung zu stellen:",
+    "22.2a": "sämtliche bereits erbrachten Leistungen und entstandenen Kosten sowie",
+    "22.2b": "sämtliche verbindlich eingegangenen Drittkosten und nicht stornierbare Beschaffungen sowie",
+    "22.2c": "eine angemessene Stornogebühr, die den noch nicht erfüllten Teil des Auftrags unter Berücksichtigung ersparter Aufwendungen und einer anderweitigen Nutzung von Ressourcen widerspiegelt, es sei denn, der Kunde weist nach, dass Deepvac kein oder ein geringerer Schaden entstanden ist.",
+    "22.3": "22.3 Gesetzliche Rechte zur außerordentlichen Kündigung aus wichtigem Grund bleiben unberührt."
+  }
+
       "23": {
         "title": "Abtretung",
         "23.1": "23.1 Der Kunde darf Rechte oder Pflichten aus dem Vertrag ohne vorherige schriftliche Zustimmung von Deepvac nicht abtreten.",
