@@ -121,9 +121,12 @@
     "seoDescription": "Quellenangaben und Nachweise für auf der Deepvac-Website verwendete Medien.",
     "eyebrow": "Quellenangaben",
     "title": "Medienquellen",
-    "intro": "Diese Website verwendet ausgewähltes Hintergrund-Videomaterial aus öffentlich zugänglichen NASA-bezogenen Quellen. Alle Quellenangaben und Nachweise für die Hero-Medien der Startseite sind nachfolgend aufgeführt.",
+    "intro": "Diese Website verwendet ausgewählte Medien aus öffentlich zugänglichen Quellen. Alle Quellenangaben und Nachweise sind nachfolgend aufgeführt.",
     "heroVideosHeading": "Startseiten-Hero-Videos",
+    "serviceImagesHeading": "Service-Abbildungen",
     "viewSource": "Quelle ansehen",
+    "license": "Lizenz",
+    "ccByNote": "Verwendet unter CC BY 3.0 Lizenz. Änderungen wurden möglicherweise vorgenommen.",
     "disclaimer": "Alle Marken, Namen, Logos, Insignien und sonstigen geschützten Kennzeichen verbleiben im Eigentum ihrer jeweiligen Inhaber. Quellenangaben dienen ausschließlich der Zuordnung und Identifikation.",
     "footerLink": "Medienquellen"
   }
