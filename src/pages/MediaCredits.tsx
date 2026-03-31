@@ -73,7 +73,7 @@ const serviceImageCredits: CreditEntry[] = [
     sourceUrl:
       "https://science.nasa.gov/photojournal/pj-europa-imaging-system-wide-angle-camera/",
     credit: "Credit: NASA / Johns Hopkins APL / Ed Whitman",
-    notAiModified: true,
+    aiModified: true,
   },
   {
     title: "subsystem-integration",
