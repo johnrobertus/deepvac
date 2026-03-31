@@ -46,7 +46,7 @@ const serviceImageCredits: CreditEntry[] = [
     credit: "Credit: Original authors (ResearchGate publication)",
     license: "Creative Commons Attribution 3.0 (CC BY 3.0)",
     ccBy: true,
-    notAiModified: true,
+    aiModified: true,
   },
   {
     title: "testing-services",
