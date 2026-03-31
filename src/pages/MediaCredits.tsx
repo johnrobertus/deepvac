@@ -35,7 +35,7 @@ const heroVideoCredits = [
   },
 ];
 
-const serviceImageCredits = [
+const serviceImageCredits: CreditEntry[] = [
   {
     title: "control-systems-design",
     usage: "Control Systems Design – Service page hero",
@@ -46,6 +46,7 @@ const serviceImageCredits = [
     credit: "Credit: Original authors (ResearchGate publication)",
     license: "Creative Commons Attribution 3.0 (CC BY 3.0)",
     ccBy: true,
+    notAiModified: true,
   },
   {
     title: "testing-services",
@@ -53,6 +54,17 @@ const serviceImageCredits = [
     description: "Thermal vacuum testing preparation at NASA Goddard",
     sourceUrl: "https://svs.gsfc.nasa.gov/14874/#media_group_378623",
     credit: "Credit: NASA / Lacey Young",
+    notAiModified: true,
+  },
+  {
+    title: "retrofit-modernization",
+    usage: "Retrofit & Modernization – Service page hero",
+    description:
+      "A technician surveys the TIRS instrument and the calibration equipment, preparing to move to the clean room after testing.",
+    sourceUrl:
+      "https://science.nasa.gov/missions/landsat/landsats-tirs-instrument-comes-out-of-first-round-of-thermal-vacuum-testing/",
+    credit: "Credit: NASA / Goddard / Bill Hrybyk",
+    notAiModified: true,
   },
   {
     title: "maintenance-repair",
@@ -61,6 +73,7 @@ const serviceImageCredits = [
     sourceUrl:
       "https://science.nasa.gov/photojournal/pj-europa-imaging-system-wide-angle-camera/",
     credit: "Credit: NASA / Johns Hopkins APL / Ed Whitman",
+    notAiModified: true,
   },
   {
     title: "subsystem-integration",
@@ -69,6 +82,7 @@ const serviceImageCredits = [
     sourceUrl: "https://svs.gsfc.nasa.gov/14354/#media_group_312367",
     credit:
       "Credit: NASA / Sophia Roberts · Contributors: Jeanette Kazmierczak, Aaron E. Lepsch",
+    notAiModified: true,
   },
 ];
 
@@ -80,6 +94,7 @@ interface CreditEntry {
   credit: string;
   license?: string;
   ccBy?: boolean;
+  notAiModified?: boolean;
 }
 
 function CreditCard({
@@ -112,6 +127,12 @@ function CreditCard({
       {entry.ccBy && (
         <p className="text-xs italic text-gray/50">
           {t("mediaCredits.ccByNote")}
+        </p>
+      )}
+
+      {entry.notAiModified && (
+        <p className="text-xs italic text-gray/50">
+          {t("mediaCredits.notAiModified")}
         </p>
       )}
 
