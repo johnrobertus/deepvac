@@ -131,11 +131,11 @@ function ServicePageTemplate({ seoKey, nsKey, heroImage }: ServicePageProps) {
 }
 
 export const TestingServices = () => (
-  <ServicePageTemplate seoKey="testingServices" nsKey="testing" />
+  <ServicePageTemplate seoKey="testingServices" nsKey="testing" heroImage={testingHero} />
 );
 
 export const ControlSystemsDesign = () => (
-  <ServicePageTemplate seoKey="controlSystems" nsKey="controlSystems" />
+  <ServicePageTemplate seoKey="controlSystems" nsKey="controlSystems" heroImage={controlSystemsHero} />
 );
 
 export const MechanicalDesign = () => (
@@ -143,13 +143,13 @@ export const MechanicalDesign = () => (
 );
 
 export const RetrofitModernisation = () => (
-  <ServicePageTemplate seoKey="retrofitModernization" nsKey="retrofit" />
+  <ServicePageTemplate seoKey="retrofitModernization" nsKey="retrofit" heroImage={retrofitHero} />
 );
 
 export const MaintenanceRepair = () => (
-  <ServicePageTemplate seoKey="maintenanceRepair" nsKey="maintenance" />
+  <ServicePageTemplate seoKey="maintenanceRepair" nsKey="maintenance" heroImage={maintenanceHero} />
 );
 
 export const SubsystemIntegration = () => (
-  <ServicePageTemplate seoKey="subsystemIntegration" nsKey="subsystemIntegration" />
+  <ServicePageTemplate seoKey="subsystemIntegration" nsKey="subsystemIntegration" heroImage={subsystemHero} />
 );
