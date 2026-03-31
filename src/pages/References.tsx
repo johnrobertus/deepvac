@@ -84,18 +84,20 @@ const References = () => {
         </Section>
 
         <Section>
-          {/*
-          Alter Placeholder-Block für:
-          - collaborations
-          - case studies
-          - testimonials
-          wurde entfernt
-          */}
+          <div className="relative overflow-hidden rounded-lg border border-gray/10 bg-surface/30 px-6 py-16 md:px-10 md:py-24 text-center">
+            <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,rgba(120,170,255,0.08),transparent_65%)]" />
 
-          <div className="bento-card rounded-lg min-h-[320px] md:min-h-[420px] flex items-center justify-center text-center">
-            <span className="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-wider text-sand">
-              Coming Soon
-            </span>
+            <div className="relative mx-auto max-w-3xl space-y-4">
+              <span className="mono-label text-blue/80">Placeholder Section</span>
+
+              <h2 className="text-4xl md:text-6xl lg:text-7xl font-semibold uppercase tracking-[0.18em] text-sand">
+                Coming Soon
+              </h2>
+
+              <p className="text-sm md:text-base text-gray leading-relaxed max-w-2xl mx-auto">
+                Selected case studies, collaborations and testimonials will be published here soon.
+              </p>
+            </div>
           </div>
         </Section>
 
