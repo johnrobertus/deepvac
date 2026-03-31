@@ -82,7 +82,7 @@ const serviceImageCredits: CreditEntry[] = [
     sourceUrl: "https://svs.gsfc.nasa.gov/14354/#media_group_312367",
     credit:
       "Credit: NASA / Sophia Roberts · Contributors: Jeanette Kazmierczak, Aaron E. Lepsch",
-    notAiModified: true,
+    aiModified: true,
   },
 ];
 
