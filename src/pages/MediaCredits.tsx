@@ -54,7 +54,7 @@ const serviceImageCredits: CreditEntry[] = [
     description: "Thermal vacuum testing preparation at NASA Goddard",
     sourceUrl: "https://svs.gsfc.nasa.gov/14874/#media_group_378623",
     credit: "Credit: NASA / Lacey Young",
-    notAiModified: true,
+    aiModified: true,
   },
   {
     title: "retrofit-modernization",
