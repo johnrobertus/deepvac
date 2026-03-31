@@ -6,7 +6,7 @@ import { Layout } from "@/components/Layout";
 import { PageShell, PageHero, Section, CTABand } from "@/components/PageShell";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Button } from "@/components/ui/button";
-import { Satellite, FlaskConical, Factory, Microscope, ArrowRight } from "lucide-react";
+import { Satellite, FlaskConical, Factory, Microscope } from "lucide-react";
 import { useLanguage } from "@/components/LanguageProvider";
 import { getHreflangs, getCanonical, localizedPath } from "@/lib/routes";
 
@@ -21,13 +21,12 @@ const References = () => {
   const hreflangs = getHreflangs(pathname);
   const canonical = getCanonical(pathname, lang);
 
-  const areas = t("industries.items", { returnObjects: true }) as Array<{ title: string; description: string }>;
-  const types = t("projectScope.types", { returnObjects: true }) as string[];
-  const caseStudies = t("caseStudies.items", { returnObjects: true }) as Array<{
-    category: string;
+  const areas = t("industries.items", { returnObjects: true }) as Array<{
     title: string;
-    summary: string;
+    description: string;
   }>;
+
+  const types = t("projectScope.types", { returnObjects: true }) as string[];
 
   return (
     <Layout>
@@ -84,94 +83,19 @@ const References = () => {
           </div>
         </Section>
 
-         {/*
         <Section>
-          <SectionHeader
-            eyebrow={t("collaborations.eyebrow")}
-            title={t("collaborations.title")}
-            description={t("collaborations.description")}
-            className="mb-10"
-          />
-
-         
-          <div className="border border-gray/10 rounded-lg p-10 blueprint-grid flex items-center justify-center">
-            <div className="text-center space-y-3">
-              <div className="flex items-center justify-center gap-6 flex-wrap">
-                {Array.from({ length: 6 }).map((_, i) => (
-                  <div key={i} className="w-24 h-12 rounded-sm border border-gray/15 flex items-center justify-center">
-                    <span className="mono-label text-gray/25">{t("collaborations.logoPlaceholder")}</span>
-                  </div>
-                ))}
-              </div>
-              <p className="mono-label text-gray/30 pt-4">{t("collaborations.placeholderText")}</p>
-            </div>
-          </div>
-          
-
-          <div className="bento-card rounded-lg p-10 text-center space-y-4 border border-gray/10">
-            <span className="mono-label text-blue">{t("caseStudies.comingSoon")}</span>
-            <h3 className="text-base font-medium text-sand">Collaboration references are being prepared</h3>
-            <p className="text-sm text-gray leading-relaxed max-w-xl mx-auto">
-              We will showcase selected partners, collaborations and project references here soon.
-            </p>
-          </div>
-        </Section>
-
-        <Section className="bg-surface/30">
-          <SectionHeader
-            eyebrow={t("caseStudies.eyebrow")}
-            title={t("caseStudies.title")}
-            description={t("caseStudies.description")}
-            className="mb-10"
-          />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {caseStudies.map((study, i) => (
-              <div key={i} className="bento-card rounded-lg overflow-hidden">
-                
-                <PlaceholderImage
-                  assetId={`CASE_${String(i + 1).padStart(2, "0")}`}
-                  type="PROJECT"
-                  aspectRatio="16/9"
-                  className="rounded-none"
-                />
-                
-
-                <div className="aspect-[16/9] border-b border-gray/10 bg-surface/40 flex items-center justify-center">
-                  <div className="text-center space-y-2">
-                    <span className="mono-label text-blue">{t("caseStudies.comingSoon")}</span>
-                    <p className="text-sm text-gray/60">Case study preview in preparation</p>
-                  </div>
-                </div>
-
-                <div className="p-6 space-y-3">
-                  <span className="mono-label text-blue">{study.category}</span>
-                  <h3 className="text-base font-medium text-sand">{study.title}</h3>
-                  <p className="text-sm text-gray leading-relaxed">{study.summary}</p>
-                  <span className="flex items-center gap-1.5 text-xs text-gray/40 font-mono">
-                    {t("caseStudies.comingSoon")}
-                    <ArrowRight className="w-3 h-3" />
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </Section>
-
-        <Section>
-        
-          <div className="bento-card rounded-lg p-8 md:p-10 text-center space-y-4 max-w-2xl mx-auto">
-            <span className="mono-label text-gray/30">{t("testimonials.eyebrow")}</span>
-            <p className="text-sm text-gray/40 italic max-w-lg mx-auto leading-relaxed">{t("testimonials.placeholder")}</p>
-            <span className="mono-label text-gray/20">{t("testimonials.label")}</span>
-          </div>
+          {/*
+          Alter Placeholder-Block für:
+          - collaborations
+          - case studies
+          - testimonials
+          wurde entfernt
           */}
 
-          <div className="bento-card rounded-lg p-8 md:p-10 text-center space-y-4 max-w-2xl mx-auto">
-            <span className="mono-label text-blue">{t("caseStudies.comingSoon")}</span>
-            <h3 className="text-base font-medium text-sand">{t("testimonials.eyebrow")}</h3>
-            <p className="text-sm text-gray leading-relaxed max-w-lg mx-auto">
-              Client testimonials and feedback will be added here soon.
-            </p>
+          <div className="bento-card rounded-lg min-h-[320px] md:min-h-[420px] flex items-center justify-center text-center">
+            <span className="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-wider text-sand">
+              Coming Soon
+            </span>
           </div>
         </Section>
 
