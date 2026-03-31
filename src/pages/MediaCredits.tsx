@@ -130,6 +130,12 @@ function CreditCard({
         </p>
       )}
 
+      {entry.notAiModified && (
+        <p className="text-xs italic text-gray/50">
+          {t("mediaCredits.notAiModified")}
+        </p>
+      )}
+
       <div className="flex flex-col gap-1.5 sm:flex-row sm:items-center sm:justify-between">
         <span className="text-sm text-sand/80">{entry.credit}</span>
         <a
