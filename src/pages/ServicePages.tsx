@@ -67,7 +67,7 @@ function ServicePageTemplate({ seoKey, nsKey, heroImage }: ServicePageProps) {
             </div>
             {heroImage ? (
               <div className="relative w-full overflow-hidden rounded-lg" style={{ aspectRatio: "4/3" }}>
-                <img src={heroImage} alt={t(`${nsKey}.title`)} className="w-full h-full object-cover" />
+                <img src={heroImage} alt={t(`${nsKey}.title`)} className="w-full h-full object-cover" loading="lazy" />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent pointer-events-none" />
               </div>
             ) : (
