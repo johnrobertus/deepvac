@@ -11,6 +11,11 @@ import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/components/LanguageProvider";
 import { getHreflangs, getCanonical, localizedPath } from "@/lib/routes";
 import mechanicalDesignHero from "@/assets/mechanical-design-hero.png";
+import controlSystemsHero from "@/assets/control-systems-hero.png";
+import testingHero from "@/assets/testing-hero.png";
+import retrofitHero from "@/assets/retrofit-hero.png";
+import maintenanceHero from "@/assets/maintenance-hero.png";
+import subsystemHero from "@/assets/subsystem-hero.png";
 
 interface ServicePageProps {
   seoKey: string;
@@ -62,7 +67,7 @@ function ServicePageTemplate({ seoKey, nsKey, heroImage }: ServicePageProps) {
             </div>
             {heroImage ? (
               <div className="relative w-full overflow-hidden rounded-lg" style={{ aspectRatio: "4/3" }}>
-                <img src={heroImage} alt={t(`${nsKey}.title`)} className="w-full h-full object-cover" />
+                <img src={heroImage} alt={t(`${nsKey}.title`)} className="w-full h-full object-cover" loading="lazy" />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent pointer-events-none" />
               </div>
             ) : (
@@ -126,11 +131,11 @@ function ServicePageTemplate({ seoKey, nsKey, heroImage }: ServicePageProps) {
 }
 
 export const TestingServices = () => (
-  <ServicePageTemplate seoKey="testingServices" nsKey="testing" />
+  <ServicePageTemplate seoKey="testingServices" nsKey="testing" heroImage={testingHero} />
 );
 
 export const ControlSystemsDesign = () => (
-  <ServicePageTemplate seoKey="controlSystems" nsKey="controlSystems" />
+  <ServicePageTemplate seoKey="controlSystems" nsKey="controlSystems" heroImage={controlSystemsHero} />
 );
 
 export const MechanicalDesign = () => (
@@ -138,13 +143,13 @@ export const MechanicalDesign = () => (
 );
 
 export const RetrofitModernisation = () => (
-  <ServicePageTemplate seoKey="retrofitModernization" nsKey="retrofit" />
+  <ServicePageTemplate seoKey="retrofitModernization" nsKey="retrofit" heroImage={retrofitHero} />
 );
 
 export const MaintenanceRepair = () => (
-  <ServicePageTemplate seoKey="maintenanceRepair" nsKey="maintenance" />
+  <ServicePageTemplate seoKey="maintenanceRepair" nsKey="maintenance" heroImage={maintenanceHero} />
 );
 
 export const SubsystemIntegration = () => (
-  <ServicePageTemplate seoKey="subsystemIntegration" nsKey="subsystemIntegration" />
+  <ServicePageTemplate seoKey="subsystemIntegration" nsKey="subsystemIntegration" heroImage={subsystemHero} />
 );

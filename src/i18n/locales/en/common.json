@@ -121,9 +121,14 @@
     "seoDescription": "Source references and attribution for media used on the Deepvac website.",
     "eyebrow": "Attribution",
     "title": "Media Credits",
-    "intro": "This website uses selected background video material from publicly available NASA-related sources. All source references and credits for the homepage hero media are listed below.",
+    "intro": "This website uses selected media from publicly available sources. All source references and credits are listed below.",
     "heroVideosHeading": "Homepage Hero Videos",
+    "serviceImagesHeading": "Service Images",
     "viewSource": "View source",
+    "license": "License",
+    "ccByNote": "Used under CC BY 3.0 license. Changes may have been made.",
+    "notAiModified": "This image has not been modified using AI tools.",
+    "aiModified": "This image has been visually modified using AI tools.",
     "disclaimer": "All trademarks, names, logos, insignia, and other protected identifiers remain the property of their respective owners. Source references are provided for attribution and identification purposes only.",
     "footerLink": "Media Credits"
   }
