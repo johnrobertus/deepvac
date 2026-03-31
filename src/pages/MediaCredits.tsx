@@ -89,6 +89,7 @@ interface CreditEntry {
   credit: string;
   license?: string;
   ccBy?: boolean;
+  notAiModified?: boolean;
 }
 
 function CreditCard({
