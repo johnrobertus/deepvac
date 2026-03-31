@@ -46,6 +46,7 @@ const serviceImageCredits: CreditEntry[] = [
     credit: "Credit: Original authors (ResearchGate publication)",
     license: "Creative Commons Attribution 3.0 (CC BY 3.0)",
     ccBy: true,
+    notAiModified: true,
   },
   {
     title: "testing-services",
@@ -53,6 +54,7 @@ const serviceImageCredits: CreditEntry[] = [
     description: "Thermal vacuum testing preparation at NASA Goddard",
     sourceUrl: "https://svs.gsfc.nasa.gov/14874/#media_group_378623",
     credit: "Credit: NASA / Lacey Young",
+    notAiModified: true,
   },
   {
     title: "retrofit-modernization",
@@ -62,6 +64,7 @@ const serviceImageCredits: CreditEntry[] = [
     sourceUrl:
       "https://science.nasa.gov/missions/landsat/landsats-tirs-instrument-comes-out-of-first-round-of-thermal-vacuum-testing/",
     credit: "Credit: NASA / Goddard / Bill Hrybyk",
+    notAiModified: true,
   },
   {
     title: "maintenance-repair",
@@ -70,6 +73,7 @@ const serviceImageCredits: CreditEntry[] = [
     sourceUrl:
       "https://science.nasa.gov/photojournal/pj-europa-imaging-system-wide-angle-camera/",
     credit: "Credit: NASA / Johns Hopkins APL / Ed Whitman",
+    notAiModified: true,
   },
   {
     title: "subsystem-integration",
@@ -78,6 +82,7 @@ const serviceImageCredits: CreditEntry[] = [
     sourceUrl: "https://svs.gsfc.nasa.gov/14354/#media_group_312367",
     credit:
       "Credit: NASA / Sophia Roberts · Contributors: Jeanette Kazmierczak, Aaron E. Lepsch",
+    notAiModified: true,
   },
 ];
 
