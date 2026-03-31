@@ -42,19 +42,17 @@ export function Footer() {
               <img src={deepvacLogo} alt="Deepvac" className="h-6 w-auto" />
             </Link>
 
-            <p className="max-w-sm text-sm leading-relaxed text-gray">
-              {t("footer.description")}
-            </p>
+            <p className="max-w-sm text-sm leading-relaxed text-gray">{t("footer.description")}</p>
 
             <div className="space-y-3 pt-1 text-sm text-gray">
               <div className="flex items-start gap-3">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-blue" />
                 <address className="not-italic leading-relaxed">
-                  Deepvac GmbH
-                  <br />
                   An der Universität 1
                   <br />
-                  30823 Garbsen, Germany
+                  30823 Garbsen
+                  <br />
+                  Germany
                 </address>
               </div>
 
@@ -101,9 +99,7 @@ export function Footer() {
 
       <div className="border-t border-gray/10 px-6 py-5">
         <div className="container flex max-w-6xl flex-col gap-4 md:flex-row md:items-center md:justify-between">
-          <p className="font-mono text-xs text-gray/50">
-            {t("footer.copyright", { year: new Date().getFullYear() })}
-          </p>
+          <p className="font-mono text-xs text-gray/50">{t("footer.copyright", { year: new Date().getFullYear() })}</p>
 
           <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
             <Link to={lp("/imprint")} className="text-xs text-gray/50 transition-colors hover:text-gray">
