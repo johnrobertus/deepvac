@@ -50,7 +50,9 @@ export function Footer() {
                 <address className="not-italic leading-relaxed">
                   An der Universität 1
                   <br />
-                  30823 Garbsen, Germany
+                  30823 Garbsen
+                  <br />
+                  Germany
                 </address>
               </div>
 
