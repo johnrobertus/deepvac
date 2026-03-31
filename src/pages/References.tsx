@@ -127,7 +127,7 @@ const References = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {caseStudies.map((study, i) => (
               <div key={i} className="bento-card rounded-lg overflow-hidden">
-                {/*
+                
                 <PlaceholderImage
                   assetId={`CASE_${String(i + 1).padStart(2, "0")}`}
                   type="PROJECT"
@@ -158,7 +158,7 @@ const References = () => {
         </Section>
 
         <Section>
-          {/*
+        
           <div className="bento-card rounded-lg p-8 md:p-10 text-center space-y-4 max-w-2xl mx-auto">
             <span className="mono-label text-gray/30">{t("testimonials.eyebrow")}</span>
             <p className="text-sm text-gray/40 italic max-w-lg mx-auto leading-relaxed">{t("testimonials.placeholder")}</p>
