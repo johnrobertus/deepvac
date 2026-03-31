@@ -84,6 +84,7 @@ const References = () => {
           </div>
         </Section>
 
+         {/*
         <Section>
           <SectionHeader
             eyebrow={t("collaborations.eyebrow")}
@@ -92,7 +93,7 @@ const References = () => {
             className="mb-10"
           />
 
-          {/*
+         
           <div className="border border-gray/10 rounded-lg p-10 blueprint-grid flex items-center justify-center">
             <div className="text-center space-y-3">
               <div className="flex items-center justify-center gap-6 flex-wrap">
@@ -105,7 +106,7 @@ const References = () => {
               <p className="mono-label text-gray/30 pt-4">{t("collaborations.placeholderText")}</p>
             </div>
           </div>
-          */}
+          
 
           <div className="bento-card rounded-lg p-10 text-center space-y-4 border border-gray/10">
             <span className="mono-label text-blue">{t("caseStudies.comingSoon")}</span>
@@ -133,7 +134,7 @@ const References = () => {
                   aspectRatio="16/9"
                   className="rounded-none"
                 />
-                */}
+                
 
                 <div className="aspect-[16/9] border-b border-gray/10 bg-surface/40 flex items-center justify-center">
                   <div className="text-center space-y-2">
