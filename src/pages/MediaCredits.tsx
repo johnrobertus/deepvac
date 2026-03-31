@@ -35,7 +35,7 @@ const heroVideoCredits = [
   },
 ];
 
-const serviceImageCredits = [
+const serviceImageCredits: CreditEntry[] = [
   {
     title: "control-systems-design",
     usage: "Control Systems Design – Service page hero",
@@ -53,6 +53,15 @@ const serviceImageCredits = [
     description: "Thermal vacuum testing preparation at NASA Goddard",
     sourceUrl: "https://svs.gsfc.nasa.gov/14874/#media_group_378623",
     credit: "Credit: NASA / Lacey Young",
+  },
+  {
+    title: "retrofit-modernization",
+    usage: "Retrofit & Modernization – Service page hero",
+    description:
+      "A technician surveys the TIRS instrument and the calibration equipment, preparing to move to the clean room after testing.",
+    sourceUrl:
+      "https://science.nasa.gov/missions/landsat/landsats-tirs-instrument-comes-out-of-first-round-of-thermal-vacuum-testing/",
+    credit: "Credit: NASA / Goddard / Bill Hrybyk",
   },
   {
     title: "maintenance-repair",
