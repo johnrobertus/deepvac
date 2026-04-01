@@ -66,11 +66,11 @@ const Products = () => {
           title={t("overview.title")}
           description={t("overview.description")}
         >
-          <div className="flex flex-wrap gap-3 pt-4">
-            <Button asChild size="lg" className="font-mono text-xs tracking-wide">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-3 pt-4">
+            <Button asChild size="lg" className="font-mono text-xs tracking-wide w-full sm:w-auto">
               <Link to={localizedPath("/contact", lang)}>{tc("buttons.requestConsultation")}</Link>
             </Button>
-            <Button asChild variant="outline" size="lg">
+            <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
               <Link to={localizedPath("/catalogs", lang)}>{tc("buttons.downloadProductOverview")}</Link>
             </Button>
           </div>
