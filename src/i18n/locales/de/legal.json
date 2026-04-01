@@ -1,389 +1,389 @@
 {
-  "imprint": {
-    "eyebrow": "Rechtliches",
-    "title": "Impressum",
-    "representedBy": "Vertreten durch den Geschäftsführer John Robertus",
-    "registeredOffice": "Sitz der Gesellschaft",
-    "registeredOfficeValue": "Hannover, Deutschland",
-    "businessAddress": "Geschäftsadresse",
-    "contact": "Kontakt",
-    "commercialRegister": "Handelsregister",
-    "shareCapital": "Stammkapital",
-    "shareCapitalValue": "25.000,00 EUR"
+  \u201Cimprint\u201C: {
+    \u201Ceyebrow\u201C: \u201CRechtliches\u201C,
+    \u201Ctitle\u201C: \u201CImpressum\u201C,
+    \u201CrepresentedBy\u201C: \u201CVertreten durch den Geschäftsführer John Robertus\u201C,
+    \u201CregisteredOffice\u201C: \u201CSitz der Gesellschaft\u201C,
+    \u201CregisteredOfficeValue\u201C: \u201CHannover, Deutschland\u201C,
+    \u201CbusinessAddress\u201C: \u201CGeschäftsadresse\u201C,
+    \u201Ccontact\u201C: \u201CKontakt\u201C,
+    \u201CcommercialRegister\u201C: \u201CHandelsregister\u201C,
+    \u201CshareCapital\u201C: \u201CStammkapital\u201C,
+    \u201CshareCapitalValue\u201C: \u201C25.000,00 EUR\u201C
   },
-  "privacy": {
-    "eyebrow": "Rechtliches",
-    "title": "Datenschutzerklärung",
-    "lastUpdated": "Zuletzt aktualisiert: 29. März 2026",
-    "sections": {
-      "controller": "Verantwortlicher",
-      "generalInfo": "Allgemeine Hinweise zur Datenverarbeitung",
-      "generalInfoText": "Wir verarbeiten personenbezogene Daten nur, soweit dies zur Bereitstellung einer funktionsfähigen Website, zur Beantwortung von Anfragen, zur Darstellung unserer Leistungen sowie zur sicheren und effizienten Durchführung unserer Geschäftskommunikation erforderlich ist.",
-      "generalInfoText2": "Die Verarbeitung erfolgt in Übereinstimmung mit der Datenschutz-Grundverordnung (DSGVO) und den geltenden deutschen Datenschutzgesetzen.",
-      "generalInfoText3": "Personenbezogene Daten werden nicht an Dritte weitergegeben, es sei denn, dies ist für den technischen Betrieb der Website, die Vertragserfüllung oder vorvertragliche Maßnahmen, die Einhaltung gesetzlicher Verpflichtungen, auf Grundlage Ihrer Einwilligung oder auf anderer gesetzlicher Grundlage erforderlich.",
-      "legalBases": "Rechtsgrundlagen der Verarbeitung",
-      "legalBasesIntro": "Bei der Verarbeitung personenbezogener Daten stützen wir uns insbesondere auf folgende Rechtsgrundlagen:",
-      "legalBasesList": [
-        "Art. 6 Abs. 1 lit. a DSGVO: Einwilligung",
-        "Art. 6 Abs. 1 lit. b DSGVO: Vertragserfüllung oder vorvertragliche Maßnahmen",
-        "Art. 6 Abs. 1 lit. c DSGVO: Erfüllung einer rechtlichen Verpflichtung",
-        "Art. 6 Abs. 1 lit. f DSGVO: Berechtigte Interessen"
+  \u201Cprivacy\u201C: {
+    \u201Ceyebrow\u201C: \u201CRechtliches\u201C,
+    \u201Ctitle\u201C: \u201CDatenschutzerklärung\u201C,
+    \u201ClastUpdated\u201C: \u201CZuletzt aktualisiert: 29. März 2026\u201C,
+    \u201Csections\u201C: {
+      \u201Ccontroller\u201C: \u201CVerantwortlicher\u201C,
+      \u201CgeneralInfo\u201C: \u201CAllgemeine Hinweise zur Datenverarbeitung\u201C,
+      \u201CgeneralInfoText\u201C: \u201CWir verarbeiten personenbezogene Daten nur, soweit dies zur Bereitstellung einer funktionsfähigen Website, zur Beantwortung von Anfragen, zur Darstellung unserer Leistungen sowie zur sicheren und effizienten Durchführung unserer Geschäftskommunikation erforderlich ist.\u201C,
+      \u201CgeneralInfoText2\u201C: \u201CDie Verarbeitung erfolgt in Übereinstimmung mit der Datenschutz-Grundverordnung (DSGVO) und den geltenden deutschen Datenschutzgesetzen.\u201C,
+      \u201CgeneralInfoText3\u201C: \u201CPersonenbezogene Daten werden nicht an Dritte weitergegeben, es sei denn, dies ist für den technischen Betrieb der Website, die Vertragserfüllung oder vorvertragliche Maßnahmen, die Einhaltung gesetzlicher Verpflichtungen, auf Grundlage Ihrer Einwilligung oder auf anderer gesetzlicher Grundlage erforderlich.\u201C,
+      \u201ClegalBases\u201C: \u201CRechtsgrundlagen der Verarbeitung\u201C,
+      \u201ClegalBasesIntro\u201C: \u201CBei der Verarbeitung personenbezogener Daten stützen wir uns insbesondere auf folgende Rechtsgrundlagen:\u201C,
+      \u201ClegalBasesList\u201C: [
+        \u201CArt. 6 Abs. 1 lit. a DSGVO: Einwilligung\u201C,
+        \u201CArt. 6 Abs. 1 lit. b DSGVO: Vertragserfüllung oder vorvertragliche Maßnahmen\u201C,
+        \u201CArt. 6 Abs. 1 lit. c DSGVO: Erfüllung einer rechtlichen Verpflichtung\u201C,
+        \u201CArt. 6 Abs. 1 lit. f DSGVO: Berechtigte Interessen\u201C
       ],
-      "legalBasesNote": "Soweit die Verarbeitung auf Art. 6 Abs. 1 lit. f DSGVO beruht, liegen unsere berechtigten Interessen im sicheren, stabilen, effizienten und nutzerorientierten Betrieb unserer Website, in der professionellen Darstellung unseres Unternehmens sowie in unserer Geschäftskommunikation.",
-      "serverLogs": "Website-Zugriffsdaten und Server-Logfiles",
-      "serverLogsIntro": "Beim Zugriff auf unsere Website werden automatisch Informationen durch unseren Hosting-Anbieter in sogenannten Server-Logfiles erfasst. Dies kann umfassen:",
-      "serverLogsList": [
-        "IP-Adresse",
-        "Datum und Uhrzeit des Zugriffs",
-        "Angeforderte Inhalte",
-        "Zugriffsstatus und HTTP-Statuscode",
-        "Übertragene Datenmenge",
-        "Referrer-URL",
-        "Browsertyp und -version",
-        "Betriebssystem"
+      \u201ClegalBasesNote\u201C: \u201CSoweit die Verarbeitung auf Art. 6 Abs. 1 lit. f DSGVO beruht, liegen unsere berechtigten Interessen im sicheren, stabilen, effizienten und nutzerorientierten Betrieb unserer Website, in der professionellen Darstellung unseres Unternehmens sowie in unserer Geschäftskommunikation.\u201C,
+      \u201CserverLogs\u201C: \u201CWebsite-Zugriffsdaten und Server-Logfiles\u201C,
+      \u201CserverLogsIntro\u201C: \u201CBeim Zugriff auf unsere Website werden automatisch Informationen durch unseren Hosting-Anbieter in sogenannten Server-Logfiles erfasst. Dies kann umfassen:\u201C,
+      \u201CserverLogsList\u201C: [
+        \u201CIP-Adresse\u201C,
+        \u201CDatum und Uhrzeit des Zugriffs\u201C,
+        \u201CAngeforderte Inhalte\u201C,
+        \u201CZugriffsstatus und HTTP-Statuscode\u201C,
+        \u201CÜbertragene Datenmenge\u201C,
+        \u201CReferrer-URL\u201C,
+        \u201CBrowsertyp und -version\u201C,
+        \u201CBetriebssystem\u201C
       ],
-      "serverLogsNote": "Diese Daten werden verarbeitet, um die Stabilität, Sicherheit und technische Funktionsfähigkeit der Website zu gewährleisten sowie um Missbrauch und sicherheitsrelevante Vorfälle zu erkennen, zu verhindern und zu untersuchen.",
-      "serverLogsLegal": "Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO.",
-      "serverLogsRetention": "Server-Logdaten werden in der Regel für maximal 7 Tage gespeichert, es sei denn, eine längere Aufbewahrung ist zur Untersuchung sicherheitsrelevanter Vorfälle oder zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen erforderlich.",
-      "contactForm": "Kontaktaufnahme per E-Mail oder Kontaktformular",
-      "contactFormText": "Wenn Sie uns per E-Mail kontaktieren oder eine Anfrage über unser Kontaktformular stellen, verarbeiten wir die von Ihnen bereitgestellten personenbezogenen Daten zum Zweck der Bearbeitung Ihrer Anfrage und der Kommunikation mit Ihnen.",
-      "contactFormDataIntro": "Dies kann insbesondere folgende Daten umfassen:",
-      "contactFormDataList": [
-        "Vorname",
-        "Nachname",
-        "geschäftliche E-Mail-Adresse",
-        "Firmenname",
-        "Telefonnummer, sofern freiwillig angegeben",
-        "Projekt- oder Anwendungsinformationen",
-        "Nachrichteninhalt"
+      \u201CserverLogsNote\u201C: \u201CDiese Daten werden verarbeitet, um die Stabilität, Sicherheit und technische Funktionsfähigkeit der Website zu gewährleisten sowie um Missbrauch und sicherheitsrelevante Vorfälle zu erkennen, zu verhindern und zu untersuchen.\u201C,
+      \u201CserverLogsLegal\u201C: \u201CRechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO.\u201C,
+      \u201CserverLogsRetention\u201C: \u201CServer-Logdaten werden in der Regel für maximal 7 Tage gespeichert, es sei denn, eine längere Aufbewahrung ist zur Untersuchung sicherheitsrelevanter Vorfälle oder zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen erforderlich.\u201C,
+      \u201CcontactForm\u201C: \u201CKontaktaufnahme per E-Mail oder Kontaktformular\u201C,
+      \u201CcontactFormText\u201C: \u201CWenn Sie uns per E-Mail kontaktieren oder eine Anfrage über unser Kontaktformular stellen, verarbeiten wir die von Ihnen bereitgestellten personenbezogenen Daten zum Zweck der Bearbeitung Ihrer Anfrage und der Kommunikation mit Ihnen.\u201C,
+      \u201CcontactFormDataIntro\u201C: \u201CDies kann insbesondere folgende Daten umfassen:\u201C,
+      \u201CcontactFormDataList\u201C: [
+        \u201CVorname\u201C,
+        \u201CNachname\u201C,
+        \u201Cgeschäftliche E-Mail-Adresse\u201C,
+        \u201CFirmenname\u201C,
+        \u201CTelefonnummer, sofern freiwillig angegeben\u201C,
+        \u201CProjekt- oder Anwendungsinformationen\u201C,
+        \u201CNachrichteninhalt\u201C
       ],
-      "contactFormRequired": "Pflichtfelder im Kontaktformular sind entsprechend gekennzeichnet. Diese Daten sind erforderlich, um Ihre Anfrage bearbeiten zu können.",
-      "contactFormLegal": "Rechtsgrundlage:",
-      "contactFormLegalList": [
-        "Art. 6 Abs. 1 lit. b DSGVO, wenn sich Ihre Anfrage auf vorvertragliche Maßnahmen oder die Vertragserfüllung bezieht",
-        "Art. 6 Abs. 1 lit. f DSGVO für allgemeine geschäftliche Kommunikation und sonstige Anfragen"
+      \u201CcontactFormRequired\u201C: \u201CPflichtfelder im Kontaktformular sind entsprechend gekennzeichnet. Diese Daten sind erforderlich, um Ihre Anfrage bearbeiten zu können.\u201C,
+      \u201CcontactFormLegal\u201C: \u201CRechtsgrundlage:\u201C,
+      \u201CcontactFormLegalList\u201C: [
+        \u201CArt. 6 Abs. 1 lit. b DSGVO, wenn sich Ihre Anfrage auf vorvertragliche Maßnahmen oder die Vertragserfüllung bezieht\u201C,
+        \u201CArt. 6 Abs. 1 lit. f DSGVO für allgemeine geschäftliche Kommunikation und sonstige Anfragen\u201C
       ],
-      "contactFormNote": "Ihre Daten werden nicht an Dritte weitergegeben, es sei denn, dies ist zur Bearbeitung Ihrer Anfrage erforderlich, gesetzlich vorgeschrieben oder anderweitig rechtlich zulässig.",
-      "contactFormRetention": "Wir speichern Ihre Anfrage nur so lange, wie dies zur Bearbeitung erforderlich ist. Soweit gesetzliche Aufbewahrungspflichten bestehen, erfolgt eine Speicherung für die gesetzlich vorgeschriebene Dauer.",
-      "provisionOfData": "Bereitstellung personenbezogener Daten",
-      "provisionOfDataText": "Die Bereitstellung personenbezogener Daten ist weder gesetzlich noch vertraglich vorgeschrieben. Bestimmte Angaben können jedoch erforderlich sein, um Ihre Anfrage zu bearbeiten. Ohne diese Daten können wir Ihre Anfrage möglicherweise nicht bearbeiten.",
-      "hosting": "Hosting",
-      "hostingIntro": "Diese Website wird gehostet von:",
-      "hostingNote": "Hetzner Online GmbH verarbeitet personenbezogene Daten in unserem Auftrag auf Grundlage eines Auftragsverarbeitungsvertrags gemäß Art. 28 DSGVO. Die Datenverarbeitung erfolgt auf Servern in Nürnberg, Deutschland.",
-      "cookies": "Cookies",
-      "cookiesText": "Diese Website verwendet ausschließlich technisch notwendige Cookies, die für den sicheren und ordnungsgemäßen Betrieb der Website erforderlich sind.",
-      "cookiesText2": "Es werden keine Marketing-, Profiling-, Analyse- oder Werbetracking-Technologien eingesetzt.",
-      "cookiesLegal": "Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO. Unser berechtigtes Interesse liegt in der sicheren und effizienten Bereitstellung unserer Website.",
-      "dataRetention": "Datenspeicherung",
-      "dataRetentionText": "Personenbezogene Daten werden nur so lange gespeichert, wie dies für den jeweiligen Verarbeitungszweck erforderlich ist oder gesetzliche Aufbewahrungsfristen nach deutschem Recht dies verlangen.",
-      "dataRetentionText2": "Geschäftskorrespondenz kann gemäß den geltenden handels- und steuerrechtlichen Aufbewahrungspflichten aufbewahrt werden.",
-      "dataSecurity": "Datensicherheit",
-      "dataSecurityText": "Wir setzen geeignete technische und organisatorische Maßnahmen ein, um personenbezogene Daten gegen zufällige oder unrechtmäßige Zerstörung, Verlust, Veränderung, unbefugte Offenlegung oder unbefugten Zugang zu schützen.",
-      "dataSecurityText2": "Die Datenübertragung zwischen Ihrem Browser und unserer Website wird mittels SSL- bzw. TLS-Technologie verschlüsselt.",
-      "yourRights": "Ihre Rechte",
-      "yourRightsIntro": "Sie haben nach der DSGVO folgende Rechte:",
-      "yourRightsList": [
-        "Auskunftsrecht gemäß Art. 15 DSGVO",
-        "Recht auf Berichtigung gemäß Art. 16 DSGVO",
-        "Recht auf Löschung gemäß Art. 17 DSGVO",
-        "Recht auf Einschränkung der Verarbeitung gemäß Art. 18 DSGVO",
-        "Recht auf Datenübertragbarkeit gemäß Art. 20 DSGVO",
-        "Widerspruchsrecht gemäß Art. 21 DSGVO",
-        "Recht auf Widerruf der Einwilligung jederzeit gemäß Art. 7 Abs. 3 DSGVO"
+      \u201CcontactFormNote\u201C: \u201CIhre Daten werden nicht an Dritte weitergegeben, es sei denn, dies ist zur Bearbeitung Ihrer Anfrage erforderlich, gesetzlich vorgeschrieben oder anderweitig rechtlich zulässig.\u201C,
+      \u201CcontactFormRetention\u201C: \u201CWir speichern Ihre Anfrage nur so lange, wie dies zur Bearbeitung erforderlich ist. Soweit gesetzliche Aufbewahrungspflichten bestehen, erfolgt eine Speicherung für die gesetzlich vorgeschriebene Dauer.\u201C,
+      \u201CprovisionOfData\u201C: \u201CBereitstellung personenbezogener Daten\u201C,
+      \u201CprovisionOfDataText\u201C: \u201CDie Bereitstellung personenbezogener Daten ist weder gesetzlich noch vertraglich vorgeschrieben. Bestimmte Angaben können jedoch erforderlich sein, um Ihre Anfrage zu bearbeiten. Ohne diese Daten können wir Ihre Anfrage möglicherweise nicht bearbeiten.\u201C,
+      \u201Chosting\u201C: \u201CHosting\u201C,
+      \u201ChostingIntro\u201C: \u201CDiese Website wird gehostet von:\u201C,
+      \u201ChostingNote\u201C: \u201CHetzner Online GmbH verarbeitet personenbezogene Daten in unserem Auftrag auf Grundlage eines Auftragsverarbeitungsvertrags gemäß Art. 28 DSGVO. Die Datenverarbeitung erfolgt auf Servern in Nürnberg, Deutschland.\u201C,
+      \u201Ccookies\u201C: \u201CCookies\u201C,
+      \u201CcookiesText\u201C: \u201CDiese Website verwendet ausschließlich technisch notwendige Cookies, die für den sicheren und ordnungsgemäßen Betrieb der Website erforderlich sind.\u201C,
+      \u201CcookiesText2\u201C: \u201CEs werden keine Marketing-, Profiling-, Analyse- oder Werbetracking-Technologien eingesetzt.\u201C,
+      \u201CcookiesLegal\u201C: \u201CRechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO. Unser berechtigtes Interesse liegt in der sicheren und effizienten Bereitstellung unserer Website.\u201C,
+      \u201CdataRetention\u201C: \u201CDatenspeicherung\u201C,
+      \u201CdataRetentionText\u201C: \u201CPersonenbezogene Daten werden nur so lange gespeichert, wie dies für den jeweiligen Verarbeitungszweck erforderlich ist oder gesetzliche Aufbewahrungsfristen nach deutschem Recht dies verlangen.\u201C,
+      \u201CdataRetentionText2\u201C: \u201CGeschäftskorrespondenz kann gemäß den geltenden handels- und steuerrechtlichen Aufbewahrungspflichten aufbewahrt werden.\u201C,
+      \u201CdataSecurity\u201C: \u201CDatensicherheit\u201C,
+      \u201CdataSecurityText\u201C: \u201CWir setzen geeignete technische und organisatorische Maßnahmen ein, um personenbezogene Daten gegen zufällige oder unrechtmäßige Zerstörung, Verlust, Veränderung, unbefugte Offenlegung oder unbefugten Zugang zu schützen.\u201C,
+      \u201CdataSecurityText2\u201C: \u201CDie Datenübertragung zwischen Ihrem Browser und unserer Website wird mittels SSL- bzw. TLS-Technologie verschlüsselt.\u201C,
+      \u201CyourRights\u201C: \u201CIhre Rechte\u201C,
+      \u201CyourRightsIntro\u201C: \u201CSie haben nach der DSGVO folgende Rechte:\u201C,
+      \u201CyourRightsList\u201C: [
+        \u201CAuskunftsrecht gemäß Art. 15 DSGVO\u201C,
+        \u201CRecht auf Berichtigung gemäß Art. 16 DSGVO\u201C,
+        \u201CRecht auf Löschung gemäß Art. 17 DSGVO\u201C,
+        \u201CRecht auf Einschränkung der Verarbeitung gemäß Art. 18 DSGVO\u201C,
+        \u201CRecht auf Datenübertragbarkeit gemäß Art. 20 DSGVO\u201C,
+        \u201CWiderspruchsrecht gemäß Art. 21 DSGVO\u201C,
+        \u201CRecht auf Widerruf der Einwilligung jederzeit gemäß Art. 7 Abs. 3 DSGVO\u201C
       ],
-      "yourRightsNote": "Soweit personenbezogene Daten auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO verarbeitet werden, haben Sie jederzeit das Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, Widerspruch einzulegen.",
-      "supervisoryAuthority": "Aufsichtsbehörde",
-      "supervisoryAuthorityText": "Wenn Sie der Auffassung sind, dass die Verarbeitung Ihrer personenbezogenen Daten gegen geltendes Datenschutzrecht verstößt, haben Sie das Recht, sich bei einer Aufsichtsbehörde zu beschweren.",
-      "supervisoryAuthorityCompetent": "Die zuständige Aufsichtsbehörde für die Deepvac GmbH ist:",
-      "noAutomatedDecisionMaking": "Keine automatisierte Entscheidungsfindung",
-      "noAutomatedDecisionMakingText": "Wir verwenden im Zusammenhang mit dieser Website keine automatisierte Entscheidungsfindung einschließlich Profiling im Sinne von Art. 22 DSGVO.",
-      "changes": "Änderungen dieser Datenschutzerklärung",
-      "changesText": "Wir behalten uns vor, diese Datenschutzerklärung zu aktualisieren, um Änderungen der Rechtslage oder Änderungen unserer Website oder unserer Leistungen zu berücksichtigen. Es gilt die jeweils auf unserer Website veröffentlichte Fassung."
+      \u201CyourRightsNote\u201C: \u201CSoweit personenbezogene Daten auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO verarbeitet werden, haben Sie jederzeit das Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, Widerspruch einzulegen.\u201C,
+      \u201CsupervisoryAuthority\u201C: \u201CAufsichtsbehörde\u201C,
+      \u201CsupervisoryAuthorityText\u201C: \u201CWenn Sie der Auffassung sind, dass die Verarbeitung Ihrer personenbezogenen Daten gegen geltendes Datenschutzrecht verstößt, haben Sie das Recht, sich bei einer Aufsichtsbehörde zu beschweren.\u201C,
+      \u201CsupervisoryAuthorityCompetent\u201C: \u201CDie zuständige Aufsichtsbehörde für die Deepvac GmbH ist:\u201C,
+      \u201CnoAutomatedDecisionMaking\u201C: \u201CKeine automatisierte Entscheidungsfindung\u201C,
+      \u201CnoAutomatedDecisionMakingText\u201C: \u201CWir verwenden im Zusammenhang mit dieser Website keine automatisierte Entscheidungsfindung einschließlich Profiling im Sinne von Art. 22 DSGVO.\u201C,
+      \u201Cchanges\u201C: \u201CÄnderungen dieser Datenschutzerklärung\u201C,
+      \u201CchangesText\u201C: \u201CWir behalten uns vor, diese Datenschutzerklärung zu aktualisieren, um Änderungen der Rechtslage oder Änderungen unserer Website oder unserer Leistungen zu berücksichtigen. Es gilt die jeweils auf unserer Website veröffentlichte Fassung.\u201C
     }
   },
-  "terms": {
-    "eyebrow": "Rechtliches",
-    "title": "Allgemeine Geschäftsbedingungen",
-    "effectiveDate": "Gültig ab: 01.04.2026",
-    "partA": "Teil A — Allgemeine Bestimmungen",
-    "partB": "Teil B — Leistung und Durchführung",
-    "partC": "Teil C — Abnahme und Inbetriebnahme",
-    "partD": "Teil D — Portfoliospezifische Bestimmungen",
-    "partE": "Teil E — Rechtlicher Rahmen",
-    "sections": {
-      "1": {
-        "title": "Parteien und Kontakt",
-        "provider": "Anbieter",
-        "customer": "Kunde",
-        "customerText": "Der vertragsschließende Geschäftskunde, wie im Angebot, in der Bestellung oder in der Auftragsbestätigung bezeichnet."
+  \u201Cterms\u201C: {
+    \u201Ceyebrow\u201C: \u201CRechtliches\u201C,
+    \u201Ctitle\u201C: \u201CAllgemeine Geschäftsbedingungen\u201C,
+    \u201CeffectiveDate\u201C: \u201CGültig ab: 01.04.2026\u201C,
+    \u201CpartA\u201C: \u201CTeil A — Allgemeine Bestimmungen\u201C,
+    \u201CpartB\u201C: \u201CTeil B — Leistung und Durchführung\u201C,
+    \u201CpartC\u201C: \u201CTeil C — Abnahme und Inbetriebnahme\u201C,
+    \u201CpartD\u201C: \u201CTeil D — Portfoliospezifische Bestimmungen\u201C,
+    \u201CpartE\u201C: \u201CTeil E — Rechtlicher Rahmen\u201C,
+    \u201Csections\u201C: {
+      \u201C1\u201C: {
+        \u201Ctitle\u201C: \u201CParteien und Kontakt\u201C,
+        \u201Cprovider\u201C: \u201CAnbieter\u201C,
+        \u201Ccustomer\u201C: \u201CKunde\u201C,
+        \u201CcustomerText\u201C: \u201CDer vertragsschließende Geschäftskunde, wie im Angebot, in der Bestellung oder in der Auftragsbestätigung bezeichnet.\u201C
       },
-      "2": {
-        "title": "Definitionen",
-        "c1": "2.1 „Deepvac" bedeutet Deepvac GmbH.",
-        "c2": "2.2 „Kunde" bezeichnet die vertragsschließende Partei, die Liefergegenstände oder Leistungen von Deepvac erhält.",
-        "c3": "2.3 „Verbundenes Unternehmen" bezeichnet jede Einheit, die eine Partei kontrolliert, von ihr kontrolliert wird oder mit ihr unter gemeinsamer Kontrolle steht. Kontrolle bedeutet das unmittelbare oder mittelbare Halten von mehr als 50 Prozent der Stimmrechte oder anderweitig die Möglichkeit, die Geschäftsführung und Unternehmenspolitik zu bestimmen.",
-        "c4": "2.4 „Liefergegenstände" bezeichnet Hardware, Teile, Prototypen, Baugruppen, Kammersysteme, thermische Subsysteme, Vakuumsubsysteme, Steuerungssysteme, SPS-Software, HMI-Software, Firmware, Modelle, Zeichnungen, Dokumentation, Prüfpläne, Abnahmekriterien, Prüfberichte, Daten und sonstige von Deepvac bereitgestellte Arbeitsergebnisse.",
-        "c5": "2.5 „Leistungen" bezeichnet Prüfleistungen, Engineering, Konstruktion, Entwicklung, Beratung, Integration, Inbetriebnahme, Schulung, Wartung, Reparatur, Retrofit, Modernisierung, Fernüberwachung, Datenerfassung und damit zusammenhängende Tätigkeiten, die von Deepvac erbracht werden.",
-        "c6": "2.6 „Bestellung" bezeichnet die Bestellung des Kunden, die Annahme eines Angebots oder eine sonstige schriftliche Anweisung zur Durchführung.",
-        "c7": "2.7 „Vertrag" bezeichnet die nach Ziffer 4 zustande kommende verbindliche Vereinbarung einschließlich aller in Ziffer 5 genannten Dokumente.",
-        "c8": "2.8 „Software" bezeichnet SPS-Programme, HMI-Anwendungen, übergeordnete Steuerungslogik, Regelsequenzen, Datenerfassungsroutinen, Automatisierungsskripte, Ereignisprotokollkonfigurationen, Schnittstellentreiber sowie jede andere von Deepvac im Rahmen des Vertrags entwickelte oder bereitgestellte Software.",
-        "c9": "2.9 „System" bezeichnet ein Thermovakuumkammersystem einschließlich aller integrierten mechanischen, thermischen, Vakuum-, elektrischen, Instrumentierungs- und Steuerungskomponenten gemäß dem Vertrag.",
-        "c10": "2.10 „Bestandsanlage" bezeichnet vorhandene Anlagen, Infrastruktur, Steuerungen oder Installationen am Standort des Kunden oder im Besitz des Kunden, die nicht von Deepvac im Rahmen des jeweiligen Vertrags geliefert werden.",
-        "c11": "2.11 „FAT" bezeichnet die Werksabnahmeprüfung (Factory Acceptance Test), die in den Räumlichkeiten von Deepvac oder eines Subunternehmers durchgeführt wird.",
-        "c12": "2.12 „SAT" bezeichnet die Standortabnahmeprüfung (Site Acceptance Test), die nach Lieferung, Installation oder Inbetriebnahme am Standort des Kunden durchgeführt wird.",
-        "c13": "2.13 „Prüfgegenstand" bezeichnet Hardware, Komponenten, Baugruppen, Satelliten, Instrumente oder sonstige vom Kunden zur Prüfung durch Deepvac bereitgestellte Objekte."
+      \u201C2\u201C: {
+        \u201Ctitle\u201C: \u201CDefinitionen\u201C,
+        \u201Cc1\u201C: \u201C2.1 \u201EDeepvac\u201C bedeutet Deepvac GmbH.\u201C,
+        \u201Cc2\u201C: \u201C2.2 \u201EKunde\u201C bezeichnet die vertragsschließende Partei, die Liefergegenstände oder Leistungen von Deepvac erhält.\u201C,
+        \u201Cc3\u201C: \u201C2.3 \u201EVerbundenes Unternehmen\u201C bezeichnet jede Einheit, die eine Partei kontrolliert, von ihr kontrolliert wird oder mit ihr unter gemeinsamer Kontrolle steht. Kontrolle bedeutet das unmittelbare oder mittelbare Halten von mehr als 50 Prozent der Stimmrechte oder anderweitig die Möglichkeit, die Geschäftsführung und Unternehmenspolitik zu bestimmen.\u201C,
+        \u201Cc4\u201C: \u201C2.4 \u201ELiefergegenstände\u201C bezeichnet Hardware, Teile, Prototypen, Baugruppen, Kammersysteme, thermische Subsysteme, Vakuumsubsysteme, Steuerungssysteme, SPS-Software, HMI-Software, Firmware, Modelle, Zeichnungen, Dokumentation, Prüfpläne, Abnahmekriterien, Prüfberichte, Daten und sonstige von Deepvac bereitgestellte Arbeitsergebnisse.\u201C,
+        \u201Cc5\u201C: \u201C2.5 \u201ELeistungen\u201C bezeichnet Prüfleistungen, Engineering, Konstruktion, Entwicklung, Beratung, Integration, Inbetriebnahme, Schulung, Wartung, Reparatur, Retrofit, Modernisierung, Fernüberwachung, Datenerfassung und damit zusammenhängende Tätigkeiten, die von Deepvac erbracht werden.\u201C,
+        \u201Cc6\u201C: \u201C2.6 \u201EBestellung\u201C bezeichnet die Bestellung des Kunden, die Annahme eines Angebots oder eine sonstige schriftliche Anweisung zur Durchführung.\u201C,
+        \u201Cc7\u201C: \u201C2.7 \u201EVertrag\u201C bezeichnet die nach Ziffer 4 zustande kommende verbindliche Vereinbarung einschließlich aller in Ziffer 5 genannten Dokumente.\u201C,
+        \u201Cc8\u201C: \u201C2.8 \u201ESoftware\u201C bezeichnet SPS-Programme, HMI-Anwendungen, übergeordnete Steuerungslogik, Regelsequenzen, Datenerfassungsroutinen, Automatisierungsskripte, Ereignisprotokollkonfigurationen, Schnittstellentreiber sowie jede andere von Deepvac im Rahmen des Vertrags entwickelte oder bereitgestellte Software.\u201C,
+        \u201Cc9\u201C: \u201C2.9 \u201ESystem\u201C bezeichnet ein Thermovakuumkammersystem einschließlich aller integrierten mechanischen, thermischen, Vakuum-, elektrischen, Instrumentierungs- und Steuerungskomponenten gemäß dem Vertrag.\u201C,
+        \u201Cc10\u201C: \u201C2.10 \u201EBestandsanlage\u201C bezeichnet vorhandene Anlagen, Infrastruktur, Steuerungen oder Installationen am Standort des Kunden oder im Besitz des Kunden, die nicht von Deepvac im Rahmen des jeweiligen Vertrags geliefert werden.\u201C,
+        \u201Cc11\u201C: \u201C2.11 \u201EFAT\u201C bezeichnet die Werksabnahmeprüfung (Factory Acceptance Test), die in den Räumlichkeiten von Deepvac oder eines Subunternehmers durchgeführt wird.\u201C,
+        \u201Cc12\u201C: \u201C2.12 \u201ESAT\u201C bezeichnet die Standortabnahmeprüfung (Site Acceptance Test), die nach Lieferung, Installation oder Inbetriebnahme am Standort des Kunden durchgeführt wird.\u201C,
+        \u201Cc13\u201C: \u201C2.13 \u201EPrüfgegenstand\u201C bezeichnet Hardware, Komponenten, Baugruppen, Satelliten, Instrumente oder sonstige vom Kunden zur Prüfung durch Deepvac bereitgestellte Objekte.\u201C
       },
-      "3": {
-        "title": "Geltungsbereich und Anwendbarkeit",
-        "c1": "3.1 Diese Allgemeinen Geschäftsbedingungen gelten für alle Angebote, Bestellungen, Lieferungen, Leistungen und Verträge mit Deepvac.",
-        "c2": "3.2 Diese Bedingungen gelten ausschließlich gegenüber Unternehmern im Sinne von § 14 BGB, juristischen Personen des öffentlichen Rechts und öffentlich-rechtlichen Sondervermögen. Verträge mit Verbrauchern sind ausgeschlossen.",
-        "c3": "3.3 Allgemeine Geschäftsbedingungen des Kunden gelten nicht, auch wenn Deepvac ihnen nicht ausdrücklich widerspricht, es sei denn, Deepvac stimmt ihnen ausdrücklich in Textform zu.",
-        "c4": "3.4 Individualvereinbarungen in Textform gehen diesen Bedingungen vor."
+      \u201C3\u201C: {
+        \u201Ctitle\u201C: \u201CGeltungsbereich und Anwendbarkeit\u201C,
+        \u201Cc1\u201C: \u201C3.1 Diese Allgemeinen Geschäftsbedingungen gelten für alle Angebote, Bestellungen, Lieferungen, Leistungen und Verträge mit Deepvac.\u201C,
+        \u201Cc2\u201C: \u201C3.2 Diese Bedingungen gelten ausschließlich gegenüber Unternehmern im Sinne von § 14 BGB, juristischen Personen des öffentlichen Rechts und öffentlich-rechtlichen Sondervermögen. Verträge mit Verbrauchern sind ausgeschlossen.\u201C,
+        \u201Cc3\u201C: \u201C3.3 Allgemeine Geschäftsbedingungen des Kunden gelten nicht, auch wenn Deepvac ihnen nicht ausdrücklich widerspricht, es sei denn, Deepvac stimmt ihnen ausdrücklich in Textform zu.\u201C,
+        \u201Cc4\u201C: \u201C3.4 Individualvereinbarungen in Textform gehen diesen Bedingungen vor.\u201C
       },
-      "4": {
-        "title": "Vertragsschluss",
-        "c1": "4.1 Angebote sind freibleibend, sofern sie nicht ausdrücklich in Textform als verbindlich bezeichnet sind.",
-        "c2": "4.2 Ein Vertrag kommt erst zustande, wenn Deepvac eine Auftragsbestätigung in Textform erteilt oder mit der Leistungserbringung beginnt.",
-        "c3": "4.3 Mündliche Abreden sind nur verbindlich, wenn sie von Deepvac in Textform bestätigt wurden."
+      \u201C4\u201C: {
+        \u201Ctitle\u201C: \u201CVertragsschluss\u201C,
+        \u201Cc1\u201C: \u201C4.1 Angebote sind freibleibend, sofern sie nicht ausdrücklich in Textform als verbindlich bezeichnet sind.\u201C,
+        \u201Cc2\u201C: \u201C4.2 Ein Vertrag kommt erst zustande, wenn Deepvac eine Auftragsbestätigung in Textform erteilt oder mit der Leistungserbringung beginnt.\u201C,
+        \u201Cc3\u201C: \u201C4.3 Mündliche Abreden sind nur verbindlich, wenn sie von Deepvac in Textform bestätigt wurden.\u201C
       },
-      "5": {
-        "title": "Vertragsdokumente und Rangfolge",
-        "c1intro": "5.1 Der Vertrag besteht in absteigender Rangfolge aus:",
-        "c1a": "Auftragsbestätigung von Deepvac",
-        "c1b": "Angebot von Deepvac einschließlich Anlagen",
-        "c1c": "Leistungsbeschreibung, Spezifikation, Prüfplan, Abnahmekriterien und vereinbarte Änderungsaufträge",
-        "c1d": "diesen Bedingungen",
-        "c1e": "allen sonstigen Dokumenten, die ausdrücklich in Textform einbezogen wurden",
-        "c2": "5.2 Marketingaussagen, Website-Inhalte, Broschüren und allgemeine technische Beschreibungen sind unverbindlich, sofern sie nicht ausdrücklich in Textform als garantierte Eigenschaften vereinbart wurden."
+      \u201C5\u201C: {
+        \u201Ctitle\u201C: \u201CVertragsdokumente und Rangfolge\u201C,
+        \u201Cc1intro\u201C: \u201C5.1 Der Vertrag besteht in absteigender Rangfolge aus:\u201C,
+        \u201Cc1a\u201C: \u201CAuftragsbestätigung von Deepvac\u201C,
+        \u201Cc1b\u201C: \u201CAngebot von Deepvac einschließlich Anlagen\u201C,
+        \u201Cc1c\u201C: \u201CLeistungsbeschreibung, Spezifikation, Prüfplan, Abnahmekriterien und vereinbarte Änderungsaufträge\u201C,
+        \u201Cc1d\u201C: \u201Cdiesen Bedingungen\u201C,
+        \u201Cc1e\u201C: \u201Callen sonstigen Dokumenten, die ausdrücklich in Textform einbezogen wurden\u201C,
+        \u201Cc2\u201C: \u201C5.2 Marketingaussagen, Website-Inhalte, Broschüren und allgemeine technische Beschreibungen sind unverbindlich, sofern sie nicht ausdrücklich in Textform als garantierte Eigenschaften vereinbart wurden.\u201C
       },
-      "6": {
-        "title": "Leistungsumfang",
-        "c1": "6.1 Deepvac erbringt Liefergegenstände und Leistungen ausschließlich wie in den Vertragsdokumenten ausdrücklich vereinbart.",
-        "c2": "6.2 Deepvac ist berechtigt, qualifizierte Subunternehmer einzusetzen. Deepvac bleibt für die vertraglichen Verpflichtungen verantwortlich.",
-        "c3": "6.3 Soweit nicht ausdrücklich vereinbart, schuldet Deepvac keine behördlichen Genehmigungen, Zertifizierungsergebnisse, Konformitätsbewertungen oder Eignung für einen bestimmten Zweck über die vereinbarte Spezifikation hinaus.",
-        "c4": "6.4 Deepvac darf angemessene geringfügige Änderungen an Design, Komponenten oder Prozessen vornehmen, sofern diese den Vertragszweck nicht wesentlich beeinträchtigen und für den Kunden objektiv zumutbar sind."
+      \u201C6\u201C: {
+        \u201Ctitle\u201C: \u201CLeistungsumfang\u201C,
+        \u201Cc1\u201C: \u201C6.1 Deepvac erbringt Liefergegenstände und Leistungen ausschließlich wie in den Vertragsdokumenten ausdrücklich vereinbart.\u201C,
+        \u201Cc2\u201C: \u201C6.2 Deepvac ist berechtigt, qualifizierte Subunternehmer einzusetzen. Deepvac bleibt für die vertraglichen Verpflichtungen verantwortlich.\u201C,
+        \u201Cc3\u201C: \u201C6.3 Soweit nicht ausdrücklich vereinbart, schuldet Deepvac keine behördlichen Genehmigungen, Zertifizierungsergebnisse, Konformitätsbewertungen oder Eignung für einen bestimmten Zweck über die vereinbarte Spezifikation hinaus.\u201C,
+        \u201Cc4\u201C: \u201C6.4 Deepvac darf angemessene geringfügige Änderungen an Design, Komponenten oder Prozessen vornehmen, sofern diese den Vertragszweck nicht wesentlich beeinträchtigen und für den Kunden objektiv zumutbar sind.\u201C
       },
-      "7": {
-        "title": "Änderungsverlangen",
-        "c1": "7.1 Änderungen des Leistungsumfangs, der Parameter, des Zeitplans, der Abnahmekriterien, der Schnittstellen, der Dokumentation oder der Liefergegenstände bedürfen eines Änderungsauftrags in Textform.",
-        "c2": "7.2 Deepvac erstellt ein Änderungsangebot einschließlich Auswirkungen auf Preis, Zeitplan und technische Umsetzbarkeit. Änderungen werden erst verbindlich, wenn beide Parteien sie in Textform annehmen.",
-        "c3": "7.3 Verlangt der Kunde Leistungen, bevor ein Änderungsauftrag vereinbart ist, erfolgt diese Leistung nach Aufwand und Material und begründet weder einen Festpreis noch eine feste Frist."
+      \u201C7\u201C: {
+        \u201Ctitle\u201C: \u201CÄnderungsverlangen\u201C,
+        \u201Cc1\u201C: \u201C7.1 Änderungen des Leistungsumfangs, der Parameter, des Zeitplans, der Abnahmekriterien, der Schnittstellen, der Dokumentation oder der Liefergegenstände bedürfen eines Änderungsauftrags in Textform.\u201C,
+        \u201Cc2\u201C: \u201C7.2 Deepvac erstellt ein Änderungsangebot einschließlich Auswirkungen auf Preis, Zeitplan und technische Umsetzbarkeit. Änderungen werden erst verbindlich, wenn beide Parteien sie in Textform annehmen.\u201C,
+        \u201Cc3\u201C: \u201C7.3 Verlangt der Kunde Leistungen, bevor ein Änderungsauftrag vereinbart ist, erfolgt diese Leistung nach Aufwand und Material und begründet weder einen Festpreis noch eine feste Frist.\u201C
       },
-      "8": {
-        "title": "Mitwirkungspflichten des Kunden",
-        "c1": "8.1 Der Kunde stellt Deepvac sämtliche für die Leistungserbringung erforderlichen Informationen, Entscheidungen, Zugänge, Muster, Zeichnungen, Spezifikationen und Materialien rechtzeitig und unentgeltlich zur Verfügung.",
-        "c2": "8.2 Der Kunde sichert zu, dass bereitgestellte Gegenstände, Materialien und Anweisungen sicher, geeignet und mit den anwendbaren Gesetzen und Vorschriften vereinbar sind.",
-        "c3": "8.3 Der Kunde sichert zu, dass seine Daten, Materialien und Anweisungen keine Rechte Dritter verletzen. Der Kunde stellt Deepvac von Ansprüchen Dritter aus einer solchen Verletzung frei, soweit diese nicht von Deepvac verursacht wurden.",
-        "c4": "8.4 Verzögert sich die Mitwirkung des Kunden oder ist sie unvollständig, ist Deepvac berechtigt, Fristen angemessen zu verlängern und zusätzlichen Aufwand sowie Kosten in Rechnung zu stellen."
+      \u201C8\u201C: {
+        \u201Ctitle\u201C: \u201CMitwirkungspflichten des Kunden\u201C,
+        \u201Cc1\u201C: \u201C8.1 Der Kunde stellt Deepvac sämtliche für die Leistungserbringung erforderlichen Informationen, Entscheidungen, Zugänge, Muster, Zeichnungen, Spezifikationen und Materialien rechtzeitig und unentgeltlich zur Verfügung.\u201C,
+        \u201Cc2\u201C: \u201C8.2 Der Kunde sichert zu, dass bereitgestellte Gegenstände, Materialien und Anweisungen sicher, geeignet und mit den anwendbaren Gesetzen und Vorschriften vereinbar sind.\u201C,
+        \u201Cc3\u201C: \u201C8.3 Der Kunde sichert zu, dass seine Daten, Materialien und Anweisungen keine Rechte Dritter verletzen. Der Kunde stellt Deepvac von Ansprüchen Dritter aus einer solchen Verletzung frei, soweit diese nicht von Deepvac verursacht wurden.\u201C,
+        \u201Cc4\u201C: \u201C8.4 Verzögert sich die Mitwirkung des Kunden oder ist sie unvollständig, ist Deepvac berechtigt, Fristen angemessen zu verlängern und zusätzlichen Aufwand sowie Kosten in Rechnung zu stellen.\u201C
       },
-      "9": {
-        "title": "Preise, Steuern und Zahlung",
-        "c1": "9.1 Preise verstehen sich netto zuzüglich gesetzlicher Umsatzsteuer sowie sonstiger anwendbarer Steuern, Abgaben, Zölle oder Gebühren, sofern nicht ausdrücklich eingeschlossen.",
-        "c2": "9.2 Soweit nicht anders vereinbart, sind Rechnungen innerhalb von vierzehn Kalendertagen ab Rechnungsdatum ohne Abzug zahlbar.",
-        "c3": "9.3 Deepvac kann Vorauszahlungen, Meilensteinzahlungen oder Sicherheiten verlangen, insbesondere bei kundenspezifischen Entwicklungen, Prototypen oder Aufträgen mit hohem Wert.",
-        "c4": "9.4 Der Kunde darf nur mit unbestrittenen oder rechtskräftig festgestellten Forderungen aufrechnen. Zurückbehaltungsrechte bestehen nur wegen Ansprüchen aus demselben Vertrag.",
-        "c5": "9.5 Bei Zahlungsverzug gelten die gesetzlichen Verzugszinsen nach deutschem Recht. Deepvac kann angemessene Mahn- und Inkassokosten im gesetzlich zulässigen Umfang berechnen."
+      \u201C9\u201C: {
+        \u201Ctitle\u201C: \u201CPreise, Steuern und Zahlung\u201C,
+        \u201Cc1\u201C: \u201C9.1 Preise verstehen sich netto zuzüglich gesetzlicher Umsatzsteuer sowie sonstiger anwendbarer Steuern, Abgaben, Zölle oder Gebühren, sofern nicht ausdrücklich eingeschlossen.\u201C,
+        \u201Cc2\u201C: \u201C9.2 Soweit nicht anders vereinbart, sind Rechnungen innerhalb von vierzehn Kalendertagen ab Rechnungsdatum ohne Abzug zahlbar.\u201C,
+        \u201Cc3\u201C: \u201C9.3 Deepvac kann Vorauszahlungen, Meilensteinzahlungen oder Sicherheiten verlangen, insbesondere bei kundenspezifischen Entwicklungen, Prototypen oder Aufträgen mit hohem Wert.\u201C,
+        \u201Cc4\u201C: \u201C9.4 Der Kunde darf nur mit unbestrittenen oder rechtskräftig festgestellten Forderungen aufrechnen. Zurückbehaltungsrechte bestehen nur wegen Ansprüchen aus demselben Vertrag.\u201C,
+        \u201Cc5\u201C: \u201C9.5 Bei Zahlungsverzug gelten die gesetzlichen Verzugszinsen nach deutschem Recht. Deepvac kann angemessene Mahn- und Inkassokosten im gesetzlich zulässigen Umfang berechnen.\u201C
       },
-      "10": {
-        "title": "Lieferung, Fristen und höhere Gewalt",
-        "c1": "10.1 Termine und Fristen sind unverbindlich, sofern sie nicht ausdrücklich in Textform als verbindlich vereinbart wurden.",
-        "c1a": "10.1a Vertragsstrafen, pauschalierter Schadensersatz oder ähnliche Verzugsfolgen gelten nur, wenn sie in der jeweiligen Auftragsbestätigung ausdrücklich in Textform vereinbart wurden.",
-        "c2": "10.2 Liefer- und Leistungsfristen beginnen erst nach Auftragsbestätigung, Eingang einer vereinbarten Vorauszahlung und Eingang aller zur Aufnahme der Leistung erforderlichen Mitwirkungshandlungen des Kunden.",
-        "c3": "10.3 Höhere Gewalt umfasst Ereignisse außerhalb der zumutbaren Kontrolle von Deepvac, insbesondere Störungen in der Lieferkette, Transportstörungen, staatliche Maßnahmen, Exportbeschränkungen, Sanktionen, Arbeitskämpfe, Stromausfälle, nicht von Deepvac verursachte Cybervorfälle, Pandemien und Naturereignisse. In solchen Fällen ruhen die Verpflichtungen für die Dauer des Ereignisses; Fristen verlängern sich entsprechend.",
-        "c4": "10.4 Deepvac ist zu Teillieferungen und Teilleistungen berechtigt, soweit dies für den Kunden zumutbar ist."
+      \u201C10\u201C: {
+        \u201Ctitle\u201C: \u201CLieferung, Fristen und höhere Gewalt\u201C,
+        \u201Cc1\u201C: \u201C10.1 Termine und Fristen sind unverbindlich, sofern sie nicht ausdrücklich in Textform als verbindlich vereinbart wurden.\u201C,
+        \u201Cc1a\u201C: \u201C10.1a Vertragsstrafen, pauschalierter Schadensersatz oder ähnliche Verzugsfolgen gelten nur, wenn sie in der jeweiligen Auftragsbestätigung ausdrücklich in Textform vereinbart wurden.\u201C,
+        \u201Cc2\u201C: \u201C10.2 Liefer- und Leistungsfristen beginnen erst nach Auftragsbestätigung, Eingang einer vereinbarten Vorauszahlung und Eingang aller zur Aufnahme der Leistung erforderlichen Mitwirkungshandlungen des Kunden.\u201C,
+        \u201Cc3\u201C: \u201C10.3 Höhere Gewalt umfasst Ereignisse außerhalb der zumutbaren Kontrolle von Deepvac, insbesondere Störungen in der Lieferkette, Transportstörungen, staatliche Maßnahmen, Exportbeschränkungen, Sanktionen, Arbeitskämpfe, Stromausfälle, nicht von Deepvac verursachte Cybervorfälle, Pandemien und Naturereignisse. In solchen Fällen ruhen die Verpflichtungen für die Dauer des Ereignisses; Fristen verlängern sich entsprechend.\u201C,
+        \u201Cc4\u201C: \u201C10.4 Deepvac ist zu Teillieferungen und Teilleistungen berechtigt, soweit dies für den Kunden zumutbar ist.\u201C
       },
-      "11": {
-        "title": "Versand, Gefahrübergang und Verpackung",
-        "c1": "11.1 Soweit nicht anders vereinbart, erfolgt die Lieferung EXW Geschäftsadresse von Deepvac (Incoterms 2020). Die Gefahr geht mit Bereitstellung zur Abholung oder Übergabe an den Frachtführer über, je nachdem, was zuerst eintritt.",
-        "c2": "11.2 Der Kunde trägt Transport-, Versicherungs-, Zoll-, Export- und Importkosten, soweit nicht anders vereinbart.",
-        "c3": "11.3 Verpackung wird zu Selbstkosten berechnet, soweit nicht anders vereinbart. Rücknahmefähige Verpackungen werden nur nach vorheriger Vereinbarung in Textform angenommen."
+      \u201C11\u201C: {
+        \u201Ctitle\u201C: \u201CVersand, Gefahrübergang und Verpackung\u201C,
+        \u201Cc1\u201C: \u201C11.1 Soweit nicht anders vereinbart, erfolgt die Lieferung EXW Geschäftsadresse von Deepvac (Incoterms 2020). Die Gefahr geht mit Bereitstellung zur Abholung oder Übergabe an den Frachtführer über, je nachdem, was zuerst eintritt.\u201C,
+        \u201Cc2\u201C: \u201C11.2 Der Kunde trägt Transport-, Versicherungs-, Zoll-, Export- und Importkosten, soweit nicht anders vereinbart.\u201C,
+        \u201Cc3\u201C: \u201C11.3 Verpackung wird zu Selbstkosten berechnet, soweit nicht anders vereinbart. Rücknahmefähige Verpackungen werden nur nach vorheriger Vereinbarung in Textform angenommen.\u201C
       },
-      "12": {
-        "title": "Abnahme und Inbetriebnahme",
-        "c1": "12.1 Ist eine Abnahme vereinbart oder gesetzlich erforderlich, sind Abnahmekriterien und -verfahren vor Leistungsbeginn in Textform festzulegen.",
-        "c2": "12.2 Ist eine Werksabnahmeprüfung (FAT) vereinbart, teilt Deepvac dem Kunden die Bereitschaft der Liefergegenstände zur FAT mit. Der Kunde hat innerhalb des vereinbarten Zeitrahmens, ersatzweise innerhalb von vierzehn Kalendertagen nach Mitteilung, an der FAT teilzunehmen.",
-        "c3": "12.3 Ist eine Standortabnahmeprüfung (SAT) vereinbart, hat der Kunde sicherzustellen, dass der Aufstellungsort, Versorgungsanschlüsse, Infrastruktur und alle im Vertrag genannten Voraussetzungen vor dem vereinbarten SAT-Termin bereit und verfügbar sind. Verzögerungen durch unvollständige Standortbereitschaft gehen zu Lasten und auf Risiko des Kunden.",
-        "c4": "12.4 Umfasst der Leistungsumfang die Inbetriebnahme, führt Deepvac diese nach dem vereinbarten Verfahren durch. Die Inbetriebnahme ist abgeschlossen, wenn das System innerhalb der vereinbarten Parameter arbeitet.",
-        "c5intro": "12.5 Ist kein Abnahmeverfahren ausdrücklich vereinbart, gilt die Abnahme als erfolgt, wenn Deepvac dem Kunden in Textform mitgeteilt hat, dass die Liefergegenstände abnahmebereit sind, und in dieser Mitteilung auf den Abnahmemechanismus nach dieser Ziffer hingewiesen hat, und sodann:",
-        "c5a": "der Kunde die Abnahme in Textform bestätigt, oder",
-        "c5b": "der Kunde die Liefergegenstände produktiv nutzt, oder",
-        "c5c": "vierzehn Kalendertage nach dieser Mitteilung verstrichen sind, ohne dass der Kunde wesentliche Mängel in Textform angezeigt hat.",
-        "c6": "12.6 Unerhebliche Mängel, die die vertragsgemäße Nutzung nicht wesentlich beeinträchtigen, hindern die Abnahme nicht. Solche Mängel sind im Abnahmeprotokoll aufzuführen und von Deepvac innerhalb einer angemessenen Frist zu beseitigen.",
-        "c7": "12.7 Der Kunde hat Liefergegenstände unverzüglich innerhalb einer angemessenen Frist zu testen und zu prüfen; dabei sind Komplexität der Liefergegenstände und vorgesehener Verwendungszweck zu berücksichtigen.",
-        "c8": "12.8 Sieht der Vertrag eine meilenstein- oder teilabnahmebezogene Abnahme vor, gilt jeder abgenommene Meilenstein oder jede abgenommene Teillieferung als eigenständig abgenommen. Nachfolgende Meilensteine eröffnen die Abnahme zuvor abgenommener Liefergegenstände nicht erneut.",
-        "c9": "12.9 Verzögert der Kunde die Abnahme, ohne wesentliche Mängel zu benennen, kann Deepvac eine angemessene Nachfrist setzen. Nach fruchtlosem Ablauf gilt die Abnahme als erteilt. Deepvac kann Lager-, Bereitschafts- und Zusatzkosten in Rechnung stellen, die durch die Verzögerung entstanden sind.",
-        "c10": "12.10 Die Abnahme von Software und Steuerungssystemlieferungen folgt denselben Grundsätzen. Die Funktionalität wird anhand der vereinbarten Spezifikation beurteilt. Die Abnahme setzt nicht voraus, dass die Software vollständig frei von geringfügigen Unregelmäßigkeiten ist, die die vereinbarte Funktionalität nicht beeinträchtigen."
+      \u201C12\u201C: {
+        \u201Ctitle\u201C: \u201CAbnahme und Inbetriebnahme\u201C,
+        \u201Cc1\u201C: \u201C12.1 Ist eine Abnahme vereinbart oder gesetzlich erforderlich, sind Abnahmekriterien und -verfahren vor Leistungsbeginn in Textform festzulegen.\u201C,
+        \u201Cc2\u201C: \u201C12.2 Ist eine Werksabnahmeprüfung (FAT) vereinbart, teilt Deepvac dem Kunden die Bereitschaft der Liefergegenstände zur FAT mit. Der Kunde hat innerhalb des vereinbarten Zeitrahmens, ersatzweise innerhalb von vierzehn Kalendertagen nach Mitteilung, an der FAT teilzunehmen.\u201C,
+        \u201Cc3\u201C: \u201C12.3 Ist eine Standortabnahmeprüfung (SAT) vereinbart, hat der Kunde sicherzustellen, dass der Aufstellungsort, Versorgungsanschlüsse, Infrastruktur und alle im Vertrag genannten Voraussetzungen vor dem vereinbarten SAT-Termin bereit und verfügbar sind. Verzögerungen durch unvollständige Standortbereitschaft gehen zu Lasten und auf Risiko des Kunden.\u201C,
+        \u201Cc4\u201C: \u201C12.4 Umfasst der Leistungsumfang die Inbetriebnahme, führt Deepvac diese nach dem vereinbarten Verfahren durch. Die Inbetriebnahme ist abgeschlossen, wenn das System innerhalb der vereinbarten Parameter arbeitet.\u201C,
+        \u201Cc5intro\u201C: \u201C12.5 Ist kein Abnahmeverfahren ausdrücklich vereinbart, gilt die Abnahme als erfolgt, wenn Deepvac dem Kunden in Textform mitgeteilt hat, dass die Liefergegenstände abnahmebereit sind, und in dieser Mitteilung auf den Abnahmemechanismus nach dieser Ziffer hingewiesen hat, und sodann:\u201C,
+        \u201Cc5a\u201C: \u201Cder Kunde die Abnahme in Textform bestätigt, oder\u201C,
+        \u201Cc5b\u201C: \u201Cder Kunde die Liefergegenstände produktiv nutzt, oder\u201C,
+        \u201Cc5c\u201C: \u201Cvierzehn Kalendertage nach dieser Mitteilung verstrichen sind, ohne dass der Kunde wesentliche Mängel in Textform angezeigt hat.\u201C,
+        \u201Cc6\u201C: \u201C12.6 Unerhebliche Mängel, die die vertragsgemäße Nutzung nicht wesentlich beeinträchtigen, hindern die Abnahme nicht. Solche Mängel sind im Abnahmeprotokoll aufzuführen und von Deepvac innerhalb einer angemessenen Frist zu beseitigen.\u201C,
+        \u201Cc7\u201C: \u201C12.7 Der Kunde hat Liefergegenstände unverzüglich innerhalb einer angemessenen Frist zu testen und zu prüfen; dabei sind Komplexität der Liefergegenstände und vorgesehener Verwendungszweck zu berücksichtigen.\u201C,
+        \u201Cc8\u201C: \u201C12.8 Sieht der Vertrag eine meilenstein- oder teilabnahmebezogene Abnahme vor, gilt jeder abgenommene Meilenstein oder jede abgenommene Teillieferung als eigenständig abgenommen. Nachfolgende Meilensteine eröffnen die Abnahme zuvor abgenommener Liefergegenstände nicht erneut.\u201C,
+        \u201Cc9\u201C: \u201C12.9 Verzögert der Kunde die Abnahme, ohne wesentliche Mängel zu benennen, kann Deepvac eine angemessene Nachfrist setzen. Nach fruchtlosem Ablauf gilt die Abnahme als erteilt. Deepvac kann Lager-, Bereitschafts- und Zusatzkosten in Rechnung stellen, die durch die Verzögerung entstanden sind.\u201C,
+        \u201Cc10\u201C: \u201C12.10 Die Abnahme von Software und Steuerungssystemlieferungen folgt denselben Grundsätzen. Die Funktionalität wird anhand der vereinbarten Spezifikation beurteilt. Die Abnahme setzt nicht voraus, dass die Software vollständig frei von geringfügigen Unregelmäßigkeiten ist, die die vereinbarte Funktionalität nicht beeinträchtigen.\u201C
       },
-      "13": {
-        "title": "Lieferung von Kammersystemen und Hardware",
-        "c1": "13.1 Diese Ziffer gilt für die Lieferung standardisierter und kundenspezifisch konstruierter Thermovakuumkammersysteme, Kammerplattformen und zugehöriger Hardware.",
-        "c2": "13.2 Die Spezifikation des Systems wird ausschließlich durch die Vertragsdokumente bestimmt. Abmessungen, Leistungsparameter, Schnittstellen und Zubehör werden nur geschuldet, soweit sie ausdrücklich vereinbart sind.",
-        "c3": "13.3 Standardkammerplattformen werden in der zum Zeitpunkt der Auftragsbestätigung gültigen Konfiguration der jeweiligen Produktdokumentation geliefert. Optionen und Erweiterungen sind nur enthalten, wenn sie in der Auftragsbestätigung ausdrücklich aufgeführt sind.",
-        "c4": "13.4 Montage, Installation und Inbetriebnahme am Standort des Kunden sind nur enthalten, wenn dies ausdrücklich vereinbart ist. Soweit nicht vereinbart, kann Deepvac diese als gesonderte Leistungen anbieten.",
-        "c5": "13.5 Der Kunde ist dafür verantwortlich, dass der Aufstellungsort die von Deepvac genannten Anforderungen erfüllt, insbesondere hinsichtlich Bodentraglast, Raummaßen, Zufahrtswegen, Stromversorgung, Kühlwasser, Druckluft und Belüftung."
+      \u201C13\u201C: {
+        \u201Ctitle\u201C: \u201CLieferung von Kammersystemen und Hardware\u201C,
+        \u201Cc1\u201C: \u201C13.1 Diese Ziffer gilt für die Lieferung standardisierter und kundenspezifisch konstruierter Thermovakuumkammersysteme, Kammerplattformen und zugehöriger Hardware.\u201C,
+        \u201Cc2\u201C: \u201C13.2 Die Spezifikation des Systems wird ausschließlich durch die Vertragsdokumente bestimmt. Abmessungen, Leistungsparameter, Schnittstellen und Zubehör werden nur geschuldet, soweit sie ausdrücklich vereinbart sind.\u201C,
+        \u201Cc3\u201C: \u201C13.3 Standardkammerplattformen werden in der zum Zeitpunkt der Auftragsbestätigung gültigen Konfiguration der jeweiligen Produktdokumentation geliefert. Optionen und Erweiterungen sind nur enthalten, wenn sie in der Auftragsbestätigung ausdrücklich aufgeführt sind.\u201C,
+        \u201Cc4\u201C: \u201C13.4 Montage, Installation und Inbetriebnahme am Standort des Kunden sind nur enthalten, wenn dies ausdrücklich vereinbart ist. Soweit nicht vereinbart, kann Deepvac diese als gesonderte Leistungen anbieten.\u201C,
+        \u201Cc5\u201C: \u201C13.5 Der Kunde ist dafür verantwortlich, dass der Aufstellungsort die von Deepvac genannten Anforderungen erfüllt, insbesondere hinsichtlich Bodentraglast, Raummaßen, Zufahrtswegen, Stromversorgung, Kühlwasser, Druckluft und Belüftung.\u201C
       },
-      "14": {
-        "title": "Kundenspezifische Systeme und Projektgeschäft",
-        "c1": "14.1 Diese Ziffer gilt für kundenspezifisch konstruierte Thermovakuumsysteme, anwendungsspezifische Entwicklungen und projektbasierte Engineering-Leistungen.",
-        "c2": "14.2 Der Projektumfang wird durch die vereinbarte Spezifikation, die Leistungsbeschreibung und den Projektplan bestimmt. Leistungen über den vereinbarten Umfang hinaus bedürfen eines Änderungsauftrags nach Ziffer 7.",
-        "c3": "14.3 Engineering-Entscheidungen innerhalb der vereinbarten Spezifikation liegen im fachlichen Ermessen von Deepvac, sofern der Vertrag für bestimmte Entscheidungen nicht die Zustimmung des Kunden vorsieht.",
-        "c4": "14.4 Der Kunde benennt einen fachkundigen Projektansprechpartner und trifft offene Entscheidungen rechtzeitig. Verzögerte Entscheidungen berechtigen Deepvac, den Zeitplan anzupassen und Zusatzkosten in Rechnung zu stellen.",
-        "c5": "14.5 Soweit das Projekt die Integration in bestehende Infrastruktur des Kunden umfasst, ist der Kunde für die Bereitstellung vollständiger und zutreffender Dokumentation der vorhandenen Systeme, Schnittstellen und Standortbedingungen verantwortlich.",
-        "c6": "14.6 Deepvac kann angemessene Designalternativen vorschlagen, wenn sich die ursprünglich vereinbarte Lösung als technisch nicht realisierbar oder unverhältnismäßig kostspielig erweist. Solche Alternativen bedürfen der Vereinbarung im Rahmen des Änderungsverfahrens."
+      \u201C14\u201C: {
+        \u201Ctitle\u201C: \u201CKundenspezifische Systeme und Projektgeschäft\u201C,
+        \u201Cc1\u201C: \u201C14.1 Diese Ziffer gilt für kundenspezifisch konstruierte Thermovakuumsysteme, anwendungsspezifische Entwicklungen und projektbasierte Engineering-Leistungen.\u201C,
+        \u201Cc2\u201C: \u201C14.2 Der Projektumfang wird durch die vereinbarte Spezifikation, die Leistungsbeschreibung und den Projektplan bestimmt. Leistungen über den vereinbarten Umfang hinaus bedürfen eines Änderungsauftrags nach Ziffer 7.\u201C,
+        \u201Cc3\u201C: \u201C14.3 Engineering-Entscheidungen innerhalb der vereinbarten Spezifikation liegen im fachlichen Ermessen von Deepvac, sofern der Vertrag für bestimmte Entscheidungen nicht die Zustimmung des Kunden vorsieht.\u201C,
+        \u201Cc4\u201C: \u201C14.4 Der Kunde benennt einen fachkundigen Projektansprechpartner und trifft offene Entscheidungen rechtzeitig. Verzögerte Entscheidungen berechtigen Deepvac, den Zeitplan anzupassen und Zusatzkosten in Rechnung zu stellen.\u201C,
+        \u201Cc5\u201C: \u201C14.5 Soweit das Projekt die Integration in bestehende Infrastruktur des Kunden umfasst, ist der Kunde für die Bereitstellung vollständiger und zutreffender Dokumentation der vorhandenen Systeme, Schnittstellen und Standortbedingungen verantwortlich.\u201C,
+        \u201Cc6\u201C: \u201C14.6 Deepvac kann angemessene Designalternativen vorschlagen, wenn sich die ursprünglich vereinbarte Lösung als technisch nicht realisierbar oder unverhältnismäßig kostspielig erweist. Solche Alternativen bedürfen der Vereinbarung im Rahmen des Änderungsverfahrens.\u201C
       },
-      "15": {
-        "title": "Prüfleistungen",
-        "c1": "15.1 Diese Ziffer gilt für Thermovakuumprüfungen, Umweltsimulation, Testkampagnendurchführung und damit zusammenhängende Prüfleistungen.",
-        "c2": "15.2 Prüfungen werden nach dem vereinbarten Prüfplan durchgeführt. Ist kein Prüfplan vereinbart, erfolgen die Prüfungen nach den für den Auftrag geeigneten Standardverfahren von Deepvac.",
-        "c3": "15.3 Der Kunde bleibt allein verantwortlich für Konstruktion, vorgesehenen Verwendungszweck, Sicherheit, rechtliche Konformität und regulatorische Compliance des Prüfgegenstands.",
-        "c4": "15.4 Prüfergebnisse gelten nur für die geprüfte Konfiguration und die im Prüfbericht dokumentierten Randbedingungen. Jede Übertragung auf andere Konfigurationen, Umgebungen oder Anwendungsfälle erfolgt auf Risiko des Kunden.",
-        "c5": "15.5 Deepvac garantiert keine Zertifizierungsergebnisse, behördlichen Zulassungen, Missionserfolge oder Verwendungseignung über die vereinbarte Prüfspezifikation hinaus.",
-        "c6": "15.6 Messunsicherheiten, Toleranzen und Grenzen ergeben sich aus der Prüfdokumentation oder entsprechen im Übrigen dem für die angewandten Methoden Üblichen.",
-        "c7": "15.7 Deepvac darf Prüfungen aussetzen oder verweigern, wenn der Prüfgegenstand ein Sicherheitsrisiko darstellt, erforderliche Dokumentation fehlt oder gegen anwendbare Regeln verstößt. Die hieraus entstehenden Kosten trägt der Kunde.",
-        "c8": "15.8 Der Kunde hat Gefahrstoffe, radioaktive Materialien oder biologisch aktive Materialien vor Lieferung des Prüfgegenstands anzugeben. Vollständige Sicherheitsdatenblätter und Handhabungsanweisungen sind vorab bereitzustellen. Deepvac darf Prüfgegenstände ablehnen, die nicht ordnungsgemäß deklariert wurden.",
-        "c9": "15.9 Handhabung, Lagerung und Versand von Prüfgegenständen obliegen dem Kunden, soweit nicht ausdrücklich anders vereinbart. Der Kunde trägt sämtliche Risiken des Verlusts oder der Beschädigung des Prüfgegenstands während des Transports.",
-        "c10": "15.10 Nach Abschluss der Prüfungen stellt Deepvac den Prüfgegenstand zur Abholung oder zum Versand wie vereinbart bereit. Soweit nicht anders vereinbart, erfolgt die Rücksendung auf Kosten und Risiko des Kunden.",
-        "c11": "15.11 Deepvac lagert Prüfgegenstände nach Mitteilung über die Fertigstellung für bis zu dreißig Kalendertage kostenfrei. Nach Ablauf der kostenfreien Lagerfrist kann Deepvac angemessene Lagergebühren berechnen. Veranlasst der Kunde trotz schriftlicher Erinnerung innerhalb einer angemessenen Nachfrist weder Abholung noch Versand, darf Deepvac den Prüfgegenstand, soweit rechtlich zulässig, auf Kosten des Kunden entsorgen.",
-        "c12": "15.12 Rohmessdaten, Zwischendatensätze, interne Systemprotokolle, Fotografien und Prüfaufzeichnungen werden nur bereitgestellt, wenn dies ausdrücklich in Textform vereinbart wurde. Standardliefergegenstand ist der Prüfbericht.",
-        "c13": "15.13 Wird eine Prüfung aufgrund eines Ausfalls des Prüfgegenstands, einer Kundenanweisung oder aus Sicherheitsgründen abgebrochen oder unterbrochen, ist Deepvac zur vollen Vergütung der eingesetzten Prüfzeit und Ressourcen berechtigt. Wiederholte oder verlängerte Prüfdurchläufe aufgrund von Problemen mit dem Prüfgegenstand werden gesondert berechnet.",
-        "c14": "15.14 Die Haftung von Deepvac für Schäden am Prüfgegenstand ist auf Vorsatz und grobe Fahrlässigkeit beschränkt. Bei leichter Fahrlässigkeit haftet Deepvac nur für die Verletzung wesentlicher Vertragspflichten, begrenzt auf den vorhersehbaren und typischen Schaden. Diese Beschränkung gilt nicht bei Verletzung des Lebens, des Körpers oder der Gesundheit."
+      \u201C15\u201C: {
+        \u201Ctitle\u201C: \u201CPrüfleistungen\u201C,
+        \u201Cc1\u201C: \u201C15.1 Diese Ziffer gilt für Thermovakuumprüfungen, Umweltsimulation, Testkampagnendurchführung und damit zusammenhängende Prüfleistungen.\u201C,
+        \u201Cc2\u201C: \u201C15.2 Prüfungen werden nach dem vereinbarten Prüfplan durchgeführt. Ist kein Prüfplan vereinbart, erfolgen die Prüfungen nach den für den Auftrag geeigneten Standardverfahren von Deepvac.\u201C,
+        \u201Cc3\u201C: \u201C15.3 Der Kunde bleibt allein verantwortlich für Konstruktion, vorgesehenen Verwendungszweck, Sicherheit, rechtliche Konformität und regulatorische Compliance des Prüfgegenstands.\u201C,
+        \u201Cc4\u201C: \u201C15.4 Prüfergebnisse gelten nur für die geprüfte Konfiguration und die im Prüfbericht dokumentierten Randbedingungen. Jede Übertragung auf andere Konfigurationen, Umgebungen oder Anwendungsfälle erfolgt auf Risiko des Kunden.\u201C,
+        \u201Cc5\u201C: \u201C15.5 Deepvac garantiert keine Zertifizierungsergebnisse, behördlichen Zulassungen, Missionserfolge oder Verwendungseignung über die vereinbarte Prüfspezifikation hinaus.\u201C,
+        \u201Cc6\u201C: \u201C15.6 Messunsicherheiten, Toleranzen und Grenzen ergeben sich aus der Prüfdokumentation oder entsprechen im Übrigen dem für die angewandten Methoden Üblichen.\u201C,
+        \u201Cc7\u201C: \u201C15.7 Deepvac darf Prüfungen aussetzen oder verweigern, wenn der Prüfgegenstand ein Sicherheitsrisiko darstellt, erforderliche Dokumentation fehlt oder gegen anwendbare Regeln verstößt. Die hieraus entstehenden Kosten trägt der Kunde.\u201C,
+        \u201Cc8\u201C: \u201C15.8 Der Kunde hat Gefahrstoffe, radioaktive Materialien oder biologisch aktive Materialien vor Lieferung des Prüfgegenstands anzugeben. Vollständige Sicherheitsdatenblätter und Handhabungsanweisungen sind vorab bereitzustellen. Deepvac darf Prüfgegenstände ablehnen, die nicht ordnungsgemäß deklariert wurden.\u201C,
+        \u201Cc9\u201C: \u201C15.9 Handhabung, Lagerung und Versand von Prüfgegenständen obliegen dem Kunden, soweit nicht ausdrücklich anders vereinbart. Der Kunde trägt sämtliche Risiken des Verlusts oder der Beschädigung des Prüfgegenstands während des Transports.\u201C,
+        \u201Cc10\u201C: \u201C15.10 Nach Abschluss der Prüfungen stellt Deepvac den Prüfgegenstand zur Abholung oder zum Versand wie vereinbart bereit. Soweit nicht anders vereinbart, erfolgt die Rücksendung auf Kosten und Risiko des Kunden.\u201C,
+        \u201Cc11\u201C: \u201C15.11 Deepvac lagert Prüfgegenstände nach Mitteilung über die Fertigstellung für bis zu dreißig Kalendertage kostenfrei. Nach Ablauf der kostenfreien Lagerfrist kann Deepvac angemessene Lagergebühren berechnen. Veranlasst der Kunde trotz schriftlicher Erinnerung innerhalb einer angemessenen Nachfrist weder Abholung noch Versand, darf Deepvac den Prüfgegenstand, soweit rechtlich zulässig, auf Kosten des Kunden entsorgen.\u201C,
+        \u201Cc12\u201C: \u201C15.12 Rohmessdaten, Zwischendatensätze, interne Systemprotokolle, Fotografien und Prüfaufzeichnungen werden nur bereitgestellt, wenn dies ausdrücklich in Textform vereinbart wurde. Standardliefergegenstand ist der Prüfbericht.\u201C,
+        \u201Cc13\u201C: \u201C15.13 Wird eine Prüfung aufgrund eines Ausfalls des Prüfgegenstands, einer Kundenanweisung oder aus Sicherheitsgründen abgebrochen oder unterbrochen, ist Deepvac zur vollen Vergütung der eingesetzten Prüfzeit und Ressourcen berechtigt. Wiederholte oder verlängerte Prüfdurchläufe aufgrund von Problemen mit dem Prüfgegenstand werden gesondert berechnet.\u201C,
+        \u201Cc14\u201C: \u201C15.14 Die Haftung von Deepvac für Schäden am Prüfgegenstand ist auf Vorsatz und grobe Fahrlässigkeit beschränkt. Bei leichter Fahrlässigkeit haftet Deepvac nur für die Verletzung wesentlicher Vertragspflichten, begrenzt auf den vorhersehbaren und typischen Schaden. Diese Beschränkung gilt nicht bei Verletzung des Lebens, des Körpers oder der Gesundheit.\u201C
       },
-      "16": {
-        "title": "Retrofit, Modernisierung und Integration",
-        "c1": "16.1 Diese Ziffer gilt für Retrofit-, Modernisierungs-, Upgrade- und Subsystem-Integrationsarbeiten an bestehenden Thermovakuumsystemen, unabhängig davon, ob diese ursprünglich von Deepvac oder von Dritten geliefert wurden.",
-        "c2": "16.2 Der Umfang von Retrofit- und Modernisierungsarbeiten wird ausschließlich durch die vereinbarte Spezifikation bestimmt. Deepvac übernimmt keine Verantwortung für den Gesamtzustand oder die Gesamtleistung der Bestandsanlage über den ausdrücklich vereinbarten Umfang hinaus.",
-        "c3": "16.3 Begutachtung und Angebotsstellung durch Deepvac basieren auf dem sichtbaren und dokumentierten Zustand der Bestandsanlage zum Zeitpunkt der Besichtigung. Verdeckte Mängel, undokumentierte Änderungen oder Verschlechterungen, die zum Zeitpunkt der Begutachtung nicht erkennbar waren, sind nicht Bestandteil des vereinbarten Leistungsumfangs.",
-        "c4": "16.4 Weicht der tatsächliche Zustand der Bestandsanlage vom dokumentierten oder mitgeteilten Zustand ab, sind zur Erreichung des vereinbarten Ergebnisses erforderliche Zusatzarbeiten als Änderungsauftrag nach Ziffer 7 zu behandeln und gesondert zu vergüten.",
-        "c5": "16.5 Die Kompatibilität mit vorhandenen Drittkomponenten, Steuerungen, Schnittstellen oder Infrastruktur wird nur zugesichert, soweit dies im Vertrag ausdrücklich vereinbart ist. Deepvac gewährleistet keine Kompatibilität mit nicht offengelegten oder nicht dokumentierten Systemelementen.",
-        "c6": "16.6 Der Kunde ist verantwortlich für den Zustand des bestehenden Standorts, der Versorgungsanschlüsse, der Infrastruktur, der Drittausrüstung und aller Schnittstellen, die nicht ausdrücklich im Leistungsumfang von Deepvac enthalten sind.",
-        "c7": "16.7 Requalifizierung, Revalidierung oder regulatorische Neukonformität des Gesamtsystems nach Retrofit oder Modernisierung ist nur enthalten, wenn dies im Vertrag ausdrücklich vereinbart ist.",
-        "c8": "16.8 Integriert Deepvac Subsysteme in ein bestehendes System, verbleibt das Risiko einer Beschädigung des bestehenden Systems aufgrund seines vorbestehenden Zustands oder nicht offengelegter Mängel beim Kunden."
+      \u201C16\u201C: {
+        \u201Ctitle\u201C: \u201CRetrofit, Modernisierung und Integration\u201C,
+        \u201Cc1\u201C: \u201C16.1 Diese Ziffer gilt für Retrofit-, Modernisierungs-, Upgrade- und Subsystem-Integrationsarbeiten an bestehenden Thermovakuumsystemen, unabhängig davon, ob diese ursprünglich von Deepvac oder von Dritten geliefert wurden.\u201C,
+        \u201Cc2\u201C: \u201C16.2 Der Umfang von Retrofit- und Modernisierungsarbeiten wird ausschließlich durch die vereinbarte Spezifikation bestimmt. Deepvac übernimmt keine Verantwortung für den Gesamtzustand oder die Gesamtleistung der Bestandsanlage über den ausdrücklich vereinbarten Umfang hinaus.\u201C,
+        \u201Cc3\u201C: \u201C16.3 Begutachtung und Angebotsstellung durch Deepvac basieren auf dem sichtbaren und dokumentierten Zustand der Bestandsanlage zum Zeitpunkt der Besichtigung. Verdeckte Mängel, undokumentierte Änderungen oder Verschlechterungen, die zum Zeitpunkt der Begutachtung nicht erkennbar waren, sind nicht Bestandteil des vereinbarten Leistungsumfangs.\u201C,
+        \u201Cc4\u201C: \u201C16.4 Weicht der tatsächliche Zustand der Bestandsanlage vom dokumentierten oder mitgeteilten Zustand ab, sind zur Erreichung des vereinbarten Ergebnisses erforderliche Zusatzarbeiten als Änderungsauftrag nach Ziffer 7 zu behandeln und gesondert zu vergüten.\u201C,
+        \u201Cc5\u201C: \u201C16.5 Die Kompatibilität mit vorhandenen Drittkomponenten, Steuerungen, Schnittstellen oder Infrastruktur wird nur zugesichert, soweit dies im Vertrag ausdrücklich vereinbart ist. Deepvac gewährleistet keine Kompatibilität mit nicht offengelegten oder nicht dokumentierten Systemelementen.\u201C,
+        \u201Cc6\u201C: \u201C16.6 Der Kunde ist verantwortlich für den Zustand des bestehenden Standorts, der Versorgungsanschlüsse, der Infrastruktur, der Drittausrüstung und aller Schnittstellen, die nicht ausdrücklich im Leistungsumfang von Deepvac enthalten sind.\u201C,
+        \u201Cc7\u201C: \u201C16.7 Requalifizierung, Revalidierung oder regulatorische Neukonformität des Gesamtsystems nach Retrofit oder Modernisierung ist nur enthalten, wenn dies im Vertrag ausdrücklich vereinbart ist.\u201C,
+        \u201Cc8\u201C: \u201C16.8 Integriert Deepvac Subsysteme in ein bestehendes System, verbleibt das Risiko einer Beschädigung des bestehenden Systems aufgrund seines vorbestehenden Zustands oder nicht offengelegter Mängel beim Kunden.\u201C
       },
-      "17": {
-        "title": "Wartung, Reparatur und Serviceeinsätze",
-        "c1": "17.1 Diese Ziffer gilt für Wartung, Reparatur, vorbeugende Instandhaltung, Diagnose und technische Unterstützungsleistungen.",
-        "c2": "17.2 Der Umfang von Wartungs- und Reparaturarbeiten ist auf die ausdrücklich vereinbarten Leistungen beschränkt. Konkludente Service-Level, garantierte Reaktionszeiten oder garantierte Verfügbarkeitszusagen gelten nur, wenn sie ausdrücklich in Textform vereinbart wurden.",
-        "c3": "17.3 Fernsupport wird erbracht, soweit technisch möglich und vereinbart. Fernzugriff setzt eine vom Kunden bereitgestellte geeignete Netzwerkinfrastruktur voraus. Deepvac ist nicht verantwortlich für Verbindungsprobleme, Netzwerksicherheit oder IT-Infrastruktur am Standort des Kunden.",
-        "c4": "17.4 Vor-Ort-Support wird zu den vereinbarten Sätzen berechnet. Reisezeit, Reisekosten, Unterkunft, Verbrauchsmaterial und Ersatzteile werden gesondert in Rechnung gestellt, sofern nicht ausdrücklich in einer Pauschalvereinbarung enthalten.",
-        "c5": "17.5 Deepvac darf angemessene Ersatzteile oder gleichwertige Komponenten verwenden, wenn Originalteile nicht verfügbar sind, sofern die Funktionalität dadurch nicht wesentlich beeinträchtigt wird.",
-        "c6": "17.6 Reparaturbemühungen richten sich nach der technischen Machbarkeit. Deepvac garantiert nicht, dass ältere Systeme vollständig in den Originalzustand zurückversetzt oder auf aktuelle Standards aufgerüstet werden können, sofern nicht ausdrücklich vereinbart.",
-        "c7": "17.7 Ausgetauschte Teile gehen in das Eigentum von Deepvac über, sofern der Kunde ihre Rückgabe nicht in der Bestellung verlangt. Die Rückgabe ausgetauschter Teile kann einer Bearbeitungsgebühr unterliegen.",
-        "c8": "17.8 Der Kunde hat sicheren Zugang zur Anlage zu gewähren, den Arbeitsbereich freizuräumen und die Einhaltung der geltenden Sicherheitsvorschriften bei Vor-Ort-Serviceeinsätzen sicherzustellen."
+      \u201C17\u201C: {
+        \u201Ctitle\u201C: \u201CWartung, Reparatur und Serviceeinsätze\u201C,
+        \u201Cc1\u201C: \u201C17.1 Diese Ziffer gilt für Wartung, Reparatur, vorbeugende Instandhaltung, Diagnose und technische Unterstützungsleistungen.\u201C,
+        \u201Cc2\u201C: \u201C17.2 Der Umfang von Wartungs- und Reparaturarbeiten ist auf die ausdrücklich vereinbarten Leistungen beschränkt. Konkludente Service-Level, garantierte Reaktionszeiten oder garantierte Verfügbarkeitszusagen gelten nur, wenn sie ausdrücklich in Textform vereinbart wurden.\u201C,
+        \u201Cc3\u201C: \u201C17.3 Fernsupport wird erbracht, soweit technisch möglich und vereinbart. Fernzugriff setzt eine vom Kunden bereitgestellte geeignete Netzwerkinfrastruktur voraus. Deepvac ist nicht verantwortlich für Verbindungsprobleme, Netzwerksicherheit oder IT-Infrastruktur am Standort des Kunden.\u201C,
+        \u201Cc4\u201C: \u201C17.4 Vor-Ort-Support wird zu den vereinbarten Sätzen berechnet. Reisezeit, Reisekosten, Unterkunft, Verbrauchsmaterial und Ersatzteile werden gesondert in Rechnung gestellt, sofern nicht ausdrücklich in einer Pauschalvereinbarung enthalten.\u201C,
+        \u201Cc5\u201C: \u201C17.5 Deepvac darf angemessene Ersatzteile oder gleichwertige Komponenten verwenden, wenn Originalteile nicht verfügbar sind, sofern die Funktionalität dadurch nicht wesentlich beeinträchtigt wird.\u201C,
+        \u201Cc6\u201C: \u201C17.6 Reparaturbemühungen richten sich nach der technischen Machbarkeit. Deepvac garantiert nicht, dass ältere Systeme vollständig in den Originalzustand zurückversetzt oder auf aktuelle Standards aufgerüstet werden können, sofern nicht ausdrücklich vereinbart.\u201C,
+        \u201Cc7\u201C: \u201C17.7 Ausgetauschte Teile gehen in das Eigentum von Deepvac über, sofern der Kunde ihre Rückgabe nicht in der Bestellung verlangt. Die Rückgabe ausgetauschter Teile kann einer Bearbeitungsgebühr unterliegen.\u201C,
+        \u201Cc8\u201C: \u201C17.8 Der Kunde hat sicheren Zugang zur Anlage zu gewähren, den Arbeitsbereich freizuräumen und die Einhaltung der geltenden Sicherheitsvorschriften bei Vor-Ort-Serviceeinsätzen sicherzustellen.\u201C
       },
-      "18": {
-        "title": "Software, Steuerungssysteme, Daten und digitale Funktionen",
-        "c1": "18.1 Diese Ziffer gilt für SPS-Software, HMI-Anwendungen, übergeordnete Steuerungslogik, Datenerfassungssysteme, Ereignisprotokollierung, Fernüberwachung, Automatisierungsskripte sowie Schnittstellen einschließlich, aber nicht beschränkt auf OPC UA, Modbus und LAN-basierte Zugriffe, die von Deepvac bereitgestellt werden.",
-        "c2": "18.2 Soweit nicht ausdrücklich anders vereinbart, werden Software und Steuerungssystemlieferungen lizenziert, nicht verkauft. Der Kunde erhält eine nicht ausschließliche, nicht übertragbare und nicht unterlizenzierbare Lizenz zur Nutzung der Software ausschließlich für den Betrieb und die interne Wartung des im Rahmen des Vertrags gelieferten Systems.",
-        "c3": "18.3 Quellcode, Entwicklungsumgebungen, Repositorien, CAD-Quelldateien, Modellgewichte und Trainingspipelines sind nicht von der Lizenz umfasst und werden nicht geliefert, sofern nicht ausdrücklich in Textform vereinbart.",
-        "c4": "18.4 Der Kunde darf die Software für interne Betriebszwecke, Wartung und interne Compliance-Zwecke nutzen. Unterlizenzierung, Übertragung an Dritte, Reverse Engineering, Dekompilierung und externe Weiterverwendung sind untersagt, sofern nicht ausdrücklich vereinbart oder zwingend gesetzlich zulässig.",
-        "c5": "18.5 Fernzugriffs- und Fernüberwachungsfunktionen stehen nur zur Verfügung, soweit vereinbart, und unterliegen den Netzwerk- und Cybersicherheitsbedingungen des Kunden. Deepvac haftet nicht für Unterbrechungen oder Sicherheitsvorfälle, die durch die IT-Infrastruktur des Kunden verursacht werden.",
-        "c6": "18.6 Deepvac gewährleistet nicht, dass Software vollständig fehlerfrei ist oder unterbrechungsfrei arbeitet. Die Softwaregewährleistung ist auf wesentliche Abweichungen von der vereinbarten Funktionsspezifikation beschränkt.",
-        "c7": "18.7 Updates, Patches, Versionsupgrades und funktionale Änderungen sind nur geschuldet, wenn dies ausdrücklich in Textform vereinbart ist. Umfasst ein Wartungsvertrag Software-Updates, bestimmen sich Umfang und Häufigkeit nach dieser Vereinbarung.",
-        "c8": "18.8 Der Kunde ist für die regelmäßige Datensicherung aller Systemdaten, Konfigurationsdaten und Betriebsdaten verantwortlich. Die Haftung von Deepvac für Datenverlust ist gemäß Ziffer 21 beschränkt.",
-        "c9": "18.9 Soweit der Vertrag KI-gestützte, datengetriebene oder algorithmische Überwachungs-, Diagnose- oder Optimierungsfunktionen umfasst, garantiert Deepvac keine Vorhersagegenauigkeit, Optimierungsergebnisse oder autonome Entscheidungsqualität, sofern nicht ausdrücklich schriftlich zugesichert. Solche Funktionen werden als Entscheidungsunterstützungswerkzeuge bereitgestellt.",
-        "c10": "18.10 Deepvac behält sämtliche Rechte an Methoden, Steuerungslogik, Algorithmen, Bibliotheken, Vorlagen, Modellen und vorbestehender Technologie, auch soweit diese in kundenspezifische Liefergegenstände einfließen."
+      \u201C18\u201C: {
+        \u201Ctitle\u201C: \u201CSoftware, Steuerungssysteme, Daten und digitale Funktionen\u201C,
+        \u201Cc1\u201C: \u201C18.1 Diese Ziffer gilt für SPS-Software, HMI-Anwendungen, übergeordnete Steuerungslogik, Datenerfassungssysteme, Ereignisprotokollierung, Fernüberwachung, Automatisierungsskripte sowie Schnittstellen einschließlich, aber nicht beschränkt auf OPC UA, Modbus und LAN-basierte Zugriffe, die von Deepvac bereitgestellt werden.\u201C,
+        \u201Cc2\u201C: \u201C18.2 Soweit nicht ausdrücklich anders vereinbart, werden Software und Steuerungssystemlieferungen lizenziert, nicht verkauft. Der Kunde erhält eine nicht ausschließliche, nicht übertragbare und nicht unterlizenzierbare Lizenz zur Nutzung der Software ausschließlich für den Betrieb und die interne Wartung des im Rahmen des Vertrags gelieferten Systems.\u201C,
+        \u201Cc3\u201C: \u201C18.3 Quellcode, Entwicklungsumgebungen, Repositorien, CAD-Quelldateien, Modellgewichte und Trainingspipelines sind nicht von der Lizenz umfasst und werden nicht geliefert, sofern nicht ausdrücklich in Textform vereinbart.\u201C,
+        \u201Cc4\u201C: \u201C18.4 Der Kunde darf die Software für interne Betriebszwecke, Wartung und interne Compliance-Zwecke nutzen. Unterlizenzierung, Übertragung an Dritte, Reverse Engineering, Dekompilierung und externe Weiterverwendung sind untersagt, sofern nicht ausdrücklich vereinbart oder zwingend gesetzlich zulässig.\u201C,
+        \u201Cc5\u201C: \u201C18.5 Fernzugriffs- und Fernüberwachungsfunktionen stehen nur zur Verfügung, soweit vereinbart, und unterliegen den Netzwerk- und Cybersicherheitsbedingungen des Kunden. Deepvac haftet nicht für Unterbrechungen oder Sicherheitsvorfälle, die durch die IT-Infrastruktur des Kunden verursacht werden.\u201C,
+        \u201Cc6\u201C: \u201C18.6 Deepvac gewährleistet nicht, dass Software vollständig fehlerfrei ist oder unterbrechungsfrei arbeitet. Die Softwaregewährleistung ist auf wesentliche Abweichungen von der vereinbarten Funktionsspezifikation beschränkt.\u201C,
+        \u201Cc7\u201C: \u201C18.7 Updates, Patches, Versionsupgrades und funktionale Änderungen sind nur geschuldet, wenn dies ausdrücklich in Textform vereinbart ist. Umfasst ein Wartungsvertrag Software-Updates, bestimmen sich Umfang und Häufigkeit nach dieser Vereinbarung.\u201C,
+        \u201Cc8\u201C: \u201C18.8 Der Kunde ist für die regelmäßige Datensicherung aller Systemdaten, Konfigurationsdaten und Betriebsdaten verantwortlich. Die Haftung von Deepvac für Datenverlust ist gemäß Ziffer 21 beschränkt.\u201C,
+        \u201Cc9\u201C: \u201C18.9 Soweit der Vertrag KI-gestützte, datengetriebene oder algorithmische Überwachungs-, Diagnose- oder Optimierungsfunktionen umfasst, garantiert Deepvac keine Vorhersagegenauigkeit, Optimierungsergebnisse oder autonome Entscheidungsqualität, sofern nicht ausdrücklich schriftlich zugesichert. Solche Funktionen werden als Entscheidungsunterstützungswerkzeuge bereitgestellt.\u201C,
+        \u201Cc10\u201C: \u201C18.10 Deepvac behält sämtliche Rechte an Methoden, Steuerungslogik, Algorithmen, Bibliotheken, Vorlagen, Modellen und vorbestehender Technologie, auch soweit diese in kundenspezifische Liefergegenstände einfließen.\u201C
       },
-      "19": {
-        "title": "Eigentumsvorbehalt",
-        "c1": "19.1 Gelieferte Waren bleiben bis zur vollständigen Bezahlung aller gegenwärtigen und zukünftigen Forderungen aus der Geschäftsbeziehung Eigentum von Deepvac.",
-        "c2": "19.2 Der Kunde hat Vorbehaltsware sorgfältig zu behandeln und angemessen zu versichern.",
-        "c3": "19.3 Der Kunde darf die Ware im ordnungsgemäßen Geschäftsverkehr weiterveräußern. Der Kunde tritt Deepvac bereits jetzt sicherungshalber alle aus der Weiterveräußerung entstehenden Forderungen bis zur Höhe der offenen Forderungen von Deepvac ab. Deepvac nimmt diese Abtretung an."
+      \u201C19\u201C: {
+        \u201Ctitle\u201C: \u201CEigentumsvorbehalt\u201C,
+        \u201Cc1\u201C: \u201C19.1 Gelieferte Waren bleiben bis zur vollständigen Bezahlung aller gegenwärtigen und zukünftigen Forderungen aus der Geschäftsbeziehung Eigentum von Deepvac.\u201C,
+        \u201Cc2\u201C: \u201C19.2 Der Kunde hat Vorbehaltsware sorgfältig zu behandeln und angemessen zu versichern.\u201C,
+        \u201Cc3\u201C: \u201C19.3 Der Kunde darf die Ware im ordnungsgemäßen Geschäftsverkehr weiterveräußern. Der Kunde tritt Deepvac bereits jetzt sicherungshalber alle aus der Weiterveräußerung entstehenden Forderungen bis zur Höhe der offenen Forderungen von Deepvac ab. Deepvac nimmt diese Abtretung an.\u201C
       },
-      "20": {
-        "title": "Gewährleistung und Mängelansprüche",
-        "c1": "20.1 Der Kunde hat Liefergegenstände unverzüglich nach Lieferung zu untersuchen, soweit dies im ordnungsgemäßen Geschäftsgang tunlich ist. Soweit § 377 HGB Anwendung findet, hat der Kunde die Liefergegenstände nach Maßgabe dieser Vorschrift zu untersuchen und Mängel anzuzeigen. In allen anderen Fällen hat der Kunde offensichtliche und versteckte Mängel in Textform unverzüglich nach Kenntniserlangung anzuzeigen.",
-        "c2": "20.2 Bei berechtigten Mängeln wird Deepvac nach eigener Wahl den mangelhaften Liefergegenstand nachbessern oder ersetzen bzw. die mangelhafte Leistung erneut erbringen.",
-        "c3": "20.3 Die Verjährungsfrist für Mängelansprüche beträgt bei Waren zwölf Monate ab Lieferung und bei Werkleistungen zwölf Monate ab Abnahme, soweit nicht zwingendes Recht eine längere Frist vorschreibt. Ist eine Abnahme nach der Art der Werkleistung ausgeschlossen, beginnt die Verjährungsfrist mit der Fertigstellung. Dies gilt nicht bei arglistigem Verschweigen, Übernahme einer Garantie, Verletzung des Lebens, des Körpers oder der Gesundheit, vorsätzlichem Verhalten, grober Fahrlässigkeit oder zwingender Haftung nach dem anwendbaren Produkthaftungsrecht.",
-        "c4": "20.4 Ein Mangelanspruch besteht nicht bei unerheblichen Abweichungen, normalem Verschleiß, Mängeln infolge unsachgemäßer Nutzung, unbefugter Änderungen, Installationsfehlern durch den Kunden oder Dritte, ungeeigneten Betriebsbedingungen oder äußeren Einflüssen außerhalb der Kontrolle von Deepvac.",
-        "c5": "20.5 Führen der Kunde oder Dritte ohne vorherige Zustimmung von Deepvac Nachbesserungsmaßnahmen durch, sind Mängelansprüche ausgeschlossen, sofern der Kunde nicht nachweist, dass diese Maßnahmen den Mangel weder verursacht noch verschlimmert haben.",
-        "c6": "20.6 Bei Retrofit-, Modernisierungs- und Integrationsarbeiten an Bestandsanlagen beschränkt sich die Gewährleistung auf die von Deepvac erbrachten Arbeiten und die von Deepvac gelieferten Komponenten. Deepvac übernimmt keine Gewährleistung für die Bestandsanlage selbst oder für Mängel, die aus dem vorbestehenden Zustand der Bestandsanlage herrühren."
+      \u201C20\u201C: {
+        \u201Ctitle\u201C: \u201CGewährleistung und Mängelansprüche\u201C,
+        \u201Cc1\u201C: \u201C20.1 Der Kunde hat Liefergegenstände unverzüglich nach Lieferung zu untersuchen, soweit dies im ordnungsgemäßen Geschäftsgang tunlich ist. Soweit § 377 HGB Anwendung findet, hat der Kunde die Liefergegenstände nach Maßgabe dieser Vorschrift zu untersuchen und Mängel anzuzeigen. In allen anderen Fällen hat der Kunde offensichtliche und versteckte Mängel in Textform unverzüglich nach Kenntniserlangung anzuzeigen.\u201C,
+        \u201Cc2\u201C: \u201C20.2 Bei berechtigten Mängeln wird Deepvac nach eigener Wahl den mangelhaften Liefergegenstand nachbessern oder ersetzen bzw. die mangelhafte Leistung erneut erbringen.\u201C,
+        \u201Cc3\u201C: \u201C20.3 Die Verjährungsfrist für Mängelansprüche beträgt bei Waren zwölf Monate ab Lieferung und bei Werkleistungen zwölf Monate ab Abnahme, soweit nicht zwingendes Recht eine längere Frist vorschreibt. Ist eine Abnahme nach der Art der Werkleistung ausgeschlossen, beginnt die Verjährungsfrist mit der Fertigstellung. Dies gilt nicht bei arglistigem Verschweigen, Übernahme einer Garantie, Verletzung des Lebens, des Körpers oder der Gesundheit, vorsätzlichem Verhalten, grober Fahrlässigkeit oder zwingender Haftung nach dem anwendbaren Produkthaftungsrecht.\u201C,
+        \u201Cc4\u201C: \u201C20.4 Ein Mangelanspruch besteht nicht bei unerheblichen Abweichungen, normalem Verschleiß, Mängeln infolge unsachgemäßer Nutzung, unbefugter Änderungen, Installationsfehlern durch den Kunden oder Dritte, ungeeigneten Betriebsbedingungen oder äußeren Einflüssen außerhalb der Kontrolle von Deepvac.\u201C,
+        \u201Cc5\u201C: \u201C20.5 Führen der Kunde oder Dritte ohne vorherige Zustimmung von Deepvac Nachbesserungsmaßnahmen durch, sind Mängelansprüche ausgeschlossen, sofern der Kunde nicht nachweist, dass diese Maßnahmen den Mangel weder verursacht noch verschlimmert haben.\u201C,
+        \u201Cc6\u201C: \u201C20.6 Bei Retrofit-, Modernisierungs- und Integrationsarbeiten an Bestandsanlagen beschränkt sich die Gewährleistung auf die von Deepvac erbrachten Arbeiten und die von Deepvac gelieferten Komponenten. Deepvac übernimmt keine Gewährleistung für die Bestandsanlage selbst oder für Mängel, die aus dem vorbestehenden Zustand der Bestandsanlage herrühren.\u201C
       },
-      "21": {
-        "title": "Haftung",
-        "c1": "21.1 Deepvac haftet unbeschränkt für Vorsatz, grobe Fahrlässigkeit sowie für Schäden aus der Verletzung des Lebens, des Körpers oder der Gesundheit.",
-        "c2": "21.2 Bei leichter Fahrlässigkeit haftet Deepvac nur bei Verletzung wesentlicher Vertragspflichten. Wesentliche Vertragspflichten sind solche Pflichten, deren Erfüllung die ordnungsgemäße Durchführung des Vertrags erst ermöglicht und auf deren Einhaltung der Kunde regelmäßig vertrauen darf.",
-        "c3": "21.3 Im Fall der Ziffer 21.2 ist die Haftung auf den bei Vertragsschluss vorhersehbaren, typischerweise eintretenden Schaden begrenzt.",
-        "c4": "21.4 Soweit gesetzlich zulässig, haftet Deepvac nicht für mittelbare Schäden oder Folgeschäden, insbesondere entgangenen Gewinn, Umsatzausfall, Betriebsunterbrechung, Produktionsausfall, Nutzungsausfall und Ansprüche Dritter.",
-        "c5": "21.5 Soweit eine Haftung für Datenverlust besteht, ist die Haftung von Deepvac auf den typischen Wiederherstellungsaufwand beschränkt, der bei regelmäßiger und angemessener Datensicherung durch den Kunden erforderlich gewesen wäre.",
-        "c6": "21.6 Für Prüfleistungen richtet sich die Haftung von Deepvac für Schäden am Prüfgegenstand nach Ziffer 15.14.",
-        "c7": "21.7 Für Dienstleistungen, einschließlich Wartung, Reparatur, Retrofit und Integrationsarbeiten, ist die Haftung bei leichter Fahrlässigkeit auf den Nettoauftragswert des jeweiligen Serviceauftrags beschränkt.",
-        "c8": "21.8 Soweit zwingendes Recht nichts anderes vorsieht, ist die Gesamthaftung für Ansprüche aus leichter Fahrlässigkeit auf den Nettowert des jeweiligen Auftrags begrenzt.",
-        "c9": "21.9 Zwingende Haftung nach dem anwendbaren Produkthaftungsrecht bleibt unberührt."
+      \u201C21\u201C: {
+        \u201Ctitle\u201C: \u201CHaftung\u201C,
+        \u201Cc1\u201C: \u201C21.1 Deepvac haftet unbeschränkt für Vorsatz, grobe Fahrlässigkeit sowie für Schäden aus der Verletzung des Lebens, des Körpers oder der Gesundheit.\u201C,
+        \u201Cc2\u201C: \u201C21.2 Bei leichter Fahrlässigkeit haftet Deepvac nur bei Verletzung wesentlicher Vertragspflichten. Wesentliche Vertragspflichten sind solche Pflichten, deren Erfüllung die ordnungsgemäße Durchführung des Vertrags erst ermöglicht und auf deren Einhaltung der Kunde regelmäßig vertrauen darf.\u201C,
+        \u201Cc3\u201C: \u201C21.3 Im Fall der Ziffer 21.2 ist die Haftung auf den bei Vertragsschluss vorhersehbaren, typischerweise eintretenden Schaden begrenzt.\u201C,
+        \u201Cc4\u201C: \u201C21.4 Soweit gesetzlich zulässig, haftet Deepvac nicht für mittelbare Schäden oder Folgeschäden, insbesondere entgangenen Gewinn, Umsatzausfall, Betriebsunterbrechung, Produktionsausfall, Nutzungsausfall und Ansprüche Dritter.\u201C,
+        \u201Cc5\u201C: \u201C21.5 Soweit eine Haftung für Datenverlust besteht, ist die Haftung von Deepvac auf den typischen Wiederherstellungsaufwand beschränkt, der bei regelmäßiger und angemessener Datensicherung durch den Kunden erforderlich gewesen wäre.\u201C,
+        \u201Cc6\u201C: \u201C21.6 Für Prüfleistungen richtet sich die Haftung von Deepvac für Schäden am Prüfgegenstand nach Ziffer 15.14.\u201C,
+        \u201Cc7\u201C: \u201C21.7 Für Dienstleistungen, einschließlich Wartung, Reparatur, Retrofit und Integrationsarbeiten, ist die Haftung bei leichter Fahrlässigkeit auf den Nettoauftragswert des jeweiligen Serviceauftrags beschränkt.\u201C,
+        \u201Cc8\u201C: \u201C21.8 Soweit zwingendes Recht nichts anderes vorsieht, ist die Gesamthaftung für Ansprüche aus leichter Fahrlässigkeit auf den Nettowert des jeweiligen Auftrags begrenzt.\u201C,
+        \u201Cc9\u201C: \u201C21.9 Zwingende Haftung nach dem anwendbaren Produkthaftungsrecht bleibt unberührt.\u201C
       },
-      "22": {
-        "title": "Geistiges Eigentum und Nutzungsrechte",
-        "c1": "22.1 Sämtliche Rechte des geistigen Eigentums, Know-how, Methoden, Werkzeuge, Vorlagen, Bibliotheken, Algorithmen, Modelle sowie bereits vorhandene Software oder Dokumentation von Deepvac verbleiben bei Deepvac.",
-        "c2": "22.2 Soweit nicht ausdrücklich anders vereinbart, erhält der Kunde an den im Rahmen des Vertrags geschaffenen Liefergegenständen ein nicht ausschließliches, nicht übertragbares und nicht unterlizenzierbares Nutzungsrecht ausschließlich für interne Zwecke des Kunden und nur soweit zur Erreichung des Vertragszwecks erforderlich.",
-        "c3": "22.3 Der Kunde erhält die für den Betrieb des erworbenen oder beauftragten Systems zum vereinbarten Vertragszweck erforderlichen Nutzungsrechte, einschließlich Betrieb, interner Wartung und regulatorischer Compliance.",
-        "c4": "22.4 Quellcode, CAD-Quelldateien, Trainingsdaten, Modellgewichte und Entwicklungs-Repositorien sind nicht geschuldet, sofern sie nicht ausdrücklich in Textform vereinbart wurden.",
-        "c5": "22.5 Der Kunde darf Schutzvermerke nicht entfernen und Software oder Firmware nicht zurückentwickeln, dekompilieren oder disassemblieren, soweit zwingendes Recht dies nicht erlaubt.",
-        "c6": "22.6 Soweit nicht ausdrücklich anders vereinbart, darf der Kunde im Rahmen des Vertrags gelieferte Prüfberichte und Prüfdaten für interne Zwecke in dem Umfang nutzen, der für den Vertragszweck erforderlich ist.",
-        "c7": "22.7 Deepvac behält sämtliche Rechte an Messmethoden, Prüfverfahren, Aufbauten, Werkzeugen, Vorlagen, Know-how und der zugrunde liegenden Auswertungslogik, auch soweit diese in Berichten oder Daten ihren Ausdruck finden.",
-        "c8": "22.8 Jede Nutzung anonymisierter oder aggregierter Ergebnisse durch Deepvac für Benchmarking, Qualitätsmanagement, Marketingreferenzen, Fallstudien oder Statistiken bedarf der vorherigen schriftlichen Zustimmung des Kunden im Einzelfall.",
-        "c9": "22.9 Rohmessdatenformate, Zwischendatensätze und interne Systemprotokolle werden nur bereitgestellt, wenn dies ausdrücklich in Textform vereinbart wurde."
+      \u201C22\u201C: {
+        \u201Ctitle\u201C: \u201CGeistiges Eigentum und Nutzungsrechte\u201C,
+        \u201Cc1\u201C: \u201C22.1 Sämtliche Rechte des geistigen Eigentums, Know-how, Methoden, Werkzeuge, Vorlagen, Bibliotheken, Algorithmen, Modelle sowie bereits vorhandene Software oder Dokumentation von Deepvac verbleiben bei Deepvac.\u201C,
+        \u201Cc2\u201C: \u201C22.2 Soweit nicht ausdrücklich anders vereinbart, erhält der Kunde an den im Rahmen des Vertrags geschaffenen Liefergegenständen ein nicht ausschließliches, nicht übertragbares und nicht unterlizenzierbares Nutzungsrecht ausschließlich für interne Zwecke des Kunden und nur soweit zur Erreichung des Vertragszwecks erforderlich.\u201C,
+        \u201Cc3\u201C: \u201C22.3 Der Kunde erhält die für den Betrieb des erworbenen oder beauftragten Systems zum vereinbarten Vertragszweck erforderlichen Nutzungsrechte, einschließlich Betrieb, interner Wartung und regulatorischer Compliance.\u201C,
+        \u201Cc4\u201C: \u201C22.4 Quellcode, CAD-Quelldateien, Trainingsdaten, Modellgewichte und Entwicklungs-Repositorien sind nicht geschuldet, sofern sie nicht ausdrücklich in Textform vereinbart wurden.\u201C,
+        \u201Cc5\u201C: \u201C22.5 Der Kunde darf Schutzvermerke nicht entfernen und Software oder Firmware nicht zurückentwickeln, dekompilieren oder disassemblieren, soweit zwingendes Recht dies nicht erlaubt.\u201C,
+        \u201Cc6\u201C: \u201C22.6 Soweit nicht ausdrücklich anders vereinbart, darf der Kunde im Rahmen des Vertrags gelieferte Prüfberichte und Prüfdaten für interne Zwecke in dem Umfang nutzen, der für den Vertragszweck erforderlich ist.\u201C,
+        \u201Cc7\u201C: \u201C22.7 Deepvac behält sämtliche Rechte an Messmethoden, Prüfverfahren, Aufbauten, Werkzeugen, Vorlagen, Know-how und der zugrunde liegenden Auswertungslogik, auch soweit diese in Berichten oder Daten ihren Ausdruck finden.\u201C,
+        \u201Cc8\u201C: \u201C22.8 Jede Nutzung anonymisierter oder aggregierter Ergebnisse durch Deepvac für Benchmarking, Qualitätsmanagement, Marketingreferenzen, Fallstudien oder Statistiken bedarf der vorherigen schriftlichen Zustimmung des Kunden im Einzelfall.\u201C,
+        \u201Cc9\u201C: \u201C22.9 Rohmessdatenformate, Zwischendatensätze und interne Systemprotokolle werden nur bereitgestellt, wenn dies ausdrücklich in Textform vereinbart wurde.\u201C
       },
-      "23": {
-        "title": "Vertraulichkeit",
-        "c1": "23.1 Jede Partei behandelt alle nicht öffentlichen technischen, kommerziellen und betrieblichen Informationen, die sie von der anderen Partei erhält, vertraulich und nutzt sie nur für den Vertragszweck.",
-        "c2": "23.2 Vertrauliche Informationen dürfen nur Mitarbeitern und Subunternehmern offengelegt werden, die diese Informationen zur Vertragserfüllung benötigen und die mindestens gleichwertigen Vertraulichkeitspflichten unterliegen.",
-        "c3intro": "23.3 Die Vertraulichkeitspflicht gilt nicht für Informationen, die:",
-        "c3a": "öffentlich bekannt sind, ohne dass eine Pflichtverletzung vorliegt, oder",
-        "c3b": "von einem Dritten rechtmäßig ohne Vertraulichkeitspflicht erlangt wurden, oder",
-        "c3c": "unabhängig ohne Nutzung vertraulicher Informationen der anderen Partei entwickelt wurden, oder",
-        "c3d": "aufgrund gesetzlicher Vorschriften oder gerichtlicher Anordnung offengelegt werden müssen. Soweit rechtlich zulässig, wird die offenlegende Partei die andere Partei hierüber vorab informieren.",
-        "c4": "23.4 Die Vertraulichkeitspflicht gilt für fünf Jahre nach Beendigung des Vertrags fort. Geschäftsgeheimnisse bleiben geschützt, solange sie nach anwendbarem Recht als Geschäftsgeheimnisse gelten."
+      \u201C23\u201C: {
+        \u201Ctitle\u201C: \u201CVertraulichkeit\u201C,
+        \u201Cc1\u201C: \u201C23.1 Jede Partei behandelt alle nicht öffentlichen technischen, kommerziellen und betrieblichen Informationen, die sie von der anderen Partei erhält, vertraulich und nutzt sie nur für den Vertragszweck.\u201C,
+        \u201Cc2\u201C: \u201C23.2 Vertrauliche Informationen dürfen nur Mitarbeitern und Subunternehmern offengelegt werden, die diese Informationen zur Vertragserfüllung benötigen und die mindestens gleichwertigen Vertraulichkeitspflichten unterliegen.\u201C,
+        \u201Cc3intro\u201C: \u201C23.3 Die Vertraulichkeitspflicht gilt nicht für Informationen, die:\u201C,
+        \u201Cc3a\u201C: \u201Cöffentlich bekannt sind, ohne dass eine Pflichtverletzung vorliegt, oder\u201C,
+        \u201Cc3b\u201C: \u201Cvon einem Dritten rechtmäßig ohne Vertraulichkeitspflicht erlangt wurden, oder\u201C,
+        \u201Cc3c\u201C: \u201Cunabhängig ohne Nutzung vertraulicher Informationen der anderen Partei entwickelt wurden, oder\u201C,
+        \u201Cc3d\u201C: \u201Caufgrund gesetzlicher Vorschriften oder gerichtlicher Anordnung offengelegt werden müssen. Soweit rechtlich zulässig, wird die offenlegende Partei die andere Partei hierüber vorab informieren.\u201C,
+        \u201Cc4\u201C: \u201C23.4 Die Vertraulichkeitspflicht gilt für fünf Jahre nach Beendigung des Vertrags fort. Geschäftsgeheimnisse bleiben geschützt, solange sie nach anwendbarem Recht als Geschäftsgeheimnisse gelten.\u201C
       },
-      "24": {
-        "title": "Datenschutz",
-        "c1": "24.1 Jede Partei hält die anwendbaren Datenschutzgesetze ein, einschließlich der DSGVO, soweit anwendbar.",
-        "c2": "24.2 Verarbeitet Deepvac personenbezogene Daten im Auftrag des Kunden, schließen die Parteien vor Beginn der Verarbeitung einen Auftragsverarbeitungsvertrag gemäß Art. 28 DSGVO."
+      \u201C24\u201C: {
+        \u201Ctitle\u201C: \u201CDatenschutz\u201C,
+        \u201Cc1\u201C: \u201C24.1 Jede Partei hält die anwendbaren Datenschutzgesetze ein, einschließlich der DSGVO, soweit anwendbar.\u201C,
+        \u201Cc2\u201C: \u201C24.2 Verarbeitet Deepvac personenbezogene Daten im Auftrag des Kunden, schließen die Parteien vor Beginn der Verarbeitung einen Auftragsverarbeitungsvertrag gemäß Art. 28 DSGVO.\u201C
       },
-      "25": {
-        "title": "Exportkontrolle und Sanktionen",
-        "c1": "25.1 Die Leistungserbringung kann Exportkontrollgesetzen, Sanktionen und Embargos unterliegen. Der Kunde stellt auf Anfrage alle Informationen zur Verfügung, die zur Prüfung der Compliance erforderlich sind, einschließlich Angaben zu Endverwendung und Endnutzer.",
-        "c2": "25.2 Deepvac darf die Leistung aussetzen oder verweigern, wenn sie gegen anwendbare exportkontrollrechtliche oder sanktionsrechtliche Vorschriften verstoßen würde.",
-        "c3": "25.3 Der Kunde sichert zu, Liefergegenstände nicht für verbotene Endverwendungen einzusetzen und die anwendbaren Reexportanforderungen einzuhalten."
+      \u201C25\u201C: {
+        \u201Ctitle\u201C: \u201CExportkontrolle und Sanktionen\u201C,
+        \u201Cc1\u201C: \u201C25.1 Die Leistungserbringung kann Exportkontrollgesetzen, Sanktionen und Embargos unterliegen. Der Kunde stellt auf Anfrage alle Informationen zur Verfügung, die zur Prüfung der Compliance erforderlich sind, einschließlich Angaben zu Endverwendung und Endnutzer.\u201C,
+        \u201Cc2\u201C: \u201C25.2 Deepvac darf die Leistung aussetzen oder verweigern, wenn sie gegen anwendbare exportkontrollrechtliche oder sanktionsrechtliche Vorschriften verstoßen würde.\u201C,
+        \u201Cc3\u201C: \u201C25.3 Der Kunde sichert zu, Liefergegenstände nicht für verbotene Endverwendungen einzusetzen und die anwendbaren Reexportanforderungen einzuhalten.\u201C
       },
-      "26": {
-        "title": "Compliance und Sicherheit",
-        "c1": "26.1 Der Kunde beachtet alle anwendbaren Sicherheitsvorschriften und folgt den Sicherheitsanweisungen von Deepvac auf dem Betriebsgelände von Deepvac sowie bei der Nutzung von Ausrüstung von Deepvac.",
-        "c2": "26.2 Stellt der Kunde Gefahrstoffe bereit, hat er vorab vollständige Sicherheitsdatenblätter und Handhabungsanweisungen zu übermitteln.",
-        "c3": "26.3 Der Kunde stellt sicher, dass sämtliches Personal, das Einrichtungen von Deepvac besucht, ordnungsgemäß unterwiesen und entsprechend den geltenden Sicherheitsregeln ausgerüstet ist."
+      \u201C26\u201C: {
+        \u201Ctitle\u201C: \u201CCompliance und Sicherheit\u201C,
+        \u201Cc1\u201C: \u201C26.1 Der Kunde beachtet alle anwendbaren Sicherheitsvorschriften und folgt den Sicherheitsanweisungen von Deepvac auf dem Betriebsgelände von Deepvac sowie bei der Nutzung von Ausrüstung von Deepvac.\u201C,
+        \u201Cc2\u201C: \u201C26.2 Stellt der Kunde Gefahrstoffe bereit, hat er vorab vollständige Sicherheitsdatenblätter und Handhabungsanweisungen zu übermitteln.\u201C,
+        \u201Cc3\u201C: \u201C26.3 Der Kunde stellt sicher, dass sämtliches Personal, das Einrichtungen von Deepvac besucht, ordnungsgemäß unterwiesen und entsprechend den geltenden Sicherheitsregeln ausgerüstet ist.\u201C
       },
-      "27": {
-        "title": "Aussetzung, Kündigung und Stornierung",
-        "c1": "27.1 Deepvac darf die Leistung aussetzen, wenn der Kunde mit Zahlungen in Verzug ist oder Mitwirkungspflichten wesentlich verletzt, nachdem eine angemessene Frist gesetzt wurde.",
-        "c2intro": "27.2 Storniert der Kunde einen Auftrag nach Vertragsschluss, ist Deepvac berechtigt, Folgendes in Rechnung zu stellen:",
-        "c2a": "sämtliche bereits erbrachten Leistungen und entstandenen Kosten sowie",
-        "c2b": "sämtliche verbindlich eingegangenen Drittkosten und nicht stornierbare Beschaffungen sowie",
-        "c2c": "eine angemessene Stornogebühr, die den noch nicht erfüllten Teil des Auftrags unter Berücksichtigung ersparter Aufwendungen und einer anderweitigen Nutzung von Ressourcen widerspiegelt, es sei denn, der Kunde weist nach, dass Deepvac kein oder ein geringerer Schaden entstanden ist.",
-        "c3": "27.3 Gesetzliche Rechte zur außerordentlichen Kündigung aus wichtigem Grund bleiben unberührt."
+      \u201C27\u201C: {
+        \u201Ctitle\u201C: \u201CAussetzung, Kündigung und Stornierung\u201C,
+        \u201Cc1\u201C: \u201C27.1 Deepvac darf die Leistung aussetzen, wenn der Kunde mit Zahlungen in Verzug ist oder Mitwirkungspflichten wesentlich verletzt, nachdem eine angemessene Frist gesetzt wurde.\u201C,
+        \u201Cc2intro\u201C: \u201C27.2 Storniert der Kunde einen Auftrag nach Vertragsschluss, ist Deepvac berechtigt, Folgendes in Rechnung zu stellen:\u201C,
+        \u201Cc2a\u201C: \u201Csämtliche bereits erbrachten Leistungen und entstandenen Kosten sowie\u201C,
+        \u201Cc2b\u201C: \u201Csämtliche verbindlich eingegangenen Drittkosten und nicht stornierbare Beschaffungen sowie\u201C,
+        \u201Cc2c\u201C: \u201Ceine angemessene Stornogebühr, die den noch nicht erfüllten Teil des Auftrags unter Berücksichtigung ersparter Aufwendungen und einer anderweitigen Nutzung von Ressourcen widerspiegelt, es sei denn, der Kunde weist nach, dass Deepvac kein oder ein geringerer Schaden entstanden ist.\u201C,
+        \u201Cc3\u201C: \u201C27.3 Gesetzliche Rechte zur außerordentlichen Kündigung aus wichtigem Grund bleiben unberührt.\u201C
       },
-      "28": {
-        "title": "Abtretung",
-        "c1": "28.1 Der Kunde darf Rechte oder Pflichten aus dem Vertrag ohne vorherige schriftliche Zustimmung von Deepvac nicht abtreten.",
-        "c2": "28.2 Deepvac darf Geldforderungen zu Finanzierungs- oder Factoringzwecken an Dritte abtreten."
+      \u201C28\u201C: {
+        \u201Ctitle\u201C: \u201CAbtretung\u201C,
+        \u201Cc1\u201C: \u201C28.1 Der Kunde darf Rechte oder Pflichten aus dem Vertrag ohne vorherige schriftliche Zustimmung von Deepvac nicht abtreten.\u201C,
+        \u201Cc2\u201C: \u201C28.2 Deepvac darf Geldforderungen zu Finanzierungs- oder Factoringzwecken an Dritte abtreten.\u201C
       },
-      "29": {
-        "title": "Anwendbares Recht, Gerichtsstand und Erfüllungsort",
-        "c1": "29.1 Der Vertrag unterliegt dem Recht der Bundesrepublik Deutschland unter Ausschluss des Übereinkommens der Vereinten Nationen über Verträge über den internationalen Warenkauf.",
-        "c2": "29.2 Ausschließlicher Gerichtsstand für alle Streitigkeiten aus oder im Zusammenhang mit dem Vertrag ist Hannover, Deutschland.",
-        "c3": "29.3 Erfüllungsort ist Hannover, Deutschland, soweit nicht anders in Textform vereinbart."
+      \u201C29\u201C: {
+        \u201Ctitle\u201C: \u201CAnwendbares Recht, Gerichtsstand und Erfüllungsort\u201C,
+        \u201Cc1\u201C: \u201C29.1 Der Vertrag unterliegt dem Recht der Bundesrepublik Deutschland unter Ausschluss des Übereinkommens der Vereinten Nationen über Verträge über den internationalen Warenkauf.\u201C,
+        \u201Cc2\u201C: \u201C29.2 Ausschließlicher Gerichtsstand für alle Streitigkeiten aus oder im Zusammenhang mit dem Vertrag ist Hannover, Deutschland.\u201C,
+        \u201Cc3\u201C: \u201C29.3 Erfüllungsort ist Hannover, Deutschland, soweit nicht anders in Textform vereinbart.\u201C
       },
-      "30": {
-        "title": "Textform, Sprache und Änderungen",
-        "c1": "30.1 Änderungen, Ergänzungen und Nebenabreden bedürfen der Textform. E-Mail ist ausreichend, soweit nicht zwingendes Recht eine strengere Form verlangt.",
-        "c2": "30.2 Werden diese Bedingungen in mehreren Sprachen bereitgestellt, geht die englische Fassung vor, sofern nicht ausdrücklich etwas anderes in Textform vereinbart wurde."
+      \u201C30\u201C: {
+        \u201Ctitle\u201C: \u201CTextform, Sprache und Änderungen\u201C,
+        \u201Cc1\u201C: \u201C30.1 Änderungen, Ergänzungen und Nebenabreden bedürfen der Textform. E-Mail ist ausreichend, soweit nicht zwingendes Recht eine strengere Form verlangt.\u201C,
+        \u201Cc2\u201C: \u201C30.2 Werden diese Bedingungen in mehreren Sprachen bereitgestellt, geht die englische Fassung vor, sofern nicht ausdrücklich etwas anderes in Textform vereinbart wurde.\u201C
       },
-      "31": {
-        "title": "Salvatorische Klausel und Fortbestand",
-        "c1": "31.1 Ist eine Bestimmung unwirksam oder nicht durchsetzbar, bleiben die übrigen Bestimmungen wirksam.",
-        "c2": "31.2 Die Parteien werden die unwirksame Bestimmung durch eine wirksame Regelung ersetzen, die dem wirtschaftlichen Zweck der unwirksamen Bestimmung am nächsten kommt."
+      \u201C31\u201C: {
+        \u201Ctitle\u201C: \u201CSalvatorische Klausel und Fortbestand\u201C,
+        \u201Cc1\u201C: \u201C31.1 Ist eine Bestimmung unwirksam oder nicht durchsetzbar, bleiben die übrigen Bestimmungen wirksam.\u201C,
+        \u201Cc2\u201C: \u201C31.2 Die Parteien werden die unwirksame Bestimmung durch eine wirksame Regelung ersetzen, die dem wirtschaftlichen Zweck der unwirksamen Bestimmung am nächsten kommt.\u201C
       },
-      "32": {
-        "title": "Projektspezifische Angebotsunterlagen",
-        "c1": "32.1 Bei projektspezifischen Angeboten, Auftragsbestätigungen und Lieferverträgen der Deepvac GmbH gehen die jeweils individuell in Bezug genommenen Angebotsunterlagen sowie die darin enthaltenen kaufmännischen und rechtlichen Angebotsbedingungen diesen Allgemeinen Geschäftsbedingungen im Kollisionsfall vor.",
-        "c2": "32.2 Soweit die einschlägigen Angebotsunterlagen keine speziellen Regelungen enthalten, gelten diese Allgemeinen Geschäftsbedingungen ergänzend."
+      \u201C32\u201C: {
+        \u201Ctitle\u201C: \u201CProjektspezifische Angebotsunterlagen\u201C,
+        \u201Cc1\u201C: \u201C32.1 Bei projektspezifischen Angeboten, Auftragsbestätigungen und Lieferverträgen der Deepvac GmbH gehen die jeweils individuell in Bezug genommenen Angebotsunterlagen sowie die darin enthaltenen kaufmännischen und rechtlichen Angebotsbedingungen diesen Allgemeinen Geschäftsbedingungen im Kollisionsfall vor.\u201C,
+        \u201Cc2\u201C: \u201C32.2 Soweit die einschlägigen Angebotsunterlagen keine speziellen Regelungen enthalten, gelten diese Allgemeinen Geschäftsbedingungen ergänzend.\u201C
       }
     }
   }
