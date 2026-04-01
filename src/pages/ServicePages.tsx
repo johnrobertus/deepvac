@@ -49,11 +49,11 @@ function ServicePageTemplate({ seoKey, nsKey, heroImage }: ServicePageProps) {
       </Helmet>
       <PageShell>
         <PageHero eyebrow={t(`${nsKey}.eyebrow`)} title={t(`${nsKey}.title`)} description={t(`${nsKey}.description`)}>
-          <div className="flex flex-wrap gap-3 pt-4">
-            <Button asChild size="lg" className="font-mono text-xs tracking-wide">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-3 pt-4">
+            <Button asChild size="lg" className="font-mono text-xs tracking-wide w-full sm:w-auto">
               <Link to={localizedPath("/contact", lang)}>{tc("buttons.discussRequirements")}</Link>
             </Button>
-            <Button asChild variant="outline" size="lg">
+            <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
               <Link to={localizedPath("/services", lang)}>{tc("buttons.allServices")}</Link>
             </Button>
           </div>

@@ -62,11 +62,11 @@ const StandardSeries = () => {
           title={t("standardSeries.title")}
           description={t("standardSeries.description")}
         >
-          <div className="flex flex-wrap gap-3 pt-4">
-            <Button asChild size="lg" className="font-mono text-xs tracking-wide">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-3 pt-4">
+            <Button asChild size="lg" className="font-mono text-xs tracking-wide w-full sm:w-auto">
               <Link to={localizedPath("/contact", lang)}>{tc("buttons.requestTechnicalDetails")}</Link>
             </Button>
-            <Button asChild variant="outline" size="lg">
+            <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
               <Link to={localizedPath("/catalogs", lang)}>{tc("buttons.downloadBrochure")}</Link>
             </Button>
           </div>
@@ -155,7 +155,7 @@ const StandardSeries = () => {
             description={t("standardSeries.applicationFit.description")}
             className="mb-10"
           />
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             {applications.map((app: string) => (
               <div key={app} className="bento-card rounded-lg p-4 flex items-start gap-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-blue mt-1.5 shrink-0" />

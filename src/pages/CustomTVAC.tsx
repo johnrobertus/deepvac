@@ -65,11 +65,11 @@ const CustomTVAC = () => {
           title={t("customTvac.title")}
           description={t("customTvac.description")}
         >
-          <div className="flex flex-wrap gap-3 pt-4">
-            <Button asChild size="lg" className="font-mono text-xs tracking-wide">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-3 pt-4">
+            <Button asChild size="lg" className="font-mono text-xs tracking-wide w-full sm:w-auto">
               <Link to={localizedPath("/contact", lang)}>{tc("buttons.discussConfiguration")}</Link>
             </Button>
-            <Button asChild variant="outline" size="lg">
+            <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
               <Link to={localizedPath("/contact", lang)}>{tc("buttons.requestQuote")}</Link>
             </Button>
           </div>
