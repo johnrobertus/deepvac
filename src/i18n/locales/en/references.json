@@ -41,6 +41,11 @@
     "placeholder": "\"Customer testimonials and project endorsements will be added as references become available for publication.\"",
     "label": "[TESTIMONIAL — Placeholder]"
   },
+  "comingSoon": {
+    "eyebrow": "Placeholder Section",
+    "title": "Coming Soon",
+    "description": "Selected case studies, collaborations and testimonials will be published here soon."
+  },
   "cta": {
     "title": "Discuss Your Project Requirements",
     "description": "Whether you're evaluating chamber platforms, planning a custom system, or exploring service and retrofit options — we're ready to discuss your requirements."
