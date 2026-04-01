@@ -82,7 +82,7 @@ export function CTABand({
         {description && (
           <p className="text-gray text-base max-w-xl mx-auto">{description}</p>
         )}
-        {children && <div className="pt-4 flex justify-center gap-4">{children}</div>}
+        {children && <div className="pt-4 flex flex-col sm:flex-row flex-wrap justify-center gap-4">{children}</div>}
       </div>
     </section>
   );
