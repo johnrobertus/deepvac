@@ -104,7 +104,12 @@
   "terms": {
     "eyebrow": "Legal",
     "title": "General Terms and Conditions",
-    "effectiveDate": "Effective date: 27 February 2026",
+    "effectiveDate": "Effective date: 1 April 2026",
+    "partA": "Part A — General Provisions",
+    "partB": "Part B — Performance and Execution",
+    "partC": "Part C — Acceptance and Commissioning",
+    "partD": "Part D — Portfolio-Specific Provisions",
+    "partE": "Part E — Legal Framework",
     "sections": {
       "1": {
         "title": "Parties and Contact",
@@ -117,14 +122,20 @@
         "c1": "2.1 \"Deepvac\" means Deepvac GmbH.",
         "c2": "2.2 \"Customer\" means the contracting party receiving Deliverables or Services from Deepvac.",
         "c3": "2.3 \"Affiliate\" means any entity that controls, is controlled by, or is under common control with a party. Control means holding, directly or indirectly, more than 50 percent of the voting rights or otherwise having the ability to direct management and policies.",
-        "c4": "2.4 \"Deliverables\" means any hardware, parts, prototypes, assemblies, software, firmware, models, drawings, documentation, test plans, acceptance criteria, test reports, data, and other work results provided by Deepvac.",
-        "c5": "2.5 \"Services\" means any testing services, engineering, design, development, consulting, integration, commissioning, training, maintenance, repair, and related activities performed by Deepvac.",
+        "c4": "2.4 \"Deliverables\" means any hardware, parts, prototypes, assemblies, chamber systems, thermal subsystems, vacuum subsystems, control systems, PLC software, HMI software, firmware, models, drawings, documentation, test plans, acceptance criteria, test reports, data, and other work results provided by Deepvac.",
+        "c5": "2.5 \"Services\" means any testing services, engineering, design, development, consulting, integration, commissioning, training, maintenance, repair, retrofit, modernization, remote monitoring, data acquisition, and related activities performed by Deepvac.",
         "c6": "2.6 \"Order\" means the Customer's purchase order, acceptance of an offer, or other written instruction to proceed.",
-        "c7": "2.7 \"Contract\" means the binding agreement formed under clause 4, including all documents listed in clause 5."
+        "c7": "2.7 \"Contract\" means the binding agreement formed under clause 4, including all documents listed in clause 5.",
+        "c8": "2.8 \"Software\" means PLC programs, HMI applications, supervisory logic, control sequences, data acquisition routines, automation scripts, event logging configurations, interface drivers, and any other software developed or provided by Deepvac under the Contract.",
+        "c9": "2.9 \"System\" means a thermal vacuum chamber system, including all integrated mechanical, thermal, vacuum, electrical, instrumentation, and control components as specified in the Contract.",
+        "c10": "2.10 \"Legacy System\" means any existing equipment, infrastructure, controls, or installations at the Customer's site or in the Customer's possession that are not supplied by Deepvac under the respective Contract.",
+        "c11": "2.11 \"FAT\" means factory acceptance test performed at Deepvac's or its subcontractor's premises.",
+        "c12": "2.12 \"SAT\" means site acceptance test performed at the Customer's site after delivery, installation, or commissioning.",
+        "c13": "2.13 \"Test Item\" means any hardware, component, assembly, satellite, instrument, or other object provided by the Customer for testing by Deepvac."
       },
       "3": {
         "title": "Scope and Applicability",
-        "c1": "3.1 These General Terms and Conditions apply to all offers, Orders, Deliveries, Services, and Contracts with Deepvac.",
+        "c1": "3.1 These General Terms and Conditions apply to all offers, Orders, deliveries, Services, and Contracts with Deepvac.",
         "c2": "3.2 These Terms apply exclusively to entrepreneurs within the meaning of Section 14 German Civil Code, legal entities under public law, and special funds under public law. Contracts with consumers are excluded.",
         "c3": "3.3 The Customer's terms and conditions do not apply, even if Deepvac does not object, unless Deepvac expressly agrees to them in text form.",
         "c4": "3.4 Individual agreements in text form take precedence over these Terms."
@@ -166,146 +177,213 @@
         "c4": "8.4 If Customer cooperation is delayed or incomplete, Deepvac is entitled to extend deadlines and invoice additional effort and costs."
       },
       "9": {
-        "title": "Testing Services Specific Terms",
-        "c1": "9.1 Testing shall be performed according to the agreed test plan. If no test plan is agreed, testing shall be performed according to Deepvac's standard procedures appropriate to the assignment.",
-        "c2": "9.2 The Customer remains solely responsible for the design, intended use, safety, legal conformity, and regulatory compliance of the test item.",
-        "c3": "9.3 Test results are valid only for the tested configuration and boundary conditions documented in the test report. Any extrapolation is at the Customer's risk.",
-        "c4": "9.4 Measurement uncertainty, tolerances, and limitations are as stated in the test documentation or otherwise customary for the methods used.",
-        "c5": "9.5 Deepvac may suspend or refuse testing if the test item presents a safety risk, lacks required documentation, or violates applicable rules. The Customer bears resulting costs.",
-        "c6": "9.6 After completion of testing or Services, Deepvac will make the test item available for collection or shipment as agreed. Unless otherwise agreed, return shipment is at the Customer's cost and risk.",
-        "c7": "9.7 Deepvac will store test items free of charge for up to thirty calendar days after notifying the Customer of completion or readiness for return, whichever occurs first.",
-        "c8": "9.8 After the free storage period, Deepvac may charge reasonable storage fees. If the Customer does not arrange collection or shipment within a reasonable additional period after a written reminder, Deepvac may, where legally permissible, dispose of the test item at the Customer's expense. Where practicable, Deepvac will inform the Customer in advance.",
-        "c9": "9.9 The Customer remains responsible for ensuring that test items are free of hazardous substances unless explicitly declared and agreed in text form. If hazardous materials are involved, the Customer shall provide complete safety data sheets and handling instructions prior to delivery."
+        "title": "Prices, Taxes, and Payment",
+        "c1": "9.1 Prices are net prices plus applicable VAT and any other applicable taxes, duties, customs, or fees unless expressly included.",
+        "c2": "9.2 Unless otherwise agreed, invoices are payable within fourteen calendar days from the invoice date without deduction.",
+        "c3": "9.3 Deepvac may require advance payment, milestone payments, or security, especially for custom developments, prototypes, or high-value Orders.",
+        "c4": "9.4 The Customer may set off only undisputed or finally adjudicated claims. Rights of retention apply only to claims arising from the same Contract.",
+        "c5": "9.5 In case of late payment, statutory default interest under German law applies. Deepvac may charge reasonable reminder and collection costs as permitted by law."
       },
       "10": {
-        "title": "Prices, Taxes, and Payment",
-        "c1": "10.1 Prices are net prices plus applicable VAT and any other applicable taxes, duties, customs, or fees unless expressly included.",
-        "c2": "10.2 Unless otherwise agreed, invoices are payable within fourteen calendar days from the invoice date without deduction.",
-        "c3": "10.3 Deepvac may require advance payment, milestone payments, or security, especially for custom developments, prototypes, or high-value Orders.",
-        "c4": "10.4 The Customer may set off only undisputed or finally adjudicated claims. Rights of retention apply only to claims arising from the same Contract.",
-        "c5": "10.5 In case of late payment, statutory default interest under German law applies. Deepvac may charge reasonable reminder and collection costs as permitted by law."
+        "title": "Delivery, Deadlines, and Force Majeure",
+        "c1": "10.1 Dates and deadlines are non-binding unless expressly agreed as binding in text form.",
+        "c1a": "10.1a Contractual penalties, liquidated damages, or similar delay sanctions apply only if expressly agreed in text form in the respective order confirmation.",
+        "c2": "10.2 Delivery and performance periods start only after order confirmation, receipt of any agreed advance payment, and receipt of all Customer cooperation items required to start performance.",
+        "c3": "10.3 Force majeure includes events beyond Deepvac's reasonable control, including supply chain disruptions, transportation disruptions, governmental measures, export restrictions, sanctions, labor disputes, power failures, cyber incidents not caused by Deepvac, pandemics, and natural events. In such cases, obligations are suspended for the duration, and deadlines extend accordingly.",
+        "c4": "10.4 Deepvac may perform partial deliveries and partial Services if reasonable for the Customer."
       },
       "11": {
-        "title": "Delivery, Deadlines, and Force Majeure",
-        "c1": "11.1 Dates and deadlines are non-binding unless expressly agreed as binding in text form.",
-        "c1a": "11.1a Contractual penalties, liquidated damages, or similar delay sanctions apply only if expressly agreed in text form in the respective order confirmation.",
-        "c2": "11.2 Delivery and performance periods start only after order confirmation, receipt of any agreed advance payment, and receipt of all Customer cooperation items required to start performance.",
-        "c3": "11.3 Force majeure includes events beyond Deepvac's reasonable control, including supply chain disruptions, transportation disruptions, governmental measures, export restrictions, sanctions, labor disputes, power failures, cyber incidents not caused by Deepvac, pandemics, and natural events. In such cases, obligations are suspended for the duration, and deadlines extend accordingly.",
-        "c4": "11.4 Deepvac may perform partial deliveries and partial Services if reasonable for the Customer."
+        "title": "Shipping, Risk Transfer, and Packaging",
+        "c1": "11.1 Unless otherwise agreed, delivery is EXW Deepvac's business address (Incoterms 2020). Risk transfers upon provision for collection or handover to the carrier, whichever occurs first.",
+        "c2": "11.2 The Customer bears transport, insurance, customs, export, and import costs unless otherwise agreed.",
+        "c3": "11.3 Packaging is charged at cost unless otherwise agreed. Returnable packaging is accepted only by prior agreement in text form."
       },
       "12": {
-        "title": "Shipping, Risk Transfer, and Packaging",
-        "c1": "12.1 Unless otherwise agreed, delivery is EXW Deepvac's business address (Incoterms 2020). Risk transfers upon provision for collection or handover to the carrier, whichever occurs first.",
-        "c2": "12.2 The Customer bears transport, insurance, customs, export, and import costs unless otherwise agreed.",
-        "c3": "12.3 Packaging is charged at cost unless otherwise agreed. Returnable packaging is accepted only by prior agreement in text form."
+        "title": "Acceptance and Commissioning",
+        "c1": "12.1 If acceptance is agreed or legally required, acceptance criteria and procedure shall be defined in text form before the start of performance.",
+        "c2": "12.2 Where a factory acceptance test (FAT) is agreed, Deepvac shall notify the Customer when the Deliverables are ready for FAT. The Customer shall participate within the agreed timeframe or, absent an agreement, within fourteen calendar days of notification.",
+        "c3": "12.3 Where a site acceptance test (SAT) is agreed, the Customer shall ensure that the installation site, utilities, infrastructure, and all prerequisites specified in the Contract are ready and available before the agreed SAT date. Delays caused by incomplete site readiness shall be at the Customer's cost and risk.",
+        "c4": "12.4 Where commissioning is part of the scope, Deepvac shall perform commissioning according to the agreed procedure. Commissioning is complete when the System operates within the agreed parameters.",
+        "c5intro": "12.5 If no acceptance procedure is expressly agreed, acceptance occurs when Deepvac has notified the Customer in text form that the Deliverables are ready for acceptance and, in that notice, has informed the Customer of the acceptance mechanism under this clause, and then:",
+        "c5a": "the Customer confirms acceptance in text form, or",
+        "c5b": "the Customer uses the Deliverables productively, or",
+        "c5c": "fourteen calendar days pass after such notice and the Customer has not provided a notice of material defects in text form.",
+        "c6": "12.6 Minor defects that do not materially impair the contractual use do not prevent acceptance. Such defects shall be listed in the acceptance protocol and remedied by Deepvac within a reasonable period.",
+        "c7": "12.7 The Customer shall test and inspect Deliverables promptly within a reasonable period, taking into account the complexity of the Deliverables and the intended use.",
+        "c8": "12.8 Where the Contract provides for milestone-based or partial acceptance, each accepted milestone or partial delivery is deemed accepted independently. Subsequent milestones do not reopen acceptance of previously accepted deliverables.",
+        "c9": "12.9 If the Customer delays acceptance without identifying material defects, Deepvac may set a reasonable deadline. Upon expiry without response, acceptance is deemed granted. Deepvac may invoice storage, standby, and additional costs incurred due to the delay.",
+        "c10": "12.10 Acceptance of Software and control system deliverables follows the same principles. Functionality is assessed against the agreed specification. Acceptance does not require the Software to be entirely free of minor anomalies that do not impair the agreed functionality."
       },
       "13": {
-        "title": "Acceptance of Deliverables",
-        "c1": "13.1 If acceptance is agreed or legally required, acceptance criteria and procedure shall be defined in text form.",
-        "c2intro": "13.2 If no acceptance procedure is agreed, acceptance occurs when Deepvac has notified the Customer in text form that the Deliverables are ready for acceptance and, in that notice, has informed the Customer of the acceptance mechanism under this clause 13.2, and then:",
-        "c2a": "the Customer confirms acceptance in text form, or",
-        "c2b": "the Customer uses the Deliverables productively, or",
-        "c2c": "fourteen calendar days pass after such notice and the Customer has not provided a notice of material defects in text form.",
-        "c3": "13.3 Minor defects that do not materially impair the contractual use do not prevent acceptance.",
-        "c4": "13.4 The Customer shall test and inspect Deliverables promptly within a reasonable period, taking into account the complexity of the Deliverables and the intended use."
+        "title": "Supply of Chamber Systems and Hardware",
+        "c1": "13.1 This clause applies to the supply of standardized and custom-engineered thermal vacuum chamber systems, chamber platforms, and related hardware.",
+        "c2": "13.2 The specification of the System is defined exclusively in the Contract documents. Dimensions, performance parameters, interfaces, and accessories are owed only as expressly agreed.",
+        "c3": "13.3 Standard chamber platforms are delivered in the configuration described in the applicable product documentation at the time of order confirmation. Options and upgrades are included only if expressly listed in the order confirmation.",
+        "c4": "13.4 Assembly, installation, and commissioning at the Customer's site are included only if expressly agreed. Where not included, Deepvac may offer these as separate Services.",
+        "c5": "13.5 The Customer is responsible for ensuring that the installation site meets the requirements specified by Deepvac, including but not limited to floor load capacity, room dimensions, access routes, power supply, cooling water, compressed air, and ventilation."
       },
       "14": {
-        "title": "Retention of Title",
-        "c1": "14.1 Delivered goods remain the property of Deepvac until full payment of all present and future claims arising from the business relationship.",
-        "c2": "14.2 The Customer shall handle retained goods with care and insure them adequately.",
-        "c3": "14.3 The Customer may resell goods in the ordinary course of business. The Customer assigns to Deepvac, as security, all claims arising from such resale up to the amount of Deepvac's outstanding claims. Deepvac accepts this assignment."
+        "title": "Custom Systems and Project Business",
+        "c1": "14.1 This clause applies to custom-engineered thermal vacuum systems, application-specific developments, and project-based engineering work.",
+        "c2": "14.2 The scope of the project is defined by the agreed specification, statement of work, and project plan. Performance beyond the agreed scope requires a change order under clause 7.",
+        "c3": "14.3 Engineering decisions within the agreed specification are at Deepvac's professional discretion unless the Contract requires Customer approval for specific decisions.",
+        "c4": "14.4 The Customer shall designate a competent project contact and shall make timely decisions on open points. Delayed decisions entitle Deepvac to adjust the schedule and invoice additional costs.",
+        "c5": "14.5 Where the project involves integration with the Customer's existing infrastructure, the Customer is responsible for providing accurate and complete documentation of the existing systems, interfaces, and site conditions.",
+        "c6": "14.6 Deepvac may propose reasonable design alternatives if the originally agreed solution proves technically impracticable or disproportionately costly. Such alternatives require agreement under the change order procedure."
       },
       "15": {
-        "title": "Warranty and Defect Claims",
-        "c1": "15.1 The Customer shall inspect Deliverables without undue delay after delivery, insofar as this is feasible in the ordinary course of business. If Section 377 HGB applies, the Customer shall inspect the Deliverables and notify defects in accordance with that provision. In all other cases, the Customer shall notify apparent defects and hidden defects in text form without undue delay after becoming aware of them.",
-        "c2": "15.2 In case of justified defects, Deepvac shall, at its discretion, repair or replace the defective Deliverable or re-perform the defective Service.",
-        "c3": "15.3 The limitation period for defect claims is twelve months from delivery in the case of goods and twelve months from acceptance in the case of work results, unless mandatory law requires a longer period. Where acceptance is excluded by the nature of the work, the limitation period begins upon completion. This does not apply in cases of fraudulent concealment, assumption of a guarantee, injury to life, body, or health, intentional misconduct, gross negligence, or mandatory liability under applicable product liability law.",
-        "c4": "15.4 No defect claim exists for insignificant deviations, normal wear and tear, defects caused by improper use, unauthorized modification, installation errors by the Customer or third parties, unsuitable operating conditions, or external influences beyond Deepvac's control.",
-        "c5": "15.5 If the Customer or third parties perform remedial actions without Deepvac's prior consent, defect claims are excluded unless the Customer proves that such actions did not cause or aggravate the defect."
+        "title": "Testing Services",
+        "c1": "15.1 This clause applies to thermal vacuum testing, environmental simulation, test campaign execution, and related testing services.",
+        "c2": "15.2 Testing shall be performed according to the agreed test plan. If no test plan is agreed, testing shall be performed according to Deepvac's standard procedures appropriate to the assignment.",
+        "c3": "15.3 The Customer remains solely responsible for the design, intended use, safety, legal conformity, and regulatory compliance of the Test Item.",
+        "c4": "15.4 Test results are valid only for the tested configuration and boundary conditions documented in the test report. Any extrapolation to other configurations, environments, or use cases is at the Customer's risk.",
+        "c5": "15.5 Deepvac does not guarantee certification outcomes, regulatory approvals, mission success, or fitness for purpose beyond the agreed test specification.",
+        "c6": "15.6 Measurement uncertainty, tolerances, and limitations are as stated in the test documentation or otherwise customary for the methods used.",
+        "c7": "15.7 Deepvac may suspend or refuse testing if the Test Item presents a safety risk, lacks required documentation, or violates applicable rules. The Customer bears resulting costs.",
+        "c8": "15.8 The Customer shall declare any hazardous substances, radioactive materials, or biologically active materials before delivery of the Test Item. Complete safety data sheets and handling instructions shall be provided in advance. Deepvac may refuse Test Items that have not been properly declared.",
+        "c9": "15.9 Handling, storage, and shipment of Test Items is the Customer's responsibility unless expressly agreed otherwise. The Customer bears all risk of loss or damage to the Test Item during transport.",
+        "c10": "15.10 After completion of testing, Deepvac will make the Test Item available for collection or shipment as agreed. Unless otherwise agreed, return shipment is at the Customer's cost and risk.",
+        "c11": "15.11 Deepvac will store Test Items free of charge for up to thirty calendar days after notifying the Customer of completion. After the free storage period, Deepvac may charge reasonable storage fees. If the Customer does not arrange collection within a reasonable additional period after written reminder, Deepvac may, where legally permissible, dispose of the Test Item at the Customer's expense.",
+        "c12": "15.12 Raw measurement data, intermediate datasets, internal system logs, photographs, and test records are provided only if expressly agreed in text form. The standard deliverable is the test report.",
+        "c13": "15.13 If a test is aborted or interrupted due to Test Item failure, Customer instruction, or safety concerns, Deepvac is entitled to full compensation for the testing time and resources used. Repeated or extended test runs caused by Test Item issues are charged separately.",
+        "c14": "15.14 Deepvac's liability for damage to the Test Item is limited to cases of intent and gross negligence. In cases of slight negligence, Deepvac is liable only for breach of essential contractual obligations, limited to foreseeable and typical damage. This limitation does not apply to injury to life, body, or health."
       },
       "16": {
-        "title": "Liability",
-        "c1": "16.1 Deepvac is liable without limitation for intent, gross negligence, and injury to life, body, or health.",
-        "c2": "16.2 In case of slight negligence, Deepvac is liable only for breach of essential contractual obligations. Essential contractual obligations are obligations whose fulfilment is necessary to achieve the purpose of the Contract and on whose compliance the Customer may regularly rely.",
-        "c3": "16.3 In the case of clause 16.2, liability is limited to the foreseeable, typically occurring damage at the time of Contract conclusion.",
-        "c4": "16.4 To the extent permitted by law, Deepvac is not liable for indirect or consequential damages, including loss of profit, loss of revenue, business interruption, production downtime, loss of use, and third party claims.",
-        "c4a": "16.4a To the extent liability for loss of data applies, Deepvac's liability is limited to the typical recovery effort that would have been required if the Customer had performed regular and appropriate data backups.",
-        "c5": "16.5 Unless mandatory law provides otherwise, total aggregate liability for claims based on slight negligence is limited to the net Contract value of the respective Order.",
-        "c6": "16.6 Mandatory liability under applicable product liability law remains unaffected."
+        "title": "Retrofit, Modernization, and Integration",
+        "c1": "16.1 This clause applies to retrofit, modernization, upgrade, and subsystem integration work on existing thermal vacuum systems, whether originally supplied by Deepvac or by third parties.",
+        "c2": "16.2 The scope of retrofit and modernization work is defined exclusively by the agreed specification. Deepvac does not assume responsibility for the overall condition or performance of the Legacy System beyond the expressly agreed scope.",
+        "c3": "16.3 Deepvac's assessment and quotation are based on the visible and documented condition of the Legacy System at the time of inspection. Hidden defects, undocumented modifications, or deterioration not apparent at the time of assessment do not form part of the agreed scope.",
+        "c4": "16.4 If the actual condition of the Legacy System differs from the documented or communicated condition, additional work required to achieve the agreed result shall be treated as a change order under clause 7 and invoiced separately.",
+        "c5": "16.5 Compatibility with existing third-party components, controls, interfaces, or infrastructure is assured only to the extent expressly agreed in the Contract. Deepvac does not warrant compatibility with undisclosed or undocumented system elements.",
+        "c6": "16.6 The Customer is responsible for the condition of the existing site, utilities, infrastructure, third-party equipment, and all interfaces not expressly included in Deepvac's scope.",
+        "c7": "16.7 Requalification, revalidation, or regulatory re-compliance of the overall system after retrofit or modernization is included only if expressly agreed in the Contract.",
+        "c8": "16.8 Where Deepvac integrates subsystems into an existing system, risk of damage to the existing system due to its pre-existing condition or undisclosed defects remains with the Customer."
       },
       "17": {
-        "title": "Intellectual Property and Rights of Use",
-        "c1": "17.1 All intellectual property rights, know-how, methods, tools, templates, libraries, algorithms, models, and pre-existing software or documentation of Deepvac remain with Deepvac.",
-        "c2": "17.2 Unless expressly agreed otherwise, Deliverables created under the Contract grant the Customer a non-exclusive, non-transferable, non-sublicensable right to use the Deliverables solely for the Customer's internal purposes and only to the extent necessary for the contractual purpose.",
-        "c3": "17.3 Source code, CAD source files, training data, model weights, and development repositories are not owed unless expressly agreed in text form.",
-        "c4": "17.4 The Customer shall not remove proprietary notices and shall not reverse engineer, decompile, or disassemble software or firmware except where mandatory law permits it.",
-        "c5": "17.5 Unless expressly agreed otherwise, the Customer may use test reports and test data delivered under the Contract for the Customer's internal purposes to the extent necessary for the contractual purpose.",
-        "c6": "17.6 Deepvac retains all rights in its measurement methods, test procedures, setups, tooling, templates, know-how, and underlying evaluation logic, even if reflected in reports or data.",
-        "c7": "17.7 Any use of anonymized or aggregated results by Deepvac for benchmarking, quality management, marketing references, case studies, or statistics requires the Customer's prior written consent in each individual case. Without such consent, Deepvac will not use Customer-related test results outside contract performance.",
-        "c8": "17.8 Raw measurement data formats, intermediate datasets, and internal system logs are provided only if expressly agreed in text form."
+        "title": "Maintenance, Repair, and Service Interventions",
+        "c1": "17.1 This clause applies to maintenance, repair, preventive servicing, diagnostics, and technical support services.",
+        "c2": "17.2 The scope of maintenance and repair work is limited to the services expressly agreed. Implied service levels, guaranteed response times, or guaranteed uptime commitments apply only if expressly agreed in text form.",
+        "c3": "17.3 Remote support is provided where technically feasible and agreed. Remote access requires adequate network infrastructure provided by the Customer. Deepvac is not responsible for connectivity issues, network security, or IT infrastructure at the Customer's site.",
+        "c4": "17.4 On-site support is charged at the agreed rates. Travel time, travel expenses, accommodation, consumables, and spare parts are invoiced separately unless expressly included in a fixed-price agreement.",
+        "c5": "17.5 Deepvac may use reasonable substitute parts or equivalent components if original parts are unavailable, provided they do not materially impair functionality.",
+        "c6": "17.6 Repair efforts are based on technical feasibility. Deepvac does not guarantee that older systems can be fully restored to original condition or upgraded to current standards unless expressly agreed.",
+        "c7": "17.7 Replaced parts become the property of Deepvac unless the Customer requests their return in the Order. Return of replaced parts may be subject to a handling charge.",
+        "c8": "17.8 The Customer shall provide safe access to the equipment, clear the work area, and ensure compliance with applicable safety regulations during on-site service interventions."
       },
       "18": {
+        "title": "Software, Control Systems, Data, and Digital Functions",
+        "c1": "18.1 This clause applies to PLC software, HMI applications, supervisory logic, data acquisition systems, event logging, remote monitoring, automation scripts, and interfaces including but not limited to OPC UA, Modbus, and LAN-based access provided by Deepvac.",
+        "c2": "18.2 Unless expressly agreed otherwise, Software and control system deliverables are licensed, not sold. The Customer receives a non-exclusive, non-transferable, non-sublicensable license to use the Software solely for the operation and internal maintenance of the System delivered under the Contract.",
+        "c3": "18.3 Source code, development environments, repositories, CAD source files, model weights, and training pipelines are not included in the license and are not delivered unless expressly agreed in text form.",
+        "c4": "18.4 The Customer may use the Software for internal operations, maintenance, and internal compliance purposes. Sublicensing, transfer to third parties, reverse engineering, decompilation, and external reuse are prohibited unless expressly agreed or permitted by mandatory law.",
+        "c5": "18.5 Remote access and remote monitoring functions are available only where agreed and are subject to the Customer's network and cybersecurity conditions. Deepvac is not liable for interruptions or security incidents caused by the Customer's IT infrastructure.",
+        "c6": "18.6 Deepvac does not warrant that Software is entirely free of defects or will operate without interruption. Software warranty is limited to material deviations from the agreed functional specification.",
+        "c7": "18.7 Updates, patches, version upgrades, and functional modifications are owed only if expressly agreed in text form. Where a maintenance agreement includes software updates, the scope and frequency are as defined in that agreement.",
+        "c8": "18.8 The Customer is responsible for regular data backups of all system data, configuration data, and operational data. Deepvac's liability for data loss is limited in accordance with clause 21.",
+        "c9": "18.9 Where the Contract includes AI-supported, data-driven, or algorithmic monitoring, diagnostic, or optimization functions, Deepvac does not guarantee prediction accuracy, optimization results, or autonomous decision quality unless expressly guaranteed in writing. Such functions are provided as decision support tools.",
+        "c10": "18.10 Deepvac retains all rights in its methods, control logic, algorithms, libraries, templates, models, and pre-existing technology, even where incorporated into Customer-specific deliverables."
+      },
+      "19": {
+        "title": "Retention of Title",
+        "c1": "19.1 Delivered goods remain the property of Deepvac until full payment of all present and future claims arising from the business relationship.",
+        "c2": "19.2 The Customer shall handle retained goods with care and insure them adequately.",
+        "c3": "19.3 The Customer may resell goods in the ordinary course of business. The Customer assigns to Deepvac, as security, all claims arising from such resale up to the amount of Deepvac's outstanding claims. Deepvac accepts this assignment."
+      },
+      "20": {
+        "title": "Warranty and Defect Claims",
+        "c1": "20.1 The Customer shall inspect Deliverables without undue delay after delivery, insofar as this is feasible in the ordinary course of business. If Section 377 HGB applies, the Customer shall inspect the Deliverables and notify defects in accordance with that provision. In all other cases, the Customer shall notify apparent defects and hidden defects in text form without undue delay after becoming aware of them.",
+        "c2": "20.2 In case of justified defects, Deepvac shall, at its discretion, repair or replace the defective Deliverable or re-perform the defective Service.",
+        "c3": "20.3 The limitation period for defect claims is twelve months from delivery in the case of goods and twelve months from acceptance in the case of work results, unless mandatory law requires a longer period. Where acceptance is excluded by the nature of the work, the limitation period begins upon completion. This does not apply in cases of fraudulent concealment, assumption of a guarantee, injury to life, body, or health, intentional misconduct, gross negligence, or mandatory liability under applicable product liability law.",
+        "c4": "20.4 No defect claim exists for insignificant deviations, normal wear and tear, defects caused by improper use, unauthorized modification, installation errors by the Customer or third parties, unsuitable operating conditions, or external influences beyond Deepvac's control.",
+        "c5": "20.5 If the Customer or third parties perform remedial actions without Deepvac's prior consent, defect claims are excluded unless the Customer proves that such actions did not cause or aggravate the defect.",
+        "c6": "20.6 For retrofit, modernization, and integration work on Legacy Systems, warranty is limited to the work performed by Deepvac and the components supplied by Deepvac. Deepvac does not assume warranty for the Legacy System itself or for defects arising from the Legacy System's pre-existing condition."
+      },
+      "21": {
+        "title": "Liability",
+        "c1": "21.1 Deepvac is liable without limitation for intent, gross negligence, and injury to life, body, or health.",
+        "c2": "21.2 In case of slight negligence, Deepvac is liable only for breach of essential contractual obligations. Essential contractual obligations are obligations whose fulfilment is necessary to achieve the purpose of the Contract and on whose compliance the Customer may regularly rely.",
+        "c3": "21.3 In the case of clause 21.2, liability is limited to the foreseeable, typically occurring damage at the time of Contract conclusion.",
+        "c4": "21.4 To the extent permitted by law, Deepvac is not liable for indirect or consequential damages, including loss of profit, loss of revenue, business interruption, production downtime, loss of use, and third party claims.",
+        "c5": "21.5 To the extent liability for loss of data applies, Deepvac's liability is limited to the typical recovery effort that would have been required if the Customer had performed regular and appropriate data backups.",
+        "c6": "21.6 For testing services, Deepvac's liability for damage to the Test Item is governed by clause 15.14.",
+        "c7": "21.7 For services, including maintenance, repair, retrofit, and integration work, liability for slight negligence is limited to the net value of the respective service order.",
+        "c8": "21.8 Unless mandatory law provides otherwise, total aggregate liability for claims based on slight negligence is limited to the net Contract value of the respective Order.",
+        "c9": "21.9 Mandatory liability under applicable product liability law remains unaffected."
+      },
+      "22": {
+        "title": "Intellectual Property and Rights of Use",
+        "c1": "22.1 All intellectual property rights, know-how, methods, tools, templates, libraries, algorithms, models, and pre-existing software or documentation of Deepvac remain with Deepvac.",
+        "c2": "22.2 Unless expressly agreed otherwise, Deliverables created under the Contract grant the Customer a non-exclusive, non-transferable, non-sublicensable right to use the Deliverables solely for the Customer's internal purposes and only to the extent necessary for the contractual purpose.",
+        "c3": "22.3 The Customer receives the operational rights necessary to use the purchased or commissioned System for the agreed contractual purpose, including operation, internal maintenance, and regulatory compliance.",
+        "c4": "22.4 Source code, CAD source files, training data, model weights, and development repositories are not owed unless expressly agreed in text form.",
+        "c5": "22.5 The Customer shall not remove proprietary notices and shall not reverse engineer, decompile, or disassemble software or firmware except where mandatory law permits it.",
+        "c6": "22.6 Unless expressly agreed otherwise, the Customer may use test reports and test data delivered under the Contract for the Customer's internal purposes to the extent necessary for the contractual purpose.",
+        "c7": "22.7 Deepvac retains all rights in its measurement methods, test procedures, setups, tooling, templates, know-how, and underlying evaluation logic, even if reflected in reports or data.",
+        "c8": "22.8 Any use of anonymized or aggregated results by Deepvac for benchmarking, quality management, marketing references, case studies, or statistics requires the Customer's prior written consent in each individual case.",
+        "c9": "22.9 Raw measurement data formats, intermediate datasets, and internal system logs are provided only if expressly agreed in text form."
+      },
+      "23": {
         "title": "Confidentiality",
-        "c1": "18.1 Each party shall keep confidential all non-public technical, commercial, and operational information received from the other party and shall use it only for the contractual purpose.",
-        "c2": "18.2 Confidential information may be disclosed only to employees and subcontractors on a need-to-know basis and under confidentiality obligations at least as protective as those herein.",
-        "c3intro": "18.3 Confidentiality does not apply to information that is:",
+        "c1": "23.1 Each party shall keep confidential all non-public technical, commercial, and operational information received from the other party and shall use it only for the contractual purpose.",
+        "c2": "23.2 Confidential information may be disclosed only to employees and subcontractors on a need-to-know basis and under confidentiality obligations at least as protective as those herein.",
+        "c3intro": "23.3 Confidentiality does not apply to information that is:",
         "c3a": "publicly known without breach, or",
         "c3b": "lawfully obtained from a third party without confidentiality obligations, or",
         "c3c": "independently developed without use of the other party's confidential information, or",
         "c3d": "required to be disclosed by law or court order. If disclosure is required and legally permissible, the disclosing party shall notify the other party in advance.",
-        "c4": "18.4 The confidentiality obligation continues for five years after termination of the Contract. Trade secrets remain protected for as long as they qualify as trade secrets under applicable law."
+        "c4": "23.4 The confidentiality obligation continues for five years after termination of the Contract. Trade secrets remain protected for as long as they qualify as trade secrets under applicable law."
       },
-      "19": {
+      "24": {
         "title": "Data Protection",
-        "c1": "19.1 Each party shall comply with applicable data protection laws, including the GDPR where applicable.",
-        "c2": "19.2 If Deepvac processes personal data on behalf of the Customer, the parties shall conclude a data processing agreement pursuant to Art. 28 GDPR before processing begins."
+        "c1": "24.1 Each party shall comply with applicable data protection laws, including the GDPR where applicable.",
+        "c2": "24.2 If Deepvac processes personal data on behalf of the Customer, the parties shall conclude a data processing agreement pursuant to Art. 28 GDPR before processing begins."
       },
-      "20": {
+      "25": {
         "title": "Export Control and Sanctions",
-        "c1": "20.1 Performance may be subject to export control laws, sanctions, and embargoes. The Customer shall provide all information required to assess compliance, including end use and end user information upon request.",
-        "c2": "20.2 Deepvac may suspend or refuse performance if it would violate applicable export control or sanctions regulations.",
-        "c3": "20.3 The Customer warrants that it will not use Deliverables for prohibited end uses and will comply with applicable re-export requirements."
+        "c1": "25.1 Performance may be subject to export control laws, sanctions, and embargoes. The Customer shall provide all information required to assess compliance, including end use and end user information upon request.",
+        "c2": "25.2 Deepvac may suspend or refuse performance if it would violate applicable export control or sanctions regulations.",
+        "c3": "25.3 The Customer warrants that it will not use Deliverables for prohibited end uses and will comply with applicable re-export requirements."
       },
-      "21": {
+      "26": {
         "title": "Compliance and Safety",
-        "c1": "21.1 The Customer shall comply with all applicable safety regulations and follow Deepvac's safety instructions on Deepvac premises and when using Deepvac equipment.",
-        "c2": "21.2 If the Customer provides hazardous materials, the Customer shall provide complete safety data sheets and handling instructions in advance.",
-        "c3": "21.3 The Customer shall ensure that any personnel visiting Deepvac facilities are properly instructed and equipped in accordance with applicable safety rules."
+        "c1": "26.1 The Customer shall comply with all applicable safety regulations and follow Deepvac's safety instructions on Deepvac premises and when using Deepvac equipment.",
+        "c2": "26.2 If the Customer provides hazardous materials, the Customer shall provide complete safety data sheets and handling instructions in advance.",
+        "c3": "26.3 The Customer shall ensure that any personnel visiting Deepvac facilities are properly instructed and equipped in accordance with applicable safety rules."
       },
-      "22": {
+      "27": {
         "title": "Suspension, Termination, and Cancellation",
-        "c1": "22.1 Deepvac may suspend performance if the Customer is in default of payment or materially breaches cooperation duties, after a reasonable notice period.",
-        "c2intro": "22.2 If the Customer cancels an Order after Contract conclusion, Deepvac is entitled to invoice:",
+        "c1": "27.1 Deepvac may suspend performance if the Customer is in default of payment or materially breaches cooperation duties, after a reasonable notice period.",
+        "c2intro": "27.2 If the Customer cancels an Order after Contract conclusion, Deepvac is entitled to invoice:",
         "c2a": "all Services performed and costs incurred, and",
         "c2b": "all committed third party costs and non-cancelable procurement, and",
         "c2c": "a reasonable cancellation fee reflecting the portion of the Order not yet performed, taking into account saved expenses and any other use of resources, unless the Customer proves that Deepvac suffered no or lower loss.",
-        "c3": "22.3 Statutory rights to terminate for cause remain unaffected."
+        "c3": "27.3 Statutory rights to terminate for cause remain unaffected."
       },
-      "23": {
+      "28": {
         "title": "Assignment",
-        "c1": "23.1 The Customer may not assign rights or obligations under the Contract without Deepvac's prior written consent.",
-        "c2": "23.2 Deepvac may assign monetary claims to third parties for financing or factoring purposes."
+        "c1": "28.1 The Customer may not assign rights or obligations under the Contract without Deepvac's prior written consent.",
+        "c2": "28.2 Deepvac may assign monetary claims to third parties for financing or factoring purposes."
       },
-      "24": {
+      "29": {
         "title": "Governing Law, Jurisdiction, and Place of Performance",
-        "c1": "24.1 The Contract is governed by the laws of the Federal Republic of Germany, excluding the United Nations Convention on Contracts for the International Sale of Goods.",
-        "c2": "24.2 Exclusive place of jurisdiction for all disputes arising out of or in connection with the Contract is Hanover, Germany.",
-        "c3": "24.3 Place of performance is Hanover, Germany, unless otherwise agreed in text form."
+        "c1": "29.1 The Contract is governed by the laws of the Federal Republic of Germany, excluding the United Nations Convention on Contracts for the International Sale of Goods.",
+        "c2": "29.2 Exclusive place of jurisdiction for all disputes arising out of or in connection with the Contract is Hanover, Germany.",
+        "c3": "29.3 Place of performance is Hanover, Germany, unless otherwise agreed in text form."
       },
-      "25": {
+      "30": {
         "title": "Text Form, Language, and Amendments",
-        "c1": "25.1 Amendments, supplements, and side agreements require text form. Email is sufficient unless a stricter form is required by mandatory law.",
-        "c2": "25.2 If these Terms are provided in multiple languages, the English version shall prevail unless expressly agreed otherwise in text form."
+        "c1": "30.1 Amendments, supplements, and side agreements require text form. Email is sufficient unless a stricter form is required by mandatory law.",
+        "c2": "30.2 If these Terms are provided in multiple languages, the English version shall prevail unless expressly agreed otherwise in text form."
       },
-      "26": {
+      "31": {
         "title": "Severability and Continuity",
-        "c1": "26.1 If any provision is invalid or unenforceable, the remaining provisions remain effective.",
-        "c2": "26.2 The parties shall replace the invalid provision with a valid provision that comes closest to the economic intent of the invalid provision."
+        "c1": "31.1 If any provision is invalid or unenforceable, the remaining provisions remain effective.",
+        "c2": "31.2 The parties shall replace the invalid provision with a valid provision that comes closest to the economic intent of the invalid provision."
       },
-      "27": {
+      "32": {
         "title": "Project-Specific Offer Documents",
-        "c1": "27.1 For project-specific offers, order confirmations, and supply contracts of Deepvac GmbH, the individually referenced offer documents and the commercial and legal offer conditions contained therein shall take precedence over these General Terms and Conditions to the extent of any conflict.",
-        "c2": "27.2 To the extent that the relevant offer documents do not contain specific provisions, these General Terms and Conditions shall apply on a supplementary basis."
+        "c1": "32.1 For project-specific offers, order confirmations, and supply contracts of Deepvac GmbH, the individually referenced offer documents and the commercial and legal offer conditions contained therein shall take precedence over these General Terms and Conditions to the extent of any conflict.",
+        "c2": "32.2 To the extent that the relevant offer documents do not contain specific provisions, these General Terms and Conditions shall apply on a supplementary basis."
       }
     }
   }

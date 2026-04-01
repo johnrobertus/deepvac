@@ -40,45 +40,24 @@ export default function TermsAndConditions() {
           <div className="max-w-3xl space-y-10 text-gray text-sm leading-relaxed">
             <p className="text-xs text-gray/60">{t("terms.effectiveDate")}</p>
 
+            {/* Part A */}
+            <PartHeader label={t("terms.partA")} />
+
             <LS n="1" title={t("terms.sections.1.title")}>
               <p className="font-medium text-sand">1.1 {t("terms.sections.1.provider")}</p>
               <p>Deepvac GmbH</p>
               <p>{t("imprint.representedBy")}</p>
-              <p>
-                {businessAddressLabel}: An der Universität 1, 30823 Garbsen, {lang === "de" ? "Deutschland" : "Germany"}
-              </p>
+              <p>{businessAddressLabel}: An der Universität 1, 30823 Garbsen, {lang === "de" ? "Deutschland" : "Germany"}</p>
               <p>{emailLabel}: info@deepvac.space</p>
               <p>{phoneLabel}: +49 157 830 270 99</p>
-              <p>
-                {registeredOfficeLabel}: {registeredOfficeValue}
-              </p>
-
+              <p>{registeredOfficeLabel}: {registeredOfficeValue}</p>
               <p className="font-medium text-sand pt-4">1.2 {t("terms.sections.1.customer")}</p>
               <p>{t("terms.sections.1.customerText")}</p>
             </LS>
 
-            <LS n="2" title={t("terms.sections.2.title")}>
-              <p>{t("terms.sections.2.c1")}</p>
-              <p>{t("terms.sections.2.c2")}</p>
-              <p>{t("terms.sections.2.c3")}</p>
-              <p>{t("terms.sections.2.c4")}</p>
-              <p>{t("terms.sections.2.c5")}</p>
-              <p>{t("terms.sections.2.c6")}</p>
-              <p>{t("terms.sections.2.c7")}</p>
-            </LS>
-
-            <LS n="3" title={t("terms.sections.3.title")}>
-              <p>{t("terms.sections.3.c1")}</p>
-              <p>{t("terms.sections.3.c2")}</p>
-              <p>{t("terms.sections.3.c3")}</p>
-              <p>{t("terms.sections.3.c4")}</p>
-            </LS>
-
-            <LS n="4" title={t("terms.sections.4.title")}>
-              <p>{t("terms.sections.4.c1")}</p>
-              <p>{t("terms.sections.4.c2")}</p>
-              <p>{t("terms.sections.4.c3")}</p>
-            </LS>
+            <SimpleSection n="2" t={t} keys={["c1","c2","c3","c4","c5","c6","c7","c8","c9","c10","c11","c12","c13"]} />
+            <SimpleSection n="3" t={t} keys={["c1","c2","c3","c4"]} />
+            <SimpleSection n="4" t={t} keys={["c1","c2","c3"]} />
 
             <LS n="5" title={t("terms.sections.5.title")}>
               <p>{t("terms.sections.5.c1intro")}</p>
@@ -92,173 +71,107 @@ export default function TermsAndConditions() {
               <p>{t("terms.sections.5.c2")}</p>
             </LS>
 
-            <LS n="6" title={t("terms.sections.6.title")}>
-              <p>{t("terms.sections.6.c1")}</p>
-              <p>{t("terms.sections.6.c2")}</p>
-              <p>{t("terms.sections.6.c3")}</p>
-              <p>{t("terms.sections.6.c4")}</p>
-            </LS>
+            {/* Part B */}
+            <PartHeader label={t("terms.partB")} />
 
-            <LS n="7" title={t("terms.sections.7.title")}>
-              <p>{t("terms.sections.7.c1")}</p>
-              <p>{t("terms.sections.7.c2")}</p>
-              <p>{t("terms.sections.7.c3")}</p>
-            </LS>
-
-            <LS n="8" title={t("terms.sections.8.title")}>
-              <p>{t("terms.sections.8.c1")}</p>
-              <p>{t("terms.sections.8.c2")}</p>
-              <p>{t("terms.sections.8.c3")}</p>
-              <p>{t("terms.sections.8.c4")}</p>
-            </LS>
-
-            <LS n="9" title={t("terms.sections.9.title")}>
-              <p>{t("terms.sections.9.c1")}</p>
-              <p>{t("terms.sections.9.c2")}</p>
-              <p>{t("terms.sections.9.c3")}</p>
-              <p>{t("terms.sections.9.c4")}</p>
-              <p>{t("terms.sections.9.c5")}</p>
-              <p>{t("terms.sections.9.c6")}</p>
-              <p>{t("terms.sections.9.c7")}</p>
-              <p>{t("terms.sections.9.c8")}</p>
-              <p>{t("terms.sections.9.c9")}</p>
-            </LS>
+            <SimpleSection n="6" t={t} keys={["c1","c2","c3","c4"]} />
+            <SimpleSection n="7" t={t} keys={["c1","c2","c3"]} />
+            <SimpleSection n="8" t={t} keys={["c1","c2","c3","c4"]} />
+            <SimpleSection n="9" t={t} keys={["c1","c2","c3","c4","c5"]} />
 
             <LS n="10" title={t("terms.sections.10.title")}>
               <p>{t("terms.sections.10.c1")}</p>
+              <p>{t("terms.sections.10.c1a")}</p>
               <p>{t("terms.sections.10.c2")}</p>
               <p>{t("terms.sections.10.c3")}</p>
               <p>{t("terms.sections.10.c4")}</p>
-              <p>{t("terms.sections.10.c5")}</p>
             </LS>
 
-            <LS n="11" title={t("terms.sections.11.title")}>
-              <p>{t("terms.sections.11.c1")}</p>
-              <p>{t("terms.sections.11.c1a")}</p>
-              <p>{t("terms.sections.11.c2")}</p>
-              <p>{t("terms.sections.11.c3")}</p>
-              <p>{t("terms.sections.11.c4")}</p>
-            </LS>
+            <SimpleSection n="11" t={t} keys={["c1","c2","c3"]} />
+
+            {/* Part C */}
+            <PartHeader label={t("terms.partC")} />
 
             <LS n="12" title={t("terms.sections.12.title")}>
               <p>{t("terms.sections.12.c1")}</p>
               <p>{t("terms.sections.12.c2")}</p>
               <p>{t("terms.sections.12.c3")}</p>
-            </LS>
-
-            <LS n="13" title={t("terms.sections.13.title")}>
-              <p>{t("terms.sections.13.c1")}</p>
-              <p>{t("terms.sections.13.c2intro")}</p>
+              <p>{t("terms.sections.12.c4")}</p>
+              <p>{t("terms.sections.12.c5intro")}</p>
               <ol className="list-[lower-alpha] pl-5 space-y-1">
-                <li>{t("terms.sections.13.c2a")}</li>
-                <li>{t("terms.sections.13.c2b")}</li>
-                <li>{t("terms.sections.13.c2c")}</li>
+                <li>{t("terms.sections.12.c5a")}</li>
+                <li>{t("terms.sections.12.c5b")}</li>
+                <li>{t("terms.sections.12.c5c")}</li>
               </ol>
-              <p>{t("terms.sections.13.c3")}</p>
-              <p>{t("terms.sections.13.c4")}</p>
+              <p>{t("terms.sections.12.c6")}</p>
+              <p>{t("terms.sections.12.c7")}</p>
+              <p>{t("terms.sections.12.c8")}</p>
+              <p>{t("terms.sections.12.c9")}</p>
+              <p>{t("terms.sections.12.c10")}</p>
             </LS>
 
-            <LS n="14" title={t("terms.sections.14.title")}>
-              <p>{t("terms.sections.14.c1")}</p>
-              <p>{t("terms.sections.14.c2")}</p>
-              <p>{t("terms.sections.14.c3")}</p>
-            </LS>
+            {/* Part D */}
+            <PartHeader label={t("terms.partD")} />
 
-            <LS n="15" title={t("terms.sections.15.title")}>
-              <p>{t("terms.sections.15.c1")}</p>
-              <p>{t("terms.sections.15.c2")}</p>
-              <p>{t("terms.sections.15.c3")}</p>
-              <p>{t("terms.sections.15.c4")}</p>
-              <p>{t("terms.sections.15.c5")}</p>
-            </LS>
+            <SimpleSection n="13" t={t} keys={["c1","c2","c3","c4","c5"]} />
+            <SimpleSection n="14" t={t} keys={["c1","c2","c3","c4","c5","c6"]} />
+            <SimpleSection n="15" t={t} keys={["c1","c2","c3","c4","c5","c6","c7","c8","c9","c10","c11","c12","c13","c14"]} />
+            <SimpleSection n="16" t={t} keys={["c1","c2","c3","c4","c5","c6","c7","c8"]} />
+            <SimpleSection n="17" t={t} keys={["c1","c2","c3","c4","c5","c6","c7","c8"]} />
+            <SimpleSection n="18" t={t} keys={["c1","c2","c3","c4","c5","c6","c7","c8","c9","c10"]} />
 
-            <LS n="16" title={t("terms.sections.16.title")}>
-              <p>{t("terms.sections.16.c1")}</p>
-              <p>{t("terms.sections.16.c2")}</p>
-              <p>{t("terms.sections.16.c3")}</p>
-              <p>{t("terms.sections.16.c4")}</p>
-              <p>{t("terms.sections.16.c4a")}</p>
-              <p>{t("terms.sections.16.c5")}</p>
-              <p>{t("terms.sections.16.c6")}</p>
-            </LS>
+            {/* Part E */}
+            <PartHeader label={t("terms.partE")} />
 
-            <LS n="17" title={t("terms.sections.17.title")}>
-              <p>{t("terms.sections.17.c1")}</p>
-              <p>{t("terms.sections.17.c2")}</p>
-              <p>{t("terms.sections.17.c3")}</p>
-              <p>{t("terms.sections.17.c4")}</p>
-              <p>{t("terms.sections.17.c5")}</p>
-              <p>{t("terms.sections.17.c6")}</p>
-              <p>{t("terms.sections.17.c7")}</p>
-              <p>{t("terms.sections.17.c8")}</p>
-            </LS>
-
-            <LS n="18" title={t("terms.sections.18.title")}>
-              <p>{t("terms.sections.18.c1")}</p>
-              <p>{t("terms.sections.18.c2")}</p>
-              <p>{t("terms.sections.18.c3intro")}</p>
-              <ol className="list-[lower-alpha] pl-5 space-y-1">
-                <li>{t("terms.sections.18.c3a")}</li>
-                <li>{t("terms.sections.18.c3b")}</li>
-                <li>{t("terms.sections.18.c3c")}</li>
-                <li>{t("terms.sections.18.c3d")}</li>
-              </ol>
-              <p>{t("terms.sections.18.c4")}</p>
-            </LS>
-
-            <LS n="19" title={t("terms.sections.19.title")}>
-              <p>{t("terms.sections.19.c1")}</p>
-              <p>{t("terms.sections.19.c2")}</p>
-            </LS>
-
-            <LS n="20" title={t("terms.sections.20.title")}>
-              <p>{t("terms.sections.20.c1")}</p>
-              <p>{t("terms.sections.20.c2")}</p>
-              <p>{t("terms.sections.20.c3")}</p>
-            </LS>
-
-            <LS n="21" title={t("terms.sections.21.title")}>
-              <p>{t("terms.sections.21.c1")}</p>
-              <p>{t("terms.sections.21.c2")}</p>
-              <p>{t("terms.sections.21.c3")}</p>
-            </LS>
+            <SimpleSection n="19" t={t} keys={["c1","c2","c3"]} />
+            <SimpleSection n="20" t={t} keys={["c1","c2","c3","c4","c5","c6"]} />
+            <SimpleSection n="21" t={t} keys={["c1","c2","c3","c4","c5","c6","c7","c8","c9"]} />
 
             <LS n="22" title={t("terms.sections.22.title")}>
               <p>{t("terms.sections.22.c1")}</p>
-              <p>{t("terms.sections.22.c2intro")}</p>
-              <ol className="list-[lower-alpha] pl-5 space-y-1">
-                <li>{t("terms.sections.22.c2a")}</li>
-                <li>{t("terms.sections.22.c2b")}</li>
-                <li>{t("terms.sections.22.c2c")}</li>
-              </ol>
+              <p>{t("terms.sections.22.c2")}</p>
               <p>{t("terms.sections.22.c3")}</p>
+              <p>{t("terms.sections.22.c4")}</p>
+              <p>{t("terms.sections.22.c5")}</p>
+              <p>{t("terms.sections.22.c6")}</p>
+              <p>{t("terms.sections.22.c7")}</p>
+              <p>{t("terms.sections.22.c8")}</p>
+              <p>{t("terms.sections.22.c9")}</p>
             </LS>
 
             <LS n="23" title={t("terms.sections.23.title")}>
               <p>{t("terms.sections.23.c1")}</p>
               <p>{t("terms.sections.23.c2")}</p>
+              <p>{t("terms.sections.23.c3intro")}</p>
+              <ol className="list-[lower-alpha] pl-5 space-y-1">
+                <li>{t("terms.sections.23.c3a")}</li>
+                <li>{t("terms.sections.23.c3b")}</li>
+                <li>{t("terms.sections.23.c3c")}</li>
+                <li>{t("terms.sections.23.c3d")}</li>
+              </ol>
+              <p>{t("terms.sections.23.c4")}</p>
             </LS>
 
-            <LS n="24" title={t("terms.sections.24.title")}>
-              <p>{t("terms.sections.24.c1")}</p>
-              <p>{t("terms.sections.24.c2")}</p>
-              <p>{t("terms.sections.24.c3")}</p>
-            </LS>
-
-            <LS n="25" title={t("terms.sections.25.title")}>
-              <p>{t("terms.sections.25.c1")}</p>
-              <p>{t("terms.sections.25.c2")}</p>
-            </LS>
-
-            <LS n="26" title={t("terms.sections.26.title")}>
-              <p>{t("terms.sections.26.c1")}</p>
-              <p>{t("terms.sections.26.c2")}</p>
-            </LS>
+            <SimpleSection n="24" t={t} keys={["c1","c2"]} />
+            <SimpleSection n="25" t={t} keys={["c1","c2","c3"]} />
+            <SimpleSection n="26" t={t} keys={["c1","c2","c3"]} />
 
             <LS n="27" title={t("terms.sections.27.title")}>
               <p>{t("terms.sections.27.c1")}</p>
-              <p>{t("terms.sections.27.c2")}</p>
+              <p>{t("terms.sections.27.c2intro")}</p>
+              <ol className="list-[lower-alpha] pl-5 space-y-1">
+                <li>{t("terms.sections.27.c2a")}</li>
+                <li>{t("terms.sections.27.c2b")}</li>
+                <li>{t("terms.sections.27.c2c")}</li>
+              </ol>
+              <p>{t("terms.sections.27.c3")}</p>
             </LS>
+
+            <SimpleSection n="28" t={t} keys={["c1","c2"]} />
+            <SimpleSection n="29" t={t} keys={["c1","c2","c3"]} />
+            <SimpleSection n="30" t={t} keys={["c1","c2"]} />
+            <SimpleSection n="31" t={t} keys={["c1","c2"]} />
+            <SimpleSection n="32" t={t} keys={["c1","c2"]} />
           </div>
         </Section>
       </PageShell>
@@ -266,13 +179,31 @@ export default function TermsAndConditions() {
   );
 }
 
+function PartHeader({ label }: { label: string }) {
+  return (
+    <div className="pt-6 pb-2 border-t border-sand/20">
+      <h2 className="text-sand text-lg font-semibold tracking-wide uppercase">{label}</h2>
+    </div>
+  );
+}
+
 function LS({ n, title, children }: { n: string; title: string; children: ReactNode }) {
   return (
     <div className="space-y-3">
-      <h2 className="text-sand text-base font-medium">
+      <h3 className="text-sand text-base font-medium">
         {n}. {title}
-      </h2>
+      </h3>
       {children}
     </div>
+  );
+}
+
+function SimpleSection({ n, t, keys }: { n: string; t: (key: string) => string; keys: string[] }) {
+  return (
+    <LS n={n} title={t(`terms.sections.${n}.title`)}>
+      {keys.map((k) => (
+        <p key={k}>{t(`terms.sections.${n}.${k}`)}</p>
+      ))}
+    </LS>
   );
 }
