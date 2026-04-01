@@ -155,7 +155,7 @@ const StandardSeries = () => {
             description={t("standardSeries.applicationFit.description")}
             className="mb-10"
           />
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             {applications.map((app: string) => (
               <div key={app} className="bento-card rounded-lg p-4 flex items-start gap-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-blue mt-1.5 shrink-0" />

@@ -130,7 +130,8 @@ const Products = () => {
             description={t("overview.configGuide.description")}
             className="mb-12"
           />
-          <div className="bento-card rounded-lg overflow-hidden">
+          {/* Desktop: table layout */}
+          <div className="bento-card rounded-lg overflow-hidden hidden md:block">
             <div className="grid grid-cols-3 border-b border-gray/15">
               <div className="p-4 mono-label text-gray">{t("overview.configGuide.headers.requirement")}</div>
               <div className="p-4 mono-label text-blue border-l border-gray/15">{t("overview.configGuide.headers.standard")}</div>
@@ -141,6 +142,24 @@ const Products = () => {
                 <div className="p-4 text-sm font-medium text-sand">{row.label}</div>
                 <div className="p-4 text-xs text-gray leading-relaxed border-l border-gray/10">{row.standard}</div>
                 <div className="p-4 text-xs text-gray leading-relaxed border-l border-gray/10">{row.custom}</div>
+              </div>
+            ))}
+          </div>
+          {/* Mobile: stacked cards */}
+          <div className="space-y-4 md:hidden">
+            {factors.map((row) => (
+              <div key={row.label} className="bento-card rounded-lg p-4 space-y-3">
+                <h3 className="text-sm font-medium text-sand">{row.label}</h3>
+                <div className="space-y-2">
+                  <div>
+                    <span className="mono-label text-blue">{t("overview.configGuide.headers.standard")}</span>
+                    <p className="text-xs text-gray leading-relaxed mt-1">{row.standard}</p>
+                  </div>
+                  <div>
+                    <span className="mono-label text-blue">{t("overview.configGuide.headers.custom")}</span>
+                    <p className="text-xs text-gray leading-relaxed mt-1">{row.custom}</p>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
