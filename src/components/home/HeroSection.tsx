@@ -9,7 +9,6 @@ const slides = [
 ];
 
 const FADE_DURATION = 1800;
-// Cut 1 second from the end of video 2
 const VIDEO_2_END_TRIM = 1;
 
 export function HeroSection() {
@@ -17,36 +16,20 @@ export function HeroSection() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [nextIndex, setNextIndex] = useState<number | null>(null);
   const [transitioning, setTransitioning] = useState(false);
-  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
 
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
   const fadeTimerRef = useRef<number | null>(null);
   const transitioningRef = useRef(false);
   const activeIndexRef = useRef(0);
 
-  // Keep refs in sync to avoid stale closures in event handlers
   useEffect(() => {
     activeIndexRef.current = activeIndex;
     transitioningRef.current = transitioning;
   }, [activeIndex, transitioning]);
 
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const update = () => setPrefersReducedMotion(mq.matches);
-    update();
-    if (typeof mq.addEventListener === "function") {
-      mq.addEventListener("change", update);
-      return () => mq.removeEventListener("change", update);
-    }
-    mq.addListener(update);
-    return () => mq.removeListener(update);
-  }, []);
+  const advanceTo = useCallback((upcoming: number) => {
+    if (transitioningRef.current) return;
 
-  const startTransition = useCallback((fromIndex: number) => {
-    if (transitioningRef.current || prefersReducedMotion || slides.length <= 1) return;
-
-    const upcoming = (fromIndex + 1) % slides.length;
     const upcomingVideo = videoRefs.current[upcoming];
     if (upcomingVideo) {
       upcomingVideo.currentTime = 0;
@@ -61,39 +44,34 @@ export function HeroSection() {
       setNextIndex(null);
       setTransitioning(false);
 
-      // Pause all videos except the new active one
       videoRefs.current.forEach((v, i) => {
         if (!v) return;
         if (i !== upcoming) v.pause();
       });
     }, FADE_DURATION);
-  }, [prefersReducedMotion]);
+  }, []);
 
-  // Handle video timeupdate for video 2 early cut, and ended event for all
+  // Single timeupdate handler — never removed, checks every tick
   const handleTimeUpdate = useCallback((e: Event) => {
     const video = e.target as HTMLVideoElement;
     const index = videoRefs.current.indexOf(video);
+    if (index !== 1) return; // only video 2 needs trimming
     if (index !== activeIndexRef.current || transitioningRef.current) return;
-
-    // For video 2 (index 1), trigger transition 1 second before end
-    if (index === 1 && video.duration > 0) {
-      if (video.currentTime >= video.duration - VIDEO_2_END_TRIM) {
-        video.removeEventListener("timeupdate", handleTimeUpdate);
-        startTransition(index);
-      }
+    if (video.duration > 0 && video.currentTime >= video.duration - VIDEO_2_END_TRIM) {
+      video.pause(); // prevent any further frames from rendering
+      advanceTo((index + 1) % slides.length);
     }
-  }, [startTransition]);
+  }, [advanceTo]);
 
   const handleEnded = useCallback((e: Event) => {
     const video = e.target as HTMLVideoElement;
     const index = videoRefs.current.indexOf(video);
     if (index !== activeIndexRef.current || transitioningRef.current) return;
-    // Video 2 is handled by timeupdate, skip ended for it
-    if (index === 1) return;
-    startTransition(index);
-  }, [startTransition]);
+    if (index === 1) return; // video 2 handled by timeupdate
+    advanceTo((index + 1) % slides.length);
+  }, [advanceTo]);
 
-  // Attach event listeners to all videos
+  // Attach persistent listeners once
   useEffect(() => {
     const videos = videoRefs.current;
     videos.forEach((video) => {
@@ -110,7 +88,7 @@ export function HeroSection() {
     };
   }, [handleEnded, handleTimeUpdate]);
 
-  // Play the first video on mount
+  // Play first video on mount
   useEffect(() => {
     const firstVideo = videoRefs.current[0];
     if (firstVideo) {
