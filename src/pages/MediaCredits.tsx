@@ -214,9 +214,14 @@ export default function MediaCredits() {
               </div>
             </div>
 
-            <p className="border-t border-gray/10 pt-8 text-xs leading-relaxed text-gray/50">
-              {t("mediaCredits.disclaimer")}
-            </p>
+            <div className="border-t border-gray/10 pt-8 space-y-4">
+              <p className="text-xs leading-relaxed text-gray/50">
+                {t("mediaCredits.nasaDisclaimer")}
+              </p>
+              <p className="text-xs leading-relaxed text-gray/50">
+                {t("mediaCredits.disclaimer")}
+              </p>
+            </div>
           </div>
         </Section>
       </PageShell>
