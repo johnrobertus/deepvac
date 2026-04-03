@@ -88,14 +88,14 @@ const References = () => {
             <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,rgba(120,170,255,0.08),transparent_65%)]" />
 
             <div className="relative mx-auto max-w-3xl space-y-4">
-              <span className="mono-label text-blue/80">Placeholder Section</span>
+              <span className="mono-label text-blue/80">{t("comingSoon.eyebrow")}</span>
 
               <h2 className="text-4xl md:text-6xl lg:text-7xl font-semibold uppercase tracking-[0.18em] text-sand">
-                Coming Soon
+                {t("comingSoon.title")}
               </h2>
 
               <p className="text-sm md:text-base text-gray leading-relaxed max-w-2xl mx-auto">
-                Selected case studies, collaborations and testimonials will be published here soon.
+                {t("comingSoon.description")}
               </p>
             </div>
           </div>

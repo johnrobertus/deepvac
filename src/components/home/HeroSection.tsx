@@ -8,75 +8,101 @@ const slides = [
   { video: "/videos/hero-slide-3.mp4", poster: "/videos/hero-slide-3-poster.jpg" },
 ];
 
-const SCENE_DURATION = 8000;
 const FADE_DURATION = 1800;
+const VIDEO_2_END_TRIM = 1;
 
 export function HeroSection() {
   const { t } = useTranslation("home");
   const [activeIndex, setActiveIndex] = useState(0);
   const [nextIndex, setNextIndex] = useState<number | null>(null);
   const [transitioning, setTransitioning] = useState(false);
-  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
 
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
-  const sceneTimerRef = useRef<number | null>(null);
   const fadeTimerRef = useRef<number | null>(null);
-
-  const clearTimers = useCallback(() => {
-    if (sceneTimerRef.current) { window.clearTimeout(sceneTimerRef.current); sceneTimerRef.current = null; }
-    if (fadeTimerRef.current) { window.clearTimeout(fadeTimerRef.current); fadeTimerRef.current = null; }
-  }, []);
+  const transitioningRef = useRef(false);
+  const activeIndexRef = useRef(0);
 
   useEffect(() => {
-    if (typeof window === "undefined") return;
-    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const updatePreference = () => setPrefersReducedMotion(mediaQuery.matches);
-    updatePreference();
-    if (typeof mediaQuery.addEventListener === "function") {
-      mediaQuery.addEventListener("change", updatePreference);
-      return () => mediaQuery.removeEventListener("change", updatePreference);
+    activeIndexRef.current = activeIndex;
+    transitioningRef.current = transitioning;
+  }, [activeIndex, transitioning]);
+
+  const advanceTo = useCallback((upcoming: number) => {
+    if (transitioningRef.current) return;
+
+    const upcomingVideo = videoRefs.current[upcoming];
+    if (upcomingVideo) {
+      upcomingVideo.currentTime = 0;
+      upcomingVideo.play().catch(() => {});
     }
-    mediaQuery.addListener(updatePreference);
-    return () => mediaQuery.removeListener(updatePreference);
-  }, []);
 
-  const playVideo = useCallback((index: number) => {
-    const video = videoRefs.current[index];
-    if (!video) return;
-    video.currentTime = 0;
-    video.play().catch(() => {});
-  }, []);
-
-  const pauseInactiveVideos = useCallback((keepIndexes: number[]) => {
-    videoRefs.current.forEach((video, index) => {
-      if (!video) return;
-      if (!keepIndexes.includes(index)) video.pause();
-    });
-  }, []);
-
-  const startTransition = useCallback(() => {
-    if (slides.length <= 1 || prefersReducedMotion) return;
-    const upcomingIndex = (activeIndex + 1) % slides.length;
-    setNextIndex(upcomingIndex);
+    setNextIndex(upcoming);
     setTransitioning(true);
-    playVideo(upcomingIndex);
+
     fadeTimerRef.current = window.setTimeout(() => {
-      setActiveIndex(upcomingIndex);
+      setActiveIndex(upcoming);
       setNextIndex(null);
       setTransitioning(false);
-      pauseInactiveVideos([upcomingIndex]);
-    }, FADE_DURATION);
-  }, [activeIndex, pauseInactiveVideos, playVideo, prefersReducedMotion]);
 
-  useEffect(() => {
-    clearTimers();
-    playVideo(activeIndex);
-    pauseInactiveVideos(nextIndex !== null ? [activeIndex, nextIndex] : [activeIndex]);
-    if (!prefersReducedMotion && slides.length > 1) {
-      sceneTimerRef.current = window.setTimeout(() => { startTransition(); }, SCENE_DURATION);
+      videoRefs.current.forEach((v, i) => {
+        if (!v) return;
+        if (i !== upcoming) v.pause();
+      });
+    }, FADE_DURATION);
+  }, []);
+
+  // Single timeupdate handler — never removed, checks every tick
+  const handleTimeUpdate = useCallback((e: Event) => {
+    const video = e.target as HTMLVideoElement;
+    const index = videoRefs.current.indexOf(video);
+    if (index !== 1) return; // only video 2 needs trimming
+    if (index !== activeIndexRef.current || transitioningRef.current) return;
+    if (video.duration > 0 && video.currentTime >= video.duration - VIDEO_2_END_TRIM) {
+      video.pause(); // prevent any further frames from rendering
+      advanceTo((index + 1) % slides.length);
     }
-    return clearTimers;
-  }, [activeIndex, nextIndex, prefersReducedMotion, startTransition, clearTimers, playVideo, pauseInactiveVideos]);
+  }, [advanceTo]);
+
+  const handleEnded = useCallback((e: Event) => {
+    const video = e.target as HTMLVideoElement;
+    const index = videoRefs.current.indexOf(video);
+    if (index !== activeIndexRef.current || transitioningRef.current) return;
+    if (index === 1) return; // video 2 handled by timeupdate
+    advanceTo((index + 1) % slides.length);
+  }, [advanceTo]);
+
+  // Attach persistent listeners once
+  useEffect(() => {
+    const videos = videoRefs.current;
+    videos.forEach((video) => {
+      if (!video) return;
+      video.addEventListener("ended", handleEnded);
+      video.addEventListener("timeupdate", handleTimeUpdate);
+    });
+    return () => {
+      videos.forEach((video) => {
+        if (!video) return;
+        video.removeEventListener("ended", handleEnded);
+        video.removeEventListener("timeupdate", handleTimeUpdate);
+      });
+    };
+  }, [handleEnded, handleTimeUpdate]);
+
+  // Play first video on mount
+  useEffect(() => {
+    const firstVideo = videoRefs.current[0];
+    if (firstVideo) {
+      firstVideo.currentTime = 0;
+      firstVideo.play().catch(() => {});
+    }
+  }, []);
+
+  // Cleanup fade timer
+  useEffect(() => {
+    return () => {
+      if (fadeTimerRef.current) window.clearTimeout(fadeTimerRef.current);
+    };
+  }, []);
 
   const cues = t("hero.cues", { returnObjects: true }) as string[];
 
@@ -85,47 +111,94 @@ export function HeroSection() {
       {slides.map((slide, i) => {
         const isActive = i === activeIndex;
         const isNext = i === nextIndex;
-        const isVisible = isActive || isNext;
-        const shouldLoad = isVisible || i === (activeIndex + 1) % slides.length;
         return (
-          <div key={slide.video} className="absolute inset-0 h-full w-full" style={{ opacity: isActive || (isNext && transitioning) ? 1 : 0, zIndex: isNext ? 2 : isActive ? 1 : 0, transition: `opacity ${FADE_DURATION}ms cubic-bezier(0.4, 0, 0.2, 1)` }} aria-hidden={!isActive}>
-            <img src={slide.poster} alt="" className="absolute inset-0 h-full w-full object-cover" loading={i === 0 ? "eager" : "lazy"} />
-            <video ref={(el) => { videoRefs.current[i] = el; }} src={shouldLoad ? slide.video : undefined} poster={slide.poster} muted playsInline preload={i === 0 ? "auto" : "metadata"} loop={slides.length === 1} className="absolute inset-0 h-full w-full object-cover" aria-hidden="true" />
+          <div
+            key={slide.video}
+            className="absolute inset-0 h-full w-full"
+            style={{
+              opacity: isActive || (isNext && transitioning) ? 1 : 0,
+              zIndex: isNext ? 2 : isActive ? 1 : 0,
+              transition: `opacity ${FADE_DURATION}ms cubic-bezier(0.4, 0, 0.2, 1)`,
+            }}
+            aria-hidden={!isActive}
+          >
+            <img
+              src={slide.poster}
+              alt=""
+              className="absolute inset-0 h-full w-full object-cover"
+              loading={i === 0 ? "eager" : "lazy"}
+            />
+            <video
+              ref={(el) => { videoRefs.current[i] = el; }}
+              src={slide.video}
+              poster={slide.poster}
+              muted
+              playsInline
+              preload={i === 0 ? "auto" : "metadata"}
+              className="absolute inset-0 h-full w-full object-cover"
+              aria-hidden="true"
+            />
           </div>
         );
       })}
 
-      <div className="absolute inset-0 z-10" style={{ background: ["linear-gradient(to bottom, hsl(0 0% 0% / 0.68) 0%, hsl(0 0% 0% / 0.34) 34%, hsl(0 0% 0% / 0.18) 58%, hsl(0 0% 0% / 0.72) 100%)", "linear-gradient(to right, hsl(0 0% 0% / 0.58) 0%, hsl(0 0% 0% / 0.18) 42%, hsl(0 0% 0% / 0) 72%)"].join(", ") }} />
-      <div className="absolute inset-0 z-10 pointer-events-none" style={{ boxShadow: "inset 0 0 140px 42px hsl(0 0% 0% / 0.28)" }} />
+      <div
+        className="absolute inset-0 z-10"
+        style={{
+          background: [
+            "linear-gradient(to bottom, hsl(0 0% 0% / 0.68) 0%, hsl(0 0% 0% / 0.34) 34%, hsl(0 0% 0% / 0.18) 58%, hsl(0 0% 0% / 0.72) 100%)",
+            "linear-gradient(to right, hsl(0 0% 0% / 0.58) 0%, hsl(0 0% 0% / 0.18) 42%, hsl(0 0% 0% / 0) 72%)",
+          ].join(", "),
+        }}
+      />
+      <div
+        className="absolute inset-0 z-10 pointer-events-none"
+        style={{ boxShadow: "inset 0 0 140px 42px hsl(0 0% 0% / 0.28)" }}
+      />
 
       <div className="relative z-20 flex h-full flex-col justify-end px-6 pb-14 pt-20 md:pb-24 md:pt-40">
         <div className="container max-w-6xl">
           <div className="max-w-3xl space-y-5">
             <Reveal>
               <div className="space-y-4">
-                <span className="mono-label text-blue-light/90 tracking-[0.08em]">{t("hero.eyebrow")}</span>
-                <h1 className="text-3xl font-medium leading-[1.04] tracking-tight text-sand md:text-5xl lg:text-[3.5rem]">{t("hero.title")}</h1>
+                <span className="mono-label text-blue-light/90 tracking-[0.08em]">
+                  {t("hero.eyebrow")}
+                </span>
+                <h1 className="text-3xl font-medium leading-[1.04] tracking-tight text-sand md:text-5xl lg:text-[3.5rem]">
+                  {t("hero.title")}
+                </h1>
               </div>
             </Reveal>
             <Reveal delay={100}>
-              <p className="max-w-2xl text-sm leading-relaxed text-sand/72 md:text-base">{t("hero.description")}</p>
+              <p className="max-w-2xl text-sm leading-relaxed text-sand/72 md:text-base">
+                {t("hero.description")}
+              </p>
             </Reveal>
             <Reveal delay={200}>
               <div className="flex flex-wrap gap-3 pt-1">
-                {Array.isArray(cues) && cues.map((cue) => (
-                  <span key={cue} className="inline-flex items-center gap-1.5 rounded-sm border border-sand/20 bg-background/30 px-3 py-1.5 font-mono text-[11px] uppercase tracking-widest text-sand/75 backdrop-blur-sm">
-                    <span className="h-1.5 w-1.5 rounded-full bg-blue/70" />
-                    {cue}
-                  </span>
-                ))}
+                {Array.isArray(cues) &&
+                  cues.map((cue) => (
+                    <span
+                      key={cue}
+                      className="inline-flex items-center gap-1.5 rounded-sm border border-sand/20 bg-background/30 px-3 py-1.5 font-mono text-[11px] uppercase tracking-widest text-sand/75 backdrop-blur-sm"
+                    >
+                      <span className="h-1.5 w-1.5 rounded-full bg-blue/70" />
+                      {cue}
+                    </span>
+                  ))}
               </div>
             </Reveal>
           </div>
         </div>
       </div>
 
-
-      <div className="absolute bottom-0 left-0 right-0 z-20 h-20 pointer-events-none" style={{ background: "linear-gradient(to bottom, hsl(0 0% 0% / 0) 0%, hsl(var(--background)) 100%)" }} />
+      <div
+        className="absolute bottom-0 left-0 right-0 z-20 h-20 pointer-events-none"
+        style={{
+          background:
+            "linear-gradient(to bottom, hsl(0 0% 0% / 0) 0%, hsl(var(--background)) 100%)",
+        }}
+      />
     </section>
   );
 }
