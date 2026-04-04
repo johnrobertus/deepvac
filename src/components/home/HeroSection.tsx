@@ -156,7 +156,7 @@ export function HeroSection() {
         style={{ boxShadow: "inset 0 0 140px 42px hsl(0 0% 0% / 0.28)" }}
       />
 
-      <div className="relative z-20 flex h-full flex-col justify-end px-6 pb-12 pt-16 md:pb-24 md:pt-40">
+      <div className="relative z-20 flex h-full flex-col justify-end px-4 pb-12 pt-16 sm:px-6 md:pb-24 md:pt-40">
         <div className="container max-w-6xl">
           <div className="max-w-3xl space-y-5">
             <Reveal>
