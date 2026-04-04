@@ -164,7 +164,7 @@ export function HeroSection() {
                 <span className="mono-label text-blue-light/90 tracking-[0.08em]">
                   {t("hero.eyebrow")}
                 </span>
-                <h1 className="text-3xl font-medium leading-[1.04] tracking-tight text-sand md:text-5xl lg:text-[3.5rem]">
+                <h1 className="text-[1.7rem] font-medium leading-[1.04] tracking-tight text-sand sm:text-3xl md:text-5xl lg:text-[3.5rem]">
                   {t("hero.title")}
                 </h1>
               </div>
