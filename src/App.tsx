@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { HelmetProvider } from "react-helmet-async";
 import { LanguageProvider } from "@/components/LanguageProvider";
+import { lazy, Suspense } from "react";
 import Index from "./pages/Index";
 import Products from "./pages/Products";
 import StandardSeries from "./pages/StandardSeries";
@@ -29,6 +30,11 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
 import MediaCredits from "./pages/MediaCredits";
 import NotFound from "./pages/NotFound";
+import Resources from "./pages/Resources";
+import Blog from "./pages/Blog";
+import CoolingSystems from "./pages/blog/CoolingSystems";
+import RetrofitVsReplacement from "./pages/blog/RetrofitVsReplacement";
+import AerospaceQualification from "./pages/blog/AerospaceQualification";
 import { ScrollToTop } from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
@@ -60,6 +66,11 @@ const App = () => (
               <Route path="/team" element={<Team />} />
               <Route path="/catalogs" element={<Catalogues />} />
               <Route path="/catalogues" element={<Catalogues />} />
+              <Route path="/resources" element={<Resources />} />
+              <Route path="/resources/blog" element={<Blog />} />
+              <Route path="/resources/blog/cooling-systems" element={<CoolingSystems />} />
+              <Route path="/resources/blog/retrofit-vs-replacement" element={<RetrofitVsReplacement />} />
+              <Route path="/resources/blog/aerospace-qualification-testing" element={<AerospaceQualification />} />
               <Route path="/careers" element={<Careers />} />
               <Route path="/references" element={<References />} />
               <Route path="/contact" element={<Contact />} />
@@ -82,6 +93,11 @@ const App = () => (
               <Route path="/de/leistungen/subsystem-integration" element={<SubsystemIntegration />} />
               <Route path="/de/team" element={<Team />} />
               <Route path="/de/kataloge" element={<Catalogues />} />
+              <Route path="/de/ressourcen" element={<Resources />} />
+              <Route path="/de/ressourcen/blog" element={<Blog />} />
+              <Route path="/de/ressourcen/blog/kuehlsysteme" element={<CoolingSystems />} />
+              <Route path="/de/ressourcen/blog/retrofit-vs-neubeschaffung" element={<RetrofitVsReplacement />} />
+              <Route path="/de/ressourcen/blog/raumfahrtqualifikation" element={<AerospaceQualification />} />
               <Route path="/de/karriere" element={<Careers />} />
               <Route path="/de/referenzen" element={<References />} />
               <Route path="/de/kontakt" element={<Contact />} />
