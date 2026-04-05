@@ -31,7 +31,7 @@ const servicesMenu: NavItem[] = [
 
 const navLinks: NavItem[] = [
   { labelKey: "nav.team", href: "/team" },
-  { labelKey: "nav.resources", href: "/catalogs" },
+  { labelKey: "nav.resources", href: "/resources" },
   { labelKey: "nav.careers", href: "/careers" },
   { labelKey: "nav.references", href: "/references" },
 ];
