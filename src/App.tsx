@@ -5,7 +5,6 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { HelmetProvider } from "react-helmet-async";
 import { LanguageProvider } from "@/components/LanguageProvider";
-import { lazy, Suspense } from "react";
 import Index from "./pages/Index";
 import Products from "./pages/Products";
 import StandardSeries from "./pages/StandardSeries";
