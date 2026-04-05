@@ -242,19 +242,21 @@ export function Header() {
 
         <div className="hidden items-center gap-4 lg:flex">
           {/* Language switcher */}
-          <div className="flex items-center gap-1 font-mono text-[11px] tracking-wider">
+          <div className="flex items-center gap-1">
             <button
               onClick={lang === "en" ? undefined : switchLanguage}
-              className={cn("px-1.5 py-0.5 rounded-sm transition-colors", lang === "en" ? "text-sand" : "text-gray/50 hover:text-sand")}
+              className={cn("text-lg leading-none rounded-sm transition-opacity", lang === "en" ? "opacity-100" : "opacity-40 hover:opacity-80")}
+              aria-label="English"
             >
-              {t("lang.en")}
+              🇬🇧
             </button>
-            <span className="text-gray/30">|</span>
+            <span className="text-gray/30 text-xs">|</span>
             <button
               onClick={lang === "de" ? undefined : switchLanguage}
-              className={cn("px-1.5 py-0.5 rounded-sm transition-colors", lang === "de" ? "text-sand" : "text-gray/50 hover:text-sand")}
+              className={cn("text-lg leading-none rounded-sm transition-opacity", lang === "de" ? "opacity-100" : "opacity-40 hover:opacity-80")}
+              aria-label="Deutsch"
             >
-              {t("lang.de")}
+              🇩🇪
             </button>
           </div>
 
@@ -301,18 +303,20 @@ export function Header() {
             </div>
 
             {/* Mobile language switcher */}
-            <div className="flex items-center gap-2 font-mono text-[11px] tracking-wider border-t border-gray/10 pt-4">
+            <div className="flex items-center gap-3 border-t border-gray/10 pt-4">
               <button
                 onClick={lang === "en" ? undefined : switchLanguage}
-                className={cn("px-2 py-1 rounded-sm transition-colors", lang === "en" ? "text-sand bg-surface-raised" : "text-gray/50 hover:text-sand")}
+                className={cn("text-xl leading-none rounded-sm transition-opacity", lang === "en" ? "opacity-100" : "opacity-40 hover:opacity-80")}
+                aria-label="English"
               >
-                {t("lang.en")}
+                🇬🇧
               </button>
               <button
                 onClick={lang === "de" ? undefined : switchLanguage}
-                className={cn("px-2 py-1 rounded-sm transition-colors", lang === "de" ? "text-sand bg-surface-raised" : "text-gray/50 hover:text-sand")}
+                className={cn("text-xl leading-none rounded-sm transition-opacity", lang === "de" ? "opacity-100" : "opacity-40 hover:opacity-80")}
+                aria-label="Deutsch"
               >
-                {t("lang.de")}
+                🇩🇪
               </button>
             </div>
 
