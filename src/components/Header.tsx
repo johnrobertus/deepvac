@@ -242,19 +242,34 @@ export function Header() {
 
         <div className="hidden items-center gap-4 lg:flex">
           {/* Language switcher */}
-          <div className="flex items-center gap-1 font-mono text-[11px] tracking-wider">
+          <div className="flex items-center gap-2">
             <button
               onClick={lang === "en" ? undefined : switchLanguage}
-              className={cn("px-1.5 py-0.5 rounded-sm transition-colors", lang === "en" ? "text-sand" : "text-gray/50 hover:text-sand")}
+              className={cn("rounded-sm transition-opacity", lang === "en" ? "opacity-100" : "opacity-40 hover:opacity-80")}
+              aria-label="English"
             >
-              {t("lang.en")}
+              <svg viewBox="0 0 60 30" className="h-4 w-6 rounded-[2px]" xmlns="http://www.w3.org/2000/svg">
+                <clipPath id="a"><rect width="60" height="30"/></clipPath>
+                <g clipPath="url(#a)">
+                  <rect width="60" height="30" fill="#012169"/>
+                  <path d="M0 0L60 30M60 0L0 30" stroke="#fff" strokeWidth="6"/>
+                  <path d="M0 0L60 30M60 0L0 30" stroke="#C8102E" strokeWidth="4" clipPath="url(#a)"/>
+                  <path d="M30 0v30M0 15h60" stroke="#fff" strokeWidth="10"/>
+                  <path d="M30 0v30M0 15h60" stroke="#C8102E" strokeWidth="6"/>
+                </g>
+              </svg>
             </button>
-            <span className="text-gray/30">|</span>
+            <span className="text-gray/30 text-xs">|</span>
             <button
               onClick={lang === "de" ? undefined : switchLanguage}
-              className={cn("px-1.5 py-0.5 rounded-sm transition-colors", lang === "de" ? "text-sand" : "text-gray/50 hover:text-sand")}
+              className={cn("rounded-sm transition-opacity", lang === "de" ? "opacity-100" : "opacity-40 hover:opacity-80")}
+              aria-label="Deutsch"
             >
-              {t("lang.de")}
+              <svg viewBox="0 0 5 3" className="h-4 w-6 rounded-[2px]" xmlns="http://www.w3.org/2000/svg">
+                <rect width="5" height="1" y="0" fill="#000"/>
+                <rect width="5" height="1" y="1" fill="#D00"/>
+                <rect width="5" height="1" y="2" fill="#FFCE00"/>
+              </svg>
             </button>
           </div>
 
@@ -301,18 +316,33 @@ export function Header() {
             </div>
 
             {/* Mobile language switcher */}
-            <div className="flex items-center gap-2 font-mono text-[11px] tracking-wider border-t border-gray/10 pt-4">
+            <div className="flex items-center gap-3 border-t border-gray/10 pt-4">
               <button
                 onClick={lang === "en" ? undefined : switchLanguage}
-                className={cn("px-2 py-1 rounded-sm transition-colors", lang === "en" ? "text-sand bg-surface-raised" : "text-gray/50 hover:text-sand")}
+                className={cn("rounded-sm transition-opacity", lang === "en" ? "opacity-100" : "opacity-40 hover:opacity-80")}
+                aria-label="English"
               >
-                {t("lang.en")}
+                <svg viewBox="0 0 60 30" className="h-5 w-7 rounded-[2px]" xmlns="http://www.w3.org/2000/svg">
+                  <clipPath id="mob-a"><rect width="60" height="30"/></clipPath>
+                  <g clipPath="url(#mob-a)">
+                    <rect width="60" height="30" fill="#012169"/>
+                    <path d="M0 0L60 30M60 0L0 30" stroke="#fff" strokeWidth="6"/>
+                    <path d="M0 0L60 30M60 0L0 30" stroke="#C8102E" strokeWidth="4"/>
+                    <path d="M30 0v30M0 15h60" stroke="#fff" strokeWidth="10"/>
+                    <path d="M30 0v30M0 15h60" stroke="#C8102E" strokeWidth="6"/>
+                  </g>
+                </svg>
               </button>
               <button
                 onClick={lang === "de" ? undefined : switchLanguage}
-                className={cn("px-2 py-1 rounded-sm transition-colors", lang === "de" ? "text-sand bg-surface-raised" : "text-gray/50 hover:text-sand")}
+                className={cn("rounded-sm transition-opacity", lang === "de" ? "opacity-100" : "opacity-40 hover:opacity-80")}
+                aria-label="Deutsch"
               >
-                {t("lang.de")}
+                <svg viewBox="0 0 5 3" className="h-5 w-7 rounded-[2px]" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="5" height="1" y="0" fill="#000"/>
+                  <rect width="5" height="1" y="1" fill="#D00"/>
+                  <rect width="5" height="1" y="2" fill="#FFCE00"/>
+                </svg>
               </button>
             </div>
 
