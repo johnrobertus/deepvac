@@ -14,6 +14,7 @@ import enContact from "./locales/en/contact.json";
 import enLegal from "./locales/en/legal.json";
 import enSeo from "./locales/en/seo.json";
 import enErrors from "./locales/en/errors.json";
+import enBlog from "./locales/en/blog.json";
 
 // DE namespaces (derived, mirrors EN 1:1)
 import deCommon from "./locales/de/common.json";
@@ -28,6 +29,7 @@ import deContact from "./locales/de/contact.json";
 import deLegal from "./locales/de/legal.json";
 import deSeo from "./locales/de/seo.json";
 import deErrors from "./locales/de/errors.json";
+import deBlog from "./locales/de/blog.json";
 
 i18n.use(initReactI18next).init({
   resources: {
@@ -44,6 +46,7 @@ i18n.use(initReactI18next).init({
       legal: enLegal,
       seo: enSeo,
       errors: enErrors,
+      blog: enBlog,
     },
     de: {
       common: deCommon,
@@ -58,6 +61,7 @@ i18n.use(initReactI18next).init({
       legal: deLegal,
       seo: deSeo,
       errors: deErrors,
+      blog: deBlog,
     },
   },
   lng: "en",

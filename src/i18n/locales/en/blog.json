@@ -1,0 +1,198 @@
+{
+  "blog": {
+    "eyebrow": "Engineering Knowledge",
+    "title": "Blog",
+    "description": "Technical guidance, decision support, and engineering considerations for thermal vacuum systems.",
+    "readArticle": "Read Article",
+    "backToBlog": "Back to Blog",
+    "seo": {
+      "title": "Engineering Blog | Deepvac",
+      "description": "Technical articles on thermal vacuum systems — cooling architectures, retrofit decisions, aerospace qualification requirements, and engineering best practices."
+    },
+    "categories": {
+      "engineeringGuide": "Engineering Guide",
+      "decisionSupport": "Decision Support"
+    },
+    "articles": {
+      "coolingSystems": {
+        "title": "Cooling Systems for Thermal Vacuum Chambers",
+        "description": "An overview of cooling architectures used in TVAC systems — from mechanical refrigeration to liquid nitrogen circuits — and the trade-offs that determine which approach fits your test requirements.",
+        "seoTitle": "Cooling Systems for Thermal Vacuum Chambers | Deepvac",
+        "seoDescription": "Engineering overview of TVAC cooling architectures — mechanical refrigeration, LN2 circuits, and hybrid approaches. Understand trade-offs for your test requirements.",
+        "intro": "Thermal vacuum chambers require controlled cooling to simulate the cold conditions of space. The choice of cooling system directly affects achievable temperature range, cooldown rate, temperature uniformity, operational cost, and system complexity. There is no universally superior approach — the right solution depends on test requirements, facility constraints, and lifecycle considerations.",
+        "sections": {
+          "mechanical": {
+            "title": "Mechanical Refrigeration",
+            "content": "Mechanical refrigeration systems use compressor-based cycles (typically cascade systems for temperatures below −40 °C) to extract heat from the chamber shroud or platen.",
+            "advantages": [
+              "No consumable cryogens — lower recurring operational cost",
+              "Continuous operation without supply logistics",
+              "Good temperature controllability in the −70 °C to +150 °C range",
+              "Lower facility infrastructure requirements"
+            ],
+            "constraints": [
+              "Limited minimum temperature (typically −70 °C to −80 °C for dual-stage systems)",
+              "Slower cooldown rates compared to LN2 systems",
+              "Higher initial equipment cost for cascade configurations",
+              "Compressor maintenance and eventual replacement"
+            ]
+          },
+          "ln2": {
+            "title": "Liquid Nitrogen (LN₂) Circuits",
+            "content": "LN₂-based systems circulate liquid nitrogen through shroud or platen channels, achieving temperatures down to approximately −180 °C. The nitrogen is typically supplied from external dewars or bulk tanks.",
+            "advantages": [
+              "Achieves very low temperatures (down to −180 °C)",
+              "Fast cooldown rates",
+              "Relatively simple system architecture",
+              "Lower initial equipment cost compared to mechanical systems for deep-cold requirements"
+            ],
+            "constraints": [
+              "Ongoing LN₂ consumption — recurring supply cost",
+              "Requires supply infrastructure (dewar logistics or bulk tank installation)",
+              "Temperature control precision depends on flow regulation design",
+              "Safety considerations for cryogenic handling and oxygen displacement"
+            ]
+          },
+          "hybrid": {
+            "title": "Hybrid and Combined Approaches",
+            "content": "Some chamber designs combine mechanical refrigeration for moderate cooling with LN₂ assist for deep-cold phases. This can optimize both operational cost and temperature range, but increases system complexity.",
+            "points": [
+              "Mechanical pre-cooling reduces LN₂ consumption during deep-cold cycles",
+              "LN₂ boost extends the temperature range beyond mechanical limits",
+              "Control system must manage switchover and combined operation",
+              "Higher engineering effort for system integration and commissioning"
+            ]
+          },
+          "selection": {
+            "title": "Selection Considerations",
+            "content": "Choosing the right cooling architecture requires evaluating several interdependent factors:",
+            "factors": [
+              "Required temperature range and minimum temperature",
+              "Cooldown and recovery time requirements",
+              "Test duty cycle and annual operating hours",
+              "Facility infrastructure and LN₂ availability",
+              "Total cost of ownership over the planned system lifetime",
+              "Maintenance access and spare parts availability"
+            ]
+          }
+        },
+        "conclusion": "The cooling system defines much of a TVAC chamber's operational character. Early alignment between test requirements and cooling architecture avoids costly redesigns and ensures the system delivers reliable performance throughout its lifecycle."
+      },
+      "retrofitVsReplacement": {
+        "title": "When Retrofit Makes More Sense Than Replacement",
+        "description": "A structured framework for evaluating whether to modernize an existing thermal vacuum system or invest in a new one — based on technical condition, operational requirements, and lifecycle cost.",
+        "seoTitle": "TVAC Retrofit vs. Replacement — Decision Framework | Deepvac",
+        "seoDescription": "Structured decision framework for evaluating TVAC retrofit vs. replacement — technical condition, lifecycle cost, and operational requirements.",
+        "intro": "Thermal vacuum systems are long-lifecycle assets. When performance degrades, controls become obsolete, or test requirements change, the question arises: retrofit the existing system or replace it entirely. Both paths have legitimate applications. The decision should be driven by technical assessment, not assumption.",
+        "sections": {
+          "retrofitFavored": {
+            "title": "When Retrofit Is Typically Favored",
+            "points": [
+              "The vacuum vessel and structural components are in sound condition",
+              "The primary limitation is in controls, instrumentation, or thermal subsystems — not the chamber itself",
+              "The required performance envelope has not fundamentally changed",
+              "Downtime for a full replacement would be operationally unacceptable",
+              "Budget constraints favor phased modernization over capital replacement",
+              "The existing system has institutional knowledge and qualified procedures built around it"
+            ]
+          },
+          "replacementFavored": {
+            "title": "When Replacement Is Typically Favored",
+            "points": [
+              "The vacuum vessel has structural degradation, leak paths, or material fatigue beyond economical repair",
+              "Test requirements have changed substantially — larger specimens, different temperature ranges, higher cleanliness levels",
+              "The existing system architecture fundamentally prevents required upgrades",
+              "Cumulative retrofit cost approaches or exceeds new-build cost without achieving equivalent capability",
+              "Regulatory or safety standards have changed beyond what the existing structure can accommodate"
+            ]
+          },
+          "assessment": {
+            "title": "Assessment Approach",
+            "content": "A sound retrofit-vs-replacement decision requires structured technical evaluation:",
+            "steps": [
+              "Condition assessment of vacuum vessel, seals, feedthroughs, and structural integrity",
+              "Evaluation of subsystem condition — pumping, thermal, controls, instrumentation",
+              "Gap analysis between current capability and required performance",
+              "Cost estimation for retrofit scope vs. new system procurement",
+              "Downtime and transition planning for both scenarios",
+              "Risk assessment for each path — technical, schedule, and operational"
+            ]
+          },
+          "commonMistakes": {
+            "title": "Common Decision Pitfalls",
+            "points": [
+              "Assuming retrofit is always cheaper — cascading scope changes can erode the cost advantage",
+              "Assuming replacement is always better — a sound vessel with modernized subsystems can outperform expectations",
+              "Underestimating transition costs — installation, requalification, procedure updates, and operator training apply to both paths",
+              "Ignoring the operational timeline — retrofit can often be phased, while replacement typically requires extended downtime"
+            ]
+          }
+        },
+        "conclusion": "The retrofit-vs-replacement decision is fundamentally an engineering assessment, not a procurement decision. Starting with a thorough technical evaluation of the existing system — and a clear definition of required future capability — leads to better outcomes than defaulting to either option."
+      },
+      "aerospaceQualification": {
+        "title": "Key Requirements for Aerospace Qualification Testing",
+        "description": "An overview of the environmental test requirements that thermal vacuum systems must support for aerospace hardware qualification — from standards compliance to chamber capability.",
+        "seoTitle": "Aerospace Qualification Testing Requirements for TVAC | Deepvac",
+        "seoDescription": "Overview of environmental test requirements for aerospace hardware qualification in thermal vacuum chambers — standards, temperature cycling, and chamber capabilities.",
+        "intro": "Aerospace qualification testing verifies that hardware will survive and function in the space environment. Thermal vacuum testing is a core element of this qualification, simulating the combined effects of vacuum and extreme temperature cycling. The test system must meet specific requirements to produce valid qualification data.",
+        "sections": {
+          "standards": {
+            "title": "Applicable Standards and Tailoring",
+            "content": "Aerospace thermal vacuum testing is typically governed by standards such as ECSS-E-ST-10-03C (European) or MIL-STD-1540 / SMC-S-016 (US). These define test levels, durations, and acceptance criteria.",
+            "points": [
+              "Standards define baseline requirements — specific programs often tailor test conditions",
+              "Qualification levels are more severe than acceptance levels (wider temperature range, more cycles, longer dwell times)",
+              "Test specifications must be agreed between the test facility and the program authority",
+              "Documentation and traceability requirements are integral to qualification validity"
+            ]
+          },
+          "thermalRequirements": {
+            "title": "Thermal Requirements",
+            "content": "The chamber must achieve and maintain specified thermal conditions with adequate precision:",
+            "points": [
+              "Temperature range covering qualification extremes — often −65 °C to +125 °C or wider depending on the application",
+              "Temperature uniformity across the test item — typically ±3 °C to ±5 °C depending on test item size",
+              "Controlled transition rates between hot and cold dwells",
+              "Dwell time stability — maintaining setpoint within tolerance for specified durations (often 1–4 hours per dwell)",
+              "Number of thermal cycles as defined by the qualification specification"
+            ]
+          },
+          "vacuumRequirements": {
+            "title": "Vacuum Requirements",
+            "content": "The vacuum environment must be representative of orbital conditions and maintained throughout testing:",
+            "points": [
+              "Operating pressure typically ≤ 1 × 10⁻⁵ mbar (some programs require ≤ 10⁻⁶ mbar)",
+              "Pump-down time compatible with test schedule constraints",
+              "Leak rate within specification to maintain vacuum during long-duration tests",
+              "Cleanliness requirements — particularly for optical or sensitive payloads (molecular and particulate contamination control)"
+            ]
+          },
+          "instrumentation": {
+            "title": "Instrumentation and Data Acquisition",
+            "content": "Valid qualification data requires adequate measurement capability:",
+            "points": [
+              "Calibrated temperature sensors (thermocouples, PT100) on test item and reference locations",
+              "Vacuum gauges with appropriate range and accuracy",
+              "Data acquisition system with sufficient sampling rate and channel count",
+              "Real-time monitoring and alarm capability",
+              "Data recording with traceability to calibration records"
+            ]
+          },
+          "chamberCapability": {
+            "title": "Chamber Capability Considerations",
+            "content": "The test chamber must be appropriately sized and equipped:",
+            "points": [
+              "Usable volume sufficient for test item plus fixturing and instrumentation",
+              "Feedthrough capacity for power, signal, and fluid lines to the test item",
+              "Mechanical interface for test item mounting — load capacity, orientation, and access",
+              "Thermal shroud or platen coverage appropriate for uniform heat exchange",
+              "Optical ports or access panels if required for functional testing during thermal vacuum exposure"
+            ]
+          }
+        },
+        "conclusion": "Aerospace qualification testing demands a well-characterized, properly instrumented thermal vacuum system. Chamber selection and test planning should begin early in the program to ensure the facility can deliver valid qualification data within schedule and budget constraints."
+      }
+    }
+  }
+}

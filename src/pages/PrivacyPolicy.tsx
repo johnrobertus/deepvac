@@ -145,7 +145,26 @@ export default function PrivacyPolicy() {
             <LegalSection title={t("privacy.sections.cookies")}>
               <p>{t("privacy.sections.cookiesText")}</p>
               <p>{t("privacy.sections.cookiesText2")}</p>
+              <p>{t("privacy.sections.cookiesText3")}</p>
+              <p>{t("privacy.sections.cookiesText4")}</p>
               <p>{t("privacy.sections.cookiesLegal")}</p>
+            </LegalSection>
+
+            <LegalSection title={t("privacy.sections.googleMaps")}>
+              <p>{t("privacy.sections.googleMapsText")}</p>
+              <p>{t("privacy.sections.googleMapsText2")}</p>
+              <p>{t("privacy.sections.googleMapsText3")}</p>
+              <p>{t("privacy.sections.googleMapsText4")}</p>
+              <p>{t("privacy.sections.googleMapsLegal")}</p>
+              <p>{t("privacy.sections.googleMapsMoreInfo")}</p>
+            </LegalSection>
+
+            <LegalSection title={t("privacy.sections.turnstile")}>
+              <p>{t("privacy.sections.turnstileText")}</p>
+              <p>{t("privacy.sections.turnstileText2")}</p>
+              <p>{t("privacy.sections.turnstileText3")}</p>
+              <p>{t("privacy.sections.turnstileLegal")}</p>
+              <p>{t("privacy.sections.turnstileMoreInfo")}</p>
             </LegalSection>
 
             <LegalSection title={t("privacy.sections.dataRetention")}>

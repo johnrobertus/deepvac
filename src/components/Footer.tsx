@@ -1,14 +1,17 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Phone, Mail, MapPin, ArrowUpRight } from "lucide-react";
 import { useLanguage } from "@/components/LanguageProvider";
 import { localizedPath } from "@/lib/routes";
+import { PrivacySettingsDialog } from "@/components/PrivacySettingsDialog";
 import deepvacLogo from "@/assets/deepvac-logo.png";
 
 export function Footer() {
   const { t } = useTranslation("common");
   const { lang } = useLanguage();
   const lp = (path: string) => localizedPath(path, lang);
+  const [privacyOpen, setPrivacyOpen] = useState(false);
 
   const footerNav = {
     [t("nav.products")]: [
@@ -28,7 +31,7 @@ export function Footer() {
       { label: t("nav.team"), href: lp("/team") },
       { label: t("nav.careers"), href: lp("/careers") },
       { label: t("nav.references"), href: lp("/references") },
-      { label: t("nav.resources"), href: lp("/catalogs") },
+      { label: t("nav.resources"), href: lp("/resources") },
       { label: t("footer.contact"), href: lp("/contact") },
     ],
   };
@@ -114,9 +117,17 @@ export function Footer() {
             <Link to={lp("/media-credits")} className="text-xs text-gray/50 transition-colors hover:text-gray">
               {t("mediaCredits.footerLink")}
             </Link>
+            <button
+              onClick={() => setPrivacyOpen(true)}
+              className="text-xs text-gray/50 transition-colors hover:text-gray"
+            >
+              {t("footer.privacySettings")}
+            </button>
           </div>
         </div>
       </div>
+
+      <PrivacySettingsDialog open={privacyOpen} onOpenChange={setPrivacyOpen} />
     </footer>
   );
 }
