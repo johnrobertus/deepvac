@@ -26,7 +26,8 @@
     "privacyPolicy": "Datenschutzerklärung",
     "followDeepvac": "Deepvac folgen",
     "company": "Unternehmen",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "privacySettings": "Datenschutzeinstellungen"
   },
   "buttons": {
     "requestQuote": "Angebot anfragen",
@@ -115,6 +116,13 @@
   "lang": {
     "en": "EN",
     "de": "DE"
+  },
+  "privacySettings": {
+    "title": "Datenschutzeinstellungen",
+    "description": "Verwalten Sie Ihre Einstellungen für optionale externe Inhalte. Die grundlegende Website-Funktionalität wird durch diese Einstellungen nicht beeinflusst.",
+    "googleMaps": "Google Maps",
+    "googleMapsDescription": "Zeigt eine interaktive Karte auf der Kontaktseite an. Bei Aktivierung können Daten einschließlich Ihrer IP-Adresse an Google übermittelt werden.",
+    "note": "Ihre Auswahl wird lokal auf Ihrem Gerät gespeichert und kann jederzeit geändert werden. Bis zur Aktivierung werden keine Daten übertragen."
   },
   "mediaCredits": {
     "seoTitle": "Medienquellen | Deepvac",
