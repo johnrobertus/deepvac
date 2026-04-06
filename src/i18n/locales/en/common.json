@@ -26,7 +26,8 @@
     "privacyPolicy": "Privacy Policy",
     "followDeepvac": "Follow Deepvac",
     "company": "Company",
-    "contact": "Contact"
+    "contact": "Contact",
+    "privacySettings": "Privacy Settings"
   },
   "buttons": {
     "requestQuote": "Request a Quote",
