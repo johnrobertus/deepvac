@@ -203,7 +203,7 @@ export function HeroSection() {
                       ? "Gefördert durch Bundesministerium für Wirtschaft und Energie, Europäische Union, EXIST"
                       : "Supported by Federal Ministry for Economic Affairs and Energy, European Union, EXIST"
                     }
-                    className="w-full h-auto object-contain brightness-[0.85] invert"
+                    className="w-full h-auto object-contain"
                     loading="eager"
                   />
                 </div>
