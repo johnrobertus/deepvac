@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState, useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import { Reveal } from "@/components/Reveal";
+import existFundingHero from "@/assets/exist-funding-hero.png";
 
 const slides = [
   { video: "/videos/hero-slide-1.mp4", poster: "/videos/hero-slide-1-poster.jpg" },
