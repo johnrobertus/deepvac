@@ -195,12 +195,14 @@ export function HeroSection() {
             {/* Funding logo — right side, desktop only */}
             <div className="hidden lg:flex items-center justify-center flex-shrink-0 w-[35%] max-w-[420px]">
               <Reveal delay={300}>
-                <img
-                  src={existFundingHero}
-                  alt="Supported by Federal Ministry for Economic Affairs and Energy, European Union, EXIST"
-                  className="w-full h-auto object-contain drop-shadow-[0_2px_12px_rgba(255,255,255,0.06)]"
-                  loading="eager"
-                />
+                <div className="rounded-xl bg-white/90 backdrop-blur-sm px-8 py-6 shadow-lg shadow-black/10">
+                  <img
+                    src={existFundingHero}
+                    alt="Supported by Federal Ministry for Economic Affairs and Energy, European Union, EXIST"
+                    className="w-full h-auto object-contain"
+                    loading="eager"
+                  />
+                </div>
               </Reveal>
             </div>
           </div>
