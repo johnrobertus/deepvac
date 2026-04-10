@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState, useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import { Reveal } from "@/components/Reveal";
-import existFundingHero from "@/assets/exist-funding-hero.png";
+import existFundingHeroEn from "@/assets/exist-funding-hero-en.jpg";
+import existFundingHeroDe from "@/assets/exist-funding-hero-de.png";
 
 const slides = [
   { video: "/videos/hero-slide-1.mp4", poster: "/videos/hero-slide-1-poster.jpg" },
@@ -13,7 +14,7 @@ const FADE_DURATION = 1800;
 const VIDEO_2_END_TRIM = 1;
 
 export function HeroSection() {
-  const { t } = useTranslation("home");
+  const { t, i18n } = useTranslation("home");
   const [activeIndex, setActiveIndex] = useState(0);
   const [nextIndex, setNextIndex] = useState<number | null>(null);
   const [transitioning, setTransitioning] = useState(false);
@@ -195,11 +196,14 @@ export function HeroSection() {
             {/* Funding logo — right side, desktop only */}
             <div className="hidden lg:flex items-center justify-center flex-shrink-0 w-[35%] max-w-[420px]">
               <Reveal delay={300}>
-                <div className="rounded-xl bg-white/90 backdrop-blur-sm px-8 py-6 shadow-lg shadow-black/10">
+                <div className="rounded-2xl bg-white/[0.07] backdrop-blur-md border border-white/[0.08] px-7 py-5">
                   <img
-                    src={existFundingHero}
-                    alt="Supported by Federal Ministry for Economic Affairs and Energy, European Union, EXIST"
-                    className="w-full h-auto object-contain"
+                    src={i18n.language === "de" ? existFundingHeroDe : existFundingHeroEn}
+                    alt={i18n.language === "de"
+                      ? "Gefördert durch Bundesministerium für Wirtschaft und Energie, Europäische Union, EXIST"
+                      : "Supported by Federal Ministry for Economic Affairs and Energy, European Union, EXIST"
+                    }
+                    className="w-full h-auto object-contain brightness-[0.85] invert"
                     loading="eager"
                   />
                 </div>
