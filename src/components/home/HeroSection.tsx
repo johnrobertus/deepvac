@@ -14,7 +14,7 @@ const FADE_DURATION = 1800;
 const VIDEO_2_END_TRIM = 1;
 
 export function HeroSection() {
-  const { t } = useTranslation("home");
+  const { t, i18n } = useTranslation("home");
   const [activeIndex, setActiveIndex] = useState(0);
   const [nextIndex, setNextIndex] = useState<number | null>(null);
   const [transitioning, setTransitioning] = useState(false);
