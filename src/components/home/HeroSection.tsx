@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState, useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import { Reveal } from "@/components/Reveal";
+import existFundingHero from "@/assets/exist-funding-hero.png";
 
 const slides = [
   { video: "/videos/hero-slide-1.mp4", poster: "/videos/hero-slide-1-poster.jpg" },
@@ -158,36 +159,50 @@ export function HeroSection() {
 
       <div className="relative z-20 flex h-full flex-col justify-end px-4 pb-12 pt-16 sm:px-6 md:pb-24 md:pt-40">
         <div className="container max-w-6xl">
-          <div className="max-w-3xl space-y-5">
-            <Reveal>
-              <div className="space-y-4">
-                <span className="mono-label text-blue-light/90 tracking-[0.08em]">
-                  {t("hero.eyebrow")}
-                </span>
-                <h1 className="text-[1.7rem] font-medium leading-[1.04] tracking-tight text-sand sm:text-3xl md:text-5xl lg:text-[3.5rem]">
-                  {t("hero.title")}
-                </h1>
-              </div>
-            </Reveal>
-            <Reveal delay={100}>
-              <p className="max-w-2xl text-sm leading-relaxed text-sand/72 md:text-base">
-                {t("hero.description")}
-              </p>
-            </Reveal>
-            <Reveal delay={200}>
-              <div className="flex flex-wrap gap-3 pt-1">
-                {Array.isArray(cues) &&
-                  cues.map((cue) => (
-                    <span
-                      key={cue}
-                      className="inline-flex items-center gap-1.5 rounded-sm border border-sand/20 bg-background/30 px-3 py-1.5 font-mono text-[11px] uppercase tracking-widest text-sand/75 backdrop-blur-sm"
-                    >
-                      <span className="h-1.5 w-1.5 rounded-full bg-blue/70" />
-                      {cue}
-                    </span>
-                  ))}
-              </div>
-            </Reveal>
+          <div className="flex items-end md:items-center justify-between gap-8">
+            <div className="max-w-3xl space-y-5">
+              <Reveal>
+                <div className="space-y-4">
+                  <span className="mono-label text-blue-light/90 tracking-[0.08em]">
+                    {t("hero.eyebrow")}
+                  </span>
+                  <h1 className="text-[1.7rem] font-medium leading-[1.04] tracking-tight text-sand sm:text-3xl md:text-5xl lg:text-[3.5rem]">
+                    {t("hero.title")}
+                  </h1>
+                </div>
+              </Reveal>
+              <Reveal delay={100}>
+                <p className="max-w-2xl text-sm leading-relaxed text-sand/72 md:text-base">
+                  {t("hero.description")}
+                </p>
+              </Reveal>
+              <Reveal delay={200}>
+                <div className="flex flex-wrap gap-3 pt-1">
+                  {Array.isArray(cues) &&
+                    cues.map((cue) => (
+                      <span
+                        key={cue}
+                        className="inline-flex items-center gap-1.5 rounded-sm border border-sand/20 bg-background/30 px-3 py-1.5 font-mono text-[11px] uppercase tracking-widest text-sand/75 backdrop-blur-sm"
+                      >
+                        <span className="h-1.5 w-1.5 rounded-full bg-blue/70" />
+                        {cue}
+                      </span>
+                    ))}
+                </div>
+              </Reveal>
+            </div>
+
+            {/* Funding logo — right side, desktop only */}
+            <div className="hidden lg:flex items-center justify-center flex-shrink-0 w-[35%] max-w-[420px]">
+              <Reveal delay={300}>
+                <img
+                  src={existFundingHero}
+                  alt="Supported by Federal Ministry for Economic Affairs and Energy, European Union, EXIST"
+                  className="w-full h-auto object-contain drop-shadow-[0_2px_12px_rgba(255,255,255,0.06)]"
+                  loading="eager"
+                />
+              </Reveal>
+            </div>
           </div>
         </div>
       </div>
