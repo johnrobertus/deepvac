@@ -160,8 +160,7 @@ export function HeroSection() {
 
       <div className="relative z-20 flex h-full flex-col justify-end px-4 pb-12 pt-16 sm:px-6 md:pb-24 md:pt-40">
         <div className="container max-w-6xl">
-          <div className="flex items-end md:items-center justify-between gap-8">
-            <div className="max-w-3xl space-y-5">
+          <div className="max-w-3xl space-y-5">
               <Reveal>
                 <div className="space-y-4">
                   <span className="mono-label text-blue-light/90 tracking-[0.08em]">
@@ -191,26 +190,41 @@ export function HeroSection() {
                     ))}
                 </div>
               </Reveal>
-            </div>
-
-            {/* Funding logo — right side, desktop only */}
-            <div className="hidden lg:flex items-center justify-center flex-shrink-0 w-[40%] max-w-[500px]">
-              <Reveal delay={300}>
-                <div className="rounded-2xl bg-white/[0.07] backdrop-blur-md border border-white/[0.08] px-7 py-5">
-                  <img
-                    src={i18n.language === "de" ? existFundingHeroDe : existFundingHeroEn}
-                    alt={i18n.language === "de"
-                      ? "Gefördert durch Bundesministerium für Wirtschaft und Energie, Europäische Union, EXIST"
-                      : "Supported by Federal Ministry for Economic Affairs and Energy, European Union, EXIST"
-                    }
-                    className="w-full h-auto object-contain"
-                    loading="eager"
-                  />
-                </div>
-              </Reveal>
-            </div>
           </div>
         </div>
+      </div>
+
+      {/* Trust badge — bottom-right, desktop only */}
+      <div className="hidden lg:block absolute z-20" style={{ right: 48, top: '60%', transform: 'translateY(-50%)' }}>
+        <Reveal delay={400}>
+          <div
+            className="bg-white px-[18px] py-[14px]"
+            style={{
+              borderRadius: 10,
+              boxShadow: '0 4px 24px rgba(0,0,0,0.3)',
+            }}
+          >
+            <p
+              className="font-bold uppercase text-center"
+              style={{ fontSize: 11, letterSpacing: '0.1em', color: '#111' }}
+            >
+              {i18n.language === "de" ? "Staatlich gefördert & validiert" : "Government-Funded & Validated"}
+            </p>
+            <div className="my-2 h-px bg-gray-200" />
+            <div className="flex items-center justify-center gap-3">
+              <img
+                src={i18n.language === "de" ? existFundingHeroDe : existFundingHeroEn}
+                alt={i18n.language === "de"
+                  ? "Gefördert durch BMWK, EU, EXIST"
+                  : "Supported by BMWK, EU, EXIST"
+                }
+                className="h-auto object-contain"
+                style={{ maxWidth: 220 }}
+                loading="eager"
+              />
+            </div>
+          </div>
+        </Reveal>
       </div>
 
       <div
