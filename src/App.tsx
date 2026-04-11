@@ -9,6 +9,7 @@ import Index from "./pages/Index";
 import Products from "./pages/Products";
 import StandardSeries from "./pages/StandardSeries";
 import CustomTVAC from "./pages/CustomTVAC";
+import ThermalVision from "./pages/ThermalVision";
 import TwinQCM from "./pages/TwinQCM";
 import Services from "./pages/Services";
 import {
@@ -53,6 +54,7 @@ const App = () => (
               <Route path="/products" element={<Products />} />
               <Route path="/products/standard-series" element={<StandardSeries />} />
               <Route path="/products/custom-tvac" element={<CustomTVAC />} />
+              <Route path="/products/thermal-vision" element={<ThermalVision />} />
               <Route path="/products/twin-qcm" element={<TwinQCM />} />
               <Route path="/services" element={<Services />} />
               <Route path="/services/testing-services" element={<TestingServices />} />
@@ -83,6 +85,7 @@ const App = () => (
               <Route path="/de/produkte" element={<Products />} />
               <Route path="/de/produkte/standard-serie" element={<StandardSeries />} />
               <Route path="/de/produkte/custom-tvac" element={<CustomTVAC />} />
+              <Route path="/de/produkte/thermal-vision" element={<ThermalVision />} />
               <Route path="/de/leistungen" element={<Services />} />
               <Route path="/de/leistungen/pruefdienstleistungen" element={<TestingServices />} />
               <Route path="/de/leistungen/steuerungstechnik" element={<ControlSystemsDesign />} />

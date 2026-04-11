@@ -86,5 +86,9 @@
   "mediaCredits": {
     "title": "Medienquellen | Deepvac",
     "description": "Quellenangaben und Nachweise für auf der Deepvac-Website verwendete Medien."
+  },
+  "thermalVision": {
+    "title": "Deepvac Thermal Vision – Thermalkamera für TVAC | Deepvac",
+    "description": "Kalibrierte Infrarot-Bildgebung unter Hochvakuum-Bedingungen. Thermalkamera-Integration für neue und bestehende Thermovakuumsysteme."
   }
 }
