@@ -198,22 +198,23 @@
     }
   },
   "thermalVision": {
-    "eyebrow": "Products / Thermal Vision",
+    "eyebrow": "Products / Engineering Systems",
     "title": "Deepvac Thermal Vision",
-    "description": "Thermal camera integration for thermal vacuum chambers — calibrated infrared imaging under high-vacuum conditions.",
-    "imageCaption": "Thermal camera integration",
-    "body": "Deepvac Thermal Vision enables continuous acquisition of calibrated thermal images of test articles under high-vacuum conditions, where commercially available camera systems cannot operate without dedicated protective measures. The camera is housed in a pressure-tight enclosure with an IR-transparent viewport. An active cooling and heating system keeps the camera permanently within its safe operating range. The PID-based temperature control can be integrated into existing chamber control systems. Suitable for new installations and retrofit of existing TVAC systems — engineering and hardware procurement from a single source.",
-    "tags": ["Aerospace & Defence", "TVAC Systems"],
+    "heroDescription": "Thermal camera integration for thermal vacuum chambers — engineered for continuous infrared imaging under high-vacuum and extreme temperature conditions.",
+    "imageLabel": "Thermal Vision System",
+    "splitLabel": "Thermal Camera Integration",
+    "bodyParagraph1": "Deepvac Thermal Vision enables continuous acquisition of calibrated thermal images of test articles under high-vacuum conditions, where commercially available camera systems cannot operate without dedicated protective measures. The camera is housed in a pressure-tight enclosure with an IR-transparent viewport.",
+    "bodyParagraph2": "An active cooling and heating system keeps the camera permanently within its safe operating range. The PID-based temperature control can be integrated into existing chamber control architectures. Suitable for new installations and retrofit of existing TVAC systems — engineering and hardware procurement from a single source.",
+    "chips": {
+      "environment": { "label": "Environment", "value": "High Vacuum" },
+      "enclosure": { "label": "Enclosure", "value": "Pressure-Tight" },
+      "compatibility": { "label": "Compatibility", "value": "New & Retrofit" }
+    },
     "features": [
       { "label": "Pressure-Tight Enclosure", "detail": "Camera housed in a sealed protective enclosure with IR-transparent viewport for operation under high-vacuum conditions." },
       { "label": "Active Thermal Management", "detail": "Integrated cooling and heating system maintains the camera within its safe operating temperature range at all times." },
       { "label": "PID Temperature Control", "detail": "PID-based temperature regulation with integration capability into existing chamber control architectures." },
       { "label": "Retrofit Compatible", "detail": "Designed for integration into new TVAC installations as well as retrofit of existing thermal vacuum systems." }
-    ],
-    "cta": {
-      "title": "Interested in Thermal Vision Integration?",
-      "description": "Contact Deepvac to discuss thermal camera integration for your thermal vacuum chamber system.",
-      "button": "Request a Technical Consultation"
-    }
+    ]
   }
 }
