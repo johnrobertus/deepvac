@@ -420,23 +420,23 @@
         "value": "New Build & Retrofit"
       }
     ],
-    "features": [
-      {
-        "label": "Pressure-Tight Camera Enclosure",
-        "detail": "Sealed stainless-steel housing with IR-transparent viewport. Maintains atmospheric pressure around the camera sensor while the chamber operates under high vacuum."
-      },
-      {
-        "label": "Active Thermal Management",
-        "detail": "Integrated cooling system maintains the camera within its safe operating temperature range throughout all chamber thermal cycles."
-      },
-      {
-        "label": "Camera Temperature Stabilization",
-        "detail": "The system is designed to keep the camera at its required operating temperature under varying chamber conditions, ensuring reliable imaging performance during the test."
-      },
-      {
-        "label": "New Build & Retrofit Integration",
-        "detail": "Mechanical and thermal interface engineering for integration into new TVAC installations or retrofit of existing thermal vacuum chambers. Single-source delivery."
-      }
-    ]
+  "features": [
+    {
+      "label": "Pressure-Tight Camera Enclosure",
+      "detail": "Sealed stainless-steel housing with IR-transparent viewport. Maintains atmospheric pressure around the camera sensor while the chamber operates under high vacuum."
+    },
+    {
+      "label": "Active Thermal Management",
+      "detail": "Integrated cooling circuit with optional heating keeps the camera within its specified operating temperature range throughout chamber operation."
+    },
+    {
+      "label": "Stable Infrared Imaging",
+      "detail": "Provides reliable and continuous thermal imaging under high-vacuum and extreme external temperature conditions by maintaining a controlled environment around the camera."
+    },
+    {
+      "label": "New Build & Retrofit Integration",
+      "detail": "Mechanical and thermal interface engineering for integration into new TVAC installations or retrofit of existing thermal vacuum chambers. Single-source delivery."
+    }
+  ]
   }
 }
