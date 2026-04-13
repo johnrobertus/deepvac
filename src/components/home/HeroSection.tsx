@@ -109,7 +109,7 @@ export function HeroSection() {
   const cues = t("hero.cues", { returnObjects: true }) as string[];
 
   return (
-    <section className="relative w-full h-[100svh] min-h-[560px] max-h-[1100px] overflow-hidden">
+    <section className="relative w-full h-[100svh] min-h-[560px] max-h-[960px] overflow-hidden">
       {slides.map((slide, i) => {
         const isActive = i === activeIndex;
         const isNext = i === nextIndex;
