@@ -196,5 +196,33 @@
       "integration": { "label": "Integration", "value": "Full System" },
       "support": { "label": "Support", "value": "Concept → Operation" }
     }
+  },
+  "thermalVision": {
+    "eyebrow": "Products / Engineering Systems",
+    "title": "Deepvac Thermal Vision",
+    "heroDescription": "Pressure-tight thermal camera integration for thermal vacuum chambers. Continuous infrared imaging under high-vacuum and extreme temperature conditions — with active thermal management, PID-controlled operation, and full chamber integration engineering.",
+    "imageLabel": "Pressure-Tight Camera Enclosure",
+    "splitLabel": "System Overview",
+    "splitHeading": "Integrated Thermal Imaging for TVAC Systems",
+    "bodyParagraph1": "Commercially available infrared cameras cannot operate directly in high-vacuum and extreme-temperature environments without dedicated engineering measures. Deepvac Thermal Vision addresses this limitation through a pressure-tight enclosure with an IR-transparent viewport, enabling continuous, calibrated thermal imaging of test articles inside thermal vacuum chambers.",
+    "bodyParagraph2": "The system includes an active cooling and optional heating circuit that maintains the camera within its specified operating temperature range under all chamber conditions. A PID-based temperature controller manages the thermal regulation and can be integrated into existing chamber control architectures. Deepvac provides complete integration engineering — enclosure design, thermal management, viewport specification, and mechanical interface — for both new TVAC installations and retrofit of existing systems.",
+    "chips": {
+      "environment": { "label": "Environment", "value": "High Vacuum" },
+      "enclosure": { "label": "Camera Zone", "value": "Pressure-Tight" },
+      "compatibility": { "label": "Integration", "value": "New Systems & Retrofit" }
+    },
+    "specsLabel": "Technical Parameters",
+    "specs": [
+      { "label": "Operating Environment", "value": "High Vacuum" },
+      { "label": "Camera Protection", "value": "Pressure-Tight Enclosure" },
+      { "label": "Thermal Management", "value": "Active Cooling / Optional Heating" },
+      { "label": "System Integration", "value": "New Build & Retrofit" }
+    ],
+    "features": [
+      { "label": "Pressure-Tight Camera Enclosure", "detail": "Sealed stainless-steel housing with IR-transparent viewport. Maintains atmospheric pressure around the camera sensor while the chamber operates under high vacuum." },
+      { "label": "Active Thermal Management", "detail": "Integrated cooling circuit with optional heating maintains the camera within its safe operating temperature range throughout all chamber thermal cycles." },
+      { "label": "Temperature-Controlled Operation", "detail": "PID-based temperature regulation ensures stable imaging conditions. Controller interfaces with existing chamber automation and data acquisition systems." },
+      { "label": "New Build & Retrofit Integration", "detail": "Mechanical and thermal interface engineering for integration into new TVAC installations or retrofit of existing thermal vacuum chambers. Single-source delivery." }
+    ]
   }
 }

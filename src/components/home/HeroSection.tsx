@@ -109,7 +109,7 @@ export function HeroSection() {
   const cues = t("hero.cues", { returnObjects: true }) as string[];
 
   return (
-    <section className="relative w-full h-[100svh] min-h-[560px] max-h-[1100px] overflow-hidden">
+    <section className="relative w-full h-[100svh] min-h-[560px] max-h-[960px] overflow-hidden">
       {slides.map((slide, i) => {
         const isActive = i === activeIndex;
         const isNext = i === nextIndex;
@@ -194,7 +194,7 @@ export function HeroSection() {
             </div>
 
             {/* Funding logo — right side, desktop only */}
-            <div className="hidden lg:flex items-center justify-center flex-shrink-0 w-[40%] max-w-[500px]">
+            <div className="hidden lg:flex items-center justify-center flex-shrink-0 w-[32%] max-w-[400px]">
               <Reveal delay={300}>
                 <div className="rounded-2xl bg-white/[0.07] backdrop-blur-md border border-white/[0.08] px-7 py-5">
                   <img

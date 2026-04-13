@@ -9,6 +9,7 @@
     "overview": "Overview",
     "standardSeries": "Standard Series",
     "customTvac": "Custom TVAC",
+    "thermalVision": "Thermal Vision",
     "testingServices": "Testing Services",
     "controlSystemsDesign": "Control Systems Design",
     "mechanicalDesign": "Mechanical Design",
@@ -59,7 +60,8 @@
     "requestSpecificDocumentation": "Request Specific Documentation",
     "emailUs": "Email Us",
     "contactPage": "Contact Page",
-    "applyNow": "Apply Now"
+    "applyNow": "Apply Now",
+    "backToProducts": "Back to Products"
   },
   "consent": {
     "mapTitle": "Load Google Maps",

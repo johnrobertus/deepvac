@@ -14,6 +14,7 @@ export const routeMap: readonly RouteEntry[] = [
   { en: "/products", de: "/de/produkte" },
   { en: "/products/standard-series", de: "/de/produkte/standard-serie" },
   { en: "/products/custom-tvac", de: "/de/produkte/custom-tvac" },
+  { en: "/products/thermal-vision", de: "/de/produkte/thermal-vision" },
   { en: "/services", de: "/de/leistungen" },
   { en: "/services/testing-services", de: "/de/leistungen/pruefdienstleistungen" },
   { en: "/services/control-systems-design", de: "/de/leistungen/steuerungstechnik" },

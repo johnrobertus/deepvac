@@ -17,6 +17,7 @@ const productsMenu: NavItem[] = [
   { labelKey: "nav.overview", href: "/products" },
   { labelKey: "nav.standardSeries", href: "/products/standard-series" },
   { labelKey: "nav.customTvac", href: "/products/custom-tvac" },
+  { labelKey: "nav.thermalVision", href: "/products/thermal-vision" },
 ];
 
 const servicesMenu: NavItem[] = [
