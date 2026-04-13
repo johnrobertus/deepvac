@@ -55,11 +55,16 @@ const ThermalVision = () => {
           description={t("thermalVision.heroDescription")}
         >
           <div className="flex flex-col sm:flex-row flex-wrap gap-3 pt-4">
-            <Button asChild size="lg" className="font-mono text-xs tracking-wide w-full sm:w-auto">
+            <Button
+              asChild
+              size="lg"
+              className="font-mono text-xs tracking-wide w-full sm:w-auto"
+            >
               <Link to={localizedPath("/contact", lang)}>
                 {tc("buttons.requestConsultation")}
               </Link>
             </Button>
+
             <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
               <Link to={localizedPath("/contact", lang)}>
                 {tc("buttons.requestTechnicalDetails")}
@@ -84,13 +89,13 @@ const ThermalVision = () => {
         </PageHero>
 
         <Section className="pt-4 md:pt-8 pb-8 md:pb-12">
-          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] gap-10 items-start">
-            <div className="lg:row-span-2">
-              <div className="relative rounded-lg overflow-hidden border border-gray/10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:items-stretch">
+            <div className="h-full">
+              <div className="relative rounded-lg overflow-hidden border border-gray/10 h-full min-h-[760px]">
                 <img
                   src={thermalProductImg}
                   alt="Deepvac Thermal Vision - pressure-tight camera enclosure with IR viewport for TVAC integration"
-                  className="w-full h-auto object-cover"
+                  className="w-full h-full object-cover"
                   width={1280}
                   height={960}
                 />
@@ -129,21 +134,22 @@ const ThermalVision = () => {
                   </div>
                 ))}
               </div>
-            </div>
 
-            <div className="border border-gray/10 rounded-lg p-6 md:p-8 self-start">
-              <span className="mono-label text-blue mb-4 block">
-                {t("thermalVision.specsLabel")}
-              </span>
-              <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-2 gap-6">
-                {specs.map((s) => (
-                  <div key={s.label}>
-                    <span className="mono-label text-gray/50 text-[10px]">
-                      {s.label}
-                    </span>
-                    <p className="text-sm font-medium text-sand mt-1">{s.value}</p>
-                  </div>
-                ))}
+              <div className="border border-gray/10 rounded-lg p-6 md:p-8">
+                <span className="mono-label text-blue mb-4 block">
+                  {t("thermalVision.specsLabel")}
+                </span>
+
+                <div className="grid grid-cols-2 xl:grid-cols-4 gap-6">
+                  {specs.map((s) => (
+                    <div key={s.label}>
+                      <span className="mono-label text-gray/50 text-[10px]">
+                        {s.label}
+                      </span>
+                      <p className="text-sm font-medium text-sand mt-1">{s.value}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
