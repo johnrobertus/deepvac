@@ -89,13 +89,14 @@ const ThermalVision = () => {
         </PageHero>
 
         <Section className="pt-4 md:pt-8 pb-8 md:pb-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:items-stretch">
-            <div className="h-full">
-              <div className="relative rounded-lg overflow-hidden border border-gray/10 h-full min-h-[760px]">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+            {/* Left column: image + specs */}
+            <div className="space-y-6">
+              <div className="relative rounded-lg overflow-hidden border border-gray/10">
                 <img
                   src={thermalProductImg}
                   alt="Deepvac Thermal Vision - pressure-tight camera enclosure with IR viewport for TVAC integration"
-                  className="w-full h-full object-cover"
+                  className="w-full h-auto object-cover"
                   width={1280}
                   height={960}
                 />
@@ -105,9 +106,27 @@ const ThermalVision = () => {
                   </span>
                 </div>
               </div>
+
+              <div className="border border-gray/10 rounded-lg p-6 md:p-8">
+                <span className="mono-label text-blue mb-4 block">
+                  {t("thermalVision.specsLabel")}
+                </span>
+
+                <div className="grid grid-cols-2 gap-6">
+                  {specs.map((s) => (
+                    <div key={s.label}>
+                      <span className="mono-label text-gray/50 text-[10px]">
+                        {s.label}
+                      </span>
+                      <p className="text-sm font-medium text-sand mt-1">{s.value}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
 
-            <div className="space-y-6 self-start">
+            {/* Right column: text + features */}
+            <div className="space-y-6">
               <div>
                 <span className="mono-label text-blue">
                   {t("thermalVision.splitLabel")}
@@ -133,23 +152,6 @@ const ThermalVision = () => {
                     <p className="text-[11px] text-gray leading-relaxed">{f.detail}</p>
                   </div>
                 ))}
-              </div>
-
-              <div className="border border-gray/10 rounded-lg p-6 md:p-8">
-                <span className="mono-label text-blue mb-4 block">
-                  {t("thermalVision.specsLabel")}
-                </span>
-
-                <div className="grid grid-cols-2 xl:grid-cols-4 gap-6">
-                  {specs.map((s) => (
-                    <div key={s.label}>
-                      <span className="mono-label text-gray/50 text-[10px]">
-                        {s.label}
-                      </span>
-                      <p className="text-sm font-medium text-sand mt-1">{s.value}</p>
-                    </div>
-                  ))}
-                </div>
               </div>
             </div>
           </div>
