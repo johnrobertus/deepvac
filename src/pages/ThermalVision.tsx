@@ -42,6 +42,7 @@ const ThermalVision = () => {
       </Helmet>
       <PageShell>
         <PageHero
+          className="pb-8 md:pb-12"
           eyebrow={t("thermalVision.eyebrow")}
           title={t("thermalVision.title")}
           description={t("thermalVision.heroDescription")}
@@ -62,7 +63,7 @@ const ThermalVision = () => {
         </PageHero>
 
         {/* Split content section — image left, text + features right */}
-        <Section>
+        <Section className="pt-4 md:pt-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <div>
               <div className="relative rounded-lg overflow-hidden border border-gray/10">
