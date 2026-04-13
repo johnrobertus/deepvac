@@ -413,7 +413,7 @@
       },
       {
         "label": "Thermal Management",
-        "value": "Active Cooling / Optional Heating"
+        "value": "Temperature stabilization"
       },
       {
         "label": "System Integration",
@@ -427,7 +427,7 @@
       },
       {
         "label": "Active Thermal Management",
-        "detail": "Integrated cooling circuit with optional heating maintains the camera within its safe operating temperature range throughout all chamber thermal cycles."
+        "detail": "Integrated cooling system maintains the camera within its safe operating temperature range throughout all chamber thermal cycles."
       },
       {
         "label": "Camera Temperature Stabilization",
