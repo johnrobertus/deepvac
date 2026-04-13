@@ -200,21 +200,29 @@
   "thermalVision": {
     "eyebrow": "Produkte / Engineering-Systeme",
     "title": "Deepvac Thermal Vision",
-    "heroDescription": "Thermalkamera-Integration für Thermovakuumkammern – entwickelt für kontinuierliche Infrarot-Bildgebung unter Hochvakuum- und Extremtemperaturbedingungen.",
-    "imageLabel": "Thermal Vision System",
-    "splitLabel": "Thermalkamera-Integration",
-    "bodyParagraph1": "Deepvac Thermal Vision ermöglicht die kontinuierliche Aufnahme kalibrierter Wärmebilder von Prüflingen unter Hochvakuum-Bedingungen, unter denen handelsübliche Kamerasysteme ohne gezielte Schutzmaßnahmen nicht funktionsfähig sind. Die Kamera wird in einem druckdichten Schutzgehäuse mit IR-transparentem Sichtfenster betrieben.",
-    "bodyParagraph2": "Ein aktives Kühl- und Heizsystem hält die Kamera dauerhaft im sicheren Betriebsbereich. Die PID-basierte Temperaturregelung lässt sich in bestehende Kammersteuerungen integrieren. Geeignet für Neuanlagen und Retrofit bestehender TVAC-Systeme – Engineering und Hardwarebeschaffung aus einer Hand.",
+    "heroDescription": "Druckdichte Thermalkamera-Integration für Thermovakuumkammern. Kontinuierliche Infrarot-Bildgebung unter Hochvakuum- und Extremtemperaturbedingungen — mit aktivem Thermalmanagement, PID-geregeltem Betrieb und vollständigem Kammer-Integrations-Engineering.",
+    "imageLabel": "Druckdichtes Kameragehäuse",
+    "splitLabel": "Systemübersicht",
+    "splitHeading": "Integrierte Thermografie für TVAC-Systeme",
+    "bodyParagraph1": "Handelsübliche Infrarotkameras können in Hochvakuum- und Extremtemperaturumgebungen nicht ohne gezielte Engineering-Maßnahmen betrieben werden. Deepvac Thermal Vision löst diese Einschränkung durch ein druckdichtes Gehäuse mit IR-transparentem Sichtfenster und ermöglicht die kontinuierliche, kalibrierte thermische Bildgebung von Prüflingen innerhalb der Thermovakuumkammer.",
+    "bodyParagraph2": "Das System umfasst einen aktiven Kühlkreislauf mit optionaler Heizung, der die Kamera unter allen Kammerbedingungen im spezifizierten Betriebstemperaturbereich hält. Ein PID-basierter Temperaturregler steuert die Thermalregulierung und kann in bestehende Kammersteuerungsarchitekturen integriert werden. Deepvac liefert das vollständige Integrations-Engineering — Gehäuseauslegung, Thermalmanagement, Viewport-Spezifikation und mechanische Schnittstelle — für Neuanlagen und Retrofit bestehender Systeme.",
     "chips": {
       "environment": { "label": "Umgebung", "value": "Hochvakuum" },
-      "enclosure": { "label": "Gehäuse", "value": "Druckdicht" },
-      "compatibility": { "label": "Kompatibilität", "value": "Neu & Retrofit" }
+      "enclosure": { "label": "Kamerazone", "value": "Druckdicht" },
+      "compatibility": { "label": "Integration", "value": "Neubau & Retrofit" }
     },
+    "specsLabel": "Technische Parameter",
+    "specs": [
+      { "label": "Betriebsumgebung", "value": "Hochvakuum" },
+      { "label": "Kameraschutz", "value": "Druckdichtes Gehäuse" },
+      { "label": "Thermalmanagement", "value": "Aktive Kühlung / optionale Heizung" },
+      { "label": "Systemintegration", "value": "Neubau & Retrofit" }
+    ],
     "features": [
-      { "label": "Druckdichtes Gehäuse", "detail": "Kamera in einem versiegelten Schutzgehäuse mit IR-transparentem Sichtfenster für den Betrieb unter Hochvakuum-Bedingungen." },
-      { "label": "Aktives Thermalmanagement", "detail": "Integriertes Kühl- und Heizsystem hält die Kamera dauerhaft im sicheren Betriebstemperaturbereich." },
-      { "label": "PID-Temperaturregelung", "detail": "PID-basierte Temperaturregelung mit Integrationsmöglichkeit in bestehende Kammersteuerungsarchitekturen." },
-      { "label": "Retrofit-kompatibel", "detail": "Konzipiert für die Integration in neue TVAC-Anlagen sowie Retrofit bestehender Thermovakuumsysteme." }
+      { "label": "Druckdichtes Kameragehäuse", "detail": "Versiegeltes Edelstahlgehäuse mit IR-transparentem Sichtfenster. Hält atmosphärischen Druck um den Kamerasensor, während die Kammer unter Hochvakuum arbeitet." },
+      { "label": "Aktives Thermalmanagement", "detail": "Integrierter Kühlkreislauf mit optionaler Heizung hält die Kamera während aller thermischen Kammerzyklen im sicheren Betriebstemperaturbereich." },
+      { "label": "Temperaturkontrollierter Betrieb", "detail": "PID-basierte Temperaturregelung gewährleistet stabile Bildgebungsbedingungen. Regler-Schnittstelle zu bestehender Kammerautomatisierung und Datenerfassung." },
+      { "label": "Neubau- & Retrofit-Integration", "detail": "Mechanisches und thermisches Schnittstellen-Engineering für die Integration in neue TVAC-Anlagen oder Retrofit bestehender Thermovakuumkammern. Lieferung aus einer Hand." }
     ]
   }
 }
