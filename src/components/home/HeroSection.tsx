@@ -194,7 +194,7 @@ export function HeroSection() {
             </div>
 
             {/* Funding logo — right side, desktop only */}
-            <div className="hidden lg:flex items-center justify-center flex-shrink-0 w-[40%] max-w-[500px]">
+            <div className="hidden lg:flex items-center justify-center flex-shrink-0 w-[32%] max-w-[400px]">
               <Reveal delay={300}>
                 <div className="rounded-2xl bg-white/[0.07] backdrop-blur-md border border-white/[0.08] px-7 py-5">
                   <img
