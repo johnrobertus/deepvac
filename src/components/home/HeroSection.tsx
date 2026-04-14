@@ -178,7 +178,7 @@ export function HeroSection() {
       />
 
       <div className="relative z-20 flex h-full flex-col justify-end px-4 pb-12 pt-16 sm:px-6 md:pb-24 md:pt-40">
-        <div className="container max-w-6xl">
+        <div className="container max-w-7xl">
           <div className="flex items-end justify-between gap-8 md:items-center">
             <div className="max-w-[56rem] space-y-5">
               <Reveal>
