@@ -321,7 +321,7 @@ const Contact = () => {
 
               <div className="bento-card rounded-lg p-4 flex items-center justify-between">
                 <span className="text-sm text-gray">{t("followDeepvac")}</span>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-sm text-blue hover:text-blue-light transition-colors font-mono">
+                <a href="https://www.linkedin.com/company/deepvac-gmbh/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-sm text-blue hover:text-blue-light transition-colors font-mono">
                   LinkedIn <ArrowRight className="w-3 h-3" />
                 </a>
               </div>

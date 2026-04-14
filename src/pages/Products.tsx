@@ -6,13 +6,14 @@ import { Layout } from "@/components/Layout";
 import { PageShell, PageHero, Section, CTABand } from "@/components/PageShell";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Box, Cog } from "lucide-react";
+import { ArrowRight, Box, Cog, Camera } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { useLanguage } from "@/components/LanguageProvider";
 import { getHreflangs, getCanonical, localizedPath } from "@/lib/routes";
 import tseriesImg from "@/assets/tseries-chamber.png";
 import cseriesImg from "@/assets/cseries-chamber.jpg";
 import customImg from "@/assets/custom-chamber.jpg";
+import thermalVisionImg from "@/assets/thermal-vision-product.jpg";
 
 const Products = () => {
   const { t } = useTranslation("products");
@@ -43,6 +44,16 @@ const Products = () => {
       ctaKey: "overview.customTvac.cta",
       icon: <Cog className="w-5 h-5" />,
       chipsKey: "overview.customTvac.chips",
+    },
+    {
+      titleKey: "overview.thermalVision.title",
+      subtitleKey: "overview.thermalVision.subtitle",
+      descriptionKey: "overview.thermalVision.description",
+      image: thermalVisionImg,
+      href: "/products/thermal-vision",
+      ctaKey: "overview.thermalVision.cta",
+      icon: <Camera className="w-5 h-5" />,
+      chipsKey: "overview.thermalVision.chips",
     },
   ];
 
