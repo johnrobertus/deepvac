@@ -1,108 +1,338 @@
 
 
-# CRO-Audit-Grundlage — deepvac.space
-
-## Schritt 1: Seiteninventar
-
-| # | Seite | Route (EN) | Route (DE) | Seitentyp | Funnel-Stufe | Primäre Zielgruppe | Primärer CTA | Status |
-|---|-------|-----------|-----------|-----------|-------------|-------------------|-------------|--------|
-| 1 | **Homepage** | `/` | `/de` | Landing / Narrative | Early | Alle Segmente | „Request a Technical Consultation" | **Live** — 16-Sektionen-Aufbau, vollständig implementiert |
-| 2 | **Products Overview** | `/products` | `/de/produkte` | Kategorie-Übersicht | Early–Mid | Ingenieure, Beschaffung | Weiterleitung auf Produktdetailseiten | **Live** — zeigt nur Standard Series + Custom TVAC; Thermal Vision fehlt hier (beobachtet) |
-| 3 | **Standard Series** | `/products/standard-series` | `/de/produkte/standard-serie` | Produktdetail | Mid | Ingenieure, Lab Leads | „Request Technical Consultation" | **Live** — vollständig |
-| 4 | **Custom TVAC** | `/products/custom-tvac` | `/de/produkte/custom-tvac` | Produktdetail | Mid | Projektleiter, Ingenieure | „Discuss System Requirements" | **Live** — vollständig |
-| 5 | **Thermal Vision** | `/products/thermal-vision` | `/de/produkte/thermal-vision` | Produktdetail | Mid | Ingenieure, Retrofit-Kunden | „Request a Technical Consultation" | **Live** — nicht in Products-Overview integriert (beobachtet) |
-| 6 | **TwinQCM** | `/products/twin-qcm` | — | Produktdetail | Mid | — | — | **Schwach** — Route existiert in App.tsx, aber laut Memory „explicitly removed"; Seite vermutlich Restbestand |
-| 7 | **Services Overview** | `/services` | `/de/leistungen` | Kategorie-Übersicht | Early–Mid | Ingenieure, Beschaffung | „Discuss Requirements" | **Live** — 6 Services als Karten |
-| 8 | **Testing Services** | `/services/testing-services` | `/de/leistungen/pruefdienstleistungen` | Service-Detail | Mid | Lab Leads, Qualität | CTA zum Kontakt | **Live** |
-| 9 | **Control Systems Design** | `/services/control-systems-design` | `/de/leistungen/steuerungstechnik` | Service-Detail | Mid | Ingenieure | CTA zum Kontakt | **Live** |
-| 10 | **Mechanical Design** | `/services/mechanical-design` | `/de/leistungen/mechanische-konstruktion` | Service-Detail | Mid | Ingenieure | CTA zum Kontakt | **Live** |
-| 11 | **Retrofit & Modernization** | `/services/retrofit-modernization` | `/de/leistungen/retrofit-modernisierung` | Service-Detail | Mid–Late | Betreiber bestehender Systeme | CTA zum Kontakt | **Live** |
-| 12 | **Maintenance & Repair** | `/services/maintenance-repair` | `/de/leistungen/wartung-reparatur` | Service-Detail | Mid–Late | Betreiber, Beschaffung | CTA zum Kontakt | **Live** |
-| 13 | **Subsystem Integration** | `/services/subsystem-integration` | `/de/leistungen/subsystem-integration` | Service-Detail | Mid | Ingenieure | CTA zum Kontakt | **Live** |
-| 14 | **Team** | `/team` | `/de/team` | Vertrauen / About | Early–Mid | Alle | „Contact" | **Live** — 2 Gründer mit Fotos |
-| 15 | **Resources Hub** | `/resources` | `/de/ressourcen` | Hub / Index | Early | Alle | Weiterleitung Blog + Kataloge | **Live** — minimal, 2 Kacheln |
-| 16 | **Catalogs** | `/catalogs` | `/de/kataloge` | Ressource | Mid | Ingenieure, Beschaffung | PDF-Download | **Live** — 1 Katalog (Standard Series) |
-| 17 | **Blog Index** | `/resources/blog` | `/de/ressourcen/blog` | Content Hub | Early | Ingenieure, SEO-Traffic | Artikel-Links | **Live** — 3 Artikel |
-| 18 | **Blog: Cooling Systems** | `/resources/blog/cooling-systems` | `/de/ressourcen/blog/kuehlsysteme` | Artikel | Early | Ingenieure | CTA zum Kontakt | **Live** |
-| 19 | **Blog: Retrofit vs Replacement** | `/resources/blog/retrofit-vs-replacement` | `/de/ressourcen/blog/retrofit-vs-neubeschaffung` | Artikel | Early–Mid | Betreiber | CTA zum Kontakt | **Live** |
-| 20 | **Blog: Aerospace Qualification** | `/resources/blog/aerospace-qualification-testing` | `/de/ressourcen/blog/raumfahrtqualifikation` | Artikel | Early | Ingenieure, Qualität | CTA zum Kontakt | **Live** |
-| 21 | **Careers** | `/careers` | `/de/karriere` | Recruiting | — | Bewerber | Initiativbewerbung / Kontakt | **Live** |
-| 22 | **References** | `/references` | `/de/referenzen` | Vertrauen | Mid–Late | Beschaffung, Projektleiter | Kontakt | **Schwach** — keine konkreten Projekte, Logos oder Kundennamen sichtbar (beobachtet); nur generische Industrie-Kacheln |
-| 23 | **Contact** | `/contact` | `/de/kontakt` | Conversion | Late | Alle kaufbereiten Besucher | Formular absenden | **Live** — Formular mit Turnstile, Supabase Edge Function |
-| 24 | **Imprint** | `/imprint` | `/de/impressum` | Legal | — | — | — | Live |
-| 25 | **Privacy Policy** | `/privacy-policy` | `/de/datenschutz` | Legal | — | — | — | Live |
-| 26 | **Terms & Conditions** | `/terms-and-conditions` | `/de/agb` | Legal | — | — | — | Live |
-| 27 | **Media Credits** | `/media-credits` | `/de/medienquellen` | Legal | — | — | — | Live |
-| 28 | **404** | `*` | `*` | Error | — | — | Zurück zur Startseite | Live |
+# CRO-Tiefenaudit — deepvac.space
 
 ---
 
-## Schritt 2: Strategische Lücken in der Informationsarchitektur
+## 1. Executive Summary
 
-### A. Products Overview
-- **Beobachtet:** Die Products-Übersichtsseite listet nur Standard Series und Custom TVAC. Thermal Vision ist nicht als dritte Produktkarte integriert, obwohl die Detailseite existiert und im Header-Dropdown verlinkt ist.
-- **Beobachtet:** TwinQCM-Route existiert noch in App.tsx — potenzielle tote Seite.
-- **Hypothese:** Ein Besucher, der über die Übersichtsseite navigiert, findet Thermal Vision nicht.
+Deepvac.space ist visuell und strukturell auf einem hohen Niveau für eine B2B-Engineering-Website in der Frühphase. Die dunkle, technische Designsprache, die konsistente Typografie und die durchdachte Seitenstruktur schaffen Glaubwürdigkeit. Die Site hat funktionale Formulare mit Backend-Integration, Turnstile-Schutz und saubere i18n.
 
-### B. Product Detail Pages
-- **Beobachtet:** Standard Series und Custom TVAC haben konsistentes Layout. Thermal Vision wurde kürzlich überarbeitet, ist aber von der Übersichtsseite abgekoppelt.
-- **Nicht bestimmbar:** Ob technische Datenblätter / Downloads für Custom TVAC und Thermal Vision existieren.
-- **Hypothese:** Fehlende produktspezifische Kataloge/Datenblätter für Custom TVAC und Thermal Vision reduzieren die Conversion-Wahrscheinlichkeit bei Mid-Funnel-Besuchern.
+Die zentralen Conversion-Barrieren sind:
 
-### C. Services Overview & Detail
-- **Beobachtet:** 6 Service-Detailseiten nutzen ein einheitliches Template (ServicePageTemplate). Alle sind live.
-- **Hypothese:** Die Service-Detailseiten sind strukturell solide, aber die CTA-Differenzierung zwischen den Seiten ist gering — alle leiten auf denselben Kontakt-Endpunkt. Für CRO sollte geprüft werden, ob kontextspezifischere CTAs die Conversion verbessern.
+1. **Fehlende Differenzierung im Conversion-Pfad**: Alle CTAs auf allen Seiten führen zum selben generischen Kontaktformular. Es gibt keine kontextspezifische Vorqualifizierung.
+2. **Schwache Vertrauenslage**: Die References-Seite enthält null konkrete Nachweise — keine Logos, keine Projekte, keine Testimonials. Für B2B-Beschaffung in Raumfahrt/Verteidigung ist das ein Dealbreaker.
+3. **Thermal Vision nicht in Products Overview integriert**: Ein Produkt existiert als vollständige Detailseite, ist aber über den Hauptnavigationspfad der Übersichtsseite unsichtbar.
+4. **Hero-Botschaft zu breit**: Die Homepage-Headline „Thermal Vacuum Systems for Aerospace Qualification" ist korrekt, aber nicht differenzierend. Sie beschreibt die Kategorie, nicht Deepvac.
+5. **Keine Messung**: Kein erkennbares Analytics-Setup, keine Event-Tracking-Integration, keine Conversion-Messung. CRO-Optimierung ohne Baseline ist Blindflug.
 
-### D. Retrofit / Modernisierung
-- **Beobachtet:** Eigene Service-Detailseite existiert. Ein Blog-Artikel „Retrofit vs Replacement" unterstützt das Thema.
-- **Hypothese:** Retrofit ist ein starkes Differenzierungsmerkmal für B2B-Entscheider mit Bestandsanlagen. Die aktuelle Behandlung als eine von sechs gleichrangigen Services unterschätzt möglicherweise das strategische Gewicht.
-
-### E. Test-as-a-Service
-- **Beobachtet:** Testing Services existiert als Service-Detailseite.
-- **Nicht bestimmbar:** Ob Deepvac tatsächlich Prüfdienstleistungen als eigenständiges Geschäftsmodell (Kammer-Zugang verkaufen) anbietet oder nur Testing-Infrastruktur baut.
-- **Hypothese:** Falls Testing-as-a-Service ein Angebot ist, fehlt eine klare Landing Page, die diesen Use Case isoliert adressiert.
-
-### F. Trust / Credibility
-- **Beobachtet:** References-Seite enthält keine konkreten Projektnamen, Kundenlogos oder Fallstudien — nur generische Industrie-Kategorien (Satellite, FlaskConical, Factory, Microscope Icons).
-- **Beobachtet:** Trust Bar auf Homepage existiert, aber Inhalte nicht im Detail geprüft.
-- **Beobachtet:** Team-Seite zeigt 2 Gründer mit Fotos und LinkedIn-Links.
-- **Hypothese:** Für B2B-Entscheider in Raumfahrt/Verteidigung ist die Referenz-Seite das schwächste Glied in der Vertrauenskette. Ohne konkrete Nachweise wirkt sie als leere Behauptung.
-
-### G. Resources / Catalogs
-- **Beobachtet:** Resources Hub ist minimal (2 Kacheln: Kataloge + Blog).
-- **Beobachtet:** Nur 1 Katalog (Standard Series Q1 2026) verfügbar.
-- **Beobachtet:** 3 Blog-Artikel, alle technisch relevant.
-- **Hypothese:** Der Resources-Bereich ist funktional, aber dünn. Für SEO-getriebene Lead-Generierung fehlt kritische Masse an Inhalten.
-
-### H. Contact / Engineering Inquiry
-- **Beobachtet:** Vollständiges Kontaktformular mit Turnstile-Schutz und Supabase Edge Function. Enthält Felder für Anfrage-Typ (SelectField).
-- **Hypothese:** Die Formular-Conversion könnte durch bessere Vorqualifizierung (z.B. produktspezifische Anfrage-Pfade) verbessert werden. Aktuell landen alle CTAs der gesamten Site auf derselben generischen Kontaktseite.
+**Stärken**: Technisch präzise Copy, konsistentes Design-System, funktionale Formulare mit Validierung und Spam-Schutz, saubere zweisprachige Architektur, gutes Service-Template-System.
 
 ---
 
-## Empfohlene Seiten für Tiefenaudit (8–12)
+## 2. Weighted Scorecard
 
-| Priorität | Seite | Begründung |
-|-----------|-------|------------|
-| 1 | **Homepage** | Zentraler Einstiegspunkt, höchstes Traffic-Volumen, strategische Narrative |
-| 2 | **Contact** | Einziger Conversion-Endpunkt, alle CTAs führen hierhin |
-| 3 | **Products Overview** | Fehlende Thermal Vision Integration, Navigations-Lücke |
-| 4 | **Standard Series** | Wichtigstes Produkt, Referenz-Layout für alle Produktseiten |
-| 5 | **Custom TVAC** | Zweites Kernprodukt, Prüfung auf CTA-Klarheit und Differenzierung |
-| 6 | **Thermal Vision** | Kürzlich überarbeitet, noch nicht vollständig integriert |
-| 7 | **Services Overview** | Einstieg in 6 Service-Detailseiten, CTA-Logik prüfen |
-| 8 | **Retrofit & Modernization** | Strategisch wichtiges Differenzierungsmerkmal |
-| 9 | **References** | Schwächstes Vertrauenselement, höchstes Verbesserungspotenzial |
-| 10 | **Resources Hub + Catalogs** | Bewertung als Lead-Generierungskanal |
-| 11 | **Team** | Vertrauensbildung bei Early/Mid-Funnel |
-| 12 | **Blog Index** | SEO-Potenzial und Content-Strategie |
+| # | Kategorie | Gewicht | Score (0–5) | Gewichtet | Konfidenz | Impact | Effort |
+|---|-----------|---------|-------------|-----------|-----------|--------|--------|
+| 1 | Positioning & Message Clarity | 15% | 3.0 | 0.45 | Hoch | Hoch | Niedrig |
+| 2 | ICP Fit & Relevance | 10% | 3.5 | 0.35 | Mittel | Mittel | Niedrig |
+| 3 | Offer Architecture & Solution Logic | 15% | 3.0 | 0.45 | Hoch | Hoch | Mittel |
+| 4 | Engineering & System Integration Competence | 10% | 3.5 | 0.35 | Hoch | Mittel | Mittel |
+| 5 | Data & Technology Communication | 5% | 2.5 | 0.125 | Mittel | Niedrig | Niedrig |
+| 6 | Retrofit & Modernization Visibility | 5% | 2.5 | 0.125 | Hoch | Mittel | Niedrig |
+| 7 | Trust & Technical Credibility | 10% | 1.5 | 0.15 | Hoch | Hoch | Hoch |
+| 8 | CTA Architecture & Conversion Paths | 10% | 2.0 | 0.20 | Hoch | Hoch | Niedrig |
+| 9 | Lead Generation Friction | 10% | 3.0 | 0.30 | Mittel | Hoch | Niedrig |
+| 10 | Objection Handling | 5% | 2.0 | 0.10 | Mittel | Mittel | Niedrig |
+| 11 | Navigation & Information Scent | 5% | 3.5 | 0.175 | Hoch | Mittel | Niedrig |
+| 12 | Content Depth & Scanability | 5% | 3.5 | 0.175 | Hoch | Niedrig | Niedrig |
+| 13 | Language & Tone | 3% | 4.0 | 0.12 | Hoch | Niedrig | Niedrig |
+| 14 | Mobile CRO | 4% | 3.0 | 0.12 | Niedrig | Mittel | Mittel |
+| 15 | Measurement Readiness | 3% | 0.5 | 0.015 | Hoch | Hoch | Niedrig |
+| | **Gesamt** | **100%** | | **3.19 / 5.0** | | | |
 
 ---
 
-## Keine blockierenden Rückfragen
+## 3. Page-by-Page Findings
 
-Die Analyse kann auf dieser Basis fortgesetzt werden. Zwei Anmerkungen für spätere Klärung:
+### 3.1 Homepage
 
-- **TwinQCM**: Route existiert noch — soll die Seite entfernt oder umgeleitet werden?
-- **Testing Services**: Bietet Deepvac tatsächlich Kammerzugang als Dienstleistung an, oder ist „Testing Services" rein auf den Bau von Prüfinfrastruktur bezogen? Das beeinflusst die CRO-Strategie für diese Seite erheblich.
+**Beobachtet:**
+- Hero-Headline: „Thermal Vacuum Systems for Aerospace Qualification" — beschreibt die Kategorie, nicht die Differenzierung
+- Hero-Subtitle erklärt das Angebot gut, ist aber in einem langen Satz versteckt
+- Cue-Badges: MODULAR PLATFORMS / CUSTOM TVAC SYSTEMS / CONTROL & AUTOMATION / RETROFIT & SERVICE — gut gewählt
+- Kein primärer CTA im Hero sichtbar — nur Cues und ein Funding-Badge
+- 16 Sektionen bis zum Kontaktformular — langer Weg zum Conversion-Punkt
+- Homepage-Kontaktformular (ContactSection) hat weniger Felder als die Kontaktseite (keine Qualifier-Dropdowns) — gut für Lower-Friction-Conversion
+- Lead Capture CTA-Band existiert zwischen References und Contact — „Request a Quote" + „Talk to an Engineer"
+- Keine Sticky-CTA oder Floating-Action im Scroll-Verlauf
+
+**Interpretation:** Die Homepage ist inhaltlich stark, aber der Weg zur Conversion ist lang und der Hero hat keinen direkten Call-to-Action. Ein Ingenieur, der die Seite zum ersten Mal besucht, muss 16 Sektionen scrollen, um das Formular zu erreichen.
+
+**Empfehlungen:**
+- CTA-Buttons in den Hero einbauen
+- Hero-Headline differenzierend umschreiben
+- Sticky-CTA oder „Talk to an Engineer"-Button bei langem Scroll
+
+### 3.2 Contact Page
+
+**Beobachtet:**
+- Vollständiges Formular: First Name, Last Name, Work Email, Phone, Company, Project/Application, dann 3 optionale Qualifier-Dropdowns (Chamber Type, Application Area, Timeline), Message, Consent, Turnstile
+- Honeypot-Feld implementiert
+- Erfolgsstate mit CheckCircle und „Submit Another Inquiry"
+- Sidebar: Adresse, Telefon, E-Mail, Antwortzeit, ConsentMap, LinkedIn
+- FAQ-Sektion mit 4 Fragen
+- CTA-Band am Ende: „Call" + „Email"
+- LinkedIn-Link zeigt auf `https://linkedin.com` (generisch, nicht Deepvac-spezifisch) — **Bug**
+
+**Interpretation:** Das Formular ist solide und hat die richtige Feldstruktur für B2B-Qualifizierung. Die Qualifier-Dropdowns sind optional und gut platziert. Der LinkedIn-Link ist fehlerhaft (generisches `https://linkedin.com` statt Firmen-URL).
+
+**Empfehlungen:**
+- LinkedIn-Link auf `https://www.linkedin.com/company/deepvac-gmbh/` korrigieren (Bug — ContactSection hat die richtige URL, Contact.tsx nicht)
+- Formular-Headline „Engineering Inquiry" durch „Discuss Your Requirements" ersetzen — weniger formell
+- Vertrauenssignal neben Submit-Button stärken: Antwortzeit prominent anzeigen
+
+### 3.3 Products Overview
+
+**Beobachtet:**
+- Zeigt nur Standard Series und Custom TVAC als Produktkarten
+- Thermal Vision ist nicht integriert, obwohl die Detailseite existiert und im Header-Dropdown verlinkt ist
+- Decision Support Tabelle (Standard vs. Custom) vorhanden — gutes Entscheidungstool
+- Cross-Link zu Services existiert
+- FAQ am Ende
+
+**Interpretation:** Strukturell solide, aber unvollständig. Jeder Besucher, der über die Übersichtsseite navigiert, verpasst Thermal Vision.
+
+**Empfehlungen:**
+- Thermal Vision als dritte Produktkarte integrieren (mit angepasstem Icon und Beschreibung)
+- Ggf. Produktkategorisierung: „Chamber Platforms" (Standard + Custom) und „Engineering Systems" (Thermal Vision)
+
+### 3.4 Standard Series
+
+**Beobachtet:**
+- Vollständige Produktseite: Hero mit TechChips, zwei Sub-Produkte (T Series + C Series), jeweils mit Bild, Features, Spezifikationen
+- 2 CTAs: „Request Technical Details" + „Download Brochure"
+- Application Fit Sektion
+- FAQ
+- CTA-Band am Ende
+
+**Interpretation:** Referenz-Layout, gut strukturiert. CTAs sind klar differenziert.
+
+### 3.5 Custom TVAC
+
+**Beobachtet:**
+- Hero mit TechChips (Scope: Custom / Geometry: Application-Specific / Approach: Engineering-Led)
+- Project Drivers: 6 Karten zu Gründen für Custom-Systeme
+- Config Dimensions: akkordeon-artige Darstellung der Konfigurationsmöglichkeiten
+- Process: 5-Step Ablauf
+- CTA-Band: „Discuss System Requirements" + „Explore Standard Series"
+- FAQ
+
+**Interpretation:** Stärkste Conversion-Seite. Gut differenziert, klarer Prozess, spezifischer CTA. Kein Verbesserungsdruck, aber ein Case-Study-Beispiel würde massiv helfen.
+
+### 3.6 Thermal Vision
+
+**Beobachtet:**
+- Überarbeitete Seite mit spezifischem Produkt-Fokus
+- Hero mit „Request a Technical Consultation" + „Request Technical Details" — CTA-Paar zu ähnlich
+- Split-Layout: Produktbild links mit Specs, Features rechts
+- 4 Feature-Karten
+- Technische Spezifikationen als Strip
+- Navigation-Bar: „Back to Products" + „Talk to an Engineer"
+- Fehlt: FAQ, Cross-Links zu Services (z.B. Retrofit, Subsystem Integration)
+
+**Interpretation:** Visuell und inhaltlich deutlich verbessert gegenüber früherer Version. Schwachpunkte: CTA-Differenzierung und fehlende Integration in die Übersichtsseite.
+
+### 3.7 Services Overview
+
+**Beobachtet:**
+- 6 Service-Karten mit Icon, Beschreibung, Deliverables-Sidebar
+- CTAs: „Discuss Your Requirements" + „Explore Chamber Products"
+- Cross-Link zu Standard Series + Custom TVAC
+- FAQ
+- CTA-Band: „Talk to an Engineer" + „Request a Quote"
+
+**Interpretation:** Strukturell gut. Alle 6 Services sind gleichgewichtig dargestellt. Retrofit als strategisches Differenzierungsmerkmal könnte visuell hervorgehoben werden.
+
+### 3.8 Retrofit & Modernization (Service Detail)
+
+**Beobachtet (Template):**
+- ServicePageTemplate: Hero, Overview-Sektion mit Bild, Deliverables-Grid, Scenarios, Cross-Links, CTA-Band
+- CTA: generisches „Discuss Your Requirements"
+- Eigenes Hero-Bild (retrofit-hero.png)
+- Blog-Artikel „Retrofit vs Replacement" existiert als Content-Stützung
+
+**Interpretation:** Funktional vollständig, aber nicht als strategischer Differenzierungspunkt positioniert. Der CTA „Discuss Your Requirements" ist für Retrofit-Kunden zu vage. Bessere Option: „Assess Retrofit Suitability" oder „Evaluate Your Existing System".
+
+### 3.9 References
+
+**Beobachtet:**
+- 4 generische Industrie-Kacheln (Aerospace & Space, Research, Industrial, Scientific)
+- „Types of Engagements" als Badge-Liste
+- „Coming Soon" Placeholder-Sektion für Case Studies
+- Keine Logos, keine Projektnamen, keine Testimonials
+- Kein konkreter Nachweis für irgendetwas
+
+**Interpretation:** Dies ist die schwächste Seite der gesamten Website. Für B2B-Beschaffung in Raumfahrt/Verteidigung ist eine References-Seite ohne konkrete Nachweise schlimmer als keine References-Seite. Sie signalisiert explizit: „Wir haben nichts vorzuweisen."
+
+**Empfehlungen:**
+- Wenn konkrete Referenzen existieren: sofort integrieren
+- Wenn nicht: Seite temporär aus der Navigation entfernen und stattdessen Vertrauenssignale auf anderen Seiten stärken (Universitäts-Kooperation, EXIST-Förderung, Gründer-Expertise)
+- „Coming Soon" auf einer öffentlichen Seite entfernen — das ist ein Anti-Pattern für Vertrauen
+
+### 3.10 Team
+
+**Beobachtet:**
+- 2 Gründer mit Fotos, Rollen, Beschreibungen, Focus-Area-Tags
+- Story-Sektion mit Kompetenzen
+- Philosophy-Sektion: 3 Karten
+- Partnership-Sektion
+- LinkedIn-Links zeigen auf `https://linkedin.com` — **gleicher Bug wie Contact**
+- CTA: „Request a Technical Consultation" + „View Open Positions"
+
+**Interpretation:** Gut strukturiert. 2-Personen-Team ist für ein Startup glaubwürdig, könnte aber das „können die das wirklich"-Signal auslösen. University-Verbindung und EXIST-Förderung könnten als Credibility-Marker stärker genutzt werden.
+
+### 3.11 Resources Hub + Catalogs
+
+**Beobachtet:**
+- Resources Hub: 2 Kacheln (Catalogs + Blog)
+- Catalogs: 1 PDF (Standard Series Q1 2026)
+- Blog: 3 technische Artikel
+
+**Interpretation:** Funktional, aber dünn. Für SEO-getriebene Lead-Generierung fehlt Masse. Für Mid-Funnel-Besucher fehlen produktspezifische Datenblätter für Custom TVAC und Thermal Vision.
+
+### 3.12 Blog
+
+**Beobachtet (aus Route-Analyse):**
+- 3 Artikel: Cooling Systems, Retrofit vs Replacement, Aerospace Qualification Testing
+- Themen passen zur ICP-Relevanz
+
+**Interpretation:** Qualitativ relevant, quantitativ zu wenig für nachhaltige SEO-Wirkung. Nicht auditiert im Detail.
+
+---
+
+## 4. Quick Wins (7–14 Tage)
+
+| # | Maßnahme | Impact | Effort | Seite |
+|---|----------|--------|--------|-------|
+| 1 | **CTA-Buttons in Homepage-Hero einfügen**: „Discuss Your Requirements" (primär) + „Explore TVAC Platforms" (sekundär) | Hoch | Niedrig | Homepage |
+| 2 | **Thermal Vision in Products Overview integrieren** als dritte Produktkarte | Hoch | Niedrig | Products |
+| 3 | **LinkedIn-Links korrigieren** auf Contact.tsx und Team.tsx (Bug: `https://linkedin.com` statt `https://www.linkedin.com/company/deepvac-gmbh/`) | Niedrig | Niedrig | Contact, Team |
+| 4 | **References „Coming Soon" entfernen** — entweder konkrete Inhalte oder Seite aus Navigation nehmen | Mittel | Niedrig | References |
+| 5 | **Thermal Vision CTA differenzieren**: „Request a Technical Consultation" + „Request Technical Details" → „Discuss Integration Requirements" + „Request Technical Datasheet" | Mittel | Niedrig | Thermal Vision |
+| 6 | **TwinQCM-Route entfernen** oder auf /products umleiten | Niedrig | Niedrig | App.tsx |
+| 7 | **Retrofit Service CTA spezifizieren**: „Discuss Your Requirements" → „Assess Retrofit Suitability" | Mittel | Niedrig | Retrofit Service |
+| 8 | **Homepage Hero-Headline differenzierend umschreiben** (siehe Rewrite Suggestions) | Hoch | Niedrig | Homepage |
+
+---
+
+## 5. Strategic Improvements (30–90 Tage)
+
+| # | Maßnahme | Impact | Effort | Zeithorizont |
+|---|----------|--------|--------|-------------|
+| 1 | **Analytics implementieren**: Event-Tracking für CTA-Clicks, Formular-Starts, Formular-Submits, Seiten-Scroll-Depth, PDF-Downloads | Hoch | Mittel | 30 Tage |
+| 2 | **Kontextspezifische Formular-Vorqualifizierung**: CTA auf Produktseiten soll das Kontaktformular mit vorausgewähltem Chamber Type öffnen (URL-Parameter `?chamberType=standard` etc.) | Hoch | Mittel | 30 Tage |
+| 3 | **References-Seite mit realen Inhalten befüllen** oder durch „Engineering Scope" ersetzen — Beschreibung der Projekttypen ohne falsche Referenz-Behauptungen | Hoch | Hoch | 60 Tage |
+| 4 | **Produktspezifische Datenblätter erstellen**: Custom TVAC Capabilities PDF, Thermal Vision Technical Brief | Mittel | Hoch | 60 Tage |
+| 5 | **Retrofit als strategisches Thema aufwerten**: eigene Landing Page oder prominentere Platzierung auf Homepage mit eigenem Value Proposition Block | Mittel | Mittel | 45 Tage |
+| 6 | **Sticky Header-CTA**: Bei Scroll über 50% Viewport einen persistenten „Talk to an Engineer"-Button einblenden | Mittel | Niedrig | 30 Tage |
+| 7 | **Blog-Content-Pipeline aufbauen**: 2 Artikel/Monat zu ICP-relevanten Themen für SEO-Sichtbarkeit | Mittel | Hoch | 90 Tage |
+
+---
+
+## 6. Rewrite Suggestions
+
+### 6.1 Homepage Hero — 3 Varianten
+
+**Variante A — Capability-Led:**
+> Headline: „Thermal Vacuum Infrastructure — Engineered End to End"
+> Subtitle: „Chamber platforms, control systems, thermal management, and lifecycle support. Deepvac develops integrated TVAC systems for aerospace qualification and space environment simulation."
+
+**Variante B — Outcome-Led:**
+> Headline: „From Chamber Concept to Qualification-Ready System"
+> Subtitle: „Deepvac engineers modular and custom thermal vacuum systems for repeatable qualification testing — including controls, thermal management, and long-term infrastructure support."
+
+**Variante C — Differenzierung-Led:**
+> Headline: „Not Just Chambers. Complete Thermal Vacuum Systems."
+> Subtitle: „Deepvac combines vacuum chamber engineering, control architecture, thermal management, and lifecycle services into one integrated offering — for new builds and existing infrastructure."
+
+### 6.2 Präzisere CTA-Labels (5 Vorschläge)
+
+| Aktuell | Besser | Kontext |
+|---------|--------|---------|
+| „Request a Quote" | „Discuss System Requirements" | Products/Services allgemein |
+| „Talk to an Engineer" | „Speak With a Systems Engineer" | Header, CTA-Bands |
+| „Discuss Your Requirements" (Retrofit) | „Assess Retrofit Suitability" | Retrofit Service |
+| „Request Technical Details" (Thermal Vision) | „Request Technical Datasheet" | Thermal Vision |
+| „Learn More" (Service-Karten) | „View Service Scope" | Services Overview |
+
+### 6.3 Friction-Reducing Lines — Contact Page (3 Vorschläge)
+
+1. Über dem Formular: *„No commitment required. Share your project context and we'll respond with relevant technical information within two business days."*
+
+2. Neben dem Submit-Button: *„Your inquiry goes directly to our engineering team — not a sales department."*
+
+3. Unter den Qualifier-Dropdowns: *„These fields are optional. They help us prepare a more relevant initial response."*
+
+### 6.4 Trust Modules für Produkt- oder Service-Seiten (3 Vorschläge)
+
+1. **Engineering Credentials Strip** (für alle Produktseiten):
+> „Founded at Leibniz University Hannover · EXIST-funded · Engineering-led team with backgrounds in mechatronics, refrigeration systems, and control architecture"
+
+2. **Engagement Model Card** (für Custom TVAC):
+> „Typical project timeline: 3–5 months from requirements definition to commissioning · Single-source engineering across mechanical, thermal, vacuum, and control subsystems"
+
+3. **Integration Context** (für Thermal Vision):
+> „Designed for integration into existing TVAC infrastructure · Engineering and hardware procurement from a single source · Compatible with standard feedthrough and viewport interfaces"
+
+### 6.5 Bessere Inquiry Section Structure
+
+Statt eines generischen Formulars mit optionalen Dropdowns — eine kontextgesteuerte Einleitung:
+
+```text
+┌──────────────────────────────────────────────┐
+│  WHAT BRINGS YOU HERE?                       │
+│                                              │
+│  [ ] I need a new TVAC system               │
+│  [ ] I want to modernize existing equipment  │
+│  [ ] I need engineering support or services  │
+│  [ ] I'm exploring options / early stage     │
+│                                              │
+│  (Selection adjusts visible qualifier fields │
+│   and prefills context for the eng. team)    │
+└──────────────────────────────────────────────┘
+│                                              │
+│  [Standard form fields below]                │
+└──────────────────────────────────────────────┘
+```
+
+Dies reduziert kognitive Last und gibt dem Engineering-Team sofort den richtigen Kontext.
+
+---
+
+## 7. Analytics Gaps
+
+| Gap | Schwere | Status |
+|-----|---------|--------|
+| **Kein Analytics-Script erkannt** (kein GA, kein Plausible, kein Fathom, kein PostHog) | Kritisch | Nicht bestimmbar — kein Analytics-Import im Codebase sichtbar |
+| **Kein Event-Tracking für CTA-Clicks** | Kritisch | Beobachtet — keine onClick-Events mit Tracking |
+| **Kein Formular-Funnel-Tracking** (Start, Feldinteraktion, Submit, Erfolg) | Hoch | Beobachtet |
+| **Kein PDF-Download-Tracking** | Mittel | Beobachtet |
+| **Keine Scroll-Depth-Messung** | Mittel | Beobachtet |
+| **Keine Heatmap-Integration** | Niedrig | Beobachtet |
+| **Keine Conversion-Baseline** | Kritisch | Direkte Folge der fehlenden Analytics |
+
+**Empfehlung:** Datenschutzkonformes Analytics-Tool implementieren (Plausible oder Fathom — DSGVO-kompatibel, kein Cookie-Banner nötig). CTA-Clicks und Formular-Events als Custom Events tracken.
+
+---
+
+## 8. Final Verdict
+
+**Gesamtscore: 3.19 / 5.0**
+
+Deepvac.space ist eine visuell und strukturell überdurchschnittliche B2B-Engineering-Website für die Frühphase des Unternehmens. Die technische Sprache ist präzise, die Designsprache ist konsistent, und die Formular-Infrastruktur ist produktionsreif.
+
+Die drei größten Conversion-Hebel:
+
+1. **CTA-Architektur verbessern** (Quick Win, hoher Impact): Hero-CTAs einbauen, kontextspezifische CTA-Labels, Formular-Vorqualifizierung
+2. **Vertrauenslücke schließen** (strategisch, hoher Impact): References-Seite entweder befüllen oder entfernen, Engineering-Credentials auf Produktseiten
+3. **Messung starten** (Quick Win, kritisch): Ohne Analytics ist jede weitere CRO-Maßnahme nicht evaluierbar
+
+**Nicht beurteilbar ohne Daten:**
+- Actual Conversion Rate
+- Traffic-Quellen und -Volumen
+- Formular-Abbruchrate
+- Bounce-Rate pro Seite
+- Mobile vs. Desktop Conversion-Verteilung
+- Sprachverteilung EN/DE im Traffic
 
