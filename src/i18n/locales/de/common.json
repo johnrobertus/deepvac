@@ -33,6 +33,7 @@
   "buttons": {
     "requestQuote": "Angebot anfragen",
     "talkToEngineer": "Ingenieur kontaktieren",
+    "speakWithEngineer": "Mit einem Systemingenieur sprechen",
     "requestConsultation": "Technische Beratung anfragen",
     "exploreServices": "Engineering-Leistungen entdecken",
     "downloadPdf": "PDF herunterladen",

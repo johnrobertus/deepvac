@@ -1,6 +1,10 @@
 import { useEffect, useRef, useState, useCallback } from "react";
+import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Reveal } from "@/components/Reveal";
+import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/components/LanguageProvider";
+import { localizedPath } from "@/lib/routes";
 import existFundingHeroEn from "@/assets/exist-funding-hero-en.jpg";
 import existFundingHeroDe from "@/assets/exist-funding-hero-de.png";
 
@@ -15,6 +19,9 @@ const VIDEO_2_END_TRIM = 1;
 
 export function HeroSection() {
   const { t, i18n } = useTranslation("home");
+  const { t: tc } = useTranslation("common");
+  const { lang } = useLanguage();
+  const contactPath = localizedPath("/contact", lang);
   const [activeIndex, setActiveIndex] = useState(0);
   const [nextIndex, setNextIndex] = useState<number | null>(null);
   const [transitioning, setTransitioning] = useState(false);
@@ -177,7 +184,17 @@ export function HeroSection() {
                   {t("hero.description")}
                 </p>
               </Reveal>
-              <Reveal delay={200}>
+              <Reveal delay={150}>
+                <div className="flex flex-wrap gap-3 pt-2">
+                  <Button asChild size="lg" className="font-mono text-xs tracking-wide">
+                    <Link to={contactPath}>{tc("buttons.discussRequirements")}</Link>
+                  </Button>
+                  <Button asChild variant="outline" size="lg" className="font-mono text-xs tracking-wide border-sand/25 text-sand/80 hover:text-sand hover:border-sand/40 backdrop-blur-sm">
+                    <Link to={localizedPath("/products", lang)}>{tc("buttons.exploreProducts")}</Link>
+                  </Button>
+                </div>
+              </Reveal>
+              <Reveal delay={250}>
                 <div className="flex flex-wrap gap-3 pt-1">
                   {Array.isArray(cues) &&
                     cues.map((cue) => (

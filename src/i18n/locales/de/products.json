@@ -17,6 +17,13 @@
       "cta": "Konfiguration besprechen",
       "chips": ["Custom-Geometrie", "Schnittstellen-Engineering", "Vollintegration"]
     },
+    "thermalVision": {
+      "title": "Deepvac Thermal Vision",
+      "subtitle": "In-Situ-Thermalüberwachungssubsystem",
+      "description": "Druckfestes Infrarot-Kamerasystem für die Echtzeit-Thermalflächenkartierung in Thermovakuumkammern. Konzipiert für die Integration in neue und bestehende TVAC-Infrastruktur.",
+      "cta": "Thermal Vision entdecken",
+      "chips": ["IR-Kamerasystem", "Druckfest", "TVAC-Integration"]
+    },
     "configGuide": {
       "eyebrow": "Konfigurationsleitfaden",
       "title": "Standard-Plattform vs. Custom-Konfiguration",
