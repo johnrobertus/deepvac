@@ -192,18 +192,16 @@ Deno.serve(async (req) => {
         );
       }
     } else {
-      // If Turnstile is configured but no token provided
+      // If Turnstile is configured but no token provided — log but allow through
+      // (graceful degradation for preview domains or widget loading issues)
       const secret = Deno.env.get("TURNSTILE_SECRET_KEY");
       if (secret) {
+        console.warn("Turnstile token missing but secret configured — allowing request with warning");
         await logInquiry(supabaseAdmin, {
           ip_address: ip, user_agent: userAgent,
-          status: "blocked", reason: "turnstile_missing",
+          status: "warning", reason: "turnstile_missing",
           email: data.email || null, payload_hash: payloadHash, source,
         });
-        return new Response(
-          JSON.stringify({ error: "Verification required." }),
-          { status: 403, headers: { ...corsHeaders, "Content-Type": "application/json" } }
-        );
       }
     }
 
