@@ -177,12 +177,12 @@ export function HeroSection() {
         style={{ boxShadow: "inset 0 0 140px 42px hsl(0 0% 0% / 0.28)" }}
       />
 
-      <div className="relative z-20 flex h-full flex-col justify-end px-4 pb-12 pt-16 sm:px-6 md:pb-24 md:pt-40">
+      <div className="relative z-20 flex h-full flex-col justify-end px-4 pb-10 pt-14 sm:px-6 sm:pb-12 md:pb-24 md:pt-40">
         <div className="container max-w-7xl">
           <div className="flex items-end justify-between gap-8 md:items-center">
-            <div className="max-w-[56rem] space-y-5">
+            <div className="max-w-[56rem] space-y-3 sm:space-y-5">
               <Reveal>
-                <div className="space-y-4">
+                <div className="space-y-3 sm:space-y-4">
                   <span className="mono-label text-blue-light/90 tracking-[0.08em]">{t("hero.eyebrow")}</span>
 
                   <h1 className="max-w-[15ch] text-[1.7rem] font-medium leading-[0.98] tracking-[-0.02em] text-sand [text-wrap:balance] sm:text-3xl md:max-w-[14ch] md:text-5xl lg:max-w-[15ch] lg:text-[3.65rem] xl:max-w-[16ch]">
@@ -196,16 +196,16 @@ export function HeroSection() {
               </Reveal>
 
               <Reveal delay={150}>
-                <div className="flex flex-wrap gap-3 pt-2">
-                  <Button asChild size="lg" className="font-mono text-xs tracking-wide">
+                <div className="flex flex-wrap gap-2 pt-1 sm:gap-3 sm:pt-2">
+                  <Button asChild size="default" className="font-mono text-xs tracking-wide sm:h-12 sm:px-8 sm:text-base">
                     <Link to={contactPath}>{tc("buttons.discussRequirements")}</Link>
                   </Button>
 
                   <Button
                     asChild
                     variant="outline"
-                    size="lg"
-                    className="border-sand/25 font-mono text-xs tracking-wide text-sand/80 backdrop-blur-sm hover:border-sand/40 hover:text-sand"
+                    size="default"
+                    className="border-sand/25 font-mono text-xs tracking-wide text-sand/80 backdrop-blur-sm hover:border-sand/40 hover:text-sand sm:h-12 sm:px-8 sm:text-base"
                   >
                     <Link to={localizedPath("/products", lang)}>{tc("buttons.exploreProducts")}</Link>
                   </Button>
@@ -213,7 +213,7 @@ export function HeroSection() {
               </Reveal>
 
               <Reveal delay={250}>
-                <div className="flex flex-wrap gap-3 pt-1">
+                <div className="hidden flex-wrap gap-3 pt-1 sm:flex">
                   {Array.isArray(cues) &&
                     cues.map((cue) => (
                       <span
