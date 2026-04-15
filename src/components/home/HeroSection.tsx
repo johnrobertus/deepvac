@@ -1,6 +1,10 @@
 import { useEffect, useRef, useState, useCallback } from "react";
+import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Reveal } from "@/components/Reveal";
+import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/components/LanguageProvider";
+import { localizedPath } from "@/lib/routes";
 import existFundingHeroEn from "@/assets/exist-funding-hero-en.jpg";
 import existFundingHeroDe from "@/assets/exist-funding-hero-de.png";
 
@@ -15,6 +19,10 @@ const VIDEO_2_END_TRIM = 1;
 
 export function HeroSection() {
   const { t, i18n } = useTranslation("home");
+  const { t: tc } = useTranslation("common");
+  const { lang } = useLanguage();
+  const contactPath = localizedPath("/contact", lang);
+
   const [activeIndex, setActiveIndex] = useState(0);
   const [nextIndex, setNextIndex] = useState<number | null>(null);
   const [transitioning, setTransitioning] = useState(false);
@@ -53,34 +61,44 @@ export function HeroSection() {
     }, FADE_DURATION);
   }, []);
 
-  // Single timeupdate handler — never removed, checks every tick
-  const handleTimeUpdate = useCallback((e: Event) => {
-    const video = e.target as HTMLVideoElement;
-    const index = videoRefs.current.indexOf(video);
-    if (index !== 1) return; // only video 2 needs trimming
-    if (index !== activeIndexRef.current || transitioningRef.current) return;
-    if (video.duration > 0 && video.currentTime >= video.duration - VIDEO_2_END_TRIM) {
-      video.pause(); // prevent any further frames from rendering
+  const handleTimeUpdate = useCallback(
+    (e: Event) => {
+      const video = e.target as HTMLVideoElement;
+      const index = videoRefs.current.indexOf(video);
+
+      if (index !== 1) return;
+      if (index !== activeIndexRef.current || transitioningRef.current) return;
+
+      if (video.duration > 0 && video.currentTime >= video.duration - VIDEO_2_END_TRIM) {
+        video.pause();
+        advanceTo((index + 1) % slides.length);
+      }
+    },
+    [advanceTo],
+  );
+
+  const handleEnded = useCallback(
+    (e: Event) => {
+      const video = e.target as HTMLVideoElement;
+      const index = videoRefs.current.indexOf(video);
+
+      if (index !== activeIndexRef.current || transitioningRef.current) return;
+      if (index === 1) return;
+
       advanceTo((index + 1) % slides.length);
-    }
-  }, [advanceTo]);
+    },
+    [advanceTo],
+  );
 
-  const handleEnded = useCallback((e: Event) => {
-    const video = e.target as HTMLVideoElement;
-    const index = videoRefs.current.indexOf(video);
-    if (index !== activeIndexRef.current || transitioningRef.current) return;
-    if (index === 1) return; // video 2 handled by timeupdate
-    advanceTo((index + 1) % slides.length);
-  }, [advanceTo]);
-
-  // Attach persistent listeners once
   useEffect(() => {
     const videos = videoRefs.current;
+
     videos.forEach((video) => {
       if (!video) return;
       video.addEventListener("ended", handleEnded);
       video.addEventListener("timeupdate", handleTimeUpdate);
     });
+
     return () => {
       videos.forEach((video) => {
         if (!video) return;
@@ -90,7 +108,6 @@ export function HeroSection() {
     };
   }, [handleEnded, handleTimeUpdate]);
 
-  // Play first video on mount
   useEffect(() => {
     const firstVideo = videoRefs.current[0];
     if (firstVideo) {
@@ -99,7 +116,6 @@ export function HeroSection() {
     }
   }, []);
 
-  // Cleanup fade timer
   useEffect(() => {
     return () => {
       if (fadeTimerRef.current) window.clearTimeout(fadeTimerRef.current);
@@ -113,6 +129,7 @@ export function HeroSection() {
       {slides.map((slide, i) => {
         const isActive = i === activeIndex;
         const isNext = i === nextIndex;
+
         return (
           <div
             key={slide.video}
@@ -131,7 +148,9 @@ export function HeroSection() {
               loading={i === 0 ? "eager" : "lazy"}
             />
             <video
-              ref={(el) => { videoRefs.current[i] = el; }}
+              ref={(el) => {
+                videoRefs.current[i] = el;
+              }}
               src={slide.video}
               poster={slide.poster}
               muted
@@ -159,25 +178,41 @@ export function HeroSection() {
       />
 
       <div className="relative z-20 flex h-full flex-col justify-end px-4 pb-12 pt-16 sm:px-6 md:pb-24 md:pt-40">
-        <div className="container max-w-6xl">
-          <div className="flex items-end md:items-center justify-between gap-8">
-            <div className="max-w-3xl space-y-5">
+        <div className="container max-w-7xl">
+          <div className="flex items-end justify-between gap-8 md:items-center">
+            <div className="max-w-[56rem] space-y-5">
               <Reveal>
                 <div className="space-y-4">
-                  <span className="mono-label text-blue-light/90 tracking-[0.08em]">
-                    {t("hero.eyebrow")}
-                  </span>
-                  <h1 className="text-[1.7rem] font-medium leading-[1.04] tracking-tight text-sand sm:text-3xl md:text-5xl lg:text-[3.5rem]">
+                  <span className="mono-label text-blue-light/90 tracking-[0.08em]">{t("hero.eyebrow")}</span>
+
+                  <h1 className="max-w-[15ch] text-[1.7rem] font-medium leading-[0.98] tracking-[-0.02em] text-sand [text-wrap:balance] sm:text-3xl md:max-w-[14ch] md:text-5xl lg:max-w-[15ch] lg:text-[3.65rem] xl:max-w-[16ch]">
                     {t("hero.title")}
                   </h1>
                 </div>
               </Reveal>
+
               <Reveal delay={100}>
-                <p className="max-w-2xl text-sm leading-relaxed text-sand/72 md:text-base">
-                  {t("hero.description")}
-                </p>
+                <p className="max-w-2xl text-sm leading-relaxed text-sand/72 md:text-base">{t("hero.description")}</p>
               </Reveal>
-              <Reveal delay={200}>
+
+              <Reveal delay={150}>
+                <div className="flex flex-wrap gap-3 pt-2">
+                  <Button asChild size="lg" className="font-mono text-xs tracking-wide">
+                    <Link to={contactPath}>{tc("buttons.discussRequirements")}</Link>
+                  </Button>
+
+                  <Button
+                    asChild
+                    variant="outline"
+                    size="lg"
+                    className="border-sand/25 font-mono text-xs tracking-wide text-sand/80 backdrop-blur-sm hover:border-sand/40 hover:text-sand"
+                  >
+                    <Link to={localizedPath("/products", lang)}>{tc("buttons.exploreProducts")}</Link>
+                  </Button>
+                </div>
+              </Reveal>
+
+              <Reveal delay={250}>
                 <div className="flex flex-wrap gap-3 pt-1">
                   {Array.isArray(cues) &&
                     cues.map((cue) => (
@@ -193,17 +228,18 @@ export function HeroSection() {
               </Reveal>
             </div>
 
-            {/* Funding logo — right side, desktop only */}
-            <div className="hidden lg:flex items-center justify-center flex-shrink-0 w-[32%] max-w-[400px]">
+            {/* Funding logo, right side, desktop only */}
+            <div className="hidden lg:flex items-center justify-center flex-shrink-0 w-[36%] max-w-[470px]">
               <Reveal delay={300}>
-                <div className="rounded-2xl bg-white/[0.07] backdrop-blur-md border border-white/[0.08] px-7 py-5">
+                <div className="rounded-2xl border border-white/[0.08] bg-white/[0.07] px-8 py-6 backdrop-blur-md">
                   <img
                     src={i18n.language === "de" ? existFundingHeroDe : existFundingHeroEn}
-                    alt={i18n.language === "de"
-                      ? "Gefördert durch Bundesministerium für Wirtschaft und Energie, Europäische Union, EXIST"
-                      : "Supported by Federal Ministry for Economic Affairs and Energy, European Union, EXIST"
+                    alt={
+                      i18n.language === "de"
+                        ? "Gefördert durch Bundesministerium für Wirtschaft und Energie, Europäische Union, EXIST"
+                        : "Supported by Federal Ministry for Economic Affairs and Energy, European Union, EXIST"
                     }
-                    className="w-full h-auto object-contain"
+                    className="h-auto w-full object-contain"
                     loading="eager"
                   />
                 </div>
@@ -216,8 +252,7 @@ export function HeroSection() {
       <div
         className="absolute bottom-0 left-0 right-0 z-20 h-20 pointer-events-none"
         style={{
-          background:
-            "linear-gradient(to bottom, hsl(0 0% 0% / 0) 0%, hsl(var(--background)) 100%)",
+          background: "linear-gradient(to bottom, hsl(0 0% 0% / 0) 0%, hsl(var(--background)) 100%)",
         }}
       />
     </section>

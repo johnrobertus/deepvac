@@ -1,9 +1,15 @@
 {
   "hero": {
     "eyebrow": "THERMAL VACUUM SYSTEMS FOR AEROSPACE. ENGINEERED IN GERMANY.",
-    "title": "Thermal Vacuum Systems for Aerospace Qualification",
-    "description": "Deepvac develops modular and custom thermal vacuum systems for aerospace qualification, thermal cycling, and space environment simulation, combining high vacuum, precise thermal control, and engineering-led automation.",
-    "cues": ["MODULAR PLATFORMS", "CUSTOM TVAC SYSTEMS", "CONTROL & AUTOMATION", "RETROFIT & SERVICE"],
+    "title": "Thermovacuum systems & engineering for qualification, integration, and upgrade projects.",
+    "description": "Deepvac supplies modular TVAC platforms, custom chamber systems, control architecture, and retrofit support for teams building or upgrading test infrastructure.",
+    "cues": [
+      "MODULAR PLATFORMS",
+      "CUSTOM TVAC SYSTEMS",
+      "CONTROL & AUTOMATION",
+      "RETROFIT & SERVICE",
+      "TEST-AS-A-SERVICE"
+    ],
     "source": "Source: NASA"
   },
   "trustBar": {

@@ -17,6 +17,13 @@
       "cta": "Konfiguration besprechen",
       "chips": ["Custom-Geometrie", "Schnittstellen-Engineering", "Vollintegration"]
     },
+    "thermalVision": {
+      "title": "Deepvac Thermal Vision",
+      "subtitle": "In-Situ-Thermalüberwachungssubsystem",
+      "description": "Druckfestes Infrarot-Kamerasystem für die Echtzeit-Thermalflächenkartierung in Thermovakuumkammern. Konzipiert für die Integration in neue und bestehende TVAC-Infrastruktur.",
+      "cta": "Thermal Vision entdecken",
+      "chips": ["IR-Kamerasystem", "Druckfest", "TVAC-Integration"]
+    },
     "configGuide": {
       "eyebrow": "Konfigurationsleitfaden",
       "title": "Standard-Plattform vs. Custom-Konfiguration",
@@ -27,11 +34,31 @@
         "custom": "Custom TVAC"
       },
       "factors": [
-        { "label": "Testprofil", "standard": "Etablierte thermische und Vakuumanforderungen", "custom": "Anwendungsspezifische Druck-, Temperatur- oder Zyklusprofile" },
-        { "label": "Kammergeometrie", "standard": "Standard kubische oder zylindrische Kammervolumina", "custom": "Nicht-standardmäßige Abmessungen, Zugangsanforderungen oder Nutzlastgeometrien" },
-        { "label": "Durchführungen & Schnittstellen", "standard": "Vorkonfigurierte Portlayouts und Durchführungsoptionen", "custom": "Kundenspezifisches Schnittstellen-Engineering und spezialisierte Durchführungsintegration" },
-        { "label": "Instrumentierung", "standard": "Standard-Sensor- und Messkonfigurationen", "custom": "Anwendungsspezifische Instrumentierung und Datenerfassungsanforderungen" },
-        { "label": "Zeitrahmen", "standard": "Kürzere Lieferzeiten mit bewährten Designs", "custom": "Ingenieurgeführte Entwicklung mit projektspezifischen Meilensteinen" }
+        {
+          "label": "Testprofil",
+          "standard": "Etablierte thermische und Vakuumanforderungen",
+          "custom": "Anwendungsspezifische Druck-, Temperatur- oder Zyklusprofile"
+        },
+        {
+          "label": "Kammergeometrie",
+          "standard": "Standard kubische oder zylindrische Kammervolumina",
+          "custom": "Nicht-standardmäßige Abmessungen, Zugangsanforderungen oder Nutzlastgeometrien"
+        },
+        {
+          "label": "Durchführungen & Schnittstellen",
+          "standard": "Vorkonfigurierte Portlayouts und Durchführungsoptionen",
+          "custom": "Kundenspezifisches Schnittstellen-Engineering und spezialisierte Durchführungsintegration"
+        },
+        {
+          "label": "Instrumentierung",
+          "standard": "Standard-Sensor- und Messkonfigurationen",
+          "custom": "Anwendungsspezifische Instrumentierung und Datenerfassungsanforderungen"
+        },
+        {
+          "label": "Zeitrahmen",
+          "standard": "Kürzere Lieferzeiten mit bewährten Designs",
+          "custom": "Ingenieurgeführte Entwicklung mit projektspezifischen Meilensteinen"
+        }
       ]
     },
     "integrated": {
@@ -43,10 +70,22 @@
       "eyebrow": "FAQ",
       "title": "Häufig gestellte Fragen",
       "items": [
-        { "q": "Was unterscheidet eine Standardkammer von einer Custom-Konfiguration?", "a": "Kammern der Standard Serie verwenden vorkonstruierte Designs mit bewährten Architekturen und bieten kürzere Lieferzeiten sowie etablierte Leistungshüllkurven. Custom-TVAC-Systeme werden vom Konzept bis zur Inbetriebnahme um anwendungsspezifische Anforderungen konstruiert – einschließlich Geometrie, Thermalprofil, Instrumentierung und Schnittstellenbedingungen." },
-        { "q": "Können Standardkammern für spezifische Testanforderungen modifiziert werden?", "a": "Standard-Serie-Plattformen unterstützen eine Reihe von Konfigurationsoptionen innerhalb ihres Designrahmens. Für Anforderungen jenseits des Standard-Plattformumfangs bietet Deepvac kundenspezifisches Engineering zur Entwicklung anwendungsspezifischer Lösungen." },
-        { "q": "Welche Unterstützung bietet Deepvac nach der Kammerlieferung?", "a": "Deepvac bietet Lifecycle-Leistungen einschließlich vorbeugender Wartung, Reparatur, Retrofit und Modernisierung, Steuerungssystem-Upgrades und Subsystem-Integrationsunterstützung für alle Kammersysteme." },
-        { "q": "Bietet Deepvac neben Kammersystemen auch Prüfdienstleistungen an?", "a": "Ja. Deepvac bietet Thermovakuum-Prüfdienstleistungen einschließlich Testkampagnendurchführung, Datenerfassung und Engineering-Unterstützung für Qualifikations-, Validierungs- und Entwicklungsprogramme." }
+        {
+          "q": "Was unterscheidet eine Standardkammer von einer Custom-Konfiguration?",
+          "a": "Kammern der Standard Serie verwenden vorkonstruierte Designs mit bewährten Architekturen und bieten kürzere Lieferzeiten sowie etablierte Leistungshüllkurven. Custom-TVAC-Systeme werden vom Konzept bis zur Inbetriebnahme um anwendungsspezifische Anforderungen konstruiert – einschließlich Geometrie, Thermalprofil, Instrumentierung und Schnittstellenbedingungen."
+        },
+        {
+          "q": "Können Standardkammern für spezifische Testanforderungen modifiziert werden?",
+          "a": "Standard-Serie-Plattformen unterstützen eine Reihe von Konfigurationsoptionen innerhalb ihres Designrahmens. Für Anforderungen jenseits des Standard-Plattformumfangs bietet Deepvac kundenspezifisches Engineering zur Entwicklung anwendungsspezifischer Lösungen."
+        },
+        {
+          "q": "Welche Unterstützung bietet Deepvac nach der Kammerlieferung?",
+          "a": "Deepvac bietet Lifecycle-Leistungen einschließlich vorbeugender Wartung, Reparatur, Retrofit und Modernisierung, Steuerungssystem-Upgrades und Subsystem-Integrationsunterstützung für alle Kammersysteme."
+        },
+        {
+          "q": "Bietet Deepvac neben Kammersystemen auch Prüfdienstleistungen an?",
+          "a": "Ja. Deepvac bietet Thermovakuum-Prüfdienstleistungen einschließlich Testkampagnendurchführung, Datenerfassung und Engineering-Unterstützung für Qualifikations-, Validierungs- und Entwicklungsprogramme."
+        }
       ]
     },
     "cta": {
@@ -64,10 +103,22 @@
       "description": "Kompakte kubische Thermovakuumkammer-Plattformen für reproduzierbare Umweltsimulation, Subsystem-Validierung und Laborworkflows. Die T Serie kombiniert kontrollierte thermische und Vakuumbedingungen mit einer standardisierten Architektur für Forschungs- und Qualifikationsanwendungen.",
       "descriptionExtended": "Die kubische Kammergeometrie ermöglicht einfachen Nutzlastzugang, effiziente Innenraumnutzung und flexible Vorrichtungsmontage. Standardkonfigurationen unterstützen Vakuumleistung bis {{vacuum}} und thermischen Betrieb bis {{minTemp}}, abhängig vom gewählten Systemaufbau.",
       "features": [
-        { "label": "Kubische Geometrie", "detail": "Würfelförmiges Kammerlayout für einfachen Nutzlastzugang, effiziente Innenraumnutzung und flexible Vorrichtungsintegration." },
-        { "label": "Tieftemperaturfähigkeit", "detail": "Konfiguriert für thermischen Betrieb bis {{minTemp}}, abhängig von Systemkonfiguration und Testaufbau." },
-        { "label": "Enddruck", "detail": "Ausgelegt für Vakuumleistung bis {{vacuum}}, abhängig von Kammergröße und Pumpenpaket." },
-        { "label": "Steuerungsintegration", "detail": "Vorkonstruierte Steuerungssystem-Schnittstelle mit Datenerfassungs- und Automatisierungsunterstützung." }
+        {
+          "label": "Kubische Geometrie",
+          "detail": "Würfelförmiges Kammerlayout für einfachen Nutzlastzugang, effiziente Innenraumnutzung und flexible Vorrichtungsintegration."
+        },
+        {
+          "label": "Tieftemperaturfähigkeit",
+          "detail": "Konfiguriert für thermischen Betrieb bis {{minTemp}}, abhängig von Systemkonfiguration und Testaufbau."
+        },
+        {
+          "label": "Enddruck",
+          "detail": "Ausgelegt für Vakuumleistung bis {{vacuum}}, abhängig von Kammergröße und Pumpenpaket."
+        },
+        {
+          "label": "Steuerungsintegration",
+          "detail": "Vorkonstruierte Steuerungssystem-Schnittstelle mit Datenerfassungs- und Automatisierungsunterstützung."
+        }
       ]
     },
     "cSeries": {
@@ -76,10 +127,22 @@
       "description": "Zylindrische Thermovakuumkammer-Plattformen für reproduzierbare Umweltsimulation, Subsystem-Qualifikation und robusten Laborbetrieb. Die C Serie kombiniert kontrollierte thermische und Vakuumbedingungen mit einer standardisierten Architektur für Forschungs- und Qualifikationsanwendungen.",
       "descriptionExtended": "Die zylindrische Kammergeometrie unterstützt klassische Vakuumkammer-Layouts, effiziente Shroud-Integration und einen strukturell effizienten Formfaktor. Standardkonfigurationen unterstützen Vakuumleistung bis {{vacuum}} und thermischen Betrieb bis {{minTemp}}, abhängig vom gewählten Systemaufbau.",
       "features": [
-        { "label": "Zylindrische Geometrie", "detail": "Zylindrisches Kammerlayout für gleichmäßiges Radialdesign, effiziente Shroud-Integration und klassische Vakuumkammer-Konfigurationen." },
-        { "label": "Tieftemperaturfähigkeit", "detail": "Konfiguriert für thermischen Betrieb bis {{minTemp}}, abhängig von Systemkonfiguration und Testaufbau." },
-        { "label": "Enddruck", "detail": "Ausgelegt für Vakuumleistung bis {{vacuum}}, abhängig von Kammergröße und Pumpenpaket." },
-        { "label": "Steuerungsintegration", "detail": "Vorkonstruierte Steuerungssystem-Schnittstelle mit Datenerfassungs- und Automatisierungsunterstützung." }
+        {
+          "label": "Zylindrische Geometrie",
+          "detail": "Zylindrisches Kammerlayout für gleichmäßiges Radialdesign, effiziente Shroud-Integration und klassische Vakuumkammer-Konfigurationen."
+        },
+        {
+          "label": "Tieftemperaturfähigkeit",
+          "detail": "Konfiguriert für thermischen Betrieb bis {{minTemp}}, abhängig von Systemkonfiguration und Testaufbau."
+        },
+        {
+          "label": "Enddruck",
+          "detail": "Ausgelegt für Vakuumleistung bis {{vacuum}}, abhängig von Kammergröße und Pumpenpaket."
+        },
+        {
+          "label": "Steuerungsintegration",
+          "detail": "Vorkonstruierte Steuerungssystem-Schnittstelle mit Datenerfassungs- und Automatisierungsunterstützung."
+        }
       ]
     },
     "applicationFit": {
@@ -109,10 +172,22 @@
       "eyebrow": "FAQ",
       "title": "Fragen zur Standard Serie",
       "items": [
-        { "q": "Welche Kammergrößen sind in der Standard Serie verfügbar?", "a": "Die Standard Serie ist in kubischen und zylindrischen Kammerformaten über einen Bereich von Kammervolumina verfügbar. Spezifische Abmessungen werden entsprechend dem erforderlichen Testraum, der Nutzlastgröße und den Integrationsanforderungen ausgewählt." },
-        { "q": "Welches Vakuumniveau können Standard-Serie-Kammern erreichen?", "a": "Standard-Serie-Kammern sind für Vakuumleistung bis {{vacuum}} ausgelegt, abhängig von Kammervolumen, Pumpenkonfiguration und Anwendungsanforderungen." },
-        { "q": "Welche Optionen zur Temperaturregelung sind verfügbar?", "a": "Standard-Serie-Plattformen verfügen über integrierte thermische Shroud- und Plattensysteme für kontrollierte Heiz- und Kühlzyklen. Die Mindesttemperaturfähigkeit kann bis {{minTemp}} konfiguriert werden, abhängig von der gewählten Systemkonfiguration." },
-        { "q": "Wie werden Standard-Serie-Kammern geliefert und in Betrieb genommen?", "a": "Deepvac bietet vollständige Liefer-, Installations- und Inbetriebnahmeunterstützung einschließlich Systemintegration, Abnahmeprüfung und Bedienereinweisung." }
+        {
+          "q": "Welche Kammergrößen sind in der Standard Serie verfügbar?",
+          "a": "Die Standard Serie ist in kubischen und zylindrischen Kammerformaten über einen Bereich von Kammervolumina verfügbar. Spezifische Abmessungen werden entsprechend dem erforderlichen Testraum, der Nutzlastgröße und den Integrationsanforderungen ausgewählt."
+        },
+        {
+          "q": "Welches Vakuumniveau können Standard-Serie-Kammern erreichen?",
+          "a": "Standard-Serie-Kammern sind für Vakuumleistung bis {{vacuum}} ausgelegt, abhängig von Kammervolumen, Pumpenkonfiguration und Anwendungsanforderungen."
+        },
+        {
+          "q": "Welche Optionen zur Temperaturregelung sind verfügbar?",
+          "a": "Standard-Serie-Plattformen verfügen über integrierte thermische Shroud- und Plattensysteme für kontrollierte Heiz- und Kühlzyklen. Die Mindesttemperaturfähigkeit kann bis {{minTemp}} konfiguriert werden, abhängig von der gewählten Systemkonfiguration."
+        },
+        {
+          "q": "Wie werden Standard-Serie-Kammern geliefert und in Betrieb genommen?",
+          "a": "Deepvac bietet vollständige Liefer-, Installations- und Inbetriebnahmeunterstützung einschließlich Systemintegration, Abnahmeprüfung und Bedienereinweisung."
+        }
       ]
     },
     "cta": {
@@ -130,12 +205,30 @@
       "title": "Wenn Standard nicht ausreicht",
       "description": "Kundenspezifische Thermovakuumsysteme werden konstruiert, wenn Ihre Anwendung Fähigkeiten, Geometrien oder Integrationsanforderungen erfordert, die über den Rahmen standardisierter Kammerplattformen hinausgehen.",
       "items": [
-        { "title": "Nicht-standardmäßige Geometrien", "description": "Prüflinge, die Standard-Kammerabmessungen übersteigen oder spezialisierte Zugangs-, Ausrichtungs- oder Montagekonfigurationen erfordern." },
-        { "title": "Spezifische Thermalprofile", "description": "Anwendungen mit präzisen Temperaturbereichen, Rampenraten, Gleichmäßigkeitsanforderungen oder Mehrzonentemperaturregelung." },
-        { "title": "Komplexe Durchführungsanforderungen", "description": "Elektrische, optische, Fluid- oder mechanische Durchführungskonfigurationen, die über Standard-Portlayouts hinausgehen." },
-        { "title": "Kontaminationssensitive Prüfung", "description": "Hardware, die ausgasungsarme Umgebungen, saubere Schnittstellen und kontrollierte Materialverträglichkeit erfordert." },
-        { "title": "Spezialisierte Steuerungsarchitektur", "description": "Kundenspezifische Automatisierungslogik, erweiterte Datenerfassung oder Integration mit bestehenden Anlagensteuerungssystemen." },
-        { "title": "Subsystem- & Schnittstellenbedingungen", "description": "Integration mit bestehender Infrastruktur, spezifischen Versorgungsanschlüssen oder projektdefinierten mechanischen und elektrischen Schnittstellen." }
+        {
+          "title": "Nicht-standardmäßige Geometrien",
+          "description": "Prüflinge, die Standard-Kammerabmessungen übersteigen oder spezialisierte Zugangs-, Ausrichtungs- oder Montagekonfigurationen erfordern."
+        },
+        {
+          "title": "Spezifische Thermalprofile",
+          "description": "Anwendungen mit präzisen Temperaturbereichen, Rampenraten, Gleichmäßigkeitsanforderungen oder Mehrzonentemperaturregelung."
+        },
+        {
+          "title": "Komplexe Durchführungsanforderungen",
+          "description": "Elektrische, optische, Fluid- oder mechanische Durchführungskonfigurationen, die über Standard-Portlayouts hinausgehen."
+        },
+        {
+          "title": "Kontaminationssensitive Prüfung",
+          "description": "Hardware, die ausgasungsarme Umgebungen, saubere Schnittstellen und kontrollierte Materialverträglichkeit erfordert."
+        },
+        {
+          "title": "Spezialisierte Steuerungsarchitektur",
+          "description": "Kundenspezifische Automatisierungslogik, erweiterte Datenerfassung oder Integration mit bestehenden Anlagensteuerungssystemen."
+        },
+        {
+          "title": "Subsystem- & Schnittstellenbedingungen",
+          "description": "Integration mit bestehender Infrastruktur, spezifischen Versorgungsanschlüssen oder projektdefinierten mechanischen und elektrischen Schnittstellen."
+        }
       ]
     },
     "midCta": {
@@ -147,12 +240,60 @@
       "title": "Konfigurierbare Systemdimensionen",
       "description": "Jedes Custom-TVAC-System wird über mehrere Engineering-Dimensionen definiert, um Ihre spezifischen Anwendungsanforderungen abzubilden.",
       "items": [
-        { "label": "Kammergeometrie", "items": ["Kundenspezifische Abmessungen und Volumina", "Horizontale oder vertikale Ausrichtung", "Anwendungsspezifische Zugangsports", "Mehrtür- oder abnehmbare Endkappen-Konfigurationen"] },
-        { "label": "Thermalsystem", "items": ["Shroud- und Plattenauslegung", "Mehrzonen-Temperaturregelung", "Anwendungsspezifische Temperaturbereiche", "Ausheizfähigkeit"] },
-        { "label": "Vakuumarchitektur", "items": ["Pumpstrangkonfiguration", "Anwendungsabhängige Druckregime", "Leckdichtes Kammerdesign", "Saubere Vakuumumgebungen"] },
-        { "label": "Instrumentierung & Steuerung", "items": ["Sensor- und Messintegration", "Kundenspezifische Automatisierung und HMI", "Datenerfassungssysteme", "Fernüberwachungsfähigkeit"] },
-        { "label": "Durchführungen & Schnittstellen", "items": ["Elektrische und Signaldurchführungen", "Fluid- und Gasanschlüsse", "Optische Zugangsports", "Mechanische Bewegungsdurchführungen"] },
-        { "label": "Integration & Infrastruktur", "items": ["Anlagen-Schnittstellen-Engineering", "Versorgungs- und Serviceanschlüsse", "Vorrichtungs- und Montagesysteme", "Sicherheits- und Verriegelungsintegration"] }
+        {
+          "label": "Kammergeometrie",
+          "items": [
+            "Kundenspezifische Abmessungen und Volumina",
+            "Horizontale oder vertikale Ausrichtung",
+            "Anwendungsspezifische Zugangsports",
+            "Mehrtür- oder abnehmbare Endkappen-Konfigurationen"
+          ]
+        },
+        {
+          "label": "Thermalsystem",
+          "items": [
+            "Shroud- und Plattenauslegung",
+            "Mehrzonen-Temperaturregelung",
+            "Anwendungsspezifische Temperaturbereiche",
+            "Ausheizfähigkeit"
+          ]
+        },
+        {
+          "label": "Vakuumarchitektur",
+          "items": [
+            "Pumpstrangkonfiguration",
+            "Anwendungsabhängige Druckregime",
+            "Leckdichtes Kammerdesign",
+            "Saubere Vakuumumgebungen"
+          ]
+        },
+        {
+          "label": "Instrumentierung & Steuerung",
+          "items": [
+            "Sensor- und Messintegration",
+            "Kundenspezifische Automatisierung und HMI",
+            "Datenerfassungssysteme",
+            "Fernüberwachungsfähigkeit"
+          ]
+        },
+        {
+          "label": "Durchführungen & Schnittstellen",
+          "items": [
+            "Elektrische und Signaldurchführungen",
+            "Fluid- und Gasanschlüsse",
+            "Optische Zugangsports",
+            "Mechanische Bewegungsdurchführungen"
+          ]
+        },
+        {
+          "label": "Integration & Infrastruktur",
+          "items": [
+            "Anlagen-Schnittstellen-Engineering",
+            "Versorgungs- und Serviceanschlüsse",
+            "Vorrichtungs- und Montagesysteme",
+            "Sicherheits- und Verriegelungsintegration"
+          ]
+        }
       ]
     },
     "process": {
@@ -160,11 +301,31 @@
       "title": "Vom Konzept zur Inbetriebnahme",
       "description": "Deepvac unterstützt den gesamten Entwicklungslebenszyklus kundenspezifischer Thermovakuumsysteme – von der ersten Anforderungsbesprechung über Engineering, Fertigung und Installation.",
       "steps": [
-        { "step": "01", "title": "Anforderungsbesprechung", "description": "Technische Beratung zum Verständnis Ihrer Testanforderungen, Nutzlasteigenschaften, Betriebsbedingungen und Integrationskontext." },
-        { "step": "02", "title": "Konzept & Systemauslegung", "description": "Engineering-Konzeptentwicklung einschließlich Kammergeometrie, Thermalarchitektur, Vakuumdesign, Instrumentierung und Steuerungssystemspezifikation." },
-        { "step": "03", "title": "Detailengineering", "description": "Detaillierte mechanische, elektrische und Steuerungssystemkonstruktion mit Dokumentation, Schnittstellenspezifikationen und Design-Review-Meilensteinen." },
-        { "step": "04", "title": "Fertigung & Montage", "description": "Präzisionsfertigung, Subsystemmontage und Integration mit Qualitätskontrolle und Prüfung während des gesamten Bauprozesses." },
-        { "step": "05", "title": "Inbetriebnahme & Support", "description": "Lieferung, Installation, Abnahmeprüfung, Bedienereinweisung und Überleitung in Lifecycle-Support-Leistungen." }
+        {
+          "step": "01",
+          "title": "Anforderungsbesprechung",
+          "description": "Technische Beratung zum Verständnis Ihrer Testanforderungen, Nutzlasteigenschaften, Betriebsbedingungen und Integrationskontext."
+        },
+        {
+          "step": "02",
+          "title": "Konzept & Systemauslegung",
+          "description": "Engineering-Konzeptentwicklung einschließlich Kammergeometrie, Thermalarchitektur, Vakuumdesign, Instrumentierung und Steuerungssystemspezifikation."
+        },
+        {
+          "step": "03",
+          "title": "Detailengineering",
+          "description": "Detaillierte mechanische, elektrische und Steuerungssystemkonstruktion mit Dokumentation, Schnittstellenspezifikationen und Design-Review-Meilensteinen."
+        },
+        {
+          "step": "04",
+          "title": "Fertigung & Montage",
+          "description": "Präzisionsfertigung, Subsystemmontage und Integration mit Qualitätskontrolle und Prüfung während des gesamten Bauprozesses."
+        },
+        {
+          "step": "05",
+          "title": "Inbetriebnahme & Support",
+          "description": "Lieferung, Installation, Abnahmeprüfung, Bedienereinweisung und Überleitung in Lifecycle-Support-Leistungen."
+        }
       ]
     },
     "crossLinks": {
@@ -179,12 +340,30 @@
       "eyebrow": "FAQ",
       "title": "Fragen zu Custom TVAC",
       "items": [
-        { "q": "Wann sollte ich ein Custom-TVAC-System anstelle einer Standardplattform in Betracht ziehen?", "a": "Eine kundenspezifische Konfiguration ist angemessen, wenn Ihre Testanforderungen nicht-standardmäßige Kammerabmessungen, spezifische Thermalprofile, komplexe Durchführungs- oder Instrumentierungsanforderungen, kontaminationsempfindliche Hardware oder die Integration mit bestehender Anlageninfrastruktur umfassen, die den Rahmen der Standardplattform-Optionen übersteigen." },
-        { "q": "Welche Informationen benötigt Deepvac zur Entwicklung eines Custom-Systemkonzepts?", "a": "Eine produktive Erstbesprechung umfasst typischerweise Prüflingseigenschaften, erforderliche Druck- und Temperaturbereiche, thermische Zyklusanforderungen, Durchführungs- und Instrumentierungsbedürfnisse, Anlagenbedingungen und Projektzeitplan. Deepvac kann diesen Anforderungsdefinitionsprozess begleiten." },
-        { "q": "Wie lang ist die typische Projektlaufzeit für ein Custom-TVAC-Projekt?", "a": "Projektlaufzeiten hängen von Systemkomplexität, Komponentenlieferzeiten und Engineering-Umfang ab. Deepvac stellt projektspezifische Zeitpläne während der Konzeptentwicklungsphase bereit." },
-        { "q": "Liefert Deepvac Steuerungssysteme für Custom-Kammern?", "a": "Ja. Deepvac konstruiert und integriert kundenspezifische Steuerungsarchitekturen einschließlich Automatisierungslogik, Benutzerschnittstellen, Datenerfassung und Instrumentierungsintegration als Teil der Systemlieferung." },
-        { "q": "Kann Deepvac Custom-Kammern in bestehende Anlageninfrastruktur integrieren?", "a": "Ja. Schnittstellen-Engineering und Anlagenintegration sind Kernelemente des Custom-Kammerentwicklungsprozesses von Deepvac, einschließlich Versorgungsanschlüsse, Sicherheitssysteme und Steuerungssystem-Interoperabilität." },
-        { "q": "Welcher Lifecycle-Support ist für Custom-Systeme verfügbar?", "a": "Deepvac bietet umfassenden Lifecycle-Support einschließlich vorbeugender Wartung, Reparaturleistungen, Steuerungssystem-Upgrades, Retrofit und Modernisierung sowie Subsystem-Integration für alle kundenspezifisch konstruierten Systeme." }
+        {
+          "q": "Wann sollte ich ein Custom-TVAC-System anstelle einer Standardplattform in Betracht ziehen?",
+          "a": "Eine kundenspezifische Konfiguration ist angemessen, wenn Ihre Testanforderungen nicht-standardmäßige Kammerabmessungen, spezifische Thermalprofile, komplexe Durchführungs- oder Instrumentierungsanforderungen, kontaminationsempfindliche Hardware oder die Integration mit bestehender Anlageninfrastruktur umfassen, die den Rahmen der Standardplattform-Optionen übersteigen."
+        },
+        {
+          "q": "Welche Informationen benötigt Deepvac zur Entwicklung eines Custom-Systemkonzepts?",
+          "a": "Eine produktive Erstbesprechung umfasst typischerweise Prüflingseigenschaften, erforderliche Druck- und Temperaturbereiche, thermische Zyklusanforderungen, Durchführungs- und Instrumentierungsbedürfnisse, Anlagenbedingungen und Projektzeitplan. Deepvac kann diesen Anforderungsdefinitionsprozess begleiten."
+        },
+        {
+          "q": "Wie lang ist die typische Projektlaufzeit für ein Custom-TVAC-Projekt?",
+          "a": "Projektlaufzeiten hängen von Systemkomplexität, Komponentenlieferzeiten und Engineering-Umfang ab. Deepvac stellt projektspezifische Zeitpläne während der Konzeptentwicklungsphase bereit."
+        },
+        {
+          "q": "Liefert Deepvac Steuerungssysteme für Custom-Kammern?",
+          "a": "Ja. Deepvac konstruiert und integriert kundenspezifische Steuerungsarchitekturen einschließlich Automatisierungslogik, Benutzerschnittstellen, Datenerfassung und Instrumentierungsintegration als Teil der Systemlieferung."
+        },
+        {
+          "q": "Kann Deepvac Custom-Kammern in bestehende Anlageninfrastruktur integrieren?",
+          "a": "Ja. Schnittstellen-Engineering und Anlagenintegration sind Kernelemente des Custom-Kammerentwicklungsprozesses von Deepvac, einschließlich Versorgungsanschlüsse, Sicherheitssysteme und Steuerungssystem-Interoperabilität."
+        },
+        {
+          "q": "Welcher Lifecycle-Support ist für Custom-Systeme verfügbar?",
+          "a": "Deepvac bietet umfassenden Lifecycle-Support einschließlich vorbeugender Wartung, Reparaturleistungen, Steuerungssystem-Upgrades, Retrofit und Modernisierung sowie Subsystem-Integration für alle kundenspezifisch konstruierten Systeme."
+        }
       ]
     },
     "cta": {
@@ -200,29 +379,62 @@
   "thermalVision": {
     "eyebrow": "Produkte / Engineering-Systeme",
     "title": "Deepvac Thermal Vision",
-    "heroDescription": "Druckdichte Thermalkamera-Integration für Thermovakuumkammern. Kontinuierliche Infrarot-Bildgebung unter Hochvakuum- und Extremtemperaturbedingungen — mit aktivem Thermalmanagement, PID-geregeltem Betrieb und vollständigem Kammer-Integrations-Engineering.",
+    "heroDescription": "Druckdichte Integration von Thermalkameras für Thermovakuumkammern. Kontinuierliche Infrarotbildgebung unter Hochvakuum und extremen Temperaturbedingungen, mit aktivem Thermomanagement, Temperaturstabilisierung der Kamera und vollständiger Engineering-Integration in die Kammer.",
     "imageLabel": "Druckdichtes Kameragehäuse",
-    "splitLabel": "Systemübersicht",
+    "splitLabel": "Systemüberblick",
     "splitHeading": "Integrierte Thermografie für TVAC-Systeme",
-    "bodyParagraph1": "Handelsübliche Infrarotkameras können in Hochvakuum- und Extremtemperaturumgebungen nicht ohne gezielte Engineering-Maßnahmen betrieben werden. Deepvac Thermal Vision löst diese Einschränkung durch ein druckdichtes Gehäuse mit IR-transparentem Sichtfenster und ermöglicht die kontinuierliche, kalibrierte thermische Bildgebung von Prüflingen innerhalb der Thermovakuumkammer.",
-    "bodyParagraph2": "Das System umfasst einen aktiven Kühlkreislauf mit optionaler Heizung, der die Kamera unter allen Kammerbedingungen im spezifizierten Betriebstemperaturbereich hält. Ein PID-basierter Temperaturregler steuert die Thermalregulierung und kann in bestehende Kammersteuerungsarchitekturen integriert werden. Deepvac liefert das vollständige Integrations-Engineering — Gehäuseauslegung, Thermalmanagement, Viewport-Spezifikation und mechanische Schnittstelle — für Neuanlagen und Retrofit bestehender Systeme.",
+    "bodyParagraph1": "Handelsübliche Infrarotkameras können ohne spezifische technische Maßnahmen nicht direkt unter Hochvakuum und extremen Temperaturbedingungen betrieben werden. Deepvac Thermal Vision löst diese Herausforderung mit einem druckdichten Gehäuse und IR-transparentem Sichtfenster und ermöglicht dadurch eine kontinuierliche, kalibrierte thermische Bildgebung von Prüflingen innerhalb von Thermovakuumkammern.",
+    "bodyParagraph2": "Das System umfasst einen aktiven Kühlkreislauf mit optionaler Heizung, der die Kamera unter allen Kammerbedingungen innerhalb ihres spezifizierten Betriebstemperaturbereichs hält. Deepvac übernimmt das vollständige Integrationsengineering, einschließlich Gehäuseauslegung, Thermomanagement, Sichtfensterspezifikation und mechanischer Schnittstellenauslegung, sowohl für neue TVAC-Anlagen als auch für das Retrofit bestehender Systeme.",
     "chips": {
-      "environment": { "label": "Umgebung", "value": "Hochvakuum" },
-      "enclosure": { "label": "Kamerazone", "value": "Druckdicht" },
-      "compatibility": { "label": "Integration", "value": "Neubau & Retrofit" }
+      "environment": {
+        "label": "Umgebung",
+        "value": "Hochvakuum"
+      },
+      "enclosure": {
+        "label": "Kamerazone",
+        "value": "Druckdicht"
+      },
+      "compatibility": {
+        "label": "Integration",
+        "value": "Neuanlagen & Retrofit"
+      }
     },
     "specsLabel": "Technische Parameter",
     "specs": [
-      { "label": "Betriebsumgebung", "value": "Hochvakuum" },
-      { "label": "Kameraschutz", "value": "Druckdichtes Gehäuse" },
-      { "label": "Thermalmanagement", "value": "Aktive Kühlung / optionale Heizung" },
-      { "label": "Systemintegration", "value": "Neubau & Retrofit" }
+      {
+        "label": "Betriebsumgebung",
+        "value": "Hochvakuum"
+      },
+      {
+        "label": "Kameraschutz",
+        "value": "Druckdichtes Gehäuse"
+      },
+      {
+        "label": "Thermomanagement",
+        "value": "Temperaturstabilisierung"
+      },
+      {
+        "label": "Systemintegration",
+        "value": "Neuanlage & Retrofit"
+      }
     ],
     "features": [
-      { "label": "Druckdichtes Kameragehäuse", "detail": "Versiegeltes Edelstahlgehäuse mit IR-transparentem Sichtfenster. Hält atmosphärischen Druck um den Kamerasensor, während die Kammer unter Hochvakuum arbeitet." },
-      { "label": "Aktives Thermalmanagement", "detail": "Integrierter Kühlkreislauf mit optionaler Heizung hält die Kamera während aller thermischen Kammerzyklen im sicheren Betriebstemperaturbereich." },
-      { "label": "Temperaturkontrollierter Betrieb", "detail": "PID-basierte Temperaturregelung gewährleistet stabile Bildgebungsbedingungen. Regler-Schnittstelle zu bestehender Kammerautomatisierung und Datenerfassung." },
-      { "label": "Neubau- & Retrofit-Integration", "detail": "Mechanisches und thermisches Schnittstellen-Engineering für die Integration in neue TVAC-Anlagen oder Retrofit bestehender Thermovakuumkammern. Lieferung aus einer Hand." }
+      {
+        "label": "Druckdichtes Kameragehäuse",
+        "detail": "Abgedichtetes Edelstahlgehäuse mit IR-transparentem Sichtfenster. Hält atmosphärischen Druck im Bereich des Kamerasensors aufrecht, während die Kammer unter Hochvakuum betrieben wird."
+      },
+      {
+        "label": "Aktives Thermomanagement",
+        "detail": "Ein integrierter Kühlkreislauf mit optionaler Heizung hält die Kamera während des gesamten Kammerbetriebs innerhalb ihres spezifizierten Betriebstemperaturbereichs."
+      },
+      {
+        "label": "Stabile Infrarotbildgebung",
+        "detail": "Ermöglicht eine zuverlässige und kontinuierliche thermische Bildgebung unter Hochvakuum und extremen äußeren Temperaturbedingungen, indem eine kontrollierte lokale Umgebung für die Kamera aufrechterhalten wird."
+      },
+      {
+        "label": "Integration für Neuanlagen & Retrofit",
+        "detail": "Mechanische und thermische Schnittstellenauslegung für die Integration in neue TVAC-Anlagen oder die Nachrüstung bestehender Thermovakuumkammern. Lieferung aus einer Hand."
+      }
     ]
   }
 }

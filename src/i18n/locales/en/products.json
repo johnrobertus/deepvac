@@ -17,6 +17,13 @@
       "cta": "Discuss a Custom Configuration",
       "chips": ["Custom Geometry", "Interface Engineering", "Full Integration"]
     },
+    "thermalVision": {
+      "title": "Deepvac Thermal Vision",
+      "subtitle": "In-Situ Thermal Monitoring Subsystem",
+      "description": "Pressure-rated infrared camera system for real-time thermal surface mapping inside thermal vacuum chambers. Designed for integration into new and existing TVAC infrastructure.",
+      "cta": "Explore Thermal Vision",
+      "chips": ["IR Camera System", "Pressure-Rated", "TVAC Integration"]
+    },
     "configGuide": {
       "eyebrow": "Configuration Guide",
       "title": "Standard Platform vs. Custom Configuration",

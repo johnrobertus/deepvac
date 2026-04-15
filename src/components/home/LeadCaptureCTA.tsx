@@ -21,10 +21,10 @@ export function LeadCaptureCTA() {
             <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-gray">{t("home:leadCapture.description")}</p>
             <div className="flex flex-wrap justify-center gap-4 pt-4">
               <Button asChild size="lg" className="font-mono text-xs tracking-wide">
-                <Link to={contactPath}>{t("common:buttons.requestQuote")}</Link>
+                <Link to={contactPath}>{t("common:buttons.discussRequirements")}</Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="font-mono text-xs tracking-wide">
-                <Link to={contactPath}>{t("common:buttons.talkToEngineer")}</Link>
+                <Link to={contactPath}>{t("common:buttons.speakWithEngineer")}</Link>
               </Button>
             </div>
           </div>
