@@ -64,12 +64,6 @@ const ThermalVision = () => {
                 {tc("buttons.requestConsultation")}
               </Link>
             </Button>
-
-            <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
-              <Link to={localizedPath("/contact", lang)}>
-                {tc("buttons.requestTechnicalDetails")}
-              </Link>
-            </Button>
           </div>
 
           <div className="flex flex-wrap gap-2 pt-4">
