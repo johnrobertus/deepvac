@@ -7,7 +7,7 @@ import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/components/LanguageProvider";
 import { localizedPath } from "@/lib/routes";
 import tseriesImg from "@/assets/tseries-chamber.png";
-import cseriesImg from "@/assets/cseries-chamber.jpg";
+import cseriesImg from "@/assets/cseries-chamber.png";
 import customImg from "@/assets/custom-chamber.jpg";
 
 const productImages = [tseriesImg, cseriesImg, customImg];
