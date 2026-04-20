@@ -12,7 +12,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { useLanguage } from "@/components/LanguageProvider";
 import { getHreflangs, getCanonical, localizedPath } from "@/lib/routes";
 import tseriesImg from "@/assets/tseries-chamber.png";
-import cseriesImg from "@/assets/cseries-chamber.jpg";
+import cseriesImg from "@/assets/cseries-chamber.png";
 
 const vacuum = "< 1 × 10⁻⁶ mbar";
 const minTemp = "-190 °C";
@@ -81,8 +81,8 @@ const StandardSeries = () => {
         <Section>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <div>
-              <div className="relative rounded-lg overflow-hidden border border-gray/10">
-                <img src={tseriesImg} alt="Deepvac T Series Cubic Thermal Vacuum Chamber" className="w-full h-auto object-cover" loading="lazy" />
+              <div className="relative">
+                <img src={tseriesImg} alt="Deepvac T Series Cubic Thermal Vacuum Chamber" className="w-full h-auto object-contain" loading="lazy" />
                 <div className="absolute top-3 left-3 glass-overlay rounded-md px-3 py-1.5">
                   <span className="mono-label text-blue-light">T Series</span>
                 </div>
@@ -116,8 +116,8 @@ const StandardSeries = () => {
         <Section>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <div className="lg:order-2">
-              <div className="relative rounded-lg overflow-hidden border border-gray/10">
-                <img src={cseriesImg} alt="Deepvac C Series Cylindrical Thermal Vacuum Chamber" className="w-full h-auto object-cover" loading="lazy" />
+              <div className="relative">
+                <img src={cseriesImg} alt="Deepvac C Series Cylindrical Thermal Vacuum Chamber" className="w-full h-auto object-contain" loading="lazy" />
                 <div className="absolute top-3 right-3 glass-overlay rounded-md px-3 py-1.5">
                   <span className="mono-label text-blue-light">C Series</span>
                 </div>
