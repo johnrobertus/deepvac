@@ -15,7 +15,7 @@ import {
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { useLanguage } from "@/components/LanguageProvider";
 import { getHreflangs, getCanonical, localizedPath } from "@/lib/routes";
-import customImg from "@/assets/custom-chamber.jpg";
+import customImg from "@/assets/custom-chamber.png";
 
 const driverIcons = [
   <Ruler className="w-5 h-5" />,
