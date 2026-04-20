@@ -8,7 +8,7 @@ import { useLanguage } from "@/components/LanguageProvider";
 import { localizedPath } from "@/lib/routes";
 import tseriesImg from "@/assets/tseries-chamber.png";
 import cseriesImg from "@/assets/cseries-chamber.png";
-import customImg from "@/assets/custom-chamber.jpg";
+import customImg from "@/assets/custom-chamber.png";
 
 const productImages = [tseriesImg, cseriesImg, customImg];
 const productHrefs = ["/products/standard-series", "/products/standard-series", "/products/custom-tvac"];
