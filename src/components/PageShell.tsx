@@ -8,7 +8,7 @@ interface PageShellProps {
 
 export function PageShell({ children, className }: PageShellProps) {
   return (
-    <main className={cn("min-h-screen pt-20", className)}>
+    <main className={cn("min-h-screen pt-16", className)}>
       {children}
     </main>
   );
