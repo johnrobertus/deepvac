@@ -187,13 +187,34 @@ export function Header() {
     setOpenDropdown(null);
   }, [pathname]);
 
+  // Mobile menu scroll lock
+  useEffect(() => {
+    if (mobileOpen) {
+      const original = document.body.style.overflow;
+      document.body.style.overflow = "hidden";
+      return () => {
+        document.body.style.overflow = original;
+      };
+    }
+  }, [mobileOpen]);
+
   const homePath = localizedPath("/", lang);
   const contactPath = localizedPath("/contact", lang);
+
+  const langButtonClass = (active: boolean) =>
+    cn(
+      "rounded-sm px-1.5 py-0.5 font-mono text-xs uppercase tracking-wider transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+      active ? "text-sand" : "text-gray/50 hover:text-sand",
+    );
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-gray/10 bg-background/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/70">
       <div className="container flex h-16 max-w-6xl items-center justify-between px-6">
-        <Link to={homePath} className="flex items-center" aria-label="Deepvac home">
+        <Link
+          to={homePath}
+          className="flex items-center rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+          aria-label="Deepvac home"
+        >
           <img src={deepvacLogo} alt="Deepvac" className="h-7 w-auto" />
         </Link>
 
@@ -231,7 +252,7 @@ export function Header() {
                 key={link.href}
                 to={locHref}
                 className={cn(
-                  "text-sm transition-colors duration-200",
+                  "rounded-sm text-sm transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background",
                   active ? "text-sand" : "text-gray hover:text-sand",
                 )}
               >
@@ -242,35 +263,26 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-4 lg:flex">
-          {/* Language switcher */}
-          <div className="flex items-center gap-2">
+          {/* Language switcher — text toggle */}
+          <div className="flex items-center gap-1" role="group" aria-label="Language">
             <button
+              type="button"
               onClick={lang === "en" ? undefined : switchLanguage}
-              className={cn("rounded-sm transition-opacity", lang === "en" ? "opacity-100" : "opacity-40 hover:opacity-80")}
+              className={langButtonClass(lang === "en")}
               aria-label="English"
+              aria-pressed={lang === "en"}
             >
-              <svg viewBox="0 0 60 30" className="h-4 w-6 rounded-[2px]" xmlns="http://www.w3.org/2000/svg">
-                <clipPath id="a"><rect width="60" height="30"/></clipPath>
-                <g clipPath="url(#a)">
-                  <rect width="60" height="30" fill="#012169"/>
-                  <path d="M0 0L60 30M60 0L0 30" stroke="#fff" strokeWidth="6"/>
-                  <path d="M0 0L60 30M60 0L0 30" stroke="#C8102E" strokeWidth="4" clipPath="url(#a)"/>
-                  <path d="M30 0v30M0 15h60" stroke="#fff" strokeWidth="10"/>
-                  <path d="M30 0v30M0 15h60" stroke="#C8102E" strokeWidth="6"/>
-                </g>
-              </svg>
+              EN
             </button>
-            <span className="text-gray/30 text-xs">|</span>
+            <span className="text-gray/30 text-xs" aria-hidden="true">/</span>
             <button
+              type="button"
               onClick={lang === "de" ? undefined : switchLanguage}
-              className={cn("rounded-sm transition-opacity", lang === "de" ? "opacity-100" : "opacity-40 hover:opacity-80")}
+              className={langButtonClass(lang === "de")}
               aria-label="Deutsch"
+              aria-pressed={lang === "de"}
             >
-              <svg viewBox="0 0 5 3" className="h-4 w-6 rounded-[2px]" xmlns="http://www.w3.org/2000/svg">
-                <rect width="5" height="1" y="0" fill="#000"/>
-                <rect width="5" height="1" y="1" fill="#D00"/>
-                <rect width="5" height="1" y="2" fill="#FFCE00"/>
-              </svg>
+              DE
             </button>
           </div>
 
@@ -281,7 +293,7 @@ export function Header() {
 
         <button
           type="button"
-          className="text-sand lg:hidden"
+          className="rounded-sm text-sand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background lg:hidden"
           onClick={() => setMobileOpen((prev) => !prev)}
           aria-expanded={mobileOpen}
           aria-label={mobileOpen ? "Close navigation" : "Open navigation"}
@@ -291,7 +303,7 @@ export function Header() {
       </div>
 
       {mobileOpen && (
-        <div className="border-t border-gray/10 bg-surface lg:hidden animate-fade-in">
+        <div className="max-h-[calc(100vh-4rem)] overflow-y-auto border-t border-gray/10 bg-surface lg:hidden animate-fade-in">
           <div className="container max-w-6xl space-y-6 px-6 py-6">
             <MobileSection label={t("nav.products")} items={productsMenu} pathname={pathname} lang={lang} t={t} />
             <MobileSection label={t("nav.services")} items={servicesMenu} pathname={pathname} lang={lang} t={t} />
@@ -316,34 +328,26 @@ export function Header() {
               })}
             </div>
 
-            {/* Mobile language switcher */}
-            <div className="flex items-center gap-3 border-t border-gray/10 pt-4">
+            {/* Mobile language switcher — text toggle */}
+            <div className="flex items-center gap-2 border-t border-gray/10 pt-4" role="group" aria-label="Language">
               <button
+                type="button"
                 onClick={lang === "en" ? undefined : switchLanguage}
-                className={cn("rounded-sm transition-opacity", lang === "en" ? "opacity-100" : "opacity-40 hover:opacity-80")}
+                className={langButtonClass(lang === "en")}
                 aria-label="English"
+                aria-pressed={lang === "en"}
               >
-                <svg viewBox="0 0 60 30" className="h-5 w-7 rounded-[2px]" xmlns="http://www.w3.org/2000/svg">
-                  <clipPath id="mob-a"><rect width="60" height="30"/></clipPath>
-                  <g clipPath="url(#mob-a)">
-                    <rect width="60" height="30" fill="#012169"/>
-                    <path d="M0 0L60 30M60 0L0 30" stroke="#fff" strokeWidth="6"/>
-                    <path d="M0 0L60 30M60 0L0 30" stroke="#C8102E" strokeWidth="4"/>
-                    <path d="M30 0v30M0 15h60" stroke="#fff" strokeWidth="10"/>
-                    <path d="M30 0v30M0 15h60" stroke="#C8102E" strokeWidth="6"/>
-                  </g>
-                </svg>
+                EN
               </button>
+              <span className="text-gray/30 text-xs" aria-hidden="true">/</span>
               <button
+                type="button"
                 onClick={lang === "de" ? undefined : switchLanguage}
-                className={cn("rounded-sm transition-opacity", lang === "de" ? "opacity-100" : "opacity-40 hover:opacity-80")}
+                className={langButtonClass(lang === "de")}
                 aria-label="Deutsch"
+                aria-pressed={lang === "de"}
               >
-                <svg viewBox="0 0 5 3" className="h-5 w-7 rounded-[2px]" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="5" height="1" y="0" fill="#000"/>
-                  <rect width="5" height="1" y="1" fill="#D00"/>
-                  <rect width="5" height="1" y="2" fill="#FFCE00"/>
-                </svg>
+                DE
               </button>
             </div>
 

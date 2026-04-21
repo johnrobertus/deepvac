@@ -9,16 +9,13 @@ import { ServicesSection } from "@/components/home/ServicesSection";
 import { WhyDeepvacSection } from "@/components/home/WhyDeepvacSection";
 import { TeamSection } from "@/components/home/TeamSection";
 import { CataloguesSection } from "@/components/home/CataloguesSection";
-import { ReferencesSection } from "@/components/home/ReferencesSection";
-import { LeadCaptureCTA } from "@/components/home/LeadCaptureCTA";
 import { ContactSection } from "@/components/home/ContactSection";
-import { FundingSection } from "@/components/home/FundingSection";
 
 const Index = () => {
   return (
     <Layout>
       <PageShell className="pt-0">
-        {/* S1: Hero */}
+        {/* S1: Hero (includes integrated EXIST funding panel) */}
         <HeroSection />
 
         {/* S2: Trust Bar */}
@@ -42,7 +39,7 @@ const Index = () => {
         {/* S6: Services */}
         <ServicesSection />
 
-        {/* S7: Why DEEPVAC */}
+        {/* S7: Why Deepvac */}
         <WhyDeepvacSection />
 
         {/* Divider */}
@@ -54,20 +51,8 @@ const Index = () => {
         {/* S9: Catalogues */}
         <CataloguesSection />
 
-        {/* S10: References */}
-        <ReferencesSection />
-
-        {/* S11: Lead Capture CTA */}
-        <LeadCaptureCTA />
-
-        {/* Divider */}
-        <div className="section-divider" />
-
-        {/* S12: Contact */}
+        {/* S10: Contact (single conversion block — combined CTA + form) */}
         <ContactSection />
-
-        {/* S13: Funding */}
-        <FundingSection />
       </PageShell>
     </Layout>
   );
