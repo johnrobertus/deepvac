@@ -19,14 +19,14 @@ function FormField({
 }) {
   return (
     <div className="space-y-2">
-      <label className="mono-label">
+      <label className="block text-[13px] font-medium text-sand">
         {label}
-        {required && <span className="text-blue ml-1">*</span>}
+        {required && <span className="text-blue ml-1" aria-hidden="true">*</span>}
       </label>
       <input
         type={type} required={required} value={value}
         onChange={(e) => onChange(e.target.value)}
-        className={`w-full bg-background border rounded-sm px-4 py-3 text-sm text-sand placeholder:text-gray/30 focus:outline-none focus:border-blue/40 focus:ring-1 focus:ring-blue/20 transition-all duration-200 ${error ? "border-red-400/60" : "border-gray/15"}`}
+        className={`w-full bg-background border rounded-sm px-4 py-3 text-sm text-sand placeholder:text-gray/50 focus:outline-none focus:border-blue/50 focus:ring-1 focus:ring-blue/30 transition-all duration-200 ${error ? "border-red-400/60" : "border-gray/20"}`}
         placeholder={placeholder}
         aria-invalid={!!error}
       />
@@ -184,11 +184,11 @@ export function ContactSection() {
               <FormField label={t("form.phoneNumber")} placeholder={t("form.placeholders.phone")} type="tel" value={form.phone} onChange={set("phone")} />
               <FormField label={t("form.projectApplication")} placeholder={t("form.placeholders.project")} value={form.project} onChange={set("project")} />
               <div className="space-y-2">
-                <label className="mono-label">{t("form.message")}</label>
+                <label className="block text-[13px] font-medium text-sand">{t("form.message")}</label>
                 <textarea
                   value={form.message}
                   onChange={(e) => set("message")(e.target.value)}
-                  className={`w-full bg-background border rounded-sm px-4 py-3 text-sm text-sand placeholder:text-gray/30 focus:outline-none focus:border-blue/40 focus:ring-1 focus:ring-blue/20 transition-all duration-200 min-h-[100px] resize-y ${validationErrors.message ? "border-red-400/60" : "border-gray/15"}`}
+                  className={`w-full bg-background border rounded-sm px-4 py-3 text-sm text-sand placeholder:text-gray/50 focus:outline-none focus:border-blue/50 focus:ring-1 focus:ring-blue/30 transition-all duration-200 min-h-[100px] resize-y ${validationErrors.message ? "border-red-400/60" : "border-gray/20"}`}
                   placeholder={t("form.placeholders.message")}
                   aria-invalid={!!validationErrors.message}
                 />
@@ -204,14 +204,14 @@ export function ContactSection() {
 
               <label className="flex items-start gap-3 cursor-pointer group">
                 <input type="checkbox" checked={consent} onChange={(e) => setConsent(e.target.checked)} className="mt-0.5 w-4 h-4 accent-blue" />
-                <span className="text-xs text-gray/60 leading-relaxed group-hover:text-gray/80 transition-colors">{t("form.consentText")}</span>
+                <span className="text-xs text-gray leading-relaxed group-hover:text-sand transition-colors">{t("form.consentText")}</span>
               </label>
 
               <div className="flex items-center gap-4">
                 <Button size="lg" className="font-mono text-xs tracking-wide" disabled={sending}>
                   {sending ? (<><Loader2 className="w-4 h-4 mr-2 animate-spin" /> {t("buttons.sending")}</>) : t("buttons.sendInquiry")}
                 </Button>
-                <p className="text-[10px] text-gray/40 leading-snug max-w-[200px]">{t("form.confidentialNote")}</p>
+                <p className="text-[11px] text-gray/80 leading-snug max-w-[220px]">{t("form.confidentialNote")}</p>
               </div>
             </form>
           </Reveal>
