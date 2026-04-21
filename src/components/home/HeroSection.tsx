@@ -179,77 +179,73 @@ export function HeroSection() {
 
       <div className="relative z-20 flex h-full flex-col justify-end px-4 pb-10 pt-14 sm:px-6 sm:pb-12 md:pb-24 md:pt-40">
         <div className="container max-w-6xl">
-          <div className="max-w-[56rem] space-y-3 sm:space-y-5">
-            <Reveal>
-              <div className="space-y-3 sm:space-y-4">
-                <span className="mono-label text-blue-light/90 tracking-[0.08em]">{t("hero.eyebrow")}</span>
+          <div className="flex items-end justify-between gap-8 md:items-center">
+            <div className="max-w-[56rem] space-y-3 sm:space-y-5">
+              <Reveal>
+                <div className="space-y-3 sm:space-y-4">
+                  <span className="mono-label text-blue-light/90 tracking-[0.08em]">{t("hero.eyebrow")}</span>
 
-                <h1 className="max-w-[15ch] text-[1.7rem] font-medium leading-[0.98] tracking-[-0.02em] text-sand [text-wrap:balance] sm:text-3xl md:max-w-[14ch] md:text-5xl lg:max-w-[15ch] lg:text-[3.65rem] xl:max-w-[16ch]">
-                  {t("hero.title")}
-                </h1>
-              </div>
-            </Reveal>
+                  <h1 className="max-w-[15ch] text-[1.7rem] font-medium leading-[0.98] tracking-[-0.02em] text-sand [text-wrap:balance] sm:text-3xl md:max-w-[14ch] md:text-5xl lg:max-w-[15ch] lg:text-[3.65rem] xl:max-w-[16ch]">
+                    {t("hero.title")}
+                  </h1>
+                </div>
+              </Reveal>
 
-            <Reveal delay={100}>
-              <p className="max-w-2xl text-sm leading-relaxed text-sand/72 md:text-base">{t("hero.description")}</p>
-            </Reveal>
+              <Reveal delay={100}>
+                <p className="max-w-2xl text-sm leading-relaxed text-sand/72 md:text-base">{t("hero.description")}</p>
+              </Reveal>
 
-            <Reveal delay={150}>
-              <div className="flex flex-wrap gap-2 pt-1 sm:gap-3 sm:pt-2">
-                <Button asChild size="default" className="font-mono text-xs tracking-wide sm:h-12 sm:px-8 sm:text-base">
-                  <Link to={contactPath}>{tc("buttons.discussRequirements")}</Link>
-                </Button>
+              <Reveal delay={150}>
+                <div className="flex flex-wrap gap-2 pt-1 sm:gap-3 sm:pt-2">
+                  <Button asChild size="default" className="font-mono text-xs tracking-wide sm:h-12 sm:px-8 sm:text-base">
+                    <Link to={contactPath}>{tc("buttons.discussRequirements")}</Link>
+                  </Button>
 
-                <Button
-                  asChild
-                  variant="outline"
-                  size="default"
-                  className="border-sand/25 font-mono text-xs tracking-wide text-sand/80 backdrop-blur-sm hover:border-sand/40 hover:text-sand sm:h-12 sm:px-8 sm:text-base"
-                >
-                  <Link to={localizedPath("/products", lang)}>{tc("buttons.exploreProducts")}</Link>
-                </Button>
-              </div>
-            </Reveal>
+                  <Button
+                    asChild
+                    variant="outline"
+                    size="default"
+                    className="border-sand/25 font-mono text-xs tracking-wide text-sand/80 backdrop-blur-sm hover:border-sand/40 hover:text-sand sm:h-12 sm:px-8 sm:text-base"
+                  >
+                    <Link to={localizedPath("/products", lang)}>{tc("buttons.exploreProducts")}</Link>
+                  </Button>
+                </div>
+              </Reveal>
 
-            <Reveal delay={250}>
-              <div className="flex flex-wrap gap-2 pt-1 sm:gap-3">
-                {Array.isArray(cues) &&
-                  cues.map((cue) => (
-                    <span
-                      key={cue}
-                      className="inline-flex items-center gap-1.5 rounded-sm border border-sand/20 bg-background/30 px-2.5 py-1 font-mono text-[10px] uppercase tracking-widest text-sand/75 backdrop-blur-sm sm:px-3 sm:py-1.5 sm:text-[11px]"
-                    >
-                      <span className="h-1.5 w-1.5 rounded-full bg-blue/70" />
-                      {cue}
-                    </span>
-                  ))}
-              </div>
-            </Reveal>
-          </div>
-        </div>
-      </div>
-
-      {/* Funding strip — integrated low-key bottom-left, above background fade */}
-      <div className="absolute bottom-6 left-0 right-0 z-30 hidden px-6 md:block">
-        <div className="container max-w-6xl">
-          <Reveal delay={300}>
-            <div className="flex justify-end">
-              <div className="inline-flex items-center gap-3 rounded-md border border-sand/15 bg-background/45 px-3 py-2 backdrop-blur-md">
-                <span className="mono-label text-sand/55 hidden lg:inline">{t("funding.eyebrow")}</span>
-                <span className="hidden h-3 w-px bg-sand/20 lg:inline-block" />
-                <img
-                  src={i18n.language === "de" ? existFundingHeroDe : existFundingHeroEn}
-                  alt={
-                    i18n.language === "de"
-                      ? "Gefördert durch Bundesministerium für Wirtschaft und Energie, Europäische Union, EXIST"
-                      : "Supported by Federal Ministry for Economic Affairs and Energy, European Union, EXIST"
-                  }
-                  className="h-7 w-auto object-contain opacity-90"
-                  loading="eager"
-                />
-              </div>
+              <Reveal delay={250}>
+                <div className="flex flex-wrap gap-2 pt-1 sm:gap-3">
+                  {Array.isArray(cues) &&
+                    cues.map((cue) => (
+                      <span
+                        key={cue}
+                        className="inline-flex items-center gap-1.5 rounded-sm border border-sand/20 bg-background/30 px-2.5 py-1 font-mono text-[10px] uppercase tracking-widest text-sand/75 backdrop-blur-sm sm:px-3 sm:py-1.5 sm:text-[11px]"
+                      >
+                        <span className="h-1.5 w-1.5 rounded-full bg-blue/70" />
+                        {cue}
+                      </span>
+                    ))}
+                </div>
+              </Reveal>
             </div>
-          </Reveal>
+
+            {/* Funding logo, right side, desktop only */}
+            <div className="hidden lg:flex items-center justify-center flex-shrink-0 w-[36%] max-w-[470px]">
+              <Reveal delay={300}>
+                <div className="rounded-2xl border border-white/[0.08] bg-white/[0.07] px-8 py-6 backdrop-blur-md">
+                  <img
+                    src={i18n.language === "de" ? existFundingHeroDe : existFundingHeroEn}
+                    alt={
+                      i18n.language === "de"
+                        ? "Gefördert durch Bundesministerium für Wirtschaft und Energie, Europäische Union, EXIST"
+                        : "Supported by Federal Ministry for Economic Affairs and Energy, European Union, EXIST"
+                    }
+                    className="h-auto w-full object-contain"
+                    loading="eager"
+                  />
+                </div>
+              </Reveal>
+            </div>
+          </div>
         </div>
       </div>
 
