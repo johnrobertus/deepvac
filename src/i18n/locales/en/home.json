@@ -14,10 +14,10 @@
   },
   "trustBar": {
     "items": [
-      "Built for demanding aerospace and laboratory test environments",
-      "Designed for repeatable thermal vacuum workflows",
-      "Configured for geometry, interfaces, and test profiles",
-      "Supported through retrofit, service, and subsystem integration"
+      { "label": "Environment", "text": "Built for demanding aerospace and laboratory test environments" },
+      { "label": "Methodology", "text": "Designed for repeatable thermal vacuum workflows" },
+      { "label": "Configuration", "text": "Configured for geometry, interfaces, and test profiles" },
+      { "label": "Lifecycle", "text": "Supported through retrofit, service, and subsystem integration" }
     ]
   },
   "capabilities": {
