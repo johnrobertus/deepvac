@@ -8,10 +8,10 @@
   },
   "trustBar": {
     "items": [
-      "Konzipiert für anspruchsvolle Raumfahrt- und Laborumgebungen",
-      "Ausgelegt für reproduzierbare Thermovakuum-Workflows",
-      "Konfigurierbar für Geometrie, Schnittstellen und Testprofile",
-      "Unterstützt durch Retrofit, Service und Subsystem-Integration"
+      { "label": "Umgebung", "text": "Konzipiert für anspruchsvolle Raumfahrt- und Laborumgebungen" },
+      { "label": "Methodik", "text": "Ausgelegt für reproduzierbare Thermovakuum-Workflows" },
+      { "label": "Konfiguration", "text": "Konfigurierbar für Geometrie, Schnittstellen und Testprofile" },
+      { "label": "Lebenszyklus", "text": "Unterstützt durch Retrofit, Service und Subsystem-Integration" }
     ]
   },
   "capabilities": {
