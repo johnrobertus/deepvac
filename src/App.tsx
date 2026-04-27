@@ -55,7 +55,7 @@ const App = () => (
               <Route path="/products/standard-series" element={<StandardSeries />} />
               <Route path="/products/custom-tvac" element={<CustomTVAC />} />
               <Route path="/products/thermal-vision" element={<ThermalVision />} />
-              <Route path="/products/twin-qcm" element={<Products />} />
+              {/* /products/twin-qcm route removed — page not yet built */}
               <Route path="/services" element={<Services />} />
               <Route path="/services/testing-services" element={<TestingServices />} />
               <Route path="/services/control-systems-design" element={<ControlSystemsDesign />} />

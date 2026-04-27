@@ -46,7 +46,7 @@ export function ProductPortfolioSection() {
                       <img
                         src={productImages[i]}
                         alt={`${t(`${prefix}.title`)}, ${t(`${prefix}.subtitle`)}`}
-                        className="h-full max-h-[400px] w-full object-contain p-4 transition-transform duration-500 group-hover:scale-[1.02] lg:max-h-[420px]"
+                        className="h-full min-h-[360px] w-full object-contain p-2 transition-transform duration-500 group-hover:scale-[1.02] lg:min-h-[480px] lg:max-h-[560px]"
                         loading="lazy"
                       />
                       <div className="absolute bottom-3 left-3 flex flex-wrap gap-1.5">

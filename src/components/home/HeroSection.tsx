@@ -178,7 +178,7 @@ export function HeroSection() {
       />
 
       <div className="relative z-20 flex h-full flex-col justify-end px-4 pb-10 pt-14 sm:px-6 sm:pb-12 md:pb-24 md:pt-40">
-        <div className="container max-w-7xl">
+        <div className="container max-w-6xl">
           <div className="flex items-end justify-between gap-8 md:items-center">
             <div className="max-w-[56rem] space-y-3 sm:space-y-5">
               <Reveal>
@@ -213,12 +213,12 @@ export function HeroSection() {
               </Reveal>
 
               <Reveal delay={250}>
-                <div className="hidden flex-wrap gap-3 pt-1 sm:flex">
+                <div className="flex flex-wrap gap-2 pt-1 sm:gap-3">
                   {Array.isArray(cues) &&
                     cues.map((cue) => (
                       <span
                         key={cue}
-                        className="inline-flex items-center gap-1.5 rounded-sm border border-sand/20 bg-background/30 px-3 py-1.5 font-mono text-[11px] uppercase tracking-widest text-sand/75 backdrop-blur-sm"
+                        className="inline-flex items-center gap-1.5 rounded-sm border border-sand/20 bg-background/30 px-2.5 py-1 font-mono text-[10px] uppercase tracking-widest text-sand/75 backdrop-blur-sm sm:px-3 sm:py-1.5 sm:text-[11px]"
                       >
                         <span className="h-1.5 w-1.5 rounded-full bg-blue/70" />
                         {cue}
