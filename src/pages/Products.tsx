@@ -12,7 +12,7 @@ import { useLanguage } from "@/components/LanguageProvider";
 import { getHreflangs, getCanonical, localizedPath } from "@/lib/routes";
 import tseriesImg from "@/assets/tseries-chamber.png";
 import cseriesImg from "@/assets/cseries-chamber.png";
-import customImg from "@/assets/custom-chamber.jpg";
+import customImg from "@/assets/custom-chamber.png";
 import thermalVisionImg from "@/assets/thermal-vision-product.jpg";
 
 const Products = () => {
