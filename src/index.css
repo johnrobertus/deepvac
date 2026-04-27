@@ -79,6 +79,7 @@
     -moz-osx-font-smoothing: grayscale;
     scroll-behavior: smooth;
     overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
   }
 
   img, video, iframe {
@@ -89,6 +90,19 @@
   body {
     @apply bg-background text-foreground font-sans;
     overflow-x: hidden;
+  }
+
+  /* Premium, consistent focus ring for all interactive elements */
+  a:focus-visible,
+  button:focus-visible,
+  [role="button"]:focus-visible,
+  [tabindex="0"]:focus-visible,
+  summary:focus-visible {
+    outline: none;
+    box-shadow:
+      0 0 0 2px hsl(var(--background)),
+      0 0 0 4px hsl(var(--blue) / 0.55);
+    border-radius: 2px;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -231,5 +245,6 @@
     }
     .bento-card:hover { transform: none; }
     .media-frame img { transform: none !important; }
+    button:hover, a:hover { transform: none !important; }
   }
 }
