@@ -4,24 +4,24 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-normal text-center text-sm font-medium ring-offset-background transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 max-w-full",
+  "inline-flex items-center justify-center gap-2 whitespace-normal text-center text-sm font-medium ring-offset-background transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 [&_svg]:transition-transform [&_svg]:duration-300 max-w-full",
   {
     variants: {
       variant: {
         default:
-          "bg-primary text-primary-foreground rounded-sm hover:bg-blue-light hover:shadow-[0_0_16px_-4px_hsl(193_49%_72%/0.4)] active:scale-[0.98]",
+          "bg-primary text-primary-foreground rounded-sm shadow-[0_0_0_0_hsl(193_49%_72%/0)] hover:bg-blue-light hover:shadow-[0_0_22px_-4px_hsl(193_49%_72%/0.55)] hover:[&_svg]:translate-x-0.5 active:scale-[0.98] active:shadow-[0_0_10px_-4px_hsl(193_49%_72%/0.45)]",
         destructive:
-          "bg-destructive text-destructive-foreground rounded-sm hover:bg-destructive/90",
+          "bg-destructive text-destructive-foreground rounded-sm hover:bg-destructive/90 active:scale-[0.98]",
         outline:
-          "border border-gray/40 text-sand rounded-sm hover:bg-gray/10 hover:border-gray/60 active:scale-[0.98]",
+          "border border-gray/40 text-sand rounded-sm hover:bg-gray/10 hover:border-blue/50 hover:text-sand hover:shadow-[0_0_18px_-6px_hsl(193_49%_72%/0.35)] hover:[&_svg]:translate-x-0.5 active:scale-[0.98]",
         secondary:
-          "border border-gray/40 text-sand rounded-sm hover:bg-gray/10",
+          "border border-gray/40 text-sand rounded-sm hover:bg-gray/10 hover:border-gray/60 active:scale-[0.98]",
         ghost:
-          "text-sand hover:bg-surface-raised rounded-sm",
+          "text-sand rounded-sm hover:bg-surface-raised hover:text-sand active:scale-[0.98]",
         link:
-          "text-blue underline-offset-4 hover:underline font-mono",
+          "text-blue underline-offset-4 hover:underline hover:text-blue-light font-mono",
         tertiary:
-          "text-blue font-mono text-sm hover:underline underline-offset-4 p-0 h-auto",
+          "text-blue font-mono text-sm hover:text-blue-light hover:underline underline-offset-4 p-0 h-auto hover:[&_svg]:translate-x-0.5",
       },
       size: {
         default: "h-10 px-5 py-2",
