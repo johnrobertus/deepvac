@@ -59,13 +59,13 @@ export function Footer() {
                 </address>
               </div>
 
-              <a href="tel:+4915783027099" className="flex items-center gap-3 transition-colors hover:text-sand">
-                <Phone className="h-4 w-4 shrink-0 text-blue" />
+              <a href="tel:+4915783027099" className="group flex items-center gap-3 transition-colors duration-300 hover:text-sand">
+                <Phone className="h-4 w-4 shrink-0 text-blue transition-colors duration-300 group-hover:text-blue-light" />
                 <span>+49 157 830 270 99</span>
               </a>
 
-              <a href="mailto:info@deepvac.space" className="flex items-center gap-3 transition-colors hover:text-sand">
-                <Mail className="h-4 w-4 shrink-0 text-blue" />
+              <a href="mailto:info@deepvac.space" className="group flex items-center gap-3 transition-colors duration-300 hover:text-sand">
+                <Mail className="h-4 w-4 shrink-0 text-blue transition-colors duration-300 group-hover:text-blue-light" />
                 <span>info@deepvac.space</span>
               </a>
             </div>
@@ -75,10 +75,10 @@ export function Footer() {
                 href="https://www.linkedin.com/company/deepvac-gmbh/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-sm text-gray transition-colors hover:text-blue"
+                className="group inline-flex items-center gap-1.5 text-sm text-gray transition-colors duration-300 hover:text-blue"
               >
-                <span className="mono-label">LinkedIn</span>
-                <ArrowUpRight className="h-3.5 w-3.5" />
+                <span className="mono-label transition-colors duration-300 group-hover:text-blue">LinkedIn</span>
+                <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </a>
             </div>
           </div>
