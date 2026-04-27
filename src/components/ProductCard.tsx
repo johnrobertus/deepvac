@@ -19,15 +19,20 @@ export function ProductCard({
 }: ProductCardProps) {
   return (
     <div
+      tabIndex={0}
       className={cn(
-        "bento-card rounded-lg overflow-hidden group cursor-pointer",
+        "bento-card rounded-lg overflow-hidden group cursor-pointer focus:outline-none",
         className
       )}
     >
-      <PlaceholderImage assetId={assetId} type="RENDER" aspectRatio="4/3" className="rounded-none" />
+      <div className="media-frame">
+        <PlaceholderImage assetId={assetId} type="RENDER" aspectRatio="4/3" className="rounded-none" />
+      </div>
       <div className="p-5 space-y-3">
-        <h3 className="text-lg font-medium text-sand">{title}</h3>
-        {subtitle && <p className="text-sm text-gray leading-relaxed">{subtitle}</p>}
+        <h3 className="text-lg font-medium text-sand transition-colors duration-300 group-hover:text-blue-light">
+          {title}
+        </h3>
+        {subtitle && <p className="text-sm text-gray leading-relaxed transition-colors duration-300 group-hover:text-sand/85">{subtitle}</p>}
         {specs.length > 0 && (
           <div className="flex flex-wrap gap-2 pt-1">
             {specs.map((s) => (
