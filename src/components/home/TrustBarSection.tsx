@@ -23,9 +23,6 @@ export function TrustBarSection() {
               </h2>
             )}
           </div>
-          <span className="mono-label hidden text-[10px] text-gray/60 md:inline">
-            Rev 04.A · Certified
-          </span>
         </div>
 
         {/* Etched frame */}
