@@ -42,19 +42,13 @@ export function TrustBarSection() {
                 return (
                   <div
                     key={i}
-                    className={`relative p-7 transition-colors hover:bg-sand/[0.02] md:p-8 ${
+                    className={`group relative p-7 transition-colors hover:bg-sand/[0.02] md:p-8 ${
                       !isLast ? "border-b border-gray/10 md:border-b-0 md:border-r" : ""
                     }`}
                   >
                     <div className="mb-8 flex items-start justify-between">
                       <span className="mono-label text-[11px] text-blue">{item.label}</span>
-                      <div
-                        className={
-                          i === 0
-                            ? "h-1.5 w-1.5 rounded-full bg-blue shadow-[0_0_8px_hsl(var(--blue)/0.5)]"
-                            : "h-1.5 w-1.5 rounded-full bg-gray/30"
-                        }
-                      />
+                      <div className="h-1.5 w-1.5 rounded-full bg-gray/30 transition-all duration-300 group-hover:bg-blue group-hover:shadow-[0_0_10px_hsl(var(--blue)/0.7)]" />
                     </div>
                     <p className="max-w-[28ch] text-pretty text-sm leading-relaxed text-sand/75">
                       {item.text}
