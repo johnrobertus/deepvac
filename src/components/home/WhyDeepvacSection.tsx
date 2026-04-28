@@ -8,7 +8,7 @@ export function WhyDeepvacSection() {
 
   return (
     <section className="px-6 py-20 md:py-28">
-      <div className="container max-w-6xl">
+      <div className="container-wide">
         <Reveal>
           <SectionHeader
             eyebrow={t("whyDeepvac.eyebrow")}
