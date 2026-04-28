@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet-async";
 import { Layout } from "@/components/Layout";
 import { PageShell } from "@/components/PageShell";
 import { Button } from "@/components/ui/button";
@@ -11,6 +12,7 @@ import { localizedPath } from "@/lib/routes";
 const NotFound = () => {
   const location = useLocation();
   const { t } = useTranslation(["errors", "common"]);
+  const { t: tSeo } = useTranslation("seo");
   const { lang } = useLanguage();
 
   useEffect(() => {
@@ -19,6 +21,12 @@ const NotFound = () => {
 
   return (
     <Layout>
+      <Helmet>
+        <html lang={lang} />
+        <title>{tSeo("notFound.title")}</title>
+        <meta name="description" content={tSeo("notFound.description")} />
+        <meta name="robots" content="noindex, follow" />
+      </Helmet>
       <PageShell>
         <section className="py-32 md:py-48 px-6">
           <div className="container max-w-4xl text-center space-y-8">

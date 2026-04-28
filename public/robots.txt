@@ -1,14 +1,13 @@
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
+# robots.txt for deepvac.space
+# All bots may crawl all pages. Sitemap index points to grouped sub-sitemaps.
 
 User-agent: *
 Allow: /
+
+# Disallow internal/utility paths that should never appear in search results
+Disallow: /api/
+Disallow: /*?*utm_
+Disallow: /*?*gclid
+
+# Canonical sitemap index (contains main, services, resources, legal sub-sitemaps)
+Sitemap: https://deepvac.space/sitemap.xml
