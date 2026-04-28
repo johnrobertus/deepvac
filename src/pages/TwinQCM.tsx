@@ -73,7 +73,7 @@ const TwinQCM = () => (
     <PageShell>
       {/* Hero */}
       <section className="py-20 md:py-32 px-6">
-        <div className="container max-w-6xl">
+        <div className="container-wide">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <span className="mono-label text-blue">Integrated Technologies</span>

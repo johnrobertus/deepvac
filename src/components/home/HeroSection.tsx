@@ -177,15 +177,22 @@ export function HeroSection() {
         style={{ boxShadow: "inset 0 0 140px 42px hsl(0 0% 0% / 0.28)" }}
       />
 
-      <div className="relative z-20 flex h-full flex-col justify-end px-4 pb-10 pt-14 sm:px-6 sm:pb-12 md:pb-24 md:pt-40">
-        <div className="container max-w-6xl">
-          <div className="flex items-end justify-between gap-8 md:items-center">
-            <div className="max-w-[56rem] space-y-3 sm:space-y-5">
+      <div className="relative z-20 flex h-full flex-col justify-end pb-10 pt-14 sm:pb-12 md:pb-24 md:pt-40">
+        <div className="hero-container">
+          <div className="flex flex-col gap-8 md:items-end md:justify-between lg:grid lg:grid-cols-12 lg:items-center lg:gap-12 2xl:gap-20 3xl:gap-28">
+            <div className="max-w-[56rem] space-y-3 sm:space-y-5 lg:col-span-7">
               <Reveal>
                 <div className="space-y-3 sm:space-y-4">
                   <span className="mono-label text-blue-light/90 tracking-[0.08em]">{t("hero.eyebrow")}</span>
 
-                  <h1 className="max-w-[15ch] text-[1.7rem] font-medium leading-[0.98] tracking-[-0.02em] text-sand [text-wrap:balance] sm:text-3xl md:max-w-[14ch] md:text-5xl lg:max-w-[15ch] lg:text-[3.65rem] xl:max-w-[16ch]">
+                  <h1
+                    className="max-w-[15ch] font-medium text-sand [text-wrap:balance] md:max-w-[14ch] lg:max-w-[15ch] xl:max-w-[16ch]"
+                    style={{
+                      fontSize: "clamp(1.7rem, 4.15vw, 4.85rem)",
+                      lineHeight: 1.02,
+                      letterSpacing: "-0.025em",
+                    }}
+                  >
                     {t("hero.title")}
                   </h1>
                 </div>
@@ -229,9 +236,9 @@ export function HeroSection() {
             </div>
 
             {/* Funding logo, right side, desktop only */}
-            <div className="hidden lg:flex items-center justify-center flex-shrink-0 w-[36%] max-w-[470px]">
+            <div className="hidden lg:col-span-5 lg:flex items-center justify-center lg:justify-end">
               <Reveal delay={300}>
-                <div className="rounded-2xl border border-white/[0.08] bg-white/[0.07] px-8 py-6 backdrop-blur-md">
+                <div className="rounded-2xl border border-white/[0.08] bg-white/[0.07] px-7 py-5 backdrop-blur-md w-full max-w-[420px] 3xl:max-w-[460px]">
                   <img
                     src={i18n.language === "de" ? existFundingHeroDe : existFundingHeroEn}
                     alt={

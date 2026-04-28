@@ -123,6 +123,24 @@
 }
 
 @layer components {
+  .container-wide {
+    @apply mx-auto w-full max-w-[1560px] px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 3xl:px-24;
+  }
+
+  .container-narrow {
+    @apply mx-auto w-full max-w-3xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .hero-container {
+    @apply mx-auto w-full max-w-[1240px] px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-12;
+  }
+
+  @screen 3xl {
+    .hero-container {
+      @apply max-w-[1320px];
+    }
+  }
+
   .mono-label {
     @apply font-mono text-[10px] uppercase tracking-[0.05em] text-gray;
   }

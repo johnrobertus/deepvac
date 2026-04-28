@@ -11,7 +11,7 @@ export function ApplicationsSection() {
 
   return (
     <section className="py-20 md:py-28 px-6">
-      <div className="container max-w-6xl">
+      <div className="container-wide">
         <Reveal>
           <SectionHeader
             eyebrow={t("applications.eyebrow")}

@@ -1,69 +1,110 @@
 
+## Goal
+Make Deepvac feel intentionally composed on large desktop and workstation monitors (1440 / 1920 / 2560px) by widening structural containers, adding a true large-screen breakpoint, and scaling hero typography. No content, IA, routing, SEO, sitemap, CI/CD, brand, or backend changes.
 
-## Warum das Google-Ergebnis schlecht aussieht
+## 1. Tailwind config (`tailwind.config.ts`)
 
-**Drei Probleme zusammen:**
+Replace the `container` block and add `3xl` to `extend.screens`:
 
-### 1. Veraltete Meta-Tags in `index.html` (Hauptursache)
-Der statische `<title>` ist nur **"Deepvac GmbH"** und die `<meta description>` ist die alte Zeile *"Deepvac develops advanced thermal vacuum chamber systems for aerospace, research, and industrial applications."* — exakt das, was Google zeigt.
-
-Die schöneren Texte aus `seo.json` (z.B. *"Deepvac | Thermal Vacuum Systems for Space Qualification"*) werden zwar zur Laufzeit per React/i18n gesetzt, aber:
-- **Googlebot crawlt zwar JS, indexiert aber bevorzugt das, was im initialen HTML steht** (Vite SPA → leerer `<div id="root">`)
-- Bei statischen SPAs ohne SSR/Prerendering bleibt die `index.html`-Description die dominante Quelle für das Snippet
-
-### 2. Kaputtes `<link>`-Tag
-Zeile 13–14 in `index.html`:
-```html
-<li
-nk rel="canonical" href="https://deepvac.space/" />
-```
-Das ist syntaktisch zerbrochen (Zeilenumbruch innerhalb des Tag-Namens) → **canonical wird nicht erkannt**.
-
-### 3. Fehlende statische Basics
-- Kein `og:image` definiert → Social-Previews ohne Bild
-- Kein `og:locale`
-- Strukturierte Daten enthalten alte Description
-
-### 4. Google-Index-Latenz
-Selbst nach Fix dauert es **2–6 Wochen**, bis Google das Snippet aktualisiert. Du kannst über die Google Search Console eine Neuindexierung anfordern, um das zu beschleunigen.
-
----
-
-## Geplante Änderungen (nur `index.html`)
-
-**Ersetze die Head-Sektion mit:**
-
-```html
-<title>Deepvac | Thermal Vacuum Systems for Space Qualification</title>
-<meta name="description" content="Deepvac engineers modular and custom thermal vacuum systems — chamber platforms, control architecture, thermal management, and lifecycle services. Engineered in Germany." />
-<meta name="author" content="Deepvac GmbH" />
-<meta name="robots" content="index, follow" />
-<link rel="canonical" href="https://deepvac.space/" />
-
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://deepvac.space/" />
-<meta property="og:site_name" content="Deepvac" />
-<meta property="og:locale" content="en_US" />
-<meta property="og:locale:alternate" content="de_DE" />
-<meta property="og:title" content="Deepvac | Thermal Vacuum Systems for Space Qualification" />
-<meta property="og:description" content="Modular and custom thermal vacuum systems for aerospace qualification. Chamber platforms, controls, thermal management, retrofit and lifecycle services." />
-<meta property="og:image" content="https://deepvac.space/og-image.png" />
-
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Deepvac | Thermal Vacuum Systems for Space Qualification" />
-<meta name="twitter:description" content="Modular and custom thermal vacuum systems for aerospace qualification — engineered end to end in Germany." />
-<meta name="twitter:image" content="https://deepvac.space/og-image.png" />
+```ts
+container: {
+  center: true,
+  padding: {
+    DEFAULT: "1rem",
+    sm: "1.5rem",
+    lg: "2rem",
+    xl: "3rem",
+    "2xl": "4rem",
+  },
+  screens: { "2xl": "1440px" },
+},
+extend: {
+  screens: { "3xl": "1600px" },
+  // existing fontFamily, colors, etc. unchanged
+}
 ```
 
-Und die JSON-LD `description` auf den gleichen neuen Text aktualisieren.
+## 2. Shared layout utilities (`src/index.css`)
 
----
+Inside `@layer components`, add:
 
-## Was Du danach machen musst (außerhalb des Codes)
+```css
+.container-wide {
+  @apply mx-auto w-full max-w-[1560px] px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 3xl:px-24;
+}
+.container-narrow {
+  @apply mx-auto w-full max-w-3xl px-4 sm:px-6 lg:px-8;
+}
+```
 
-1. **Google Search Console öffnen** → URL-Prüfung für `https://deepvac.space/` → **"Indexierung beantragen"**
-2. Sitemap prüfen/einreichen (falls noch keine: ich kann eine `sitemap.xml` + `robots.txt` für die Hauptrouten generieren)
-3. **Bis zu 2–6 Wochen warten** — Google entscheidet selbst, wann das Snippet aktualisiert wird
+## 3. Header (`src/components/Header.tsx`)
+- Line 212: `container flex h-16 max-w-6xl items-center justify-between px-6` → `container-wide flex h-16 items-center justify-between`
+- Line 307 (mobile menu): `container max-w-6xl space-y-6 px-6 py-6` → `container-wide space-y-6 py-6`
 
-**Optionale Verbesserung (separat zu entscheiden):** Für SPAs ist `react-helmet-async` + Prerendering (z.B. via `vite-plugin-prerender` oder Lovable Cloud edge-prerendering) die saubere Lösung, damit jede Route ihr eigenes statisches `<title>`/`<meta>` hat. Das ist aber ein größerer Eingriff — Quick Fix oben reicht für das Homepage-Snippet.
+## 4. Hero (`src/components/home/HeroSection.tsx`)
+- Line 181: outer wrapper `container max-w-6xl` → `container-wide`
+- Lines 182–248: convert the inner `flex` row into a grid on `lg+`:
+  ```tsx
+  <div className="flex flex-col gap-8 lg:grid lg:grid-cols-12 lg:items-center lg:gap-12 2xl:gap-20 3xl:gap-28">
+    <div className="space-y-3 sm:space-y-5 lg:col-span-7 max-w-[56rem]">…text column…</div>
+    <div className="hidden lg:flex lg:col-span-5 items-center justify-center 3xl:max-w-[520px]">…funding card…</div>
+  </div>
+  ```
+- Headline (line 188): drop fixed responsive size classes, replace with fluid clamp via inline style:
+  ```tsx
+  <h1
+    className="max-w-[15ch] font-medium text-sand [text-wrap:balance] md:max-w-[14ch] lg:max-w-[15ch] xl:max-w-[16ch]"
+    style={{ fontSize: "clamp(1.7rem, 4.6vw, 5.25rem)", lineHeight: 1.0, letterSpacing: "-0.025em" }}
+  >
+  ```
+- Body paragraph keeps `max-w-2xl` (unchanged).
+- All text, CTAs, badges, cues, and funding card image/content unchanged.
 
+## 5. Home sections — swap structural wrapper
+
+In each file below, replace `container max-w-6xl` → `container-wide`:
+
+- `TrustBarSection.tsx` (L15)
+- `CapabilitiesSection.tsx` (L16)
+- `ProductPortfolioSection.tsx` (L24)
+- `ApplicationsSection.tsx` (L14)
+- `ServicesSection.tsx` (L28)
+- `WhyDeepvacSection.tsx` (L11)
+- `TeamSection.tsx` (L19)
+- `CataloguesSection.tsx` (L18)
+- `ContactSection.tsx` (L150, L166)
+- `FundingSection.tsx` (L13)
+- `ReferencesSection.tsx` (L11)
+- `LeadCaptureCTA.tsx` (if it has one)
+
+No internal grids/cards/copy modified.
+
+## 6. PageShell (`src/components/PageShell.tsx`)
+- `Section` (L50): `container max-w-6xl` → `container-wide`
+- `TrustBar` (L58): `container max-w-6xl` → `container-wide` (preserve flex/justify classes)
+- `PageHero`: keep `max-w-5xl` (intentional readable prose width)
+- `CTABand`: keep `max-w-4xl` (intentional centered CTA)
+
+## 7. Footer (`src/components/Footer.tsx`)
+- Line 41: `container max-w-6xl px-6 py-16 md:py-20` → `container-wide py-16 md:py-20`
+- Line 104: `container flex max-w-6xl flex-col …` → `container-wide flex flex-col …` (remove redundant `px-6` on parent at L103 if present; keep `py-5` and border)
+
+## 8. Other pages
+- `src/pages/TwinQCM.tsx` (L76): `container max-w-6xl` → `container-wide`
+- `src/pages/Team.tsx`: no `max-w-6xl` — no change
+- `NotFound.tsx`: no change
+
+## What is NOT changed
+- No copy, headings, CTAs, translation keys, badges, or labels.
+- No routes, sitemap, robots.txt, JSON-LD, hreflang, canonicals, Helmet metadata, or `Index.tsx` SEO blocks.
+- No GitHub Actions, Hetzner, Supabase, Resend, Turnstile, env, or `supabase/config.toml`.
+- No colors, fonts, button/card chrome, animations, or Reveal logic.
+- Mobile/tablet behavior preserved (mobile padding stays at 1rem; grid kicks in at `lg+` only).
+
+## QA after implementation
+- Browser preview at 390 / 768 / 1024 / 1440 / 1920 / 2560 px:
+  - no horizontal scroll
+  - header logo, hero text edge, card rows, footer columns share identical left/right edges
+  - hero headline scales fluidly without overflow; long German words don't break
+  - funding card stays inside hero grid, no collision
+  - paragraphs and CTA bands remain compact and readable

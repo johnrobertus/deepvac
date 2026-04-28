@@ -38,7 +38,7 @@ export function Footer() {
 
   return (
     <footer className="border-t border-gray/10 bg-surface">
-      <div className="container max-w-6xl px-6 py-16 md:py-20">
+      <div className="container-wide py-16 md:py-20">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-[1.35fr_repeat(3,minmax(0,1fr))]">
           <div className="space-y-5">
             <Link to={lp("/")} className="inline-flex items-center" aria-label="Deepvac home">
@@ -100,8 +100,8 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-gray/10 px-6 py-5">
-        <div className="container flex max-w-6xl flex-col gap-4 md:flex-row md:items-center md:justify-between">
+      <div className="border-t border-gray/10 py-5">
+        <div className="container-wide flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <p className="font-mono text-xs text-gray/50">{t("footer.copyright", { year: new Date().getFullYear() })}</p>
 
           <div className="flex flex-wrap items-center gap-x-6 gap-y-2">

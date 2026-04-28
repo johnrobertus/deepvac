@@ -147,7 +147,7 @@ export function ContactSection() {
   if (submitted) {
     return (
       <section className="py-20 md:py-28 px-6 bg-surface/30">
-        <div className="container max-w-6xl">
+        <div className="container-wide">
           <div className="max-w-xl mx-auto text-center space-y-6">
             <CheckCircle className="w-12 h-12 text-blue mx-auto" />
             <h2 className="text-3xl font-medium text-sand tracking-tight">{t("form.success.title")}</h2>
@@ -163,7 +163,7 @@ export function ContactSection() {
 
   return (
     <section className="py-20 md:py-28 px-6 bg-surface/30">
-      <div className="container max-w-6xl">
+      <div className="container-wide">
         <Reveal>
           <SectionHeader
             eyebrow={tHome("contact.eyebrow")}
