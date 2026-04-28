@@ -178,7 +178,7 @@ export function HeroSection() {
       />
 
       <div className="relative z-20 flex h-full flex-col justify-end pb-10 pt-14 sm:pb-12 md:pb-24 md:pt-40">
-        <div className="container-wide">
+        <div className="hero-container">
           <div className="flex flex-col gap-8 md:items-end md:justify-between lg:grid lg:grid-cols-12 lg:items-center lg:gap-12 2xl:gap-20 3xl:gap-28">
             <div className="max-w-[56rem] space-y-3 sm:space-y-5 lg:col-span-7">
               <Reveal>
@@ -188,8 +188,8 @@ export function HeroSection() {
                   <h1
                     className="max-w-[15ch] font-medium text-sand [text-wrap:balance] md:max-w-[14ch] lg:max-w-[15ch] xl:max-w-[16ch]"
                     style={{
-                      fontSize: "clamp(1.7rem, 4.6vw, 5.25rem)",
-                      lineHeight: 1.0,
+                      fontSize: "clamp(1.7rem, 4.15vw, 4.85rem)",
+                      lineHeight: 1.02,
                       letterSpacing: "-0.025em",
                     }}
                   >
@@ -238,7 +238,7 @@ export function HeroSection() {
             {/* Funding logo, right side, desktop only */}
             <div className="hidden lg:col-span-5 lg:flex items-center justify-center lg:justify-end">
               <Reveal delay={300}>
-                <div className="rounded-2xl border border-white/[0.08] bg-white/[0.07] px-8 py-6 backdrop-blur-md w-full max-w-[470px] 3xl:max-w-[520px]">
+                <div className="rounded-2xl border border-white/[0.08] bg-white/[0.07] px-7 py-5 backdrop-blur-md w-full max-w-[420px] 3xl:max-w-[460px]">
                   <img
                     src={i18n.language === "de" ? existFundingHeroDe : existFundingHeroEn}
                     alt={
