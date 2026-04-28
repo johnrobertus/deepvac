@@ -12,7 +12,7 @@ export function TrustBarSection() {
 
   return (
     <section className="bg-background px-6 py-14">
-      <div className="container max-w-6xl">
+      <div className="container-wide">
         {/* Technical header */}
         <div className="mb-4 flex items-end justify-between gap-6 px-1">
           <div className="flex flex-col gap-1">

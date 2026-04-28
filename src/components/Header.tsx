@@ -209,7 +209,7 @@ export function Header() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-gray/10 bg-background/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/70">
-      <div className="container flex h-16 max-w-6xl items-center justify-between px-6">
+      <div className="container-wide flex h-16 items-center justify-between">
         <Link
           to={homePath}
           className="flex items-center rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
@@ -304,7 +304,7 @@ export function Header() {
 
       {mobileOpen && (
         <div className="max-h-[calc(100vh-4rem)] overflow-y-auto border-t border-gray/10 bg-surface lg:hidden animate-fade-in">
-          <div className="container max-w-6xl space-y-6 px-6 py-6">
+          <div className="container-wide space-y-6 py-6">
             <MobileSection label={t("nav.products")} items={productsMenu} pathname={pathname} lang={lang} t={t} />
             <MobileSection label={t("nav.services")} items={servicesMenu} pathname={pathname} lang={lang} t={t} />
 

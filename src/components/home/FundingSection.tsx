@@ -10,7 +10,7 @@ export function FundingSection() {
 
   return (
     <section className="py-16 px-6">
-      <div className="container max-w-6xl">
+      <div className="container-wide">
         <Reveal>
           <div className="space-y-4 text-center">
             <span className="mono-label text-blue block">{t("funding.eyebrow")}</span>

@@ -46,16 +46,16 @@ interface SectionProps {
 
 export function Section({ children, className }: SectionProps) {
   return (
-    <section className={cn("py-16 md:py-24 px-6", className)}>
-      <div className="container max-w-6xl">{children}</div>
+    <section className={cn("py-16 md:py-24", className)}>
+      <div className="container-wide">{children}</div>
     </section>
   );
 }
 
 export function TrustBar({ items }: { items: string[] }) {
   return (
-    <div className="border-y border-gray/10 py-8 px-6">
-      <div className="container max-w-6xl flex flex-wrap items-center justify-center gap-8 md:gap-16">
+    <div className="border-y border-gray/10 py-8">
+      <div className="container-wide flex flex-wrap items-center justify-center gap-8 md:gap-16">
         {items.map((item) => (
           <span key={item} className="mono-label text-gray/50">{item}</span>
         ))}
