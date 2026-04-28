@@ -38,7 +38,7 @@ export function Footer() {
 
   return (
     <footer className="border-t border-gray/10 bg-surface">
-      <div className="container max-w-6xl px-6 py-16 md:py-20">
+      <div className="container-wide py-16 md:py-20">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-[1.35fr_repeat(3,minmax(0,1fr))]">
           <div className="space-y-5">
             <Link to={lp("/")} className="inline-flex items-center" aria-label="Deepvac home">
