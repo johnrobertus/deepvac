@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://deepvac.space/services</loc>
+    <lastmod>2026-04-01T11:10:51+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/services"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/leistungen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/services"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/de/leistungen</loc>
+    <lastmod>2026-04-01T11:10:51+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/services"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/leistungen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/services"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/services/retrofit-modernization</loc>
+    <lastmod>2026-04-01T11:10:51+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/services/retrofit-modernization"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/leistungen/retrofit-modernisierung"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/services/retrofit-modernization"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/de/leistungen/retrofit-modernisierung</loc>
+    <lastmod>2026-04-01T11:10:51+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/services/retrofit-modernization"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/leistungen/retrofit-modernisierung"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/services/retrofit-modernization"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/services/testing-services</loc>
+    <lastmod>2026-04-01T11:10:51+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/services/testing-services"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/leistungen/pruefdienstleistungen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/services/testing-services"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/de/leistungen/pruefdienstleistungen</loc>
+    <lastmod>2026-04-01T11:10:51+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/services/testing-services"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/leistungen/pruefdienstleistungen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/services/testing-services"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/services/control-systems-design</loc>
+    <lastmod>2026-04-01T11:10:51+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/services/control-systems-design"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/leistungen/steuerungstechnik"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/services/control-systems-design"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/de/leistungen/steuerungstechnik</loc>
+    <lastmod>2026-04-01T11:10:51+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/services/control-systems-design"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/leistungen/steuerungstechnik"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/services/control-systems-design"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/services/mechanical-design</loc>
+    <lastmod>2026-04-01T11:10:51+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/services/mechanical-design"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/leistungen/mechanische-konstruktion"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/services/mechanical-design"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/de/leistungen/mechanische-konstruktion</loc>
+    <lastmod>2026-04-01T11:10:51+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/services/mechanical-design"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/leistungen/mechanische-konstruktion"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/services/mechanical-design"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/services/maintenance-repair</loc>
+    <lastmod>2026-04-01T11:10:51+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/services/maintenance-repair"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/leistungen/wartung-reparatur"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/services/maintenance-repair"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/de/leistungen/wartung-reparatur</loc>
+    <lastmod>2026-04-01T11:10:51+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/services/maintenance-repair"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/leistungen/wartung-reparatur"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/services/maintenance-repair"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/services/subsystem-integration</loc>
+    <lastmod>2026-04-01T11:10:51+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/services/subsystem-integration"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/leistungen/subsystem-integration"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/services/subsystem-integration"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/de/leistungen/subsystem-integration</loc>
+    <lastmod>2026-04-01T11:10:51+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/services/subsystem-integration"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/leistungen/subsystem-integration"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/services/subsystem-integration"/>
+  </url>
+</urlset>
