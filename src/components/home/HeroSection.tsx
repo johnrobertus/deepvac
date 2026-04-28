@@ -177,18 +177,18 @@ export function HeroSection() {
         style={{ boxShadow: "inset 0 0 140px 42px hsl(0 0% 0% / 0.28)" }}
       />
 
-      <div className="relative z-20 flex h-full flex-col justify-end pb-10 pt-14 sm:pb-12 md:pb-24 md:pt-40">
+      <div className="relative z-20 flex h-full flex-col justify-end pb-10 pt-14 sm:pb-12 md:justify-center md:pb-24 md:pt-32">
         <div className="hero-container">
-          <div className="flex flex-col gap-8 md:items-end md:justify-between lg:grid lg:grid-cols-12 lg:items-center lg:gap-12 2xl:gap-20 3xl:gap-28">
-            <div className="max-w-[56rem] space-y-3 sm:space-y-5 lg:col-span-7">
+          <div className="flex flex-col gap-8 md:items-end md:justify-between lg:grid lg:grid-cols-12 lg:items-center lg:gap-10 2xl:gap-16 3xl:gap-20">
+            <div className="max-w-[56rem] space-y-3 sm:space-y-5 lg:col-span-8">
               <Reveal>
                 <div className="space-y-3 sm:space-y-4">
                   <span className="mono-label text-blue-light/90 tracking-[0.08em]">{t("hero.eyebrow")}</span>
 
                   <h1
-                    className="max-w-[15ch] font-medium text-sand [text-wrap:balance] md:max-w-[14ch] lg:max-w-[15ch] xl:max-w-[16ch]"
+                    className="max-w-[15ch] font-medium text-sand [text-wrap:balance] md:max-w-[14ch] lg:max-w-[18ch] xl:max-w-[20ch] 2xl:max-w-[22ch]"
                     style={{
-                      fontSize: "clamp(1.7rem, 4.15vw, 4.85rem)",
+                      fontSize: "clamp(1.7rem, 4.15vw, 5.4rem)",
                       lineHeight: 1.02,
                       letterSpacing: "-0.025em",
                     }}
