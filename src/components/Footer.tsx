@@ -100,8 +100,8 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-gray/10 px-6 py-5">
-        <div className="container flex max-w-6xl flex-col gap-4 md:flex-row md:items-center md:justify-between">
+      <div className="border-t border-gray/10 py-5">
+        <div className="container-wide flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <p className="font-mono text-xs text-gray/50">{t("footer.copyright", { year: new Date().getFullYear() })}</p>
 
           <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
