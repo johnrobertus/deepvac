@@ -189,17 +189,13 @@ export function HeroSection() {
                     const isDe = i18n.language === "de";
                     return (
                       <h1
-                        className={
-                          isDe
-                            ? "max-w-[16ch] font-medium text-sand [text-wrap:balance] md:max-w-[18ch] lg:max-w-[22ch] xl:max-w-[24ch] 2xl:max-w-[26ch]"
-                            : "max-w-[15ch] font-medium text-sand [text-wrap:balance] md:max-w-[14ch] lg:max-w-[18ch] xl:max-w-[20ch] 2xl:max-w-[22ch]"
-                        }
+                        className="max-w-[15ch] font-medium text-sand [text-wrap:balance] md:max-w-[14ch] lg:max-w-[18ch] xl:max-w-[20ch] 2xl:max-w-[22ch]"
                         style={{
                           fontSize: isDe
-                            ? "clamp(1.45rem, 3.4vw, 4.4rem)"
+                            ? "clamp(1.55rem, 3.75vw, 4.85rem)"
                             : "clamp(1.7rem, 4.15vw, 5.4rem)",
-                          lineHeight: isDe ? 1.04 : 1.01,
-                          letterSpacing: isDe ? "-0.035em" : "-0.04em",
+                          lineHeight: 1.01,
+                          letterSpacing: "-0.04em",
                           hyphens: "auto",
                           fontFeatureSettings: '"kern" 1, "liga" 1, "calt" 1, "ss01" 1',
                           fontKerning: "normal",
