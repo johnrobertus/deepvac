@@ -185,16 +185,30 @@ export function HeroSection() {
                 <div className="space-y-3 sm:space-y-4">
                   <span className="mono-label text-blue-light/90 tracking-[0.08em]">{t("hero.eyebrow")}</span>
 
-                  <h1
-                    className="max-w-[15ch] font-medium text-sand [text-wrap:balance] md:max-w-[14ch] lg:max-w-[18ch] xl:max-w-[20ch] 2xl:max-w-[22ch]"
-                    style={{
-                      fontSize: "clamp(1.7rem, 4.15vw, 5.4rem)",
-                      lineHeight: 1.02,
-                      letterSpacing: "-0.025em",
-                    }}
-                  >
-                    {t("hero.title")}
-                  </h1>
+                  {(() => {
+                    const isDe = i18n.language === "de";
+                    return (
+                      <h1
+                        className="max-w-[15ch] font-medium text-sand [text-wrap:balance] md:max-w-[14ch] lg:max-w-[18ch] xl:max-w-[20ch] 2xl:max-w-[22ch]"
+                        style={{
+                          fontSize: isDe
+                            ? "clamp(1.55rem, 3.75vw, 4.85rem)"
+                            : "clamp(1.7rem, 4.15vw, 5.4rem)",
+                          lineHeight: 1.01,
+                          letterSpacing: "-0.04em",
+                          hyphens: "auto",
+                          fontFeatureSettings: '"kern" 1, "liga" 1, "calt" 1, "ss01" 1',
+                          fontKerning: "normal",
+                          textRendering: "optimizeLegibility",
+                          WebkitFontSmoothing: "antialiased",
+                          MozOsxFontSmoothing: "grayscale",
+                        }}
+                        lang={isDe ? "de" : "en"}
+                      >
+                        {t("hero.title")}
+                      </h1>
+                    );
+                  })()}
                 </div>
               </Reveal>
 

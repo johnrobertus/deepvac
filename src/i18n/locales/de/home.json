@@ -1,9 +1,9 @@
 {
   "hero": {
-    "eyebrow": "THERMOVAKUUMSYSTEME FÜR DIE RAUMFAHRT. ENTWICKELT IN DEUTSCHLAND.",
-    "title": "Thermovakuumsysteme & Engineering für Qualifizierungs-, Integrations- und Upgrade-Projekte.",
+    "eyebrow": "THERMALVAKUUMSYSTEME FÜR DIE RAUMFAHRT. ENTWICKELT IN DEUTSCHLAND.",
+    "title": "Thermal-Vakuum-Systeme & Engineering für Qualifizierungs-, Integrations- und Upgrade-Projekte.",
     "description": "Deepvac vereint Vakuumkammer-Engineering, Steuerungsarchitektur, thermisches Management und Lifecycle-Services in einem integrierten Angebot – für Neusysteme und bestehende Infrastruktur.",
-    "cues": ["MODULARE PLATTFORMEN", "CUSTOM-TVAC-SYSTEME", "STEUERUNG & AUTOMATISIERUNG", "RETROFIT & SERVICE"],
+    "cues": ["MODULARE PLATTFORMEN", "CUSTOM-TVAC-SYSTEME", "STEUERUNG & AUTOMATISIERUNG", "RETROFIT & SERVICE", "TEST-AS-A-SERVICE"],
     "source": "Quelle: NASA"
   },
   "trustBar": {
