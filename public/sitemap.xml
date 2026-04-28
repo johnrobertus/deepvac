@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://deepvac.space/</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/de</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/products</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/products"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/produkte"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/products"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/de/produkte</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/products"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/produkte"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/products"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/products/standard-series</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/products/standard-series"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/produkte/standard-serie"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/products/standard-series"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/de/produkte/standard-serie</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/products/standard-series"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/produkte/standard-serie"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/products/standard-series"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/products/custom-tvac</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/products/custom-tvac"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/produkte/custom-tvac"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/products/custom-tvac"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/de/produkte/custom-tvac</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/products/custom-tvac"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/produkte/custom-tvac"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/products/custom-tvac"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/products/thermal-vision</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/products/thermal-vision"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/produkte/thermal-vision"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/products/thermal-vision"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/de/produkte/thermal-vision</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/products/thermal-vision"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/produkte/thermal-vision"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/products/thermal-vision"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/services</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/services"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/leistungen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/services"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/de/leistungen</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/services"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/leistungen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/services"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/services/testing-services</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/services/testing-services"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/leistungen/pruefdienstleistungen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/services/testing-services"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/de/leistungen/pruefdienstleistungen</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/services/testing-services"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/leistungen/pruefdienstleistungen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/services/testing-services"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/services/control-systems-design</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/services/control-systems-design"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/leistungen/steuerungstechnik"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/services/control-systems-design"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/de/leistungen/steuerungstechnik</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/services/control-systems-design"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/leistungen/steuerungstechnik"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/services/control-systems-design"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/services/mechanical-design</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/services/mechanical-design"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/leistungen/mechanische-konstruktion"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/services/mechanical-design"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/de/leistungen/mechanische-konstruktion</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/services/mechanical-design"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/leistungen/mechanische-konstruktion"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/services/mechanical-design"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/services/retrofit-modernization</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/services/retrofit-modernization"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/leistungen/retrofit-modernisierung"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/services/retrofit-modernization"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/de/leistungen/retrofit-modernisierung</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/services/retrofit-modernization"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/leistungen/retrofit-modernisierung"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/services/retrofit-modernization"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/services/maintenance-repair</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/services/maintenance-repair"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/leistungen/wartung-reparatur"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/services/maintenance-repair"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/de/leistungen/wartung-reparatur</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/services/maintenance-repair"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/leistungen/wartung-reparatur"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/services/maintenance-repair"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/services/subsystem-integration</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/services/subsystem-integration"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/leistungen/subsystem-integration"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/services/subsystem-integration"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/de/leistungen/subsystem-integration</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/services/subsystem-integration"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/leistungen/subsystem-integration"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/services/subsystem-integration"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/references</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/references"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/referenzen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/references"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/de/referenzen</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/references"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/referenzen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/references"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/contact</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/contact"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/contact"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/de/kontakt</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/contact"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/contact"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/team</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/team"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/team"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/team"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/de/team</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/team"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/team"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/team"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/resources</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/ressourcen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/resources"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/de/ressourcen</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/ressourcen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/resources"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/catalogs</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/catalogs"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/kataloge"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/catalogs"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/de/kataloge</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/catalogs"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/kataloge"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/catalogs"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/resources/blog</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/ressourcen/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/resources/blog"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/de/ressourcen/blog</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/ressourcen/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/resources/blog"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/resources/blog/cooling-systems</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/cooling-systems"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/ressourcen/blog/kuehlsysteme"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/resources/blog/cooling-systems"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/de/ressourcen/blog/kuehlsysteme</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/cooling-systems"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/ressourcen/blog/kuehlsysteme"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/resources/blog/cooling-systems"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/resources/blog/retrofit-vs-replacement</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/retrofit-vs-replacement"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/ressourcen/blog/retrofit-vs-neubeschaffung"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/resources/blog/retrofit-vs-replacement"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/de/ressourcen/blog/retrofit-vs-neubeschaffung</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/retrofit-vs-replacement"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/ressourcen/blog/retrofit-vs-neubeschaffung"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/resources/blog/retrofit-vs-replacement"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/resources/blog/aerospace-qualification-testing</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/aerospace-qualification-testing"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/ressourcen/blog/raumfahrtqualifikation"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/resources/blog/aerospace-qualification-testing"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/de/ressourcen/blog/raumfahrtqualifikation</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/aerospace-qualification-testing"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/ressourcen/blog/raumfahrtqualifikation"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/resources/blog/aerospace-qualification-testing"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/careers</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/careers"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/karriere"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/careers"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/de/karriere</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/careers"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/karriere"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/careers"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/imprint</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/imprint"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/impressum"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/imprint"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/de/impressum</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/imprint"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/impressum"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/imprint"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/privacy-policy</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/datenschutz"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/privacy-policy"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/de/datenschutz</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/datenschutz"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/privacy-policy"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/terms-and-conditions</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/terms-and-conditions"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/agb"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/terms-and-conditions"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/de/agb</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/terms-and-conditions"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/agb"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/terms-and-conditions"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/media-credits</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/media-credits"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/medienquellen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/media-credits"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/de/medienquellen</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/media-credits"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/medienquellen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/media-credits"/>
+  </url>
+</urlset>
