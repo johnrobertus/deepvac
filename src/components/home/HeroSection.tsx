@@ -238,7 +238,7 @@ export function HeroSection() {
             {/* Funding logo, right side, desktop only */}
             <div className="hidden lg:col-span-5 lg:flex items-center justify-center lg:justify-end">
               <Reveal delay={300}>
-                <div className="rounded-2xl border border-white/[0.08] bg-white/[0.07] px-8 py-6 backdrop-blur-md w-full max-w-[470px] 3xl:max-w-[520px]">
+                <div className="rounded-2xl border border-white/[0.08] bg-white/[0.07] px-7 py-5 backdrop-blur-md w-full max-w-[420px] 3xl:max-w-[460px]">
                   <img
                     src={i18n.language === "de" ? existFundingHeroDe : existFundingHeroEn}
                     alt={
