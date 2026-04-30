@@ -81,8 +81,8 @@ const StandardSeries = () => {
         <Section>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <div>
-              <div className="relative">
-                <img src={tseriesImg} alt="Deepvac T Series Cubic Thermal Vacuum Chamber" className="w-full h-auto object-contain" loading="lazy" />
+              <div className="relative rounded-lg overflow-hidden border border-gray/10 bg-surface/40 h-[280px] lg:h-[420px] flex items-center justify-center">
+                <img src={tseriesImg} alt="Deepvac T Series Cubic Thermal Vacuum Chamber" className="w-full h-full object-contain p-6 lg:p-8" loading="lazy" />
                 <div className="absolute top-3 left-3 glass-overlay rounded-md px-3 py-1.5">
                   <span className="mono-label text-blue-light">T Series</span>
                 </div>
@@ -116,8 +116,8 @@ const StandardSeries = () => {
         <Section>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <div className="lg:order-2">
-              <div className="relative">
-                <img src={cseriesImg} alt="Deepvac C Series Cylindrical Thermal Vacuum Chamber" className="w-full h-auto object-contain" loading="lazy" />
+              <div className="relative rounded-lg overflow-hidden border border-gray/10 bg-surface/40 h-[280px] lg:h-[420px] flex items-center justify-center">
+                <img src={cseriesImg} alt="Deepvac C Series Cylindrical Thermal Vacuum Chamber" className="w-full h-full object-contain p-6 lg:p-8" loading="lazy" />
                 <div className="absolute top-3 right-3 glass-overlay rounded-md px-3 py-1.5">
                   <span className="mono-label text-blue-light">C Series</span>
                 </div>
