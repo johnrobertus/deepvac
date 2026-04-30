@@ -95,11 +95,11 @@ const Products = () => {
               return (
                 <div key={product.titleKey} className="bento-card rounded-lg overflow-hidden group">
                   <div className="grid grid-cols-1 lg:grid-cols-2">
-                    <div className={`relative overflow-hidden ${i % 2 === 1 ? "lg:order-2" : ""}`}>
+                    <div className={`relative overflow-hidden bg-surface/40 h-[280px] lg:h-[420px] ${i % 2 === 1 ? "lg:order-2" : ""}`}>
                       <img
                         src={product.image}
                         alt={`Deepvac ${t(product.titleKey)}`}
-                        className="w-full h-full object-cover min-h-[280px] lg:min-h-[380px] transition-transform duration-500 group-hover:scale-[1.02]"
+                        className="w-full h-full object-contain p-6 lg:p-8 transition-transform duration-500 group-hover:scale-[1.02]"
                         loading="lazy"
                       />
                       <div className="absolute bottom-3 left-3 flex flex-wrap gap-1.5">
