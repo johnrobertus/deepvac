@@ -1097,25 +1097,25 @@ export default function TvacQuestionnaire() {
                   <li key={label} className="flex-1 flex items-center gap-3">
                     <div className={cn(
                       "flex items-center gap-3 px-4 py-2.5 rounded-sm border transition-colors w-full",
-                      active && "border-blue/50 bg-blue/5",
-                      done && "border-gray/20 bg-surface/40",
-                      !active && !done && "border-gray/10 bg-transparent"
+                      active && "border-blue/60 bg-blue/10",
+                      done && "border-gray/30 bg-surface/60",
+                      !active && !done && "border-gray/20 bg-transparent"
                     )}>
                       <span className={cn(
                         "w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-mono shrink-0",
-                        active ? "bg-blue text-background" : done ? "bg-gray/20 text-sand" : "bg-transparent border border-gray/20 text-gray/60"
+                        active ? "bg-blue text-background" : done ? "bg-gray/30 text-sand" : "bg-transparent border border-gray/30 text-gray/80"
                       )}>{idx}</span>
-                      <span className={cn("text-xs font-mono tracking-wide truncate", active ? "text-sand" : "text-gray/70")}>{label}</span>
+                      <span className={cn("text-xs font-mono tracking-wide truncate", active ? "text-sand" : "text-gray/85")}>{label}</span>
                     </div>
-                    {idx < totalSteps && <div className="w-4 h-px bg-gray/15 shrink-0" />}
+                    {idx < totalSteps && <div className="w-4 h-px bg-gray/25 shrink-0" />}
                   </li>
                 );
               })}
             </ol>
             {/* Mobile */}
-            <div className="md:hidden flex items-center justify-between gap-3 px-4 py-3 border border-gray/15 rounded-sm bg-surface/40">
+            <div className="md:hidden flex items-center justify-between gap-3 px-4 py-3 border border-gray/30 rounded-sm bg-surface/60">
               <span className="text-[11px] font-mono text-blue">{t("wizard.stepLabel", { current: step, total: totalSteps })}</span>
-              <span className="text-sm text-sand truncate">{stepLabels[step - 1]}</span>
+              <span className="text-sm font-medium text-sand truncate">{stepLabels[step - 1]}</span>
             </div>
           </div>
 
