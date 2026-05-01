@@ -16,7 +16,8 @@
     "retrofitModernization": "Retrofit & Modernisierung",
     "maintenanceRepair": "Wartung & Reparatur",
     "subsystemIntegration": "Subsystem-Integration",
-    "talkToEngineer": "Ingenieur kontaktieren"
+    "talkToEngineer": "Ingenieur kontaktieren",
+    "configureTvac": "TVAC-System konfigurieren"
   },
   "footer": {
     "description": "Hochentwickelte Thermovakuumsysteme für die Raumfahrtqualifikation, Weltraumsimulation und Umweltprüfung.",
