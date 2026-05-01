@@ -272,3 +272,118 @@
     button:hover, a:hover { transform: none !important; }
   }
 }
+
+/* ============================================================
+   Questionnaire Print View
+   - Hidden in screen view; only rendered for window.print().
+   - Brand-aligned light document layout for browser "Save as PDF".
+   ============================================================ */
+.qpv-root {
+  display: none;
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 14mm 14mm 16mm 14mm;
+  }
+
+  /* Hide everything that isn't the print view */
+  body * { visibility: hidden !important; }
+  .qpv-root, .qpv-root * { visibility: visible !important; }
+
+  .qpv-root {
+    display: block !important;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    background: #ffffff !important;
+    color: #22282E !important;
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+    font-size: 11pt;
+    line-height: 1.45;
+    padding: 0;
+  }
+
+  .qpv-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16mm;
+    border-top: 3pt solid #99CCD9;
+    padding-top: 6mm;
+  }
+  .qpv-header-left { max-width: 70%; }
+  .qpv-eyebrow {
+    font-size: 8.5pt;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #66727D;
+    margin-bottom: 2mm;
+  }
+  .qpv-title {
+    font-size: 17pt;
+    font-weight: 600;
+    color: #22282E;
+    letter-spacing: 0.01em;
+    margin: 0;
+  }
+  .qpv-subtitle {
+    font-size: 10pt;
+    color: #66727D;
+    margin-top: 1.5mm;
+  }
+  .qpv-header-right { text-align: right; }
+  .qpv-meta { font-size: 9pt; color: #66727D; }
+
+  .qpv-rule {
+    height: 0.6pt;
+    background: #DDE6EE;
+    margin: 4mm 0 5mm;
+  }
+
+  .qpv-section {
+    page-break-inside: avoid;
+    margin-bottom: 5mm;
+  }
+  .qpv-section-title {
+    font-size: 10.5pt;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #4F91C2;
+    border-bottom: 0.6pt solid #DDE6EE;
+    padding-bottom: 1.5mm;
+    margin: 0 0 2.5mm;
+  }
+  .qpv-section-body {
+    display: block;
+  }
+
+  .qpv-row {
+    display: grid;
+    grid-template-columns: 56mm 1fr;
+    gap: 4mm;
+    padding: 1mm 0;
+    border-bottom: 0.4pt dotted #E6ECF2;
+    page-break-inside: avoid;
+  }
+  .qpv-label {
+    font-size: 9pt;
+    color: #66727D;
+  }
+  .qpv-value {
+    font-size: 10pt;
+    color: #22282E;
+    word-break: break-word;
+  }
+
+  .qpv-footer {
+    margin-top: 8mm;
+    padding-top: 3mm;
+    border-top: 0.4pt solid #DDE6EE;
+    font-size: 8.5pt;
+    color: #66727D;
+    text-align: center;
+  }
+}
