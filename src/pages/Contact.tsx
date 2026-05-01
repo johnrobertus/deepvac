@@ -12,6 +12,7 @@ import { Phone, Mail, MapPin, Clock, Shield, ArrowRight, CheckCircle, Loader2 } 
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { ConsentMap } from "@/components/ConsentMap";
+import { QuestionnaireCard } from "@/components/questionnaire/QuestionnaireCTA";
 import { useLanguage } from "@/components/LanguageProvider";
 import { getHreflangs, getCanonical, localizedPath } from "@/lib/routes";
 
@@ -220,7 +221,9 @@ const Contact = () => {
         <Section>
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-12 lg:gap-16">
             <div className="space-y-8">
-              <div className="space-y-2">
+              <QuestionnaireCard />
+
+              <div className="space-y-2 pt-2">
                 <h2 className="text-2xl font-medium text-sand tracking-tight">{t("formTitle")}</h2>
                 <p className="text-sm text-gray">{t("formDescription")}</p>
               </div>

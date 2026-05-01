@@ -28,7 +28,26 @@
     "followDeepvac": "Deepvac folgen",
     "company": "Unternehmen",
     "contact": "Kontakt",
-    "privacySettings": "Datenschutzeinstellungen"
+    "privacySettings": "Datenschutzeinstellungen",
+    "technicalQuestionnaire": "Technischer Fragebogen"
+  },
+  "cta": {
+    "questionnaire": {
+      "start": "Technischen Fragebogen starten",
+      "configure": "TVAC-System konfigurieren",
+      "configureCustomVariant": "Kundenspezifische Variante konfigurieren",
+      "specify": "Systemanforderungen spezifizieren",
+      "submitDetailed": "Detaillierte Systemanforderungen übermitteln",
+      "open": "Technischen Fragebogen öffnen",
+      "talkToEngineer": "Mit Engineering sprechen",
+      "microcopy": "Für kundenspezifische TVAC- und Weltraumsimulationssysteme. Ca. 10 bis 15 Minuten. Unbekannte Felder können leer bleiben.",
+      "microcopyDetailed": "Für detaillierte kundenspezifische TVAC- und Weltraumsimulationsanforderungen. Ca. 10 bis 15 Minuten. Unbekannte Felder können leer bleiben.",
+      "microcopyShort": "Ca. 10 bis 15 Minuten. Unbekannte Felder können leer bleiben.",
+      "card": {
+        "title": "Benötigen Sie eine detaillierte Systemspezifikation?",
+        "text": "Nutzen Sie den technischen Fragebogen für kundenspezifische TVAC- und Weltraumsimulationsanforderungen. Er hilft unserem Engineering-Team, Kammergröße, DUT-Schnittstellen, thermische und vakuumtechnische Anforderungen, Medienversorgung, Zeitplan und Budget besser einzuschätzen."
+      }
+    }
   },
   "buttons": {
     "requestQuote": "Angebot anfragen",

@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/button";
 import { TechChip } from "@/components/TechChip";
 import {
   ArrowRight, Ruler, Thermometer, Gauge, Cpu, Cable, FlaskConical, Settings,
-  MessageSquare, FileCheck, Truck, Wrench,
+  MessageSquare, FileCheck, Truck, Wrench, ClipboardList, Clock,
 } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { useLanguage } from "@/components/LanguageProvider";
@@ -67,12 +67,19 @@ const CustomTVAC = () => {
         >
           <div className="flex flex-col sm:flex-row flex-wrap gap-3 pt-4">
             <Button asChild size="lg" className="font-mono text-xs tracking-wide w-full sm:w-auto">
-              <Link to={localizedPath("/contact", lang)}>{tc("buttons.discussConfiguration")}</Link>
+              <Link to={localizedPath("/tvac-questionnaire", lang)}>
+                <ClipboardList className="w-4 h-4 mr-2" />
+                {tc("cta.questionnaire.start")}
+              </Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
-              <Link to={localizedPath("/contact", lang)}>{tc("buttons.requestQuote")}</Link>
+              <Link to={localizedPath("/contact", lang)}>{tc("cta.questionnaire.talkToEngineer")}</Link>
             </Button>
           </div>
+          <p className="flex items-start gap-1.5 text-[11px] text-gray/60 leading-relaxed font-mono pt-3 max-w-xl">
+            <Clock className="w-3 h-3 mt-0.5 text-blue/60 shrink-0" />
+            <span>{tc("cta.questionnaire.microcopyDetailed")}</span>
+          </p>
           <div className="flex flex-wrap gap-2 pt-4">
             <TechChip label={t("customTvac.techChips.engineering.label")} value={t("customTvac.techChips.engineering.value")} />
             <TechChip label={t("customTvac.techChips.integration.label")} value={t("customTvac.techChips.integration.value")} />
@@ -112,6 +119,12 @@ const CustomTVAC = () => {
         {/* Mid-page CTA */}
         <CTABand title={t("customTvac.midCta.title")} description={t("customTvac.midCta.description")}>
           <Button asChild size="lg" className="font-mono text-xs tracking-wide">
+            <Link to={localizedPath("/tvac-questionnaire", lang)}>
+              <ClipboardList className="w-4 h-4 mr-2" />
+              {tc("cta.questionnaire.configure")}
+            </Link>
+          </Button>
+          <Button asChild variant="outline" size="lg">
             <Link to={localizedPath("/contact", lang)}>{tc("buttons.requestConsultation")}</Link>
           </Button>
         </CTABand>
@@ -210,10 +223,13 @@ const CustomTVAC = () => {
 
         <CTABand title={t("customTvac.cta.title")} description={t("customTvac.cta.description")}>
           <Button asChild size="lg" className="font-mono text-xs tracking-wide">
-            <Link to={localizedPath("/contact", lang)}>{tc("buttons.requestConsultation")}</Link>
+            <Link to={localizedPath("/tvac-questionnaire", lang)}>
+              <ClipboardList className="w-4 h-4 mr-2" />
+              {tc("cta.questionnaire.submitDetailed")}
+            </Link>
           </Button>
           <Button asChild variant="outline" size="lg">
-            <Link to={localizedPath("/contact", lang)}>{tc("buttons.requestQuote")}</Link>
+            <Link to={localizedPath("/contact", lang)}>{tc("buttons.requestConsultation")}</Link>
           </Button>
         </CTABand>
       </PageShell>

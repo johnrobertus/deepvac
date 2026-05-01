@@ -7,7 +7,7 @@ import { PageShell, PageHero, Section, CTABand } from "@/components/PageShell";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Button } from "@/components/ui/button";
 import { TechChip } from "@/components/TechChip";
-import { ArrowRight, Maximize, Circle, Thermometer, Gauge, Cpu, Download } from "lucide-react";
+import { ArrowRight, Maximize, Circle, Thermometer, Gauge, Cpu, Download, ClipboardList, Clock } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { useLanguage } from "@/components/LanguageProvider";
 import { getHreflangs, getCanonical, localizedPath } from "@/lib/routes";
@@ -221,12 +221,22 @@ const StandardSeries = () => {
 
         <CTABand title={t("standardSeries.cta.title")} description={t("standardSeries.cta.description")}>
           <Button asChild size="lg" className="font-mono text-xs tracking-wide">
-            <Link to={localizedPath("/contact", lang)}>{tc("buttons.requestQuote")}</Link>
+            <Link to={localizedPath("/tvac-questionnaire", lang)}>
+              <ClipboardList className="w-4 h-4 mr-2" />
+              {tc("cta.questionnaire.configureCustomVariant")}
+            </Link>
           </Button>
           <Button asChild variant="outline" size="lg">
+            <Link to={localizedPath("/contact", lang)}>{tc("buttons.requestQuote")}</Link>
+          </Button>
+          <Button asChild variant="ghost" size="lg" className="text-gray hover:text-sand">
             <Link to={localizedPath("/contact", lang)}>{tc("buttons.talkToEngineer")}</Link>
           </Button>
         </CTABand>
+        <p className="container mx-auto px-6 -mt-6 mb-12 flex items-start gap-1.5 text-[11px] text-gray/60 leading-relaxed font-mono max-w-2xl">
+          <Clock className="w-3 h-3 mt-0.5 text-blue/60 shrink-0" />
+          <span>{tc("cta.questionnaire.microcopyShort")}</span>
+        </p>
       </PageShell>
     </Layout>
   );
