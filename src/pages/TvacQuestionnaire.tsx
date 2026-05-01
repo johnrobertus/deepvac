@@ -1133,7 +1133,7 @@ export default function TvacQuestionnaire() {
           <form onSubmit={handleSubmit} onKeyDown={handleKeyDown} className="space-y-8">
             {/* Focus target on step change */}
             <div ref={stepHeadingRef} tabIndex={-1} className="outline-none focus-visible:ring-2 focus-visible:ring-blue/40 rounded-sm">
-              <div className="border border-gray/15 rounded-sm p-6 md:p-10 bg-surface/20">
+              <div className="border border-gray/25 rounded-sm p-5 sm:p-7 md:p-10 bg-surface/40 shadow-card">
                 {step === 1 && renderStep1()}
                 {step === 2 && renderStep2()}
                 {step === 3 && renderStep3()}
