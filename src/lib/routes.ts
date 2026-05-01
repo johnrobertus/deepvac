@@ -32,6 +32,7 @@ export const routeMap: readonly RouteEntry[] = [
   { en: "/careers", de: "/de/karriere" },
   { en: "/references", de: "/de/referenzen" },
   { en: "/contact", de: "/de/kontakt" },
+  { en: "/tvac-questionnaire", de: "/de/tvac-fragebogen" },
   { en: "/imprint", de: "/de/impressum" },
   { en: "/privacy-policy", de: "/de/datenschutz" },
   { en: "/terms-and-conditions", de: "/de/agb" },
