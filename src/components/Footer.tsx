@@ -46,7 +46,7 @@ export function Footer() {
               <img src={deepvacLogo} alt="Deepvac" className="h-6 w-auto" />
             </Link>
 
-            <p className="max-w-sm text-sm leading-relaxed text-gray">{t("footer.description")}</p>
+            <p className="max-w-sm text-sm leading-relaxed text-gray/90">{t("footer.description")}</p>
 
             <div className="space-y-3 pt-1 text-sm text-gray">
               <div className="flex items-start gap-3">
@@ -101,26 +101,26 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-gray/10 py-5">
+      <div className="border-t border-gray/15 py-5">
         <div className="container-wide flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-          <p className="font-mono text-xs text-gray/50">{t("footer.copyright", { year: new Date().getFullYear() })}</p>
+          <p className="font-mono text-xs text-gray/70">{t("footer.copyright", { year: new Date().getFullYear() })}</p>
 
           <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
-            <Link to={lp("/imprint")} className="text-xs text-gray/50 transition-colors hover:text-gray">
+            <Link to={lp("/imprint")} className="text-xs text-gray/75 transition-colors hover:text-sand">
               {t("footer.imprint")}
             </Link>
-            <Link to={lp("/terms-and-conditions")} className="text-xs text-gray/50 transition-colors hover:text-gray">
+            <Link to={lp("/terms-and-conditions")} className="text-xs text-gray/75 transition-colors hover:text-sand">
               {t("footer.termsAndConditions")}
             </Link>
-            <Link to={lp("/privacy-policy")} className="text-xs text-gray/50 transition-colors hover:text-gray">
+            <Link to={lp("/privacy-policy")} className="text-xs text-gray/75 transition-colors hover:text-sand">
               {t("footer.privacyPolicy")}
             </Link>
-            <Link to={lp("/media-credits")} className="text-xs text-gray/50 transition-colors hover:text-gray">
+            <Link to={lp("/media-credits")} className="text-xs text-gray/75 transition-colors hover:text-sand">
               {t("mediaCredits.footerLink")}
             </Link>
             <button
               onClick={() => setPrivacyOpen(true)}
-              className="text-xs text-gray/50 transition-colors hover:text-gray"
+              className="text-xs text-gray/75 transition-colors hover:text-sand"
             >
               {t("footer.privacySettings")}
             </button>
