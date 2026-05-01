@@ -21,6 +21,7 @@
     "savePdf": "Kopie als PDF speichern",
     "savePdfHint": "Optional — öffnet den Druckdialog Ihres Browsers. Mit dem Absenden wird Ihr vollständiger Fragebogen bereits an Deepvac übermittelt.",
     "consentRequired": "Bitte akzeptieren Sie die Datenschutzerklärung, um abzusenden.",
+    "missingRequired": "Bitte vervollständigen Sie die Pflichtfelder in Schritt 1.",
     "submitHelp": "Mit dem Absenden geht Ihr vollständiger Fragebogen direkt an Deepvac. Sie müssen keine PDF oder E-Mail manuell senden."
   },
   "success": {
