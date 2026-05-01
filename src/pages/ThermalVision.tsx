@@ -109,7 +109,7 @@ const ThermalVision = () => {
                 <div className="grid grid-cols-2 gap-6">
                   {specs.map((s) => (
                     <div key={s.label}>
-                      <span className="mono-label text-gray/50 text-[10px]">
+                      <span className="mono-label">
                         {s.label}
                       </span>
                       <p className="text-sm font-medium text-sand mt-1">{s.value}</p>

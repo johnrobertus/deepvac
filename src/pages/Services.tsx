@@ -95,7 +95,7 @@ const Services = () => {
                     </Button>
                   </div>
                   <div className="border-l border-gray/10 p-8 bg-surface-raised/30 flex flex-col justify-center">
-                    <span className="mono-label text-gray/50 mb-3">{t("overview.keyDeliverables")}</span>
+                    <span className="mono-label mb-3">{t("overview.keyDeliverables")}</span>
                     <ul className="space-y-2.5">
                       {s.deliverables.map((d: string) => (
                         <li key={d} className="flex items-start gap-2 text-xs text-gray leading-relaxed">
