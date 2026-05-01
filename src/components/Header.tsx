@@ -93,8 +93,9 @@ function DropdownMenu({
         aria-expanded={open}
         aria-haspopup="menu"
         className={cn(
-          "flex items-center gap-1 text-sm transition-colors duration-200",
+          "relative flex items-center gap-1 text-sm transition-colors duration-200 py-1",
           active || open ? "text-sand" : "text-gray hover:text-sand",
+          active && "after:content-[''] after:absolute after:left-0 after:right-3 after:-bottom-1 after:h-px after:bg-blue/60",
         )}
       >
         <span>{label}</span>
@@ -139,22 +140,22 @@ function MobileSection({ label, items, pathname, lang, t }: { label: string; ite
   }, [hasActiveChild]);
 
   return (
-    <div className="border-b border-gray/10 pb-4 last:border-b-0 last:pb-0">
+    <div className="border-b border-gray/15 pb-4 last:border-b-0 last:pb-0">
       <button
         type="button"
         onClick={() => setOpen((prev) => !prev)}
         aria-expanded={open}
         className={cn(
-          "flex w-full items-center justify-between text-sm transition-colors",
+          "flex w-full items-center justify-between text-base py-2 transition-colors",
           hasActiveChild ? "text-sand" : "text-gray hover:text-sand",
         )}
       >
         <span>{label}</span>
-        <ChevronDown className={cn("h-3 w-3 transition-transform duration-200", open && "rotate-180")} />
+        <ChevronDown className={cn("h-3.5 w-3.5 transition-transform duration-200", open && "rotate-180")} />
       </button>
 
       {open && (
-        <div className="space-y-2 pl-4 pt-3">
+        <div className="space-y-1 pl-4 pt-2">
           {items.map((item) => {
             const locHref = localizedPath(item.href, lang);
             const active = isActivePath(pathname, item.href, lang);
@@ -163,7 +164,7 @@ function MobileSection({ label, items, pathname, lang, t }: { label: string; ite
               <Link
                 key={item.href}
                 to={locHref}
-                className={cn("block text-sm transition-colors", active ? "text-sand" : "text-gray/70 hover:text-sand")}
+                className={cn("block text-base py-2 transition-colors", active ? "text-sand" : "text-gray/85 hover:text-sand")}
               >
                 {t(item.labelKey)}
               </Link>
@@ -252,8 +253,8 @@ export function Header() {
                 key={link.href}
                 to={locHref}
                 className={cn(
-                  "rounded-sm text-sm transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background",
-                  active ? "text-sand" : "text-gray hover:text-sand",
+                  "relative rounded-sm text-sm transition-colors duration-200 py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+                  active ? "text-sand after:content-[''] after:absolute after:left-0 after:right-0 after:-bottom-1 after:h-px after:bg-blue/60" : "text-gray hover:text-sand",
                 )}
               >
                 {t(link.labelKey)}
@@ -308,7 +309,7 @@ export function Header() {
             <MobileSection label={t("nav.products")} items={productsMenu} pathname={pathname} lang={lang} t={t} />
             <MobileSection label={t("nav.services")} items={servicesMenu} pathname={pathname} lang={lang} t={t} />
 
-            <div className="space-y-4">
+            <div className="space-y-1">
               {navLinks.map((link) => {
                 const active = isActivePath(pathname, link.href, lang);
                 const locHref = localizedPath(link.href, lang);
@@ -318,7 +319,7 @@ export function Header() {
                     key={link.href}
                     to={locHref}
                     className={cn(
-                      "block text-sm transition-colors",
+                      "block text-base py-2 transition-colors",
                       active ? "text-sand" : "text-gray hover:text-sand",
                     )}
                   >

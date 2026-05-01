@@ -251,7 +251,7 @@
   }
 
   .section-divider {
-    @apply w-full h-px bg-gradient-to-r from-transparent via-gray/20 to-transparent;
+    @apply w-full h-px bg-gradient-to-r from-transparent via-gray/30 to-transparent;
   }
 
   /* Scroll reveal */
