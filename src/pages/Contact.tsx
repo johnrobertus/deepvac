@@ -33,14 +33,14 @@ function FormField({
 }) {
   return (
     <div className="space-y-2">
-      <label className="mono-label">{label}{required && <span className="text-blue ml-1">*</span>}</label>
+      <label className="mono-label text-gray/90">{label}{required && <span className="text-blue ml-1">*</span>}</label>
       <input
         type={type} name={name} required={required} value={value}
         onChange={(e) => onChange(e.target.value)}
-        className={`w-full bg-background border rounded-sm px-4 py-3 text-sm text-sand placeholder:text-gray/30 focus:outline-none focus:border-blue/40 focus:ring-1 focus:ring-blue/20 transition-all duration-200 ${error ? "border-red-400/60" : "border-gray/15"}`}
+        className={`w-full bg-surface border rounded-sm px-4 py-3 text-base text-sand placeholder:text-gray/55 hover:border-gray/50 focus:outline-none focus:bg-surface-raised focus:border-blue/70 focus:ring-2 focus:ring-blue/25 transition-colors duration-200 ${error ? "border-red-400/60" : "border-gray/30"}`}
         placeholder={placeholder} aria-invalid={!!error}
       />
-      {error && <p className="text-xs text-red-400">{error}</p>}
+      {error && <p className="text-[13px] text-red-400">{error}</p>}
     </div>
   );
 }
@@ -49,8 +49,8 @@ function SelectField({ label, options, value, onChange }: { label: string; optio
   const { t } = useTranslation("contact");
   return (
     <div className="space-y-2">
-      <label className="mono-label">{label}</label>
-      <select value={value} onChange={(e) => onChange(e.target.value)} className="w-full bg-background border border-gray/15 rounded-sm px-4 py-3 text-sm text-sand focus:outline-none focus:border-blue/40 focus:ring-1 focus:ring-blue/20 transition-all duration-200 appearance-none">
+      <label className="mono-label text-gray/90">{label}</label>
+      <select value={value} onChange={(e) => onChange(e.target.value)} className="w-full bg-surface border border-gray/30 rounded-sm px-4 py-3 text-base text-sand hover:border-gray/50 focus:outline-none focus:bg-surface-raised focus:border-blue/70 focus:ring-2 focus:ring-blue/25 transition-colors duration-200 appearance-none">
         <option value="" className="bg-surface text-gray">{t("qualifiers.select")}</option>
         {options.map((opt) => <option key={opt} value={opt} className="bg-surface text-sand">{opt}</option>)}
       </select>
@@ -225,7 +225,7 @@ const Contact = () => {
 
               <div className="space-y-2 pt-2">
                 <h2 className="text-2xl font-medium text-sand tracking-tight">{t("formTitle")}</h2>
-                <p className="text-sm text-gray">{t("formDescription")}</p>
+                <p className="text-sm text-gray/85 leading-relaxed">{t("formDescription")}</p>
               </div>
 
               <form className="space-y-5" onSubmit={handleSubmit}>
@@ -240,7 +240,7 @@ const Contact = () => {
                 <FormField label={tc("form.company")} placeholder={tc("form.placeholders.company")} required name="company" value={form.company} onChange={set("company")} error={validationErrors.company} />
                 <FormField label={tc("form.projectApplication")} placeholder={tc("form.placeholders.project")} name="project" value={form.project} onChange={set("project")} />
 
-                <div className="border-t border-gray/10 pt-5 space-y-5">
+                <div className="border-t border-gray/20 pt-5 space-y-5">
                   <span className="mono-label text-blue">{t("qualifiers.eyebrow")}</span>
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
                     <SelectField label={t("qualifiers.chamberType")} options={chamberOptions} value={form.chamberType} onChange={set("chamberType")} />
@@ -250,13 +250,13 @@ const Contact = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <label className="mono-label">{tc("form.message")}</label>
+                  <label className="mono-label text-gray/90">{tc("form.message")}</label>
                   <textarea
                     value={form.message} onChange={(e) => set("message")(e.target.value)}
-                    className={`w-full bg-background border rounded-sm px-4 py-3 text-sm text-sand placeholder:text-gray/30 focus:outline-none focus:border-blue/40 focus:ring-1 focus:ring-blue/20 transition-all duration-200 min-h-[120px] resize-y ${validationErrors.message ? "border-red-400/60" : "border-gray/15"}`}
+                    className={`w-full bg-surface border rounded-sm px-4 py-3 text-base text-sand placeholder:text-gray/55 hover:border-gray/50 focus:outline-none focus:bg-surface-raised focus:border-blue/70 focus:ring-2 focus:ring-blue/25 transition-colors duration-200 min-h-[120px] resize-y ${validationErrors.message ? "border-red-400/60" : "border-gray/30"}`}
                     placeholder={tc("form.placeholders.messageDetailed")} aria-invalid={!!validationErrors.message}
                   />
-                  {validationErrors.message && <p className="text-xs text-red-400">{validationErrors.message}</p>}
+                  {validationErrors.message && <p className="text-[13px] text-red-400">{validationErrors.message}</p>}
                 </div>
 
                 <div aria-hidden="true" style={{ position: "absolute", left: "-9999px", top: "-9999px", opacity: 0, height: 0, overflow: "hidden" }}>
@@ -267,17 +267,17 @@ const Contact = () => {
                 <div ref={turnstileRef} />
 
                 <label className="flex items-start gap-3 cursor-pointer group">
-                  <input type="checkbox" checked={consent} onChange={(e) => setConsent(e.target.checked)} className="mt-0.5 w-4 h-4 accent-blue rounded-sm border-gray/30" />
-                  <span className="text-xs text-gray/60 leading-relaxed group-hover:text-gray/80 transition-colors">{tc("form.consentText")}</span>
+                  <input type="checkbox" checked={consent} onChange={(e) => setConsent(e.target.checked)} className="mt-0.5 w-[18px] h-[18px] accent-blue rounded-sm border-gray/40" />
+                  <span className="text-helper group-hover:text-gray transition-colors">{tc("form.consentText")}</span>
                 </label>
 
                 <div className="flex items-center gap-4 pt-2">
                   <Button size="lg" className="font-mono text-xs tracking-wide" disabled={sending}>
                     {sending ? (<><Loader2 className="w-4 h-4 mr-2 animate-spin" /> {tc("buttons.sending")}</>) : tc("buttons.sendInquiry")}
                   </Button>
-                  <div className="flex items-center gap-1.5 text-gray/40">
+                  <div className="flex items-center gap-1.5 text-gray/70">
                     <Shield className="w-3 h-3" />
-                    <span className="text-[10px] font-mono leading-snug">{tc("form.confidentialNote")}</span>
+                    <span className="text-[11px] font-mono leading-snug">{tc("form.confidentialNote")}</span>
                   </div>
                 </div>
               </form>
@@ -336,9 +336,9 @@ const Contact = () => {
           <SectionHeader eyebrow={t("faq.eyebrow")} title={t("faq.title")} className="mb-10" />
           <Accordion type="single" collapsible className="max-w-3xl">
             {faqItems.map((faq, i) => (
-              <AccordionItem key={i} value={`faq-${i}`} className="border-gray/15">
-                <AccordionTrigger className="text-sand text-sm text-left hover:no-underline">{faq.q}</AccordionTrigger>
-                <AccordionContent className="text-gray text-sm leading-relaxed">{faq.a}</AccordionContent>
+              <AccordionItem key={i} value={`faq-${i}`} className="border-gray/22">
+                <AccordionTrigger className="text-sand text-sm font-medium text-left hover:no-underline">{faq.q}</AccordionTrigger>
+                <AccordionContent className="text-gray/90 text-sm leading-relaxed">{faq.a}</AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
