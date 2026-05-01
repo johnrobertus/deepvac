@@ -92,7 +92,7 @@
     "description": "Kalibrierte Infrarot-Bildgebung unter Hochvakuum-Bedingungen. Thermalkamera-Integration für neue und bestehende Thermovakuumsysteme."
   },
   "questionnaire": {
-    "title": "TVAC-System-Fragebogen | Deepvac",
-    "description": "Detaillierte technische Anfrage für Thermovakuum- und Weltraumsimulationssysteme. Teilen Sie Ihre Konfigurationsabsicht mit dem Deepvac-Engineering-Team."
+    "title": "Technischer TVAC-Fragebogen | Deepvac",
+    "description": "Übermitteln Sie detaillierte technische Anforderungen für ein kundenspezifisches Thermovakuum- oder Weltraumsimulationssystem. Unbekannte Angaben können leer bleiben."
   }
 }
