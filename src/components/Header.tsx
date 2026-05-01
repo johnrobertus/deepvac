@@ -201,6 +201,7 @@ export function Header() {
 
   const homePath = localizedPath("/", lang);
   const contactPath = localizedPath("/contact", lang);
+  const questionnairePath = localizedPath("/tvac-questionnaire", lang);
 
   const langButtonClass = (active: boolean) =>
     cn(
