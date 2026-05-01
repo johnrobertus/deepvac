@@ -37,12 +37,20 @@ const externalDimensionsByShape: Record<string, string[]> = {
   cylindrical: ["600 × 1800 × 900", "700 × 1900 × 1000", "900 × 1900 × 1130", "1100 × 1900 × 1300", "1400 × 1900 × 1500", "1700 × 2100 × 1860"],
 };
 
-/* ---------- Reusable input class strings (match Contact.tsx) ---------- */
+/* ---------- Reusable input class strings (questionnaire-local) ----------
+   Tuned for readability on the dark Deepvac CI:
+   - raised surface bg vs page background
+   - clearly visible default border + hover state
+   - stronger blue focus ring
+   - readable placeholder + base text size                                  */
 const baseInput =
-  "w-full bg-background border border-gray/15 rounded-sm px-4 py-3 text-sm text-sand placeholder:text-gray/30 focus:outline-none focus:border-blue/40 focus:ring-1 focus:ring-blue/20 transition-all duration-200";
-const baseSelect = `${baseInput} appearance-none`;
-const baseTextarea = `${baseInput} min-h-[110px] resize-y`;
-const errorBorder = "border-red-400/60";
+  "w-full bg-surface border border-gray/30 rounded-sm px-4 py-3 text-base text-sand placeholder:text-gray/55 hover:border-gray/50 focus:outline-none focus:border-blue/70 focus:bg-surface-raised focus:ring-2 focus:ring-blue/25 disabled:opacity-60 disabled:cursor-not-allowed transition-colors duration-200";
+const baseSelect = `${baseInput} appearance-none pr-10`;
+const baseTextarea = `${baseInput} min-h-[120px] leading-relaxed resize-y`;
+const errorBorder = "border-red-400/70";
+
+/* Inline sub-label (lower-case helper labels above inputs) */
+const subLabel = "text-[13px] font-medium text-gray/85";
 
 /* ---------- Form state shape ---------- */
 interface OtherCheck {
@@ -204,9 +212,10 @@ const initialForm: FormState = {
 /* ---------- Small UI primitives ---------- */
 function MonoLabel({ children, required }: { children: React.ReactNode; required?: boolean }) {
   return (
-    <label className="mono-label">
+    <label className="block font-mono text-[11px] uppercase tracking-[0.08em] text-gray/90">
       {children}
-      {required && <span className="text-blue ml-1">*</span>}
+      {required && <span className="text-blue ml-1 text-sm align-middle" aria-hidden="true">*</span>}
+      {required && <span className="sr-only"> (required)</span>}
     </label>
   );
 }
@@ -215,14 +224,14 @@ function CheckItem({
   label, checked, onChange, nested,
 }: { label: React.ReactNode; checked: boolean; onChange: (v: boolean) => void; nested?: boolean }) {
   return (
-    <label className={cn("flex items-center gap-2 cursor-pointer text-sm text-sand/90 hover:text-sand transition-colors", nested && "ml-6")}>
+    <label className={cn("flex items-center gap-2.5 cursor-pointer text-sm text-sand hover:text-sand py-1 transition-colors", nested && "ml-6")}>
       <input
         type="checkbox"
         checked={checked}
         onChange={(e) => onChange(e.target.checked)}
-        className="w-4 h-4 accent-blue rounded-sm border-gray/30 shrink-0"
+        className="w-[18px] h-[18px] accent-blue rounded-sm border-gray/40 shrink-0 cursor-pointer"
       />
-      <span>{label}</span>
+      <span className="leading-snug">{label}</span>
     </label>
   );
 }
@@ -238,7 +247,7 @@ function OtherInput({
         type="text"
         value={value.text}
         onChange={(e) => onText(e.target.value)}
-        className={cn(baseInput, "flex-1 min-w-[160px] py-2")}
+        className={cn(baseInput, "flex-1 min-w-[180px] py-2 text-sm")}
         placeholder={placeholder}
       />
     </div>
@@ -247,11 +256,11 @@ function OtherInput({
 
 function FieldGroup({ children, cols = 1 }: { children: React.ReactNode; cols?: 1 | 2 | 3 | 4 }) {
   const grid = { 1: "grid-cols-1", 2: "grid-cols-1 md:grid-cols-2", 3: "grid-cols-1 md:grid-cols-3", 4: "grid-cols-1 md:grid-cols-2 lg:grid-cols-4" }[cols];
-  return <div className={cn("grid gap-5", grid)}>{children}</div>;
+  return <div className={cn("grid gap-5 md:gap-6", grid)}>{children}</div>;
 }
 
 function SubSectionTitle({ children }: { children: React.ReactNode }) {
-  return <h3 className="text-base font-medium text-sand tracking-tight border-b border-gray/15 pb-3 mb-5">{children}</h3>;
+  return <h3 className="text-lg md:text-xl font-medium text-sand tracking-tight border-b border-gray/25 pb-3 mb-6">{children}</h3>;
 }
 
 /* ---------- The page ---------- */
@@ -454,9 +463,9 @@ export default function TvacQuestionnaire() {
 
   /* ---------- Step renderers ---------- */
   const StepNote = () => (
-    <p className="flex items-start gap-2 text-xs text-gray/60 mb-6">
-      <Info className="w-3.5 h-3.5 mt-0.5 shrink-0 text-blue/60" />
-      <span>{t("wizard.leaveBlankNote")}</span>
+    <p className="flex items-start gap-2.5 text-sm text-gray/85 mb-7">
+      <Info className="w-4 h-4 mt-0.5 shrink-0 text-blue/80" />
+      <span className="leading-relaxed">{t("wizard.leaveBlankNote")}</span>
     </p>
   );
 
@@ -577,7 +586,7 @@ export default function TvacQuestionnaire() {
 
             <div className="space-y-2">
               <MonoLabel>
-                {t("s2.external")} <span className="text-gray/50 font-normal normal-case tracking-normal ml-1">{t("s2.externalHint")}</span>
+                {t("s2.external")} <span className="text-gray/75 font-normal normal-case tracking-normal ml-1">{t("s2.externalHint")}</span>
               </MonoLabel>
               <select
                 className={cn(baseSelect, !form.chamberShape && "opacity-60 cursor-not-allowed")}
@@ -593,7 +602,7 @@ export default function TvacQuestionnaire() {
 
             {form.externalDimensions === "Other" && form.chamberShape === "cubic" && (
               <div className="border border-gray/15 rounded-sm p-4 space-y-3">
-                <span className="mono-label text-blue">{t("s2.cubicLabel")}</span>
+                <span className="block font-mono text-[11px] uppercase tracking-[0.08em] text-blue">{t("s2.cubicLabel")}</span>
                 <FieldGroup cols={3}>
                   <div className="space-y-2"><MonoLabel>{t("common.length")}</MonoLabel><input className={baseInput} placeholder="L" inputMode="decimal" value={form.cubicL} onChange={(e) => set("cubicL")(e.target.value)} /></div>
                   <div className="space-y-2"><MonoLabel>{t("common.width")}</MonoLabel><input className={baseInput} placeholder="W" inputMode="decimal" value={form.cubicW} onChange={(e) => set("cubicW")(e.target.value)} /></div>
@@ -603,7 +612,7 @@ export default function TvacQuestionnaire() {
             )}
             {form.externalDimensions === "Other" && form.chamberShape === "cylindrical" && (
               <div className="border border-gray/15 rounded-sm p-4 space-y-3">
-                <span className="mono-label text-blue">{t("s2.cylindricalLabel")}</span>
+                <span className="block font-mono text-[11px] uppercase tracking-[0.08em] text-blue">{t("s2.cylindricalLabel")}</span>
                 <FieldGroup cols={2}>
                   <div className="space-y-2"><MonoLabel>{t("common.diameter")}</MonoLabel><input className={baseInput} placeholder="D" inputMode="decimal" value={form.cylDiameter} onChange={(e) => set("cylDiameter")(e.target.value)} /></div>
                   <div className="space-y-2"><MonoLabel>{t("common.length")}</MonoLabel><input className={baseInput} placeholder="L" inputMode="decimal" value={form.cylLength} onChange={(e) => set("cylLength")(e.target.value)} /></div>
@@ -735,8 +744,8 @@ export default function TvacQuestionnaire() {
         <div className="space-y-2">
           <MonoLabel>{t("s3.tempRange")}</MonoLabel>
           <FieldGroup cols={2}>
-            <div className="space-y-1"><label className="text-xs text-gray">{t("common.min")}</label><input className={baseInput} placeholder={t("s3.tempMinPh")} value={form.tempMin} onChange={(e) => set("tempMin")(e.target.value)} /></div>
-            <div className="space-y-1"><label className="text-xs text-gray">{t("common.max")}</label><input className={baseInput} placeholder={t("s3.tempMaxPh")} value={form.tempMax} onChange={(e) => set("tempMax")(e.target.value)} /></div>
+            <div className="space-y-1"><label className="text-[13px] text-gray/85">{t("common.min")}</label><input className={baseInput} placeholder={t("s3.tempMinPh")} value={form.tempMin} onChange={(e) => set("tempMin")(e.target.value)} /></div>
+            <div className="space-y-1"><label className="text-[13px] text-gray/85">{t("common.max")}</label><input className={baseInput} placeholder={t("s3.tempMaxPh")} value={form.tempMax} onChange={(e) => set("tempMax")(e.target.value)} /></div>
           </FieldGroup>
         </div>
 
@@ -744,22 +753,22 @@ export default function TvacQuestionnaire() {
           <div className="space-y-3">
             <MonoLabel>{t("s3.thermalPlate")}</MonoLabel>
             <div className="space-y-2">
-              <label className="text-xs text-gray">{t("s3.plateDims")}</label>
+              <label className="text-[13px] text-gray/85">{t("s3.plateDims")}</label>
               <select className={cn(baseSelect, !form.chamberShape && "opacity-60 cursor-not-allowed")} disabled={!form.chamberShape} value={form.plateDimensions} onChange={(e) => set("plateDimensions")(e.target.value)}>
                 <option value="">{form.chamberShape ? t("common.selectSize") : t("common.selectOption")}</option>
                 {plateOptions.map((o) => <option key={o} value={o}>{o}</option>)}
                 {form.chamberShape && <option value="Other">{t("common.other")}</option>}
               </select>
             </div>
-            <p className="text-xs text-gray/60">{t("s3.plateNote")}</p>
+            <p className="text-[13px] text-gray/75">{t("s3.plateNote")}</p>
             {form.plateDimensions === "Other" && (
               <input className={baseInput} placeholder={t("s3.plateCustomPh")} value={form.plateCustom} onChange={(e) => set("plateCustom")(e.target.value)} />
             )}
             <FieldGroup cols={2}>
-              <div className="space-y-1"><label className="text-xs text-gray">{t("s3.plateTempMin")}</label><input type="number" className={baseInput} placeholder="min. °C" value={form.plateTempMin} onChange={(e) => set("plateTempMin")(e.target.value)} /></div>
-              <div className="space-y-1"><label className="text-xs text-gray">{t("s3.plateTempMax")}</label><input type="number" className={baseInput} placeholder="max. °C" value={form.plateTempMax} onChange={(e) => set("plateTempMax")(e.target.value)} /></div>
+              <div className="space-y-1"><label className="text-[13px] text-gray/85">{t("s3.plateTempMin")}</label><input type="number" className={baseInput} placeholder="min. °C" value={form.plateTempMin} onChange={(e) => set("plateTempMin")(e.target.value)} /></div>
+              <div className="space-y-1"><label className="text-[13px] text-gray/85">{t("s3.plateTempMax")}</label><input type="number" className={baseInput} placeholder="max. °C" value={form.plateTempMax} onChange={(e) => set("plateTempMax")(e.target.value)} /></div>
             </FieldGroup>
-            <span className="mono-label text-blue">{t("s3.plateCooling")}</span>
+            <span className="block font-mono text-[11px] uppercase tracking-[0.08em] text-blue">{t("s3.plateCooling")}</span>
             <div className="flex flex-col gap-2">
               {plateCoolOpts.map((o, i) => <CheckItem key={o} label={o} checked={form.plateCooling[i]} onChange={() => toggleAt("plateCooling", i)} />)}
               <OtherInput value={form.plateCoolingOther} {...setOther("plateCoolingOther")} placeholder={t("common.specify")} />
@@ -768,16 +777,16 @@ export default function TvacQuestionnaire() {
           <div className="space-y-3">
             <MonoLabel>{t("s3.shroud")}</MonoLabel>
             <div className="space-y-2">
-              <label className="text-xs text-gray">{t("s3.shroudConfig")}</label>
+              <label className="text-[13px] text-gray/85">{t("s3.shroudConfig")}</label>
               <select className={baseSelect} value={form.shroudConfig} onChange={(e) => set("shroudConfig")(e.target.value)}>
                 <option value="">{t("common.selectOption")}</option>{shroudCfg.map((o) => <option key={o} value={o}>{o}</option>)}
               </select>
             </div>
             <FieldGroup cols={2}>
-              <div className="space-y-1"><label className="text-xs text-gray">{t("s3.plateTempMin")}</label><input type="number" className={baseInput} placeholder="min. °C" value={form.shroudTempMin} onChange={(e) => set("shroudTempMin")(e.target.value)} /></div>
-              <div className="space-y-1"><label className="text-xs text-gray">{t("s3.plateTempMax")}</label><input type="number" className={baseInput} placeholder="max. °C" value={form.shroudTempMax} onChange={(e) => set("shroudTempMax")(e.target.value)} /></div>
+              <div className="space-y-1"><label className="text-[13px] text-gray/85">{t("s3.plateTempMin")}</label><input type="number" className={baseInput} placeholder="min. °C" value={form.shroudTempMin} onChange={(e) => set("shroudTempMin")(e.target.value)} /></div>
+              <div className="space-y-1"><label className="text-[13px] text-gray/85">{t("s3.plateTempMax")}</label><input type="number" className={baseInput} placeholder="max. °C" value={form.shroudTempMax} onChange={(e) => set("shroudTempMax")(e.target.value)} /></div>
             </FieldGroup>
-            <span className="mono-label text-blue">{t("s3.shroudCooling")}</span>
+            <span className="block font-mono text-[11px] uppercase tracking-[0.08em] text-blue">{t("s3.shroudCooling")}</span>
             <div className="flex flex-col gap-2">
               {shroudCool.map((o, i) => <CheckItem key={o} label={o} checked={form.shroudCooling[i]} onChange={() => toggleAt("shroudCooling", i)} />)}
               <OtherInput value={form.shroudCoolingOther} {...setOther("shroudCoolingOther")} placeholder={t("common.specify")} />
@@ -825,12 +834,12 @@ export default function TvacQuestionnaire() {
             <div className="space-y-3">
               <MonoLabel>{t("s4.elec")}</MonoLabel>
               <FieldGroup cols={4}>
-                <div className="space-y-1"><label className="text-xs text-gray">{t("common.quantity")}</label><input type="number" className={baseInput} placeholder={t("common.qty")} value={form.elecQty} onChange={(e) => set("elecQty")(e.target.value)} /></div>
-                <div className="space-y-1"><label className="text-xs text-gray">{t("s4.elecVoltage")}</label><input className={baseInput} placeholder="V" value={form.elecVoltage} onChange={(e) => set("elecVoltage")(e.target.value)} /></div>
-                <div className="space-y-1"><label className="text-xs text-gray">{t("s4.elecCurrent")}</label><input className={baseInput} placeholder="A" value={form.elecCurrent} onChange={(e) => set("elecCurrent")(e.target.value)} /></div>
-                <div className="space-y-1"><label className="text-xs text-gray">{t("s4.elecNotes")}</label><input className={baseInput} placeholder={t("s4.elecNotesPh")} value={form.elecNotes} onChange={(e) => set("elecNotes")(e.target.value)} /></div>
+                <div className="space-y-1"><label className="text-[13px] text-gray/85">{t("common.quantity")}</label><input type="number" className={baseInput} placeholder={t("common.qty")} value={form.elecQty} onChange={(e) => set("elecQty")(e.target.value)} /></div>
+                <div className="space-y-1"><label className="text-[13px] text-gray/85">{t("s4.elecVoltage")}</label><input className={baseInput} placeholder="V" value={form.elecVoltage} onChange={(e) => set("elecVoltage")(e.target.value)} /></div>
+                <div className="space-y-1"><label className="text-[13px] text-gray/85">{t("s4.elecCurrent")}</label><input className={baseInput} placeholder="A" value={form.elecCurrent} onChange={(e) => set("elecCurrent")(e.target.value)} /></div>
+                <div className="space-y-1"><label className="text-[13px] text-gray/85">{t("s4.elecNotes")}</label><input className={baseInput} placeholder={t("s4.elecNotesPh")} value={form.elecNotes} onChange={(e) => set("elecNotes")(e.target.value)} /></div>
               </FieldGroup>
-              <span className="mono-label text-blue">{t("s4.elecConnector")}</span>
+              <span className="block font-mono text-[11px] uppercase tracking-[0.08em] text-blue">{t("s4.elecConnector")}</span>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 {elecConn.map((o, i) => <CheckItem key={o} label={o} checked={form.elecConnector[i]} onChange={() => toggleAt("elecConnector", i)} />)}
                 <OtherInput value={form.elecConnectorOther} {...setOther("elecConnectorOther")} placeholder={t("common.specify")} />
@@ -840,17 +849,17 @@ export default function TvacQuestionnaire() {
             <FieldGroup cols={2}>
               <div className="space-y-3">
                 <MonoLabel>{t("s4.rf")}</MonoLabel>
-                <span className="mono-label text-blue">{t("common.type")}</span>
+                <span className="block font-mono text-[11px] uppercase tracking-[0.08em] text-blue">{t("common.type")}</span>
                 <div className="grid grid-cols-2 gap-2">{rfOpts.map((o, i) => <CheckItem key={o} label={o} checked={form.rfTypes[i]} onChange={() => toggleAt("rfTypes", i)} />)}</div>
                 <OtherInput value={form.rfTypeOther} {...setOther("rfTypeOther")} placeholder={t("common.specify")} />
-                <div className="space-y-1"><label className="text-xs text-gray">{t("common.quantity")}</label><input className={baseInput} placeholder={t("common.qty")} value={form.rfQty} onChange={(e) => set("rfQty")(e.target.value)} /></div>
+                <div className="space-y-1"><label className="text-[13px] text-gray/85">{t("common.quantity")}</label><input className={baseInput} placeholder={t("common.qty")} value={form.rfQty} onChange={(e) => set("rfQty")(e.target.value)} /></div>
               </div>
               <div className="space-y-3">
                 <MonoLabel>{t("s4.fiber")}</MonoLabel>
-                <span className="mono-label text-blue">{t("common.type")}</span>
+                <span className="block font-mono text-[11px] uppercase tracking-[0.08em] text-blue">{t("common.type")}</span>
                 <div className="grid grid-cols-2 gap-2">{fiberOpts.map((o, i) => <CheckItem key={o} label={o} checked={form.fiberTypes[i]} onChange={() => toggleAt("fiberTypes", i)} />)}</div>
                 <OtherInput value={form.fiberTypeOther} {...setOther("fiberTypeOther")} placeholder={t("common.specify")} />
-                <div className="space-y-1"><label className="text-xs text-gray">{t("common.quantity")}</label><input className={baseInput} placeholder={t("common.qty")} value={form.fiberQty} onChange={(e) => set("fiberQty")(e.target.value)} /></div>
+                <div className="space-y-1"><label className="text-[13px] text-gray/85">{t("common.quantity")}</label><input className={baseInput} placeholder={t("common.qty")} value={form.fiberQty} onChange={(e) => set("fiberQty")(e.target.value)} /></div>
               </div>
             </FieldGroup>
 
@@ -858,16 +867,16 @@ export default function TvacQuestionnaire() {
               <div className="space-y-3">
                 <MonoLabel>{t("s4.fluid")}</MonoLabel>
                 <FieldGroup cols={2}>
-                  <div className="space-y-1"><label className="text-xs text-gray">{t("common.quantity")}</label><input className={baseInput} placeholder={t("common.qty")} value={form.fluidQty} onChange={(e) => set("fluidQty")(e.target.value)} /></div>
-                  <div className="space-y-1"><label className="text-xs text-gray">{t("s4.fluidConn")}</label><input className={baseInput} placeholder={t("s4.fluidConnPh")} value={form.fluidConnection} onChange={(e) => set("fluidConnection")(e.target.value)} /></div>
+                  <div className="space-y-1"><label className="text-[13px] text-gray/85">{t("common.quantity")}</label><input className={baseInput} placeholder={t("common.qty")} value={form.fluidQty} onChange={(e) => set("fluidQty")(e.target.value)} /></div>
+                  <div className="space-y-1"><label className="text-[13px] text-gray/85">{t("s4.fluidConn")}</label><input className={baseInput} placeholder={t("s4.fluidConnPh")} value={form.fluidConnection} onChange={(e) => set("fluidConnection")(e.target.value)} /></div>
                 </FieldGroup>
               </div>
               <div className="space-y-3">
                 <MonoLabel>{t("s4.motion")}</MonoLabel>
-                <span className="mono-label text-blue">{t("common.type")}</span>
+                <span className="block font-mono text-[11px] uppercase tracking-[0.08em] text-blue">{t("common.type")}</span>
                 <div className="grid grid-cols-2 gap-2">{motionOpts.map((o, i) => <CheckItem key={o} label={o} checked={form.motionTypes[i]} onChange={() => toggleAt("motionTypes", i)} />)}</div>
                 <OtherInput value={form.motionTypeOther} {...setOther("motionTypeOther")} placeholder={t("common.specify")} />
-                <div className="space-y-1"><label className="text-xs text-gray">{t("common.quantity")}</label><input className={baseInput} placeholder={t("common.qty")} value={form.motionQty} onChange={(e) => set("motionQty")(e.target.value)} /></div>
+                <div className="space-y-1"><label className="text-[13px] text-gray/85">{t("common.quantity")}</label><input className={baseInput} placeholder={t("common.qty")} value={form.motionQty} onChange={(e) => set("motionQty")(e.target.value)} /></div>
               </div>
             </FieldGroup>
           </div>
@@ -882,7 +891,7 @@ export default function TvacQuestionnaire() {
                 <select className={baseSelect} value={form.remoteAccess} onChange={(e) => set("remoteAccess")(e.target.value)}>
                   <option value="">{t("common.selectOption")}</option>{yesNo.map((o) => <option key={o} value={o}>{o}</option>)}
                 </select>
-                <span className="mono-label text-blue">{t("s4.remoteAccess")}</span>
+                <span className="block font-mono text-[11px] uppercase tracking-[0.08em] text-blue">{t("s4.remoteAccess")}</span>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">{remoteOpts.map((o, i) => <CheckItem key={o} label={o} checked={form.remoteOptions[i]} onChange={() => toggleAt("remoteOptions", i)} />)}</div>
               </div>
               <div className="space-y-2">
@@ -997,14 +1006,14 @@ export default function TvacQuestionnaire() {
           </FieldGroup>
         </div>
 
-        <div className="border-t border-gray/15 pt-6 space-y-4">
+        <div className="border-t border-gray/25 pt-6 space-y-4">
           <label className="flex items-start gap-3 cursor-pointer group">
-            <input type="checkbox" checked={form.consent} onChange={(e) => set("consent")(e.target.checked)} className="mt-0.5 w-4 h-4 accent-blue rounded-sm border-gray/30 focus:outline-none focus:ring-2 focus:ring-blue/40" />
-            <span className="text-xs text-gray/70 leading-relaxed group-hover:text-gray/90 transition-colors">
-              {t("s5.consent")} <span className="text-blue ml-1">*</span>
+            <input type="checkbox" checked={form.consent} onChange={(e) => set("consent")(e.target.checked)} className="mt-0.5 w-[18px] h-[18px] accent-blue rounded-sm border-gray/40 focus:outline-none focus:ring-2 focus:ring-blue/40" />
+            <span className="text-sm text-sand/85 leading-relaxed group-hover:text-sand transition-colors">
+              {t("s5.consent")} <span className="text-blue ml-1" aria-hidden="true">*</span>
             </span>
           </label>
-          <p className="text-[11px] text-gray/50 font-mono">{t("wizard.submitHelp")}</p>
+          <p className="text-xs text-gray/70 font-mono">{t("wizard.submitHelp")}</p>
         </div>
       </div>
     );
@@ -1088,25 +1097,25 @@ export default function TvacQuestionnaire() {
                   <li key={label} className="flex-1 flex items-center gap-3">
                     <div className={cn(
                       "flex items-center gap-3 px-4 py-2.5 rounded-sm border transition-colors w-full",
-                      active && "border-blue/50 bg-blue/5",
-                      done && "border-gray/20 bg-surface/40",
-                      !active && !done && "border-gray/10 bg-transparent"
+                      active && "border-blue/60 bg-blue/10",
+                      done && "border-gray/30 bg-surface/60",
+                      !active && !done && "border-gray/20 bg-transparent"
                     )}>
                       <span className={cn(
                         "w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-mono shrink-0",
-                        active ? "bg-blue text-background" : done ? "bg-gray/20 text-sand" : "bg-transparent border border-gray/20 text-gray/60"
+                        active ? "bg-blue text-background" : done ? "bg-gray/30 text-sand" : "bg-transparent border border-gray/30 text-gray/80"
                       )}>{idx}</span>
-                      <span className={cn("text-xs font-mono tracking-wide truncate", active ? "text-sand" : "text-gray/70")}>{label}</span>
+                      <span className={cn("text-xs font-mono tracking-wide truncate", active ? "text-sand" : "text-gray/85")}>{label}</span>
                     </div>
-                    {idx < totalSteps && <div className="w-4 h-px bg-gray/15 shrink-0" />}
+                    {idx < totalSteps && <div className="w-4 h-px bg-gray/25 shrink-0" />}
                   </li>
                 );
               })}
             </ol>
             {/* Mobile */}
-            <div className="md:hidden flex items-center justify-between gap-3 px-4 py-3 border border-gray/15 rounded-sm bg-surface/40">
+            <div className="md:hidden flex items-center justify-between gap-3 px-4 py-3 border border-gray/30 rounded-sm bg-surface/60">
               <span className="text-[11px] font-mono text-blue">{t("wizard.stepLabel", { current: step, total: totalSteps })}</span>
-              <span className="text-sm text-sand truncate">{stepLabels[step - 1]}</span>
+              <span className="text-sm font-medium text-sand truncate">{stepLabels[step - 1]}</span>
             </div>
           </div>
 
@@ -1124,7 +1133,7 @@ export default function TvacQuestionnaire() {
           <form onSubmit={handleSubmit} onKeyDown={handleKeyDown} className="space-y-8">
             {/* Focus target on step change */}
             <div ref={stepHeadingRef} tabIndex={-1} className="outline-none focus-visible:ring-2 focus-visible:ring-blue/40 rounded-sm">
-              <div className="border border-gray/15 rounded-sm p-6 md:p-10 bg-surface/20">
+              <div className="border border-gray/25 rounded-sm p-5 sm:p-7 md:p-10 bg-surface/40 shadow-card">
                 {step === 1 && renderStep1()}
                 {step === 2 && renderStep2()}
                 {step === 3 && renderStep3()}
@@ -1142,13 +1151,13 @@ export default function TvacQuestionnaire() {
             <div ref={turnstileRef} />
 
             {/* Wizard footer */}
-            <div className="sticky bottom-0 z-10 bg-background/95 backdrop-blur-sm border-t border-gray/15 py-4 -mx-6 px-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <div className="sticky bottom-0 z-10 bg-background/95 backdrop-blur-md border-t border-gray/25 py-4 -mx-5 sm:-mx-7 md:-mx-10 px-5 sm:px-7 md:px-10 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
               {/* Reset (visually de-emphasized) */}
               <AlertDialog>
                 <AlertDialogTrigger asChild>
                   <button
                     type="button"
-                    className="inline-flex items-center gap-1.5 text-xs text-gray/50 hover:text-gray transition-colors font-mono self-start focus:outline-none focus-visible:ring-2 focus-visible:ring-gray/40 rounded-sm px-1 py-0.5"
+                    className="inline-flex items-center gap-1.5 text-xs text-gray/70 hover:text-sand transition-colors font-mono self-start focus:outline-none focus-visible:ring-2 focus-visible:ring-gray/40 rounded-sm px-1 py-0.5"
                   >
                     <RotateCcw className="w-3 h-3" /> {t("wizard.reset")}
                   </button>
