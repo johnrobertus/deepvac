@@ -11,15 +11,40 @@
     "leaveBlankNote": "You can leave fields blank if specifications are still open.",
     "back": "Back",
     "continue": "Continue",
-    "submit": "Send questionnaire",
+    "submit": "Submit questionnaire",
     "submitting": "Sending…",
     "reset": "Reset all fields",
     "resetConfirmTitle": "Reset all fields?",
     "resetConfirmDescription": "This clears every entry in the questionnaire and returns you to step 1. This action cannot be undone.",
     "resetConfirmCancel": "Cancel",
     "resetConfirmAction": "Reset",
-    "stubNotice": "Backend submission is not yet wired. Your entries are not sent.",
-    "submitDisabledHint": "Submission will be enabled once the backend integration is connected."
+    "savePdf": "Save a copy as PDF",
+    "savePdfHint": "Optional — opens your browser's print dialog. Submission already sends your full questionnaire to Deepvac.",
+    "consentRequired": "Please accept the privacy policy to submit.",
+    "submitHelp": "Submit sends your full questionnaire to Deepvac. No PDF or e-mail is required from your side."
+  },
+  "success": {
+    "title": "Questionnaire received",
+    "message": "Thank you. Your technical questionnaire has been sent to Deepvac. Our engineering team will review your requirements and contact you.",
+    "reassurance": "No further manual PDF or e-mail is required from your side.",
+    "savePdf": "Save a copy as PDF",
+    "backToCustom": "Back to Custom TVAC",
+    "backToContact": "Back to Contact"
+  },
+  "error": {
+    "title": "Submission failed",
+    "message": "Your questionnaire could not be sent. Please try again or contact info@deepvac.space directly.",
+    "retry": "Try again",
+    "tooManyRequests": "Too many requests. Please wait a moment and try again."
+  },
+  "print": {
+    "documentTitle": "Deepvac TVAC Questionnaire",
+    "subtitle": "Thermal Vacuum System — Technical Inquiry",
+    "generated": "Generated",
+    "footer": "Deepvac · info@deepvac.space",
+    "yes": "Yes",
+    "no": "No",
+    "notSpecified": "—"
   },
   "stepTitles": {
     "s1": "Contact",
