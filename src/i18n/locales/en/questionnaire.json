@@ -21,6 +21,7 @@
     "savePdf": "Save a copy as PDF",
     "savePdfHint": "Optional — opens your browser's print dialog. Submission already sends your full questionnaire to Deepvac.",
     "consentRequired": "Please accept the privacy policy to submit.",
+    "missingRequired": "Please complete the required contact fields in step 1.",
     "submitHelp": "Submit sends your full questionnaire to Deepvac. No PDF or e-mail is required from your side."
   },
   "success": {

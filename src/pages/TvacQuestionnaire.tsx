@@ -388,7 +388,7 @@ export default function TvacQuestionnaire() {
     }
     if (!validateRequired()) {
       setStep(1);
-      toast.error(t("wizard.consentRequired"));
+      toast.error(t("wizard.missingRequired"));
       return;
     }
 
