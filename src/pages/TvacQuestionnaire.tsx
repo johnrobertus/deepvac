@@ -1018,6 +1018,45 @@ export default function TvacQuestionnaire() {
     t("stepTitles.s5"),
   ];
 
+  const customTvacPath = localizedPath("/products/custom-tvac", lang);
+  const contactPath = localizedPath("/contact", lang);
+
+  // ---- Success state ----
+  if (submitted) {
+    return (
+      <Layout>
+        <Helmet>
+          <html lang={lang} />
+          <title>{tSeo("questionnaire.title")}</title>
+          <meta name="robots" content="noindex,follow" />
+        </Helmet>
+        <PageShell>
+          <Section>
+            <div className="max-w-xl mx-auto text-center space-y-6 py-20">
+              <CheckCircle className="w-12 h-12 text-blue mx-auto" />
+              <h1 className="text-3xl font-medium text-sand tracking-tight">{t("success.title")}</h1>
+              <p className="text-gray text-sm leading-relaxed">{t("success.message")}</p>
+              <p className="text-gray/60 text-xs leading-relaxed">{t("success.reassurance")}</p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center pt-4">
+                <Button asChild variant="default" className="font-mono text-xs">
+                  <Link to={customTvacPath}>{t("success.backToCustom")}</Link>
+                </Button>
+                <Button asChild variant="outline" className="font-mono text-xs">
+                  <Link to={contactPath}>{t("success.backToContact")}</Link>
+                </Button>
+                <Button type="button" variant="ghost" onClick={handlePrint} className="font-mono text-xs">
+                  <FileDown className="w-4 h-4 mr-1.5" /> {t("success.savePdf")}
+                </Button>
+              </div>
+            </div>
+          </Section>
+        </PageShell>
+        {/* Print view stays mounted so post-submit "Save as PDF" still works */}
+        <QuestionnairePrintView form={form} />
+      </Layout>
+    );
+  }
+
   return (
     <Layout>
       <Helmet>
@@ -1071,22 +1110,45 @@ export default function TvacQuestionnaire() {
             </div>
           </div>
 
+          {/* Error banner */}
+          {submissionError && (
+            <div role="alert" className="mb-6 flex items-start gap-3 border border-red-400/40 bg-red-500/5 rounded-sm p-4">
+              <AlertTriangle className="w-4 h-4 text-red-400 mt-0.5 shrink-0" />
+              <div className="flex-1 space-y-1">
+                <p className="text-sm font-medium text-sand">{t("error.title")}</p>
+                <p className="text-xs text-gray/80 leading-relaxed">{submissionError}</p>
+              </div>
+            </div>
+          )}
+
           <form onSubmit={handleSubmit} onKeyDown={handleKeyDown} className="space-y-8">
-            <div className="border border-gray/15 rounded-sm p-6 md:p-10 bg-surface/20">
-              {step === 1 && renderStep1()}
-              {step === 2 && renderStep2()}
-              {step === 3 && renderStep3()}
-              {step === 4 && renderStep4()}
-              {step === 5 && renderStep5()}
+            {/* Focus target on step change */}
+            <div ref={stepHeadingRef} tabIndex={-1} className="outline-none focus-visible:ring-2 focus-visible:ring-blue/40 rounded-sm">
+              <div className="border border-gray/15 rounded-sm p-6 md:p-10 bg-surface/20">
+                {step === 1 && renderStep1()}
+                {step === 2 && renderStep2()}
+                {step === 3 && renderStep3()}
+                {step === 4 && renderStep4()}
+                {step === 5 && renderStep5()}
+              </div>
             </div>
 
+            {/* Honeypot (visually hidden) */}
+            <div aria-hidden="true" className="absolute -left-[9999px] w-px h-px overflow-hidden">
+              <label htmlFor="q-website">Website</label>
+              <input type="text" id="q-website" name="website" tabIndex={-1} autoComplete="off" value={honeypot} onChange={(e) => setHoneypot(e.target.value)} />
+            </div>
+            {/* Invisible Turnstile container */}
+            <div ref={turnstileRef} />
+
             {/* Wizard footer */}
-            <div className="sticky bottom-0 bg-background/95 backdrop-blur-sm border-t border-gray/15 py-4 -mx-6 px-6 flex flex-col-reverse sm:flex-row sm:items-center sm:justify-between gap-3">
+            <div className="sticky bottom-0 z-10 bg-background/95 backdrop-blur-sm border-t border-gray/15 py-4 -mx-6 px-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+              {/* Reset (visually de-emphasized) */}
               <AlertDialog>
                 <AlertDialogTrigger asChild>
                   <button
                     type="button"
-                    className="inline-flex items-center gap-1.5 text-xs text-gray/50 hover:text-gray transition-colors font-mono self-start"
+                    className="inline-flex items-center gap-1.5 text-xs text-gray/50 hover:text-gray transition-colors font-mono self-start focus:outline-none focus-visible:ring-2 focus-visible:ring-gray/40 rounded-sm px-1 py-0.5"
                   >
                     <RotateCcw className="w-3 h-3" /> {t("wizard.reset")}
                   </button>
@@ -1103,24 +1165,48 @@ export default function TvacQuestionnaire() {
                 </AlertDialogContent>
               </AlertDialog>
 
-              <div className="flex items-center gap-3">
-                <Button type="button" variant="outline" onClick={goBack} disabled={step === 1} className="font-mono text-xs">
+              {/* Right cluster: nav + (on step 5) Save PDF + Submit */}
+              <div className="flex flex-wrap items-center justify-end gap-2 sm:gap-3">
+                <Button type="button" variant="outline" size="sm" onClick={goBack} disabled={step === 1 || sending} className="font-mono text-xs">
                   <ArrowLeft className="w-4 h-4 mr-1.5" /> {t("wizard.back")}
                 </Button>
+
                 {step < totalSteps ? (
-                  <Button type="button" onClick={goNext} className="font-mono text-xs">
+                  <Button type="button" size="sm" onClick={goNext} className="font-mono text-xs">
                     {t("wizard.continue")} <ArrowRight className="w-4 h-4 ml-1.5" />
                   </Button>
                 ) : (
-                  <Button type="submit" className="font-mono text-xs">
-                    <Send className="w-4 h-4 mr-1.5" /> {t("wizard.submit")}
-                  </Button>
+                  <>
+                    {/* Secondary: Save a copy as PDF */}
+                    <Button
+                      type="button"
+                      variant="ghost"
+                      size="sm"
+                      onClick={handlePrint}
+                      disabled={sending}
+                      className="font-mono text-xs text-gray/70 hover:text-sand"
+                      title={t("wizard.savePdfHint")}
+                    >
+                      <FileDown className="w-4 h-4 mr-1.5" /> {t("wizard.savePdf")}
+                    </Button>
+                    {/* Primary: Submit questionnaire */}
+                    <Button type="submit" size="lg" disabled={sending} className="font-mono text-xs shadow-md">
+                      {sending ? (
+                        <><Loader2 className="w-4 h-4 mr-1.5 animate-spin" /> {t("wizard.submitting")}</>
+                      ) : (
+                        <><Send className="w-4 h-4 mr-1.5" /> {t("wizard.submit")}</>
+                      )}
+                    </Button>
+                  </>
                 )}
               </div>
             </div>
           </form>
         </Section>
       </PageShell>
+
+      {/* Print view — hidden on screen, rendered for window.print() only */}
+      <QuestionnairePrintView form={form} />
     </Layout>
   );
 }
