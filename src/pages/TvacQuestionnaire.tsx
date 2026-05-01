@@ -1151,7 +1151,7 @@ export default function TvacQuestionnaire() {
             <div ref={turnstileRef} />
 
             {/* Wizard footer */}
-            <div className="sticky bottom-0 z-10 bg-background/95 backdrop-blur-sm border-t border-gray/15 py-4 -mx-6 px-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <div className="sticky bottom-0 z-10 bg-background/95 backdrop-blur-md border-t border-gray/25 py-4 -mx-5 sm:-mx-7 md:-mx-10 px-5 sm:px-7 md:px-10 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
               {/* Reset (visually de-emphasized) */}
               <AlertDialog>
                 <AlertDialogTrigger asChild>
