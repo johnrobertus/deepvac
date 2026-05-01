@@ -27,16 +27,6 @@ import { QuestionnairePrintView } from "@/components/questionnaire/Questionnaire
 
 const TURNSTILE_SITE_KEY = "0x4AAAAAACu_Uqbd5b8IkXxU";
 
-declare global {
-  interface Window {
-    turnstile?: {
-      render: (el: HTMLElement, opts: { sitekey: string; callback?: (t: string) => void; size?: string }) => string;
-      getResponse: (id: string) => string | undefined;
-      reset: (id: string) => void;
-    };
-  }
-}
-
 /* ---------- Dynamic logic constants (verbatim from Q11-5.html) ---------- */
 const thermalPlateDimensionsByShape: Record<string, string[]> = {
   cubic: ["380 × 350", "480 × 450", "610 × 580", "780 × 750", "980 × 940", "1120 × 1120"],
