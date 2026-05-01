@@ -11,15 +11,40 @@
     "leaveBlankNote": "Felder können leer bleiben, wenn Spezifikationen noch offen sind.",
     "back": "Zurück",
     "continue": "Weiter",
-    "submit": "Fragebogen senden",
+    "submit": "Fragebogen absenden",
     "submitting": "Wird gesendet…",
     "reset": "Alle Felder zurücksetzen",
     "resetConfirmTitle": "Alle Felder zurücksetzen?",
     "resetConfirmDescription": "Dies löscht alle Eingaben im Fragebogen und führt Sie zu Schritt 1 zurück. Dieser Vorgang kann nicht rückgängig gemacht werden.",
     "resetConfirmCancel": "Abbrechen",
     "resetConfirmAction": "Zurücksetzen",
-    "stubNotice": "Die Backend-Übermittlung ist noch nicht angebunden. Ihre Eingaben werden nicht gesendet.",
-    "submitDisabledHint": "Die Übermittlung wird aktiviert, sobald die Backend-Integration angebunden ist."
+    "savePdf": "Kopie als PDF speichern",
+    "savePdfHint": "Optional — öffnet den Druckdialog Ihres Browsers. Mit dem Absenden wird Ihr vollständiger Fragebogen bereits an Deepvac übermittelt.",
+    "consentRequired": "Bitte akzeptieren Sie die Datenschutzerklärung, um abzusenden.",
+    "submitHelp": "Mit dem Absenden geht Ihr vollständiger Fragebogen direkt an Deepvac. Sie müssen keine PDF oder E-Mail manuell senden."
+  },
+  "success": {
+    "title": "Fragebogen empfangen",
+    "message": "Vielen Dank. Ihr technischer Fragebogen wurde an Deepvac gesendet. Unser Engineering-Team prüft Ihre Anforderungen und meldet sich bei Ihnen.",
+    "reassurance": "Sie müssen keine weitere PDF oder E-Mail manuell senden.",
+    "savePdf": "Kopie als PDF speichern",
+    "backToCustom": "Zurück zu Custom TVAC",
+    "backToContact": "Zurück zum Kontakt"
+  },
+  "error": {
+    "title": "Übermittlung fehlgeschlagen",
+    "message": "Ihr Fragebogen konnte nicht gesendet werden. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt unter info@deepvac.space.",
+    "retry": "Erneut versuchen",
+    "tooManyRequests": "Zu viele Anfragen. Bitte warten Sie einen Moment und versuchen Sie es erneut."
+  },
+  "print": {
+    "documentTitle": "Deepvac TVAC-Fragebogen",
+    "subtitle": "Thermisches Vakuumsystem — Technische Anfrage",
+    "generated": "Erstellt",
+    "footer": "Deepvac · info@deepvac.space",
+    "yes": "Ja",
+    "no": "Nein",
+    "notSpecified": "—"
   },
   "stepTitles": {
     "s1": "Kontakt",
