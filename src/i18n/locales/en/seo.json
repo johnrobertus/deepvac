@@ -92,7 +92,7 @@
     "description": "Calibrated infrared imaging under high-vacuum conditions. Thermal camera integration for new and existing thermal vacuum chamber systems."
   },
   "questionnaire": {
-    "title": "TVAC System Questionnaire | Deepvac",
-    "description": "Detailed technical inquiry for thermal vacuum and space-simulation systems. Share configuration intent with the Deepvac engineering team."
+    "title": "Technical TVAC Questionnaire | Deepvac",
+    "description": "Submit detailed technical requirements for a custom thermal vacuum or space simulation system. Unknown specifications can be left blank."
   }
 }
