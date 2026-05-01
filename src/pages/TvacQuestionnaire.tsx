@@ -999,12 +999,12 @@ export default function TvacQuestionnaire() {
 
         <div className="border-t border-gray/15 pt-6 space-y-4">
           <label className="flex items-start gap-3 cursor-pointer group">
-            <input type="checkbox" checked={form.consent} onChange={(e) => set("consent")(e.target.checked)} className="mt-0.5 w-4 h-4 accent-blue rounded-sm border-gray/30" />
+            <input type="checkbox" checked={form.consent} onChange={(e) => set("consent")(e.target.checked)} className="mt-0.5 w-4 h-4 accent-blue rounded-sm border-gray/30 focus:outline-none focus:ring-2 focus:ring-blue/40" />
             <span className="text-xs text-gray/70 leading-relaxed group-hover:text-gray/90 transition-colors">
               {t("s5.consent")} <span className="text-blue ml-1">*</span>
             </span>
           </label>
-          <p className="text-[11px] text-gray/50 font-mono">{t("wizard.submitDisabledHint")}</p>
+          <p className="text-[11px] text-gray/50 font-mono">{t("wizard.submitHelp")}</p>
         </div>
       </div>
     );
