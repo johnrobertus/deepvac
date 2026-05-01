@@ -463,9 +463,9 @@ export default function TvacQuestionnaire() {
 
   /* ---------- Step renderers ---------- */
   const StepNote = () => (
-    <p className="flex items-start gap-2 text-[13px] text-gray/75 mb-6">
-      <Info className="w-3.5 h-3.5 mt-0.5 shrink-0 text-blue/60" />
-      <span>{t("wizard.leaveBlankNote")}</span>
+    <p className="flex items-start gap-2.5 text-sm text-gray/85 mb-7">
+      <Info className="w-4 h-4 mt-0.5 shrink-0 text-blue/80" />
+      <span className="leading-relaxed">{t("wizard.leaveBlankNote")}</span>
     </p>
   );
 
