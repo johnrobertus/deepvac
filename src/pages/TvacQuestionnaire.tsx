@@ -1,4 +1,5 @@
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import { useLocation } from "react-router-dom";
@@ -16,11 +17,15 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { ArrowLeft, ArrowRight, Send, RotateCcw, Clock, Info } from "lucide-react";
+import { ArrowLeft, ArrowRight, Send, RotateCcw, Clock, Info, FileDown, Loader2, CheckCircle, AlertTriangle } from "lucide-react";
 import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
 import { useLanguage } from "@/components/LanguageProvider";
-import { getHreflangs, getCanonical } from "@/lib/routes";
+import { getHreflangs, getCanonical, localizedPath } from "@/lib/routes";
 import { cn } from "@/lib/utils";
+import { QuestionnairePrintView } from "@/components/questionnaire/QuestionnairePrintView";
+
+const TURNSTILE_SITE_KEY = "0x4AAAAAACu_Uqbd5b8IkXxU";
 
 /* ---------- Dynamic logic constants (verbatim from Q11-5.html) ---------- */
 const thermalPlateDimensionsByShape: Record<string, string[]> = {
@@ -261,7 +266,47 @@ export default function TvacQuestionnaire() {
   const [form, setForm] = useState<FormState>(initialForm);
   const [step, setStep] = useState(1);
   const [errors, setErrors] = useState<Partial<Record<keyof FormState, string>>>({});
+  const [sending, setSending] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [submissionError, setSubmissionError] = useState<string | null>(null);
+  const [honeypot, setHoneypot] = useState("");
   const totalSteps = 5;
+
+  const turnstileRef = useRef<HTMLDivElement>(null);
+  const turnstileWidgetId = useRef<string | null>(null);
+  const stepHeadingRef = useRef<HTMLDivElement>(null);
+
+  // Load Turnstile script
+  useEffect(() => {
+    if (!document.getElementById("cf-turnstile-script")) {
+      const script = document.createElement("script");
+      script.id = "cf-turnstile-script";
+      script.src = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
+      script.async = true; script.defer = true;
+      document.head.appendChild(script);
+    }
+  }, []);
+
+  // Mount invisible Turnstile widget once container exists (re-mount if user resets after success)
+  useEffect(() => {
+    if (submitted) return;
+    if (!turnstileRef.current) return;
+    const interval = setInterval(() => {
+      const w = (window as any).turnstile;
+      if (w && turnstileRef.current && !turnstileWidgetId.current) {
+        turnstileWidgetId.current = w.render(turnstileRef.current, {
+          sitekey: TURNSTILE_SITE_KEY, callback: () => {}, size: "invisible",
+        });
+        clearInterval(interval);
+      }
+    }, 200);
+    return () => clearInterval(interval);
+  }, [submitted]);
+
+  // A11y: move focus to step heading on step change
+  useEffect(() => {
+    if (stepHeadingRef.current) stepHeadingRef.current.focus();
+  }, [step]);
 
   const set = <K extends keyof FormState>(key: K) => (val: FormState[K]) => {
     setForm((p) => ({ ...p, [key]: val }));
@@ -295,7 +340,6 @@ export default function TvacQuestionnaire() {
     [form.chamberShape]
   );
 
-  // Clear incompatible values when shape changes (mirrors source `[...select.options].some(...)` guard)
   useEffect(() => {
     if (!form.chamberShape) {
       if (form.externalDimensions) setForm((p) => ({ ...p, externalDimensions: "" }));
@@ -312,7 +356,7 @@ export default function TvacQuestionnaire() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [form.chamberShape]);
 
-  /* ----- Validation (only required fields, only on submit) ----- */
+  /* ----- Validation ----- */
   const validateRequired = (): boolean => {
     const e: Partial<Record<keyof FormState, string>> = {};
     if (!form.company.trim()) e.company = "required";
@@ -327,34 +371,77 @@ export default function TvacQuestionnaire() {
     return Object.keys(e).length === 0;
   };
 
-  /* ----- Navigation ----- */
   const goNext = () => setStep((s) => Math.min(totalSteps, s + 1));
   const goBack = () => setStep((s) => Math.max(1, s - 1));
 
-  const handleSubmit = (ev: React.FormEvent) => {
+  const handlePrint = () => {
+    // Slight delay so React commits the print view DOM before the dialog opens
+    setTimeout(() => window.print(), 50);
+  };
+
+  const handleSubmit = async (ev: React.FormEvent) => {
     ev.preventDefault();
+    if (sending) return;
     if (!form.consent) {
-      toast.error(t("s5.consent"));
+      toast.error(t("wizard.consentRequired"));
       return;
     }
     if (!validateRequired()) {
       setStep(1);
-      toast.error(t("wizard.stubNotice"));
+      toast.error(t("wizard.consentRequired"));
       return;
     }
-    // TODO(backend): wire to supabase.functions.invoke("send-inquiry", {
-    //   body: { kind: "questionnaire", source: "tvac-questionnaire", data: form, _website: honeypot, turnstileToken }
-    // }) once the edge function adds a `kind: "questionnaire"` discriminator.
-    // Until then: do NOT use mailto, do NOT fake a success state.
-    toast.message(t("wizard.stubNotice"));
-    // eslint-disable-next-line no-console
-    console.info("[TvacQuestionnaire] payload preview (not sent)", form);
+
+    setSending(true);
+    setSubmissionError(null);
+    try {
+      let turnstileToken = "";
+      const w = (window as any).turnstile;
+      if (w && turnstileWidgetId.current) {
+        turnstileToken = w.getResponse(turnstileWidgetId.current) || "";
+      }
+      const { data, error } = await supabase.functions.invoke("send-inquiry", {
+        body: {
+          kind: "questionnaire",
+          source: "tvac-questionnaire",
+          language: lang,
+          data: form,
+          _website: honeypot,
+          turnstileToken: turnstileToken || undefined,
+        },
+      });
+      if (error) throw error;
+      if (data?.error) {
+        const msg = data.error as string;
+        if (msg.includes("Too many requests")) {
+          setSubmissionError(t("error.tooManyRequests"));
+          toast.error(t("error.tooManyRequests"));
+          return;
+        }
+        throw new Error(msg);
+      }
+      setSubmitted(true);
+      turnstileWidgetId.current = null;
+      toast.success(t("success.title"));
+    } catch (err: any) {
+      console.error("Questionnaire submission error:", err);
+      const msg = err?.message?.includes("Too many requests")
+        ? t("error.tooManyRequests")
+        : t("error.message");
+      setSubmissionError(msg);
+      toast.error(t("error.title"));
+      const w = (window as any).turnstile;
+      if (w && turnstileWidgetId.current) { w.reset(turnstileWidgetId.current); }
+    } finally {
+      setSending(false);
+    }
   };
 
   const handleReset = () => {
     setForm(initialForm);
     setErrors({});
     setStep(1);
+    setSubmissionError(null);
   };
 
   // Prevent Enter from advancing/submitting except inside textareas.
@@ -912,12 +999,12 @@ export default function TvacQuestionnaire() {
 
         <div className="border-t border-gray/15 pt-6 space-y-4">
           <label className="flex items-start gap-3 cursor-pointer group">
-            <input type="checkbox" checked={form.consent} onChange={(e) => set("consent")(e.target.checked)} className="mt-0.5 w-4 h-4 accent-blue rounded-sm border-gray/30" />
+            <input type="checkbox" checked={form.consent} onChange={(e) => set("consent")(e.target.checked)} className="mt-0.5 w-4 h-4 accent-blue rounded-sm border-gray/30 focus:outline-none focus:ring-2 focus:ring-blue/40" />
             <span className="text-xs text-gray/70 leading-relaxed group-hover:text-gray/90 transition-colors">
               {t("s5.consent")} <span className="text-blue ml-1">*</span>
             </span>
           </label>
-          <p className="text-[11px] text-gray/50 font-mono">{t("wizard.submitDisabledHint")}</p>
+          <p className="text-[11px] text-gray/50 font-mono">{t("wizard.submitHelp")}</p>
         </div>
       </div>
     );
@@ -930,6 +1017,45 @@ export default function TvacQuestionnaire() {
     t("stepTitles.s4"),
     t("stepTitles.s5"),
   ];
+
+  const customTvacPath = localizedPath("/products/custom-tvac", lang);
+  const contactPath = localizedPath("/contact", lang);
+
+  // ---- Success state ----
+  if (submitted) {
+    return (
+      <Layout>
+        <Helmet>
+          <html lang={lang} />
+          <title>{tSeo("questionnaire.title")}</title>
+          <meta name="robots" content="noindex,follow" />
+        </Helmet>
+        <PageShell>
+          <Section>
+            <div className="max-w-xl mx-auto text-center space-y-6 py-20">
+              <CheckCircle className="w-12 h-12 text-blue mx-auto" />
+              <h1 className="text-3xl font-medium text-sand tracking-tight">{t("success.title")}</h1>
+              <p className="text-gray text-sm leading-relaxed">{t("success.message")}</p>
+              <p className="text-gray/60 text-xs leading-relaxed">{t("success.reassurance")}</p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center pt-4">
+                <Button asChild variant="default" className="font-mono text-xs">
+                  <Link to={customTvacPath}>{t("success.backToCustom")}</Link>
+                </Button>
+                <Button asChild variant="outline" className="font-mono text-xs">
+                  <Link to={contactPath}>{t("success.backToContact")}</Link>
+                </Button>
+                <Button type="button" variant="ghost" onClick={handlePrint} className="font-mono text-xs">
+                  <FileDown className="w-4 h-4 mr-1.5" /> {t("success.savePdf")}
+                </Button>
+              </div>
+            </div>
+          </Section>
+        </PageShell>
+        {/* Print view stays mounted so post-submit "Save as PDF" still works */}
+        <QuestionnairePrintView form={form} />
+      </Layout>
+    );
+  }
 
   return (
     <Layout>
@@ -984,22 +1110,45 @@ export default function TvacQuestionnaire() {
             </div>
           </div>
 
+          {/* Error banner */}
+          {submissionError && (
+            <div role="alert" className="mb-6 flex items-start gap-3 border border-red-400/40 bg-red-500/5 rounded-sm p-4">
+              <AlertTriangle className="w-4 h-4 text-red-400 mt-0.5 shrink-0" />
+              <div className="flex-1 space-y-1">
+                <p className="text-sm font-medium text-sand">{t("error.title")}</p>
+                <p className="text-xs text-gray/80 leading-relaxed">{submissionError}</p>
+              </div>
+            </div>
+          )}
+
           <form onSubmit={handleSubmit} onKeyDown={handleKeyDown} className="space-y-8">
-            <div className="border border-gray/15 rounded-sm p-6 md:p-10 bg-surface/20">
-              {step === 1 && renderStep1()}
-              {step === 2 && renderStep2()}
-              {step === 3 && renderStep3()}
-              {step === 4 && renderStep4()}
-              {step === 5 && renderStep5()}
+            {/* Focus target on step change */}
+            <div ref={stepHeadingRef} tabIndex={-1} className="outline-none focus-visible:ring-2 focus-visible:ring-blue/40 rounded-sm">
+              <div className="border border-gray/15 rounded-sm p-6 md:p-10 bg-surface/20">
+                {step === 1 && renderStep1()}
+                {step === 2 && renderStep2()}
+                {step === 3 && renderStep3()}
+                {step === 4 && renderStep4()}
+                {step === 5 && renderStep5()}
+              </div>
             </div>
 
+            {/* Honeypot (visually hidden) */}
+            <div aria-hidden="true" className="absolute -left-[9999px] w-px h-px overflow-hidden">
+              <label htmlFor="q-website">Website</label>
+              <input type="text" id="q-website" name="website" tabIndex={-1} autoComplete="off" value={honeypot} onChange={(e) => setHoneypot(e.target.value)} />
+            </div>
+            {/* Invisible Turnstile container */}
+            <div ref={turnstileRef} />
+
             {/* Wizard footer */}
-            <div className="sticky bottom-0 bg-background/95 backdrop-blur-sm border-t border-gray/15 py-4 -mx-6 px-6 flex flex-col-reverse sm:flex-row sm:items-center sm:justify-between gap-3">
+            <div className="sticky bottom-0 z-10 bg-background/95 backdrop-blur-sm border-t border-gray/15 py-4 -mx-6 px-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+              {/* Reset (visually de-emphasized) */}
               <AlertDialog>
                 <AlertDialogTrigger asChild>
                   <button
                     type="button"
-                    className="inline-flex items-center gap-1.5 text-xs text-gray/50 hover:text-gray transition-colors font-mono self-start"
+                    className="inline-flex items-center gap-1.5 text-xs text-gray/50 hover:text-gray transition-colors font-mono self-start focus:outline-none focus-visible:ring-2 focus-visible:ring-gray/40 rounded-sm px-1 py-0.5"
                   >
                     <RotateCcw className="w-3 h-3" /> {t("wizard.reset")}
                   </button>
@@ -1016,24 +1165,48 @@ export default function TvacQuestionnaire() {
                 </AlertDialogContent>
               </AlertDialog>
 
-              <div className="flex items-center gap-3">
-                <Button type="button" variant="outline" onClick={goBack} disabled={step === 1} className="font-mono text-xs">
+              {/* Right cluster: nav + (on step 5) Save PDF + Submit */}
+              <div className="flex flex-wrap items-center justify-end gap-2 sm:gap-3">
+                <Button type="button" variant="outline" size="sm" onClick={goBack} disabled={step === 1 || sending} className="font-mono text-xs">
                   <ArrowLeft className="w-4 h-4 mr-1.5" /> {t("wizard.back")}
                 </Button>
+
                 {step < totalSteps ? (
-                  <Button type="button" onClick={goNext} className="font-mono text-xs">
+                  <Button type="button" size="sm" onClick={goNext} className="font-mono text-xs">
                     {t("wizard.continue")} <ArrowRight className="w-4 h-4 ml-1.5" />
                   </Button>
                 ) : (
-                  <Button type="submit" className="font-mono text-xs">
-                    <Send className="w-4 h-4 mr-1.5" /> {t("wizard.submit")}
-                  </Button>
+                  <>
+                    {/* Secondary: Save a copy as PDF */}
+                    <Button
+                      type="button"
+                      variant="ghost"
+                      size="sm"
+                      onClick={handlePrint}
+                      disabled={sending}
+                      className="font-mono text-xs text-gray/70 hover:text-sand"
+                      title={t("wizard.savePdfHint")}
+                    >
+                      <FileDown className="w-4 h-4 mr-1.5" /> {t("wizard.savePdf")}
+                    </Button>
+                    {/* Primary: Submit questionnaire */}
+                    <Button type="submit" size="lg" disabled={sending} className="font-mono text-xs shadow-md">
+                      {sending ? (
+                        <><Loader2 className="w-4 h-4 mr-1.5 animate-spin" /> {t("wizard.submitting")}</>
+                      ) : (
+                        <><Send className="w-4 h-4 mr-1.5" /> {t("wizard.submit")}</>
+                      )}
+                    </Button>
+                  </>
                 )}
               </div>
             </div>
           </form>
         </Section>
       </PageShell>
+
+      {/* Print view — hidden on screen, rendered for window.print() only */}
+      <QuestionnairePrintView form={form} />
     </Layout>
   );
 }
