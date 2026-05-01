@@ -266,7 +266,47 @@ export default function TvacQuestionnaire() {
   const [form, setForm] = useState<FormState>(initialForm);
   const [step, setStep] = useState(1);
   const [errors, setErrors] = useState<Partial<Record<keyof FormState, string>>>({});
+  const [sending, setSending] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [submissionError, setSubmissionError] = useState<string | null>(null);
+  const [honeypot, setHoneypot] = useState("");
   const totalSteps = 5;
+
+  const turnstileRef = useRef<HTMLDivElement>(null);
+  const turnstileWidgetId = useRef<string | null>(null);
+  const stepHeadingRef = useRef<HTMLDivElement>(null);
+
+  // Load Turnstile script
+  useEffect(() => {
+    if (!document.getElementById("cf-turnstile-script")) {
+      const script = document.createElement("script");
+      script.id = "cf-turnstile-script";
+      script.src = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
+      script.async = true; script.defer = true;
+      document.head.appendChild(script);
+    }
+  }, []);
+
+  // Mount invisible Turnstile widget once container exists (re-mount if user resets after success)
+  useEffect(() => {
+    if (submitted) return;
+    if (!turnstileRef.current) return;
+    const interval = setInterval(() => {
+      const w = (window as any).turnstile;
+      if (w && turnstileRef.current && !turnstileWidgetId.current) {
+        turnstileWidgetId.current = w.render(turnstileRef.current, {
+          sitekey: TURNSTILE_SITE_KEY, callback: () => {}, size: "invisible",
+        });
+        clearInterval(interval);
+      }
+    }, 200);
+    return () => clearInterval(interval);
+  }, [submitted]);
+
+  // A11y: move focus to step heading on step change
+  useEffect(() => {
+    if (stepHeadingRef.current) stepHeadingRef.current.focus();
+  }, [step]);
 
   const set = <K extends keyof FormState>(key: K) => (val: FormState[K]) => {
     setForm((p) => ({ ...p, [key]: val }));
@@ -300,7 +340,6 @@ export default function TvacQuestionnaire() {
     [form.chamberShape]
   );
 
-  // Clear incompatible values when shape changes (mirrors source `[...select.options].some(...)` guard)
   useEffect(() => {
     if (!form.chamberShape) {
       if (form.externalDimensions) setForm((p) => ({ ...p, externalDimensions: "" }));
@@ -317,7 +356,7 @@ export default function TvacQuestionnaire() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [form.chamberShape]);
 
-  /* ----- Validation (only required fields, only on submit) ----- */
+  /* ----- Validation ----- */
   const validateRequired = (): boolean => {
     const e: Partial<Record<keyof FormState, string>> = {};
     if (!form.company.trim()) e.company = "required";
@@ -332,34 +371,77 @@ export default function TvacQuestionnaire() {
     return Object.keys(e).length === 0;
   };
 
-  /* ----- Navigation ----- */
   const goNext = () => setStep((s) => Math.min(totalSteps, s + 1));
   const goBack = () => setStep((s) => Math.max(1, s - 1));
 
-  const handleSubmit = (ev: React.FormEvent) => {
+  const handlePrint = () => {
+    // Slight delay so React commits the print view DOM before the dialog opens
+    setTimeout(() => window.print(), 50);
+  };
+
+  const handleSubmit = async (ev: React.FormEvent) => {
     ev.preventDefault();
+    if (sending) return;
     if (!form.consent) {
-      toast.error(t("s5.consent"));
+      toast.error(t("wizard.consentRequired"));
       return;
     }
     if (!validateRequired()) {
       setStep(1);
-      toast.error(t("wizard.stubNotice"));
+      toast.error(t("wizard.consentRequired"));
       return;
     }
-    // TODO(backend): wire to supabase.functions.invoke("send-inquiry", {
-    //   body: { kind: "questionnaire", source: "tvac-questionnaire", data: form, _website: honeypot, turnstileToken }
-    // }) once the edge function adds a `kind: "questionnaire"` discriminator.
-    // Until then: do NOT use mailto, do NOT fake a success state.
-    toast.message(t("wizard.stubNotice"));
-    // eslint-disable-next-line no-console
-    console.info("[TvacQuestionnaire] payload preview (not sent)", form);
+
+    setSending(true);
+    setSubmissionError(null);
+    try {
+      let turnstileToken = "";
+      const w = (window as any).turnstile;
+      if (w && turnstileWidgetId.current) {
+        turnstileToken = w.getResponse(turnstileWidgetId.current) || "";
+      }
+      const { data, error } = await supabase.functions.invoke("send-inquiry", {
+        body: {
+          kind: "questionnaire",
+          source: "tvac-questionnaire",
+          language: lang,
+          data: form,
+          _website: honeypot,
+          turnstileToken: turnstileToken || undefined,
+        },
+      });
+      if (error) throw error;
+      if (data?.error) {
+        const msg = data.error as string;
+        if (msg.includes("Too many requests")) {
+          setSubmissionError(t("error.tooManyRequests"));
+          toast.error(t("error.tooManyRequests"));
+          return;
+        }
+        throw new Error(msg);
+      }
+      setSubmitted(true);
+      turnstileWidgetId.current = null;
+      toast.success(t("success.title"));
+    } catch (err: any) {
+      console.error("Questionnaire submission error:", err);
+      const msg = err?.message?.includes("Too many requests")
+        ? t("error.tooManyRequests")
+        : t("error.message");
+      setSubmissionError(msg);
+      toast.error(t("error.title"));
+      const w = (window as any).turnstile;
+      if (w && turnstileWidgetId.current) { w.reset(turnstileWidgetId.current); }
+    } finally {
+      setSending(false);
+    }
   };
 
   const handleReset = () => {
     setForm(initialForm);
     setErrors({});
     setStep(1);
+    setSubmissionError(null);
   };
 
   // Prevent Enter from advancing/submitting except inside textareas.
