@@ -212,9 +212,10 @@ const initialForm: FormState = {
 /* ---------- Small UI primitives ---------- */
 function MonoLabel({ children, required }: { children: React.ReactNode; required?: boolean }) {
   return (
-    <label className="mono-label">
+    <label className="block font-mono text-[11px] uppercase tracking-[0.08em] text-gray/90">
       {children}
-      {required && <span className="text-blue ml-1">*</span>}
+      {required && <span className="text-blue ml-1 text-sm align-middle" aria-hidden="true">*</span>}
+      {required && <span className="sr-only"> (required)</span>}
     </label>
   );
 }
@@ -223,14 +224,14 @@ function CheckItem({
   label, checked, onChange, nested,
 }: { label: React.ReactNode; checked: boolean; onChange: (v: boolean) => void; nested?: boolean }) {
   return (
-    <label className={cn("flex items-center gap-2 cursor-pointer text-sm text-sand/90 hover:text-sand transition-colors", nested && "ml-6")}>
+    <label className={cn("flex items-center gap-2.5 cursor-pointer text-sm text-sand hover:text-sand py-1 transition-colors", nested && "ml-6")}>
       <input
         type="checkbox"
         checked={checked}
         onChange={(e) => onChange(e.target.checked)}
-        className="w-4 h-4 accent-blue rounded-sm border-gray/30 shrink-0"
+        className="w-[18px] h-[18px] accent-blue rounded-sm border-gray/40 shrink-0 cursor-pointer"
       />
-      <span>{label}</span>
+      <span className="leading-snug">{label}</span>
     </label>
   );
 }
@@ -246,7 +247,7 @@ function OtherInput({
         type="text"
         value={value.text}
         onChange={(e) => onText(e.target.value)}
-        className={cn(baseInput, "flex-1 min-w-[160px] py-2")}
+        className={cn(baseInput, "flex-1 min-w-[180px] py-2 text-sm")}
         placeholder={placeholder}
       />
     </div>
@@ -255,11 +256,11 @@ function OtherInput({
 
 function FieldGroup({ children, cols = 1 }: { children: React.ReactNode; cols?: 1 | 2 | 3 | 4 }) {
   const grid = { 1: "grid-cols-1", 2: "grid-cols-1 md:grid-cols-2", 3: "grid-cols-1 md:grid-cols-3", 4: "grid-cols-1 md:grid-cols-2 lg:grid-cols-4" }[cols];
-  return <div className={cn("grid gap-5", grid)}>{children}</div>;
+  return <div className={cn("grid gap-5 md:gap-6", grid)}>{children}</div>;
 }
 
 function SubSectionTitle({ children }: { children: React.ReactNode }) {
-  return <h3 className="text-base font-medium text-sand tracking-tight border-b border-gray/15 pb-3 mb-5">{children}</h3>;
+  return <h3 className="text-lg md:text-xl font-medium text-sand tracking-tight border-b border-gray/25 pb-3 mb-6">{children}</h3>;
 }
 
 /* ---------- The page ---------- */
