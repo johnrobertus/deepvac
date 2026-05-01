@@ -586,7 +586,7 @@ export default function TvacQuestionnaire() {
 
             <div className="space-y-2">
               <MonoLabel>
-                {t("s2.external")} <span className="text-gray/50 font-normal normal-case tracking-normal ml-1">{t("s2.externalHint")}</span>
+                {t("s2.external")} <span className="text-gray/75 font-normal normal-case tracking-normal ml-1">{t("s2.externalHint")}</span>
               </MonoLabel>
               <select
                 className={cn(baseSelect, !form.chamberShape && "opacity-60 cursor-not-allowed")}
