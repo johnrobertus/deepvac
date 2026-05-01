@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/button";
 import { TechChip } from "@/components/TechChip";
 import {
   ArrowRight, Ruler, Thermometer, Gauge, Cpu, Cable, FlaskConical, Settings,
-  MessageSquare, FileCheck, Truck, Wrench,
+  MessageSquare, FileCheck, Truck, Wrench, ClipboardList, Clock,
 } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { useLanguage } from "@/components/LanguageProvider";
