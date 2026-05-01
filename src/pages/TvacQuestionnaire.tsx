@@ -1,0 +1,1039 @@
+import { useState, useMemo, useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet-async";
+import { useLocation } from "react-router-dom";
+import { Layout } from "@/components/Layout";
+import { PageShell, PageHero, Section } from "@/components/PageShell";
+import { Button } from "@/components/ui/button";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
+import { ArrowLeft, ArrowRight, Send, RotateCcw, Clock, Info } from "lucide-react";
+import { toast } from "sonner";
+import { useLanguage } from "@/components/LanguageProvider";
+import { getHreflangs, getCanonical } from "@/lib/routes";
+import { cn } from "@/lib/utils";
+
+/* ---------- Dynamic logic constants (verbatim from Q11-5.html) ---------- */
+const thermalPlateDimensionsByShape: Record<string, string[]> = {
+  cubic: ["380 × 350", "480 × 450", "610 × 580", "780 × 750", "980 × 940", "1120 × 1120"],
+  cylindrical: ["330 × 350", "400 × 420", "460 × 500", "660 × 700", "840 × 880", "1140 × 1200"],
+};
+const externalDimensionsByShape: Record<string, string[]> = {
+  cubic: ["600 × 1800 × 900", "700 × 1900 × 1000", "830 × 1900 × 1130", "1000 × 1900 × 1300", "1150 × 1900 × 1500", "1400 × 2100 × 1760"],
+  cylindrical: ["600 × 1800 × 900", "700 × 1900 × 1000", "900 × 1900 × 1130", "1100 × 1900 × 1300", "1400 × 1900 × 1500", "1700 × 2100 × 1860"],
+};
+
+/* ---------- Reusable input class strings (match Contact.tsx) ---------- */
+const baseInput =
+  "w-full bg-background border border-gray/15 rounded-sm px-4 py-3 text-sm text-sand placeholder:text-gray/30 focus:outline-none focus:border-blue/40 focus:ring-1 focus:ring-blue/20 transition-all duration-200";
+const baseSelect = `${baseInput} appearance-none`;
+const baseTextarea = `${baseInput} min-h-[110px] resize-y`;
+const errorBorder = "border-red-400/60";
+
+/* ---------- Form state shape ---------- */
+interface OtherCheck {
+  checked: boolean;
+  text: string;
+}
+interface PortRow {
+  checked: boolean;
+  size: string;
+  qty: string;
+}
+interface FormState {
+  // S1 - contact
+  company: string;
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
+  country: string;
+  application: string;
+  // S2 - DUT
+  dutWeight: string;
+  dutTypes: boolean[];
+  dutTypeOther: OtherCheck;
+  housing: boolean[];
+  housingOther: OtherCheck;
+  // S2 - Chamber
+  chamberShape: "" | "cubic" | "cylindrical";
+  chamberMaterial: string;
+  externalDimensions: string;
+  cubicL: string;
+  cubicW: string;
+  cubicH: string;
+  cylDiameter: string;
+  cylLength: string;
+  doorTypes: boolean[];
+  ports: PortRow[]; // 5 rows
+  viewportsQty: string;
+  viewportsSize: string;
+  viewportsMaterial: boolean[];
+  viewportsMaterialOther: OtherCheck;
+  // S3 - Thermal/Vacuum
+  heatDissipation: string;
+  dutCount: string;
+  vacuumLevel: string;
+  highVac: boolean[];
+  highVacNested: boolean[];
+  foreVac: boolean[];
+  gauges: boolean[];
+  rampRate: string;
+  uniformity: string;
+  tempMin: string;
+  tempMax: string;
+  plateDimensions: string;
+  plateCustom: string;
+  plateTempMin: string;
+  plateTempMax: string;
+  plateCooling: boolean[];
+  plateCoolingOther: OtherCheck;
+  shroudConfig: string;
+  shroudTempMin: string;
+  shroudTempMax: string;
+  shroudCooling: boolean[];
+  shroudCoolingOther: OtherCheck;
+  sensorTypes: boolean[];
+  sensorTypeOther: OtherCheck;
+  measurementChannels: string;
+  // S4 - Feedthroughs
+  elecQty: string;
+  elecVoltage: string;
+  elecCurrent: string;
+  elecNotes: string;
+  elecConnector: boolean[];
+  elecConnectorOther: OtherCheck;
+  rfTypes: boolean[];
+  rfTypeOther: OtherCheck;
+  rfQty: string;
+  fiberTypes: boolean[];
+  fiberTypeOther: OtherCheck;
+  fiberQty: string;
+  fluidQty: string;
+  fluidConnection: string;
+  motionTypes: boolean[];
+  motionTypeOther: OtherCheck;
+  motionQty: string;
+  // S4 - Control
+  remoteAccess: string;
+  remoteOptions: boolean[];
+  ai: string;
+  comm: boolean[];
+  commOther: OtherCheck;
+  loggingCustom: boolean;
+  loggingNotes: string;
+  exportFormats: boolean[];
+  // S4 - Safety
+  alarms: boolean[];
+  // S5 - Site
+  installStandard: boolean;
+  installCleanroom: OtherCheck;
+  installOther: OtherCheck;
+  installSpace: string;
+  power: boolean[];
+  powerOther: OtherCheck;
+  powerMax: string;
+  utilities: boolean[];
+  specialReq: string;
+  // S5 - Schedule
+  delivery: string;
+  budget: string;
+  phase: string;
+  // Consent
+  consent: boolean;
+}
+
+const arr = (n: number) => Array(n).fill(false);
+const o = (): OtherCheck => ({ checked: false, text: "" });
+const port = (): PortRow => ({ checked: false, size: "", qty: "" });
+
+const initialForm: FormState = {
+  company: "", firstName: "", lastName: "", email: "", phone: "", country: "", application: "",
+  dutWeight: "",
+  dutTypes: arr(12), dutTypeOther: o(),
+  housing: arr(9), housingOther: o(),
+  chamberShape: "", chamberMaterial: "", externalDimensions: "",
+  cubicL: "", cubicW: "", cubicH: "", cylDiameter: "", cylLength: "",
+  doorTypes: arr(3),
+  ports: [port(), port(), port(), port(), port()],
+  viewportsQty: "", viewportsSize: "", viewportsMaterial: arr(4), viewportsMaterialOther: o(),
+  heatDissipation: "", dutCount: "", vacuumLevel: "",
+  highVac: arr(2), highVacNested: arr(2),
+  foreVac: arr(4), gauges: arr(3),
+  rampRate: "", uniformity: "", tempMin: "", tempMax: "",
+  plateDimensions: "", plateCustom: "", plateTempMin: "", plateTempMax: "",
+  plateCooling: arr(3), plateCoolingOther: o(),
+  shroudConfig: "", shroudTempMin: "", shroudTempMax: "",
+  shroudCooling: arr(5), shroudCoolingOther: o(),
+  sensorTypes: arr(6), sensorTypeOther: o(),
+  measurementChannels: "",
+  elecQty: "", elecVoltage: "", elecCurrent: "", elecNotes: "",
+  elecConnector: arr(4), elecConnectorOther: o(),
+  rfTypes: arr(4), rfTypeOther: o(), rfQty: "",
+  fiberTypes: arr(3), fiberTypeOther: o(), fiberQty: "",
+  fluidQty: "", fluidConnection: "",
+  motionTypes: arr(3), motionTypeOther: o(), motionQty: "",
+  remoteAccess: "", remoteOptions: arr(3), ai: "",
+  comm: arr(7), commOther: o(),
+  loggingCustom: false, loggingNotes: "",
+  exportFormats: arr(5),
+  alarms: arr(6),
+  installStandard: false, installCleanroom: o(), installOther: o(),
+  installSpace: "",
+  power: arr(2), powerOther: o(), powerMax: "",
+  utilities: arr(5),
+  specialReq: "",
+  delivery: "", budget: "", phase: "",
+  consent: false,
+};
+
+/* ---------- Small UI primitives ---------- */
+function MonoLabel({ children, required }: { children: React.ReactNode; required?: boolean }) {
+  return (
+    <label className="mono-label">
+      {children}
+      {required && <span className="text-blue ml-1">*</span>}
+    </label>
+  );
+}
+
+function CheckItem({
+  label, checked, onChange, nested,
+}: { label: React.ReactNode; checked: boolean; onChange: (v: boolean) => void; nested?: boolean }) {
+  return (
+    <label className={cn("flex items-center gap-2 cursor-pointer text-sm text-sand/90 hover:text-sand transition-colors", nested && "ml-6")}>
+      <input
+        type="checkbox"
+        checked={checked}
+        onChange={(e) => onChange(e.target.checked)}
+        className="w-4 h-4 accent-blue rounded-sm border-gray/30 shrink-0"
+      />
+      <span>{label}</span>
+    </label>
+  );
+}
+
+function OtherInput({
+  value, onCheck, onText, placeholder,
+}: { value: OtherCheck; onCheck: (v: boolean) => void; onText: (v: string) => void; placeholder: string }) {
+  const { t } = useTranslation("questionnaire");
+  return (
+    <div className="flex items-center gap-2 flex-wrap">
+      <CheckItem label={t("common.other") + ":"} checked={value.checked} onChange={onCheck} />
+      <input
+        type="text"
+        value={value.text}
+        onChange={(e) => onText(e.target.value)}
+        className={cn(baseInput, "flex-1 min-w-[160px] py-2")}
+        placeholder={placeholder}
+      />
+    </div>
+  );
+}
+
+function FieldGroup({ children, cols = 1 }: { children: React.ReactNode; cols?: 1 | 2 | 3 | 4 }) {
+  const grid = { 1: "grid-cols-1", 2: "grid-cols-1 md:grid-cols-2", 3: "grid-cols-1 md:grid-cols-3", 4: "grid-cols-1 md:grid-cols-2 lg:grid-cols-4" }[cols];
+  return <div className={cn("grid gap-5", grid)}>{children}</div>;
+}
+
+function SubSectionTitle({ children }: { children: React.ReactNode }) {
+  return <h3 className="text-base font-medium text-sand tracking-tight border-b border-gray/15 pb-3 mb-5">{children}</h3>;
+}
+
+/* ---------- The page ---------- */
+export default function TvacQuestionnaire() {
+  const { t } = useTranslation("questionnaire");
+  const { t: tSeo } = useTranslation("seo");
+  const { lang } = useLanguage();
+  const { pathname } = useLocation();
+  const hreflangs = getHreflangs(pathname);
+  const canonical = getCanonical(pathname, lang);
+
+  const [form, setForm] = useState<FormState>(initialForm);
+  const [step, setStep] = useState(1);
+  const [errors, setErrors] = useState<Partial<Record<keyof FormState, string>>>({});
+  const totalSteps = 5;
+
+  const set = <K extends keyof FormState>(key: K) => (val: FormState[K]) => {
+    setForm((p) => ({ ...p, [key]: val }));
+    if (errors[key]) {
+      setErrors((p) => {
+        const n = { ...p };
+        delete n[key];
+        return n;
+      });
+    }
+  };
+  const toggleAt = <K extends keyof FormState>(key: K, idx: number) => {
+    setForm((p) => {
+      const arrCopy = [...(p[key] as unknown as boolean[])];
+      arrCopy[idx] = !arrCopy[idx];
+      return { ...p, [key]: arrCopy as unknown as FormState[K] };
+    });
+  };
+  const setOther = <K extends keyof FormState>(key: K) => ({
+    onCheck: (v: boolean) => setForm((p) => ({ ...p, [key]: { ...(p[key] as unknown as OtherCheck), checked: v } })),
+    onText: (v: string) => setForm((p) => ({ ...p, [key]: { ...(p[key] as unknown as OtherCheck), text: v } })),
+  });
+
+  /* ----- Dynamic logic: chamber shape ----- */
+  const externalOptions = useMemo<string[]>(
+    () => (form.chamberShape ? externalDimensionsByShape[form.chamberShape] : []),
+    [form.chamberShape]
+  );
+  const plateOptions = useMemo<string[]>(
+    () => (form.chamberShape ? thermalPlateDimensionsByShape[form.chamberShape] : []),
+    [form.chamberShape]
+  );
+
+  // Clear incompatible values when shape changes (mirrors source `[...select.options].some(...)` guard)
+  useEffect(() => {
+    if (!form.chamberShape) {
+      if (form.externalDimensions) setForm((p) => ({ ...p, externalDimensions: "" }));
+      if (form.plateDimensions) setForm((p) => ({ ...p, plateDimensions: "" }));
+      return;
+    }
+    const validExternal = ["", "Other", ...externalOptions];
+    const validPlate = ["", "Other", ...plateOptions];
+    setForm((p) => ({
+      ...p,
+      externalDimensions: validExternal.includes(p.externalDimensions) ? p.externalDimensions : "",
+      plateDimensions: validPlate.includes(p.plateDimensions) ? p.plateDimensions : "",
+    }));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [form.chamberShape]);
+
+  /* ----- Validation (only required fields, only on submit) ----- */
+  const validateRequired = (): boolean => {
+    const e: Partial<Record<keyof FormState, string>> = {};
+    if (!form.company.trim()) e.company = "required";
+    if (!form.firstName.trim()) e.firstName = "required";
+    if (!form.lastName.trim()) e.lastName = "required";
+    if (!form.email.trim()) {
+      e.email = "required";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(form.email.trim())) {
+      e.email = "invalid";
+    }
+    setErrors(e);
+    return Object.keys(e).length === 0;
+  };
+
+  /* ----- Navigation ----- */
+  const goNext = () => setStep((s) => Math.min(totalSteps, s + 1));
+  const goBack = () => setStep((s) => Math.max(1, s - 1));
+
+  const handleSubmit = (ev: React.FormEvent) => {
+    ev.preventDefault();
+    if (!form.consent) {
+      toast.error(t("s5.consent"));
+      return;
+    }
+    if (!validateRequired()) {
+      setStep(1);
+      toast.error(t("wizard.stubNotice"));
+      return;
+    }
+    // TODO(backend): wire to supabase.functions.invoke("send-inquiry", {
+    //   body: { kind: "questionnaire", source: "tvac-questionnaire", data: form, _website: honeypot, turnstileToken }
+    // }) once the edge function adds a `kind: "questionnaire"` discriminator.
+    // Until then: do NOT use mailto, do NOT fake a success state.
+    toast.message(t("wizard.stubNotice"));
+    // eslint-disable-next-line no-console
+    console.info("[TvacQuestionnaire] payload preview (not sent)", form);
+  };
+
+  const handleReset = () => {
+    setForm(initialForm);
+    setErrors({});
+    setStep(1);
+  };
+
+  // Prevent Enter from advancing/submitting except inside textareas.
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLFormElement>) => {
+    const target = e.target as HTMLElement;
+    if (e.key === "Enter" && target.tagName !== "TEXTAREA") {
+      e.preventDefault();
+    }
+  };
+
+  /* ---------- Step renderers ---------- */
+  const StepNote = () => (
+    <p className="flex items-start gap-2 text-xs text-gray/60 mb-6">
+      <Info className="w-3.5 h-3.5 mt-0.5 shrink-0 text-blue/60" />
+      <span>{t("wizard.leaveBlankNote")}</span>
+    </p>
+  );
+
+  const renderStep1 = () => {
+    const apps = t("s1.applicationOptions", { returnObjects: true }) as string[];
+    const countries = t("s1.countries", { returnObjects: true }) as string[];
+    return (
+      <div className="space-y-8">
+        <SubSectionTitle>{t("stepTitles.s1")}</SubSectionTitle>
+        <StepNote />
+        <FieldGroup cols={2}>
+          <div className="space-y-2">
+            <MonoLabel required>{t("s1.company")}</MonoLabel>
+            <input className={cn(baseInput, errors.company && errorBorder)} placeholder={t("s1.companyPh")} value={form.company} onChange={(e) => set("company")(e.target.value)} />
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="space-y-2">
+              <MonoLabel required>{t("s1.firstName")}</MonoLabel>
+              <input className={cn(baseInput, errors.firstName && errorBorder)} placeholder={t("s1.firstNamePh")} value={form.firstName} onChange={(e) => set("firstName")(e.target.value)} />
+            </div>
+            <div className="space-y-2">
+              <MonoLabel required>{t("s1.lastName")}</MonoLabel>
+              <input className={cn(baseInput, errors.lastName && errorBorder)} placeholder={t("s1.lastNamePh")} value={form.lastName} onChange={(e) => set("lastName")(e.target.value)} />
+            </div>
+          </div>
+        </FieldGroup>
+        <FieldGroup cols={2}>
+          <div className="space-y-2">
+            <MonoLabel required>{t("s1.email")}</MonoLabel>
+            <input type="email" className={cn(baseInput, errors.email && errorBorder)} placeholder={t("s1.emailPh")} value={form.email} onChange={(e) => set("email")(e.target.value)} />
+          </div>
+          <div className="space-y-2">
+            <MonoLabel>{t("s1.phone")}</MonoLabel>
+            <input type="tel" className={baseInput} placeholder={t("s1.phonePh")} value={form.phone} onChange={(e) => set("phone")(e.target.value)} />
+          </div>
+        </FieldGroup>
+        <FieldGroup cols={2}>
+          <div className="space-y-2">
+            <MonoLabel>{t("s1.country")}</MonoLabel>
+            <select className={baseSelect} value={form.country} onChange={(e) => set("country")(e.target.value)}>
+              <option value="">{t("common.selectCountry")}</option>
+              {countries.map((c) => <option key={c} value={c}>{c}</option>)}
+            </select>
+          </div>
+          <div className="space-y-2">
+            <MonoLabel>{t("s1.application")}</MonoLabel>
+            <select className={baseSelect} value={form.application} onChange={(e) => set("application")(e.target.value)}>
+              <option value="">{t("common.selectOption")}</option>
+              {apps.map((c) => <option key={c} value={c}>{c}</option>)}
+            </select>
+          </div>
+        </FieldGroup>
+      </div>
+    );
+  };
+
+  const renderStep2 = () => {
+    const dutOpts = t("s2.dutTypeOptions", { returnObjects: true }) as string[];
+    const housingOpts = t("s2.housingOptions", { returnObjects: true }) as string[];
+    const shapeOpts = t("s2.shapeOptions", { returnObjects: true }) as { cubic: string; cylindrical: string };
+    const matOpts = t("s2.chamberMaterialOptions", { returnObjects: true }) as string[];
+    const doorOpts = t("s2.doorOptions", { returnObjects: true }) as string[];
+    const portRows = t("s2.portRows", { returnObjects: true }) as { label: string; ph: string }[];
+    const vqOpts = t("s2.viewportsQtyOptions", { returnObjects: true }) as string[];
+    const vmOpts = t("s2.viewportsMaterialOptions", { returnObjects: true }) as string[];
+
+    return (
+      <div className="space-y-10">
+        <div>
+          <SubSectionTitle>{t("s2.mounting")}</SubSectionTitle>
+          <StepNote />
+          <div className="space-y-6">
+            <div className="space-y-2 max-w-md">
+              <MonoLabel>{t("s2.weight")}</MonoLabel>
+              <input inputMode="decimal" className={baseInput} placeholder={t("s2.weightPh")} value={form.dutWeight} onChange={(e) => set("dutWeight")(e.target.value)} />
+            </div>
+            <div className="space-y-3">
+              <MonoLabel>{t("s2.dutType")}</MonoLabel>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+                {dutOpts.map((o, i) => (
+                  <CheckItem key={o} label={o} checked={form.dutTypes[i]} onChange={() => toggleAt("dutTypes", i)} />
+                ))}
+                <OtherInput value={form.dutTypeOther} {...setOther("dutTypeOther")} placeholder={t("common.specify")} />
+              </div>
+            </div>
+            <div className="space-y-3">
+              <MonoLabel>{t("s2.housing")}</MonoLabel>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+                {housingOpts.map((o, i) => (
+                  <CheckItem key={o} label={o} checked={form.housing[i]} onChange={() => toggleAt("housing", i)} />
+                ))}
+                <OtherInput value={form.housingOther} {...setOther("housingOther")} placeholder={t("common.specify")} />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <SubSectionTitle>{t("s2.chamber")}</SubSectionTitle>
+          <div className="space-y-6">
+            <FieldGroup cols={2}>
+              <div className="space-y-2">
+                <MonoLabel>{t("s2.shape")}</MonoLabel>
+                <select className={baseSelect} value={form.chamberShape} onChange={(e) => set("chamberShape")(e.target.value as FormState["chamberShape"])}>
+                  <option value="">{t("common.selectShape")}</option>
+                  <option value="cubic">{shapeOpts.cubic}</option>
+                  <option value="cylindrical">{shapeOpts.cylindrical}</option>
+                </select>
+              </div>
+              <div className="space-y-2">
+                <MonoLabel>{t("s2.chamberMaterial")}</MonoLabel>
+                <select className={baseSelect} value={form.chamberMaterial} onChange={(e) => set("chamberMaterial")(e.target.value)}>
+                  <option value="">{t("common.selectMaterial")}</option>
+                  {matOpts.map((m) => <option key={m} value={m}>{m}</option>)}
+                </select>
+              </div>
+            </FieldGroup>
+
+            <div className="space-y-2">
+              <MonoLabel>
+                {t("s2.external")} <span className="text-gray/50 font-normal normal-case tracking-normal ml-1">{t("s2.externalHint")}</span>
+              </MonoLabel>
+              <select
+                className={cn(baseSelect, !form.chamberShape && "opacity-60 cursor-not-allowed")}
+                disabled={!form.chamberShape}
+                value={form.externalDimensions}
+                onChange={(e) => set("externalDimensions")(e.target.value)}
+              >
+                <option value="">{t("common.selectOption")}</option>
+                {externalOptions.map((d) => <option key={d} value={d}>{d}</option>)}
+                {form.chamberShape && <option value="Other">{t("common.other")}</option>}
+              </select>
+            </div>
+
+            {form.externalDimensions === "Other" && form.chamberShape === "cubic" && (
+              <div className="border border-gray/15 rounded-sm p-4 space-y-3">
+                <span className="mono-label text-blue">{t("s2.cubicLabel")}</span>
+                <FieldGroup cols={3}>
+                  <div className="space-y-2"><MonoLabel>{t("common.length")}</MonoLabel><input className={baseInput} placeholder="L" inputMode="decimal" value={form.cubicL} onChange={(e) => set("cubicL")(e.target.value)} /></div>
+                  <div className="space-y-2"><MonoLabel>{t("common.width")}</MonoLabel><input className={baseInput} placeholder="W" inputMode="decimal" value={form.cubicW} onChange={(e) => set("cubicW")(e.target.value)} /></div>
+                  <div className="space-y-2"><MonoLabel>{t("common.height")}</MonoLabel><input className={baseInput} placeholder="H" inputMode="decimal" value={form.cubicH} onChange={(e) => set("cubicH")(e.target.value)} /></div>
+                </FieldGroup>
+              </div>
+            )}
+            {form.externalDimensions === "Other" && form.chamberShape === "cylindrical" && (
+              <div className="border border-gray/15 rounded-sm p-4 space-y-3">
+                <span className="mono-label text-blue">{t("s2.cylindricalLabel")}</span>
+                <FieldGroup cols={2}>
+                  <div className="space-y-2"><MonoLabel>{t("common.diameter")}</MonoLabel><input className={baseInput} placeholder="D" inputMode="decimal" value={form.cylDiameter} onChange={(e) => set("cylDiameter")(e.target.value)} /></div>
+                  <div className="space-y-2"><MonoLabel>{t("common.length")}</MonoLabel><input className={baseInput} placeholder="L" inputMode="decimal" value={form.cylLength} onChange={(e) => set("cylLength")(e.target.value)} /></div>
+                </FieldGroup>
+              </div>
+            )}
+
+            <FieldGroup cols={2}>
+              <div className="space-y-3">
+                <MonoLabel>{t("s2.doorType")}</MonoLabel>
+                <div className="flex flex-col gap-2">
+                  {doorOpts.map((d, i) => (
+                    <CheckItem key={d} label={d} checked={form.doorTypes[i]} onChange={() => toggleAt("doorTypes", i)} />
+                  ))}
+                </div>
+              </div>
+              <div className="space-y-3">
+                <MonoLabel>{t("s2.ports")}</MonoLabel>
+                <div className="space-y-3">
+                  {portRows.map((row, i) => (
+                    <div key={row.label} className="grid grid-cols-1 sm:grid-cols-[1.1fr_1.3fr_0.7fr] gap-2 items-center">
+                      <CheckItem
+                        label={row.label}
+                        checked={form.ports[i].checked}
+                        onChange={(v) => setForm((p) => { const n = [...p.ports]; n[i] = { ...n[i], checked: v }; return { ...p, ports: n }; })}
+                      />
+                      <input className={cn(baseInput, "py-2")} placeholder={row.ph} value={form.ports[i].size} onChange={(e) => setForm((p) => { const n = [...p.ports]; n[i] = { ...n[i], size: e.target.value }; return { ...p, ports: n }; })} />
+                      <input className={cn(baseInput, "py-2")} type="number" placeholder={t("common.qty")} value={form.ports[i].qty} onChange={(e) => setForm((p) => { const n = [...p.ports]; n[i] = { ...n[i], qty: e.target.value }; return { ...p, ports: n }; })} />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </FieldGroup>
+
+            <FieldGroup cols={3}>
+              <div className="space-y-2">
+                <MonoLabel>{t("s2.viewportsQty")}</MonoLabel>
+                <select className={baseSelect} value={form.viewportsQty} onChange={(e) => set("viewportsQty")(e.target.value)}>
+                  <option value="">{t("common.selectQuantity")}</option>
+                  {vqOpts.map((q) => <option key={q} value={q}>{q}</option>)}
+                </select>
+              </div>
+              <div className="space-y-2">
+                <MonoLabel>{t("s2.viewportsSize")}</MonoLabel>
+                <input className={baseInput} placeholder={t("s2.viewportsSizePh")} value={form.viewportsSize} onChange={(e) => set("viewportsSize")(e.target.value)} />
+              </div>
+              <div className="space-y-3">
+                <MonoLabel>{t("s2.viewportsMaterial")}</MonoLabel>
+                <div className="flex flex-col gap-2">
+                  {vmOpts.map((m, i) => (
+                    <CheckItem key={m} label={m} checked={form.viewportsMaterial[i]} onChange={() => toggleAt("viewportsMaterial", i)} />
+                  ))}
+                  <OtherInput value={form.viewportsMaterialOther} {...setOther("viewportsMaterialOther")} placeholder={t("common.specify")} />
+                </div>
+              </div>
+            </FieldGroup>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
+  const renderStep3 = () => {
+    const vacOpts = t("s3.vacuumOptions", { returnObjects: true }) as string[];
+    const hvOpts = t("s3.highVacOptions", { returnObjects: true }) as string[];
+    const hvNested = t("s3.highVacNested", { returnObjects: true }) as string[];
+    const fvOpts = t("s3.foreVacOptions", { returnObjects: true }) as string[];
+    const gOpts = t("s3.gaugeOptions", { returnObjects: true }) as string[];
+    const rampOpts = t("s3.rampOptions", { returnObjects: true }) as string[];
+    const uniOpts = t("s3.uniformityOptions", { returnObjects: true }) as string[];
+    const plateCoolOpts = t("s3.plateCoolingOptions", { returnObjects: true }) as string[];
+    const shroudCfg = t("s3.shroudConfigOptions", { returnObjects: true }) as string[];
+    const shroudCool = t("s3.shroudCoolingOptions", { returnObjects: true }) as string[];
+    const sensorOpts = t("s3.sensorOptions", { returnObjects: true }) as string[];
+    const chOpts = t("s3.channelOptions", { returnObjects: true }) as string[];
+
+    return (
+      <div className="space-y-8">
+        <SubSectionTitle>{t("s3.title")}</SubSectionTitle>
+        <StepNote />
+
+        <FieldGroup cols={3}>
+          <div className="space-y-2"><MonoLabel>{t("s3.heat")}</MonoLabel><input inputMode="decimal" className={baseInput} placeholder={t("s3.heatPh")} value={form.heatDissipation} onChange={(e) => set("heatDissipation")(e.target.value)} /></div>
+          <div className="space-y-2"><MonoLabel>{t("s3.dutCount")}</MonoLabel><input type="number" min={1} className={baseInput} placeholder={t("s3.dutCountPh")} value={form.dutCount} onChange={(e) => set("dutCount")(e.target.value)} /></div>
+          <div className="space-y-2">
+            <MonoLabel>{t("s3.vacuum")}</MonoLabel>
+            <select className={baseSelect} value={form.vacuumLevel} onChange={(e) => set("vacuumLevel")(e.target.value)}>
+              <option value="">{t("common.selectVacuum")}</option>
+              {vacOpts.map((o) => <option key={o} value={o}>{o}</option>)}
+            </select>
+          </div>
+        </FieldGroup>
+
+        <FieldGroup cols={2}>
+          <div className="space-y-3">
+            <MonoLabel>{t("s3.highVacPump")}</MonoLabel>
+            <div className="flex flex-col gap-2">
+              {hvOpts.map((o, i) => <CheckItem key={o} label={o} checked={form.highVac[i]} onChange={() => toggleAt("highVac", i)} />)}
+              {hvNested.map((o, i) => <CheckItem key={o} label={o} checked={form.highVacNested[i]} onChange={() => toggleAt("highVacNested", i)} nested />)}
+            </div>
+          </div>
+          <div className="space-y-3">
+            <MonoLabel>{t("s3.foreVacPump")}</MonoLabel>
+            <div className="flex flex-col gap-2">
+              {fvOpts.map((o, i) => <CheckItem key={o} label={o} checked={form.foreVac[i]} onChange={() => toggleAt("foreVac", i)} />)}
+            </div>
+          </div>
+        </FieldGroup>
+
+        <FieldGroup cols={3}>
+          <div className="space-y-3">
+            <MonoLabel>{t("s3.gauges")}</MonoLabel>
+            <div className="flex flex-col gap-2">{gOpts.map((o, i) => <CheckItem key={o} label={o} checked={form.gauges[i]} onChange={() => toggleAt("gauges", i)} />)}</div>
+          </div>
+          <div className="space-y-2">
+            <MonoLabel>{t("s3.ramp")}</MonoLabel>
+            <select className={baseSelect} value={form.rampRate} onChange={(e) => set("rampRate")(e.target.value)}>
+              <option value="">{t("common.selectRate")}</option>{rampOpts.map((o) => <option key={o} value={o}>{o}</option>)}
+            </select>
+          </div>
+          <div className="space-y-2">
+            <MonoLabel>{t("s3.uniformity")}</MonoLabel>
+            <select className={baseSelect} value={form.uniformity} onChange={(e) => set("uniformity")(e.target.value)}>
+              <option value="">{t("common.selectValue")}</option>{uniOpts.map((o) => <option key={o} value={o}>{o}</option>)}
+            </select>
+          </div>
+        </FieldGroup>
+
+        <div className="space-y-2">
+          <MonoLabel>{t("s3.tempRange")}</MonoLabel>
+          <FieldGroup cols={2}>
+            <div className="space-y-1"><label className="text-xs text-gray">{t("common.min")}</label><input className={baseInput} placeholder={t("s3.tempMinPh")} value={form.tempMin} onChange={(e) => set("tempMin")(e.target.value)} /></div>
+            <div className="space-y-1"><label className="text-xs text-gray">{t("common.max")}</label><input className={baseInput} placeholder={t("s3.tempMaxPh")} value={form.tempMax} onChange={(e) => set("tempMax")(e.target.value)} /></div>
+          </FieldGroup>
+        </div>
+
+        <FieldGroup cols={2}>
+          <div className="space-y-3">
+            <MonoLabel>{t("s3.thermalPlate")}</MonoLabel>
+            <div className="space-y-2">
+              <label className="text-xs text-gray">{t("s3.plateDims")}</label>
+              <select className={cn(baseSelect, !form.chamberShape && "opacity-60 cursor-not-allowed")} disabled={!form.chamberShape} value={form.plateDimensions} onChange={(e) => set("plateDimensions")(e.target.value)}>
+                <option value="">{form.chamberShape ? t("common.selectSize") : t("common.selectOption")}</option>
+                {plateOptions.map((o) => <option key={o} value={o}>{o}</option>)}
+                {form.chamberShape && <option value="Other">{t("common.other")}</option>}
+              </select>
+            </div>
+            <p className="text-xs text-gray/60">{t("s3.plateNote")}</p>
+            {form.plateDimensions === "Other" && (
+              <input className={baseInput} placeholder={t("s3.plateCustomPh")} value={form.plateCustom} onChange={(e) => set("plateCustom")(e.target.value)} />
+            )}
+            <FieldGroup cols={2}>
+              <div className="space-y-1"><label className="text-xs text-gray">{t("s3.plateTempMin")}</label><input type="number" className={baseInput} placeholder="min. °C" value={form.plateTempMin} onChange={(e) => set("plateTempMin")(e.target.value)} /></div>
+              <div className="space-y-1"><label className="text-xs text-gray">{t("s3.plateTempMax")}</label><input type="number" className={baseInput} placeholder="max. °C" value={form.plateTempMax} onChange={(e) => set("plateTempMax")(e.target.value)} /></div>
+            </FieldGroup>
+            <span className="mono-label text-blue">{t("s3.plateCooling")}</span>
+            <div className="flex flex-col gap-2">
+              {plateCoolOpts.map((o, i) => <CheckItem key={o} label={o} checked={form.plateCooling[i]} onChange={() => toggleAt("plateCooling", i)} />)}
+              <OtherInput value={form.plateCoolingOther} {...setOther("plateCoolingOther")} placeholder={t("common.specify")} />
+            </div>
+          </div>
+          <div className="space-y-3">
+            <MonoLabel>{t("s3.shroud")}</MonoLabel>
+            <div className="space-y-2">
+              <label className="text-xs text-gray">{t("s3.shroudConfig")}</label>
+              <select className={baseSelect} value={form.shroudConfig} onChange={(e) => set("shroudConfig")(e.target.value)}>
+                <option value="">{t("common.selectOption")}</option>{shroudCfg.map((o) => <option key={o} value={o}>{o}</option>)}
+              </select>
+            </div>
+            <FieldGroup cols={2}>
+              <div className="space-y-1"><label className="text-xs text-gray">{t("s3.plateTempMin")}</label><input type="number" className={baseInput} placeholder="min. °C" value={form.shroudTempMin} onChange={(e) => set("shroudTempMin")(e.target.value)} /></div>
+              <div className="space-y-1"><label className="text-xs text-gray">{t("s3.plateTempMax")}</label><input type="number" className={baseInput} placeholder="max. °C" value={form.shroudTempMax} onChange={(e) => set("shroudTempMax")(e.target.value)} /></div>
+            </FieldGroup>
+            <span className="mono-label text-blue">{t("s3.shroudCooling")}</span>
+            <div className="flex flex-col gap-2">
+              {shroudCool.map((o, i) => <CheckItem key={o} label={o} checked={form.shroudCooling[i]} onChange={() => toggleAt("shroudCooling", i)} />)}
+              <OtherInput value={form.shroudCoolingOther} {...setOther("shroudCoolingOther")} placeholder={t("common.specify")} />
+            </div>
+          </div>
+        </FieldGroup>
+
+        <FieldGroup cols={2}>
+          <div className="space-y-3">
+            <MonoLabel>{t("s3.sensor")}</MonoLabel>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+              {sensorOpts.map((o, i) => <CheckItem key={o} label={o} checked={form.sensorTypes[i]} onChange={() => toggleAt("sensorTypes", i)} />)}
+              <OtherInput value={form.sensorTypeOther} {...setOther("sensorTypeOther")} placeholder={t("common.specify")} />
+            </div>
+          </div>
+          <div className="space-y-2">
+            <MonoLabel>{t("s3.channels")}</MonoLabel>
+            <select className={baseSelect} value={form.measurementChannels} onChange={(e) => set("measurementChannels")(e.target.value)}>
+              <option value="">{t("common.selectRange")}</option>{chOpts.map((o) => <option key={o} value={o}>{o}</option>)}
+            </select>
+          </div>
+        </FieldGroup>
+      </div>
+    );
+  };
+
+  const renderStep4 = () => {
+    const elecConn = t("s4.elecConnectorOptions", { returnObjects: true }) as string[];
+    const rfOpts = t("s4.rfOptions", { returnObjects: true }) as string[];
+    const fiberOpts = t("s4.fiberOptions", { returnObjects: true }) as string[];
+    const motionOpts = t("s4.motionOptions", { returnObjects: true }) as string[];
+    const yesNo = t("s4.yesNo", { returnObjects: true }) as string[];
+    const remoteOpts = t("s4.remoteOptions", { returnObjects: true }) as string[];
+    const aiOpts = t("s4.aiOptions", { returnObjects: true }) as string[];
+    const commOpts = t("s4.commOptions", { returnObjects: true }) as string[];
+    const exportOpts = t("s4.exportOptions", { returnObjects: true }) as string[];
+    const alarmOpts = t("s4.alarmOptions", { returnObjects: true }) as string[];
+
+    return (
+      <div className="space-y-10">
+        <div>
+          <SubSectionTitle>{t("s4.feedthroughs")}</SubSectionTitle>
+          <StepNote />
+          <div className="space-y-6">
+            <div className="space-y-3">
+              <MonoLabel>{t("s4.elec")}</MonoLabel>
+              <FieldGroup cols={4}>
+                <div className="space-y-1"><label className="text-xs text-gray">{t("common.quantity")}</label><input type="number" className={baseInput} placeholder={t("common.qty")} value={form.elecQty} onChange={(e) => set("elecQty")(e.target.value)} /></div>
+                <div className="space-y-1"><label className="text-xs text-gray">{t("s4.elecVoltage")}</label><input className={baseInput} placeholder="V" value={form.elecVoltage} onChange={(e) => set("elecVoltage")(e.target.value)} /></div>
+                <div className="space-y-1"><label className="text-xs text-gray">{t("s4.elecCurrent")}</label><input className={baseInput} placeholder="A" value={form.elecCurrent} onChange={(e) => set("elecCurrent")(e.target.value)} /></div>
+                <div className="space-y-1"><label className="text-xs text-gray">{t("s4.elecNotes")}</label><input className={baseInput} placeholder={t("s4.elecNotesPh")} value={form.elecNotes} onChange={(e) => set("elecNotes")(e.target.value)} /></div>
+              </FieldGroup>
+              <span className="mono-label text-blue">{t("s4.elecConnector")}</span>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                {elecConn.map((o, i) => <CheckItem key={o} label={o} checked={form.elecConnector[i]} onChange={() => toggleAt("elecConnector", i)} />)}
+                <OtherInput value={form.elecConnectorOther} {...setOther("elecConnectorOther")} placeholder={t("common.specify")} />
+              </div>
+            </div>
+
+            <FieldGroup cols={2}>
+              <div className="space-y-3">
+                <MonoLabel>{t("s4.rf")}</MonoLabel>
+                <span className="mono-label text-blue">{t("common.type")}</span>
+                <div className="grid grid-cols-2 gap-2">{rfOpts.map((o, i) => <CheckItem key={o} label={o} checked={form.rfTypes[i]} onChange={() => toggleAt("rfTypes", i)} />)}</div>
+                <OtherInput value={form.rfTypeOther} {...setOther("rfTypeOther")} placeholder={t("common.specify")} />
+                <div className="space-y-1"><label className="text-xs text-gray">{t("common.quantity")}</label><input className={baseInput} placeholder={t("common.qty")} value={form.rfQty} onChange={(e) => set("rfQty")(e.target.value)} /></div>
+              </div>
+              <div className="space-y-3">
+                <MonoLabel>{t("s4.fiber")}</MonoLabel>
+                <span className="mono-label text-blue">{t("common.type")}</span>
+                <div className="grid grid-cols-2 gap-2">{fiberOpts.map((o, i) => <CheckItem key={o} label={o} checked={form.fiberTypes[i]} onChange={() => toggleAt("fiberTypes", i)} />)}</div>
+                <OtherInput value={form.fiberTypeOther} {...setOther("fiberTypeOther")} placeholder={t("common.specify")} />
+                <div className="space-y-1"><label className="text-xs text-gray">{t("common.quantity")}</label><input className={baseInput} placeholder={t("common.qty")} value={form.fiberQty} onChange={(e) => set("fiberQty")(e.target.value)} /></div>
+              </div>
+            </FieldGroup>
+
+            <FieldGroup cols={2}>
+              <div className="space-y-3">
+                <MonoLabel>{t("s4.fluid")}</MonoLabel>
+                <FieldGroup cols={2}>
+                  <div className="space-y-1"><label className="text-xs text-gray">{t("common.quantity")}</label><input className={baseInput} placeholder={t("common.qty")} value={form.fluidQty} onChange={(e) => set("fluidQty")(e.target.value)} /></div>
+                  <div className="space-y-1"><label className="text-xs text-gray">{t("s4.fluidConn")}</label><input className={baseInput} placeholder={t("s4.fluidConnPh")} value={form.fluidConnection} onChange={(e) => set("fluidConnection")(e.target.value)} /></div>
+                </FieldGroup>
+              </div>
+              <div className="space-y-3">
+                <MonoLabel>{t("s4.motion")}</MonoLabel>
+                <span className="mono-label text-blue">{t("common.type")}</span>
+                <div className="grid grid-cols-2 gap-2">{motionOpts.map((o, i) => <CheckItem key={o} label={o} checked={form.motionTypes[i]} onChange={() => toggleAt("motionTypes", i)} />)}</div>
+                <OtherInput value={form.motionTypeOther} {...setOther("motionTypeOther")} placeholder={t("common.specify")} />
+                <div className="space-y-1"><label className="text-xs text-gray">{t("common.quantity")}</label><input className={baseInput} placeholder={t("common.qty")} value={form.motionQty} onChange={(e) => set("motionQty")(e.target.value)} /></div>
+              </div>
+            </FieldGroup>
+          </div>
+        </div>
+
+        <div>
+          <SubSectionTitle>{t("s4.control")}</SubSectionTitle>
+          <div className="space-y-6">
+            <FieldGroup cols={2}>
+              <div className="space-y-3">
+                <MonoLabel>{t("s4.remote")}</MonoLabel>
+                <select className={baseSelect} value={form.remoteAccess} onChange={(e) => set("remoteAccess")(e.target.value)}>
+                  <option value="">{t("common.selectOption")}</option>{yesNo.map((o) => <option key={o} value={o}>{o}</option>)}
+                </select>
+                <span className="mono-label text-blue">{t("s4.remoteAccess")}</span>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">{remoteOpts.map((o, i) => <CheckItem key={o} label={o} checked={form.remoteOptions[i]} onChange={() => toggleAt("remoteOptions", i)} />)}</div>
+              </div>
+              <div className="space-y-2">
+                <MonoLabel>{t("s4.ai")}</MonoLabel>
+                <select className={baseSelect} value={form.ai} onChange={(e) => set("ai")(e.target.value)}>
+                  <option value="">{t("common.selectOption")}</option>{aiOpts.map((o) => <option key={o} value={o}>{o}</option>)}
+                </select>
+              </div>
+            </FieldGroup>
+            <div className="space-y-3">
+              <MonoLabel>{t("s4.comm")}</MonoLabel>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+                {commOpts.map((o, i) => <CheckItem key={o} label={o} checked={form.comm[i]} onChange={() => toggleAt("comm", i)} />)}
+                <OtherInput value={form.commOther} {...setOther("commOther")} placeholder={t("common.specify")} />
+              </div>
+            </div>
+            <FieldGroup cols={2}>
+              <div className="space-y-3">
+                <MonoLabel>{t("s4.logging")}</MonoLabel>
+                <CheckItem label={t("s4.loggingCustom")} checked={form.loggingCustom} onChange={(v) => set("loggingCustom")(v)} />
+                <input className={baseInput} placeholder={t("s4.loggingNotesPh")} value={form.loggingNotes} onChange={(e) => set("loggingNotes")(e.target.value)} />
+              </div>
+              <div className="space-y-3">
+                <MonoLabel>{t("s4.export")}</MonoLabel>
+                <div className="grid grid-cols-2 gap-2">{exportOpts.map((o, i) => <CheckItem key={o} label={o} checked={form.exportFormats[i]} onChange={() => toggleAt("exportFormats", i)} />)}</div>
+              </div>
+            </FieldGroup>
+          </div>
+        </div>
+
+        <div>
+          <SubSectionTitle>{t("s4.safety")}</SubSectionTitle>
+          <div className="space-y-3">
+            <MonoLabel>{t("s4.alarm")}</MonoLabel>
+            <div className="flex flex-col gap-2">{alarmOpts.map((o, i) => <CheckItem key={o} label={o} checked={form.alarms[i]} onChange={() => toggleAt("alarms", i)} />)}</div>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
+  const renderStep5 = () => {
+    const powerOpts = t("s5.powerOptions", { returnObjects: true }) as string[];
+    const utilOpts = t("s5.utilitiesOptions", { returnObjects: true }) as string[];
+    const delivOpts = t("s5.deliveryOptions", { returnObjects: true }) as string[];
+    const budgetOpts = t("s5.budgetOptions", { returnObjects: true }) as string[];
+    const phaseOpts = t("s5.phaseOptions", { returnObjects: true }) as string[];
+
+    return (
+      <div className="space-y-10">
+        <div>
+          <SubSectionTitle>{t("s5.additional")}</SubSectionTitle>
+          <StepNote />
+          <div className="space-y-6">
+            <div className="space-y-3">
+              <MonoLabel>{t("s5.installEnv")}</MonoLabel>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                <CheckItem label={t("s5.installStandard")} checked={form.installStandard} onChange={(v) => set("installStandard")(v)} />
+                <div className="flex items-center gap-2 flex-wrap">
+                  <CheckItem label={t("s5.installCleanroom")} checked={form.installCleanroom.checked} onChange={setOther("installCleanroom").onCheck} />
+                  <input className={cn(baseInput, "flex-1 min-w-[140px] py-2")} placeholder={t("s5.installCleanroomPh")} value={form.installCleanroom.text} onChange={(e) => setOther("installCleanroom").onText(e.target.value)} />
+                </div>
+                <OtherInput value={form.installOther} {...setOther("installOther")} placeholder={t("common.specify")} />
+              </div>
+            </div>
+            <div className="space-y-2">
+              <MonoLabel>{t("s5.installSpace")}</MonoLabel>
+              <textarea className={baseTextarea} placeholder={t("s5.installSpacePh")} value={form.installSpace} onChange={(e) => set("installSpace")(e.target.value)} />
+            </div>
+            <FieldGroup cols={2}>
+              <div className="space-y-3">
+                <MonoLabel>{t("s5.power")}</MonoLabel>
+                <div className="flex flex-col gap-2">
+                  {powerOpts.map((o, i) => <CheckItem key={o} label={o} checked={form.power[i]} onChange={() => toggleAt("power", i)} />)}
+                  <OtherInput value={form.powerOther} {...setOther("powerOther")} placeholder={t("common.specify")} />
+                </div>
+                <input type="number" className={baseInput} placeholder={t("s5.powerMaxPh")} value={form.powerMax} onChange={(e) => set("powerMax")(e.target.value)} />
+              </div>
+              <div className="space-y-3">
+                <MonoLabel>{t("s5.utilities")}</MonoLabel>
+                <div className="flex flex-col gap-2">{utilOpts.map((o, i) => <CheckItem key={o} label={o} checked={form.utilities[i]} onChange={() => toggleAt("utilities", i)} />)}</div>
+              </div>
+            </FieldGroup>
+            <div className="space-y-2">
+              <MonoLabel>{t("s5.specialReq")}</MonoLabel>
+              <textarea className={baseTextarea} placeholder={t("s5.specialReqPh")} value={form.specialReq} onChange={(e) => set("specialReq")(e.target.value)} />
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <SubSectionTitle>{t("s5.schedule")}</SubSectionTitle>
+          <FieldGroup cols={3}>
+            <div className="space-y-2">
+              <MonoLabel>{t("s5.delivery")}</MonoLabel>
+              <select className={baseSelect} value={form.delivery} onChange={(e) => set("delivery")(e.target.value)}>
+                <option value="">{t("common.selectDelivery")}</option>{delivOpts.map((o) => <option key={o} value={o}>{o}</option>)}
+              </select>
+            </div>
+            <div className="space-y-2">
+              <MonoLabel>{t("s5.budget")}</MonoLabel>
+              <select className={baseSelect} value={form.budget} onChange={(e) => set("budget")(e.target.value)}>
+                <option value="">{t("common.selectBudget")}</option>{budgetOpts.map((o) => <option key={o} value={o}>{o}</option>)}
+              </select>
+            </div>
+            <div className="space-y-2">
+              <MonoLabel>{t("s5.phase")}</MonoLabel>
+              <select className={baseSelect} value={form.phase} onChange={(e) => set("phase")(e.target.value)}>
+                <option value="">{t("common.selectPhase")}</option>{phaseOpts.map((o) => <option key={o} value={o}>{o}</option>)}
+              </select>
+            </div>
+          </FieldGroup>
+        </div>
+
+        <div className="border-t border-gray/15 pt-6 space-y-4">
+          <label className="flex items-start gap-3 cursor-pointer group">
+            <input type="checkbox" checked={form.consent} onChange={(e) => set("consent")(e.target.checked)} className="mt-0.5 w-4 h-4 accent-blue rounded-sm border-gray/30" />
+            <span className="text-xs text-gray/70 leading-relaxed group-hover:text-gray/90 transition-colors">
+              {t("s5.consent")} <span className="text-blue ml-1">*</span>
+            </span>
+          </label>
+          <p className="text-[11px] text-gray/50 font-mono">{t("wizard.submitDisabledHint")}</p>
+        </div>
+      </div>
+    );
+  };
+
+  const stepLabels = [
+    t("stepTitles.s1"),
+    t("stepTitles.s2"),
+    t("stepTitles.s3"),
+    t("stepTitles.s4"),
+    t("stepTitles.s5"),
+  ];
+
+  return (
+    <Layout>
+      <Helmet>
+        <html lang={lang} />
+        <title>{tSeo("questionnaire.title")}</title>
+        <meta name="description" content={tSeo("questionnaire.description")} />
+        <meta name="robots" content="noindex,follow" />
+        <link rel="canonical" href={canonical} />
+        {hreflangs.map((h) => (<link key={h.lang} rel="alternate" hrefLang={h.lang} href={h.href} />))}
+      </Helmet>
+      <PageShell>
+        <PageHero eyebrow={t("meta.eyebrow")} title={t("meta.title")} description={t("meta.description")}>
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-2 pt-2 text-xs text-gray/70 font-mono">
+            <span className="flex items-center gap-2"><Clock className="w-3.5 h-3.5 text-blue/70" /> {t("meta.estimatedTime")}</span>
+            <span className="flex items-center gap-2"><Info className="w-3.5 h-3.5 text-blue/70" /> {t("meta.reassurance")}</span>
+          </div>
+        </PageHero>
+
+        <Section className="pt-0">
+          {/* Step indicator */}
+          <div className="mb-10">
+            {/* Desktop */}
+            <ol className="hidden md:flex items-center gap-2">
+              {stepLabels.map((label, i) => {
+                const idx = i + 1;
+                const active = idx === step;
+                const done = idx < step;
+                return (
+                  <li key={label} className="flex-1 flex items-center gap-3">
+                    <div className={cn(
+                      "flex items-center gap-3 px-4 py-2.5 rounded-sm border transition-colors w-full",
+                      active && "border-blue/50 bg-blue/5",
+                      done && "border-gray/20 bg-surface/40",
+                      !active && !done && "border-gray/10 bg-transparent"
+                    )}>
+                      <span className={cn(
+                        "w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-mono shrink-0",
+                        active ? "bg-blue text-background" : done ? "bg-gray/20 text-sand" : "bg-transparent border border-gray/20 text-gray/60"
+                      )}>{idx}</span>
+                      <span className={cn("text-xs font-mono tracking-wide truncate", active ? "text-sand" : "text-gray/70")}>{label}</span>
+                    </div>
+                    {idx < totalSteps && <div className="w-4 h-px bg-gray/15 shrink-0" />}
+                  </li>
+                );
+              })}
+            </ol>
+            {/* Mobile */}
+            <div className="md:hidden flex items-center justify-between gap-3 px-4 py-3 border border-gray/15 rounded-sm bg-surface/40">
+              <span className="text-[11px] font-mono text-blue">{t("wizard.stepLabel", { current: step, total: totalSteps })}</span>
+              <span className="text-sm text-sand truncate">{stepLabels[step - 1]}</span>
+            </div>
+          </div>
+
+          <form onSubmit={handleSubmit} onKeyDown={handleKeyDown} className="space-y-8">
+            <div className="border border-gray/15 rounded-sm p-6 md:p-10 bg-surface/20">
+              {step === 1 && renderStep1()}
+              {step === 2 && renderStep2()}
+              {step === 3 && renderStep3()}
+              {step === 4 && renderStep4()}
+              {step === 5 && renderStep5()}
+            </div>
+
+            {/* Wizard footer */}
+            <div className="sticky bottom-0 bg-background/95 backdrop-blur-sm border-t border-gray/15 py-4 -mx-6 px-6 flex flex-col-reverse sm:flex-row sm:items-center sm:justify-between gap-3">
+              <AlertDialog>
+                <AlertDialogTrigger asChild>
+                  <button
+                    type="button"
+                    className="inline-flex items-center gap-1.5 text-xs text-gray/50 hover:text-gray transition-colors font-mono self-start"
+                  >
+                    <RotateCcw className="w-3 h-3" /> {t("wizard.reset")}
+                  </button>
+                </AlertDialogTrigger>
+                <AlertDialogContent>
+                  <AlertDialogHeader>
+                    <AlertDialogTitle>{t("wizard.resetConfirmTitle")}</AlertDialogTitle>
+                    <AlertDialogDescription>{t("wizard.resetConfirmDescription")}</AlertDialogDescription>
+                  </AlertDialogHeader>
+                  <AlertDialogFooter>
+                    <AlertDialogCancel>{t("wizard.resetConfirmCancel")}</AlertDialogCancel>
+                    <AlertDialogAction onClick={handleReset}>{t("wizard.resetConfirmAction")}</AlertDialogAction>
+                  </AlertDialogFooter>
+                </AlertDialogContent>
+              </AlertDialog>
+
+              <div className="flex items-center gap-3">
+                <Button type="button" variant="outline" onClick={goBack} disabled={step === 1} className="font-mono text-xs">
+                  <ArrowLeft className="w-4 h-4 mr-1.5" /> {t("wizard.back")}
+                </Button>
+                {step < totalSteps ? (
+                  <Button type="button" onClick={goNext} className="font-mono text-xs">
+                    {t("wizard.continue")} <ArrowRight className="w-4 h-4 ml-1.5" />
+                  </Button>
+                ) : (
+                  <Button type="submit" className="font-mono text-xs">
+                    <Send className="w-4 h-4 mr-1.5" /> {t("wizard.submit")}
+                  </Button>
+                )}
+              </div>
+            </div>
+          </form>
+        </Section>
+      </PageShell>
+    </Layout>
+  );
+}
