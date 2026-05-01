@@ -119,6 +119,12 @@ const CustomTVAC = () => {
         {/* Mid-page CTA */}
         <CTABand title={t("customTvac.midCta.title")} description={t("customTvac.midCta.description")}>
           <Button asChild size="lg" className="font-mono text-xs tracking-wide">
+            <Link to={localizedPath("/tvac-questionnaire", lang)}>
+              <ClipboardList className="w-4 h-4 mr-2" />
+              {tc("cta.questionnaire.configure")}
+            </Link>
+          </Button>
+          <Button asChild variant="outline" size="lg">
             <Link to={localizedPath("/contact", lang)}>{tc("buttons.requestConsultation")}</Link>
           </Button>
         </CTABand>
