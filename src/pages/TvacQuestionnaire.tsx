@@ -1,4 +1,5 @@
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import { useLocation } from "react-router-dom";
@@ -16,11 +17,25 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { ArrowLeft, ArrowRight, Send, RotateCcw, Clock, Info } from "lucide-react";
+import { ArrowLeft, ArrowRight, Send, RotateCcw, Clock, Info, FileDown, Loader2, CheckCircle, AlertTriangle } from "lucide-react";
 import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
 import { useLanguage } from "@/components/LanguageProvider";
-import { getHreflangs, getCanonical } from "@/lib/routes";
+import { getHreflangs, getCanonical, localizedPath } from "@/lib/routes";
 import { cn } from "@/lib/utils";
+import { QuestionnairePrintView } from "@/components/questionnaire/QuestionnairePrintView";
+
+const TURNSTILE_SITE_KEY = "0x4AAAAAACu_Uqbd5b8IkXxU";
+
+declare global {
+  interface Window {
+    turnstile?: {
+      render: (el: HTMLElement, opts: { sitekey: string; callback?: (t: string) => void; size?: string }) => string;
+      getResponse: (id: string) => string | undefined;
+      reset: (id: string) => void;
+    };
+  }
+}
 
 /* ---------- Dynamic logic constants (verbatim from Q11-5.html) ---------- */
 const thermalPlateDimensionsByShape: Record<string, string[]> = {
