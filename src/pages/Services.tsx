@@ -6,7 +6,7 @@ import { Layout } from "@/components/Layout";
 import { PageShell, PageHero, Section, CTABand } from "@/components/PageShell";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Thermometer, Gauge, Settings, RefreshCw, Wrench, Box } from "lucide-react";
+import { ArrowRight, Thermometer, Gauge, Settings, RefreshCw, Wrench, Box, ClipboardList, Clock } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { useLanguage } from "@/components/LanguageProvider";
 import { getHreflangs, getCanonical, localizedPath } from "@/lib/routes";
