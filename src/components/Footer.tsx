@@ -32,6 +32,7 @@ export function Footer() {
       { label: t("nav.careers"), href: lp("/careers") },
       { label: t("nav.references"), href: lp("/references") },
       { label: t("nav.resources"), href: lp("/resources") },
+      { label: t("footer.technicalQuestionnaire"), href: lp("/tvac-questionnaire") },
       { label: t("footer.contact"), href: lp("/contact") },
     ],
   };
