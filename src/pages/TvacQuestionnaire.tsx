@@ -37,12 +37,20 @@ const externalDimensionsByShape: Record<string, string[]> = {
   cylindrical: ["600 × 1800 × 900", "700 × 1900 × 1000", "900 × 1900 × 1130", "1100 × 1900 × 1300", "1400 × 1900 × 1500", "1700 × 2100 × 1860"],
 };
 
-/* ---------- Reusable input class strings (match Contact.tsx) ---------- */
+/* ---------- Reusable input class strings (questionnaire-local) ----------
+   Tuned for readability on the dark Deepvac CI:
+   - raised surface bg vs page background
+   - clearly visible default border + hover state
+   - stronger blue focus ring
+   - readable placeholder + base text size                                  */
 const baseInput =
-  "w-full bg-background border border-gray/15 rounded-sm px-4 py-3 text-sm text-sand placeholder:text-gray/30 focus:outline-none focus:border-blue/40 focus:ring-1 focus:ring-blue/20 transition-all duration-200";
-const baseSelect = `${baseInput} appearance-none`;
-const baseTextarea = `${baseInput} min-h-[110px] resize-y`;
-const errorBorder = "border-red-400/60";
+  "w-full bg-surface border border-gray/30 rounded-sm px-4 py-3 text-base text-sand placeholder:text-gray/55 hover:border-gray/50 focus:outline-none focus:border-blue/70 focus:bg-surface-raised focus:ring-2 focus:ring-blue/25 disabled:opacity-60 disabled:cursor-not-allowed transition-colors duration-200";
+const baseSelect = `${baseInput} appearance-none pr-10 bg-[length:14px] bg-no-repeat bg-[right_14px_center] bg-[image:linear-gradient(45deg,transparent_50%,hsl(var(--gray))_50%),linear-gradient(135deg,hsl(var(--gray))_50%,transparent_50%)] bg-[position:calc(100%-18px)_calc(50%-2px),calc(100%-12px)_calc(50%-2px)] [background-size:6px_6px,6px_6px]`;
+const baseTextarea = `${baseInput} min-h-[120px] leading-relaxed resize-y`;
+const errorBorder = "border-red-400/70";
+
+/* Inline sub-label (lower-case helper labels above inputs) */
+const subLabel = "text-[13px] font-medium text-gray/85";
 
 /* ---------- Form state shape ---------- */
 interface OtherCheck {
