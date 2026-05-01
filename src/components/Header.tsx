@@ -201,6 +201,7 @@ export function Header() {
 
   const homePath = localizedPath("/", lang);
   const contactPath = localizedPath("/contact", lang);
+  const questionnairePath = localizedPath("/tvac-questionnaire", lang);
 
   const langButtonClass = (active: boolean) =>
     cn(
@@ -288,7 +289,7 @@ export function Header() {
           </div>
 
           <Button asChild size="sm" className="font-mono text-xs tracking-wide">
-            <Link to={contactPath}>{t("nav.talkToEngineer")}</Link>
+            <Link to={questionnairePath}>{t("nav.configureTvac")}</Link>
           </Button>
         </div>
 
@@ -354,7 +355,7 @@ export function Header() {
 
             <div className="pt-2">
               <Button asChild size="sm" className="w-full font-mono text-xs tracking-wide">
-                <Link to={contactPath}>{t("nav.talkToEngineer")}</Link>
+                <Link to={questionnairePath}>{t("nav.configureTvac")}</Link>
               </Button>
             </div>
           </div>
