@@ -32,7 +32,7 @@ export function ServiceCard({
           {title}
         </h3>
         {description && (
-          <p className="text-sm text-gray leading-relaxed transition-colors duration-300 group-hover:text-sand/85">{description}</p>
+          <p className="text-sm text-gray/90 leading-relaxed transition-colors duration-300 group-hover:text-sand/85">{description}</p>
         )}
       </div>
       <div className="flex items-center gap-1.5 text-blue text-sm font-mono opacity-0 -translate-x-1 transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:opacity-100 group-hover:translate-x-0">
