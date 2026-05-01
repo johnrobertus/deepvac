@@ -1157,7 +1157,7 @@ export default function TvacQuestionnaire() {
                 <AlertDialogTrigger asChild>
                   <button
                     type="button"
-                    className="inline-flex items-center gap-1.5 text-xs text-gray/50 hover:text-gray transition-colors font-mono self-start focus:outline-none focus-visible:ring-2 focus-visible:ring-gray/40 rounded-sm px-1 py-0.5"
+                    className="inline-flex items-center gap-1.5 text-xs text-gray/70 hover:text-sand transition-colors font-mono self-start focus:outline-none focus-visible:ring-2 focus-visible:ring-gray/40 rounded-sm px-1 py-0.5"
                   >
                     <RotateCcw className="w-3 h-3" /> {t("wizard.reset")}
                   </button>
