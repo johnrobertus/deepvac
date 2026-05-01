@@ -99,7 +99,7 @@ const Team = () => {
                       <h3 className="text-lg font-medium text-sand">{member.name}</h3>
                       <span className="mono-label text-blue">{member.role}</span>
                     </div>
-                    <a href="https://www.linkedin.com/company/deepvac-gmbh/" target="_blank" rel="noopener noreferrer" className="text-gray/40 hover:text-blue transition-colors" aria-label={`${member.name} LinkedIn`}>
+                    <a href="https://www.linkedin.com/company/deepvac-gmbh/" target="_blank" rel="noopener noreferrer" className="text-gray/70 hover:text-blue transition-colors" aria-label={`${member.name} LinkedIn`}>
                       <Linkedin className="w-4 h-4" />
                     </a>
                   </div>
