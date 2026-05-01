@@ -1006,14 +1006,14 @@ export default function TvacQuestionnaire() {
           </FieldGroup>
         </div>
 
-        <div className="border-t border-gray/15 pt-6 space-y-4">
+        <div className="border-t border-gray/25 pt-6 space-y-4">
           <label className="flex items-start gap-3 cursor-pointer group">
-            <input type="checkbox" checked={form.consent} onChange={(e) => set("consent")(e.target.checked)} className="mt-0.5 w-4 h-4 accent-blue rounded-sm border-gray/30 focus:outline-none focus:ring-2 focus:ring-blue/40" />
-            <span className="text-xs text-gray/70 leading-relaxed group-hover:text-gray/90 transition-colors">
-              {t("s5.consent")} <span className="text-blue ml-1">*</span>
+            <input type="checkbox" checked={form.consent} onChange={(e) => set("consent")(e.target.checked)} className="mt-0.5 w-[18px] h-[18px] accent-blue rounded-sm border-gray/40 focus:outline-none focus:ring-2 focus:ring-blue/40" />
+            <span className="text-sm text-sand/85 leading-relaxed group-hover:text-sand transition-colors">
+              {t("s5.consent")} <span className="text-blue ml-1" aria-hidden="true">*</span>
             </span>
           </label>
-          <p className="text-[11px] text-gray/50 font-mono">{t("wizard.submitHelp")}</p>
+          <p className="text-xs text-gray/70 font-mono">{t("wizard.submitHelp")}</p>
         </div>
       </div>
     );
