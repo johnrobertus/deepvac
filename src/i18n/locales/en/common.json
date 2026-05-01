@@ -16,7 +16,8 @@
     "retrofitModernization": "Retrofit & Modernization",
     "maintenanceRepair": "Maintenance & Repair",
     "subsystemIntegration": "Subsystem Integration",
-    "talkToEngineer": "Talk to an Engineer"
+    "talkToEngineer": "Talk to an Engineer",
+    "configureTvac": "Configure TVAC System"
   },
   "footer": {
     "description": "Advanced thermal vacuum systems for aerospace qualification, space simulation, and environmental testing.",
