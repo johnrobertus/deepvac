@@ -67,12 +67,19 @@ const CustomTVAC = () => {
         >
           <div className="flex flex-col sm:flex-row flex-wrap gap-3 pt-4">
             <Button asChild size="lg" className="font-mono text-xs tracking-wide w-full sm:w-auto">
-              <Link to={localizedPath("/contact", lang)}>{tc("buttons.discussConfiguration")}</Link>
+              <Link to={localizedPath("/tvac-questionnaire", lang)}>
+                <ClipboardList className="w-4 h-4 mr-2" />
+                {tc("cta.questionnaire.start")}
+              </Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
-              <Link to={localizedPath("/contact", lang)}>{tc("buttons.requestQuote")}</Link>
+              <Link to={localizedPath("/contact", lang)}>{tc("cta.questionnaire.talkToEngineer")}</Link>
             </Button>
           </div>
+          <p className="flex items-start gap-1.5 text-[11px] text-gray/60 leading-relaxed font-mono pt-3 max-w-xl">
+            <Clock className="w-3 h-3 mt-0.5 text-blue/60 shrink-0" />
+            <span>{tc("cta.questionnaire.microcopyDetailed")}</span>
+          </p>
           <div className="flex flex-wrap gap-2 pt-4">
             <TechChip label={t("customTvac.techChips.engineering.label")} value={t("customTvac.techChips.engineering.value")} />
             <TechChip label={t("customTvac.techChips.integration.label")} value={t("customTvac.techChips.integration.value")} />
