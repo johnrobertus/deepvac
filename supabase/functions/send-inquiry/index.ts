@@ -514,7 +514,7 @@ async function handleQuestionnaire(
     return new Response(JSON.stringify({ error: "Invalid email address." }),
       { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } });
   }
-  if (payload.consent !== true) {
+  if (payload.data?.consent !== true && payload.consent !== true) {
     await logInquiry(supabaseAdmin, {
       ip_address: ip, user_agent: userAgent,
       status: "blocked", reason: "consent_missing",
