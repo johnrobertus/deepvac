@@ -413,6 +413,17 @@ export default function TvacQuestionnaire() {
     return Object.keys(e).length === 0;
   };
 
+  /** Form variant where "Other"/"Custom" select values are merged with their free-text specify input. */
+  const effectiveForm = useMemo<FormState>(() => ({
+    ...form,
+    country: mergeOther(form.country, form.countrySpecify),
+    application: mergeOther(form.application, form.applicationSpecify),
+    rampRate: mergeOther(form.rampRate, form.rampRateSpecify),
+    uniformity: mergeOther(form.uniformity, form.uniformitySpecify),
+    shroudConfig: mergeOther(form.shroudConfig, form.shroudConfigSpecify),
+    measurementChannels: mergeOther(form.measurementChannels, form.measurementChannelsSpecify),
+  }), [form]);
+
   const goNext = () => setStep((s) => Math.min(totalSteps, s + 1));
   const goBack = () => setStep((s) => Math.max(1, s - 1));
 
