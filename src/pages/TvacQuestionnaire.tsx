@@ -70,7 +70,9 @@ interface FormState {
   email: string;
   phone: string;
   country: string;
+  countrySpecify: string;
   application: string;
+  applicationSpecify: string;
   // S2 - DUT
   dutWeight: string;
   dutTypes: boolean[];
@@ -101,7 +103,9 @@ interface FormState {
   foreVac: boolean[];
   gauges: boolean[];
   rampRate: string;
+  rampRateSpecify: string;
   uniformity: string;
+  uniformitySpecify: string;
   tempMin: string;
   tempMax: string;
   plateDimensions: string;
@@ -111,6 +115,7 @@ interface FormState {
   plateCooling: boolean[];
   plateCoolingOther: OtherCheck;
   shroudConfig: string;
+  shroudConfigSpecify: string;
   shroudTempMin: string;
   shroudTempMax: string;
   shroudCooling: boolean[];
@@ -118,6 +123,7 @@ interface FormState {
   sensorTypes: boolean[];
   sensorTypeOther: OtherCheck;
   measurementChannels: string;
+  measurementChannelsSpecify: string;
   // S4 - Feedthroughs
   elecQty: string;
   elecVoltage: string;
@@ -170,7 +176,9 @@ const o = (): OtherCheck => ({ checked: false, text: "" });
 const port = (): PortRow => ({ checked: false, size: "", qty: "" });
 
 const initialForm: FormState = {
-  company: "", firstName: "", lastName: "", email: "", phone: "", country: "", application: "",
+  company: "", firstName: "", lastName: "", email: "", phone: "",
+  country: "", countrySpecify: "",
+  application: "", applicationSpecify: "",
   dutWeight: "",
   dutTypes: arr(12), dutTypeOther: o(),
   housing: arr(9), housingOther: o(),
@@ -182,13 +190,16 @@ const initialForm: FormState = {
   heatDissipation: "", dutCount: "", vacuumLevel: "",
   highVac: arr(2), highVacNested: arr(2),
   foreVac: arr(4), gauges: arr(3),
-  rampRate: "", uniformity: "", tempMin: "", tempMax: "",
+  rampRate: "", rampRateSpecify: "",
+  uniformity: "", uniformitySpecify: "",
+  tempMin: "", tempMax: "",
   plateDimensions: "", plateCustom: "", plateTempMin: "", plateTempMax: "",
   plateCooling: arr(3), plateCoolingOther: o(),
-  shroudConfig: "", shroudTempMin: "", shroudTempMax: "",
+  shroudConfig: "", shroudConfigSpecify: "",
+  shroudTempMin: "", shroudTempMax: "",
   shroudCooling: arr(5), shroudCoolingOther: o(),
   sensorTypes: arr(6), sensorTypeOther: o(),
-  measurementChannels: "",
+  measurementChannels: "", measurementChannelsSpecify: "",
   elecQty: "", elecVoltage: "", elecCurrent: "", elecNotes: "",
   elecConnector: arr(4), elecConnectorOther: o(),
   rfTypes: arr(4), rfTypeOther: o(), rfQty: "",
@@ -262,6 +273,28 @@ function FieldGroup({ children, cols = 1 }: { children: React.ReactNode; cols?: 
 function SubSectionTitle({ children }: { children: React.ReactNode }) {
   return <h3 className="text-lg md:text-xl font-medium text-sand tracking-tight border-b border-gray/25 pb-3 mb-6">{children}</h3>;
 }
+
+/** Returns true when a select value is an "other"/"custom" placeholder requiring free-text. */
+const isOtherValue = (v: string): boolean => {
+  if (!v) return false;
+  const s = v.toLowerCase();
+  return (
+    s === "other" ||
+    s === "custom" ||
+    s.startsWith("other ") ||
+    s.startsWith("other/") ||
+    s.startsWith("sonstiges") ||
+    s.startsWith("benutzerdefiniert")
+  );
+};
+
+/** Merge a select value with its specify text for submission/print rendering. */
+const mergeOther = (value: string, specify: string): string => {
+  if (!value) return value;
+  const text = (specify || "").trim();
+  if (!isOtherValue(value) || !text) return value;
+  return `${value}: ${text}`;
+};
 
 /* ---------- The page ---------- */
 export default function TvacQuestionnaire() {
@@ -380,6 +413,17 @@ export default function TvacQuestionnaire() {
     return Object.keys(e).length === 0;
   };
 
+  /** Form variant where "Other"/"Custom" select values are merged with their free-text specify input. */
+  const effectiveForm = useMemo<FormState>(() => ({
+    ...form,
+    country: mergeOther(form.country, form.countrySpecify),
+    application: mergeOther(form.application, form.applicationSpecify),
+    rampRate: mergeOther(form.rampRate, form.rampRateSpecify),
+    uniformity: mergeOther(form.uniformity, form.uniformitySpecify),
+    shroudConfig: mergeOther(form.shroudConfig, form.shroudConfigSpecify),
+    measurementChannels: mergeOther(form.measurementChannels, form.measurementChannelsSpecify),
+  }), [form]);
+
   const goNext = () => setStep((s) => Math.min(totalSteps, s + 1));
   const goBack = () => setStep((s) => Math.max(1, s - 1));
 
@@ -414,7 +458,7 @@ export default function TvacQuestionnaire() {
           kind: "questionnaire",
           source: "tvac-questionnaire",
           language: lang,
-          data: form,
+          data: effectiveForm,
           _website: honeypot,
           turnstileToken: turnstileToken || undefined,
         },
@@ -509,6 +553,9 @@ export default function TvacQuestionnaire() {
               <option value="">{t("common.selectCountry")}</option>
               {countries.map((c) => <option key={c} value={c}>{c}</option>)}
             </select>
+            {isOtherValue(form.country) && (
+              <input className={baseInput} placeholder={t("common.specify")} value={form.countrySpecify} onChange={(e) => set("countrySpecify")(e.target.value)} />
+            )}
           </div>
           <div className="space-y-2">
             <MonoLabel>{t("s1.application")}</MonoLabel>
@@ -516,6 +563,9 @@ export default function TvacQuestionnaire() {
               <option value="">{t("common.selectOption")}</option>
               {apps.map((c) => <option key={c} value={c}>{c}</option>)}
             </select>
+            {isOtherValue(form.application) && (
+              <input className={baseInput} placeholder={t("common.specify")} value={form.applicationSpecify} onChange={(e) => set("applicationSpecify")(e.target.value)} />
+            )}
           </div>
         </FieldGroup>
       </div>
@@ -732,12 +782,18 @@ export default function TvacQuestionnaire() {
             <select className={baseSelect} value={form.rampRate} onChange={(e) => set("rampRate")(e.target.value)}>
               <option value="">{t("common.selectRate")}</option>{rampOpts.map((o) => <option key={o} value={o}>{o}</option>)}
             </select>
+            {isOtherValue(form.rampRate) && (
+              <input className={baseInput} placeholder={t("common.specify")} value={form.rampRateSpecify} onChange={(e) => set("rampRateSpecify")(e.target.value)} />
+            )}
           </div>
           <div className="space-y-2">
             <MonoLabel>{t("s3.uniformity")}</MonoLabel>
             <select className={baseSelect} value={form.uniformity} onChange={(e) => set("uniformity")(e.target.value)}>
               <option value="">{t("common.selectValue")}</option>{uniOpts.map((o) => <option key={o} value={o}>{o}</option>)}
             </select>
+            {isOtherValue(form.uniformity) && (
+              <input className={baseInput} placeholder={t("common.specify")} value={form.uniformitySpecify} onChange={(e) => set("uniformitySpecify")(e.target.value)} />
+            )}
           </div>
         </FieldGroup>
 
@@ -781,6 +837,9 @@ export default function TvacQuestionnaire() {
               <select className={baseSelect} value={form.shroudConfig} onChange={(e) => set("shroudConfig")(e.target.value)}>
                 <option value="">{t("common.selectOption")}</option>{shroudCfg.map((o) => <option key={o} value={o}>{o}</option>)}
               </select>
+              {isOtherValue(form.shroudConfig) && (
+                <input className={baseInput} placeholder={t("common.specify")} value={form.shroudConfigSpecify} onChange={(e) => set("shroudConfigSpecify")(e.target.value)} />
+              )}
             </div>
             <FieldGroup cols={2}>
               <div className="space-y-1"><label className="text-[13px] text-gray/85">{t("s3.plateTempMin")}</label><input type="number" className={baseInput} placeholder="min. °C" value={form.shroudTempMin} onChange={(e) => set("shroudTempMin")(e.target.value)} /></div>
@@ -807,6 +866,9 @@ export default function TvacQuestionnaire() {
             <select className={baseSelect} value={form.measurementChannels} onChange={(e) => set("measurementChannels")(e.target.value)}>
               <option value="">{t("common.selectRange")}</option>{chOpts.map((o) => <option key={o} value={o}>{o}</option>)}
             </select>
+            {isOtherValue(form.measurementChannels) && (
+              <input className={baseInput} placeholder={t("common.specify")} value={form.measurementChannelsSpecify} onChange={(e) => set("measurementChannelsSpecify")(e.target.value)} />
+            )}
           </div>
         </FieldGroup>
       </div>
@@ -1061,7 +1123,7 @@ export default function TvacQuestionnaire() {
           </Section>
         </PageShell>
         {/* Print view stays mounted so post-submit "Save as PDF" still works */}
-        <QuestionnairePrintView form={form} />
+        <QuestionnairePrintView form={effectiveForm} />
       </Layout>
     );
   }
@@ -1095,27 +1157,63 @@ export default function TvacQuestionnaire() {
                 const done = idx < step;
                 return (
                   <li key={label} className="flex-1 flex items-center gap-3">
-                    <div className={cn(
-                      "flex items-center gap-3 px-4 py-2.5 rounded-sm border transition-colors w-full",
-                      active && "border-blue/60 bg-blue/10",
-                      done && "border-gray/30 bg-surface/60",
-                      !active && !done && "border-gray/20 bg-transparent"
-                    )}>
+                    <button
+                      type="button"
+                      onClick={() => setStep(idx)}
+                      aria-current={active ? "step" : undefined}
+                      aria-label={`${t("wizard.stepLabel", { current: idx, total: totalSteps })}: ${label}`}
+                      className={cn(
+                        "group flex items-center gap-3 px-4 py-2.5 rounded-sm border transition-colors w-full text-left cursor-pointer",
+                        "hover:border-blue/50 hover:bg-blue/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue/40",
+                        active && "border-blue/60 bg-blue/10",
+                        done && !active && "border-gray/30 bg-surface/60",
+                        !active && !done && "border-gray/20 bg-transparent"
+                      )}
+                    >
                       <span className={cn(
-                        "w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-mono shrink-0",
-                        active ? "bg-blue text-background" : done ? "bg-gray/30 text-sand" : "bg-transparent border border-gray/30 text-gray/80"
+                        "w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-mono shrink-0 transition-colors",
+                        active ? "bg-blue text-background" : done ? "bg-gray/30 text-sand" : "bg-transparent border border-gray/30 text-gray/80 group-hover:border-blue/50 group-hover:text-sand"
                       )}>{idx}</span>
-                      <span className={cn("text-xs font-mono tracking-wide truncate", active ? "text-sand" : "text-gray/85")}>{label}</span>
-                    </div>
+                      <span className={cn("text-xs font-mono tracking-wide truncate transition-colors", active ? "text-sand" : "text-gray/85 group-hover:text-sand")}>{label}</span>
+                    </button>
                     {idx < totalSteps && <div className="w-4 h-px bg-gray/25 shrink-0" />}
                   </li>
                 );
               })}
             </ol>
             {/* Mobile */}
-            <div className="md:hidden flex items-center justify-between gap-3 px-4 py-3 border border-gray/30 rounded-sm bg-surface/60">
-              <span className="text-[11px] font-mono text-blue">{t("wizard.stepLabel", { current: step, total: totalSteps })}</span>
-              <span className="text-sm font-medium text-sand truncate">{stepLabels[step - 1]}</span>
+            <div className="md:hidden space-y-2">
+              <div className="flex items-center justify-between gap-3 px-4 py-3 border border-gray/30 rounded-sm bg-surface/60">
+                <span className="text-[11px] font-mono text-blue">{t("wizard.stepLabel", { current: step, total: totalSteps })}</span>
+                <span className="text-sm font-medium text-sand truncate">{stepLabels[step - 1]}</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                {stepLabels.map((label, i) => {
+                  const idx = i + 1;
+                  const active = idx === step;
+                  const done = idx < step;
+                  return (
+                    <button
+                      key={label}
+                      type="button"
+                      onClick={() => setStep(idx)}
+                      aria-current={active ? "step" : undefined}
+                      aria-label={`${t("wizard.stepLabel", { current: idx, total: totalSteps })}: ${label}`}
+                      className={cn(
+                        "flex-1 h-9 rounded-sm border text-[11px] font-mono transition-colors cursor-pointer",
+                        "focus:outline-none focus-visible:ring-2 focus-visible:ring-blue/40",
+                        active
+                          ? "bg-blue text-background border-blue"
+                          : done
+                            ? "border-gray/30 bg-surface/60 text-sand hover:border-blue/50"
+                            : "border-gray/25 text-gray/80 hover:border-blue/50 hover:text-sand"
+                      )}
+                    >
+                      {idx}
+                    </button>
+                  );
+                })}
+              </div>
             </div>
           </div>
 
@@ -1215,7 +1313,7 @@ export default function TvacQuestionnaire() {
       </PageShell>
 
       {/* Print view — hidden on screen, rendered for window.print() only */}
-      <QuestionnairePrintView form={form} />
+      <QuestionnairePrintView form={effectiveForm} />
     </Layout>
   );
 }
