@@ -103,7 +103,9 @@ interface FormState {
   foreVac: boolean[];
   gauges: boolean[];
   rampRate: string;
+  rampRateSpecify: string;
   uniformity: string;
+  uniformitySpecify: string;
   tempMin: string;
   tempMax: string;
   plateDimensions: string;
@@ -113,6 +115,7 @@ interface FormState {
   plateCooling: boolean[];
   plateCoolingOther: OtherCheck;
   shroudConfig: string;
+  shroudConfigSpecify: string;
   shroudTempMin: string;
   shroudTempMax: string;
   shroudCooling: boolean[];
@@ -120,6 +123,7 @@ interface FormState {
   sensorTypes: boolean[];
   sensorTypeOther: OtherCheck;
   measurementChannels: string;
+  measurementChannelsSpecify: string;
   // S4 - Feedthroughs
   elecQty: string;
   elecVoltage: string;
