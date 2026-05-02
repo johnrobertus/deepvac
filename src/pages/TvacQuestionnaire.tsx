@@ -553,6 +553,9 @@ export default function TvacQuestionnaire() {
               <option value="">{t("common.selectCountry")}</option>
               {countries.map((c) => <option key={c} value={c}>{c}</option>)}
             </select>
+            {isOtherValue(form.country) && (
+              <input className={baseInput} placeholder={t("common.specify")} value={form.countrySpecify} onChange={(e) => set("countrySpecify")(e.target.value)} />
+            )}
           </div>
           <div className="space-y-2">
             <MonoLabel>{t("s1.application")}</MonoLabel>
@@ -560,6 +563,9 @@ export default function TvacQuestionnaire() {
               <option value="">{t("common.selectOption")}</option>
               {apps.map((c) => <option key={c} value={c}>{c}</option>)}
             </select>
+            {isOtherValue(form.application) && (
+              <input className={baseInput} placeholder={t("common.specify")} value={form.applicationSpecify} onChange={(e) => set("applicationSpecify")(e.target.value)} />
+            )}
           </div>
         </FieldGroup>
       </div>
