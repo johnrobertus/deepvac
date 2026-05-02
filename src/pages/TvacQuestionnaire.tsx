@@ -1157,27 +1157,63 @@ export default function TvacQuestionnaire() {
                 const done = idx < step;
                 return (
                   <li key={label} className="flex-1 flex items-center gap-3">
-                    <div className={cn(
-                      "flex items-center gap-3 px-4 py-2.5 rounded-sm border transition-colors w-full",
-                      active && "border-blue/60 bg-blue/10",
-                      done && "border-gray/30 bg-surface/60",
-                      !active && !done && "border-gray/20 bg-transparent"
-                    )}>
+                    <button
+                      type="button"
+                      onClick={() => setStep(idx)}
+                      aria-current={active ? "step" : undefined}
+                      aria-label={`${t("wizard.stepLabel", { current: idx, total: totalSteps })}: ${label}`}
+                      className={cn(
+                        "group flex items-center gap-3 px-4 py-2.5 rounded-sm border transition-colors w-full text-left cursor-pointer",
+                        "hover:border-blue/50 hover:bg-blue/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue/40",
+                        active && "border-blue/60 bg-blue/10",
+                        done && !active && "border-gray/30 bg-surface/60",
+                        !active && !done && "border-gray/20 bg-transparent"
+                      )}
+                    >
                       <span className={cn(
-                        "w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-mono shrink-0",
-                        active ? "bg-blue text-background" : done ? "bg-gray/30 text-sand" : "bg-transparent border border-gray/30 text-gray/80"
+                        "w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-mono shrink-0 transition-colors",
+                        active ? "bg-blue text-background" : done ? "bg-gray/30 text-sand" : "bg-transparent border border-gray/30 text-gray/80 group-hover:border-blue/50 group-hover:text-sand"
                       )}>{idx}</span>
-                      <span className={cn("text-xs font-mono tracking-wide truncate", active ? "text-sand" : "text-gray/85")}>{label}</span>
-                    </div>
+                      <span className={cn("text-xs font-mono tracking-wide truncate transition-colors", active ? "text-sand" : "text-gray/85 group-hover:text-sand")}>{label}</span>
+                    </button>
                     {idx < totalSteps && <div className="w-4 h-px bg-gray/25 shrink-0" />}
                   </li>
                 );
               })}
             </ol>
             {/* Mobile */}
-            <div className="md:hidden flex items-center justify-between gap-3 px-4 py-3 border border-gray/30 rounded-sm bg-surface/60">
-              <span className="text-[11px] font-mono text-blue">{t("wizard.stepLabel", { current: step, total: totalSteps })}</span>
-              <span className="text-sm font-medium text-sand truncate">{stepLabels[step - 1]}</span>
+            <div className="md:hidden space-y-2">
+              <div className="flex items-center justify-between gap-3 px-4 py-3 border border-gray/30 rounded-sm bg-surface/60">
+                <span className="text-[11px] font-mono text-blue">{t("wizard.stepLabel", { current: step, total: totalSteps })}</span>
+                <span className="text-sm font-medium text-sand truncate">{stepLabels[step - 1]}</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                {stepLabels.map((label, i) => {
+                  const idx = i + 1;
+                  const active = idx === step;
+                  const done = idx < step;
+                  return (
+                    <button
+                      key={label}
+                      type="button"
+                      onClick={() => setStep(idx)}
+                      aria-current={active ? "step" : undefined}
+                      aria-label={`${t("wizard.stepLabel", { current: idx, total: totalSteps })}: ${label}`}
+                      className={cn(
+                        "flex-1 h-9 rounded-sm border text-[11px] font-mono transition-colors cursor-pointer",
+                        "focus:outline-none focus-visible:ring-2 focus-visible:ring-blue/40",
+                        active
+                          ? "bg-blue text-background border-blue"
+                          : done
+                            ? "border-gray/30 bg-surface/60 text-sand hover:border-blue/50"
+                            : "border-gray/25 text-gray/80 hover:border-blue/50 hover:text-sand"
+                      )}
+                    >
+                      {idx}
+                    </button>
+                  );
+                })}
+              </div>
             </div>
           </div>
 
