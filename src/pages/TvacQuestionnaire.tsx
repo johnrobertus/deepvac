@@ -70,7 +70,9 @@ interface FormState {
   email: string;
   phone: string;
   country: string;
+  countrySpecify: string;
   application: string;
+  applicationSpecify: string;
   // S2 - DUT
   dutWeight: string;
   dutTypes: boolean[];
