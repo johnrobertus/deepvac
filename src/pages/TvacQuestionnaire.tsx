@@ -458,7 +458,7 @@ export default function TvacQuestionnaire() {
           kind: "questionnaire",
           source: "tvac-questionnaire",
           language: lang,
-          data: form,
+          data: effectiveForm,
           _website: honeypot,
           turnstileToken: turnstileToken || undefined,
         },
