@@ -1259,7 +1259,7 @@ export default function TvacQuestionnaire() {
       </PageShell>
 
       {/* Print view — hidden on screen, rendered for window.print() only */}
-      <QuestionnairePrintView form={form} />
+      <QuestionnairePrintView form={effectiveForm} />
     </Layout>
   );
 }
