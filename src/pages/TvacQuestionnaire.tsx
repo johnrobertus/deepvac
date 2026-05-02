@@ -274,6 +274,28 @@ function SubSectionTitle({ children }: { children: React.ReactNode }) {
   return <h3 className="text-lg md:text-xl font-medium text-sand tracking-tight border-b border-gray/25 pb-3 mb-6">{children}</h3>;
 }
 
+/** Returns true when a select value is an "other"/"custom" placeholder requiring free-text. */
+const isOtherValue = (v: string): boolean => {
+  if (!v) return false;
+  const s = v.toLowerCase();
+  return (
+    s === "other" ||
+    s === "custom" ||
+    s.startsWith("other ") ||
+    s.startsWith("other/") ||
+    s.startsWith("sonstiges") ||
+    s.startsWith("benutzerdefiniert")
+  );
+};
+
+/** Merge a select value with its specify text for submission/print rendering. */
+const mergeOther = (value: string, specify: string): string => {
+  if (!value) return value;
+  const text = (specify || "").trim();
+  if (!isOtherValue(value) || !text) return value;
+  return `${value}: ${text}`;
+};
+
 /* ---------- The page ---------- */
 export default function TvacQuestionnaire() {
   const { t } = useTranslation("questionnaire");
