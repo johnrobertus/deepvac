@@ -866,6 +866,9 @@ export default function TvacQuestionnaire() {
             <select className={baseSelect} value={form.measurementChannels} onChange={(e) => set("measurementChannels")(e.target.value)}>
               <option value="">{t("common.selectRange")}</option>{chOpts.map((o) => <option key={o} value={o}>{o}</option>)}
             </select>
+            {isOtherValue(form.measurementChannels) && (
+              <input className={baseInput} placeholder={t("common.specify")} value={form.measurementChannelsSpecify} onChange={(e) => set("measurementChannelsSpecify")(e.target.value)} />
+            )}
           </div>
         </FieldGroup>
       </div>
