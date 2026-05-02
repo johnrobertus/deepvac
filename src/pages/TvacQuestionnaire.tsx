@@ -837,6 +837,9 @@ export default function TvacQuestionnaire() {
               <select className={baseSelect} value={form.shroudConfig} onChange={(e) => set("shroudConfig")(e.target.value)}>
                 <option value="">{t("common.selectOption")}</option>{shroudCfg.map((o) => <option key={o} value={o}>{o}</option>)}
               </select>
+              {isOtherValue(form.shroudConfig) && (
+                <input className={baseInput} placeholder={t("common.specify")} value={form.shroudConfigSpecify} onChange={(e) => set("shroudConfigSpecify")(e.target.value)} />
+              )}
             </div>
             <FieldGroup cols={2}>
               <div className="space-y-1"><label className="text-[13px] text-gray/85">{t("s3.plateTempMin")}</label><input type="number" className={baseInput} placeholder="min. °C" value={form.shroudTempMin} onChange={(e) => set("shroudTempMin")(e.target.value)} /></div>
