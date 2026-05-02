@@ -782,12 +782,18 @@ export default function TvacQuestionnaire() {
             <select className={baseSelect} value={form.rampRate} onChange={(e) => set("rampRate")(e.target.value)}>
               <option value="">{t("common.selectRate")}</option>{rampOpts.map((o) => <option key={o} value={o}>{o}</option>)}
             </select>
+            {isOtherValue(form.rampRate) && (
+              <input className={baseInput} placeholder={t("common.specify")} value={form.rampRateSpecify} onChange={(e) => set("rampRateSpecify")(e.target.value)} />
+            )}
           </div>
           <div className="space-y-2">
             <MonoLabel>{t("s3.uniformity")}</MonoLabel>
             <select className={baseSelect} value={form.uniformity} onChange={(e) => set("uniformity")(e.target.value)}>
               <option value="">{t("common.selectValue")}</option>{uniOpts.map((o) => <option key={o} value={o}>{o}</option>)}
             </select>
+            {isOtherValue(form.uniformity) && (
+              <input className={baseInput} placeholder={t("common.specify")} value={form.uniformitySpecify} onChange={(e) => set("uniformitySpecify")(e.target.value)} />
+            )}
           </div>
         </FieldGroup>
 
