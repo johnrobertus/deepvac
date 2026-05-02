@@ -1105,7 +1105,7 @@ export default function TvacQuestionnaire() {
           </Section>
         </PageShell>
         {/* Print view stays mounted so post-submit "Save as PDF" still works */}
-        <QuestionnairePrintView form={form} />
+        <QuestionnairePrintView form={effectiveForm} />
       </Layout>
     );
   }
