@@ -54,10 +54,10 @@ export function Section({ children, className }: SectionProps) {
 
 export function TrustBar({ items }: { items: string[] }) {
   return (
-    <div className="border-y border-gray/10 py-8">
+    <div className="border-y border-gray/20 py-8">
       <div className="container-wide flex flex-wrap items-center justify-center gap-8 md:gap-16">
         {items.map((item) => (
-          <span key={item} className="mono-label text-gray/50">{item}</span>
+          <span key={item} className="mono-label text-gray/80">{item}</span>
         ))}
       </div>
     </div>
@@ -74,13 +74,13 @@ export function CTABand({
   children?: ReactNode;
 }) {
   return (
-    <section className="py-16 md:py-24 px-6 bg-surface">
+    <section className="relative py-16 md:py-24 px-6 bg-surface border-t border-blue/20">
       <div className="container max-w-4xl text-center space-y-6">
         <h2 className="text-3xl md:text-4xl font-medium tracking-tight text-sand">
           {title}
         </h2>
         {description && (
-          <p className="text-gray text-base max-w-xl mx-auto">{description}</p>
+          <p className="text-gray text-base max-w-xl mx-auto leading-relaxed">{description}</p>
         )}
         {children && <div className="pt-4 flex flex-col sm:flex-row flex-wrap justify-center gap-4">{children}</div>}
       </div>

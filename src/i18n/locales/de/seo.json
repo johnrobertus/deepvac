@@ -90,5 +90,9 @@
   "thermalVision": {
     "title": "Deepvac Thermal Vision – Thermalkamera für TVAC | Deepvac",
     "description": "Kalibrierte Infrarot-Bildgebung unter Hochvakuum-Bedingungen. Thermalkamera-Integration für neue und bestehende Thermovakuumsysteme."
+  },
+  "questionnaire": {
+    "title": "Technischer TVAC-Fragebogen | Deepvac",
+    "description": "Übermitteln Sie detaillierte technische Anforderungen für ein kundenspezifisches Thermovakuum- oder Weltraumsimulationssystem. Unbekannte Angaben können leer bleiben."
   }
 }

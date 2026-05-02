@@ -6,7 +6,7 @@ import { Layout } from "@/components/Layout";
 import { PageShell, PageHero, Section, CTABand } from "@/components/PageShell";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Thermometer, Gauge, Settings, RefreshCw, Wrench, Box } from "lucide-react";
+import { ArrowRight, Thermometer, Gauge, Settings, RefreshCw, Wrench, Box, ClipboardList, Clock } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { useLanguage } from "@/components/LanguageProvider";
 import { getHreflangs, getCanonical, localizedPath } from "@/lib/routes";
@@ -95,7 +95,7 @@ const Services = () => {
                     </Button>
                   </div>
                   <div className="border-l border-gray/10 p-8 bg-surface-raised/30 flex flex-col justify-center">
-                    <span className="mono-label text-gray/50 mb-3">{t("overview.keyDeliverables")}</span>
+                    <span className="mono-label mb-3">{t("overview.keyDeliverables")}</span>
                     <ul className="space-y-2.5">
                       {s.deliverables.map((d: string) => (
                         <li key={d} className="flex items-start gap-2 text-xs text-gray leading-relaxed">
@@ -149,12 +149,19 @@ const Services = () => {
 
         <CTABand title={t("overview.cta.title")} description={t("overview.cta.description")}>
           <Button asChild size="lg" className="font-mono text-xs tracking-wide">
-            <Link to={localizedPath("/contact", lang)}>{tc("buttons.talkToEngineer")}</Link>
+            <Link to={localizedPath("/tvac-questionnaire", lang)}>
+              <ClipboardList className="w-4 h-4 mr-2" />
+              {tc("cta.questionnaire.configure")}
+            </Link>
           </Button>
           <Button asChild variant="outline" size="lg">
-            <Link to={localizedPath("/contact", lang)}>{tc("buttons.requestQuote")}</Link>
+            <Link to={localizedPath("/contact", lang)}>{tc("buttons.talkToEngineer")}</Link>
           </Button>
         </CTABand>
+        <p className="container mx-auto px-6 -mt-6 mb-12 flex items-start gap-1.5 text-[11px] text-gray/60 leading-relaxed font-mono max-w-2xl">
+          <Clock className="w-3 h-3 mt-0.5 text-blue/60 shrink-0" />
+          <span>{tc("cta.questionnaire.microcopyDetailed")}</span>
+        </p>
       </PageShell>
     </Layout>
   );

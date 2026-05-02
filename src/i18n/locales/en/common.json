@@ -16,7 +16,8 @@
     "retrofitModernization": "Retrofit & Modernization",
     "maintenanceRepair": "Maintenance & Repair",
     "subsystemIntegration": "Subsystem Integration",
-    "talkToEngineer": "Talk to an Engineer"
+    "talkToEngineer": "Talk to an Engineer",
+    "configureTvac": "Configure TVAC System"
   },
   "footer": {
     "description": "Advanced thermal vacuum systems for aerospace qualification, space simulation, and environmental testing.",
@@ -28,7 +29,26 @@
     "followDeepvac": "Follow Deepvac",
     "company": "Company",
     "contact": "Contact",
-    "privacySettings": "Privacy Settings"
+    "privacySettings": "Privacy Settings",
+    "technicalQuestionnaire": "Technical questionnaire"
+  },
+  "cta": {
+    "questionnaire": {
+      "start": "Start technical questionnaire",
+      "configure": "Configure your TVAC system",
+      "configureCustomVariant": "Configure custom variant",
+      "specify": "Specify system requirements",
+      "submitDetailed": "Submit detailed system requirements",
+      "open": "Open technical questionnaire",
+      "talkToEngineer": "Talk to an engineer",
+      "microcopy": "For custom TVAC and space-simulation systems. Around 10 to 15 minutes. Leave unknown fields blank.",
+      "microcopyDetailed": "For detailed custom TVAC and space-simulation requirements. Around 10 to 15 minutes. Unknown fields can remain blank.",
+      "microcopyShort": "Around 10 to 15 minutes. Leave unknown fields blank.",
+      "card": {
+        "title": "Need a detailed system specification?",
+        "text": "Use the technical questionnaire for custom TVAC and space-simulation requirements. It helps our engineering team evaluate chamber size, DUT interfaces, thermal-vacuum performance, utilities, schedule and budget."
+      }
+    }
   },
   "buttons": {
     "requestQuote": "Request a Quote",

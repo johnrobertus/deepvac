@@ -7,7 +7,7 @@ import { PageShell, PageHero, Section, CTABand } from "@/components/PageShell";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Button } from "@/components/ui/button";
 import { TechChip } from "@/components/TechChip";
-import { ArrowRight, Maximize, Circle, Thermometer, Gauge, Cpu, Download } from "lucide-react";
+import { ArrowRight, Maximize, Circle, Thermometer, Gauge, Cpu, Download, ClipboardList, Clock } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { useLanguage } from "@/components/LanguageProvider";
 import { getHreflangs, getCanonical, localizedPath } from "@/lib/routes";
@@ -81,8 +81,8 @@ const StandardSeries = () => {
         <Section>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <div>
-              <div className="relative">
-                <img src={tseriesImg} alt="Deepvac T Series Cubic Thermal Vacuum Chamber" className="w-full h-auto object-contain" loading="lazy" />
+              <div className="relative rounded-lg overflow-hidden border border-gray/10 bg-surface/40 h-[280px] lg:h-[420px] flex items-center justify-center">
+                <img src={tseriesImg} alt="Deepvac T Series Cubic Thermal Vacuum Chamber" className="w-full h-full object-contain p-6 lg:p-8" loading="lazy" />
                 <div className="absolute top-3 left-3 glass-overlay rounded-md px-3 py-1.5">
                   <span className="mono-label text-blue-light">T Series</span>
                 </div>
@@ -116,8 +116,8 @@ const StandardSeries = () => {
         <Section>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <div className="lg:order-2">
-              <div className="relative">
-                <img src={cseriesImg} alt="Deepvac C Series Cylindrical Thermal Vacuum Chamber" className="w-full h-auto object-contain" loading="lazy" />
+              <div className="relative rounded-lg overflow-hidden border border-gray/10 bg-surface/40 h-[280px] lg:h-[420px] flex items-center justify-center">
+                <img src={cseriesImg} alt="Deepvac C Series Cylindrical Thermal Vacuum Chamber" className="w-full h-full object-contain p-6 lg:p-8" loading="lazy" />
                 <div className="absolute top-3 right-3 glass-overlay rounded-md px-3 py-1.5">
                   <span className="mono-label text-blue-light">C Series</span>
                 </div>
@@ -221,12 +221,22 @@ const StandardSeries = () => {
 
         <CTABand title={t("standardSeries.cta.title")} description={t("standardSeries.cta.description")}>
           <Button asChild size="lg" className="font-mono text-xs tracking-wide">
-            <Link to={localizedPath("/contact", lang)}>{tc("buttons.requestQuote")}</Link>
+            <Link to={localizedPath("/tvac-questionnaire", lang)}>
+              <ClipboardList className="w-4 h-4 mr-2" />
+              {tc("cta.questionnaire.configureCustomVariant")}
+            </Link>
           </Button>
           <Button asChild variant="outline" size="lg">
+            <Link to={localizedPath("/contact", lang)}>{tc("buttons.requestQuote")}</Link>
+          </Button>
+          <Button asChild variant="ghost" size="lg" className="text-gray hover:text-sand">
             <Link to={localizedPath("/contact", lang)}>{tc("buttons.talkToEngineer")}</Link>
           </Button>
         </CTABand>
+        <p className="container mx-auto px-6 -mt-6 mb-12 flex items-start gap-1.5 text-[11px] text-gray/60 leading-relaxed font-mono max-w-2xl">
+          <Clock className="w-3 h-3 mt-0.5 text-blue/60 shrink-0" />
+          <span>{tc("cta.questionnaire.microcopyShort")}</span>
+        </p>
       </PageShell>
     </Layout>
   );

@@ -36,6 +36,7 @@ import CoolingSystems from "./pages/blog/CoolingSystems";
 import RetrofitVsReplacement from "./pages/blog/RetrofitVsReplacement";
 import AerospaceQualification from "./pages/blog/AerospaceQualification";
 import { ScrollToTop } from "./components/ScrollToTop";
+import TvacQuestionnaire from "./pages/TvacQuestionnaire";
 
 const queryClient = new QueryClient();
 
@@ -75,6 +76,7 @@ const App = () => (
               <Route path="/careers" element={<Careers />} />
               <Route path="/references" element={<References />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/tvac-questionnaire" element={<TvacQuestionnaire />} />
               <Route path="/imprint" element={<Imprint />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
@@ -103,6 +105,7 @@ const App = () => (
               <Route path="/de/karriere" element={<Careers />} />
               <Route path="/de/referenzen" element={<References />} />
               <Route path="/de/kontakt" element={<Contact />} />
+              <Route path="/de/tvac-fragebogen" element={<TvacQuestionnaire />} />
               <Route path="/de/impressum" element={<Imprint />} />
               <Route path="/de/datenschutz" element={<PrivacyPolicy />} />
               <Route path="/de/agb" element={<TermsAndConditions />} />

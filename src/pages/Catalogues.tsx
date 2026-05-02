@@ -162,7 +162,7 @@ function BrochureCard({ doc }: { doc: Brochure }) {
             </a>
           </Button>
         ) : (
-          <span className="text-xs text-gray/50 font-mono">{t("availableSoon")}</span>
+          <span className="text-xs text-gray/75 font-mono">{t("availableSoon")}</span>
         )}
       </div>
     </div>
