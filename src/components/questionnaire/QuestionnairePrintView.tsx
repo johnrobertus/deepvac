@@ -107,21 +107,10 @@ export const QuestionnairePrintView = forwardRef<HTMLDivElement, Props>(function
     return `${a || "?"} – ${b || "?"}${unit}`;
   };
 
-  // Chamber dimensions (depend on shape)
-  const chamberDims = (() => {
-    if (form.chamberShape === "cubic") {
-      const v = [form.cubicL, form.cubicW, form.cubicH].filter((x: string) => x?.trim());
-      return v.length ? v.join(" × ") + " mm" : "";
-    }
-    if (form.chamberShape === "cylindrical") {
-      const d = form.cylDiameter?.trim();
-      const l = form.cylLength?.trim();
-      const parts: string[] = [];
-      if (d) parts.push(`${t("common.diameter")} ${d}`);
-      if (l) parts.push(`${t("common.length")} ${l}`);
-      return parts.length ? parts.join(", ") + " mm" : "";
-    }
-    return "";
+  // Internal usable dimensions
+  const internalDims = (() => {
+    const v = [form.internalW, form.internalH, form.internalL].filter((x: string) => x?.trim());
+    return v.length ? v.join(" × ") + " mm" : "";
   })();
 
   // Ports
