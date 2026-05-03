@@ -167,8 +167,8 @@ export const QuestionnairePrintView = forwardRef<HTMLDivElement, Props>(function
           value={form.chamberShape ? shapeOpts[form.chamberShape as "cubic" | "cylindrical"] : ""}
         />
         <PrintRow label={t("s2.chamberMaterial")} value={form.chamberMaterial} />
-        <PrintRow label={t("s2.external")} value={form.externalDimensions} />
-        <PrintRow label={form.chamberShape === "cubic" ? t("s2.cubicLabel") : t("s2.cylindricalLabel")} value={chamberDims} />
+        <PrintRow label={t("s2.internalVolume")} value={form.internalVolume} />
+        <PrintRow label={t("s2.internalDimensions")} value={internalDims} />
         <PrintRow label={t("s2.doorType")} value={checkedLabels(form.doorTypes, doorOpts)} />
         <PrintRow label={t("s2.ports")} value={portsRendered} />
         <PrintRow label={t("s2.viewportsQty")} value={form.viewportsQty} />
