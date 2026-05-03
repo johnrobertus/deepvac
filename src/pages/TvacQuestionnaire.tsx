@@ -622,7 +622,6 @@ export default function TvacQuestionnaire() {
             </FieldGroup>
 
             <div className="space-y-2">
-            <div className="space-y-2">
               <MonoLabel>{t("s2.internalVolume")}</MonoLabel>
               <input
                 className={baseInput}
