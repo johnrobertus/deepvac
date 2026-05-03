@@ -36,9 +36,8 @@ interface QuestionnaireData {
   dutTypes?: boolean[]; dutTypeOther?: OtherCheck;
   housing?: boolean[]; housingOther?: OtherCheck;
   // S2 - Chamber
-  chamberShape?: string; chamberMaterial?: string; externalDimensions?: string;
-  cubicL?: string; cubicW?: string; cubicH?: string;
-  cylDiameter?: string; cylLength?: string;
+  chamberShape?: string; chamberMaterial?: string;
+  internalVolume?: string; internalW?: string; internalH?: string; internalL?: string;
   doorTypes?: boolean[]; ports?: PortRow[];
   viewportsQty?: string; viewportsSize?: string;
   viewportsMaterial?: boolean[]; viewportsMaterialOther?: OtherCheck;
@@ -604,7 +603,7 @@ const QUESTIONNAIRE_LABELS: Record<"en" | "de", Record<string, string | string[]
     email: "Email", phone: "Phone", country: "Country", application: "Application field",
     weight: "Max. DUT weight (kg)", dutType: "DUT type", housing: "Housing material",
     shape: "Chamber shape", material: "Chamber material",
-    external: "External dimensions (W × H × L), mm", customDims: "Custom dimensions",
+    internalVolume: "Internal usable volume (L)", internalDimensions: "Internal usable dimensions (W × H × L), mm",
     door: "Door type", ports: "Ports", viewports: "Viewports",
     heat: "Max. heat dissipation (W)", dutCount: "Max. number of DUTs",
     vacuum: "Vacuum level", highVac: "High vacuum pump", foreVac: "Fore vacuum pump",
@@ -669,7 +668,7 @@ const QUESTIONNAIRE_LABELS: Record<"en" | "de", Record<string, string | string[]
     email: "E-Mail", phone: "Telefon", country: "Land", application: "Anwendungsfeld",
     weight: "Max. DUT-Gewicht (kg)", dutType: "DUT-Typ", housing: "Gehäusematerial",
     shape: "Kammerform", material: "Kammermaterial",
-    external: "Außenmaße (B × H × L), mm", customDims: "Sondermaße",
+    internalVolume: "Nutzbares Innenvolumen (L)", internalDimensions: "Nutzbare Innenmaße (B × H × L), mm",
     door: "Türtyp", ports: "Ports", viewports: "Sichtfenster",
     heat: "Max. Wärmeabgabe (W)", dutCount: "Max. Anzahl DUTs",
     vacuum: "Vakuumniveau", highVac: "Hochvakuumpumpe", foreVac: "Vorvakuumpumpe",
@@ -792,23 +791,17 @@ function renderQuestionnaireEmail(
     .filter(Boolean);
   const viewportsMat = withOther(pickedFromArray(d.viewportsMaterial, L.viewportsMaterialOptions as string[]), d.viewportsMaterialOther);
 
-  let customDims = "";
-  if (d.externalDimensions === "Other") {
-    if (d.chamberShape === "cubic" && (d.cubicL || d.cubicW || d.cubicH)) {
-      customDims = `L: ${sanitize(d.cubicL || "—", 20)} · W: ${sanitize(d.cubicW || "—", 20)} · H: ${sanitize(d.cubicH || "—", 20)} mm`;
-    } else if (d.chamberShape === "cylindrical" && (d.cylDiameter || d.cylLength)) {
-      customDims = `D: ${sanitize(d.cylDiameter || "—", 20)} · L: ${sanitize(d.cylLength || "—", 20)} mm`;
-    }
-  }
+  const internalDimsParts = [d.internalW, d.internalH, d.internalL].map((x) => (x || "").trim()).filter(Boolean);
+  const internalDims = internalDimsParts.length ? `${internalDimsParts.join(" × ")} mm` : "";
 
-  const hasS3 = d.chamberShape || d.chamberMaterial || d.externalDimensions || doors.length || ports.length || d.viewportsQty || d.viewportsSize || viewportsMat.length;
+  const hasS3 = d.chamberShape || d.chamberMaterial || d.internalVolume || internalDims || doors.length || ports.length || d.viewportsQty || d.viewportsSize || viewportsMat.length;
   if (hasS3) {
     parts.push(sectionOpen(L.s3 as string));
     parts.push(table([
       d.chamberShape ? rowKv(L.shape as string, escapeHtml(d.chamberShape)) : "",
       d.chamberMaterial ? rowKv(L.material as string, sanitize(d.chamberMaterial, 100)) : "",
-      d.externalDimensions ? rowKv(L.external as string, sanitize(d.externalDimensions, 100)) : "",
-      customDims ? rowKv(L.customDims as string, customDims) : "",
+      d.internalVolume ? rowKv(L.internalVolume as string, sanitize(d.internalVolume, 50)) : "",
+      internalDims ? rowKv(L.internalDimensions as string, internalDims) : "",
       doors.length ? rowKv(L.door as string, doors.join(", ")) : "",
       ports.length ? rowKv(L.ports as string, ports.join("<br/>")) : "",
       d.viewportsQty || d.viewportsSize || viewportsMat.length
