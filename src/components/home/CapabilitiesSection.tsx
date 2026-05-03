@@ -12,7 +12,7 @@ export function CapabilitiesSection() {
   const items = t("capabilities.items", { returnObjects: true }) as { title: string; description: string }[];
 
   return (
-    <section className="px-6 py-20 md:py-28">
+    <section id="capabilities" className="px-6 py-20 md:py-28">
       <div className="container-wide">
         <Reveal>
           <SectionHeader

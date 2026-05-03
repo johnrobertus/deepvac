@@ -14,7 +14,7 @@ export function CataloguesSection() {
   const featured = getFeaturedBrochure();
 
   return (
-    <section className="py-20 md:py-28 px-6">
+    <section id="catalogs" className="py-20 md:py-28 px-6">
       <div className="container-wide">
         <Reveal>
           <SectionHeader

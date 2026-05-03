@@ -20,7 +20,7 @@ export function ProductPortfolioSection() {
   const productKeys = ["tSeries", "cSeries", "custom"] as const;
 
   return (
-    <section className="bg-surface/30 px-6 py-20 md:py-28">
+    <section id="products" className="bg-surface/30 px-6 py-20 md:py-28">
       <div className="container-wide">
         <Reveal>
           <SectionHeader

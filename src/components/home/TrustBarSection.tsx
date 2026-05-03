@@ -11,7 +11,7 @@ export function TrustBarSection() {
   }) as string;
 
   return (
-    <section className="bg-background px-6 py-14">
+    <section id="trust" className="bg-background px-6 py-14">
       <div className="container-wide">
         {/* Technical header */}
         <div className="mb-4 flex items-end justify-between gap-6 px-1">

@@ -146,7 +146,7 @@ export function ContactSection() {
 
   if (submitted) {
     return (
-      <section className="py-20 md:py-28 px-6 bg-surface/30">
+      <section id="contact" className="py-20 md:py-28 px-6 bg-surface/30">
         <div className="container-wide">
           <div className="max-w-xl mx-auto text-center space-y-6">
             <CheckCircle className="w-12 h-12 text-blue mx-auto" />
@@ -162,7 +162,7 @@ export function ContactSection() {
   }
 
   return (
-    <section className="py-20 md:py-28 px-6 bg-surface/30">
+    <section id="contact" className="py-20 md:py-28 px-6 bg-surface/30">
       <div className="container-wide">
         <Reveal>
           <SectionHeader

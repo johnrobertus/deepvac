@@ -13,7 +13,7 @@ export function LeadCaptureCTA() {
   const questionnairePath = localizedPath("/tvac-questionnaire", lang);
 
   return (
-    <section className="relative px-6 py-20 md:py-28">
+    <section id="lead-capture" className="relative px-6 py-20 md:py-28">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-surface/40 to-transparent" />
       <div className="container relative z-10 max-w-4xl text-center">
         <Reveal>

@@ -9,7 +9,7 @@ export function FundingSection() {
   const fundingImage = i18n.language === "de" ? existFundingDe : existFundingEn;
 
   return (
-    <section className="py-16 px-6">
+    <section id="funding" className="py-16 px-6">
       <div className="container-wide">
         <Reveal>
           <div className="space-y-4 text-center">
