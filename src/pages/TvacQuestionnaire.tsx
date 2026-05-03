@@ -367,10 +367,6 @@ export default function TvacQuestionnaire() {
   });
 
   /* ----- Dynamic logic: chamber shape ----- */
-  const externalOptions = useMemo<string[]>(
-    () => (form.chamberShape ? externalDimensionsByShape[form.chamberShape] : []),
-    [form.chamberShape]
-  );
   const plateOptions = useMemo<string[]>(
     () => (form.chamberShape ? thermalPlateDimensionsByShape[form.chamberShape] : []),
     [form.chamberShape]
@@ -378,15 +374,12 @@ export default function TvacQuestionnaire() {
 
   useEffect(() => {
     if (!form.chamberShape) {
-      if (form.externalDimensions) setForm((p) => ({ ...p, externalDimensions: "" }));
       if (form.plateDimensions) setForm((p) => ({ ...p, plateDimensions: "" }));
       return;
     }
-    const validExternal = ["", "Other", ...externalOptions];
     const validPlate = ["", "Other", ...plateOptions];
     setForm((p) => ({
       ...p,
-      externalDimensions: validExternal.includes(p.externalDimensions) ? p.externalDimensions : "",
       plateDimensions: validPlate.includes(p.plateDimensions) ? p.plateDimensions : "",
     }));
     // eslint-disable-next-line react-hooks/exhaustive-deps
