@@ -36,9 +36,8 @@ interface QuestionnaireData {
   dutTypes?: boolean[]; dutTypeOther?: OtherCheck;
   housing?: boolean[]; housingOther?: OtherCheck;
   // S2 - Chamber
-  chamberShape?: string; chamberMaterial?: string; externalDimensions?: string;
-  cubicL?: string; cubicW?: string; cubicH?: string;
-  cylDiameter?: string; cylLength?: string;
+  chamberShape?: string; chamberMaterial?: string;
+  internalVolume?: string; internalW?: string; internalH?: string; internalL?: string;
   doorTypes?: boolean[]; ports?: PortRow[];
   viewportsQty?: string; viewportsSize?: string;
   viewportsMaterial?: boolean[]; viewportsMaterialOther?: OtherCheck;
