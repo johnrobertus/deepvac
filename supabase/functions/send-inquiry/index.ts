@@ -791,23 +791,17 @@ function renderQuestionnaireEmail(
     .filter(Boolean);
   const viewportsMat = withOther(pickedFromArray(d.viewportsMaterial, L.viewportsMaterialOptions as string[]), d.viewportsMaterialOther);
 
-  let customDims = "";
-  if (d.externalDimensions === "Other") {
-    if (d.chamberShape === "cubic" && (d.cubicL || d.cubicW || d.cubicH)) {
-      customDims = `L: ${sanitize(d.cubicL || "—", 20)} · W: ${sanitize(d.cubicW || "—", 20)} · H: ${sanitize(d.cubicH || "—", 20)} mm`;
-    } else if (d.chamberShape === "cylindrical" && (d.cylDiameter || d.cylLength)) {
-      customDims = `D: ${sanitize(d.cylDiameter || "—", 20)} · L: ${sanitize(d.cylLength || "—", 20)} mm`;
-    }
-  }
+  const internalDimsParts = [d.internalW, d.internalH, d.internalL].map((x) => (x || "").trim()).filter(Boolean);
+  const internalDims = internalDimsParts.length ? `${internalDimsParts.join(" × ")} mm` : "";
 
-  const hasS3 = d.chamberShape || d.chamberMaterial || d.externalDimensions || doors.length || ports.length || d.viewportsQty || d.viewportsSize || viewportsMat.length;
+  const hasS3 = d.chamberShape || d.chamberMaterial || d.internalVolume || internalDims || doors.length || ports.length || d.viewportsQty || d.viewportsSize || viewportsMat.length;
   if (hasS3) {
     parts.push(sectionOpen(L.s3 as string));
     parts.push(table([
       d.chamberShape ? rowKv(L.shape as string, escapeHtml(d.chamberShape)) : "",
       d.chamberMaterial ? rowKv(L.material as string, sanitize(d.chamberMaterial, 100)) : "",
-      d.externalDimensions ? rowKv(L.external as string, sanitize(d.externalDimensions, 100)) : "",
-      customDims ? rowKv(L.customDims as string, customDims) : "",
+      d.internalVolume ? rowKv(L.internalVolume as string, sanitize(d.internalVolume, 50)) : "",
+      internalDims ? rowKv(L.internalDimensions as string, internalDims) : "",
       doors.length ? rowKv(L.door as string, doors.join(", ")) : "",
       ports.length ? rowKv(L.ports as string, ports.join("<br/>")) : "",
       d.viewportsQty || d.viewportsSize || viewportsMat.length
