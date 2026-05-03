@@ -78,12 +78,10 @@ interface FormState {
   // S2 - Chamber
   chamberShape: "" | "cubic" | "cylindrical";
   chamberMaterial: string;
-  externalDimensions: string;
-  cubicL: string;
-  cubicW: string;
-  cubicH: string;
-  cylDiameter: string;
-  cylLength: string;
+  internalVolume: string;
+  internalW: string;
+  internalH: string;
+  internalL: string;
   doorTypes: boolean[];
   ports: PortRow[]; // 5 rows
   viewportsQty: string;
