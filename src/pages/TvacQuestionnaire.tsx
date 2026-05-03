@@ -32,10 +32,6 @@ const thermalPlateDimensionsByShape: Record<string, string[]> = {
   cubic: ["380 × 350", "480 × 450", "610 × 580", "780 × 750", "980 × 940", "1120 × 1120"],
   cylindrical: ["330 × 350", "400 × 420", "460 × 500", "660 × 700", "840 × 880", "1140 × 1200"],
 };
-const externalDimensionsByShape: Record<string, string[]> = {
-  cubic: ["600 × 1800 × 900", "700 × 1900 × 1000", "830 × 1900 × 1130", "1000 × 1900 × 1300", "1150 × 1900 × 1500", "1400 × 2100 × 1760"],
-  cylindrical: ["600 × 1800 × 900", "700 × 1900 × 1000", "900 × 1900 × 1130", "1100 × 1900 × 1300", "1400 × 1900 × 1500", "1700 × 2100 × 1860"],
-};
 
 /* ---------- Reusable input class strings (questionnaire-local) ----------
    Tuned for readability on the dark Deepvac CI:
@@ -82,12 +78,10 @@ interface FormState {
   // S2 - Chamber
   chamberShape: "" | "cubic" | "cylindrical";
   chamberMaterial: string;
-  externalDimensions: string;
-  cubicL: string;
-  cubicW: string;
-  cubicH: string;
-  cylDiameter: string;
-  cylLength: string;
+  internalVolume: string;
+  internalW: string;
+  internalH: string;
+  internalL: string;
   doorTypes: boolean[];
   ports: PortRow[]; // 5 rows
   viewportsQty: string;
@@ -182,8 +176,8 @@ const initialForm: FormState = {
   dutWeight: "",
   dutTypes: arr(12), dutTypeOther: o(),
   housing: arr(9), housingOther: o(),
-  chamberShape: "", chamberMaterial: "", externalDimensions: "",
-  cubicL: "", cubicW: "", cubicH: "", cylDiameter: "", cylLength: "",
+  chamberShape: "", chamberMaterial: "",
+  internalVolume: "", internalW: "", internalH: "", internalL: "",
   doorTypes: arr(3),
   ports: [port(), port(), port(), port(), port()],
   viewportsQty: "", viewportsSize: "", viewportsMaterial: arr(4), viewportsMaterialOther: o(),
@@ -373,10 +367,6 @@ export default function TvacQuestionnaire() {
   });
 
   /* ----- Dynamic logic: chamber shape ----- */
-  const externalOptions = useMemo<string[]>(
-    () => (form.chamberShape ? externalDimensionsByShape[form.chamberShape] : []),
-    [form.chamberShape]
-  );
   const plateOptions = useMemo<string[]>(
     () => (form.chamberShape ? thermalPlateDimensionsByShape[form.chamberShape] : []),
     [form.chamberShape]
@@ -384,15 +374,12 @@ export default function TvacQuestionnaire() {
 
   useEffect(() => {
     if (!form.chamberShape) {
-      if (form.externalDimensions) setForm((p) => ({ ...p, externalDimensions: "" }));
       if (form.plateDimensions) setForm((p) => ({ ...p, plateDimensions: "" }));
       return;
     }
-    const validExternal = ["", "Other", ...externalOptions];
     const validPlate = ["", "Other", ...plateOptions];
     setForm((p) => ({
       ...p,
-      externalDimensions: validExternal.includes(p.externalDimensions) ? p.externalDimensions : "",
       plateDimensions: validPlate.includes(p.plateDimensions) ? p.plateDimensions : "",
     }));
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -635,40 +622,24 @@ export default function TvacQuestionnaire() {
             </FieldGroup>
 
             <div className="space-y-2">
-              <MonoLabel>
-                {t("s2.external")} <span className="text-gray/75 font-normal normal-case tracking-normal ml-1">{t("s2.externalHint")}</span>
-              </MonoLabel>
-              <select
-                className={cn(baseSelect, !form.chamberShape && "opacity-60 cursor-not-allowed")}
-                disabled={!form.chamberShape}
-                value={form.externalDimensions}
-                onChange={(e) => set("externalDimensions")(e.target.value)}
-              >
-                <option value="">{t("common.selectOption")}</option>
-                {externalOptions.map((d) => <option key={d} value={d}>{d}</option>)}
-                {form.chamberShape && <option value="Other">{t("common.other")}</option>}
-              </select>
+              <MonoLabel>{t("s2.internalVolume")}</MonoLabel>
+              <input
+                className={baseInput}
+                placeholder={t("s2.internalVolumePh")}
+                inputMode="decimal"
+                value={form.internalVolume}
+                onChange={(e) => set("internalVolume")(e.target.value)}
+              />
             </div>
 
-            {form.externalDimensions === "Other" && form.chamberShape === "cubic" && (
-              <div className="border border-gray/15 rounded-sm p-4 space-y-3">
-                <span className="block font-mono text-[11px] uppercase tracking-[0.08em] text-blue">{t("s2.cubicLabel")}</span>
-                <FieldGroup cols={3}>
-                  <div className="space-y-2"><MonoLabel>{t("common.length")}</MonoLabel><input className={baseInput} placeholder="L" inputMode="decimal" value={form.cubicL} onChange={(e) => set("cubicL")(e.target.value)} /></div>
-                  <div className="space-y-2"><MonoLabel>{t("common.width")}</MonoLabel><input className={baseInput} placeholder="W" inputMode="decimal" value={form.cubicW} onChange={(e) => set("cubicW")(e.target.value)} /></div>
-                  <div className="space-y-2"><MonoLabel>{t("common.height")}</MonoLabel><input className={baseInput} placeholder="H" inputMode="decimal" value={form.cubicH} onChange={(e) => set("cubicH")(e.target.value)} /></div>
-                </FieldGroup>
-              </div>
-            )}
-            {form.externalDimensions === "Other" && form.chamberShape === "cylindrical" && (
-              <div className="border border-gray/15 rounded-sm p-4 space-y-3">
-                <span className="block font-mono text-[11px] uppercase tracking-[0.08em] text-blue">{t("s2.cylindricalLabel")}</span>
-                <FieldGroup cols={2}>
-                  <div className="space-y-2"><MonoLabel>{t("common.diameter")}</MonoLabel><input className={baseInput} placeholder="D" inputMode="decimal" value={form.cylDiameter} onChange={(e) => set("cylDiameter")(e.target.value)} /></div>
-                  <div className="space-y-2"><MonoLabel>{t("common.length")}</MonoLabel><input className={baseInput} placeholder="L" inputMode="decimal" value={form.cylLength} onChange={(e) => set("cylLength")(e.target.value)} /></div>
-                </FieldGroup>
-              </div>
-            )}
+            <div className="space-y-2">
+              <MonoLabel>{t("s2.internalDimensions")}</MonoLabel>
+              <FieldGroup cols={3}>
+                <div className="space-y-2"><MonoLabel>{t("common.width")}</MonoLabel><input className={baseInput} placeholder="W" inputMode="decimal" value={form.internalW} onChange={(e) => set("internalW")(e.target.value)} /></div>
+                <div className="space-y-2"><MonoLabel>{t("common.height")}</MonoLabel><input className={baseInput} placeholder="H" inputMode="decimal" value={form.internalH} onChange={(e) => set("internalH")(e.target.value)} /></div>
+                <div className="space-y-2"><MonoLabel>{t("common.length")}</MonoLabel><input className={baseInput} placeholder="L" inputMode="decimal" value={form.internalL} onChange={(e) => set("internalL")(e.target.value)} /></div>
+              </FieldGroup>
+            </div>
 
             <FieldGroup cols={2}>
               <div className="space-y-3">
