@@ -15,7 +15,7 @@ export function TeamSection() {
   const members = t("team.members", { returnObjects: true }) as { name: string; role: string; description: string }[];
 
   return (
-    <section className="bg-surface/30 px-6 py-20 md:py-28">
+    <section id="team" className="bg-surface/30 px-6 py-20 md:py-28">
       <div className="container-wide">
         <Reveal>
           <SectionHeader

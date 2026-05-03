@@ -92,6 +92,11 @@
     overflow-x: hidden;
   }
 
+  /* Sticky header offset for hash-targeted sections (header is h-16 = 4rem). */
+  :where(section[id], [data-scroll-target]) {
+    scroll-margin-top: 5rem;
+  }
+
   /* Premium, consistent focus ring for all interactive elements */
   a:focus-visible,
   button:focus-visible,
