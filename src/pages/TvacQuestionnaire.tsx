@@ -32,10 +32,6 @@ const thermalPlateDimensionsByShape: Record<string, string[]> = {
   cubic: ["380 × 350", "480 × 450", "610 × 580", "780 × 750", "980 × 940", "1120 × 1120"],
   cylindrical: ["330 × 350", "400 × 420", "460 × 500", "660 × 700", "840 × 880", "1140 × 1200"],
 };
-const externalDimensionsByShape: Record<string, string[]> = {
-  cubic: ["600 × 1800 × 900", "700 × 1900 × 1000", "830 × 1900 × 1130", "1000 × 1900 × 1300", "1150 × 1900 × 1500", "1400 × 2100 × 1760"],
-  cylindrical: ["600 × 1800 × 900", "700 × 1900 × 1000", "900 × 1900 × 1130", "1100 × 1900 × 1300", "1400 × 1900 × 1500", "1700 × 2100 × 1860"],
-};
 
 /* ---------- Reusable input class strings (questionnaire-local) ----------
    Tuned for readability on the dark Deepvac CI:
