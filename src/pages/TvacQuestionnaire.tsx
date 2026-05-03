@@ -622,40 +622,25 @@ export default function TvacQuestionnaire() {
             </FieldGroup>
 
             <div className="space-y-2">
-              <MonoLabel>
-                {t("s2.external")} <span className="text-gray/75 font-normal normal-case tracking-normal ml-1">{t("s2.externalHint")}</span>
-              </MonoLabel>
-              <select
-                className={cn(baseSelect, !form.chamberShape && "opacity-60 cursor-not-allowed")}
-                disabled={!form.chamberShape}
-                value={form.externalDimensions}
-                onChange={(e) => set("externalDimensions")(e.target.value)}
-              >
-                <option value="">{t("common.selectOption")}</option>
-                {externalOptions.map((d) => <option key={d} value={d}>{d}</option>)}
-                {form.chamberShape && <option value="Other">{t("common.other")}</option>}
-              </select>
+            <div className="space-y-2">
+              <MonoLabel>{t("s2.internalVolume")}</MonoLabel>
+              <input
+                className={baseInput}
+                placeholder={t("s2.internalVolumePh")}
+                inputMode="decimal"
+                value={form.internalVolume}
+                onChange={(e) => set("internalVolume")(e.target.value)}
+              />
             </div>
 
-            {form.externalDimensions === "Other" && form.chamberShape === "cubic" && (
-              <div className="border border-gray/15 rounded-sm p-4 space-y-3">
-                <span className="block font-mono text-[11px] uppercase tracking-[0.08em] text-blue">{t("s2.cubicLabel")}</span>
-                <FieldGroup cols={3}>
-                  <div className="space-y-2"><MonoLabel>{t("common.length")}</MonoLabel><input className={baseInput} placeholder="L" inputMode="decimal" value={form.cubicL} onChange={(e) => set("cubicL")(e.target.value)} /></div>
-                  <div className="space-y-2"><MonoLabel>{t("common.width")}</MonoLabel><input className={baseInput} placeholder="W" inputMode="decimal" value={form.cubicW} onChange={(e) => set("cubicW")(e.target.value)} /></div>
-                  <div className="space-y-2"><MonoLabel>{t("common.height")}</MonoLabel><input className={baseInput} placeholder="H" inputMode="decimal" value={form.cubicH} onChange={(e) => set("cubicH")(e.target.value)} /></div>
-                </FieldGroup>
-              </div>
-            )}
-            {form.externalDimensions === "Other" && form.chamberShape === "cylindrical" && (
-              <div className="border border-gray/15 rounded-sm p-4 space-y-3">
-                <span className="block font-mono text-[11px] uppercase tracking-[0.08em] text-blue">{t("s2.cylindricalLabel")}</span>
-                <FieldGroup cols={2}>
-                  <div className="space-y-2"><MonoLabel>{t("common.diameter")}</MonoLabel><input className={baseInput} placeholder="D" inputMode="decimal" value={form.cylDiameter} onChange={(e) => set("cylDiameter")(e.target.value)} /></div>
-                  <div className="space-y-2"><MonoLabel>{t("common.length")}</MonoLabel><input className={baseInput} placeholder="L" inputMode="decimal" value={form.cylLength} onChange={(e) => set("cylLength")(e.target.value)} /></div>
-                </FieldGroup>
-              </div>
-            )}
+            <div className="space-y-2">
+              <MonoLabel>{t("s2.internalDimensions")}</MonoLabel>
+              <FieldGroup cols={3}>
+                <div className="space-y-2"><MonoLabel>{t("common.width")}</MonoLabel><input className={baseInput} placeholder="W" inputMode="decimal" value={form.internalW} onChange={(e) => set("internalW")(e.target.value)} /></div>
+                <div className="space-y-2"><MonoLabel>{t("common.height")}</MonoLabel><input className={baseInput} placeholder="H" inputMode="decimal" value={form.internalH} onChange={(e) => set("internalH")(e.target.value)} /></div>
+                <div className="space-y-2"><MonoLabel>{t("common.length")}</MonoLabel><input className={baseInput} placeholder="L" inputMode="decimal" value={form.internalL} onChange={(e) => set("internalL")(e.target.value)} /></div>
+              </FieldGroup>
+            </div>
 
             <FieldGroup cols={2}>
               <div className="space-y-3">
