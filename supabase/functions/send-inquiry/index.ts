@@ -603,7 +603,7 @@ const QUESTIONNAIRE_LABELS: Record<"en" | "de", Record<string, string | string[]
     email: "Email", phone: "Phone", country: "Country", application: "Application field",
     weight: "Max. DUT weight (kg)", dutType: "DUT type", housing: "Housing material",
     shape: "Chamber shape", material: "Chamber material",
-    external: "External dimensions (W × H × L), mm", customDims: "Custom dimensions",
+    internalVolume: "Internal usable volume (L)", internalDimensions: "Internal usable dimensions (W × H × L), mm",
     door: "Door type", ports: "Ports", viewports: "Viewports",
     heat: "Max. heat dissipation (W)", dutCount: "Max. number of DUTs",
     vacuum: "Vacuum level", highVac: "High vacuum pump", foreVac: "Fore vacuum pump",
