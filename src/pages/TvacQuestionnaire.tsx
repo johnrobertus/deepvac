@@ -790,14 +790,13 @@ export default function TvacQuestionnaire() {
           <div className="space-y-3">
             <MonoLabel>{t("s3.thermalPlate")}</MonoLabel>
             <div className="space-y-2">
-              <label className="text-[13px] text-gray/85">{t("s3.plateDims")}</label>
+              <label className="text-[13px] text-gray/85">{t("s3.plateDims")} <span className="text-gray/60">({t("s3.plateNote")})</span></label>
               <select className={cn(baseSelect, !form.chamberShape && "opacity-60 cursor-not-allowed")} disabled={!form.chamberShape} value={form.plateDimensions} onChange={(e) => set("plateDimensions")(e.target.value)}>
                 <option value="">{form.chamberShape ? t("common.selectSize") : t("common.selectOption")}</option>
                 {plateOptions.map((o) => <option key={o} value={o}>{o}</option>)}
                 {form.chamberShape && <option value="Other">{t("common.other")}</option>}
               </select>
             </div>
-            <p className="text-[13px] text-gray/75">{t("s3.plateNote")}</p>
             {form.plateDimensions === "Other" && (
               <input className={baseInput} placeholder={t("s3.plateCustomPh")} value={form.plateCustom} onChange={(e) => set("plateCustom")(e.target.value)} />
             )}
