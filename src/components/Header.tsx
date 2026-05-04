@@ -203,11 +203,8 @@ export function Header() {
   const contactPath = localizedPath("/contact", lang);
   const questionnairePath = localizedPath("/tvac-questionnaire", lang);
 
-  const handleQuestionnaireClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (pathname === questionnairePath) {
-      e.preventDefault();
-      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-    }
+  const handleQuestionnaireClick = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   };
 
   const langButtonClass = (active: boolean) =>
