@@ -108,10 +108,18 @@ export const QuestionnairePrintView = forwardRef<HTMLDivElement, Props>(function
   };
 
   // Internal usable dimensions
+  const isCyl = form.chamberShape === "cylindrical";
   const internalDims = (() => {
+    if (isCyl) {
+      const L = (form.internalL || "").trim();
+      const D = (form.internalW || "").trim();
+      if (!L && !D) return "";
+      return `L ${L || "?"} × D ${D || "?"} mm`;
+    }
     const v = [form.internalW, form.internalH, form.internalL].filter((x: string) => x?.trim());
     return v.length ? v.join(" × ") + " mm" : "";
   })();
+  const internalDimsLabel = isCyl ? t("s2.internalDimensionsCyl") : t("s2.internalDimensions");
 
   // Ports
   const portsRendered = (form.ports as PortRow[] | undefined)?.flatMap((p, i) => {
