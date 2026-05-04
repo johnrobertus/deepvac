@@ -214,8 +214,7 @@
       "LN2 / GN2 cooled shroud",
       "Resistive heaters",
       "Radiation heaters",
-      "Combined cooling + heating",
-      "None"
+      "Mechanical refrigeration / heating via chiller or system"
     ],
     "sensor": "Temperature sensor type",
     "sensorOptions": [
