@@ -296,7 +296,7 @@ export function Header() {
           </div>
 
           <Button asChild size="sm" className="font-mono text-xs tracking-wide">
-            <Link to={questionnairePath}>{t("nav.configureTvac")}</Link>
+            <Link to={questionnairePath} onClick={handleQuestionnaireClick}>{t("nav.configureTvac")}</Link>
           </Button>
         </div>
 
