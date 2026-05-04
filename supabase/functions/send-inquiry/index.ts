@@ -791,8 +791,18 @@ function renderQuestionnaireEmail(
     .filter(Boolean);
   const viewportsMat = withOther(pickedFromArray(d.viewportsMaterial, L.viewportsMaterialOptions as string[]), d.viewportsMaterialOther);
 
-  const internalDimsParts = [d.internalW, d.internalH, d.internalL].map((x) => (x || "").trim()).filter(Boolean);
-  const internalDims = internalDimsParts.length ? `${internalDimsParts.join(" × ")} mm` : "";
+  const isCylShape = d.chamberShape === "cylindrical";
+  let internalDims = "";
+  let internalDimsLabel = L.internalDimensions as string;
+  if (isCylShape) {
+    const lenV = (d.internalL || "").trim();
+    const diaV = (d.internalW || "").trim();
+    if (lenV || diaV) internalDims = `L ${lenV || "?"} × D ${diaV || "?"} mm`;
+    internalDimsLabel = L.internalDimensionsCyl as string;
+  } else {
+    const internalDimsParts = [d.internalW, d.internalH, d.internalL].map((x) => (x || "").trim()).filter(Boolean);
+    internalDims = internalDimsParts.length ? `${internalDimsParts.join(" × ")} mm` : "";
+  }
 
   const hasS3 = d.chamberShape || d.chamberMaterial || d.internalVolume || internalDims || doors.length || ports.length || d.viewportsQty || d.viewportsSize || viewportsMat.length;
   if (hasS3) {
