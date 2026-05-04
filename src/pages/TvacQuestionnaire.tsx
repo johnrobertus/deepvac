@@ -191,7 +191,7 @@ const initialForm: FormState = {
   plateCooling: arr(3), plateCoolingOther: o(),
   shroudConfig: "", shroudConfigSpecify: "",
   shroudTempMin: "", shroudTempMax: "",
-  shroudCooling: arr(5), shroudCoolingOther: o(),
+  shroudCooling: arr(4), shroudCoolingOther: o(),
   sensorTypes: arr(6), sensorTypeOther: o(),
   measurementChannels: "", measurementChannelsSpecify: "",
   elecQty: "", elecVoltage: "", elecCurrent: "", elecNotes: "",

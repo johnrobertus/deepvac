@@ -214,8 +214,7 @@
       "LN2-/GN2-gekühlter Shroud",
       "Widerstandsheizungen",
       "Strahlungsheizungen",
-      "Kombinierte Kühlung + Heizung",
-      "Keine"
+      "Mechanische Kühlung / Heizung über Chiller oder System"
     ],
     "sensor": "Temperatursensor-Typ",
     "sensorOptions": [
