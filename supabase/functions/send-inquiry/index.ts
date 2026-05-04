@@ -603,7 +603,7 @@ const QUESTIONNAIRE_LABELS: Record<"en" | "de", Record<string, string | string[]
     email: "Email", phone: "Phone", country: "Country", application: "Application field",
     weight: "Max. DUT weight (kg)", dutType: "DUT type", housing: "Housing material",
     shape: "Chamber shape", material: "Chamber material",
-    internalVolume: "Internal usable volume (L)", internalDimensions: "Internal usable dimensions (W × H × L), mm",
+    internalVolume: "Internal usable volume (L)", internalDimensions: "Internal usable dimensions (W × H × L), mm", internalDimensionsCyl: "Internal usable dimensions (L × D), mm",
     door: "Door type", ports: "Ports", viewports: "Viewports",
     heat: "Max. heat dissipation (W)", dutCount: "Max. number of DUTs",
     vacuum: "Vacuum level", highVac: "High vacuum pump", foreVac: "Fore vacuum pump",
@@ -668,7 +668,7 @@ const QUESTIONNAIRE_LABELS: Record<"en" | "de", Record<string, string | string[]
     email: "E-Mail", phone: "Telefon", country: "Land", application: "Anwendungsfeld",
     weight: "Max. DUT-Gewicht (kg)", dutType: "DUT-Typ", housing: "Gehäusematerial",
     shape: "Kammerform", material: "Kammermaterial",
-    internalVolume: "Nutzbares Innenvolumen (L)", internalDimensions: "Nutzbare Innenmaße (B × H × L), mm",
+    internalVolume: "Nutzbares Innenvolumen (L)", internalDimensions: "Nutzbare Innenmaße (B × H × L), mm", internalDimensionsCyl: "Nutzbare Innenmaße (L × D), mm",
     door: "Türtyp", ports: "Ports", viewports: "Sichtfenster",
     heat: "Max. Wärmeabgabe (W)", dutCount: "Max. Anzahl DUTs",
     vacuum: "Vakuumniveau", highVac: "Hochvakuumpumpe", foreVac: "Vorvakuumpumpe",
@@ -791,8 +791,18 @@ function renderQuestionnaireEmail(
     .filter(Boolean);
   const viewportsMat = withOther(pickedFromArray(d.viewportsMaterial, L.viewportsMaterialOptions as string[]), d.viewportsMaterialOther);
 
-  const internalDimsParts = [d.internalW, d.internalH, d.internalL].map((x) => (x || "").trim()).filter(Boolean);
-  const internalDims = internalDimsParts.length ? `${internalDimsParts.join(" × ")} mm` : "";
+  const isCylShape = d.chamberShape === "cylindrical";
+  let internalDims = "";
+  let internalDimsLabel = L.internalDimensions as string;
+  if (isCylShape) {
+    const lenV = (d.internalL || "").trim();
+    const diaV = (d.internalW || "").trim();
+    if (lenV || diaV) internalDims = `L ${lenV || "?"} × D ${diaV || "?"} mm`;
+    internalDimsLabel = L.internalDimensionsCyl as string;
+  } else {
+    const internalDimsParts = [d.internalW, d.internalH, d.internalL].map((x) => (x || "").trim()).filter(Boolean);
+    internalDims = internalDimsParts.length ? `${internalDimsParts.join(" × ")} mm` : "";
+  }
 
   const hasS3 = d.chamberShape || d.chamberMaterial || d.internalVolume || internalDims || doors.length || ports.length || d.viewportsQty || d.viewportsSize || viewportsMat.length;
   if (hasS3) {
@@ -801,7 +811,7 @@ function renderQuestionnaireEmail(
       d.chamberShape ? rowKv(L.shape as string, escapeHtml(d.chamberShape)) : "",
       d.chamberMaterial ? rowKv(L.material as string, sanitize(d.chamberMaterial, 100)) : "",
       d.internalVolume ? rowKv(L.internalVolume as string, sanitize(d.internalVolume, 50)) : "",
-      internalDims ? rowKv(L.internalDimensions as string, internalDims) : "",
+      internalDims ? rowKv(internalDimsLabel, internalDims) : "",
       doors.length ? rowKv(L.door as string, doors.join(", ")) : "",
       ports.length ? rowKv(L.ports as string, ports.join("<br/>")) : "",
       d.viewportsQty || d.viewportsSize || viewportsMat.length

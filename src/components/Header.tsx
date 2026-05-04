@@ -203,6 +203,10 @@ export function Header() {
   const contactPath = localizedPath("/contact", lang);
   const questionnairePath = localizedPath("/tvac-questionnaire", lang);
 
+  const handleQuestionnaireClick = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  };
+
   const langButtonClass = (active: boolean) =>
     cn(
       "rounded-sm px-1.5 py-0.5 font-mono text-xs uppercase tracking-wider transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background",
@@ -289,7 +293,7 @@ export function Header() {
           </div>
 
           <Button asChild size="sm" className="font-mono text-xs tracking-wide">
-            <Link to={questionnairePath}>{t("nav.configureTvac")}</Link>
+            <Link to={questionnairePath} onClick={handleQuestionnaireClick}>{t("nav.configureTvac")}</Link>
           </Button>
         </div>
 
@@ -355,7 +359,7 @@ export function Header() {
 
             <div className="pt-2">
               <Button asChild size="sm" className="w-full font-mono text-xs tracking-wide">
-                <Link to={questionnairePath}>{t("nav.configureTvac")}</Link>
+                <Link to={questionnairePath} onClick={handleQuestionnaireClick}>{t("nav.configureTvac")}</Link>
               </Button>
             </div>
           </div>

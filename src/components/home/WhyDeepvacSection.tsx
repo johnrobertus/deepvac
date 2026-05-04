@@ -7,7 +7,7 @@ export function WhyDeepvacSection() {
   const items = t("whyDeepvac.items", { returnObjects: true }) as { title: string; description: string }[];
 
   return (
-    <section className="px-6 py-20 md:py-28">
+    <section id="why-deepvac" className="px-6 py-20 md:py-28">
       <div className="container-wide">
         <Reveal>
           <SectionHeader

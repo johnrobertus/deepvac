@@ -191,7 +191,7 @@ const initialForm: FormState = {
   plateCooling: arr(3), plateCoolingOther: o(),
   shroudConfig: "", shroudConfigSpecify: "",
   shroudTempMin: "", shroudTempMax: "",
-  shroudCooling: arr(5), shroudCoolingOther: o(),
+  shroudCooling: arr(4), shroudCoolingOther: o(),
   sensorTypes: arr(6), sensorTypeOther: o(),
   measurementChannels: "", measurementChannelsSpecify: "",
   elecQty: "", elecVoltage: "", elecCurrent: "", elecNotes: "",
@@ -632,14 +632,24 @@ export default function TvacQuestionnaire() {
               />
             </div>
 
-            <div className="space-y-2">
-              <MonoLabel>{t("s2.internalDimensions")}</MonoLabel>
-              <FieldGroup cols={3}>
-                <div className="space-y-2"><MonoLabel>{t("common.width")}</MonoLabel><input className={baseInput} placeholder="W" inputMode="decimal" value={form.internalW} onChange={(e) => set("internalW")(e.target.value)} /></div>
-                <div className="space-y-2"><MonoLabel>{t("common.height")}</MonoLabel><input className={baseInput} placeholder="H" inputMode="decimal" value={form.internalH} onChange={(e) => set("internalH")(e.target.value)} /></div>
-                <div className="space-y-2"><MonoLabel>{t("common.length")}</MonoLabel><input className={baseInput} placeholder="L" inputMode="decimal" value={form.internalL} onChange={(e) => set("internalL")(e.target.value)} /></div>
-              </FieldGroup>
-            </div>
+            {form.chamberShape === "cylindrical" ? (
+              <div className="space-y-2">
+                <MonoLabel>{t("s2.internalDimensionsCyl")}</MonoLabel>
+                <FieldGroup cols={2}>
+                  <div className="space-y-2"><MonoLabel>{t("common.length")}</MonoLabel><input className={baseInput} placeholder="L" inputMode="decimal" value={form.internalL} onChange={(e) => set("internalL")(e.target.value)} /></div>
+                  <div className="space-y-2"><MonoLabel>{t("common.diameter")}</MonoLabel><input className={baseInput} placeholder="D" inputMode="decimal" value={form.internalW} onChange={(e) => { set("internalW")(e.target.value); set("internalH")(""); }} /></div>
+                </FieldGroup>
+              </div>
+            ) : (
+              <div className="space-y-2">
+                <MonoLabel>{t("s2.internalDimensions")}</MonoLabel>
+                <FieldGroup cols={3}>
+                  <div className="space-y-2"><MonoLabel>{t("common.width")}</MonoLabel><input className={baseInput} placeholder="W" inputMode="decimal" value={form.internalW} onChange={(e) => set("internalW")(e.target.value)} /></div>
+                  <div className="space-y-2"><MonoLabel>{t("common.height")}</MonoLabel><input className={baseInput} placeholder="H" inputMode="decimal" value={form.internalH} onChange={(e) => set("internalH")(e.target.value)} /></div>
+                  <div className="space-y-2"><MonoLabel>{t("common.length")}</MonoLabel><input className={baseInput} placeholder="L" inputMode="decimal" value={form.internalL} onChange={(e) => set("internalL")(e.target.value)} /></div>
+                </FieldGroup>
+              </div>
+            )}
 
             <FieldGroup cols={2}>
               <div className="space-y-3">
@@ -705,7 +715,6 @@ export default function TvacQuestionnaire() {
     const rampOpts = t("s3.rampOptions", { returnObjects: true }) as string[];
     const uniOpts = t("s3.uniformityOptions", { returnObjects: true }) as string[];
     const plateCoolOpts = t("s3.plateCoolingOptions", { returnObjects: true }) as string[];
-    const shroudCfg = t("s3.shroudConfigOptions", { returnObjects: true }) as string[];
     const shroudCool = t("s3.shroudCoolingOptions", { returnObjects: true }) as string[];
     const sensorOpts = t("s3.sensorOptions", { returnObjects: true }) as string[];
     const chOpts = t("s3.channelOptions", { returnObjects: true }) as string[];
@@ -776,53 +785,61 @@ export default function TvacQuestionnaire() {
           </FieldGroup>
         </div>
 
-        <FieldGroup cols={2}>
-          <div className="space-y-3">
-            <MonoLabel>{t("s3.thermalPlate")}</MonoLabel>
-            <div className="space-y-2">
-              <label className="text-[13px] text-gray/85">{t("s3.plateDims")}</label>
-              <select className={cn(baseSelect, !form.chamberShape && "opacity-60 cursor-not-allowed")} disabled={!form.chamberShape} value={form.plateDimensions} onChange={(e) => set("plateDimensions")(e.target.value)}>
-                <option value="">{form.chamberShape ? t("common.selectSize") : t("common.selectOption")}</option>
-                {plateOptions.map((o) => <option key={o} value={o}>{o}</option>)}
-                {form.chamberShape && <option value="Other">{t("common.other")}</option>}
-              </select>
-            </div>
-            <p className="text-[13px] text-gray/75">{t("s3.plateNote")}</p>
-            {form.plateDimensions === "Other" && (
+        <div className="grid gap-5 md:grid-cols-2 md:gap-x-6 md:gap-y-3">
+          <div className="order-1"><MonoLabel>{t("s3.thermalPlate")}</MonoLabel></div>
+          <div className="order-7 md:order-2"><MonoLabel>{t("s3.shroud")}</MonoLabel></div>
+
+          <div className="order-2 grid content-start gap-2 md:order-3">
+            <label className="block min-h-[3rem] text-[13px] leading-snug text-gray/85">{t("s3.plateDims")} <span className="text-gray/60">({t("s3.plateNote")})</span></label>
+            <select className={cn(baseSelect, !form.chamberShape && "opacity-60 cursor-not-allowed")} disabled={!form.chamberShape} value={form.plateDimensions} onChange={(e) => set("plateDimensions")(e.target.value)}>
+              <option value="">{form.chamberShape ? t("common.selectSize") : t("common.selectOption")}</option>
+              {plateOptions.map((o) => <option key={o} value={o}>{o}</option>)}
+              {form.chamberShape && <option value="Other">{t("common.other")}</option>}
+            </select>
+          </div>
+          <div className="order-8 grid content-start gap-2 md:order-4">
+            <label className="block min-h-[3rem] text-[13px] leading-snug text-gray/85">{t("s3.shroudConfig")}</label>
+            <select className={baseSelect} value={form.shroudConfig} onChange={(e) => set("shroudConfig")(e.target.value)}>
+              <option value="">{t("common.selectOption")}</option>
+              <option value="Yes">{t("s4.yesNo.0", "Yes")}</option>
+              <option value="No">{t("s4.yesNo.1", "No")}</option>
+            </select>
+          </div>
+
+          <div className="order-3 md:order-5">
+            {form.plateDimensions === "Other" ? (
               <input className={baseInput} placeholder={t("s3.plateCustomPh")} value={form.plateCustom} onChange={(e) => set("plateCustom")(e.target.value)} />
+            ) : (
+              <div className="hidden md:block h-10" aria-hidden="true" />
             )}
+          </div>
+          <div className="order-9 md:order-6"><div className="hidden md:block h-10" aria-hidden="true" /></div>
+
+          <div className="order-4 md:order-7">
             <FieldGroup cols={2}>
               <div className="space-y-1"><label className="text-[13px] text-gray/85">{t("s3.plateTempMin")}</label><input type="number" className={baseInput} placeholder="min. °C" value={form.plateTempMin} onChange={(e) => set("plateTempMin")(e.target.value)} /></div>
               <div className="space-y-1"><label className="text-[13px] text-gray/85">{t("s3.plateTempMax")}</label><input type="number" className={baseInput} placeholder="max. °C" value={form.plateTempMax} onChange={(e) => set("plateTempMax")(e.target.value)} /></div>
             </FieldGroup>
-            <span className="block font-mono text-[11px] uppercase tracking-[0.08em] text-blue">{t("s3.plateCooling")}</span>
-            <div className="flex flex-col gap-2">
-              {plateCoolOpts.map((o, i) => <CheckItem key={o} label={o} checked={form.plateCooling[i]} onChange={() => toggleAt("plateCooling", i)} />)}
-              <OtherInput value={form.plateCoolingOther} {...setOther("plateCoolingOther")} placeholder={t("common.specify")} />
-            </div>
           </div>
-          <div className="space-y-3">
-            <MonoLabel>{t("s3.shroud")}</MonoLabel>
-            <div className="space-y-2">
-              <label className="text-[13px] text-gray/85">{t("s3.shroudConfig")}</label>
-              <select className={baseSelect} value={form.shroudConfig} onChange={(e) => set("shroudConfig")(e.target.value)}>
-                <option value="">{t("common.selectOption")}</option>{shroudCfg.map((o) => <option key={o} value={o}>{o}</option>)}
-              </select>
-              {isOtherValue(form.shroudConfig) && (
-                <input className={baseInput} placeholder={t("common.specify")} value={form.shroudConfigSpecify} onChange={(e) => set("shroudConfigSpecify")(e.target.value)} />
-              )}
-            </div>
+          <div className="order-10 md:order-8">
             <FieldGroup cols={2}>
               <div className="space-y-1"><label className="text-[13px] text-gray/85">{t("s3.plateTempMin")}</label><input type="number" className={baseInput} placeholder="min. °C" value={form.shroudTempMin} onChange={(e) => set("shroudTempMin")(e.target.value)} /></div>
               <div className="space-y-1"><label className="text-[13px] text-gray/85">{t("s3.plateTempMax")}</label><input type="number" className={baseInput} placeholder="max. °C" value={form.shroudTempMax} onChange={(e) => set("shroudTempMax")(e.target.value)} /></div>
             </FieldGroup>
-            <span className="block font-mono text-[11px] uppercase tracking-[0.08em] text-blue">{t("s3.shroudCooling")}</span>
-            <div className="flex flex-col gap-2">
-              {shroudCool.map((o, i) => <CheckItem key={o} label={o} checked={form.shroudCooling[i]} onChange={() => toggleAt("shroudCooling", i)} />)}
-              <OtherInput value={form.shroudCoolingOther} {...setOther("shroudCoolingOther")} placeholder={t("common.specify")} />
-            </div>
           </div>
-        </FieldGroup>
+
+          <span className="order-5 block font-mono text-[11px] uppercase tracking-[0.08em] text-blue md:order-9">{t("s3.plateCooling")}</span>
+          <span className="order-11 block font-mono text-[11px] uppercase tracking-[0.08em] text-blue md:order-10">{t("s3.shroudCooling")}</span>
+
+          <div className="order-6 flex flex-col gap-2 md:order-11">
+            {plateCoolOpts.map((o, i) => <CheckItem key={o} label={o} checked={form.plateCooling[i]} onChange={() => toggleAt("plateCooling", i)} />)}
+            <OtherInput value={form.plateCoolingOther} {...setOther("plateCoolingOther")} placeholder={t("common.specify")} />
+          </div>
+          <div className="order-12 flex flex-col gap-2 md:order-12">
+            {shroudCool.map((o, i) => <CheckItem key={o} label={o} checked={form.shroudCooling[i]} onChange={() => toggleAt("shroudCooling", i)} />)}
+            <OtherInput value={form.shroudCoolingOther} {...setOther("shroudCoolingOther")} placeholder={t("common.specify")} />
+          </div>
+        </div>
 
         <FieldGroup cols={2}>
           <div className="space-y-3">
@@ -834,12 +851,7 @@ export default function TvacQuestionnaire() {
           </div>
           <div className="space-y-2">
             <MonoLabel>{t("s3.channels")}</MonoLabel>
-            <select className={baseSelect} value={form.measurementChannels} onChange={(e) => set("measurementChannels")(e.target.value)}>
-              <option value="">{t("common.selectRange")}</option>{chOpts.map((o) => <option key={o} value={o}>{o}</option>)}
-            </select>
-            {isOtherValue(form.measurementChannels) && (
-              <input className={baseInput} placeholder={t("common.specify")} value={form.measurementChannelsSpecify} onChange={(e) => set("measurementChannelsSpecify")(e.target.value)} />
-            )}
+            <input type="text" className={baseInput} value={form.measurementChannels} onChange={(e) => set("measurementChannels")(e.target.value)} />
           </div>
         </FieldGroup>
       </div>

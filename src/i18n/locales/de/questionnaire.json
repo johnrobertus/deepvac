@@ -154,6 +154,7 @@
     "internalVolume": "Nutzbares Innenvolumen, L",
     "internalVolumePh": "z. B. 250",
     "internalDimensions": "Nutzbare Innenmaße (B × H × L), mm",
+    "internalDimensionsCyl": "Nutzbare Innenmaße (L × D), mm",
     "doorType": "Türtyp",
     "doorOptions": ["Einflüglige Schwenktür", "Horizontale Schiebetür", "Vertikaler Hubdeckel"],
     "ports": "Anzahl und Typ der Ports",
@@ -213,8 +214,7 @@
       "LN2-/GN2-gekühlter Shroud",
       "Widerstandsheizungen",
       "Strahlungsheizungen",
-      "Kombinierte Kühlung + Heizung",
-      "Keine"
+      "Mechanische Kühlung / Heizung über Chiller oder System"
     ],
     "sensor": "Temperatursensor-Typ",
     "sensorOptions": [

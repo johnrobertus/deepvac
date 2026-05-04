@@ -24,7 +24,7 @@ export function ServicesSection() {
   const items = t("services.items", { returnObjects: true }) as { label: string; title: string; description: string }[];
 
   return (
-    <section className="bg-surface/30 px-6 py-20 md:py-28">
+    <section id="services" className="bg-surface/30 px-6 py-20 md:py-28">
       <div className="container-wide">
         <Reveal>
           <SectionHeader

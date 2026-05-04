@@ -10,7 +10,7 @@ export function ApplicationsSection() {
   const items = t("applications.items", { returnObjects: true }) as { title: string; description: string }[];
 
   return (
-    <section className="py-20 md:py-28 px-6">
+    <section id="applications" className="py-20 md:py-28 px-6">
       <div className="container-wide">
         <Reveal>
           <SectionHeader

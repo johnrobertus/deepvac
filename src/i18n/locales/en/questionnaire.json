@@ -154,6 +154,7 @@
     "internalVolume": "Internal usable volume, L",
     "internalVolumePh": "e.g. 250",
     "internalDimensions": "Internal usable dimensions (W × H × L), mm",
+    "internalDimensionsCyl": "Internal usable dimensions (L × D), mm",
     "doorType": "Door type",
     "doorOptions": ["Hinged, single door", "Horizontal sliding door", "Vertical lift lid"],
     "ports": "Number and type of ports",
@@ -213,8 +214,7 @@
       "LN2 / GN2 cooled shroud",
       "Resistive heaters",
       "Radiation heaters",
-      "Combined cooling + heating",
-      "None"
+      "Mechanical refrigeration / heating via chiller or system"
     ],
     "sensor": "Temperature sensor type",
     "sensorOptions": [
