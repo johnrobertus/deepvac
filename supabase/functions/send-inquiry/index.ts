@@ -811,7 +811,7 @@ function renderQuestionnaireEmail(
       d.chamberShape ? rowKv(L.shape as string, escapeHtml(d.chamberShape)) : "",
       d.chamberMaterial ? rowKv(L.material as string, sanitize(d.chamberMaterial, 100)) : "",
       d.internalVolume ? rowKv(L.internalVolume as string, sanitize(d.internalVolume, 50)) : "",
-      internalDims ? rowKv(L.internalDimensions as string, internalDims) : "",
+      internalDims ? rowKv(internalDimsLabel, internalDims) : "",
       doors.length ? rowKv(L.door as string, doors.join(", ")) : "",
       ports.length ? rowKv(L.ports as string, ports.join("<br/>")) : "",
       d.viewportsQty || d.viewportsSize || viewportsMat.length
