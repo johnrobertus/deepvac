@@ -668,7 +668,7 @@ const QUESTIONNAIRE_LABELS: Record<"en" | "de", Record<string, string | string[]
     email: "E-Mail", phone: "Telefon", country: "Land", application: "Anwendungsfeld",
     weight: "Max. DUT-Gewicht (kg)", dutType: "DUT-Typ", housing: "Gehäusematerial",
     shape: "Kammerform", material: "Kammermaterial",
-    internalVolume: "Nutzbares Innenvolumen (L)", internalDimensions: "Nutzbare Innenmaße (B × H × L), mm",
+    internalVolume: "Nutzbares Innenvolumen (L)", internalDimensions: "Nutzbare Innenmaße (B × H × L), mm", internalDimensionsCyl: "Nutzbare Innenmaße (L × D), mm",
     door: "Türtyp", ports: "Ports", viewports: "Sichtfenster",
     heat: "Max. Wärmeabgabe (W)", dutCount: "Max. Anzahl DUTs",
     vacuum: "Vakuumniveau", highVac: "Hochvakuumpumpe", foreVac: "Vorvakuumpumpe",
