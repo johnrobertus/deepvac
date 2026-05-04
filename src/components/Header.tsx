@@ -362,7 +362,7 @@ export function Header() {
 
             <div className="pt-2">
               <Button asChild size="sm" className="w-full font-mono text-xs tracking-wide">
-                <Link to={questionnairePath}>{t("nav.configureTvac")}</Link>
+                <Link to={questionnairePath} onClick={handleQuestionnaireClick}>{t("nav.configureTvac")}</Link>
               </Button>
             </div>
           </div>
