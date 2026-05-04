@@ -786,9 +786,9 @@ export default function TvacQuestionnaire() {
         </div>
 
         <FieldGroup cols={2}>
-          <div className="space-y-3">
+          <div className="grid content-start gap-3">
             <MonoLabel>{t("s3.thermalPlate")}</MonoLabel>
-            <div className="space-y-2">
+            <div className="grid content-start gap-2">
               <label className="block min-h-[3rem] text-[13px] leading-snug text-gray/85">{t("s3.plateDims")} <span className="text-gray/60">({t("s3.plateNote")})</span></label>
               <select className={cn(baseSelect, !form.chamberShape && "opacity-60 cursor-not-allowed")} disabled={!form.chamberShape} value={form.plateDimensions} onChange={(e) => set("plateDimensions")(e.target.value)}>
                 <option value="">{form.chamberShape ? t("common.selectSize") : t("common.selectOption")}</option>
@@ -796,8 +796,10 @@ export default function TvacQuestionnaire() {
                 {form.chamberShape && <option value="Other">{t("common.other")}</option>}
               </select>
             </div>
-            {form.plateDimensions === "Other" && (
+            {form.plateDimensions === "Other" ? (
               <input className={baseInput} placeholder={t("s3.plateCustomPh")} value={form.plateCustom} onChange={(e) => set("plateCustom")(e.target.value)} />
+            ) : (
+              <div className="hidden md:block h-10" aria-hidden="true" />
             )}
             <FieldGroup cols={2}>
               <div className="space-y-1"><label className="text-[13px] text-gray/85">{t("s3.plateTempMin")}</label><input type="number" className={baseInput} placeholder="min. °C" value={form.plateTempMin} onChange={(e) => set("plateTempMin")(e.target.value)} /></div>
@@ -809,9 +811,9 @@ export default function TvacQuestionnaire() {
               <OtherInput value={form.plateCoolingOther} {...setOther("plateCoolingOther")} placeholder={t("common.specify")} />
             </div>
           </div>
-          <div className="space-y-3">
+          <div className="grid content-start gap-3">
             <MonoLabel>{t("s3.shroud")}</MonoLabel>
-            <div className="space-y-2">
+            <div className="grid content-start gap-2">
               <label className="block min-h-[3rem] text-[13px] leading-snug text-gray/85">{t("s3.shroudConfig")}</label>
               <select className={baseSelect} value={form.shroudConfig} onChange={(e) => set("shroudConfig")(e.target.value)}>
                 <option value="">{t("common.selectOption")}</option>
@@ -819,6 +821,7 @@ export default function TvacQuestionnaire() {
                 <option value="No">{t("s4.yesNo.1", "No")}</option>
               </select>
             </div>
+            <div className="hidden md:block h-10" aria-hidden="true" />
             <FieldGroup cols={2}>
               <div className="space-y-1"><label className="text-[13px] text-gray/85">{t("s3.plateTempMin")}</label><input type="number" className={baseInput} placeholder="min. °C" value={form.shroudTempMin} onChange={(e) => set("shroudTempMin")(e.target.value)} /></div>
               <div className="space-y-1"><label className="text-[13px] text-gray/85">{t("s3.plateTempMax")}</label><input type="number" className={baseInput} placeholder="max. °C" value={form.shroudTempMax} onChange={(e) => set("shroudTempMax")(e.target.value)} /></div>
