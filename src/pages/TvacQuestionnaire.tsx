@@ -632,14 +632,24 @@ export default function TvacQuestionnaire() {
               />
             </div>
 
-            <div className="space-y-2">
-              <MonoLabel>{t("s2.internalDimensions")}</MonoLabel>
-              <FieldGroup cols={3}>
-                <div className="space-y-2"><MonoLabel>{t("common.width")}</MonoLabel><input className={baseInput} placeholder="W" inputMode="decimal" value={form.internalW} onChange={(e) => set("internalW")(e.target.value)} /></div>
-                <div className="space-y-2"><MonoLabel>{t("common.height")}</MonoLabel><input className={baseInput} placeholder="H" inputMode="decimal" value={form.internalH} onChange={(e) => set("internalH")(e.target.value)} /></div>
-                <div className="space-y-2"><MonoLabel>{t("common.length")}</MonoLabel><input className={baseInput} placeholder="L" inputMode="decimal" value={form.internalL} onChange={(e) => set("internalL")(e.target.value)} /></div>
-              </FieldGroup>
-            </div>
+            {form.chamberShape === "cylindrical" ? (
+              <div className="space-y-2">
+                <MonoLabel>{t("s2.internalDimensionsCyl")}</MonoLabel>
+                <FieldGroup cols={2}>
+                  <div className="space-y-2"><MonoLabel>{t("common.length")}</MonoLabel><input className={baseInput} placeholder="L" inputMode="decimal" value={form.internalL} onChange={(e) => set("internalL")(e.target.value)} /></div>
+                  <div className="space-y-2"><MonoLabel>{t("common.diameter")}</MonoLabel><input className={baseInput} placeholder="D" inputMode="decimal" value={form.internalW} onChange={(e) => { set("internalW")(e.target.value); set("internalH")(""); }} /></div>
+                </FieldGroup>
+              </div>
+            ) : (
+              <div className="space-y-2">
+                <MonoLabel>{t("s2.internalDimensions")}</MonoLabel>
+                <FieldGroup cols={3}>
+                  <div className="space-y-2"><MonoLabel>{t("common.width")}</MonoLabel><input className={baseInput} placeholder="W" inputMode="decimal" value={form.internalW} onChange={(e) => set("internalW")(e.target.value)} /></div>
+                  <div className="space-y-2"><MonoLabel>{t("common.height")}</MonoLabel><input className={baseInput} placeholder="H" inputMode="decimal" value={form.internalH} onChange={(e) => set("internalH")(e.target.value)} /></div>
+                  <div className="space-y-2"><MonoLabel>{t("common.length")}</MonoLabel><input className={baseInput} placeholder="L" inputMode="decimal" value={form.internalL} onChange={(e) => set("internalL")(e.target.value)} /></div>
+                </FieldGroup>
+              </div>
+            )}
 
             <FieldGroup cols={2}>
               <div className="space-y-3">
