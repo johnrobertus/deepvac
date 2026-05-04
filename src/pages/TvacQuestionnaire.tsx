@@ -788,8 +788,8 @@ export default function TvacQuestionnaire() {
         <FieldGroup cols={2}>
           <div className="space-y-3">
             <MonoLabel>{t("s3.thermalPlate")}</MonoLabel>
-            <div className="flex flex-col justify-between gap-2 md:min-h-[7rem]">
-              <label className="text-[13px] leading-snug text-gray/85">{t("s3.plateDims")} <span className="text-gray/60">({t("s3.plateNote")})</span></label>
+            <div className="space-y-2">
+              <label className="block min-h-[3rem] text-[13px] leading-snug text-gray/85">{t("s3.plateDims")} <span className="text-gray/60">({t("s3.plateNote")})</span></label>
               <select className={cn(baseSelect, !form.chamberShape && "opacity-60 cursor-not-allowed")} disabled={!form.chamberShape} value={form.plateDimensions} onChange={(e) => set("plateDimensions")(e.target.value)}>
                 <option value="">{form.chamberShape ? t("common.selectSize") : t("common.selectOption")}</option>
                 {plateOptions.map((o) => <option key={o} value={o}>{o}</option>)}
@@ -811,8 +811,8 @@ export default function TvacQuestionnaire() {
           </div>
           <div className="space-y-3">
             <MonoLabel>{t("s3.shroud")}</MonoLabel>
-            <div className="flex flex-col justify-between gap-2 md:min-h-[7rem]">
-              <label className="text-[13px] leading-snug text-gray/85">{t("s3.shroudConfig")}</label>
+            <div className="space-y-2">
+              <label className="block min-h-[3rem] text-[13px] leading-snug text-gray/85">{t("s3.shroudConfig")}</label>
               <select className={baseSelect} value={form.shroudConfig} onChange={(e) => set("shroudConfig")(e.target.value)}>
                 <option value="">{t("common.selectOption")}</option>
                 <option value="Yes">{t("s4.yesNo.0", "Yes")}</option>
