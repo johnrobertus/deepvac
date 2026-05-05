@@ -2,8 +2,54 @@
   "eyebrow": "Kontakt",
   "title": "Besprechen Sie Ihre Thermovakuum-Anforderungen",
   "description": "Ob Sie eine Kammerplattform, eine kundenspezifische TVAC-Konfiguration oder Engineering-Unterstützung für Modernisierung und Integration benötigen – unser Team steht bereit, Ihr Projekt zu besprechen.",
-  "formTitle": "Engineering-Anfrage",
-  "formDescription": "Teilen Sie uns Ihren Projektkontext mit und wir melden uns mit relevanten technischen Informationen zurück.",
+  "formTitle": "Erzählen Sie uns von Ihrem Projekt",
+  "formDescription": "Ob Sie ein TVAC-System, Testunterstützung, Retrofit, Steuerungsdesign, mechanische Konstruktion oder Subsystemintegration benötigen — senden Sie uns einen kurzen Überblick. Wir leiten Ihre Anfrage an die zuständigen Spezialisten weiter.",
+  "decisionHelper": {
+    "title": "Nicht sicher, welches Formular passt?",
+    "body": "Nutzen Sie dieses kurze Projektanfrageformular für Produkte, Services, ein bestehendes System, Tests, Retrofit, Wartung oder ein Projekt in einer frühen Phase. Nutzen Sie den technischen Fragebogen, wenn Sie bereits ein kundenspezifisches TVAC- oder Weltraumsimulationssystem detailliert spezifizieren möchten.",
+    "shortCta": "Mit Kurzanfrage fortfahren",
+    "questionnaireCta": "Technischen Fragebogen öffnen"
+  },
+  "sections": {
+    "contact": "Kontaktdaten",
+    "interestTitle": "Wofür interessieren Sie sich?",
+    "interestHelper": "Wählen Sie einen oder mehrere Bereiche aus, damit wir Ihre Anfrage korrekt zuordnen können.",
+    "interestProducts": "Produkte",
+    "interestServices": "Leistungen",
+    "interestOther": "Sonstiges",
+    "context": "Projektkontext"
+  },
+  "fields": {
+    "country": "Land",
+    "countryPlaceholder": "z. B. Deutschland",
+    "projectName": "Projekt oder Anwendung (optional)",
+    "projectNamePlaceholder": "z. B. Satelliten-Qualifikation, Retrofit-Projekt",
+    "projectStage": "Projektphase",
+    "timeline": "Erwarteter Zeitrahmen",
+    "existingSystem": "Bestehendes System",
+    "messageLabel": "Beschreiben Sie kurz Ihren Bedarf",
+    "messagePlaceholder": "Beispiel: Wir planen ein Kammer-Upgrade, benötigen Unterstützung bei der Modernisierung des Steuerungssystems oder suchen TVAC-Testkapazität für eine Satellitenkomponente."
+  },
+  "interests": {
+    "products": ["Standard TVAC Serie", "Custom TVAC System", "Thermal Vision"],
+    "services": ["Testleistungen", "Steuerungstechnik", "Mechanische Konstruktion", "Retrofit & Modernisierung", "Wartung & Reparatur", "Subsystemintegration"],
+    "other": ["Noch nicht sicher", "Allgemeine Beratung"]
+  },
+  "projectStageOptions": ["Frühe Evaluierung", "Anforderungen bereits definiert", "Angebotsanfrage", "Bestehendes System benötigt Support", "Upgrade- oder Retrofit-Projekt", "Noch nicht sicher"],
+  "timelineOptionsNew": ["Sofort", "Innerhalb von 3 Monaten", "3 bis 6 Monate", "6 bis 12 Monate", "Später", "Noch nicht sicher"],
+  "existingSystemOptions": ["Nein, neues Projekt", "Ja, bestehendes Deepvac-System", "Ja, bestehendes Drittanbieter-System", "Nicht sicher"],
+  "submit": {
+    "button": "Projektanfrage senden",
+    "helper": "Ihre Anfrage wird von unserem Fachteam geprüft und an den richtigen Ansprechpartner weitergeleitet."
+  },
+  "successNew": {
+    "title": "Vielen Dank. Ihre Anfrage ist eingegangen.",
+    "body": "Wir prüfen Ihren Projektkontext und melden uns mit dem nächsten geeigneten Schritt. Falls Ihre Anfrage detaillierte TVAC-Spezifikationen erfordert, laden wir Sie ggf. zur Bearbeitung des technischen Fragebogens ein."
+  },
+  "validationNew": {
+    "interestRequired": "Bitte wählen Sie mindestens einen Interessenbereich aus.",
+    "messageRequired": "Bitte beschreiben Sie Ihr Anliegen kurz (mindestens 10 Zeichen)."
+  },
   "qualifiers": {
     "eyebrow": "Optional — Helfen Sie uns bei der Vorbereitung",
     "chamberType": "Kammertyp",
