@@ -1,184 +1,285 @@
-# TVAC Questionnaire — Frontend Wizard (Phase 1)
+# Project Inquiry Form — Redesign Plan
 
-Build the bilingual 5-step TVAC questionnaire as a dedicated page. Backend submission is **stubbed** with a clear TODO in this phase; final wiring to `send-inquiry` lands in the follow-up backend prompt. The existing short contact form on `/contact` and `/de/kontakt` is **not modified**.
+## 1. Goal
 
-Source of truth: attached `Q11-4.html` — every field, option, and the dynamic shape→dimensions logic is ported verbatim.
+Replace the current narrow "Engineering Inquiry" form on `/contact` (and `/de/kontakt`) with a clearer, conversion-oriented **Project Inquiry** form for general B2B leads (products, services, retrofit, testing, maintenance, early-stage projects). Keep the existing technical TVAC questionnaire as the dedicated path for detailed custom system specs.
 
-## Routes
+## 2. Files Likely Affected
 
-- EN: `/tvac-questionnaire`
-- DE: `/de/tvac-fragebogen`
+- `src/pages/Contact.tsx` — main form rewrite (structure, fields, submit payload, success view).
+- `src/i18n/locales/en/contact.json` — new copy keys (form title/subtitle/sections/options/helper/buttons/success).
+- `src/i18n/locales/de/contact.json` — mirrored DE copy.
+- `src/i18n/locales/en/common.json` and `…/de/common.json` — possibly add validation strings if not already present (e.g. `areaOfInterestRequired`).
+- `supabase/functions/send-inquiry/index.ts` — extend the short-form `InquiryPayload` to accept the new optional fields (`country`, `interests[]`, `projectStage`, `existingSystem`) and render them in the email. Existing fields (`firstName`, `lastName`, `email`, `company`, `phone`, `message`, `timeline`, `source`, honeypot, turnstile) are reused as-is.
+- `src/components/questionnaire/QuestionnaireCTA.tsx` — kept; its existing `QuestionnaireCard` becomes the "Open technical questionnaire" anchor of the new decision helper. May need a small props extension or a new lightweight `FormSelectorCard` component if styling needs to differ.
+- No DB schema changes required (`inquiry_logs` already stores only meta, not field payload).
 
-Both routes render one shared component `TvacQuestionnaire.tsx` that adapts via `useLanguage()` and `useTranslation("questionnaire")`.
+## 3. Current Form Structure (observed)
 
-## Files
+`Contact.tsx` renders a single form with:
 
-**New**
-- `src/pages/TvacQuestionnaire.tsx` — the full wizard (single self-contained file, ~700 lines, mirrors `Contact.tsx` patterns).
-- `src/i18n/locales/en/questionnaire.json` — all labels, options, helper text, buttons (~280 keys).
-- `src/i18n/locales/de/questionnaire.json` — DE mirror, 1:1.
+- First/Last name, Work email, Phone, Company, Project/Application (free text)
+- Optional qualifier block: 3 dropdowns — Chamber Type, Application Area, Timeline
+- Free-text Message
+- Honeypot + Cloudflare Turnstile (invisible) + consent checkbox
+- Submit calls `supabase.functions.invoke("send-inquiry", { body: { …, source: "contact-page" } })`
+- Success state replaces the page section with a centered confirmation
+- Sidebar: contact details card, ConsentMap, LinkedIn link
+- Below: FAQ accordion
 
-**Edited (additive only)**
-- `src/lib/routes.ts` — append one entry: `{ en: "/tvac-questionnaire", de: "/de/tvac-fragebogen" }`.
-- `src/App.tsx` — add two `<Route>` lines (EN + DE) and one import.
-- `src/i18n/index.ts` — add `questionnaire` namespace import + register in both `en` and `de` resources.
-- `src/i18n/locales/en/seo.json` and `src/i18n/locales/de/seo.json` — add a `questionnaire` block with title + description for `<Helmet>`.
+The existing edge function `send-inquiry` already handles: honeypot, rate-limit (5/10min, 20/day per IP), Turnstile verify, sanitization, validation (firstName/lastName/email/company required; min 10-char message), duplicate detection, Resend email to `info@deepvac.space`, and logs to `inquiry_logs`.
 
-**Untouched (explicit)**
-- `src/pages/Contact.tsx` — short form unchanged.
-- `supabase/functions/send-inquiry/*` — not modified in this phase.
-- `tailwind.config.ts`, `src/index.css` design tokens, `Layout`, `PageShell`, `Footer`, `Navigation`, all other pages.
-- `.github/workflows/*`, deployment config, sitemap scripts.
+## 4. Proposed New Form Structure
 
-## Page structure
+Replace the qualifier dropdowns and the single project-application text input with three clearer sections, plus a decision helper above the form.
 
-Built with the existing `Layout` + `PageShell` + `PageHero` so it inherits the dark Deepvac CI exactly.
+### 4.1 Decision Helper (above the form)
 
-```
-Layout
-└─ PageShell
-   ├─ Helmet (title, description, canonical, hreflang, lang attr, robots="noindex,follow")
-   ├─ PageHero
-   │   eyebrow:    "Detailed technical inquiry" / "Detaillierte technische Anfrage"
-   │   title:      "TVAC system questionnaire" / "TVAC-System-Fragebogen"
-   │   description: short paragraph
-   │   children:   small meta row → estimated time + "leave blank if open" reassurance
-   └─ Section
-       ├─ StepIndicator (5 dots + labels; collapses to "Step 2 of 5 — DUT & chamber" on mobile)
-       ├─ <form onSubmit={handleSubmit}>
-       │   ├─ Per-step note: "You can leave fields blank if specifications are still open."
-       │   ├─ Active step content (Step1Contact … Step5SiteSchedule)
-       │   ├─ GDPR consent checkbox (visible from step 5; required to submit)
-       │   ├─ Honeypot (hidden) + Turnstile container — placeholders, identical pattern to Contact.tsx
-       │   └─ Sticky wizard footer
-       │        ┌─ "Reset all fields" (ghost, de-emphasized, opens AlertDialog confirm)
-       │        └─ Right side: [Back] [Continue]   on step 5: [Back] [Send questionnaire]
-       └─ (no PDF/print primary action — out of scope per requirements)
-```
+Compact 2-card or split panel inside an existing `bento-card` container:
 
-## Step grouping (per requirements)
+- Heading: "Not sure which form to use?"
+- Body: short explanation of when to use this short form vs. the technical questionnaire
+- Two anchors:
+  - "Continue with short inquiry" → smooth-scroll to `#project-inquiry-form`
+  - "Open technical questionnaire" → `localizedPath("/tvac-questionnaire", lang)`
 
-| Step | Title (EN)              | Source sections from Q11-4.html |
-|------|-------------------------|---------------------------------|
-| 1    | Contact                 | Section 1                       |
-| 2    | DUT & chamber           | Sections 2 + 3                  |
-| 3    | Thermal & vacuum        | Section 4                       |
-| 4    | Interfaces & control    | Sections 5 + 6 + 7              |
-| 5    | Site & schedule         | Sections 8 + 9 + consent + submit |
+This replaces the current standalone `QuestionnaireCard` placement at the top of the form column. The existing `QuestionnaireCard` content can be either reused inside the helper or replaced by the new dual-CTA card.
 
-## Fields ported (every field from the source)
+### 4.2 Section 1 — Contact details
 
-All fields from sections 1–9 are reproduced. Required fields: `company`, `firstName`, `lastName`, `email`, `consent`. Every technical field is optional and accepts blank.
+Two-column grid:
 
-Field types reproduced:
-- Text / number / email / tel inputs
-- Single-select dropdowns
-- Checkbox groups (flat and vertical)
-- **Nested checkboxes** for "Turbomolecular pump → Maglev / Mechanical"
-- **Checkbox + "Other:" text input** pattern (used in DUT type, housing, viewport material, plate cooling, shroud cooling, sensor type, connectors, RF, fiber, motion, install env, power)
-- Textareas
-- **Port rows** (5 rows: KF, ISO-K/F, CF, DN, Custom — each with checkbox + Size/standard text + Qty number)
-- **Fluid/gas grid** (qty + connection type/standard)
+- First name * — text
+- Last name * — text
+- Work email * — email
+- Company * — text
+- Phone number — tel (optional)
+- Country — text (optional, free input; no dropdown to keep it light)
 
-## Dynamic logic (ported verbatim from the script in `Q11-4.html`)
+### 4.3 Section 2 — Area of interest (checkboxes)
 
-Two constants defined inside the page module, identical to the source:
+Section label: "What are you interested in?" with helper "Select one or more areas so we can route your request correctly." At least one selection required.
 
-```ts
-const thermalPlateDimensionsByShape = {
-  cubic:       ['380 × 350','480 × 450','610 × 580','780 × 750','980 × 940','1120 × 1120'],
-  cylindrical: ['330 × 350','400 × 420','460 × 500','660 × 700','840 × 880','1140 × 1200'],
-};
-const externalDimensionsByShape = {
-  cubic:       ['600 × 1800 × 900','700 × 1900 × 1000','830 × 1900 × 1130','1000 × 1900 × 1300','1150 × 1900 × 1500','1400 × 2100 × 1760'],
-  cylindrical: ['600 × 1800 × 900','700 × 1900 × 1000','900 × 1900 × 1130','1100 × 1900 × 1300','1400 × 1900 × 1500','1700 × 2100 × 1860'],
-};
-```
+Three sub-groups, each rendered as a labelled column or grouped chip-set:
 
-Behavior wired through plain React state (no react-hook-form, to match `Contact.tsx`):
+- **Products**: Standard TVAC Series · Custom TVAC System · Thermal Vision
+- **Services**: Testing Services · Control Systems Design · Mechanical Design · Retrofit & Modernization · Maintenance & Repair · Subsystem Integration
+- **Other**: Not sure yet · General consultation
 
-- `chamberShape` empty → External dimensions select is disabled with placeholder "Select option".
-- `chamberShape = "cubic"` → External select offers cubic list + `Other`; thermal plate select offers cubic plate list + `Other`.
-- `chamberShape = "cylindrical"` → cylindrical lists offered.
-- `externalDimensions = "Other"` → reveals the matching custom-dimension block: cubic shows L/W/H inputs; cylindrical shows D/L inputs.
-- `thermalPlateDimensions = "Other"` → reveals a free-text "Custom plate dimensions" input.
-- Changing `chamberShape` after a value was picked clears any incompatible value while preserving still-valid ones (mirrors the source script's `[...select.options].some(...)` guard).
+UI: native `<input type="checkbox">` styled with `accent-blue` (matches the existing consent checkbox style) inside `bento-card`-style wrappers, no shadcn `Checkbox` needed for visual consistency.
 
-## State shape (single typed object)
+### 4.4 Section 3 — Project context (all optional)
 
-One flat object held in `useState`, similar to Contact.tsx but larger. Keys named to mirror the questionnaire (e.g. `dutTypes: string[]`, `dutTypeOther: string`, `dutTypeOtherChecked: boolean`, `ports: { kf: { checked, size, qty }, iso: {...}, … }`). Per-step `setField(name)(value)` setter to keep handlers terse.
+Three single-select dropdowns (reusing the existing `SelectField`) in a 3-col grid on desktop, stacked on mobile:
 
-## UX rules (enforced)
+- Project stage: Early evaluation · Requirements already defined · Request for quotation · Existing system needs support · Upgrade or retrofit project · Not sure yet
+- Expected timeline: Immediate · Within 3 months · 3 to 6 months · 6 to 12 months · Later · Not sure yet
+- Existing system: No, new project · Yes, existing Deepvac system · Yes, existing third-party system · Not sure
 
-- **Not a modal** — full page.
-- **Not embedded into Custom TVAC** — secondary CTA from Custom TVAC will be added in a later prompt.
-- **Enter does not advance** — form `onKeyDown` intercepts `Enter` outside `<textarea>` and prevents default; only the explicit Back/Continue/Submit buttons navigate. Submit happens only when the explicit submit button on step 5 is pressed.
-- **Back/Continue only** — step transitions are gated by button clicks; no auto-validation between technical steps (only step-5 submit validates the required contact fields + consent).
-- **Mobile responsive** — single-column layout below `md`, two columns above where the source uses two; step indicator collapses to a compact "Step N of 5 — {label}" line on mobile.
-- **Per-step note** — small muted line under each step heading: "You can leave fields blank if specifications are still open."
-- **Reset all fields** — visually de-emphasized ghost button; click opens shadcn `AlertDialog` confirming destructive intent; on confirm, state is reset to `initialForm` and the wizard returns to step 1.
-- **PDF export not the main action** — entirely omitted from this page in Phase 1.
-- **Submit only on step 5** — Continue button on steps 1–4 advances; on step 5 the primary button becomes "Send questionnaire".
+### 4.5 Section 4 — Message (required)
 
-## Styling
+Label: "Tell us briefly what you need". Textarea with the placeholder: *"Example: We are planning a chamber upgrade, need support with control system modernization, or are looking for TVAC testing capacity for a satellite component."* Required, min 10 chars (matches edge-function validation).
 
-- All inputs/selects/textareas reuse the exact class string from `Contact.tsx`:
-  `bg-background border border-gray/15 rounded-sm px-4 py-3 text-sm text-sand placeholder:text-gray/30 focus:outline-none focus:border-blue/40 focus:ring-1 focus:ring-blue/20 transition-all duration-200`
-- Section dividers use `border-gray/10` and existing `mono-label` class for field labels.
-- Step indicator uses `bento-card` base + Steel Blue accent for the active dot.
-- No new design tokens, no new fonts, no new colors.
+### 4.6 Submit area
 
-## i18n
+- Consent checkbox (kept as-is)
+- Honeypot + invisible Turnstile (kept as-is)
+- Primary button: "Send Project Inquiry"
+- Helper line beside button: "Your request will be reviewed by our technical team and routed to the right contact."
 
-- Namespace `questionnaire` registered in `src/i18n/index.ts` alongside the existing 13 namespaces.
-- All visible text — labels, options, helper text, button labels, validation messages, success message, reset-confirm strings — comes from `questionnaire.json`. Common buttons (`back`, `continue`) live in the questionnaire namespace to keep this self-contained; `consentText` reuses the existing `common.form.consentText` key already used by Contact.tsx.
-- DE keys mirror EN 1:1.
+### 4.7 Success view
 
-## Submit behavior in Phase 1 (stubbed)
+- Title: "Thank you. Your request has been received."
+- Body: "We will review your project context and get back to you with the next suitable step. If your request requires detailed TVAC specifications, we may invite you to complete the technical questionnaire."
+- Secondary button: "Submit another inquiry"
+- Optional secondary link to the technical questionnaire.
 
-```ts
-async function handleSubmit(e: React.FormEvent) {
-  e.preventDefault();
-  if (!consent) { toast.error(tc("form.validation.consentRequired")); return; }
-  if (!validateRequired()) return;
+## 5. Field Validation
 
-  // TODO(backend): wire to supabase.functions.invoke("send-inquiry", {
-  //   body: { kind: "questionnaire", source: "tvac-questionnaire", data: form,
-  //           _website: honeypot, turnstileToken }
-  // }) once the edge function gains the `kind: "questionnaire"` branch.
-  // Until then, do NOT use mailto and do NOT show a fake success state.
+Client-side (synchronous, in `validateForm`):
 
-  toast.message(t("wizard.stubNotice"));
-  console.info("[TvacQuestionnaire] payload preview (not sent)", form);
+- `firstName`, `lastName`, `email`, `company`, `message` — required, trimmed
+- `email` — regex `^[^\s@]+@[^\s@]+\.[^\s@]{2,}$`
+- `message` — required, ≥ 10 chars (tightened from current "optional but ≥10 if present")
+- `interests` — at least one selection across all three groups
+- `consent` — must be checked (existing toast)
+- `phone`, `country`, `projectStage`, `timeline`, `existingSystem` — optional, no validation
+- Honeypot blocks submission silently (server already returns fake success)
+
+Server-side: reuses existing sanitize/length limits and adds:
+
+- `interests`: array of strings, each sanitized to ≤ 80 chars, max 12 items, optional but warned-only
+- `country`, `projectStage`, `existingSystem`: sanitized strings ≤ 100 chars
+- `message`: required ≥ 10 chars (already enforced)
+
+## 6. Proposed Data Payload
+
+Sent via `supabase.functions.invoke("send-inquiry", { body: … })`:
+
+```json
+{
+  "firstName": "…",
+  "lastName": "…",
+  "email": "…",
+  "company": "…",
+  "phone": "…",
+  "country": "…",
+  "interests": ["Standard TVAC Series", "Retrofit & Modernization"],
+  "projectStage": "Request for quotation",
+  "timeline": "3 to 6 months",
+  "existingSystem": "Yes, existing Deepvac system",
+  "message": "…",
+  "source": "contact-page-project-inquiry",
+  "language": "en",
+  "_website": "",
+  "turnstileToken": "…"
 }
 ```
 
-The submit button stays enabled (so the user sees the validated state work end-to-end) but produces only a neutral toast — no false "sent" confirmation, no `mailto:`, no network call.
+The existing `InquiryPayload` interface is extended with the four new optional fields. The `chamberType` / `applicationArea` / `project` fields can remain accepted (backward-compat) but are no longer sent from the contact page; the homepage `ContactSection` and any other callers continue to work.
 
-## Validation rules
+## 7. Email rendering (edge function)
 
-- Required: `company`, `firstName`, `lastName`, `email` (regex), `consent`.
-- Email regex identical to Contact.tsx: `/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/`.
-- All other fields optional. Numeric inputs use `inputMode="decimal"` for soft keyboards but accept blank.
-- Errors render inline with the same red treatment as Contact.tsx.
+Update the HTML builder in `send-inquiry` to add rows for `country`, `projectStage`, `existingSystem`, and a list block for `interests` (rendered as a comma-separated string or `<ul>`). Subject line becomes: `Project Inquiry — {company} ({firstName} {lastName})` when `source` starts with `contact-page-project-inquiry`; otherwise keep the current "Engineering Inquiry –" subject so other entry points (homepage form) are unchanged.
 
-## SEO
+## 8. Proposed Copy
 
-- Helmet sets `<html lang>`, page title, description, canonical, hreflang (via `getHreflangs` / `getCanonical`).
-- `<meta name="robots" content="noindex,follow" />` so the high-intent page does not surface in search; sitemap exclusion stays for the backend prompt to keep this phase scope-limited.
+### 8.1 English (`contact.json` additions/changes)
 
-## Deferred to the backend prompt (explicit out-of-scope)
+- `formTitle`: "Tell us about your project"
+- `formSubtitle`: "Whether you need a TVAC system, testing support, retrofit work, control design, mechanical engineering, or subsystem integration, send us a short overview. We will route your request to the right specialist."
+- `decisionHelper.title`: "Not sure which form to use?"
+- `decisionHelper.body`: "Use this short project inquiry form if you want to discuss products, services, an existing system, testing, retrofit work, maintenance, or an early-stage project. Use the technical questionnaire if you already want to specify a custom TVAC or space simulation system in detail."
+- `decisionHelper.shortCta`: "Continue with short inquiry"
+- `decisionHelper.questionnaireCta`: "Open technical questionnaire"
+- `sections.contact`: "Contact details"
+- `sections.interest.title`: "What are you interested in?"
+- `sections.interest.helper`: "Select one or more areas so we can route your request correctly."
+- `sections.interest.products`: "Products"
+- `sections.interest.services`: "Services"
+- `sections.interest.other`: "Other"
+- `sections.context.title`: "Project context"
+- `fields.country`: "Country"
+- `fields.projectStage`: "Project stage"
+- `fields.timeline`: "Expected timeline"
+- `fields.existingSystem`: "Existing system"
+- `fields.messageLabel`: "Tell us briefly what you need"
+- `fields.messagePlaceholder`: see §4.5
+- `interests.products`: ["Standard TVAC Series", "Custom TVAC System", "Thermal Vision"]
+- `interests.services`: ["Testing Services", "Control Systems Design", "Mechanical Design", "Retrofit & Modernization", "Maintenance & Repair", "Subsystem Integration"]
+- `interests.other`: ["Not sure yet", "General consultation"]
+- `projectStageOptions`: ["Early evaluation", "Requirements already defined", "Request for quotation", "Existing system needs support", "Upgrade or retrofit project", "Not sure yet"]
+- `timelineOptions`: ["Immediate", "Within 3 months", "3 to 6 months", "6 to 12 months", "Later", "Not sure yet"] (replaces current values)
+- `existingSystemOptions`: ["No, new project", "Yes, existing Deepvac system", "Yes, existing third-party system", "Not sure"]
+- `submit.button`: "Send Project Inquiry"
+- `submit.helper`: "Your request will be reviewed by our technical team and routed to the right contact."
+- `success.title`: "Thank you. Your request has been received."
+- `success.body`: "We will review your project context and get back to you with the next suitable step. If your request requires detailed TVAC specifications, we may invite you to complete the technical questionnaire."
+- `validation.interestRequired`: "Please select at least one area of interest."
 
-1. Extending `send-inquiry` edge function with the `kind: "questionnaire"` discriminator and the structured HTML email renderer to `info@deepvac.space`.
-2. Replacing the stub in `handleSubmit` with the real `supabase.functions.invoke` call (Turnstile token + honeypot + duplicate detection).
-3. Sitemap exclusion in `scripts/generate-sitemap.mjs`.
-4. Secondary CTAs on Custom TVAC, Products, Services, Contact, and Footer pointing to the new questionnaire route.
-5. Optional `localStorage` draft autosave.
-6. Optional print-only stylesheet for "Save as PDF" customer copy.
+### 8.2 German (mirror)
 
-## Risk and verification
+- `formTitle`: "Erzählen Sie uns von Ihrem Projekt"
+- `formSubtitle`: "Ob Sie ein TVAC-System, Testunterstützung, Retrofit, Steuerungsdesign, mechanische Konstruktion oder Subsystemintegration benötigen — senden Sie uns einen kurzen Überblick. Wir leiten Ihre Anfrage an die zuständigen Spezialisten weiter."
+- `decisionHelper.title`: "Nicht sicher, welches Formular passt?"
+- `decisionHelper.body`: "Verwenden Sie dieses kurze Projektanfrageformular, wenn Sie Produkte, Services, ein bestehendes System, Tests, Retrofit-Arbeiten, Wartung oder ein Projekt in einer frühen Phase besprechen möchten. Verwenden Sie den technischen Fragebogen, wenn Sie bereits ein kundenspezifisches TVAC- oder Weltraumsimulationssystem detailliert spezifizieren möchten."
+- `decisionHelper.shortCta`: "Mit Kurzanfrage fortfahren"
+- `decisionHelper.questionnaireCta`: "Technischen Fragebogen öffnen"
+- `sections.contact`: "Kontaktdaten"
+- `sections.interest.title`: "Wofür interessieren Sie sich?"
+- `sections.interest.helper`: "Wählen Sie einen oder mehrere Bereiche aus, damit wir Ihre Anfrage korrekt zuordnen können."
+- `sections.interest.products`: "Produkte" · `services`: "Leistungen" · `other`: "Sonstiges"
+- `sections.context.title`: "Projektkontext"
+- `fields.country`: "Land" · `projectStage`: "Projektphase" · `timeline`: "Erwarteter Zeitrahmen" · `existingSystem`: "Bestehendes System"
+- `fields.messageLabel`: "Beschreiben Sie kurz Ihren Bedarf"
+- `fields.messagePlaceholder`: "Beispiel: Wir planen ein Kammer-Upgrade, benötigen Unterstützung bei der Modernisierung des Steuerungssystems oder suchen TVAC-Testkapazität für eine Satellitenkomponente."
+- `interests.products`: ["Standard TVAC Serie", "Custom TVAC System", "Thermal Vision"]
+- `interests.services`: ["Testleistungen", "Steuerungstechnik / Control Systems Design", "Mechanische Konstruktion", "Retrofit & Modernisierung", "Wartung & Reparatur", "Subsystemintegration"]
+- `interests.other`: ["Noch nicht sicher", "Allgemeine Beratung"]
+- `projectStageOptions`: ["Frühe Evaluierung", "Anforderungen bereits definiert", "Angebotsanfrage", "Bestehendes System benötigt Support", "Upgrade- oder Retrofit-Projekt", "Noch nicht sicher"]
+- `timelineOptions`: ["Sofort", "Innerhalb von 3 Monaten", "3 bis 6 Monate", "6 bis 12 Monate", "Später", "Noch nicht sicher"]
+- `existingSystemOptions`: ["Nein, neues Projekt", "Ja, bestehendes Deepvac-System", "Ja, bestehendes Drittanbieter-System", "Nicht sicher"]
+- `submit.button`: "Projektanfrage senden"
+- `submit.helper`: "Ihre Anfrage wird von unserem Fachteam geprüft und an den richtigen Ansprechpartner weitergeleitet."
+- `success.title`: "Vielen Dank. Ihre Anfrage ist eingegangen."
+- `success.body`: "Wir prüfen Ihren Projektkontext und melden uns mit dem nächsten geeigneten Schritt. Falls Ihre Anfrage detaillierte TVAC-Spezifikationen erfordert, laden wir Sie ggf. zur Bearbeitung des technischen Fragebogens ein."
+- `validation.interestRequired`: "Bitte wählen Sie mindestens einen Interessenbereich aus."
 
-- **No regression to short form** — `Contact.tsx` and the `send-inquiry` function are not touched in this phase.
-- **i18n namespace addition is safe** — additive only; existing namespaces unchanged.
-- **Routing addition is safe** — new path is unique; `findRouteEntry` keeps working for all existing routes.
-- After implementation: verify `/tvac-questionnaire` and `/de/tvac-fragebogen` both render, language switcher swaps cleanly, all 5 steps navigate, dynamic shape logic toggles dimension blocks correctly, reset confirms before clearing, submit shows the stub toast and logs the payload, `/contact` is byte-identical.
+## 9. Distinguishing Project Inquiry vs. Technical Questionnaire
+
+- Visual: Project Inquiry stays as a single compact form on `/contact`. The questionnaire stays at `/tvac-questionnaire` (multi-step).
+- The new decision helper above the form makes the choice explicit with two clearly labelled CTAs.
+- Source field: contact-page sends `source: "contact-page-project-inquiry"`; questionnaire continues to send `kind: "questionnaire"`. This keeps email subjects, log analytics, and routing distinguishable.
+- Success message of the short form explicitly mentions that detailed specs may be invited via the questionnaire — sets expectations without forcing the longer path.
+
+## 10. Submission Flow Reuse
+
+- Keep using `supabase.functions.invoke("send-inquiry", …)` — no new endpoint.
+- Extend `InquiryPayload` (server) with `country?`, `interests?: string[]`, `projectStage?`, `existingSystem?`, `language?` and add corresponding sanitize calls + email rows.
+- Honeypot, rate-limit, Turnstile, duplicate detection, and `inquiry_logs` writes remain unchanged.
+- Subject-line conditional only for `source` starting with `contact-page-project-inquiry` to avoid affecting `homepage-contact` and other sources.
+
+## 11. Risks and Edge Cases
+
+- **Backward compatibility**: the homepage `ContactSection` still posts `chamberType`/`project`/etc. — keep those optional in the server type. Verified by inspection of `src/components/home/ContactSection.tsx`.
+- `**interests` array length**: cap at 12 to prevent payload abuse; reject silently above limit.
+- **Validation UX**: the "at least one interest" rule needs an inline error near the section header, not a toast, so the user sees where the missing field is.
+- **DE long labels** (e.g. "Ja, bestehendes Drittanbieter-System") may overflow the dropdown on mobile — already mitigated by `mobile-ux` memory rules; ensure the select inherits `truncate`/wrap behaviour.
+- **Turnstile reset on validation failure**: current code only resets on submission error; if the form is large enough that validation often fails first, the existing token may expire. Keep current behaviour; no change.
+- **i18n key collisions**: avoid renaming `qualifiers.*` keys — leave them in place during migration so `Contact.tsx` doesn't briefly break, then remove unused keys at the end.
+- **Email deliverability**: subject change is cosmetic; `from`/`reply_to` unchanged. No DNS impact.
+- **Analytics / SEO**: page route `/contact` and `/de/kontakt` unchanged; no canonical or hreflang change required. SEO title/description not touched.
+
+## 12. Phased Implementation Plan
+
+**Phase 1 — Copy & data**
+
+1. Add new keys to `en/contact.json` and `de/contact.json` (keep old keys temporarily).
+2. No code changes yet — verify copy with the user if desired.
+
+**Phase 2 — Server**
+3. Extend `InquiryPayload` in `supabase/functions/send-inquiry/index.ts` with `country`, `interests`, `projectStage`, `existingSystem`, `language`.
+4. Add sanitization, length/array limits, conditional subject line, and new email rows. Keep all existing fields optional.
+
+**Phase 3 — Client form**
+5. Refactor `Contact.tsx`:
+
+- Update `FormData` interface and `initialForm`.
+- Replace the `QuestionnaireCard` slot with a new decision-helper card.
+- Build the three sections (contact / interests / context / message).
+- Implement a small reusable `CheckboxGroup` inline (no new shadcn component required).
+- Add `interests` validation with inline error.
+- Update `handleSubmit` payload (`source: "contact-page-project-inquiry"`, `language: lang`, `interests: …`).
+- Update success view title/body.
+
+**Phase 4 — Cleanup & polish**
+6. Remove unused `qualifiers.*` keys (chamberType / applicationArea select options that are now superseded) — only after confirming no other consumers.
+7. Verify mobile layout (long DE labels, checkbox grid wrapping), keyboard navigation, and Turnstile invisible widget render.
+8. Manual end-to-end submission test against the deployed `send-inquiry` function (preview environment).
+
+**Phase 5 — Optional follow-ups (not in this change)**
+9. Pre-select interest checkboxes via query params (e.g. `/contact?interest=retrofit`) so service pages can deep-link.
+10. Add lightweight analytics events (form_view, form_submit, decision_helper_questionnaire_click).
+
+---
+
+Awaiting approval before implementation. No files will be modified until you confirm.  
+Approved with the following refinements.
+
+Please implement the Project Inquiry redesign according to your plan, but apply these changes:
+
+1. Keep the decision helper compact. It should clarify the difference between the short Project Inquiry form and the technical questionnaire, but it must not visually overpower the form.
+
+2. For the new contact-page-project-inquiry source, require at least one selected interest both client-side and server-side. For older sources, keep interests optional for backward compatibility.
+
+3. Before modifying the send-inquiry edge function, inspect all existing callers of send-inquiry and preserve backward compatibility with their payloads.
+
+4. Do not remove old i18n keys unless a project-wide search confirms that they are unused.
+
+5. Consider whether an optional "Project or application name" field should remain. If it fits cleanly without adding friction, include it as optional. If it makes the form feel too long, omit it and rely on the message field.
+
+6. Keep the form visually consistent with the existing Deepvac dark design, spacing, typography, bento-card style, Turnstile flow, consent checkbox, contact sidebar, map, LinkedIn card, and responsive layout.
+
+7. Do not change the technical questionnaire route or its existing logic.
+
+Proceed with implementation on the preview branch only.

@@ -19,6 +19,12 @@ interface InquiryPayload {
   timeline?: string;
   message?: string;
   source?: string;
+  // New (Project Inquiry) — optional for backward compatibility
+  country?: string;
+  interests?: string[];
+  projectStage?: string;
+  existingSystem?: string;
+  language?: "en" | "de";
   _website?: string; // honeypot
   turnstileToken?: string;
 }
@@ -302,6 +308,14 @@ Deno.serve(async (req) => {
     const applicationArea = sanitize(data.applicationArea, 100);
     const timeline = sanitize(data.timeline, 100);
     const message = sanitize(data.message, 5000);
+    const country = sanitize(data.country, 100);
+    const projectStage = sanitize(data.projectStage, 100);
+    const existingSystem = sanitize(data.existingSystem, 100);
+    const language: "en" | "de" = data.language === "de" ? "de" : "en";
+    const isProjectInquiry = (source || "").startsWith("contact-page-project-inquiry");
+    const interests: string[] = Array.isArray(data.interests)
+      ? data.interests.slice(0, 12).map((s) => sanitize(String(s), 80)).filter(Boolean)
+      : [];
 
     if (!firstName || !lastName || !email || !company) {
       await logInquiry(supabaseAdmin, {
@@ -339,6 +353,32 @@ Deno.serve(async (req) => {
       );
     }
 
+    // Project Inquiry: require interests + non-empty message
+    if (isProjectInquiry) {
+      if (interests.length === 0) {
+        await logInquiry(supabaseAdmin, {
+          ip_address: ip, user_agent: userAgent,
+          status: "blocked", reason: "validation_missing_interests",
+          email, payload_hash: payloadHash, source,
+        });
+        return new Response(
+          JSON.stringify({ error: "Please select at least one area of interest." }),
+          { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+        );
+      }
+      if (!message || message.length < 10) {
+        await logInquiry(supabaseAdmin, {
+          ip_address: ip, user_agent: userAgent,
+          status: "blocked", reason: "validation_message_required",
+          email, payload_hash: payloadHash, source,
+        });
+        return new Response(
+          JSON.stringify({ error: "Message must be at least 10 characters." }),
+          { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+        );
+      }
+    }
+
     // 5. DUPLICATE DETECTION
     if (isDuplicate(payloadHash)) {
       await logInquiry(supabaseAdmin, {
@@ -358,19 +398,27 @@ Deno.serve(async (req) => {
       throw new Error("RESEND_API_KEY is not configured");
     }
 
+    const subjectPrefix = isProjectInquiry
+      ? (language === "de" ? "Projektanfrage" : "Project Inquiry")
+      : "Engineering Inquiry";
+
     const lines = [
-      `<h2>New Inquiry from ${escapeHtml(firstName)} ${escapeHtml(lastName)}</h2>`,
+      `<h2>${subjectPrefix} from ${escapeHtml(firstName)} ${escapeHtml(lastName)}</h2>`,
       `<table style="border-collapse:collapse;width:100%;max-width:600px;">`,
       row("Name", `${firstName} ${lastName}`),
       row("Email", email),
       phone ? row("Phone", phone) : "",
       row("Company", company),
+      country ? row("Country", country) : "",
+      interests.length ? row("Areas of interest", interests.join(", ")) : "",
+      projectStage ? row("Project stage", projectStage) : "",
+      existingSystem ? row("Existing system", existingSystem) : "",
       project ? row("Project", project) : "",
       chamberType ? row("Chamber Type", chamberType) : "",
       applicationArea ? row("Application Area", applicationArea) : "",
       timeline ? row("Timeline", timeline) : "",
       `</table>`,
-      message ? `<h3>Message</h3><p>${escapeHtml(message)}</p>` : "",
+      message ? `<h3>Message</h3><p>${escapeHtml(message).replace(/\n/g, "<br/>")}</p>` : "",
       `<hr/><p style="color:#888;font-size:12px;">Source: ${escapeHtml(source)} | IP: ${escapeHtml(ip)}</p>`,
     ].filter(Boolean).join("\n");
 
@@ -384,7 +432,7 @@ Deno.serve(async (req) => {
         from: "Deepvac <noreply@deepvac.space>",
         to: ["info@deepvac.space"],
         reply_to: email,
-        subject: `Engineering Inquiry – ${company} (${firstName} ${lastName})`,
+        subject: `${subjectPrefix} – ${company} (${firstName} ${lastName})`,
         html: lines,
       }),
     });

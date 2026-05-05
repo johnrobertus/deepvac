@@ -2,8 +2,54 @@
   "eyebrow": "Contact",
   "title": "Discuss Your Thermal Vacuum Requirements",
   "description": "Whether you need a chamber platform, a custom TVAC configuration, or engineering support for modernization and integration — our team is ready to discuss your project.",
-  "formTitle": "Engineering Inquiry",
-  "formDescription": "Provide your project context and we'll follow up with relevant technical information.",
+  "formTitle": "Tell us about your project",
+  "formDescription": "Whether you need a TVAC system, testing support, retrofit work, control design, mechanical engineering, or subsystem integration, send us a short overview. We will route your request to the right specialist.",
+  "decisionHelper": {
+    "title": "Not sure which form to use?",
+    "body": "Use this short project inquiry form for products, services, an existing system, testing, retrofit, maintenance, or an early-stage project. Use the technical questionnaire if you already want to specify a custom TVAC or space-simulation system in detail.",
+    "shortCta": "Continue with short inquiry",
+    "questionnaireCta": "Open technical questionnaire"
+  },
+  "sections": {
+    "contact": "Contact details",
+    "interestTitle": "What are you interested in?",
+    "interestHelper": "Select one or more areas so we can route your request correctly.",
+    "interestProducts": "Products",
+    "interestServices": "Services",
+    "interestOther": "Other",
+    "context": "Project context"
+  },
+  "fields": {
+    "country": "Country",
+    "countryPlaceholder": "e.g. Germany",
+    "projectName": "Project or application (optional)",
+    "projectNamePlaceholder": "e.g. Satellite qualification, retrofit project",
+    "projectStage": "Project stage",
+    "timeline": "Expected timeline",
+    "existingSystem": "Existing system",
+    "messageLabel": "Tell us briefly what you need",
+    "messagePlaceholder": "Example: We are planning a chamber upgrade, need support with control system modernization, or are looking for TVAC testing capacity for a satellite component."
+  },
+  "interests": {
+    "products": ["Standard TVAC Series", "Custom TVAC System", "Thermal Vision"],
+    "services": ["Testing Services", "Control Systems Design", "Mechanical Design", "Retrofit & Modernization", "Maintenance & Repair", "Subsystem Integration"],
+    "other": ["Not sure yet", "General consultation"]
+  },
+  "projectStageOptions": ["Early evaluation", "Requirements already defined", "Request for quotation", "Existing system needs support", "Upgrade or retrofit project", "Not sure yet"],
+  "timelineOptionsNew": ["Immediate", "Within 3 months", "3 to 6 months", "6 to 12 months", "Later", "Not sure yet"],
+  "existingSystemOptions": ["No, new project", "Yes, existing Deepvac system", "Yes, existing third-party system", "Not sure"],
+  "submit": {
+    "button": "Send Project Inquiry",
+    "helper": "Your request will be reviewed by our technical team and routed to the right contact."
+  },
+  "successNew": {
+    "title": "Thank you. Your request has been received.",
+    "body": "We will review your project context and get back to you with the next suitable step. If your request requires detailed TVAC specifications, we may invite you to complete the technical questionnaire."
+  },
+  "validationNew": {
+    "interestRequired": "Please select at least one area of interest.",
+    "messageRequired": "Please describe your request briefly (minimum 10 characters)."
+  },
   "qualifiers": {
     "eyebrow": "Optional — Help Us Prepare",
     "chamberType": "Chamber Type",
