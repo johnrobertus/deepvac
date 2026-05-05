@@ -19,6 +19,12 @@ interface InquiryPayload {
   timeline?: string;
   message?: string;
   source?: string;
+  // New (Project Inquiry) — optional for backward compatibility
+  country?: string;
+  interests?: string[];
+  projectStage?: string;
+  existingSystem?: string;
+  language?: "en" | "de";
   _website?: string; // honeypot
   turnstileToken?: string;
 }
