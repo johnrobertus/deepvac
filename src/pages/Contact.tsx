@@ -13,6 +13,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { ConsentMap } from "@/components/ConsentMap";
 import { useLanguage } from "@/components/LanguageProvider";
 import { getHreflangs, getCanonical, localizedPath } from "@/lib/routes";
+import { QuestionnaireCard } from "@/components/questionnaire/QuestionnaireCTA";
 
 declare global {
   interface Window {
@@ -258,22 +259,7 @@ const Contact = () => {
         <Section>
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-12 lg:gap-16">
             <div className="space-y-8">
-              {/* Decision helper — compact */}
-              <div className="border border-gray/20 rounded-sm p-4 md:p-5 bg-surface/40">
-                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3 md:gap-6">
-                  <div className="space-y-1.5 md:max-w-xl">
-                    <p className="text-[10px] font-mono uppercase tracking-[0.18em] text-blue/80">{t("decisionHelper.title")}</p>
-                    <p className="text-[13px] text-gray/90 leading-relaxed">{t("decisionHelper.body")}</p>
-                  </div>
-                  <Button asChild variant="outline" size="sm" className="font-mono text-[11px] tracking-wide shrink-0">
-                    <Link to={localizedPath("/tvac-questionnaire", lang)}>
-                      <ClipboardList className="w-3.5 h-3.5 mr-2" />
-                      {t("decisionHelper.questionnaireCta")}
-                      <ArrowRight className="w-3.5 h-3.5 ml-2" />
-                    </Link>
-                  </Button>
-                </div>
-              </div>
+              <QuestionnaireCard />
 
               <div className="space-y-2 pt-2" id="project-inquiry-form">
                 <h2 className="text-2xl font-medium text-sand tracking-tight">{t("formTitle")}</h2>
