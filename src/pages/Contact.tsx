@@ -13,6 +13,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { ConsentMap } from "@/components/ConsentMap";
 import { useLanguage } from "@/components/LanguageProvider";
 import { getHreflangs, getCanonical, localizedPath } from "@/lib/routes";
+import { QuestionnaireCard } from "@/components/questionnaire/QuestionnaireCTA";
 
 declare global {
   interface Window {
