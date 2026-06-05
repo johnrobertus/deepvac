@@ -1,27 +1,27 @@
 import { useTranslation } from "react-i18next";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Reveal } from "@/components/Reveal";
-import { Satellite, Rocket, FlaskConical, Thermometer, ShieldCheck, Boxes } from "lucide-react";
+import { Satellite, Rocket, FlaskConical, Thermometer, ShieldCheck } from "lucide-react";
 
-const icons = [Satellite, Rocket, Thermometer, ShieldCheck, FlaskConical, Boxes];
+const icons = [Satellite, Rocket, Thermometer, ShieldCheck, FlaskConical];
 
 export function ApplicationsSection() {
   const { t } = useTranslation("home");
   const items = t("applications.items", { returnObjects: true }) as { title: string; description: string }[];
 
   return (
-    <section id="applications" className="py-20 md:py-28 px-6">
+    <section id="applications" className="py-24 md:py-32 px-6">
       <div className="container-wide">
         <Reveal>
           <SectionHeader
             eyebrow={t("applications.eyebrow")}
             title={t("applications.title")}
             description={t("applications.description")}
-            className="mb-14"
+            className="mb-16"
           />
         </Reveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
           {Array.isArray(items) && items.map((useCase, i) => {
             const Icon = icons[i] || Satellite;
             return (
