@@ -7,17 +7,17 @@ export function WhyDeepvacSection() {
   const items = t("whyDeepvac.items", { returnObjects: true }) as { title: string; description: string }[];
 
   return (
-    <section id="why-deepvac" className="px-6 py-20 md:py-28">
+    <section id="why-deepvac" className="px-6 py-24 md:py-32">
       <div className="container-wide">
         <Reveal>
           <SectionHeader
             eyebrow={t("whyDeepvac.eyebrow")}
             title={t("whyDeepvac.title")}
             description={t("whyDeepvac.description")}
-            className="mb-14"
+            className="mb-16"
           />
         </Reveal>
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+        <div className="grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-2">
           {Array.isArray(items) &&
             items.map((item, i) => (
               <Reveal key={item.title} delay={i * 60}>

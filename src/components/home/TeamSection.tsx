@@ -15,14 +15,14 @@ export function TeamSection() {
   const members = t("team.members", { returnObjects: true }) as { name: string; role: string; description: string }[];
 
   return (
-    <section id="team" className="bg-surface/30 px-6 py-20 md:py-28">
+    <section id="team" className="bg-surface/30 px-6 py-24 md:py-32">
       <div className="container-wide">
         <Reveal>
           <SectionHeader
             eyebrow={t("team.eyebrow")}
             title={t("team.title")}
             description={t("team.description")}
-            className="mb-14 max-w-3xl"
+            className="mb-16 max-w-3xl"
           />
         </Reveal>
 

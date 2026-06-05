@@ -221,18 +221,13 @@ export function ContactSection() {
             eyebrow={tHome("contact.eyebrow")}
             title={tHome("contact.title")}
             description={tHome("contact.description")}
-            className="mb-14"
+            className="mb-16"
           />
         </Reveal>
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-12 lg:gap-16">
           <Reveal delay={100}>
             <div className="space-y-8">
-              <div className="space-y-2">
-                <h3 className="text-2xl font-medium text-sand tracking-tight">{t("formTitle")}</h3>
-                <p className="text-sm text-gray/85 leading-relaxed">{t("formDescription")}</p>
-              </div>
-
-              <form className="space-y-7" onSubmit={handleSubmit}>
+              <form className="space-y-8" onSubmit={handleSubmit}>
                 {/* Section 1 — Contact details */}
                 <div className="space-y-5">
                   <span className="mono-label text-blue">{t("sections.contact")}</span>
