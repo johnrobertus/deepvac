@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Reveal } from "@/components/Reveal";
-import { Satellite, Rocket, FlaskConical, Thermometer, ShieldCheck, Boxes } from "lucide-react";
+import { Satellite, Rocket, FlaskConical, Thermometer, ShieldCheck } from "lucide-react";
 
 const icons = [Satellite, Rocket, Thermometer, ShieldCheck, FlaskConical];
 
