@@ -1,285 +1,86 @@
-# Project Inquiry Form — Redesign Plan
+# Homepage Refactor — Executive Landing
 
-## 1. Goal
+Scope: `src/pages/Index.tsx`, all `src/components/home/*` sections, and only the `home.*` keys in `src/i18n/locales/{en,de}/home.json`. The contact form logic, Supabase function, routing, and product/service pages stay untouched. Layout, header, footer, and `common.json` button labels stay as-is unless a new key is genuinely needed.
 
-Replace the current narrow "Engineering Inquiry" form on `/contact` (and `/de/kontakt`) with a clearer, conversion-oriented **Project Inquiry** form for general B2B leads (products, services, retrofit, testing, maintenance, early-stage projects). Keep the existing technical TVAC questionnaire as the dedicated path for detailed custom system specs.
+## Goal
 
-## 2. Files Likely Affected
+Turn a long brochure into a calm, scannable executive landing page. Same five answers (what / for whom / systems & services / credibility / how to inquire), delivered with much less text, stronger type, more whitespace, and the same technical tone.
 
-- `src/pages/Contact.tsx` — main form rewrite (structure, fields, submit payload, success view).
-- `src/i18n/locales/en/contact.json` — new copy keys (form title/subtitle/sections/options/helper/buttons/success).
-- `src/i18n/locales/de/contact.json` — mirrored DE copy.
-- `src/i18n/locales/en/common.json` and `…/de/common.json` — possibly add validation strings if not already present (e.g. `areaOfInterestRequired`).
-- `supabase/functions/send-inquiry/index.ts` — extend the short-form `InquiryPayload` to accept the new optional fields (`country`, `interests[]`, `projectStage`, `existingSystem`) and render them in the email. Existing fields (`firstName`, `lastName`, `email`, `company`, `phone`, `message`, `timeline`, `source`, honeypot, turnstile) are reused as-is.
-- `src/components/questionnaire/QuestionnaireCTA.tsx` — kept; its existing `QuestionnaireCard` becomes the "Open technical questionnaire" anchor of the new decision helper. May need a small props extension or a new lightweight `FormSelectorCard` component if styling needs to differ.
-- No DB schema changes required (`inquiry_logs` already stores only meta, not field payload).
+## Section-by-section changes
 
-## 3. Current Form Structure (observed)
+1. **Hero** (`HeroSection.tsx`)
+   - Headline → "Thermal Vacuum Systems for Aerospace Qualification" (DE: "Thermalvakuumsysteme für die Raumfahrtqualifikation").
+   - Subline shortened to one sentence: "Deepvac develops modular and custom TVAC systems, control architectures, and retrofit solutions for demanding test environments."
+   - Reduce capability cues from 5 → 3 ("Modular Platforms", "Custom TVAC", "Retrofit & Service").
+   - Primary CTA "Discuss a TVAC Project" → `/contact`. Secondary "View Chamber Platforms" → `/products`. Reuse existing button styling, just swap labels via new keys in `home.hero.ctaPrimary` / `ctaSecondary` (avoid touching `common.json`).
+   - Keep video stack, EXIST funding card, and gradient logic unchanged.
 
-`Contact.tsx` renders a single form with:
+2. **Trust / System Protocol strip** (`TrustBarSection.tsx`)
+   - Keep 4 cells, replace each `text` with a short phrase (max ~4 words): "Aerospace test environments", "Repeatable TVAC workflows", "Configured system architecture", "Lifecycle support". Same for DE.
+   - Drop the per-cell `max-w-[28ch]` paragraph styling, tighten padding from `p-7 md:p-8` → `p-6`, and remove the now-redundant `mb-8` spacer block (collapse to a single line of label + dot + phrase).
 
-- First/Last name, Work email, Phone, Company, Project/Application (free text)
-- Optional qualifier block: 3 dropdowns — Chamber Type, Application Area, Timeline
-- Free-text Message
-- Honeypot + Cloudflare Turnstile (invisible) + consent checkbox
-- Submit calls `supabase.functions.invoke("send-inquiry", { body: { …, source: "contact-page" } })`
-- Success state replaces the page section with a centered confirmation
-- Sidebar: contact details card, ConsentMap, LinkedIn link
-- Below: FAQ accordion
+3. **Capabilities** (`CapabilitiesSection.tsx` + `home.capabilities`)
+   - Reduce items from 8 → 6 (TVAC Chamber Platforms, Control & Automation, Thermal Control, Vacuum Systems, Mechanical Interfaces, Retrofit & Service).
+   - Each `description` shortened to one short sentence (≤ ~14 words).
+   - Eyebrow stays "Core Capabilities"; title shortened to "Core Capabilities" headline + remove the long description (use a one-line intro only).
+   - Grid stays `lg:grid-cols-3` (changed from 4 since we now have 6) for better breathing room.
 
-The existing edge function `send-inquiry` already handles: honeypot, rate-limit (5/10min, 20/day per IP), Turnstile verify, sanitization, validation (firstName/lastName/email/company required; min 10-char message), duplicate detection, Resend email to `info@deepvac.space`, and logs to `inquiry_logs`.
+4. **Product Portfolio** (`ProductPortfolioSection.tsx` + `home.productPortfolio`)
+   - Keep T / C / Custom cards and the existing chamber images.
+   - Strip the long `description` paragraph; keep `subtitle`, the 4-spec grid, and `note`. Section becomes spec-first.
+   - Section description trimmed to one sentence.
+   - Add a single "View all chamber platforms" CTA at the bottom linking to `/products`.
 
-## 4. Proposed New Form Structure
+5. **Applications** (`ApplicationsSection.tsx` + `home.applications`)
+   - Reduce from 6 → 5 items (drop "Custom TVAC Configurations", already covered by Product section).
+   - One short sentence per card.
+   - Section header trimmed to one-sentence intro.
 
-Replace the qualifier dropdowns and the single project-application text input with three clearer sections, plus a decision helper above the form.
+6. **Services** (`ServicesSection.tsx` + `home.services`)
+   - Remove the 3-pillar strip entirely (redundant with cards).
+   - Group services into 4 cards: "Testing & Campaign Support", "Controls & Automation", "Mechanical & Subsystem Integration", "Retrofit, Maintenance & Repair". Map each to an existing service page (`testing-services`, `control-systems-design`, `subsystem-integration`, `retrofit-modernization`). Maintenance and Mechanical Design pages remain reachable from `/services`.
+   - Each card: short label + one-sentence description.
+   - Add single "Explore all engineering services" CTA → `/services`.
 
-### 4.1 Decision Helper (above the form)
+7. **Why Deepvac** (`WhyDeepvacSection.tsx` + `home.whyDeepvac`)
+   - Reduce from 6 → 4 proof points exactly as user listed (Modular & custom, Integrated hardware/controls/support, Built for aerospace qualification, Retrofit & modernization).
+   - Each description trimmed to ~15 words. Keep numbered layout.
 
-Compact 2-card or split panel inside an existing `bento-card` container:
+8. **Team** (`TeamSection.tsx` + `home.team`)
+   - Keep 2 founder cards and photos. Trim section description to one sentence ("Engineering-led founding team across controls, mechatronics, and thermal vacuum infrastructure.").
+   - Per-member description shortened to one short expertise line (e.g. "Electrical engineering, control architecture, automation.").
 
-- Heading: "Not sure which form to use?"
-- Body: short explanation of when to use this short form vs. the technical questionnaire
-- Two anchors:
-  - "Continue with short inquiry" → smooth-scroll to `#project-inquiry-form`
-  - "Open technical questionnaire" → `localizedPath("/tvac-questionnaire", lang)`
+9. **Catalogues / Resources** (`CataloguesSection.tsx`)
+   - Keep one featured brochure card; remove the extra "View all resources" CTA below or keep only one CTA. Trim section description to one sentence.
 
-This replaces the current standalone `QuestionnaireCard` placement at the top of the form column. The existing `QuestionnaireCard` content can be either reused inside the helper or replaced by the new dual-CTA card.
+10. **Contact** (`ContactSection.tsx`)
+    - Form fields, validation, Supabase call, Turnstile, honeypot, success state, and ConsentMap remain **unchanged**.
+    - Trim the surrounding copy: shorter section header description, drop the second `formTitle` / `formDescription` block above the form, and tighten section grouping spacing (`space-y-7` between sections stays, but inner `space-y-5` → `space-y-4` and reduce top padding from `py-20 md:py-28` only marginally — keep generous whitespace).
+    - Sidebar address / phone / email / map untouched.
 
-### 4.2 Section 1 — Contact details
+11. **Index page** (`src/pages/Index.tsx`)
+    - Section order unchanged. Remove one of the two `section-divider` blocks if it ends up doubling up after section trims. Keep SEO/schema JSON-LD as-is.
 
-Two-column grid:
+## Typography & spacing pass
 
-- First name * — text
-- Last name * — text
-- Work email * — email
-- Company * — text
-- Phone number — tel (optional)
-- Country — text (optional, free input; no dropdown to keep it light)
+- Raise section vertical padding consistency to `py-24 md:py-32` for the long content sections (Capabilities, Products, Applications, Services, Why, Team) for more whitespace.
+- Cap paragraph width to `max-w-[60ch]` in `SectionHeader` description usage on home so lines stay readable.
+- Use existing `text-sand` / `text-gray` tokens; do not introduce new colors. Headings stay `font-medium tracking-tight`; bump section H2 to `text-3xl md:text-4xl` where currently smaller for stronger hierarchy.
 
-### 4.3 Section 2 — Area of interest (checkboxes)
+## i18n
 
-Section label: "What are you interested in?" with helper "Select one or more areas so we can route your request correctly." At least one selection required.
+- All copy changes live in `src/i18n/locales/en/home.json` and `src/i18n/locales/de/home.json`. Keys removed in EN are removed in DE (mirrored 1:1). New keys (`hero.ctaPrimary`, `hero.ctaSecondary` if added) mirrored as well.
+- No edits to `common.json`, `contact.json`, or any other namespace.
 
-Three sub-groups, each rendered as a labelled column or grouped chip-set:
+## Out of scope (explicit)
 
-- **Products**: Standard TVAC Series · Custom TVAC System · Thermal Vision
-- **Services**: Testing Services · Control Systems Design · Mechanical Design · Retrofit & Modernization · Maintenance & Repair · Subsystem Integration
-- **Other**: Not sure yet · General consultation
+- No changes to product, service, blog, references, catalog, contact, legal pages.
+- No backend, Supabase migration, edge function, GitHub Actions, or `.env` edits.
+- No new dependencies. No new design tokens or theme changes.
+- No new claims, logos, certifications, or customer references invented.
 
-UI: native `<input type="checkbox">` styled with `accent-blue` (matches the existing consent checkbox style) inside `bento-card`-style wrappers, no shadcn `Checkbox` needed for visual consistency.
+## Verification
 
-### 4.4 Section 3 — Project context (all optional)
+After implementation: read updated files, then open the preview at `/` and `/de` to visually confirm shorter copy, calmer hero, stronger headings, and no layout regressions on mobile and desktop.
 
-Three single-select dropdowns (reusing the existing `SelectField`) in a 3-col grid on desktop, stacked on mobile:
-
-- Project stage: Early evaluation · Requirements already defined · Request for quotation · Existing system needs support · Upgrade or retrofit project · Not sure yet
-- Expected timeline: Immediate · Within 3 months · 3 to 6 months · 6 to 12 months · Later · Not sure yet
-- Existing system: No, new project · Yes, existing Deepvac system · Yes, existing third-party system · Not sure
-
-### 4.5 Section 4 — Message (required)
-
-Label: "Tell us briefly what you need". Textarea with the placeholder: *"Example: We are planning a chamber upgrade, need support with control system modernization, or are looking for TVAC testing capacity for a satellite component."* Required, min 10 chars (matches edge-function validation).
-
-### 4.6 Submit area
-
-- Consent checkbox (kept as-is)
-- Honeypot + invisible Turnstile (kept as-is)
-- Primary button: "Send Project Inquiry"
-- Helper line beside button: "Your request will be reviewed by our technical team and routed to the right contact."
-
-### 4.7 Success view
-
-- Title: "Thank you. Your request has been received."
-- Body: "We will review your project context and get back to you with the next suitable step. If your request requires detailed TVAC specifications, we may invite you to complete the technical questionnaire."
-- Secondary button: "Submit another inquiry"
-- Optional secondary link to the technical questionnaire.
-
-## 5. Field Validation
-
-Client-side (synchronous, in `validateForm`):
-
-- `firstName`, `lastName`, `email`, `company`, `message` — required, trimmed
-- `email` — regex `^[^\s@]+@[^\s@]+\.[^\s@]{2,}$`
-- `message` — required, ≥ 10 chars (tightened from current "optional but ≥10 if present")
-- `interests` — at least one selection across all three groups
-- `consent` — must be checked (existing toast)
-- `phone`, `country`, `projectStage`, `timeline`, `existingSystem` — optional, no validation
-- Honeypot blocks submission silently (server already returns fake success)
-
-Server-side: reuses existing sanitize/length limits and adds:
-
-- `interests`: array of strings, each sanitized to ≤ 80 chars, max 12 items, optional but warned-only
-- `country`, `projectStage`, `existingSystem`: sanitized strings ≤ 100 chars
-- `message`: required ≥ 10 chars (already enforced)
-
-## 6. Proposed Data Payload
-
-Sent via `supabase.functions.invoke("send-inquiry", { body: … })`:
-
-```json
-{
-  "firstName": "…",
-  "lastName": "…",
-  "email": "…",
-  "company": "…",
-  "phone": "…",
-  "country": "…",
-  "interests": ["Standard TVAC Series", "Retrofit & Modernization"],
-  "projectStage": "Request for quotation",
-  "timeline": "3 to 6 months",
-  "existingSystem": "Yes, existing Deepvac system",
-  "message": "…",
-  "source": "contact-page-project-inquiry",
-  "language": "en",
-  "_website": "",
-  "turnstileToken": "…"
-}
-```
-
-The existing `InquiryPayload` interface is extended with the four new optional fields. The `chamberType` / `applicationArea` / `project` fields can remain accepted (backward-compat) but are no longer sent from the contact page; the homepage `ContactSection` and any other callers continue to work.
-
-## 7. Email rendering (edge function)
-
-Update the HTML builder in `send-inquiry` to add rows for `country`, `projectStage`, `existingSystem`, and a list block for `interests` (rendered as a comma-separated string or `<ul>`). Subject line becomes: `Project Inquiry — {company} ({firstName} {lastName})` when `source` starts with `contact-page-project-inquiry`; otherwise keep the current "Engineering Inquiry –" subject so other entry points (homepage form) are unchanged.
-
-## 8. Proposed Copy
-
-### 8.1 English (`contact.json` additions/changes)
-
-- `formTitle`: "Tell us about your project"
-- `formSubtitle`: "Whether you need a TVAC system, testing support, retrofit work, control design, mechanical engineering, or subsystem integration, send us a short overview. We will route your request to the right specialist."
-- `decisionHelper.title`: "Not sure which form to use?"
-- `decisionHelper.body`: "Use this short project inquiry form if you want to discuss products, services, an existing system, testing, retrofit work, maintenance, or an early-stage project. Use the technical questionnaire if you already want to specify a custom TVAC or space simulation system in detail."
-- `decisionHelper.shortCta`: "Continue with short inquiry"
-- `decisionHelper.questionnaireCta`: "Open technical questionnaire"
-- `sections.contact`: "Contact details"
-- `sections.interest.title`: "What are you interested in?"
-- `sections.interest.helper`: "Select one or more areas so we can route your request correctly."
-- `sections.interest.products`: "Products"
-- `sections.interest.services`: "Services"
-- `sections.interest.other`: "Other"
-- `sections.context.title`: "Project context"
-- `fields.country`: "Country"
-- `fields.projectStage`: "Project stage"
-- `fields.timeline`: "Expected timeline"
-- `fields.existingSystem`: "Existing system"
-- `fields.messageLabel`: "Tell us briefly what you need"
-- `fields.messagePlaceholder`: see §4.5
-- `interests.products`: ["Standard TVAC Series", "Custom TVAC System", "Thermal Vision"]
-- `interests.services`: ["Testing Services", "Control Systems Design", "Mechanical Design", "Retrofit & Modernization", "Maintenance & Repair", "Subsystem Integration"]
-- `interests.other`: ["Not sure yet", "General consultation"]
-- `projectStageOptions`: ["Early evaluation", "Requirements already defined", "Request for quotation", "Existing system needs support", "Upgrade or retrofit project", "Not sure yet"]
-- `timelineOptions`: ["Immediate", "Within 3 months", "3 to 6 months", "6 to 12 months", "Later", "Not sure yet"] (replaces current values)
-- `existingSystemOptions`: ["No, new project", "Yes, existing Deepvac system", "Yes, existing third-party system", "Not sure"]
-- `submit.button`: "Send Project Inquiry"
-- `submit.helper`: "Your request will be reviewed by our technical team and routed to the right contact."
-- `success.title`: "Thank you. Your request has been received."
-- `success.body`: "We will review your project context and get back to you with the next suitable step. If your request requires detailed TVAC specifications, we may invite you to complete the technical questionnaire."
-- `validation.interestRequired`: "Please select at least one area of interest."
-
-### 8.2 German (mirror)
-
-- `formTitle`: "Erzählen Sie uns von Ihrem Projekt"
-- `formSubtitle`: "Ob Sie ein TVAC-System, Testunterstützung, Retrofit, Steuerungsdesign, mechanische Konstruktion oder Subsystemintegration benötigen — senden Sie uns einen kurzen Überblick. Wir leiten Ihre Anfrage an die zuständigen Spezialisten weiter."
-- `decisionHelper.title`: "Nicht sicher, welches Formular passt?"
-- `decisionHelper.body`: "Verwenden Sie dieses kurze Projektanfrageformular, wenn Sie Produkte, Services, ein bestehendes System, Tests, Retrofit-Arbeiten, Wartung oder ein Projekt in einer frühen Phase besprechen möchten. Verwenden Sie den technischen Fragebogen, wenn Sie bereits ein kundenspezifisches TVAC- oder Weltraumsimulationssystem detailliert spezifizieren möchten."
-- `decisionHelper.shortCta`: "Mit Kurzanfrage fortfahren"
-- `decisionHelper.questionnaireCta`: "Technischen Fragebogen öffnen"
-- `sections.contact`: "Kontaktdaten"
-- `sections.interest.title`: "Wofür interessieren Sie sich?"
-- `sections.interest.helper`: "Wählen Sie einen oder mehrere Bereiche aus, damit wir Ihre Anfrage korrekt zuordnen können."
-- `sections.interest.products`: "Produkte" · `services`: "Leistungen" · `other`: "Sonstiges"
-- `sections.context.title`: "Projektkontext"
-- `fields.country`: "Land" · `projectStage`: "Projektphase" · `timeline`: "Erwarteter Zeitrahmen" · `existingSystem`: "Bestehendes System"
-- `fields.messageLabel`: "Beschreiben Sie kurz Ihren Bedarf"
-- `fields.messagePlaceholder`: "Beispiel: Wir planen ein Kammer-Upgrade, benötigen Unterstützung bei der Modernisierung des Steuerungssystems oder suchen TVAC-Testkapazität für eine Satellitenkomponente."
-- `interests.products`: ["Standard TVAC Serie", "Custom TVAC System", "Thermal Vision"]
-- `interests.services`: ["Testleistungen", "Steuerungstechnik / Control Systems Design", "Mechanische Konstruktion", "Retrofit & Modernisierung", "Wartung & Reparatur", "Subsystemintegration"]
-- `interests.other`: ["Noch nicht sicher", "Allgemeine Beratung"]
-- `projectStageOptions`: ["Frühe Evaluierung", "Anforderungen bereits definiert", "Angebotsanfrage", "Bestehendes System benötigt Support", "Upgrade- oder Retrofit-Projekt", "Noch nicht sicher"]
-- `timelineOptions`: ["Sofort", "Innerhalb von 3 Monaten", "3 bis 6 Monate", "6 bis 12 Monate", "Später", "Noch nicht sicher"]
-- `existingSystemOptions`: ["Nein, neues Projekt", "Ja, bestehendes Deepvac-System", "Ja, bestehendes Drittanbieter-System", "Nicht sicher"]
-- `submit.button`: "Projektanfrage senden"
-- `submit.helper`: "Ihre Anfrage wird von unserem Fachteam geprüft und an den richtigen Ansprechpartner weitergeleitet."
-- `success.title`: "Vielen Dank. Ihre Anfrage ist eingegangen."
-- `success.body`: "Wir prüfen Ihren Projektkontext und melden uns mit dem nächsten geeigneten Schritt. Falls Ihre Anfrage detaillierte TVAC-Spezifikationen erfordert, laden wir Sie ggf. zur Bearbeitung des technischen Fragebogens ein."
-- `validation.interestRequired`: "Bitte wählen Sie mindestens einen Interessenbereich aus."
-
-## 9. Distinguishing Project Inquiry vs. Technical Questionnaire
-
-- Visual: Project Inquiry stays as a single compact form on `/contact`. The questionnaire stays at `/tvac-questionnaire` (multi-step).
-- The new decision helper above the form makes the choice explicit with two clearly labelled CTAs.
-- Source field: contact-page sends `source: "contact-page-project-inquiry"`; questionnaire continues to send `kind: "questionnaire"`. This keeps email subjects, log analytics, and routing distinguishable.
-- Success message of the short form explicitly mentions that detailed specs may be invited via the questionnaire — sets expectations without forcing the longer path.
-
-## 10. Submission Flow Reuse
-
-- Keep using `supabase.functions.invoke("send-inquiry", …)` — no new endpoint.
-- Extend `InquiryPayload` (server) with `country?`, `interests?: string[]`, `projectStage?`, `existingSystem?`, `language?` and add corresponding sanitize calls + email rows.
-- Honeypot, rate-limit, Turnstile, duplicate detection, and `inquiry_logs` writes remain unchanged.
-- Subject-line conditional only for `source` starting with `contact-page-project-inquiry` to avoid affecting `homepage-contact` and other sources.
-
-## 11. Risks and Edge Cases
-
-- **Backward compatibility**: the homepage `ContactSection` still posts `chamberType`/`project`/etc. — keep those optional in the server type. Verified by inspection of `src/components/home/ContactSection.tsx`.
-- `**interests` array length**: cap at 12 to prevent payload abuse; reject silently above limit.
-- **Validation UX**: the "at least one interest" rule needs an inline error near the section header, not a toast, so the user sees where the missing field is.
-- **DE long labels** (e.g. "Ja, bestehendes Drittanbieter-System") may overflow the dropdown on mobile — already mitigated by `mobile-ux` memory rules; ensure the select inherits `truncate`/wrap behaviour.
-- **Turnstile reset on validation failure**: current code only resets on submission error; if the form is large enough that validation often fails first, the existing token may expire. Keep current behaviour; no change.
-- **i18n key collisions**: avoid renaming `qualifiers.*` keys — leave them in place during migration so `Contact.tsx` doesn't briefly break, then remove unused keys at the end.
-- **Email deliverability**: subject change is cosmetic; `from`/`reply_to` unchanged. No DNS impact.
-- **Analytics / SEO**: page route `/contact` and `/de/kontakt` unchanged; no canonical or hreflang change required. SEO title/description not touched.
-
-## 12. Phased Implementation Plan
-
-**Phase 1 — Copy & data**
-
-1. Add new keys to `en/contact.json` and `de/contact.json` (keep old keys temporarily).
-2. No code changes yet — verify copy with the user if desired.
-
-**Phase 2 — Server**
-3. Extend `InquiryPayload` in `supabase/functions/send-inquiry/index.ts` with `country`, `interests`, `projectStage`, `existingSystem`, `language`.
-4. Add sanitization, length/array limits, conditional subject line, and new email rows. Keep all existing fields optional.
-
-**Phase 3 — Client form**
-5. Refactor `Contact.tsx`:
-
-- Update `FormData` interface and `initialForm`.
-- Replace the `QuestionnaireCard` slot with a new decision-helper card.
-- Build the three sections (contact / interests / context / message).
-- Implement a small reusable `CheckboxGroup` inline (no new shadcn component required).
-- Add `interests` validation with inline error.
-- Update `handleSubmit` payload (`source: "contact-page-project-inquiry"`, `language: lang`, `interests: …`).
-- Update success view title/body.
-
-**Phase 4 — Cleanup & polish**
-6. Remove unused `qualifiers.*` keys (chamberType / applicationArea select options that are now superseded) — only after confirming no other consumers.
-7. Verify mobile layout (long DE labels, checkbox grid wrapping), keyboard navigation, and Turnstile invisible widget render.
-8. Manual end-to-end submission test against the deployed `send-inquiry` function (preview environment).
-
-**Phase 5 — Optional follow-ups (not in this change)**
-9. Pre-select interest checkboxes via query params (e.g. `/contact?interest=retrofit`) so service pages can deep-link.
-10. Add lightweight analytics events (form_view, form_submit, decision_helper_questionnaire_click).
-
----
-
-Awaiting approval before implementation. No files will be modified until you confirm.  
-Approved with the following refinements.
-
-Please implement the Project Inquiry redesign according to your plan, but apply these changes:
-
-1. Keep the decision helper compact. It should clarify the difference between the short Project Inquiry form and the technical questionnaire, but it must not visually overpower the form.
-
-2. For the new contact-page-project-inquiry source, require at least one selected interest both client-side and server-side. For older sources, keep interests optional for backward compatibility.
-
-3. Before modifying the send-inquiry edge function, inspect all existing callers of send-inquiry and preserve backward compatibility with their payloads.
-
-4. Do not remove old i18n keys unless a project-wide search confirms that they are unused.
-
-5. Consider whether an optional "Project or application name" field should remain. If it fits cleanly without adding friction, include it as optional. If it makes the form feel too long, omit it and rely on the message field.
-
-6. Keep the form visually consistent with the existing Deepvac dark design, spacing, typography, bento-card style, Turnstile flow, consent checkbox, contact sidebar, map, LinkedIn card, and responsive layout.
-
-7. Do not change the technical questionnaire route or its existing logic.
-
-Proceed with implementation on the preview branch only.
+Awaiting approval before editing.
