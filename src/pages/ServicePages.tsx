@@ -79,6 +79,8 @@ function ServicePageTemplate({ seoKey, nsKey, heroImage, children }: ServicePage
 
         <div className="section-divider" />
 
+        {children}
+
         <Section>
           <SectionHeader eyebrow={t("template.deliverablesEyebrow")} title={t("template.deliverablesTitle")} className="mb-10" />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -117,8 +119,6 @@ function ServicePageTemplate({ seoKey, nsKey, heroImage, children }: ServicePage
             ))}
           </div>
         </Section>
-
-        {children}
 
         <CTABand title={t(`${nsKey}.ctaTitle`)} description={t(`${nsKey}.ctaDescription`)}>
           <Button asChild size="lg" className="font-mono text-xs tracking-wide">
