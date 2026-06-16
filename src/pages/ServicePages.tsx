@@ -7,7 +7,7 @@ import { PageShell, PageHero, Section, CTABand } from "@/components/PageShell";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Button } from "@/components/ui/button";
 import { PlaceholderImage } from "@/components/PlaceholderImage";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Wrench, Activity, Thermometer, BarChart3, Target } from "lucide-react";
 import { useLanguage } from "@/components/LanguageProvider";
 import { getHreflangs, getCanonical, localizedPath } from "@/lib/routes";
 import mechanicalDesignHero from "@/assets/mechanical-design-hero.png";
@@ -21,6 +21,7 @@ interface ServicePageProps {
   seoKey: string;
   nsKey: string;
   heroImage?: string;
+  children?: React.ReactNode;
 }
 
 function ServicePageTemplate({ seoKey, nsKey, heroImage }: ServicePageProps) {
