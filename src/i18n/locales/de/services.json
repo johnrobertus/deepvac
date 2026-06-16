@@ -117,7 +117,7 @@
         },
         {
           "title": "Schock- und Fallturmprüfung",
-          "equipment": "Fallturmand Stoßprüfsysteme",
+          "equipment": "Fallturm- und Stoßprüfsysteme",
           "tests": ["Crash- und Stoßprüfung", "Penetrationsprüfung", "Durchstoßprüfung", "Gezielte Vorschädigung von Komponenten"],
           "category": "Stoßprüfung, Crashprüfung und Vorschädigungsprüfung"
         }
