@@ -159,13 +159,14 @@ function TestingScopeSection() {
         description={scope.description}
         className="mb-10"
       />
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {scope.items.map((item, i) => {
           const Icon = icons[i] || Wrench;
+          const isLast = i === scope.items.length - 1;
           return (
             <div
               key={item.title}
-              className={`bento-card rounded-lg p-6 space-y-5 ${i >= 3 ? "xl:col-span-1" : ""}`}
+              className={`bento-card rounded-lg p-6 space-y-5 ${isLast ? "md:col-span-2 max-w-2xl mx-auto w-full" : ""}`}
             >
               <div className="flex items-center gap-3">
                 <div className="flex h-9 w-9 items-center justify-center rounded-sm border border-blue/20 bg-blue/10 text-blue">
