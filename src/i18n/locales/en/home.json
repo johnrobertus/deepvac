@@ -1,43 +1,73 @@
 {
   "hero": {
-    "eyebrow": "THERMAL VACUUM SYSTEMS · ENGINEERED IN GERMANY",
-    "title": "Thermal Vacuum Systems for Aerospace Qualification",
-    "description": "Deepvac develops modular and custom TVAC systems, control architectures, and retrofit solutions for demanding test environments.",
-    "cues": ["MODULAR PLATFORMS", "CUSTOM TVAC", "RETROFIT & SERVICE"],
-    "ctaPrimary": "Discuss a TVAC Project",
-    "ctaSecondary": "View Chamber Platforms",
+    "eyebrow": "THERMAL VACUUM SYSTEMS FOR AEROSPACE. ENGINEERED IN GERMANY.",
+    "title": "Thermal vacuum systems & engineering for qualification, integration, and upgrade projects.",
+    "description": "Deepvac supplies modular TVAC platforms, custom chamber systems, control architecture, and retrofit support for teams building or upgrading test infrastructure.",
+    "cues": [
+      "MODULAR PLATFORMS",
+      "CUSTOM TVAC SYSTEMS",
+      "CONTROL & AUTOMATION",
+      "RETROFIT & SERVICE",
+      "TEST-AS-A-SERVICE"
+    ],
     "source": "Source: NASA"
   },
   "trustBar": {
     "items": [
-      { "label": "Environment", "text": "Aerospace test environments" },
-      { "label": "Methodology", "text": "Repeatable TVAC workflows" },
-      { "label": "Configuration", "text": "Configured system architecture" },
-      { "label": "Lifecycle", "text": "Lifecycle support" }
+      { "label": "Environment", "text": "Built for demanding aerospace and laboratory test environments" },
+      { "label": "Methodology", "text": "Designed for repeatable thermal vacuum workflows" },
+      { "label": "Configuration", "text": "Configured for geometry, interfaces, and test profiles" },
+      { "label": "Lifecycle", "text": "Supported through retrofit, service, and subsystem integration" }
     ]
   },
   "capabilities": {
     "eyebrow": "Core Capabilities",
-    "title": "Engineering Across the TVAC Lifecycle",
-    "description": "Chamber hardware, controls, and lifecycle support from one engineering team.",
+    "title": "Engineering Capabilities Across the Full TVAC Lifecycle",
+    "description": "Deepvac combines chamber platforms, control engineering, mechanical design, subsystem integration, and lifecycle support in one engineering-driven offering.",
     "items": [
-      { "title": "TVAC Chamber Platforms", "description": "Standard and custom chambers for qualification and space simulation." },
-      { "title": "Control & Automation", "description": "PLC architectures and supervisory logic for reproducible test execution." },
-      { "title": "Thermal Control", "description": "Shrouds, thermal plates, and profiles for cycling and bake-out." },
-      { "title": "Vacuum Systems", "description": "Pump, valve, and sensor architectures for reliable high-vacuum operation." },
-      { "title": "Mechanical Interfaces", "description": "Fixtures, feedthroughs, and mounting concepts for customer-specific setups." },
-      { "title": "Retrofit & Service", "description": "Modernization, maintenance, and targeted upgrades for existing infrastructure." }
+      {
+        "title": "TVAC Chamber Platforms",
+        "description": "Standardized and custom thermal vacuum chamber platforms for aerospace qualification, thermal cycling, and space environment simulation."
+      },
+      {
+        "title": "Control & Automation Systems",
+        "description": "PLC-based control architectures, automation, data acquisition, and supervisory logic for stable, reproducible test execution."
+      },
+      {
+        "title": "Mechanical Design & Interfaces",
+        "description": "Chamber layouts, fixtures, feedthroughs, mounting concepts, and support structures for customer-specific test configurations."
+      },
+      {
+        "title": "Thermal Control Systems",
+        "description": "Thermal plate, shroud, and temperature control solutions for stable profiles, cycling, bake-out, and qualification workflows."
+      },
+      {
+        "title": "Vacuum Systems Engineering",
+        "description": "Vacuum architectures with pumps, valves, sensors, and protection logic for reliable high-vacuum operation."
+      },
+      {
+        "title": "Test Campaign Support",
+        "description": "Engineering and operational support for thermal vacuum test campaigns, from setup and preparation to execution."
+      },
+      {
+        "title": "Subsystem Integration",
+        "description": "Integration of thermal, vacuum, instrumentation, and control subsystems into coherent test environments."
+      },
+      {
+        "title": "Retrofit, Maintenance & Repair",
+        "description": "Modernization, maintenance, repair, and targeted upgrades for existing thermal vacuum infrastructure."
+      }
     ]
   },
   "productPortfolio": {
     "eyebrow": "Product Portfolio",
     "title": "Chamber Platforms",
-    "description": "Standard and custom-engineered thermal vacuum systems for qualification of aerospace hardware.",
-    "viewAllCta": "View all chamber platforms",
+    "description": "Standardized and custom-engineered thermal vacuum systems for qualification and verification testing of aerospace hardware under controlled high-vacuum and thermal conditions.",
     "tSeries": {
       "title": "T Series TVAC",
       "subtitle": "Cubic Thermal Vacuum Chambers",
-      "overlays": ["Cubic Geometry", "Standard Series"],
+      "description": "Cubic thermal vacuum chambers for qualification, validation, and environmental simulation of aerospace hardware. The T Series provides a standardized chamber platform for controlled thermal vacuum testing across research, institutional, and commercial space applications.",
+      "overlays": ["Cubic Geometry", "Standard Series", "Thermal Vacuum Testing"],
       "cta": "View Platform",
       "specs": {
         "geometry": { "label": "Geometry", "value": "Cubic" },
@@ -45,12 +75,13 @@
         "pressure": { "label": "Ultimate Pressure", "value": "≤ 1 × 10⁻⁶ mbar" },
         "temperature": { "label": "Temperature Range", "value": "-190 °C to +150 °C*" }
       },
-      "note": "*Depending on the selected thermal concept (LN₂, GN₂, or mechanical refrigeration)."
+      "note": "*Depending on the selected thermal concept, including direct LN₂ cooling, GN₂ circulation, or mechanical refrigeration."
     },
     "cSeries": {
       "title": "C Series TVAC",
       "subtitle": "Cylindrical Thermal Vacuum Chambers",
-      "overlays": ["Cylindrical Geometry", "Standard Series"],
+      "description": "Cylindrical thermal vacuum chambers for qualification, validation, and environmental simulation of aerospace hardware. The C Series provides a standardized chamber platform for controlled thermal vacuum testing across research, institutional, and commercial space applications.",
+      "overlays": ["Cylindrical Geometry", "Standard Series", "Thermal Vacuum Testing"],
       "cta": "View Platform",
       "specs": {
         "geometry": { "label": "Geometry", "value": "Cylindrical" },
@@ -58,12 +89,13 @@
         "pressure": { "label": "Ultimate Pressure", "value": "≤ 1 × 10⁻⁶ mbar" },
         "temperature": { "label": "Temperature Range", "value": "-190 °C to +150 °C*" }
       },
-      "note": "*Depending on the selected thermal concept (LN₂, GN₂, or mechanical refrigeration)."
+      "note": "*Depending on the selected thermal concept, including direct LN₂ cooling, GN₂ circulation, or mechanical refrigeration."
     },
     "custom": {
       "title": "Custom TVAC",
       "subtitle": "Application-Specific Thermal Vacuum Systems",
-      "overlays": ["Beyond Standard Series", "Custom Geometry"],
+      "description": "Custom thermal vacuum systems for applications beyond the standard series. These systems are developed for non-standard geometries, specific chamber volumes, extended temperature requirements, and additional subsystems tailored to dedicated test and qualification tasks.",
+      "overlays": ["Beyond Standard Series", "Custom Geometry", "Special TVAC Systems"],
       "cta": "Discuss Configuration",
       "specs": {
         "scope": { "label": "Design Scope", "value": "Outside standard series" },
@@ -71,63 +103,149 @@
         "temperature": { "label": "Temperature", "value": "Extended beyond standard range" },
         "features": { "label": "System Features", "value": "Project-specific subsystems" }
       },
-      "note": "Custom systems may include dedicated interfaces, cryogenic shrouds, IR heating, and additional diagnostics."
+      "note": "Custom systems can include dedicated interfaces, cryogenic shrouds, infrared heating, additional diagnostics, and other application-specific system extensions."
     }
   },
   "applications": {
     "eyebrow": "Applications",
-    "title": "Built for Aerospace Qualification",
-    "description": "Where Deepvac systems are used.",
+    "title": "Built for Aerospace Qualification and Thermal Vacuum Testing",
+    "description": "Deepvac systems support qualification, thermal cycling, development testing, and custom space environment simulation for spacecraft hardware, subsystems, and high-performance components.",
     "items": [
-      { "title": "Satellite Subsystem Qualification", "description": "Thermal vacuum testing of satellite components under representative space conditions." },
-      { "title": "Payload & Instrument Testing", "description": "Environmental verification of payloads and instruments before integration and launch." },
-      { "title": "Thermal Cycling", "description": "Controlled cycling under high vacuum for durability and material testing." },
-      { "title": "Contamination-Sensitive Testing", "description": "High-purity, low-outgassing conditions for sensitive hardware." },
-      { "title": "Prototype & Development Testing", "description": "Flexible configurations for early-stage and iterative hardware programs." }
+      {
+        "title": "Satellite Subsystem Qualification",
+        "description": "Thermal vacuum testing of satellite components and subsystems under representative space conditions for qualification and performance verification."
+      },
+      {
+        "title": "Payload & Instrument Qualification",
+        "description": "Environmental simulation and thermal vacuum verification of payload and instrument hardware before integration, launch, and mission use."
+      },
+      {
+        "title": "Thermal Cycling & Durability Testing",
+        "description": "Controlled thermal cycling under high vacuum for durability testing of materials, assemblies, and critical hardware components."
+      },
+      {
+        "title": "Contamination-Controlled Testing",
+        "description": "High-purity, low-outgassing test conditions for contamination-sensitive hardware and reproducible thermal vacuum test campaigns."
+      },
+      {
+        "title": "Development & Prototype Testing",
+        "description": "Flexible chamber configurations for development programs, prototype validation, early-stage testing, and iterative hardware refinement."
+      },
+      {
+        "title": "Custom TVAC Configurations",
+        "description": "Application-specific thermal vacuum systems tailored to unique geometries, interfaces, thermal profiles, and test requirements."
+      }
     ]
   },
   "services": {
     "eyebrow": "Engineering Services",
-    "title": "Support Across the TVAC Lifecycle",
-    "description": "From new development to modernization and operations.",
-    "exploreAllCta": "Explore all engineering services",
+    "title": "Support Across the Full TVAC Lifecycle",
+    "description": "From new chamber development to modernization, maintenance, and subsystem integration, Deepvac supports thermal vacuum infrastructure across planning, implementation, and long-term operation.",
+    "pillars": [
+      {
+        "title": "New Chamber Development",
+        "description": "Support for the planning and implementation of new thermal vacuum infrastructure, from early engineering through system realization."
+      },
+      {
+        "title": "Modernization & Upgrades",
+        "description": "Targeted upgrades for legacy systems to improve control quality, reliability, operability, and long-term technical performance."
+      },
+      {
+        "title": "Operations & Lifecycle Support",
+        "description": "Maintenance, repair, and campaign support to keep test infrastructure available, stable, and ready for demanding qualification workflows."
+      }
+    ],
     "items": [
-      { "label": "Campaigns", "title": "Testing & Campaign Support", "description": "Qualification, validation, and development test campaign support." },
-      { "label": "Automation", "title": "Controls & Automation", "description": "Chamber control architecture, automation, and supervisory logic." },
-      { "label": "Integration", "title": "Mechanical & Subsystem Integration", "description": "Mechanical design and integration of thermal, vacuum, and instrumentation subsystems." },
-      { "label": "Lifecycle", "title": "Retrofit, Maintenance & Repair", "description": "Modernization and service for existing thermal vacuum infrastructure." }
+      {
+        "label": "Campaign support",
+        "title": "Testing Services",
+        "description": "Support for qualification, validation, and development test campaigns requiring stable environmental control and repeatable workflows."
+      },
+      {
+        "label": "Control architecture",
+        "title": "Control Systems Design",
+        "description": "Design of chamber control architectures, automation logic, user interfaces, and instrumentation integration for reliable system operation."
+      },
+      {
+        "label": "Mechanical engineering",
+        "title": "Mechanical Design",
+        "description": "Engineering of chamber assemblies, interfaces, fixturing, support structures, and application-specific mechanical integration concepts."
+      },
+      {
+        "label": "Legacy system upgrades",
+        "title": "Retrofit & Modernization",
+        "description": "Technical upgrades for legacy TVAC systems to improve reliability, operability, safety, control precision, and lifecycle performance."
+      },
+      {
+        "label": "Availability support",
+        "title": "Maintenance & Repair",
+        "description": "Diagnostics, preventive maintenance, servicing, and repair to support long-term chamber availability and reduced downtime."
+      },
+      {
+        "label": "System integration",
+        "title": "Subsystem Integration",
+        "description": "Integration of thermal, vacuum, instrumentation, and control subsystems into coherent test environments tailored to specific customer requirements."
+      }
     ]
   },
   "whyDeepvac": {
     "eyebrow": "Why Deepvac",
     "title": "Built on Engineering Depth",
-    "description": "Four reasons engineering teams choose Deepvac.",
+    "description": "Deepvac combines engineering discipline, integrated system design, and lifecycle support to deliver reliable thermal vacuum infrastructure.",
     "items": [
-      { "title": "Modular & Custom TVAC Systems", "description": "Standard chamber platforms alongside custom systems for non-standard requirements." },
-      { "title": "Integrated Hardware, Controls & Engineering", "description": "Chamber hardware, control systems, and engineering support delivered as one coordinated package." },
-      { "title": "Built for Aerospace Qualification Workflows", "description": "Designed around qualification, thermal cycling, and contamination-sensitive testing." },
-      { "title": "Retrofit & Modernization Expertise", "description": "Targeted upgrades for legacy chambers — improved control, reliability, and lifecycle performance." }
+      {
+        "title": "Modular Platforms & Custom Systems",
+        "description": "Deepvac offers standardized chamber platforms and custom thermal vacuum systems, from compact test setups to large-scale qualification infrastructure."
+      },
+      {
+        "title": "Engineering-Driven System Design",
+        "description": "Projects start from technical requirements, system architecture, interface definition, and integration logic to create robust application-specific test environments."
+      },
+      {
+        "title": "Integrated Hardware, Controls & Support",
+        "description": "Chamber hardware, control systems, subsystem integration, modernization, and service are combined in one coordinated engineering approach."
+      },
+      {
+        "title": "Built for Qualification-Grade Environments",
+        "description": "System concepts are developed around the requirements of aerospace qualification, thermal cycling, contamination-sensitive testing, and advanced research use cases."
+      },
+      {
+        "title": "From New Systems to Modernization",
+        "description": "Deepvac supports projects across concept development, manufacturing, commissioning, retrofit, maintenance, and long-term technical improvement."
+      },
+      {
+        "title": "Reduced Interface Complexity",
+        "description": "Thermal, vacuum, instrumentation, and control subsystems are designed as one functional environment to reduce coordination effort, integration risk, and technical friction."
+      }
     ]
   },
   "team": {
     "eyebrow": "Leadership",
-    "title": "Engineering-Led Founding Team",
-    "description": "Complementary expertise in controls, mechatronics, and thermal vacuum infrastructure.",
+    "title": "Engineering-Led from Day One",
+    "description": "Deepvac is led by a founding team with complementary expertise in electrical engineering, mechatronics, refrigeration systems, and chamber development. This combination supports the development of advanced thermal vacuum infrastructure with strong technical depth across system design and implementation.",
     "members": [
-      { "name": "John Robertus", "role": "CEO | Co-Founder", "description": "Electrical engineering, control architecture, automation." },
-      { "name": "Anton Opalikhin", "role": "CTO | Co-Founder", "description": "Mechanical engineering, refrigeration, chamber development." }
+      {
+        "name": "John Robertus",
+        "role": "CEO | Co-Founder",
+        "description": "Electrical engineer focused on intelligent system integration, control architecture, and data-driven automation for mechatronic systems."
+      },
+      {
+        "name": "Anton Opalikhin",
+        "role": "CTO | Co-Founder",
+        "description": "Mechanical engineer focused on refrigeration systems, chamber development, and thermal vacuum infrastructure for demanding test applications."
+      }
     ]
   },
   "catalogues": {
     "eyebrow": "Resources",
     "title": "Technical Documentation",
-    "description": "Product overviews and technical brochures.",
+    "description": "Download product overviews, technical specifications, and company brochures.",
     "featuredBrochure": "Featured Brochure"
   },
   "leadCapture": {
     "eyebrow": "Start a Conversation",
     "title": "Discuss Your Thermal Vacuum Requirements",
-    "description": "Tell us about your chamber, test, or integration requirements."
+    "description": "Whether you need a modular chamber platform, a custom TVAC configuration, or support for modernization and subsystem integration, Deepvac can help define the right system architecture for your application."
   },
   "contact": {
     "eyebrow": "Contact",

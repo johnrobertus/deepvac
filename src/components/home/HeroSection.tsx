@@ -219,7 +219,7 @@ export function HeroSection() {
               <Reveal delay={150}>
                 <div className="flex flex-wrap gap-2 pt-1 sm:gap-3 sm:pt-2">
                   <Button asChild size="default" className="font-mono text-xs tracking-wide sm:h-12 sm:px-8 sm:text-base">
-                    <Link to={contactPath}>{t("hero.ctaPrimary")}</Link>
+                    <Link to={contactPath}>{tc("buttons.discussRequirements")}</Link>
                   </Button>
 
                   <Button
@@ -228,7 +228,7 @@ export function HeroSection() {
                     size="default"
                     className="border-sand/25 font-mono text-xs tracking-wide text-sand/80 backdrop-blur-sm hover:border-sand/40 hover:text-sand sm:h-12 sm:px-8 sm:text-base"
                   >
-                    <Link to={localizedPath("/products", lang)}>{t("hero.ctaSecondary")}</Link>
+                    <Link to={localizedPath("/products", lang)}>{tc("buttons.exploreProducts")}</Link>
                   </Button>
                 </div>
               </Reveal>

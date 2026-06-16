@@ -2,28 +2,28 @@ import { useTranslation } from "react-i18next";
 import { SectionHeader } from "@/components/SectionHeader";
 import { BentoGrid, BentoCard } from "@/components/BentoGrid";
 import { Reveal } from "@/components/Reveal";
-import { Crosshair, Cpu, Thermometer, Gauge, Settings, RefreshCw } from "lucide-react";
+import { Crosshair, Settings, Thermometer, Gauge, Cpu, RefreshCw, Wrench, Workflow } from "lucide-react";
 
-const icons = [Crosshair, Cpu, Thermometer, Gauge, Settings, RefreshCw];
-const featuredIndexes = [0];
+const icons = [Crosshair, Cpu, Settings, Thermometer, Gauge, Wrench, Workflow, RefreshCw];
+const featuredIndexes = [0, 1];
 
 export function CapabilitiesSection() {
   const { t } = useTranslation("home");
   const items = t("capabilities.items", { returnObjects: true }) as { title: string; description: string }[];
 
   return (
-    <section id="capabilities" className="px-6 py-24 md:py-32">
+    <section id="capabilities" className="px-6 py-20 md:py-28">
       <div className="container-wide">
         <Reveal>
           <SectionHeader
             eyebrow={t("capabilities.eyebrow")}
             title={t("capabilities.title")}
             description={t("capabilities.description")}
-            className="mb-16"
+            className="mb-14"
           />
         </Reveal>
 
-        <BentoGrid className="lg:grid-cols-3">
+        <BentoGrid className="lg:grid-cols-4">
           {Array.isArray(items) && items.map((item, i) => {
             const Icon = icons[i] || Crosshair;
             const featured = featuredIndexes.includes(i);

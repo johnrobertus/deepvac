@@ -5,10 +5,27 @@ type TrustItem = { label: string; text: string };
 export function TrustBarSection() {
   const { t } = useTranslation("home");
   const items = t("trustBar.items", { returnObjects: true }) as TrustItem[];
+  const heading = t("trustBar.heading", { defaultValue: "" }) as string;
+  const protocol = t("trustBar.protocol", {
+    defaultValue: "System Protocol · Trust / Validation",
+  }) as string;
 
   return (
-    <section id="trust" className="bg-background px-6 py-12">
+    <section id="trust" className="bg-background px-6 py-14">
       <div className="container-wide">
+        {/* Technical header */}
+        <div className="mb-4 flex items-end justify-between gap-6 px-1">
+          <div className="flex flex-col gap-1">
+            <span className="mono-label text-[10px] text-blue">{protocol}</span>
+            {heading && (
+              <h2 className="text-base font-light tracking-wide text-sand sm:text-lg">
+                {heading}
+              </h2>
+            )}
+          </div>
+        </div>
+
+        {/* Etched frame */}
         <div
           className="overflow-hidden rounded-sm border border-gray/15"
           style={{
@@ -25,15 +42,24 @@ export function TrustBarSection() {
                 return (
                   <div
                     key={i}
-                    className={`group relative flex flex-col gap-3 p-6 transition-colors hover:bg-sand/[0.02] ${
+                    className={`group relative p-7 transition-colors hover:bg-sand/[0.02] md:p-8 ${
                       !isLast ? "border-b border-gray/10 md:border-b-0 md:border-r" : ""
                     }`}
                   >
-                    <div className="flex items-center justify-between">
+                    <div className="mb-8 flex items-start justify-between">
                       <span className="mono-label text-[11px] text-blue">{item.label}</span>
                       <div className="h-1.5 w-1.5 rounded-full bg-gray/30 transition-all duration-300 group-hover:bg-blue group-hover:shadow-[0_0_10px_hsl(var(--blue)/0.7)]" />
                     </div>
-                    <p className="text-sm leading-snug text-sand/80">{item.text}</p>
+                    <p className="max-w-[28ch] text-pretty text-sm leading-relaxed text-sand/75">
+                      {item.text}
+                    </p>
+                    {(i === 0 || isLast) && (
+                      <div
+                        className={`absolute bottom-0 h-px w-8 bg-blue/25 ${
+                          i === 0 ? "left-0" : "right-0"
+                        }`}
+                      />
+                    )}
                   </div>
                 );
               })}

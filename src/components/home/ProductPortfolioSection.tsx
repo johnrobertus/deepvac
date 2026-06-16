@@ -20,14 +20,14 @@ export function ProductPortfolioSection() {
   const productKeys = ["tSeries", "cSeries", "custom"] as const;
 
   return (
-    <section id="products" className="bg-surface/30 px-6 py-24 md:py-32">
+    <section id="products" className="bg-surface/30 px-6 py-20 md:py-28">
       <div className="container-wide">
         <Reveal>
           <SectionHeader
             eyebrow={t("productPortfolio.eyebrow")}
             title={t("productPortfolio.title")}
             description={t("productPortfolio.description")}
-            className="mb-16"
+            className="mb-14"
           />
         </Reveal>
 
@@ -46,7 +46,7 @@ export function ProductPortfolioSection() {
                       <img
                         src={productImages[i]}
                         alt={`${t(`${prefix}.title`)}, ${t(`${prefix}.subtitle`)}`}
-                        className="h-full min-h-[320px] w-full object-contain p-2 transition-transform duration-500 group-hover:scale-[1.02] lg:min-h-[440px] lg:max-h-[520px]"
+                        className="h-full min-h-[360px] w-full object-contain p-2 transition-transform duration-500 group-hover:scale-[1.02] lg:min-h-[480px] lg:max-h-[560px]"
                         loading="lazy"
                       />
                       <div className="absolute bottom-3 left-3 flex flex-wrap gap-1.5">
@@ -56,12 +56,13 @@ export function ProductPortfolioSection() {
                       </div>
                     </div>
 
-                    <div className={`flex flex-col justify-center gap-6 p-8 lg:p-12 ${i % 2 === 1 ? "lg:order-1" : ""}`}>
+                    <div className={`flex flex-col justify-center space-y-5 p-8 lg:p-10 ${i % 2 === 1 ? "lg:order-1" : ""}`}>
                       <div>
                         <span className="mono-label text-blue">{t(`${prefix}.subtitle`)}</span>
                         <h3 className="mt-2 text-2xl font-medium tracking-tight text-sand md:text-3xl">{t(`${prefix}.title`)}</h3>
                       </div>
-                      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                      <p className="text-sm leading-relaxed text-gray">{t(`${prefix}.description`)}</p>
+                      <div className="grid grid-cols-1 gap-4 py-2 sm:grid-cols-2">
                         {specsArr.map((spec) => (
                           <div key={spec.label} className="rounded-md border border-gray/10 bg-background/20 px-4 py-3">
                             <span className="mono-label">{spec.label}</span>
@@ -85,17 +86,6 @@ export function ProductPortfolioSection() {
             );
           })}
         </div>
-
-        <Reveal delay={200}>
-          <div className="mt-12 text-center">
-            <Button asChild variant="outline">
-              <Link to={localizedPath("/products", lang)}>
-                {t("productPortfolio.viewAllCta")}
-                <ArrowRight className="h-3.5 w-3.5" />
-              </Link>
-            </Button>
-          </div>
-        </Reveal>
       </div>
     </section>
   );
