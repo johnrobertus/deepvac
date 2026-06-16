@@ -7,7 +7,7 @@ import { PageShell, PageHero, Section, CTABand } from "@/components/PageShell";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Button } from "@/components/ui/button";
 import { PlaceholderImage } from "@/components/PlaceholderImage";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Wrench, Activity, Thermometer, BarChart3, Target } from "lucide-react";
 import { useLanguage } from "@/components/LanguageProvider";
 import { getHreflangs, getCanonical, localizedPath } from "@/lib/routes";
 import mechanicalDesignHero from "@/assets/mechanical-design-hero.png";
@@ -21,9 +21,10 @@ interface ServicePageProps {
   seoKey: string;
   nsKey: string;
   heroImage?: string;
+  children?: React.ReactNode;
 }
 
-function ServicePageTemplate({ seoKey, nsKey, heroImage }: ServicePageProps) {
+function ServicePageTemplate({ seoKey, nsKey, heroImage, children }: ServicePageProps) {
   const { t } = useTranslation("services");
   const { t: tSeo } = useTranslation("seo");
   const { t: tc } = useTranslation("common");
@@ -117,6 +118,8 @@ function ServicePageTemplate({ seoKey, nsKey, heroImage }: ServicePageProps) {
           </div>
         </Section>
 
+        {children}
+
         <CTABand title={t(`${nsKey}.ctaTitle`)} description={t(`${nsKey}.ctaDescription`)}>
           <Button asChild size="lg" className="font-mono text-xs tracking-wide">
             <Link to={localizedPath("/contact", lang)}>{tc("buttons.talkToEngineer")}</Link>
@@ -130,8 +133,82 @@ function ServicePageTemplate({ seoKey, nsKey, heroImage }: ServicePageProps) {
   );
 }
 
+function TestingScopeSection() {
+  const { t } = useTranslation("services");
+  const scope = t("testing.scope", { returnObjects: true }) as {
+    eyebrow: string;
+    title: string;
+    description: string;
+    items: Array<{
+      title: string;
+      equipment: string;
+      tests: string[];
+      category: string;
+    }>;
+  };
+
+  const icons = [Wrench, Activity, Thermometer, BarChart3, Target];
+
+  if (!scope?.items) return null;
+
+  return (
+    <Section className="bg-surface/30">
+      <SectionHeader
+        eyebrow={scope.eyebrow}
+        title={scope.title}
+        description={scope.description}
+        className="mb-10"
+      />
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+        {scope.items.map((item, i) => {
+          const Icon = icons[i] || Wrench;
+          return (
+            <div
+              key={item.title}
+              className={`bento-card rounded-lg p-6 space-y-5 ${i >= 3 ? "xl:col-span-1" : ""}`}
+            >
+              <div className="flex items-center gap-3">
+                <div className="flex h-9 w-9 items-center justify-center rounded-sm border border-blue/20 bg-blue/10 text-blue">
+                  <Icon className="w-5 h-5" />
+                </div>
+                <h3 className="text-base font-medium text-sand leading-snug">{item.title}</h3>
+              </div>
+
+              <div className="space-y-3">
+                <div>
+                  <span className="mono-label text-blue text-[11px] uppercase tracking-wider">Test systems / equipment</span>
+                  <p className="text-sm text-gray leading-relaxed mt-1">{item.equipment}</p>
+                </div>
+
+                <div>
+                  <span className="mono-label text-blue text-[11px] uppercase tracking-wider">Tests / capabilities</span>
+                  <ul className="mt-1.5 space-y-1">
+                    {item.tests.map((test) => (
+                      <li key={test} className="flex items-start gap-2 text-sm text-gray/90">
+                        <span className="w-1 h-1 rounded-full bg-blue mt-2 shrink-0" />
+                        <span className="leading-relaxed">{test}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              <div className="pt-2 border-t border-gray/10">
+                <span className="mono-label text-[11px] text-gray/70 uppercase tracking-wider">Category</span>
+                <p className="text-xs text-sand/80 leading-relaxed mt-1">{item.category}</p>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </Section>
+  );
+}
+
 export const TestingServices = () => (
-  <ServicePageTemplate seoKey="testingServices" nsKey="testing" heroImage={testingHero} />
+  <ServicePageTemplate seoKey="testingServices" nsKey="testing" heroImage={testingHero}>
+    <TestingScopeSection />
+  </ServicePageTemplate>
 );
 
 export const ControlSystemsDesign = () => (

@@ -85,7 +85,44 @@
       { "label": "Subsystem-Integration", "href": "/services/subsystem-integration", "description": "Integration von Testumgebungs-Subsystemen für kohärenten Betrieb." }
     ],
     "ctaTitle": "Besprechen Sie Ihre Testkampagnen-Anforderungen",
-    "ctaDescription": "Kontaktieren Sie Deepvac zur Planung und Durchführung Ihres Thermovakuum-Testprogramms mit Engineering-Präzision."
+    "ctaDescription": "Kontaktieren Sie Deepvac zur Planung und Durchführung Ihres Thermovakuum-Testprogramms mit Engineering-Präzision.",
+    "scope": {
+      "eyebrow": "Kompetenzen",
+      "title": "Prüfdienstleistungen – Leistungsspektrum",
+      "description": "Unsere Prüfdienstleistungen decken mechanische, dynamische, umweltbezogene, messbasierte und stoßbezogene Qualifikationsprüfungen für Komponenten, Baugruppen und Strukturbauteile ab.",
+      "items": [
+        {
+          "title": "Mechanische Strukturprüfung",
+          "equipment": "Universalprüfmaschinen und servohydraulische Prüfsysteme",
+          "tests": ["Zugversuche", "Druckversuche", "3-Punkt- und 4-Punkt-Biegeversuche", "Delllastermittlung", "Durchstoßprüfung", "Ermüdungsversuche", "Risswachstumsversuche"],
+          "category": "Mechanische Strukturprüfung und Komponentenqualifikation"
+        },
+        {
+          "title": "Vibration, Schock und dynamische Prüfung",
+          "equipment": "Vibrations- und Schockprüfsysteme",
+          "tests": ["Vibrationsprüfung von Komponenten", "Experimentelle Modalanalyse", "Simulation und Reproduktion dynamischer Lasten", "Raumfahrtqualifikationsprüfung"],
+          "category": "Dynamische Prüfung, Vibration, Schock und Raumfahrtqualifikation"
+        },
+        {
+          "title": "Umwelt, Thermo- und Vakuumprüfung",
+          "equipment": "Klima-, Thermo- und Vakuumkammern",
+          "tests": ["Klimatische Konditionierung von Proben und Komponenten", "Mechanische Prüfungen unter Umweltbedingungen", "Elektrische Prüfungen unter Umweltbedingungen", "Thermische Raumfahrtsimulation", "Funktionsprüfung unter raumfahrtähnlichen Bedingungen"],
+          "category": "Umweltprüfung, Thermoprüfung, Vakuumprüfung und Raumfahrtsimulation"
+        },
+        {
+          "title": "Messtechnik und Datenerfassung",
+          "equipment": "Optische, thermische und dynamische Mess- und Datenerfassungssysteme",
+          "tests": ["Optische Deformations- und Dehnungsmessung", "Hochauflösende Bild- und Oberflächenanalyse", "Thermografie und Temperaturmessung", "Vibrations- und dynamische Antwortmessung", "Datenerfassung während mechanischer, dynamischer und thermischer Prüfungen", "Prüfauswertung und Signalverarbeitung"],
+          "category": "Unterstützende Messtechnik, Datenerfassung und Prüfauswertung"
+        },
+        {
+          "title": "Schock- und Fallturmprüfung",
+          "equipment": "Fallturm- und Stoßprüfsysteme",
+          "tests": ["Crash- und Stoßprüfung", "Penetrationsprüfung", "Durchstoßprüfung", "Gezielte Vorschädigung von Komponenten"],
+          "category": "Stoßprüfung, Crashprüfung und Vorschädigungsprüfung"
+        }
+      ]
+    }
   },
   "controlSystems": {
     "eyebrow": "Leistungen",
