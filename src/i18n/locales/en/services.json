@@ -85,7 +85,44 @@
       { "label": "Subsystem Integration", "href": "/services/subsystem-integration", "description": "Integration of test environment subsystems for coherent operation." }
     ],
     "ctaTitle": "Discuss Your Test Campaign Requirements",
-    "ctaDescription": "Contact Deepvac to plan and execute your thermal vacuum test program with engineering-grade precision."
+    "ctaDescription": "Contact Deepvac to plan and execute your thermal vacuum test program with engineering-grade precision.",
+    "scope": {
+      "eyebrow": "Capabilities",
+      "title": "Testing Services Scope",
+      "description": "Our testing services cover mechanical, dynamic, environmental, measurement-based and impact-related qualification tests for components, assemblies and structural parts.",
+      "items": [
+        {
+          "title": "Mechanical Structure Testing",
+          "equipment": "Universal testing machines and servo-hydraulic test systems",
+          "tests": ["Tensile tests", "Compression tests", "3-point and 4-point bending tests", "Dent load determination", "Puncture testing", "Fatigue testing", "Crack growth testing"],
+          "category": "Mechanical structure testing and component qualification"
+        },
+        {
+          "title": "Vibration, Shock and Dynamic Testing",
+          "equipment": "Vibration and shock test systems",
+          "tests": ["Vibration testing of components", "Experimental modal analysis", "Simulation and reproduction of dynamic loads", "Space qualification testing"],
+          "category": "Dynamic testing, vibration, shock and space qualification"
+        },
+        {
+          "title": "Environmental, Thermal and Vacuum Testing",
+          "equipment": "Climate, thermal and vacuum chambers",
+          "tests": ["Climatic conditioning of samples and components", "Mechanical tests under environmental conditions", "Electrical tests under environmental conditions", "Thermal space simulation", "Functional testing under space-like conditions"],
+          "category": "Environmental testing, thermal testing, vacuum testing and space simulation"
+        },
+        {
+          "title": "Measurement and Data Acquisition",
+          "equipment": "Optical, thermal and dynamic measurement and data acquisition systems",
+          "tests": ["Optical deformation and strain measurement", "High-resolution image and surface analysis", "Thermography and temperature measurement", "Vibration and dynamic response measurement", "Data acquisition during mechanical, dynamic and thermal tests", "Test evaluation and signal processing"],
+          "category": "Supporting measurement technology, data acquisition and test evaluation"
+        },
+        {
+          "title": "Impact and Drop Tower Testing",
+          "equipment": "Drop tower and impact test systems",
+          "tests": ["Crash and impact testing", "Penetration testing", "Puncture testing", "Targeted pre-damage of components"],
+          "category": "Impact testing, crash testing and pre-damage testing"
+        }
+      ]
+    }
   },
   "controlSystems": {
     "eyebrow": "Services",
