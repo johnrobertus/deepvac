@@ -22,7 +22,6 @@ const productsMenu: NavItem[] = [
 
 const servicesMenu: NavItem[] = [
   { labelKey: "nav.overview", href: "/services" },
-  { labelKey: "nav.testingServices", href: "/services/testing-services" },
   { labelKey: "nav.controlSystemsDesign", href: "/services/control-systems-design" },
   { labelKey: "nav.mechanicalDesign", href: "/services/mechanical-design" },
   { labelKey: "nav.retrofitModernization", href: "/services/retrofit-modernization" },
@@ -31,6 +30,7 @@ const servicesMenu: NavItem[] = [
 ];
 
 const navLinks: NavItem[] = [
+  { labelKey: "nav.testingServices", href: "/services/testing-services" },
   { labelKey: "nav.team", href: "/team" },
   { labelKey: "nav.resources", href: "/resources" },
   { labelKey: "nav.careers", href: "/careers" },
@@ -238,7 +238,7 @@ export function Header() {
           />
 
           <DropdownMenu
-            label={t("nav.services")}
+            label={t("nav.engineering")}
             baseHref="/services"
             items={servicesMenu}
             pathname={pathname}
@@ -312,7 +312,7 @@ export function Header() {
         <div className="max-h-[calc(100vh-4rem)] overflow-y-auto border-t border-gray/10 bg-surface lg:hidden animate-fade-in">
           <div className="container-wide space-y-6 py-6">
             <MobileSection label={t("nav.products")} items={productsMenu} pathname={pathname} lang={lang} t={t} />
-            <MobileSection label={t("nav.services")} items={servicesMenu} pathname={pathname} lang={lang} t={t} />
+            <MobileSection label={t("nav.engineering")} items={servicesMenu} pathname={pathname} lang={lang} t={t} />
 
             <div className="space-y-1">
               {navLinks.map((link) => {

@@ -7,12 +7,11 @@ import { PageShell, PageHero, Section, CTABand } from "@/components/PageShell";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Button } from "@/components/ui/button";
 import { PlaceholderImage } from "@/components/PlaceholderImage";
-import { ArrowRight, Wrench, Activity, Thermometer, BarChart3, Target } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/components/LanguageProvider";
 import { getHreflangs, getCanonical, localizedPath } from "@/lib/routes";
 import mechanicalDesignHero from "@/assets/mechanical-design-hero.png";
 import controlSystemsHero from "@/assets/control-systems-hero.png";
-import testingHero from "@/assets/testing-hero.png";
 import retrofitHero from "@/assets/retrofit-hero.png";
 import maintenanceHero from "@/assets/maintenance-hero.png";
 import subsystemHero from "@/assets/subsystem-hero.png";
@@ -132,85 +131,6 @@ function ServicePageTemplate({ seoKey, nsKey, heroImage, children }: ServicePage
     </Layout>
   );
 }
-
-function TestingScopeSection() {
-  const { t } = useTranslation("services");
-  const scope = t("testing.scope", { returnObjects: true }) as {
-    eyebrow: string;
-    title: string;
-    description: string;
-    items: Array<{
-      title: string;
-      equipment: string;
-      tests: string[];
-      category: string;
-    }>;
-  };
-
-  const icons = [Wrench, Activity, Thermometer, BarChart3, Target];
-
-  if (!scope?.items) return null;
-
-  return (
-    <Section className="bg-surface/30">
-      <SectionHeader
-        eyebrow={scope.eyebrow}
-        title={scope.title}
-        description={scope.description}
-        className="mb-10"
-      />
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {scope.items.map((item, i) => {
-          const Icon = icons[i] || Wrench;
-          const isLast = i === scope.items.length - 1;
-          return (
-            <div
-              key={item.title}
-              className={`bento-card rounded-lg p-6 space-y-5 ${isLast ? "md:col-span-2 max-w-2xl mx-auto w-full" : ""}`}
-            >
-              <div className="flex items-center gap-3">
-                <div className="flex h-9 w-9 items-center justify-center rounded-sm border border-blue/20 bg-blue/10 text-blue">
-                  <Icon className="w-5 h-5" />
-                </div>
-                <h3 className="text-base font-medium text-sand leading-snug">{item.title}</h3>
-              </div>
-
-              <div className="space-y-3">
-                <div>
-                  <span className="mono-label text-blue text-[11px] uppercase tracking-wider">Test systems / equipment</span>
-                  <p className="text-sm text-gray leading-relaxed mt-1">{item.equipment}</p>
-                </div>
-
-                <div>
-                  <span className="mono-label text-blue text-[11px] uppercase tracking-wider">Tests / capabilities</span>
-                  <ul className="mt-1.5 space-y-1">
-                    {item.tests.map((test) => (
-                      <li key={test} className="flex items-start gap-2 text-sm text-gray/90">
-                        <span className="w-1 h-1 rounded-full bg-blue mt-2 shrink-0" />
-                        <span className="leading-relaxed">{test}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-
-              <div className="pt-2 border-t border-gray/10">
-                <span className="mono-label text-[11px] text-gray/70 uppercase tracking-wider">Category</span>
-                <p className="text-xs text-sand/80 leading-relaxed mt-1">{item.category}</p>
-              </div>
-            </div>
-          );
-        })}
-      </div>
-    </Section>
-  );
-}
-
-export const TestingServices = () => (
-  <ServicePageTemplate seoKey="testingServices" nsKey="testing" heroImage={testingHero}>
-    <TestingScopeSection />
-  </ServicePageTemplate>
-);
 
 export const ControlSystemsDesign = () => (
   <ServicePageTemplate seoKey="controlSystems" nsKey="controlSystems" heroImage={controlSystemsHero} />

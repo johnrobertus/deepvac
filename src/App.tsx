@@ -13,13 +13,13 @@ import ThermalVision from "./pages/ThermalVision";
 import TwinQCM from "./pages/TwinQCM";
 import Services from "./pages/Services";
 import {
-  TestingServices,
   ControlSystemsDesign,
   MechanicalDesign,
   RetrofitModernisation,
   MaintenanceRepair,
   SubsystemIntegration,
 } from "./pages/ServicePages";
+import TestingServices from "./pages/TestingServices";
 import Team from "./pages/Team";
 import Catalogues from "./pages/Catalogues";
 import Careers from "./pages/Careers";
