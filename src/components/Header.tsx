@@ -22,7 +22,6 @@ const productsMenu: NavItem[] = [
 
 const servicesMenu: NavItem[] = [
   { labelKey: "nav.overview", href: "/services" },
-  { labelKey: "nav.testingServices", href: "/services/testing-services" },
   { labelKey: "nav.controlSystemsDesign", href: "/services/control-systems-design" },
   { labelKey: "nav.mechanicalDesign", href: "/services/mechanical-design" },
   { labelKey: "nav.retrofitModernization", href: "/services/retrofit-modernization" },
@@ -31,6 +30,7 @@ const servicesMenu: NavItem[] = [
 ];
 
 const navLinks: NavItem[] = [
+  { labelKey: "nav.testingServices", href: "/services/testing-services" },
   { labelKey: "nav.team", href: "/team" },
   { labelKey: "nav.resources", href: "/resources" },
   { labelKey: "nav.careers", href: "/careers" },
