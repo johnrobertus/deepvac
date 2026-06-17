@@ -67,61 +67,129 @@
     "relatedTitle": "Verwandte Produkte & Leistungen"
   },
   "testing": {
-    "eyebrow": "Leistungen",
-    "title": "Prüfdienstleistungen",
-    "description": "Thermovakuumprüfung mit Engineering-Präzision – für Qualifikations-, Validierungs- und Entwicklungsprogramme, die stabile Umgebungskontrolle und reproduzierbare Testworkflows erfordern.",
-    "overview": "Deepvac führt Thermovakuum-Testkampagnen über das gesamte Spektrum von Raumfahrt- und Forschungsanwendungen durch und unterstützt diese. Unsere Prüfdienstleistungen umfassen Kampagnenplanung, Kammervorbereitung, Testdurchführung, Datenerfassung und Nachberichterstattung. Jede Kampagne wird mit Fokus auf Umgebungsstabilität, Messgenauigkeit und Prozessreproduzierbarkeit durchgeführt.",
-    "deliverables": [
-      { "title": "Testkampagnendurchführung", "description": "End-to-End-Management und Durchführung von Thermovakuum-Testkampagnen einschließlich Kammervorbereitung, Prüflingsintegration und kontrollierter Testsequenzen." },
-      { "title": "Datenerfassung & Berichterstattung", "description": "Systematische Datenerfassung, Überwachung und umfassende Testberichterstattung mit Rückverfolgbarkeit und Dokumentationsstandards." },
-      { "title": "Qualifikations- & Abnahmeprüfung", "description": "Unterstützung formaler Qualifikations- und Abnahmeprüfverfahren gemäß projektspezifischen Anforderungen und Normen." },
-      { "title": "Engineering-Unterstützung", "description": "Technische Beratung während der Testplanung, Anomalieuntersuchung und Testergebnisinterpretation." }
-    ],
-    "scenarios": ["Qualifikationskampagnen für Satellitensubsysteme", "Umweltscreening auf Komponentenebene", "Forschungs- und Entwicklungsprogramme", "Thermische Zyklierung unter Hochvakuumbedingungen", "Ausgasungs- und Kontaminationscharakterisierung", "Hardware-Abnahmeprüfung"],
-    "crossLinks": [
-      { "label": "Standard-Serie-Kammern", "href": "/products/standard-series", "description": "Vorkonstruierte TVAC-Plattformen für Standard-Testkampagnenanforderungen." },
-      { "label": "Custom-TVAC-Systeme", "href": "/products/custom-tvac", "description": "Anwendungsspezifische Kammersysteme für spezialisierte Testanforderungen." },
-      { "label": "Steuerungstechnik", "href": "/services/control-systems-design", "description": "Integrierte Steuerungs- und Datenerfassungsarchitekturen für Testumgebungen." },
-      { "label": "Subsystem-Integration", "href": "/services/subsystem-integration", "description": "Integration von Testumgebungs-Subsystemen für kohärenten Betrieb." }
-    ],
-    "ctaTitle": "Besprechen Sie Ihre Testkampagnen-Anforderungen",
-    "ctaDescription": "Kontaktieren Sie Deepvac zur Planung und Durchführung Ihres Thermovakuum-Testprogramms mit Engineering-Präzision.",
-    "scope": {
+    "eyebrow": "Prüfdienstleistungen",
+    "title": "Prüfdienstleistungen für Qualifikations- und Entwicklungsprogramme",
+    "subline": "End-to-End-Unterstützung von Testkampagnen für Raumfahrt-, Forschungs- und industrielle Entwicklungsprogramme – von Planung und Aufbau bis zu Durchführung, Datenerfassung und Berichterstattung.",
+    "description": "Deepvac unterstützt kontrollierte Testkampagnen für Komponenten, Baugruppen und Subsystem-Hardware. Unsere Prüfdienstleistungen verbinden strukturierte Planung, Prüflingsintegration, kontrollierte Durchführung, messtechnische Unterstützung und Dokumentation auf Engineering-Niveau.",
+    "tags": ["Qualifikationsprüfung", "Umweltprüfung", "Thermovakuumprüfung", "Datenerfassung", "Testkampagnendurchführung"],
+    "ctaPrimary": "Testkampagne besprechen",
+    "ctaSecondary": "Kompetenzen ansehen",
+    "breadcrumbHome": "Start",
+    "breadcrumbCurrent": "Prüfdienstleistungen",
+    "scopeSection": {
+      "eyebrow": "Übersicht",
+      "title": "Leistungsumfang",
+      "p1": "Deepvac bietet strukturierte Durchführung und Unterstützung von Testkampagnen über Raumfahrt-, Forschungs- und industrielle Entwicklungsanwendungen hinweg. Je nach Projekt umfasst die Unterstützung Kampagnenplanung, Testaufbau, Vorbereitung von Kammer oder Prüfausrüstung, Prüflingsintegration, kontrollierte Testdurchführung, Messung und Datenerfassung, Anomalieunterstützung und Nachberichterstattung.",
+      "p2": "Die Leistung richtet sich an Teams, die stabile Testbedingungen, reproduzierbare Verfahren, zuverlässige Messdaten und klare technische Dokumentation während des gesamten Qualifikations- oder Entwicklungsprozesses benötigen."
+    },
+    "process": {
+      "eyebrow": "Prozess",
+      "title": "Wie wir Ihre Testkampagne unterstützen",
+      "intro": "Von der frühen Planung bis zur finalen Berichterstattung kann Deepvac komplette Testkampagnen oder einzelne Workflow-Phasen unterstützen.",
+      "steps": [
+        { "title": "Testplanung & Anforderungsprüfung", "description": "Überprüfung von Testzielen, Umweltbedingungen, Lastfällen, Instrumentierungsanforderungen, Verfahren und Akzeptanzkriterien." },
+        { "title": "Aufbau & Prüflingsintegration", "description": "Vorbereitung von Prüfausrüstung, Schnittstellen, Sensoren, Vorrichtungen, Kammerkonfiguration und sichere Integration des Prüflings." },
+        { "title": "Kontrollierte Testdurchführung", "description": "Durchführung definierter Testsequenzen mit Überwachung von Umweltparametern, Systemverhalten und Messsignalen." },
+        { "title": "Datenerfassung & Überwachung", "description": "Strukturierte Erfassung relevanter thermischer, mechanischer, optischer, dynamischer oder elektrischer Daten je nach Testaufbau." },
+        { "title": "Berichterstattung & Engineering-Auswertung", "description": "Nachdokumentation, Ergebniszusammenfassung, nachvollziehbare Berichte und technische Unterstützung bei der Interpretation der Testergebnisse." }
+      ]
+    },
+    "capabilities": {
       "eyebrow": "Kompetenzen",
-      "title": "Prüfdienstleistungen – Leistungsspektrum",
-      "description": "Unsere Prüfdienstleistungen decken mechanische, dynamische, umweltbezogene, messbasierte und stoßbezogene Qualifikationsprüfungen für Komponenten, Baugruppen und Strukturbauteile ab.",
+      "title": "Prüfkompetenzen",
+      "intro": "Unsere Kompetenzen umfassen umweltbezogene, thermovakuum-, mechanische, dynamische, messbasierte und stoßbezogene Testprogramme. Je nach Projekt kann Deepvac einzelne Tests, vollständige Kampagnen oder ausgewählte Phasen wie Aufbau, Instrumentierung, Überwachung, Durchführung und Berichterstattung unterstützen.",
+      "equipmentLabel": "Unterstützte Testaufbauten / Equipment",
+      "testsLabel": "Tests / Kompetenzen",
+      "categoryLabel": "Kategorie",
       "items": [
         {
+          "title": "Umwelt-, Thermo- & Vakuumprüfung",
+          "short": "Kontrollierte umwelt- und raumfahrtähnliche Testbedingungen für Qualifikations-, Validierungs- und Entwicklungsprogramme.",
+          "equipment": "Klima-, Thermo- und Vakuumkammern",
+          "tests": ["Klimatische Konditionierung von Proben und Komponenten", "Mechanische Prüfungen unter Umweltbedingungen", "Elektrische Prüfungen unter Umweltbedingungen", "Thermische Raumfahrtsimulation", "Funktionsprüfung unter raumfahrtähnlichen Bedingungen", "Thermische Zyklierung unter Vakuumbedingungen"],
+          "category": "Umweltprüfung, Thermoprüfung, Vakuumprüfung und Raumfahrtsimulation"
+        },
+        {
           "title": "Mechanische Strukturprüfung",
+          "short": "Mechanische Last- und Strukturqualifikationsprüfungen für Komponenten, Baugruppen und Strukturbauteile.",
           "equipment": "Universalprüfmaschinen und servohydraulische Prüfsysteme",
           "tests": ["Zugversuche", "Druckversuche", "3-Punkt- und 4-Punkt-Biegeversuche", "Delllastermittlung", "Durchstoßprüfung", "Ermüdungsversuche", "Risswachstumsversuche"],
           "category": "Mechanische Strukturprüfung und Komponentenqualifikation"
         },
         {
-          "title": "Vibration, Schock und dynamische Prüfung",
+          "title": "Vibration, Schock & dynamische Prüfung",
+          "short": "Dynamische Prüfung für Komponenten und Baugruppen, die Start-, Transport- oder Betriebslasten ausgesetzt sind.",
           "equipment": "Vibrations- und Schockprüfsysteme",
-          "tests": ["Vibrationsprüfung von Komponenten", "Experimentelle Modalanalyse", "Simulation und Reproduktion dynamischer Lasten", "Raumfahrtqualifikationsprüfung"],
-          "category": "Dynamische Prüfung, Vibration, Schock und Raumfahrtqualifikation"
+          "tests": ["Vibrationsprüfung von Komponenten", "Experimentelle Modalanalyse", "Simulation und Reproduktion dynamischer Lasten", "Schockprüfung", "Raumfahrtqualifikationsprüfung"],
+          "category": "Dynamische Prüfung, Vibrationsprüfung, Schockprüfung und Raumfahrtqualifikation"
         },
         {
-          "title": "Umwelt, Thermo- und Vakuumprüfung",
-          "equipment": "Klima-, Thermo- und Vakuumkammern",
-          "tests": ["Klimatische Konditionierung von Proben und Komponenten", "Mechanische Prüfungen unter Umweltbedingungen", "Elektrische Prüfungen unter Umweltbedingungen", "Thermische Raumfahrtsimulation", "Funktionsprüfung unter raumfahrtähnlichen Bedingungen"],
-          "category": "Umweltprüfung, Thermoprüfung, Vakuumprüfung und Raumfahrtsimulation"
-        },
-        {
-          "title": "Messtechnik und Datenerfassung",
+          "title": "Messtechnik & Datenerfassung",
+          "short": "Messung, Überwachung und Signalerfassung zur Unterstützung von Testdurchführung und technischer Auswertung.",
           "equipment": "Optische, thermische und dynamische Mess- und Datenerfassungssysteme",
           "tests": ["Optische Deformations- und Dehnungsmessung", "Hochauflösende Bild- und Oberflächenanalyse", "Thermografie und Temperaturmessung", "Vibrations- und dynamische Antwortmessung", "Datenerfassung während mechanischer, dynamischer und thermischer Prüfungen", "Prüfauswertung und Signalverarbeitung"],
           "category": "Unterstützende Messtechnik, Datenerfassung und Prüfauswertung"
         },
         {
-          "title": "Schock- und Fallturmprüfung",
+          "title": "Stoß- & Fallturmprüfung",
+          "short": "Stoß- und schädigungsbezogene Prüfung für Komponenten, Werkstoffe und Strukturbauteile.",
           "equipment": "Fallturm- und Stoßprüfsysteme",
           "tests": ["Crash- und Stoßprüfung", "Penetrationsprüfung", "Durchstoßprüfung", "Gezielte Vorschädigung von Komponenten"],
           "category": "Stoßprüfung, Crashprüfung und Vorschädigungsprüfung"
         }
       ]
+    },
+    "deliverables": {
+      "eyebrow": "Leistungen",
+      "title": "Leistungen",
+      "intro": "Jede Testkampagne kann durch strukturierte Dokumentation, Messdaten, nachvollziehbare Verfahren und projektspezifischen Engineering-Input unterstützt werden.",
+      "items": [
+        { "title": "Testkampagnenplan", "description": "Definition von Testzielen, Verfahren, Umweltbedingungen, Messaufbau, Akzeptanzkriterien und erforderlicher Dokumentation." },
+        { "title": "Testaufbau-Dokumentation", "description": "Dokumentation der Ausrüstungskonfiguration, Prüflingsintegration, Instrumentierung, Schnittstellen und relevanter Aufbauparameter." },
+        { "title": "Messdaten", "description": "Strukturierte Erfassung und Bereitstellung relevanter Testdaten wie Temperatur, Druck, Deformation, Vibration, optische, elektrische oder dynamische Antwortdaten." },
+        { "title": "Testbericht", "description": "Nachdokumentation einschließlich Testbedingungen, Verfahrensdurchführung, Beobachtungen, Anomalien, Messergebnissen und Engineering-Notizen." },
+        { "title": "Engineering-Unterstützung", "description": "Technische Unterstützung bei Planung, Durchführung, Anomalieuntersuchung und Interpretation der Testergebnisse." }
+      ]
+    },
+    "applications": {
+      "eyebrow": "Anwendungen",
+      "title": "Typische Anwendungen",
+      "items": [
+        "Qualifikation von Satellitensubsystemen",
+        "Umweltscreening auf Komponentenebene",
+        "Thermovakuum- und Thermozyklierungskampagnen",
+        "Hardware-Abnahmeprüfung",
+        "Forschungs- und Entwicklungsprogramme",
+        "Bewertung von Werkstoffen und Strukturbauteilen",
+        "Ausgasungs- und kontaminationsbezogene Untersuchungen",
+        "Funktionsprüfung unter kontrollierten Umweltbedingungen"
+      ]
+    },
+    "why": {
+      "eyebrow": "Warum Deepvac",
+      "title": "Warum Deepvac für Prüfdienstleistungen",
+      "items": [
+        { "title": "Engineering-geführte Testdurchführung", "description": "Testkampagnen werden mit Systemverständnis für Thermovakuumsysteme, Instrumentierung, Steuerungssysteme und Qualifikations-Workflows unterstützt." },
+        { "title": "Kontrollierte und reproduzierbare Prozesse", "description": "Fokus auf stabile Testbedingungen, definierte Verfahren, nachvollziehbare Daten und reproduzierbare Durchführung." },
+        { "title": "Integriertes Systemwissen", "description": "Deepvac vereint Expertise in Kammersystemen, Steuerungstechnik, Messtechnik und Testumgebungsintegration." },
+        { "title": "Vom Aufbau bis zum Bericht", "description": "Die Unterstützung kann den gesamten Kampagnen-Workflow oder ausgewählte Phasen je nach Projektbedarf abdecken." }
+      ]
+    },
+    "related": {
+      "eyebrow": "Verwandt",
+      "title": "Verwandte Produkte & Leistungen",
+      "items": [
+        { "label": "Standard-Serie-Kammern", "href": "/products/standard-series", "description": "Vorkonstruierte Thermovakuumkammer-Plattformen für Standard-Qualifikations- und Entwicklungstestanforderungen." },
+        { "label": "Custom-TVAC-Systeme", "href": "/products/custom-tvac", "description": "Anwendungsspezifische Thermovakuumsysteme für spezialisierte Testumgebungen und komplexe Qualifikations-Workflows." },
+        { "label": "Steuerungstechnik", "href": "/services/control-systems-design", "description": "Steuerungs- und Datenerfassungsarchitekturen für präzise Überwachung, Automatisierung und Betrieb von Testumgebungen." },
+        { "label": "Subsystem-Integration", "href": "/services/subsystem-integration", "description": "Integration von Kammersubsystemen, Instrumentierung, Steuerungshardware und Testumgebungskomponenten." },
+        { "label": "Mechanische Konstruktion", "href": "/services/mechanical-design", "description": "Mechanische Vorrichtungen, Schnittstellen und Systemkomponenten für Testumgebungen und Kammerintegration." }
+      ]
+    },
+    "cta": {
+      "title": "Planen Sie Ihre nächste Testkampagne mit Deepvac",
+      "description": "Teilen Sie Ihre Testziele, Umweltanforderungen und Qualifikationsbedürfnisse. Deepvac unterstützt Planung, Aufbau, Durchführung und Dokumentation Ihrer nächsten Testkampagne.",
+      "button": "Testkampagne besprechen"
     }
   },
   "controlSystems": {

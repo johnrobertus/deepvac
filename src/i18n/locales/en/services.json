@@ -67,61 +67,129 @@
     "relatedTitle": "Related Products & Services"
   },
   "testing": {
-    "eyebrow": "Services",
-    "title": "Testing Services",
-    "description": "Thermal vacuum testing executed with engineering precision — supporting qualification, validation, and development programs that require stable environmental control and repeatable test workflows.",
-    "overview": "Deepvac provides execution and support of thermal vacuum test campaigns across the full spectrum of aerospace and research applications. Our testing services encompass campaign planning, chamber preparation, test execution, data acquisition, and post-test reporting. Each campaign is executed with focus on environmental stability, measurement accuracy, and process repeatability.",
-    "deliverables": [
-      { "title": "Test Campaign Execution", "description": "End-to-end management and execution of thermal vacuum test campaigns including chamber preparation, test article integration, and controlled test sequences." },
-      { "title": "Data Acquisition & Reporting", "description": "Systematic data collection, monitoring, and comprehensive test reporting with traceability and documentation standards." },
-      { "title": "Qualification & Acceptance Testing", "description": "Support for formal qualification and acceptance test procedures aligned with project-specific requirements and standards." },
-      { "title": "Engineering Support", "description": "Technical advisory during test planning, anomaly investigation, and test result interpretation." }
-    ],
-    "scenarios": ["Satellite subsystem qualification campaigns", "Component-level environmental screening", "Research and development test programs", "Thermal cycling under high-vacuum conditions", "Outgassing and contamination characterization", "Hardware acceptance testing"],
-    "crossLinks": [
-      { "label": "Standard Series Chambers", "href": "/products/standard-series", "description": "Pre-engineered TVAC platforms suitable for standard test campaign requirements." },
-      { "label": "Custom TVAC Systems", "href": "/products/custom-tvac", "description": "Application-specific chamber systems for specialized test requirements." },
-      { "label": "Control Systems Design", "href": "/services/control-systems-design", "description": "Integrated control and data acquisition architectures for test environments." },
-      { "label": "Subsystem Integration", "href": "/services/subsystem-integration", "description": "Integration of test environment subsystems for coherent operation." }
-    ],
-    "ctaTitle": "Discuss Your Test Campaign Requirements",
-    "ctaDescription": "Contact Deepvac to plan and execute your thermal vacuum test program with engineering-grade precision.",
-    "scope": {
+    "eyebrow": "Testing Services",
+    "title": "Testing Services for Qualification and Development Programs",
+    "subline": "End-to-end test campaign support for aerospace, research and industrial development programs — from planning and setup to execution, data acquisition and reporting.",
+    "description": "Deepvac supports controlled test campaigns for components, assemblies and subsystem-level hardware. Our testing services combine structured planning, test article integration, controlled execution, measurement support and engineering-grade documentation.",
+    "tags": ["Qualification Testing", "Environmental Testing", "Thermal Vacuum Testing", "Data Acquisition", "Test Campaign Execution"],
+    "ctaPrimary": "Discuss a Test Campaign",
+    "ctaSecondary": "View Capabilities",
+    "breadcrumbHome": "Home",
+    "breadcrumbCurrent": "Testing Services",
+    "scopeSection": {
+      "eyebrow": "Overview",
+      "title": "Service Scope",
+      "p1": "Deepvac provides structured execution and support for test campaigns across aerospace, research and industrial development applications. Depending on the project, support can include campaign planning, test setup, chamber or equipment preparation, test article integration, controlled test execution, measurement and data acquisition, anomaly support and post-test reporting.",
+      "p2": "The service is designed for teams that require stable test conditions, repeatable procedures, reliable measurement data and clear technical documentation throughout the qualification or development process."
+    },
+    "process": {
+      "eyebrow": "Process",
+      "title": "How We Support Your Test Campaign",
+      "intro": "From early planning to final reporting, Deepvac can support complete test campaigns or selected phases of the workflow.",
+      "steps": [
+        { "title": "Test Planning & Requirements Review", "description": "Review of test objectives, environmental conditions, load cases, instrumentation needs, procedures and acceptance criteria." },
+        { "title": "Setup & Test Article Integration", "description": "Preparation of test equipment, interfaces, sensors, fixtures, chamber configuration and safe integration of the test article." },
+        { "title": "Controlled Test Execution", "description": "Execution of defined test sequences with monitoring of environmental parameters, system behavior and measurement signals." },
+        { "title": "Data Acquisition & Monitoring", "description": "Structured acquisition of relevant thermal, mechanical, optical, dynamic or electrical data depending on the test setup." },
+        { "title": "Reporting & Engineering Evaluation", "description": "Post-test documentation, results summary, traceable reporting and technical support for interpretation of test outcomes." }
+      ]
+    },
+    "capabilities": {
       "eyebrow": "Capabilities",
-      "title": "Testing Services Scope",
-      "description": "Our testing services cover mechanical, dynamic, environmental, measurement-based and impact-related qualification tests for components, assemblies and structural parts.",
+      "title": "Testing Capabilities",
+      "intro": "Our capabilities cover environmental, thermal vacuum, mechanical, dynamic, measurement-based and impact-related test programs. Depending on the project, Deepvac can support individual tests, complete campaigns or selected phases such as setup, instrumentation, monitoring, execution and reporting.",
+      "equipmentLabel": "Supported test setups / equipment",
+      "testsLabel": "Tests / capabilities",
+      "categoryLabel": "Category",
       "items": [
         {
-          "title": "Mechanical Structure Testing",
-          "equipment": "Universal testing machines and servo-hydraulic test systems",
-          "tests": ["Tensile tests", "Compression tests", "3-point and 4-point bending tests", "Dent load determination", "Puncture testing", "Fatigue testing", "Crack growth testing"],
-          "category": "Mechanical structure testing and component qualification"
-        },
-        {
-          "title": "Vibration, Shock and Dynamic Testing",
-          "equipment": "Vibration and shock test systems",
-          "tests": ["Vibration testing of components", "Experimental modal analysis", "Simulation and reproduction of dynamic loads", "Space qualification testing"],
-          "category": "Dynamic testing, vibration, shock and space qualification"
-        },
-        {
-          "title": "Environmental, Thermal and Vacuum Testing",
+          "title": "Environmental, Thermal & Vacuum Testing",
+          "short": "Controlled environmental and space-like test conditions for qualification, validation and development programs.",
           "equipment": "Climate, thermal and vacuum chambers",
-          "tests": ["Climatic conditioning of samples and components", "Mechanical tests under environmental conditions", "Electrical tests under environmental conditions", "Thermal space simulation", "Functional testing under space-like conditions"],
+          "tests": ["Climatic conditioning of samples and components", "Mechanical tests under environmental conditions", "Electrical tests under environmental conditions", "Thermal space simulation", "Functional testing under space-like conditions", "Thermal cycling under vacuum conditions"],
           "category": "Environmental testing, thermal testing, vacuum testing and space simulation"
         },
         {
-          "title": "Measurement and Data Acquisition",
+          "title": "Mechanical Structure Testing",
+          "short": "Mechanical load and structural qualification tests for components, assemblies and structural parts.",
+          "equipment": "Universal testing machines and servo-hydraulic test systems",
+          "tests": ["Tensile testing", "Compression testing", "3-point and 4-point bending tests", "Dent load determination", "Puncture testing", "Fatigue testing", "Crack growth testing"],
+          "category": "Mechanical structure testing and component qualification"
+        },
+        {
+          "title": "Vibration, Shock & Dynamic Testing",
+          "short": "Dynamic testing for components and assemblies exposed to launch, transport or operational load environments.",
+          "equipment": "Vibration and shock test systems",
+          "tests": ["Vibration testing of components", "Experimental modal analysis", "Simulation and reproduction of dynamic loads", "Shock testing", "Space qualification testing"],
+          "category": "Dynamic testing, vibration testing, shock testing and space qualification"
+        },
+        {
+          "title": "Measurement & Data Acquisition",
+          "short": "Measurement, monitoring and signal acquisition to support test execution and technical evaluation.",
           "equipment": "Optical, thermal and dynamic measurement and data acquisition systems",
           "tests": ["Optical deformation and strain measurement", "High-resolution image and surface analysis", "Thermography and temperature measurement", "Vibration and dynamic response measurement", "Data acquisition during mechanical, dynamic and thermal tests", "Test evaluation and signal processing"],
           "category": "Supporting measurement technology, data acquisition and test evaluation"
         },
         {
-          "title": "Impact and Drop Tower Testing",
+          "title": "Impact & Drop Tower Testing",
+          "short": "Impact and damage-related testing for components, materials and structural parts.",
           "equipment": "Drop tower and impact test systems",
           "tests": ["Crash and impact testing", "Penetration testing", "Puncture testing", "Targeted pre-damage of components"],
           "category": "Impact testing, crash testing and pre-damage testing"
         }
       ]
+    },
+    "deliverables": {
+      "eyebrow": "Deliverables",
+      "title": "Deliverables",
+      "intro": "Each test campaign can be supported with structured documentation, measurement data, traceable procedures and engineering input tailored to the requirements of the project.",
+      "items": [
+        { "title": "Test Campaign Plan", "description": "Definition of test objectives, procedures, environmental conditions, measurement setup, acceptance criteria and required documentation." },
+        { "title": "Test Setup Documentation", "description": "Documentation of equipment configuration, test article integration, instrumentation, interfaces and relevant setup parameters." },
+        { "title": "Measurement Data", "description": "Structured acquisition and delivery of relevant test data such as temperature, pressure, deformation, vibration, optical, electrical or dynamic response data." },
+        { "title": "Test Report", "description": "Post-test summary including test conditions, procedure execution, observations, anomalies, measurement results and engineering notes." },
+        { "title": "Engineering Support", "description": "Technical support during planning, execution, anomaly investigation and interpretation of test results." }
+      ]
+    },
+    "applications": {
+      "eyebrow": "Applications",
+      "title": "Typical Applications",
+      "items": [
+        "Satellite subsystem qualification",
+        "Component-level environmental screening",
+        "Thermal vacuum and thermal cycling campaigns",
+        "Hardware acceptance testing",
+        "Research and development test programs",
+        "Material and structural component evaluation",
+        "Outgassing and contamination-related investigations",
+        "Functional testing under controlled environmental conditions"
+      ]
+    },
+    "why": {
+      "eyebrow": "Why Deepvac",
+      "title": "Why Deepvac for Testing Services",
+      "items": [
+        { "title": "Engineering-led test execution", "description": "Test campaigns are supported with system-level understanding of thermal vacuum systems, instrumentation, control systems and qualification workflows." },
+        { "title": "Controlled and repeatable processes", "description": "Focus on stable test conditions, defined procedures, traceable data and repeatable execution." },
+        { "title": "Integrated system knowledge", "description": "Deepvac combines expertise in chamber systems, control systems, measurement technology and test environment integration." },
+        { "title": "From setup to reporting", "description": "Support can cover the complete campaign workflow or selected phases depending on project needs." }
+      ]
+    },
+    "related": {
+      "eyebrow": "Related",
+      "title": "Related Products & Services",
+      "items": [
+        { "label": "Standard Series Chambers", "href": "/products/standard-series", "description": "Pre-engineered thermal vacuum chamber platforms for standard qualification and development test requirements." },
+        { "label": "Custom TVAC Systems", "href": "/products/custom-tvac", "description": "Application-specific thermal vacuum systems for specialized test environments and complex qualification workflows." },
+        { "label": "Control Systems Design", "href": "/services/control-systems-design", "description": "Control and data acquisition architectures for precise monitoring, automation and test environment operation." },
+        { "label": "Subsystem Integration", "href": "/services/subsystem-integration", "description": "Integration of chamber subsystems, instrumentation, control hardware and test environment components." },
+        { "label": "Mechanical Design", "href": "/services/mechanical-design", "description": "Mechanical fixtures, interfaces and system components for test environments and chamber integration." }
+      ]
+    },
+    "cta": {
+      "title": "Plan Your Next Test Campaign With Deepvac",
+      "description": "Share your test objectives, environmental requirements and qualification needs. Deepvac can support the planning, setup, execution and documentation of your next test campaign.",
+      "button": "Discuss Your Test Campaign"
     }
   },
   "controlSystems": {
