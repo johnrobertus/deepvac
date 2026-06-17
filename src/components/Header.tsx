@@ -312,7 +312,7 @@ export function Header() {
         <div className="max-h-[calc(100vh-4rem)] overflow-y-auto border-t border-gray/10 bg-surface lg:hidden animate-fade-in">
           <div className="container-wide space-y-6 py-6">
             <MobileSection label={t("nav.products")} items={productsMenu} pathname={pathname} lang={lang} t={t} />
-            <MobileSection label={t("nav.services")} items={servicesMenu} pathname={pathname} lang={lang} t={t} />
+            <MobileSection label={t("nav.engineering")} items={servicesMenu} pathname={pathname} lang={lang} t={t} />
 
             <div className="space-y-1">
               {navLinks.map((link) => {
