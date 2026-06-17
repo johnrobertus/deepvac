@@ -238,7 +238,7 @@ export function Header() {
           />
 
           <DropdownMenu
-            label={t("nav.services")}
+            label={t("nav.engineering")}
             baseHref="/services"
             items={servicesMenu}
             pathname={pathname}
