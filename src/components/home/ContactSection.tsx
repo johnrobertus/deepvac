@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/Reveal";
-import { Phone, Mail, MapPin, Shield, Loader2, CheckCircle } from "lucide-react";
+import { Phone, Mail, MapPin, Shield, Loader2, CheckCircle, ClipboardCheck } from "lucide-react";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { ConsentMap } from "@/components/ConsentMap";
@@ -232,6 +232,25 @@ export function ContactSection() {
                 <p className="text-sm text-gray/85 leading-relaxed">{t("formDescription")}</p>
               </div>
 
+              <aside
+                aria-label={t("prepareCard.title")}
+                className="bento-card rounded-lg p-5 sm:p-6 space-y-3 border-blue/20"
+              >
+                <div className="flex items-start gap-3">
+                  <ClipboardCheck className="w-4 h-4 text-blue mt-0.5 shrink-0" aria-hidden="true" />
+                  <div className="space-y-1">
+                    <p className="mono-label text-blue">{t("prepareCard.title")}</p>
+                    <p className="text-[13px] text-gray/85 leading-relaxed">{t("prepareCard.subtitle")}</p>
+                  </div>
+                </div>
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-1.5 pl-7 list-disc marker:text-blue/60">
+                  {(t("prepareCard.items", { returnObjects: true }) as string[]).map((item) => (
+                    <li key={item} className="text-[13px] text-gray leading-snug">{item}</li>
+                  ))}
+                </ul>
+              </aside>
+
+
               <form className="space-y-7" onSubmit={handleSubmit}>
                 {/* Section 1 — Contact details */}
                 <div className="space-y-5">
@@ -356,8 +375,12 @@ export function ContactSection() {
                 <ConsentMap height="h-44" />
               </div>
 
-              <a href="https://www.linkedin.com/company/deepvac-gmbh/" target="_blank" rel="noopener noreferrer"
-                className="bento-card rounded-lg p-4 flex items-center justify-between group block">
+              <a
+                href="https://www.linkedin.com/company/deepvac-gmbh/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Follow Deepvac on LinkedIn (opens in new tab)"
+                className="bento-card rounded-lg p-4 flex items-center justify-between group block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue/70 focus-visible:ring-offset-2 focus-visible:ring-offset-background">
                 <span className="text-sm text-gray group-hover:text-sand transition-colors">{tc("footer.followDeepvac")}</span>
                 <span className="text-sm text-blue font-mono">LinkedIn →</span>
               </a>
