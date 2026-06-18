@@ -375,8 +375,12 @@ export function ContactSection() {
                 <ConsentMap height="h-44" />
               </div>
 
-              <a href="https://www.linkedin.com/company/deepvac-gmbh/" target="_blank" rel="noopener noreferrer"
-                className="bento-card rounded-lg p-4 flex items-center justify-between group block">
+              <a
+                href="https://www.linkedin.com/company/deepvac-gmbh/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Follow Deepvac on LinkedIn (opens in new tab)"
+                className="bento-card rounded-lg p-4 flex items-center justify-between group block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue/70 focus-visible:ring-offset-2 focus-visible:ring-offset-background">
                 <span className="text-sm text-gray group-hover:text-sand transition-colors">{tc("footer.followDeepvac")}</span>
                 <span className="text-sm text-blue font-mono">LinkedIn →</span>
               </a>
