@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/Reveal";
-import { Phone, Mail, MapPin, Shield, Loader2, CheckCircle } from "lucide-react";
+import { Phone, Mail, MapPin, Shield, Loader2, CheckCircle, ClipboardCheck } from "lucide-react";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { ConsentMap } from "@/components/ConsentMap";
