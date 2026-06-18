@@ -24,7 +24,14 @@ const Catalogues = () => {
   const featured = brochures.find((b) => b.featured);
 
   const placeholderDocs: Brochure[] = [
-    { id: "custom-tvac", title: t("placeholderDocs.customTvac.title"), description: t("placeholderDocs.customTvac.description"), tags: ["TVAC", "Custom"], pdfUrl: "", coverUrl: "" },
+    {
+      id: "company-overview-capabilities",
+      title: t("placeholderDocs.customTvac.title"),
+      description: t("placeholderDocs.customTvac.description"),
+      tags: ["Overview", "TVAC", "Custom"],
+      pdfUrl: "/brochures/deepvac-company-overview-capabilities.pdf",
+      coverUrl: "",
+    },
     { id: "service-portfolio", title: t("placeholderDocs.servicePortfolio.title"), description: t("placeholderDocs.servicePortfolio.description"), tags: ["Service", "Overview"], pdfUrl: "", coverUrl: "" },
   ];
 
