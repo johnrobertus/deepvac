@@ -189,7 +189,7 @@ export function HeroSection() {
                     const isDe = i18n.language === "de";
                     return (
                       <h1
-                        className="max-w-[15ch] font-medium text-sand [text-wrap:balance] md:max-w-[14ch] lg:max-w-[18ch] xl:max-w-[20ch] 2xl:max-w-[22ch]"
+                        className="max-w-[15ch] font-medium text-sand whitespace-pre-line [text-wrap:balance] md:max-w-[14ch] lg:max-w-[18ch] xl:max-w-[20ch] 2xl:max-w-[22ch]"
                         style={{
                           fontSize: isDe
                             ? "clamp(1.55rem, 3.75vw, 4.85rem)"

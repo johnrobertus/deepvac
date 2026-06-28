@@ -4,6 +4,17 @@
   "description": "Ob Sie eine Kammerplattform, eine kundenspezifische TVAC-Konfiguration oder Engineering-Unterstützung für Modernisierung und Integration benötigen – unser Team steht bereit, Ihr Projekt zu besprechen.",
   "formTitle": "Erzählen Sie uns von Ihrem Projekt",
   "formDescription": "Ob Sie ein TVAC-System, Testunterstützung, Retrofit, Steuerungsdesign, mechanische Konstruktion oder Subsystemintegration benötigen — senden Sie uns einen kurzen Überblick. Wir leiten Ihre Anfrage an die zuständigen Spezialisten weiter.",
+  "prepareCard": {
+    "title": "Was Ihre Anfrage enthalten sollte",
+    "subtitle": "Diese Angaben vorab helfen unserem Engineering-Team, den richtigen Umfang und Ansprechpartner zuzuordnen.",
+    "items": [
+      "Kammergröße und Nutzvolumen",
+      "Temperaturbereich und thermisches Profil",
+      "Payload, Masse und Schnittstellen",
+      "Anwendung oder Teststandard",
+      "Zeitrahmen und Projektphase"
+    ]
+  },
   "decisionHelper": {
     "title": "Nicht sicher, welches Formular passt?",
     "body": "Nutzen Sie dieses kurze Projektanfrageformular für Produkte, Services, ein bestehendes System, Tests, Retrofit, Wartung oder ein Projekt in einer frühen Phase. Nutzen Sie den technischen Fragebogen, wenn Sie bereits ein kundenspezifisches TVAC- oder Weltraumsimulationssystem detailliert spezifizieren möchten.",

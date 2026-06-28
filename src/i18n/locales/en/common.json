@@ -31,7 +31,12 @@
     "company": "Company",
     "contact": "Contact",
     "privacySettings": "Privacy Settings",
-    "technicalQuestionnaire": "Technical questionnaire"
+    "technicalQuestionnaire": "Technical questionnaire",
+    "ctaEyebrow": "Ready for mission success?",
+    "ctaTitle": "Let's evaluate your testing environment.",
+    "ctaDescription": "Share your chamber, qualification, or retrofit requirements with our engineering team — or submit a full technical specification through the questionnaire.",
+    "ctaPrimary": "Discuss Your Custom TVAC Project",
+    "ctaSecondary": "Open Technical Questionnaire"
   },
   "cta": {
     "questionnaire": {
@@ -68,7 +73,8 @@
     "returnToHomepage": "Return to Homepage",
     "contactUs": "Contact Us",
     "allServices": "All Services",
-    "discussRequirements": "Discuss Your Project",
+    "discussRequirements": "Discuss Your TVAC Project",
+    "contactDeepvac": "Contact Deepvac",
     "downloadBrochure": "Download Brochure",
     "requestTechnicalDetails": "Request Technical Details",
     "discussConfiguration": "Discuss a Custom Configuration",

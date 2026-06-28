@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { Phone, Mail, MapPin, ArrowUpRight } from "lucide-react";
+import { Phone, Mail, MapPin, ArrowUpRight, ArrowRight, ClipboardList } from "lucide-react";
 import { useLanguage } from "@/components/LanguageProvider";
 import { localizedPath } from "@/lib/routes";
 import { PrivacySettingsDialog } from "@/components/PrivacySettingsDialog";
+import { Button } from "@/components/ui/button";
 import deepvacLogo from "@/assets/deepvac-logo.png";
 
 export function Footer() {
@@ -39,6 +40,44 @@ export function Footer() {
 
   return (
     <footer className="border-t border-gray/10 bg-surface">
+      <section
+        aria-label={t("footer.ctaTitle")}
+        className="border-b border-gray/10 bg-gradient-to-b from-background/40 via-surface to-surface"
+      >
+        <div className="container-wide py-12 md:py-16">
+          <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+            <div className="max-w-2xl space-y-3">
+              <span className="mono-label text-blue">{t("footer.ctaEyebrow")}</span>
+              <h2 className="text-2xl font-medium tracking-tight text-sand md:text-3xl [text-wrap:balance]">
+                {t("footer.ctaTitle")}
+              </h2>
+              <p className="text-sm leading-relaxed text-gray md:text-[15px]">
+                {t("footer.ctaDescription")}
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-3 md:shrink-0">
+              <Button asChild size="lg" className="font-mono text-xs tracking-wide">
+                <Link to={lp("/contact")}>
+                  {t("footer.ctaPrimary")}
+                  <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
+                </Link>
+              </Button>
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="border-blue/40 font-mono text-xs tracking-wide text-sand hover:bg-blue/10"
+              >
+                <Link to={lp("/tvac-questionnaire")}>
+                  <ClipboardList className="mr-2 h-4 w-4" aria-hidden="true" />
+                  {t("footer.ctaSecondary")}
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <div className="container-wide py-16 md:py-20">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-[1.35fr_repeat(3,minmax(0,1fr))]">
           <div className="space-y-5">

@@ -31,7 +31,12 @@
     "company": "Unternehmen",
     "contact": "Kontakt",
     "privacySettings": "Datenschutzeinstellungen",
-    "technicalQuestionnaire": "Technischer Fragebogen"
+    "technicalQuestionnaire": "Technischer Fragebogen",
+    "ctaEyebrow": "Bereit für Mission Success?",
+    "ctaTitle": "Lassen Sie uns Ihre Testumgebung gemeinsam bewerten.",
+    "ctaDescription": "Teilen Sie Ihre Anforderungen an Kammer, Qualifikation oder Retrofit mit unserem Engineering-Team — oder übermitteln Sie eine vollständige technische Spezifikation über den Fragebogen.",
+    "ctaPrimary": "Ihr Custom-TVAC-Projekt besprechen",
+    "ctaSecondary": "Technischen Fragebogen öffnen"
   },
   "cta": {
     "questionnaire": {
@@ -68,7 +73,8 @@
     "returnToHomepage": "Zur Startseite",
     "contactUs": "Kontakt aufnehmen",
     "allServices": "Alle Leistungen",
-    "discussRequirements": "Projekt besprechen",
+    "discussRequirements": "Ihr TVAC-Projekt besprechen",
+    "contactDeepvac": "Deepvac kontaktieren",
     "downloadBrochure": "Broschüre herunterladen",
     "requestTechnicalDetails": "Technische Details anfragen",
     "discussConfiguration": "Konfiguration besprechen",
