@@ -55,13 +55,8 @@ export function Footer() {
                 {t("footer.ctaDescription")}
               </p>
             </div>
-            <div className="flex flex-wrap gap-3 md:shrink-0">
-              <Button
-                asChild
-                variant="outline"
-                size="lg"
-                className="border-blue/40 font-mono text-xs tracking-wide text-sand hover:bg-blue/10"
-              >
+            <div className="md:shrink-0">
+              <Button asChild size="lg" className="font-mono text-xs tracking-wide">
                 <Link to={lp("/tvac-questionnaire")}>
                   <ClipboardList className="mr-2 h-4 w-4" aria-hidden="true" />
                   {t("footer.ctaSecondary")}
