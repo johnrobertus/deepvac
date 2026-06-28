@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { Phone, Mail, MapPin, ArrowUpRight, ArrowRight, ClipboardList } from "lucide-react";
+import { Phone, Mail, MapPin, ArrowUpRight, ClipboardList } from "lucide-react";
 import { useLanguage } from "@/components/LanguageProvider";
 import { localizedPath } from "@/lib/routes";
 import { PrivacySettingsDialog } from "@/components/PrivacySettingsDialog";
