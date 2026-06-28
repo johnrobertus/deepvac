@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { Phone, Mail, MapPin, ArrowUpRight, ArrowRight, ClipboardList } from "lucide-react";
+import { Phone, Mail, MapPin, ArrowUpRight, ClipboardList } from "lucide-react";
 import { useLanguage } from "@/components/LanguageProvider";
 import { localizedPath } from "@/lib/routes";
 import { PrivacySettingsDialog } from "@/components/PrivacySettingsDialog";
@@ -56,12 +56,6 @@ export function Footer() {
               </p>
             </div>
             <div className="flex flex-wrap gap-3 md:shrink-0">
-              <Button asChild size="lg" className="font-mono text-xs tracking-wide">
-                <Link to={lp("/contact")}>
-                  {t("footer.ctaPrimary")}
-                  <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
-                </Link>
-              </Button>
               <Button
                 asChild
                 variant="outline"
