@@ -14,7 +14,7 @@
     --sand: 60 20% 87%;
     --sand-foreground: 0 0% 0%;
 
-    --gray: 60 4% 69%;
+    --gray: 60 8% 82%;
     /* CI: Blue #99CCD9, Light Blue #BFE0E8 */
     --blue: 193 49% 72%;
     --blue-light: 191 48% 83%;
@@ -40,8 +40,8 @@
     --destructive: 0 84% 60%;
     --destructive-foreground: 60 20% 87%;
 
-    --border: 60 4% 69% / 0.22;
-    --input: 60 4% 69% / 0.28;
+    --border: 60 8% 82% / 0.28;
+    --input: 60 8% 82% / 0.32;
     --ring: 193 49% 72%;
 
     --radius: 2px;
@@ -90,6 +90,12 @@
   body {
     @apply bg-background text-foreground font-sans;
     overflow-x: hidden;
+    font-size: 17px;
+    line-height: 1.65;
+  }
+
+  @media (max-width: 640px) {
+    body { font-size: 16px; }
   }
 
   /* Sticky header offset for hash-targeted sections (header is h-16 = 4rem). */
@@ -118,7 +124,7 @@
 
   p {
     text-wrap: pretty;
-    line-height: 1.6;
+    line-height: 1.7;
   }
 
   ::selection {
@@ -153,19 +159,19 @@
   }
 
   .mono-label {
-    @apply font-mono text-[11px] font-medium uppercase tracking-[0.06em] text-gray;
+    @apply font-mono text-[12px] font-medium uppercase tracking-[0.06em] text-gray;
   }
 
   .mono-value {
-    @apply font-mono text-sm tabular-nums text-sand;
+    @apply font-mono text-base tabular-nums text-sand;
   }
 
   .surface-card {
-    @apply bg-surface border border-gray/25 rounded-lg;
+    @apply bg-surface border border-gray/30 rounded-lg;
   }
 
   .text-helper {
-    @apply text-[13px] leading-relaxed text-gray/85;
+    @apply text-[15px] leading-relaxed text-gray;
   }
 
   .bento-card {

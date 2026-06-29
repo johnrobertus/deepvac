@@ -21,13 +21,13 @@ export function WhyDeepvacSection() {
           {Array.isArray(items) &&
             items.map((item, i) => (
               <Reveal key={item.title} delay={i * 60}>
-                <div className="bento-card flex h-full gap-5 rounded-lg p-6">
+                <div className="bento-card flex h-full gap-5 rounded-lg p-7">
                   <span className="mono-label flex-shrink-0 pt-0.5 text-blue tabular-nums">
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <div className="space-y-2">
-                    <h3 className="text-sm font-medium text-sand">{item.title}</h3>
-                    <p className="text-xs leading-relaxed text-gray">{item.description}</p>
+                  <div className="space-y-2.5">
+                    <h3 className="text-[17px] font-medium text-sand">{item.title}</h3>
+                    <p className="text-[15px] leading-relaxed text-gray">{item.description}</p>
                   </div>
                 </div>
               </Reveal>

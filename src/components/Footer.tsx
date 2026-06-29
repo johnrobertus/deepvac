@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { Phone, Mail, MapPin, ArrowUpRight, ArrowRight, ClipboardList } from "lucide-react";
+import { Phone, Mail, MapPin, ArrowUpRight, ClipboardList } from "lucide-react";
 import { useLanguage } from "@/components/LanguageProvider";
 import { localizedPath } from "@/lib/routes";
 import { PrivacySettingsDialog } from "@/components/PrivacySettingsDialog";
@@ -51,23 +51,12 @@ export function Footer() {
               <h2 className="text-2xl font-medium tracking-tight text-sand md:text-3xl [text-wrap:balance]">
                 {t("footer.ctaTitle")}
               </h2>
-              <p className="text-sm leading-relaxed text-gray md:text-[15px]">
+              <p className="text-base leading-relaxed text-sand/80 md:text-[17px]">
                 {t("footer.ctaDescription")}
               </p>
             </div>
-            <div className="flex flex-wrap gap-3 md:shrink-0">
+            <div className="md:shrink-0">
               <Button asChild size="lg" className="font-mono text-xs tracking-wide">
-                <Link to={lp("/contact")}>
-                  {t("footer.ctaPrimary")}
-                  <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
-                </Link>
-              </Button>
-              <Button
-                asChild
-                variant="outline"
-                size="lg"
-                className="border-blue/40 font-mono text-xs tracking-wide text-sand hover:bg-blue/10"
-              >
                 <Link to={lp("/tvac-questionnaire")}>
                   <ClipboardList className="mr-2 h-4 w-4" aria-hidden="true" />
                   {t("footer.ctaSecondary")}
@@ -85,9 +74,9 @@ export function Footer() {
               <img src={deepvacLogo} alt="Deepvac" className="h-6 w-auto" />
             </Link>
 
-            <p className="max-w-sm text-sm leading-relaxed text-gray/90">{t("footer.description")}</p>
+            <p className="max-w-sm text-[15px] leading-relaxed text-gray">{t("footer.description")}</p>
 
-            <div className="space-y-3 pt-1 text-sm text-gray">
+            <div className="space-y-3 pt-1 text-[15px] text-gray">
               <div className="flex items-start gap-3">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-blue" />
                 <address className="not-italic leading-relaxed">
@@ -115,7 +104,7 @@ export function Footer() {
                 href="https://www.linkedin.com/company/deepvac-gmbh/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-1.5 text-sm text-gray transition-colors duration-300 hover:text-blue"
+                className="group inline-flex items-center gap-1.5 text-[15px] text-gray transition-colors duration-300 hover:text-blue"
               >
                 <span className="mono-label transition-colors duration-300 group-hover:text-blue">LinkedIn</span>
                 <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -129,7 +118,7 @@ export function Footer() {
               <ul className="space-y-3">
                 {links.map((link) => (
                   <li key={link.href}>
-                    <Link to={link.href} className="link-underline inline-block text-sm text-gray hover:text-sand">
+                    <Link to={link.href} className="link-underline inline-block text-[15px] text-gray hover:text-sand">
                       {link.label}
                     </Link>
                   </li>
@@ -142,24 +131,24 @@ export function Footer() {
 
       <div className="border-t border-gray/15 py-5">
         <div className="container-wide flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-          <p className="font-mono text-xs text-gray/70">{t("footer.copyright", { year: new Date().getFullYear() })}</p>
+          <p className="font-mono text-[13px] text-gray">{t("footer.copyright", { year: new Date().getFullYear() })}</p>
 
           <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
-            <Link to={lp("/imprint")} className="text-xs text-gray/75 transition-colors hover:text-sand">
+            <Link to={lp("/imprint")} className="text-[14px] text-gray transition-colors hover:text-sand">
               {t("footer.imprint")}
             </Link>
-            <Link to={lp("/terms-and-conditions")} className="text-xs text-gray/75 transition-colors hover:text-sand">
+            <Link to={lp("/terms-and-conditions")} className="text-[14px] text-gray transition-colors hover:text-sand">
               {t("footer.termsAndConditions")}
             </Link>
-            <Link to={lp("/privacy-policy")} className="text-xs text-gray/75 transition-colors hover:text-sand">
+            <Link to={lp("/privacy-policy")} className="text-[14px] text-gray transition-colors hover:text-sand">
               {t("footer.privacyPolicy")}
             </Link>
-            <Link to={lp("/media-credits")} className="text-xs text-gray/75 transition-colors hover:text-sand">
+            <Link to={lp("/media-credits")} className="text-[14px] text-gray transition-colors hover:text-sand">
               {t("mediaCredits.footerLink")}
             </Link>
             <button
               onClick={() => setPrivacyOpen(true)}
-              className="text-xs text-gray/75 transition-colors hover:text-sand"
+              className="text-[14px] text-gray transition-colors hover:text-sand"
             >
               {t("footer.privacySettings")}
             </button>
