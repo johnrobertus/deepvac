@@ -31,14 +31,14 @@ export function CataloguesSection() {
               <div className="relative bg-surface overflow-hidden">
                 <img src={featured.coverUrl} alt={featured.title} className="w-full h-full object-cover" loading="lazy" />
               </div>
-              <div className="p-6 flex flex-col justify-center space-y-3">
-                <span className="mono-label text-blue text-[10px]">{t("home:catalogues.featuredBrochure")}</span>
-                <h3 className="text-base font-medium text-sand">{featured.title}</h3>
-                <p className="text-xs text-gray leading-relaxed line-clamp-3">{featured.description}</p>
-                <div className="pt-1">
-                  <Button asChild size="sm">
+              <div className="p-7 flex flex-col justify-center space-y-3">
+                <span className="mono-label text-blue">{t("home:catalogues.featuredBrochure")}</span>
+                <h3 className="text-lg font-medium text-sand">{featured.title}</h3>
+                <p className="text-[15px] text-gray leading-relaxed line-clamp-3">{featured.description}</p>
+                <div className="pt-2">
+                  <Button asChild>
                     <a href={featured.pdfUrl} target="_blank" rel="noopener noreferrer">
-                      <Download className="w-3 h-3 mr-1.5" />
+                      <Download className="w-4 h-4 mr-2" />
                       {t("common:buttons.downloadPdf")}
                     </a>
                   </Button>

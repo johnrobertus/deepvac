@@ -43,10 +43,10 @@ export function TeamSection() {
                     }}
                   />
                 </div>
-                <div className="space-y-3 p-5">
+                <div className="space-y-3.5 p-6">
                   <div className="flex items-start justify-between gap-4">
                     <div className="space-y-1">
-                      <h3 className="text-base font-medium text-sand">{member.name}</h3>
+                      <h3 className="text-lg font-medium text-sand">{member.name}</h3>
                       <span className="mono-label text-blue">{member.role}</span>
                     </div>
                     {linkedinUrls[i] ? (
@@ -55,7 +55,7 @@ export function TeamSection() {
                       </a>
                     ) : null}
                   </div>
-                  <p className="text-xs leading-relaxed text-gray">{member.description}</p>
+                  <p className="text-[15px] leading-relaxed text-gray">{member.description}</p>
                 </div>
               </div>
             </Reveal>

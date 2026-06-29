@@ -51,26 +51,26 @@ export function ProductPortfolioSection() {
                       />
                       <div className="absolute bottom-3 left-3 flex flex-wrap gap-1.5">
                         {Array.isArray(overlays) && overlays.map((label) => (
-                          <span key={label} className="glass-overlay rounded-sm px-2 py-1 font-mono text-[9px] uppercase tracking-widest text-blue-light/80">{label}</span>
+                          <span key={label} className="glass-overlay rounded-sm px-2.5 py-1 font-mono text-[11px] uppercase tracking-widest text-blue-light/95">{label}</span>
                         ))}
                       </div>
                     </div>
 
-                    <div className={`flex flex-col justify-center space-y-5 p-8 lg:p-10 ${i % 2 === 1 ? "lg:order-1" : ""}`}>
+                    <div className={`flex flex-col justify-center space-y-6 p-8 lg:p-10 ${i % 2 === 1 ? "lg:order-1" : ""}`}>
                       <div>
                         <span className="mono-label text-blue">{t(`${prefix}.subtitle`)}</span>
                         <h3 className="mt-2 text-2xl font-medium tracking-tight text-sand md:text-3xl">{t(`${prefix}.title`)}</h3>
                       </div>
-                      <p className="text-sm leading-relaxed text-gray">{t(`${prefix}.description`)}</p>
+                      <p className="text-[16px] leading-relaxed text-gray">{t(`${prefix}.description`)}</p>
                       <div className="grid grid-cols-1 gap-4 py-2 sm:grid-cols-2">
                         {specsArr.map((spec) => (
-                          <div key={spec.label} className="rounded-md border border-gray/10 bg-background/20 px-4 py-3">
+                          <div key={spec.label} className="rounded-md border border-gray/15 bg-background/30 px-4 py-3.5">
                             <span className="mono-label">{spec.label}</span>
-                            <p className="mt-1 font-mono text-xs text-sand">{spec.value}</p>
+                            <p className="mt-1.5 font-mono text-[14px] text-sand">{spec.value}</p>
                           </div>
                         ))}
                       </div>
-                      <p className="text-[11px] leading-relaxed text-gray/70">{t(`${prefix}.note`)}</p>
+                      <p className="text-[13px] leading-relaxed text-gray/85">{t(`${prefix}.note`)}</p>
                       <div>
                         <Button asChild variant="outline" className="group/btn">
                           <Link to={localizedPath(productHrefs[i], lang)}>
