@@ -38,9 +38,9 @@ export function ServicesSection() {
         <div className="mb-8 grid grid-cols-1 gap-px overflow-hidden rounded-lg border border-gray/10 bg-gray/10 lg:grid-cols-3">
           {Array.isArray(pillars) && pillars.map((pillar, i) => (
             <Reveal key={pillar.title} delay={i * 70}>
-              <div className="h-full bg-background/60 px-6 py-5">
-                <h3 className="text-sm font-medium text-sand">{pillar.title}</h3>
-                <p className="mt-2 text-xs leading-relaxed text-gray">{pillar.description}</p>
+              <div className="h-full bg-background/60 px-6 py-6">
+                <h3 className="text-[17px] font-medium text-sand">{pillar.title}</h3>
+                <p className="mt-2.5 text-[15px] leading-relaxed text-gray">{pillar.description}</p>
               </div>
             </Reveal>
           ))}
@@ -51,24 +51,24 @@ export function ServicesSection() {
             const Icon = serviceIcons[i] || Thermometer;
             return (
               <Reveal key={service.title} delay={120 + i * 60}>
-                <div className="bento-card group flex h-full flex-col justify-between rounded-lg p-6 transition-all duration-300 hover:border-blue/20 hover:bg-background/40">
+                <div className="bento-card group flex h-full flex-col justify-between rounded-lg p-7 transition-all duration-300 hover:border-blue/25 hover:bg-background/40">
                   <div className="space-y-4">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-sm border border-blue/20 bg-blue/10 text-blue">
+                    <div className="flex h-11 w-11 items-center justify-center rounded-sm border border-blue/25 bg-blue/10 text-blue">
                       <Icon className="h-5 w-5" />
                     </div>
-                    <div className="space-y-2">
+                    <div className="space-y-2.5">
                       <span className="mono-label text-blue">{service.label}</span>
-                      <h3 className="text-base font-medium text-sand">{service.title}</h3>
-                      <p className="text-sm leading-relaxed text-gray">{service.description}</p>
+                      <h3 className="text-lg font-medium text-sand">{service.title}</h3>
+                      <p className="text-[15px] leading-relaxed text-gray">{service.description}</p>
                     </div>
                   </div>
                   <div className="pt-5">
                     <Link
                       to={localizedPath(serviceHrefs[i], lang)}
-                      className="inline-flex items-center gap-1.5 text-sm text-sand transition-colors hover:text-blue"
+                      className="inline-flex items-center gap-1.5 text-[15px] text-sand transition-colors hover:text-blue"
                     >
                       {t("buttons.exploreService", { ns: "common" })}
-                      <ArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-1" />
+                      <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
                     </Link>
                   </div>
                 </div>

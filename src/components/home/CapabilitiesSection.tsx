@@ -34,9 +34,9 @@ export function CapabilitiesSection() {
                     <div className={`flex h-9 w-9 items-center justify-center rounded-sm border ${featured ? 'border-blue/30 bg-blue/15 text-blue shadow-[0_0_12px_0_hsl(var(--blue)/0.15)]' : 'border-blue/20 bg-blue/10 text-blue'}`}>
                       <Icon className="w-5 h-5" />
                     </div>
-                    <div className="space-y-2">
-                      <h3 className={`font-medium text-sand ${featured ? 'text-[15px]' : 'text-base'}`}>{item.title}</h3>
-                      <p className="text-sm leading-relaxed text-gray">{item.description}</p>
+                    <div className="space-y-2.5">
+                      <h3 className={`font-medium text-sand ${featured ? 'text-lg' : 'text-[17px]'}`}>{item.title}</h3>
+                      <p className="text-[15px] leading-relaxed text-gray">{item.description}</p>
                     </div>
                   </div>
                 </Reveal>

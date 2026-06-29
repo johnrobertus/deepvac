@@ -213,7 +213,7 @@ export function HeroSection() {
               </Reveal>
 
               <Reveal delay={100}>
-                <p className="max-w-2xl text-sm leading-relaxed text-sand/72 md:text-base">{t("hero.description")}</p>
+                <p className="max-w-2xl text-base leading-relaxed text-sand/90 md:text-lg">{t("hero.description")}</p>
               </Reveal>
 
               <Reveal delay={150}>
@@ -239,9 +239,9 @@ export function HeroSection() {
                     cues.map((cue) => (
                       <span
                         key={cue}
-                        className="inline-flex items-center gap-1.5 rounded-sm border border-sand/20 bg-background/30 px-2.5 py-1 font-mono text-[10px] uppercase tracking-widest text-sand/75 backdrop-blur-sm sm:px-3 sm:py-1.5 sm:text-[11px]"
+                        className="inline-flex items-center gap-1.5 rounded-sm border border-sand/30 bg-background/40 px-3 py-1.5 font-mono text-[11px] uppercase tracking-widest text-sand/90 backdrop-blur-sm sm:px-3.5 sm:py-2 sm:text-[12px]"
                       >
-                        <span className="h-1.5 w-1.5 rounded-full bg-blue/70" />
+                        <span className="h-1.5 w-1.5 rounded-full bg-blue/80" />
                         {cue}
                       </span>
                     ))}

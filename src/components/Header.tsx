@@ -93,7 +93,7 @@ function DropdownMenu({
         aria-expanded={open}
         aria-haspopup="menu"
         className={cn(
-          "relative flex items-center gap-1 text-sm transition-colors duration-200 py-1",
+          "relative flex items-center gap-1 text-[15px] transition-colors duration-200 py-1",
           active || open ? "text-sand" : "text-gray hover:text-sand",
           active && "after:content-[''] after:absolute after:left-0 after:right-3 after:-bottom-1 after:h-px after:bg-blue/60",
         )}
@@ -115,7 +115,7 @@ function DropdownMenu({
                   to={locHref}
                   onClick={onClose}
                   className={cn(
-                    "block px-4 py-2.5 text-sm transition-colors duration-150",
+                    "block px-4 py-2.5 text-[15px] transition-colors duration-150",
                     itemActive ? "bg-surface-raised text-sand" : "text-gray hover:bg-surface-raised hover:text-sand",
                     i === 0 && !itemActive && "font-medium text-sand",
                   )}
@@ -258,7 +258,7 @@ export function Header() {
                 key={link.href}
                 to={locHref}
                 className={cn(
-                  "relative rounded-sm text-sm transition-colors duration-200 py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+                  "relative rounded-sm text-[15px] transition-colors duration-200 py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background",
                   active ? "text-sand after:content-[''] after:absolute after:left-0 after:right-0 after:-bottom-1 after:h-px after:bg-blue/60" : "text-gray hover:text-sand",
                 )}
               >
