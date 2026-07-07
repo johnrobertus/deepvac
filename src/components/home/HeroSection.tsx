@@ -125,7 +125,7 @@ export function HeroSection() {
   const cues = t("hero.cues", { returnObjects: true }) as string[];
 
   return (
-    <section id="hero" className="relative w-full h-[100svh] min-h-[560px] max-h-[960px] overflow-hidden">
+    <section id="hero" className="relative w-full min-h-[100svh] md:h-[100svh] md:min-h-[560px] md:max-h-[960px] overflow-x-hidden md:overflow-hidden">
       {slides.map((slide, i) => {
         const isActive = i === activeIndex;
         const isNext = i === nextIndex;
@@ -177,10 +177,13 @@ export function HeroSection() {
         style={{ boxShadow: "inset 0 0 140px 42px hsl(0 0% 0% / 0.28)" }}
       />
 
-      <div className="relative z-20 flex h-full flex-col justify-end pb-10 pt-14 sm:pb-12 md:justify-center md:pb-24 md:pt-32">
+      <div
+        className="relative z-20 flex min-h-[100svh] flex-col justify-start pb-12 sm:pb-14 md:min-h-0 md:h-full md:justify-center md:pb-24 md:pt-32"
+        style={{ paddingTop: "calc(4rem + env(safe-area-inset-top, 0px) + 1.5rem)" }}
+      >
         <div className="hero-container">
           <div className="flex flex-col gap-8 md:items-end md:justify-between lg:grid lg:grid-cols-12 lg:items-center lg:gap-10 2xl:gap-16 3xl:gap-20">
-            <div className="max-w-[56rem] space-y-3 sm:space-y-5 lg:col-span-8">
+            <div className="max-w-[56rem] space-y-4 sm:space-y-5 lg:col-span-8">
               <Reveal>
                 <div className="space-y-3 sm:space-y-4">
                   <span className="mono-label text-blue-light/90 tracking-[0.08em]">{t("hero.eyebrow")}</span>
@@ -189,14 +192,16 @@ export function HeroSection() {
                     const isDe = i18n.language === "de";
                     return (
                       <h1
-                        className="max-w-[15ch] font-medium text-sand whitespace-pre-line [text-wrap:balance] md:max-w-[14ch] lg:max-w-[18ch] xl:max-w-[20ch] 2xl:max-w-[22ch]"
+                        className="max-w-full font-medium text-sand whitespace-pre-line [text-wrap:balance] md:max-w-[14ch] lg:max-w-[18ch] xl:max-w-[20ch] 2xl:max-w-[22ch]"
                         style={{
                           fontSize: isDe
-                            ? "clamp(1.55rem, 3.75vw, 4.85rem)"
-                            : "clamp(1.7rem, 4.15vw, 5.4rem)",
-                          lineHeight: 1.01,
-                          letterSpacing: "-0.04em",
-                          hyphens: "auto",
+                            ? "clamp(2rem, 7.5vw, 4.85rem)"
+                            : "clamp(2.15rem, 8vw, 5.4rem)",
+                          lineHeight: 1.08,
+                          letterSpacing: "-0.03em",
+                          hyphens: "none",
+                          wordBreak: "normal",
+                          overflowWrap: "normal",
                           fontFeatureSettings: '"kern" 1, "liga" 1, "calt" 1, "ss01" 1',
                           fontKerning: "normal",
                           textRendering: "optimizeLegibility",
@@ -212,13 +217,14 @@ export function HeroSection() {
                 </div>
               </Reveal>
 
+
               <Reveal delay={100}>
                 <p className="max-w-2xl text-base leading-relaxed text-sand/90 md:text-lg">{t("hero.description")}</p>
               </Reveal>
 
               <Reveal delay={150}>
-                <div className="flex flex-wrap gap-2 pt-1 sm:gap-3 sm:pt-2">
-                  <Button asChild size="default" className="font-mono text-xs tracking-wide sm:h-12 sm:px-8 sm:text-base">
+                <div className="flex flex-col gap-3 pt-1 sm:flex-row sm:flex-wrap sm:gap-3 sm:pt-2">
+                  <Button asChild size="default" className="w-full font-mono text-sm tracking-wide sm:w-auto sm:h-12 sm:px-8 sm:text-base">
                     <Link to={contactPath}>{tc("buttons.discussRequirements")}</Link>
                   </Button>
 
@@ -226,7 +232,7 @@ export function HeroSection() {
                     asChild
                     variant="outline"
                     size="default"
-                    className="border-sand/25 font-mono text-xs tracking-wide text-sand/80 backdrop-blur-sm hover:border-sand/40 hover:text-sand sm:h-12 sm:px-8 sm:text-base"
+                    className="w-full border-sand/25 font-mono text-sm tracking-wide text-sand/80 backdrop-blur-sm hover:border-sand/40 hover:text-sand sm:w-auto sm:h-12 sm:px-8 sm:text-base"
                   >
                     <Link to={localizedPath("/products", lang)}>{tc("buttons.exploreProducts")}</Link>
                   </Button>
@@ -234,19 +240,20 @@ export function HeroSection() {
               </Reveal>
 
               <Reveal delay={250}>
-                <div className="flex flex-wrap gap-2 pt-1 sm:gap-3">
+                <div className="flex flex-col gap-2 pt-1 sm:flex-row sm:flex-wrap sm:gap-3">
                   {Array.isArray(cues) &&
                     cues.map((cue) => (
                       <span
                         key={cue}
-                        className="inline-flex items-center gap-1.5 rounded-sm border border-sand/30 bg-background/40 px-3 py-1.5 font-mono text-[11px] uppercase tracking-widest text-sand/90 backdrop-blur-sm sm:px-3.5 sm:py-2 sm:text-[12px]"
+                        className="inline-flex w-full items-center gap-1.5 rounded-sm border border-sand/30 bg-background/40 px-3 py-2 font-mono text-[11px] uppercase tracking-widest text-sand/90 backdrop-blur-sm sm:w-auto sm:px-3.5 sm:py-2 sm:text-[12px]"
                       >
-                        <span className="h-1.5 w-1.5 rounded-full bg-blue/80" />
+                        <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-blue/80" />
                         {cue}
                       </span>
                     ))}
                 </div>
               </Reveal>
+
             </div>
 
             {/* Funding logo, right side, desktop only */}
