@@ -302,7 +302,8 @@
         "title": "Retention of Title",
         "c1": "19.1 Delivered goods remain the property of Deepvac until full payment of all present and future claims arising from the business relationship.",
         "c2": "19.2 The Customer shall handle retained goods with care and insure them adequately.",
-        "c3": "19.3 The Customer may resell goods in the ordinary course of business. The Customer assigns to Deepvac, as security, all claims arising from such resale up to the amount of Deepvac's outstanding claims. Deepvac accepts this assignment."
+        "c3": "19.3 The Customer may resell goods in the ordinary course of business. The Customer assigns to Deepvac, as security, all claims arising from such resale up to the amount of Deepvac's outstanding claims. Deepvac accepts this assignment.",
+        "c4": "19.4 Deepvac shall release securities under this clause 19 at the Customer's request to the extent that the realizable value of the securities exceeds the secured claims by more than 10 percent. The selection of the securities to be released is at Deepvac's discretion."
       },
       "20": {
         "title": "Warranty and Defect Claims",
@@ -321,8 +322,8 @@
         "c4": "21.4 To the extent permitted by law, Deepvac is not liable for indirect or consequential damages, including loss of profit, loss of revenue, business interruption, production downtime, loss of use, and third party claims.",
         "c5": "21.5 To the extent liability for loss of data applies, Deepvac's liability is limited to the typical recovery effort that would have been required if the Customer had performed regular and appropriate data backups.",
         "c6": "21.6 For testing services, Deepvac's liability for damage to the Test Item is governed by clause 15.14.",
-        "c7": "21.7 For services, including maintenance, repair, retrofit, and integration work, liability for slight negligence is limited to the net value of the respective service order.",
-        "c8": "21.8 Unless mandatory law provides otherwise, total aggregate liability for claims based on slight negligence is limited to the net Contract value of the respective Order.",
+        "c7": "21.7 For services, including maintenance, repair, retrofit, and integration work, liability for slight negligence is limited to the damage foreseeable and typical for this type of contract at the time of Contract conclusion.",
+        "c8": "21.8 Unless mandatory law provides otherwise, total aggregate liability for claims based on slight negligence is limited to the damage foreseeable and typical for this type of contract at the time of Contract conclusion. In no event shall this limitation fall below the coverage amount of Deepvac's business liability insurance applicable at the time of Contract conclusion; Deepvac shall provide evidence of such coverage upon the Customer's request.",
         "c9": "21.9 Mandatory liability under applicable product liability law remains unaffected."
       },
       "22": {

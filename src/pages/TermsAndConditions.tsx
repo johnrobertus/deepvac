@@ -123,7 +123,7 @@ export default function TermsAndConditions() {
             {/* Part E */}
             <PartHeader label={t("terms.partE")} />
 
-            <SimpleSection n="19" t={t} keys={["c1","c2","c3"]} />
+            <SimpleSection n="19" t={t} keys={["c1","c2","c3","c4"]} />
             <SimpleSection n="20" t={t} keys={["c1","c2","c3","c4","c5","c6"]} />
             <SimpleSection n="21" t={t} keys={["c1","c2","c3","c4","c5","c6","c7","c8","c9"]} />
 
