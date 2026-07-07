@@ -302,7 +302,8 @@
         "title": "Eigentumsvorbehalt",
         "c1": "19.1 Gelieferte Waren bleiben bis zur vollständigen Bezahlung aller gegenwärtigen und zukünftigen Forderungen aus der Geschäftsbeziehung Eigentum von Deepvac.",
         "c2": "19.2 Der Kunde hat Vorbehaltsware sorgfältig zu behandeln und angemessen zu versichern.",
-        "c3": "19.3 Der Kunde darf die Ware im ordnungsgemäßen Geschäftsverkehr weiterveräußern. Der Kunde tritt Deepvac bereits jetzt sicherungshalber alle aus der Weiterveräußerung entstehenden Forderungen bis zur Höhe der offenen Forderungen von Deepvac ab. Deepvac nimmt diese Abtretung an."
+        "c3": "19.3 Der Kunde darf die Ware im ordnungsgemäßen Geschäftsverkehr weiterveräußern. Der Kunde tritt Deepvac bereits jetzt sicherungshalber alle aus der Weiterveräußerung entstehenden Forderungen bis zur Höhe der offenen Forderungen von Deepvac ab. Deepvac nimmt diese Abtretung an.",
+        "c4": "19.4 Deepvac wird auf Anfrage des Kunden Sicherheiten nach dieser Ziffer 19 insoweit freigeben, als der realisierbare Wert der Sicherheiten die gesicherten Forderungen um mehr als 10 Prozent übersteigt. Die Auswahl der freizugebenden Sicherheiten obliegt dem Ermessen von Deepvac."
       },
       "20": {
         "title": "Gewährleistung und Mängelansprüche",
@@ -321,8 +322,8 @@
         "c4": "21.4 Soweit gesetzlich zulässig, haftet Deepvac nicht für mittelbare Schäden oder Folgeschäden, insbesondere entgangenen Gewinn, Umsatzausfall, Betriebsunterbrechung, Produktionsausfall, Nutzungsausfall und Ansprüche Dritter.",
         "c5": "21.5 Soweit eine Haftung für Datenverlust besteht, ist die Haftung von Deepvac auf den typischen Wiederherstellungsaufwand beschränkt, der bei regelmäßiger und angemessener Datensicherung durch den Kunden erforderlich gewesen wäre.",
         "c6": "21.6 Für Prüfleistungen richtet sich die Haftung von Deepvac für Schäden am Prüfgegenstand nach Ziffer 15.14.",
-        "c7": "21.7 Für Dienstleistungen, einschließlich Wartung, Reparatur, Retrofit und Integrationsarbeiten, ist die Haftung bei leichter Fahrlässigkeit auf den Nettoauftragswert des jeweiligen Serviceauftrags beschränkt.",
-        "c8": "21.8 Soweit zwingendes Recht nichts anderes vorsieht, ist die Gesamthaftung für Ansprüche aus leichter Fahrlässigkeit auf den Nettowert des jeweiligen Auftrags begrenzt.",
+        "c7": "21.7 Für Dienstleistungen, einschließlich Wartung, Reparatur, Retrofit und Integrationsarbeiten, ist die Haftung bei leichter Fahrlässigkeit auf den bei Vertragsschluss vorhersehbaren und für diesen Vertragstyp typischen Schaden begrenzt.",
+        "c8": "21.8 Soweit zwingendes Recht nichts anderes vorsieht, ist die Gesamthaftung für Ansprüche aus leichter Fahrlässigkeit auf den bei Vertragsschluss vorhersehbaren und für diesen Vertragstyp typischen Schaden begrenzt. Die Begrenzung unterschreitet in keinem Fall die Deckungssumme der zum Zeitpunkt des Vertragsschlusses geltenden Betriebshaftpflichtversicherung von Deepvac; Deepvac legt diese Deckung auf Anfrage des Kunden nach.",
         "c9": "21.9 Zwingende Haftung nach dem anwendbaren Produkthaftungsrecht bleibt unberührt."
       },
       "22": {
