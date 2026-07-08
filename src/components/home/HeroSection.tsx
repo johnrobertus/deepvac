@@ -125,7 +125,7 @@ export function HeroSection() {
   const cues = t("hero.cues", { returnObjects: true }) as string[];
 
   return (
-    <section id="hero" className="relative w-full min-h-[100svh] md:h-[100svh] md:min-h-[560px] md:max-h-[960px] overflow-x-hidden md:overflow-hidden">
+    <section id="hero" className="relative w-full min-h-[100svh] md:min-h-[100svh] overflow-x-hidden">
       {slides.map((slide, i) => {
         const isActive = i === activeIndex;
         const isNext = i === nextIndex;
@@ -178,9 +178,10 @@ export function HeroSection() {
       />
 
       <div
-        className="relative z-20 flex min-h-[100svh] flex-col justify-start pb-12 sm:pb-14 md:min-h-0 md:h-full md:justify-center md:pb-24 md:pt-32"
-        style={{ paddingTop: "calc(4rem + env(safe-area-inset-top, 0px) + 1.5rem)" }}
+        className="relative z-20 flex min-h-[100svh] flex-col justify-end pb-12 sm:pb-14 md:pb-24"
+        style={{ paddingTop: "calc(4rem + env(safe-area-inset-top, 0px) + 2rem)" }}
       >
+
         <div className="hero-container">
           <div className="flex flex-col gap-8 md:items-end md:justify-between lg:grid lg:grid-cols-12 lg:items-center lg:gap-10 2xl:gap-16 3xl:gap-20">
             <div className="max-w-[56rem] space-y-4 sm:space-y-5 lg:col-span-8">
