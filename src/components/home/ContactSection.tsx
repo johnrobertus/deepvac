@@ -271,25 +271,25 @@ export function ContactSection() {
 
                 {/* Section 2 — Area of interest */}
                 <div className="border-t border-gray/20 pt-6 space-y-4">
-                  <div className="space-y-1">
+                  <div className="space-y-1.5">
                     <span className="mono-label text-blue">{t("sections.interestTitle")}<span className="text-blue ml-1">*</span></span>
-                    <p className="text-[12px] text-gray/70">{t("sections.interestHelper")}</p>
+                    <p className="text-[14px] md:text-[15px] text-sand/70">{t("sections.interestHelper")}</p>
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-5">
                     <div className="space-y-1.5">
-                      <p className="text-[11px] font-mono uppercase tracking-wider text-gray/60 mb-1">{t("sections.interestProducts")}</p>
+                      <p className="text-[12px] font-mono uppercase tracking-wider text-gray/70 mb-1.5">{t("sections.interestProducts")}</p>
                       {productInterests.map((label) => (
                         <CheckboxItem key={label} label={label} checked={interests.includes(label)} onChange={() => toggleInterest(label)} />
                       ))}
                     </div>
                     <div className="space-y-1.5">
-                      <p className="text-[11px] font-mono uppercase tracking-wider text-gray/60 mb-1">{t("sections.interestServices")}</p>
+                      <p className="text-[12px] font-mono uppercase tracking-wider text-gray/70 mb-1.5">{t("sections.interestServices")}</p>
                       {serviceInterests.map((label) => (
                         <CheckboxItem key={label} label={label} checked={interests.includes(label)} onChange={() => toggleInterest(label)} />
                       ))}
                     </div>
                     <div className="space-y-1.5">
-                      <p className="text-[11px] font-mono uppercase tracking-wider text-gray/60 mb-1">{t("sections.interestOther")}</p>
+                      <p className="text-[12px] font-mono uppercase tracking-wider text-gray/70 mb-1.5">{t("sections.interestOther")}</p>
                       {otherInterests.map((label) => (
                         <CheckboxItem key={label} label={label} checked={interests.includes(label)} onChange={() => toggleInterest(label)} />
                       ))}
