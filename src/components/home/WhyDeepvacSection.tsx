@@ -26,8 +26,8 @@ export function WhyDeepvacSection() {
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <div className="space-y-2.5">
-                    <h3 className="text-[17px] font-medium text-sand">{item.title}</h3>
-                    <p className="text-[15px] leading-relaxed text-gray">{item.description}</p>
+                    <h3 className="text-lg font-medium text-sand">{item.title}</h3>
+                    <p className="text-[16px] md:text-[17px] leading-relaxed text-sand/75">{item.description}</p>
                   </div>
                 </div>
               </Reveal>
