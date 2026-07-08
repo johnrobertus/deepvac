@@ -227,25 +227,25 @@ export function ContactSection() {
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-12 lg:gap-16">
           <Reveal delay={100}>
             <div className="space-y-8">
-              <div className="space-y-2">
-                <h3 className="text-2xl font-medium text-sand tracking-tight">{t("formTitle")}</h3>
-                <p className="text-sm text-gray/85 leading-relaxed">{t("formDescription")}</p>
+              <div className="space-y-3">
+                <h3 className="text-2xl md:text-3xl font-medium text-sand tracking-tight">{t("formTitle")}</h3>
+                <p className="text-[16px] md:text-[17px] text-sand/80 leading-relaxed">{t("formDescription")}</p>
               </div>
 
               <aside
                 aria-label={t("prepareCard.title")}
-                className="bento-card rounded-lg p-5 sm:p-6 space-y-3 border-blue/20"
+                className="bento-card rounded-lg p-6 sm:p-7 space-y-4 border-blue/20"
               >
                 <div className="flex items-start gap-3">
-                  <ClipboardCheck className="w-4 h-4 text-blue mt-0.5 shrink-0" aria-hidden="true" />
-                  <div className="space-y-1">
+                  <ClipboardCheck className="w-5 h-5 text-blue mt-0.5 shrink-0" aria-hidden="true" />
+                  <div className="space-y-1.5">
                     <p className="mono-label text-blue">{t("prepareCard.title")}</p>
-                    <p className="text-[13px] text-gray/85 leading-relaxed">{t("prepareCard.subtitle")}</p>
+                    <p className="text-[15px] md:text-[16px] text-sand/80 leading-relaxed">{t("prepareCard.subtitle")}</p>
                   </div>
                 </div>
-                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-1.5 pl-7 list-disc marker:text-blue/60">
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 pl-8 list-disc marker:text-blue/60">
                   {(t("prepareCard.items", { returnObjects: true }) as string[]).map((item) => (
-                    <li key={item} className="text-[13px] text-gray leading-snug">{item}</li>
+                    <li key={item} className="text-[15px] text-sand/80 leading-snug">{item}</li>
                   ))}
                 </ul>
               </aside>
