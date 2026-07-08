@@ -38,9 +38,9 @@ export function ServicesSection() {
         <div className="mb-8 grid grid-cols-1 gap-px overflow-hidden rounded-lg border border-gray/10 bg-gray/10 lg:grid-cols-3">
           {Array.isArray(pillars) && pillars.map((pillar, i) => (
             <Reveal key={pillar.title} delay={i * 70}>
-              <div className="h-full bg-background/60 px-6 py-6">
-                <h3 className="text-[17px] font-medium text-sand">{pillar.title}</h3>
-                <p className="mt-2.5 text-[15px] leading-relaxed text-gray">{pillar.description}</p>
+              <div className="h-full bg-background/60 px-6 py-7">
+                <h3 className="text-lg font-medium text-sand">{pillar.title}</h3>
+                <p className="mt-3 text-[16px] md:text-[17px] leading-relaxed text-sand/75">{pillar.description}</p>
               </div>
             </Reveal>
           ))}
