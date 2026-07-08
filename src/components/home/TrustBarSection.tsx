@@ -16,9 +16,9 @@ export function TrustBarSection() {
         {/* Technical header */}
         <div className="mb-4 flex items-end justify-between gap-6 px-1">
           <div className="flex flex-col gap-1">
-            <span className="mono-label text-[10px] text-blue">{protocol}</span>
+            <span className="mono-label text-blue">{protocol}</span>
             {heading && (
-              <h2 className="text-base font-light tracking-wide text-sand sm:text-lg">
+              <h2 className="text-lg font-light tracking-wide text-sand sm:text-xl">
                 {heading}
               </h2>
             )}
@@ -46,11 +46,11 @@ export function TrustBarSection() {
                       !isLast ? "border-b border-gray/10 md:border-b-0 md:border-r" : ""
                     }`}
                   >
-                    <div className="mb-8 flex items-start justify-between">
-                      <span className="mono-label text-[12px] text-blue">{item.label}</span>
+                    <div className="mb-6 flex items-start justify-between">
+                      <span className="mono-label text-[13px] text-blue">{item.label}</span>
                       <div className="h-1.5 w-1.5 rounded-full bg-gray/40 transition-all duration-300 group-hover:bg-blue group-hover:shadow-[0_0_10px_hsl(var(--blue)/0.7)]" />
                     </div>
-                    <p className="max-w-[30ch] text-pretty text-[15px] leading-relaxed text-sand/90">
+                    <p className="max-w-[32ch] text-pretty text-[17px] leading-relaxed text-sand/90">
                       {item.text}
                     </p>
                     {(i === 0 || isLast) && (
