@@ -26,11 +26,11 @@ export function SectionHeader({
       {eyebrow && (
         <span className="mono-label text-blue">{eyebrow}</span>
       )}
-      <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-medium tracking-tight text-sand leading-[1.15]">
+      <h2 className="text-[2rem] sm:text-4xl md:text-[2.6rem] lg:text-[3rem] font-medium tracking-tight text-sand leading-[1.12]">
         {title}
       </h2>
       {description && (
-        <p className="text-sand/80 max-w-2xl text-lg leading-relaxed">
+        <p className="text-sand/85 max-w-2xl text-[17px] sm:text-lg md:text-xl leading-relaxed">
           {description}
         </p>
       )}

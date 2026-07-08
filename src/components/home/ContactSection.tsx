@@ -45,13 +45,13 @@ function SelectField({ label, options, value, onChange }: { label: string; optio
 
 function CheckboxItem({ label, checked, onChange }: { label: string; checked: boolean; onChange: (v: boolean) => void }) {
   return (
-    <label className="flex items-start gap-2.5 cursor-pointer group py-1">
+    <label className="flex items-start gap-3 cursor-pointer group py-1.5">
       <input
         type="checkbox" checked={checked}
         onChange={(e) => onChange(e.target.checked)}
-        className="mt-0.5 w-[16px] h-[16px] accent-blue rounded-sm border-gray/40 shrink-0"
+        className="mt-0.5 w-[18px] h-[18px] accent-blue rounded-sm border-gray/40 shrink-0"
       />
-      <span className="text-[13px] text-gray group-hover:text-sand transition-colors leading-snug">{label}</span>
+      <span className="text-[15px] text-sand/85 group-hover:text-sand transition-colors leading-snug">{label}</span>
     </label>
   );
 }
@@ -227,25 +227,25 @@ export function ContactSection() {
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-12 lg:gap-16">
           <Reveal delay={100}>
             <div className="space-y-8">
-              <div className="space-y-2">
-                <h3 className="text-2xl font-medium text-sand tracking-tight">{t("formTitle")}</h3>
-                <p className="text-sm text-gray/85 leading-relaxed">{t("formDescription")}</p>
+              <div className="space-y-3">
+                <h3 className="text-2xl md:text-3xl font-medium text-sand tracking-tight">{t("formTitle")}</h3>
+                <p className="text-[16px] md:text-[17px] text-sand/80 leading-relaxed">{t("formDescription")}</p>
               </div>
 
               <aside
                 aria-label={t("prepareCard.title")}
-                className="bento-card rounded-lg p-5 sm:p-6 space-y-3 border-blue/20"
+                className="bento-card rounded-lg p-6 sm:p-7 space-y-4 border-blue/20"
               >
                 <div className="flex items-start gap-3">
-                  <ClipboardCheck className="w-4 h-4 text-blue mt-0.5 shrink-0" aria-hidden="true" />
-                  <div className="space-y-1">
+                  <ClipboardCheck className="w-5 h-5 text-blue mt-0.5 shrink-0" aria-hidden="true" />
+                  <div className="space-y-1.5">
                     <p className="mono-label text-blue">{t("prepareCard.title")}</p>
-                    <p className="text-[13px] text-gray/85 leading-relaxed">{t("prepareCard.subtitle")}</p>
+                    <p className="text-[15px] md:text-[16px] text-sand/80 leading-relaxed">{t("prepareCard.subtitle")}</p>
                   </div>
                 </div>
-                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-1.5 pl-7 list-disc marker:text-blue/60">
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 pl-8 list-disc marker:text-blue/60">
                   {(t("prepareCard.items", { returnObjects: true }) as string[]).map((item) => (
-                    <li key={item} className="text-[13px] text-gray leading-snug">{item}</li>
+                    <li key={item} className="text-[15px] text-sand/80 leading-snug">{item}</li>
                   ))}
                 </ul>
               </aside>
@@ -271,25 +271,25 @@ export function ContactSection() {
 
                 {/* Section 2 — Area of interest */}
                 <div className="border-t border-gray/20 pt-6 space-y-4">
-                  <div className="space-y-1">
+                  <div className="space-y-1.5">
                     <span className="mono-label text-blue">{t("sections.interestTitle")}<span className="text-blue ml-1">*</span></span>
-                    <p className="text-[12px] text-gray/70">{t("sections.interestHelper")}</p>
+                    <p className="text-[14px] md:text-[15px] text-sand/70">{t("sections.interestHelper")}</p>
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-5">
                     <div className="space-y-1.5">
-                      <p className="text-[11px] font-mono uppercase tracking-wider text-gray/60 mb-1">{t("sections.interestProducts")}</p>
+                      <p className="text-[12px] font-mono uppercase tracking-wider text-gray/70 mb-1.5">{t("sections.interestProducts")}</p>
                       {productInterests.map((label) => (
                         <CheckboxItem key={label} label={label} checked={interests.includes(label)} onChange={() => toggleInterest(label)} />
                       ))}
                     </div>
                     <div className="space-y-1.5">
-                      <p className="text-[11px] font-mono uppercase tracking-wider text-gray/60 mb-1">{t("sections.interestServices")}</p>
+                      <p className="text-[12px] font-mono uppercase tracking-wider text-gray/70 mb-1.5">{t("sections.interestServices")}</p>
                       {serviceInterests.map((label) => (
                         <CheckboxItem key={label} label={label} checked={interests.includes(label)} onChange={() => toggleInterest(label)} />
                       ))}
                     </div>
                     <div className="space-y-1.5">
-                      <p className="text-[11px] font-mono uppercase tracking-wider text-gray/60 mb-1">{t("sections.interestOther")}</p>
+                      <p className="text-[12px] font-mono uppercase tracking-wider text-gray/70 mb-1.5">{t("sections.interestOther")}</p>
                       {otherInterests.map((label) => (
                         <CheckboxItem key={label} label={label} checked={interests.includes(label)} onChange={() => toggleInterest(label)} />
                       ))}

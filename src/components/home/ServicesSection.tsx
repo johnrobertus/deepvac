@@ -38,9 +38,9 @@ export function ServicesSection() {
         <div className="mb-8 grid grid-cols-1 gap-px overflow-hidden rounded-lg border border-gray/10 bg-gray/10 lg:grid-cols-3">
           {Array.isArray(pillars) && pillars.map((pillar, i) => (
             <Reveal key={pillar.title} delay={i * 70}>
-              <div className="h-full bg-background/60 px-6 py-6">
-                <h3 className="text-[17px] font-medium text-sand">{pillar.title}</h3>
-                <p className="mt-2.5 text-[15px] leading-relaxed text-gray">{pillar.description}</p>
+              <div className="h-full bg-background/60 px-6 py-7">
+                <h3 className="text-lg font-medium text-sand">{pillar.title}</h3>
+                <p className="mt-3 text-[16px] md:text-[17px] leading-relaxed text-sand/75">{pillar.description}</p>
               </div>
             </Reveal>
           ))}
@@ -58,14 +58,14 @@ export function ServicesSection() {
                     </div>
                     <div className="space-y-2.5">
                       <span className="mono-label text-blue">{service.label}</span>
-                      <h3 className="text-lg font-medium text-sand">{service.title}</h3>
-                      <p className="text-[15px] leading-relaxed text-gray">{service.description}</p>
+                      <h3 className="text-xl font-medium text-sand">{service.title}</h3>
+                      <p className="text-[16px] md:text-[17px] leading-relaxed text-sand/75">{service.description}</p>
                     </div>
                   </div>
                   <div className="pt-5">
                     <Link
                       to={localizedPath(serviceHrefs[i], lang)}
-                      className="inline-flex items-center gap-1.5 text-[15px] text-sand transition-colors hover:text-blue"
+                      className="inline-flex items-center gap-1.5 text-[16px] text-sand transition-colors hover:text-blue"
                     >
                       {t("buttons.exploreService", { ns: "common" })}
                       <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
