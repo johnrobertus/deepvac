@@ -33,8 +33,8 @@ export function CataloguesSection() {
               </div>
               <div className="p-7 flex flex-col justify-center space-y-3">
                 <span className="mono-label text-blue">{t("home:catalogues.featuredBrochure")}</span>
-                <h3 className="text-lg font-medium text-sand">{featured.title}</h3>
-                <p className="text-[15px] text-gray leading-relaxed line-clamp-3">{featured.description}</p>
+                <h3 className="text-xl font-medium text-sand">{featured.title}</h3>
+                <p className="text-[16px] md:text-[17px] text-sand/75 leading-relaxed line-clamp-3">{featured.description}</p>
                 <div className="pt-2">
                   <Button asChild>
                     <a href={featured.pdfUrl} target="_blank" rel="noopener noreferrer">

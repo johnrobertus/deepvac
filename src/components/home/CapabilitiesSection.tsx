@@ -35,8 +35,8 @@ export function CapabilitiesSection() {
                       <Icon className="w-5 h-5" />
                     </div>
                     <div className="space-y-2.5">
-                      <h3 className={`font-medium text-sand ${featured ? 'text-lg' : 'text-[17px]'}`}>{item.title}</h3>
-                      <p className="text-[15px] leading-relaxed text-gray">{item.description}</p>
+                      <h3 className={`font-medium text-sand ${featured ? 'text-xl' : 'text-lg'}`}>{item.title}</h3>
+                      <p className="text-[16px] md:text-[17px] leading-relaxed text-sand/75">{item.description}</p>
                     </div>
                   </div>
                 </Reveal>
