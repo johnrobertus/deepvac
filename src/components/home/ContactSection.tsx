@@ -45,13 +45,13 @@ function SelectField({ label, options, value, onChange }: { label: string; optio
 
 function CheckboxItem({ label, checked, onChange }: { label: string; checked: boolean; onChange: (v: boolean) => void }) {
   return (
-    <label className="flex items-start gap-2.5 cursor-pointer group py-1">
+    <label className="flex items-start gap-3 cursor-pointer group py-1.5">
       <input
         type="checkbox" checked={checked}
         onChange={(e) => onChange(e.target.checked)}
-        className="mt-0.5 w-[16px] h-[16px] accent-blue rounded-sm border-gray/40 shrink-0"
+        className="mt-0.5 w-[18px] h-[18px] accent-blue rounded-sm border-gray/40 shrink-0"
       />
-      <span className="text-[13px] text-gray group-hover:text-sand transition-colors leading-snug">{label}</span>
+      <span className="text-[15px] text-sand/85 group-hover:text-sand transition-colors leading-snug">{label}</span>
     </label>
   );
 }
