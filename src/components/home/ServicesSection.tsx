@@ -58,14 +58,14 @@ export function ServicesSection() {
                     </div>
                     <div className="space-y-2.5">
                       <span className="mono-label text-blue">{service.label}</span>
-                      <h3 className="text-lg font-medium text-sand">{service.title}</h3>
-                      <p className="text-[15px] leading-relaxed text-gray">{service.description}</p>
+                      <h3 className="text-xl font-medium text-sand">{service.title}</h3>
+                      <p className="text-[16px] md:text-[17px] leading-relaxed text-sand/75">{service.description}</p>
                     </div>
                   </div>
                   <div className="pt-5">
                     <Link
                       to={localizedPath(serviceHrefs[i], lang)}
-                      className="inline-flex items-center gap-1.5 text-[15px] text-sand transition-colors hover:text-blue"
+                      className="inline-flex items-center gap-1.5 text-[16px] text-sand transition-colors hover:text-blue"
                     >
                       {t("buttons.exploreService", { ns: "common" })}
                       <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
