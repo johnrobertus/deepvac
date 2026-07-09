@@ -32,9 +32,10 @@ export function CataloguesSection() {
                 <img src={featured.coverUrl} alt={featured.title} className="w-full h-full object-cover" loading="lazy" />
               </div>
               <div className="p-7 flex flex-col justify-center space-y-3">
-                <span className="mono-label text-blue">{t("home:catalogues.featuredBrochure")}</span>
-                <h3 className="text-xl font-medium text-sand">{featured.title}</h3>
-                <p className="text-[16px] md:text-[17px] text-sand/75 leading-relaxed line-clamp-3">{featured.description}</p>
+                <span className="text-card-eyebrow">{t("home:catalogues.featuredBrochure")}</span>
+                <h3 className="text-card-title-lg">{featured.title}</h3>
+                <p className="text-card-body line-clamp-3">{featured.description}</p>
+
                 <div className="pt-2">
                   <Button asChild>
                     <a href={featured.pdfUrl} target="_blank" rel="noopener noreferrer">
