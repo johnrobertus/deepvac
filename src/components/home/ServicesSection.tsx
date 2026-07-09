@@ -58,9 +58,10 @@ export function ServicesSection() {
                       <Icon className="h-5 w-5" />
                     </div>
                     <div className="space-y-2.5">
-                      <span className="mono-label text-blue">{service.label}</span>
-                      <h3 className="text-xl font-medium text-sand">{service.title}</h3>
-                      <p className="text-[16px] md:text-[17px] leading-relaxed text-sand/75">{service.description}</p>
+                      <span className="text-card-eyebrow">{service.label}</span>
+                      <h3 className="text-card-title-lg">{service.title}</h3>
+                      <p className="text-card-body">{service.description}</p>
+
                     </div>
                   </div>
                   <div className="pt-5">
