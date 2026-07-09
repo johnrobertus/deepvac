@@ -47,12 +47,13 @@ export function TrustBarSection() {
                     }`}
                   >
                     <div className="mb-6 flex items-start justify-between">
-                      <span className="mono-label text-[13px] text-blue">{item.label}</span>
+                      <span className="text-card-eyebrow">{item.label}</span>
                       <div className="h-1.5 w-1.5 rounded-full bg-gray/40 transition-all duration-300 group-hover:bg-blue group-hover:shadow-[0_0_10px_hsl(var(--blue)/0.7)]" />
                     </div>
-                    <p className="max-w-[32ch] text-pretty text-[17px] leading-relaxed text-sand/90">
+                    <p className="max-w-[32ch] text-pretty text-body-lg">
                       {item.text}
                     </p>
+
                     {(i === 0 || isLast) && (
                       <div
                         className={`absolute bottom-0 h-px w-8 bg-blue/25 ${
