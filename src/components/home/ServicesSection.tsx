@@ -39,8 +39,9 @@ export function ServicesSection() {
           {Array.isArray(pillars) && pillars.map((pillar, i) => (
             <Reveal key={pillar.title} delay={i * 70}>
               <div className="h-full bg-background/60 px-6 py-7">
-                <h3 className="text-lg font-medium text-sand">{pillar.title}</h3>
-                <p className="mt-3 text-[16px] md:text-[17px] leading-relaxed text-sand/75">{pillar.description}</p>
+                <h3 className="text-card-title">{pillar.title}</h3>
+                <p className="mt-3 text-card-body">{pillar.description}</p>
+
               </div>
             </Reveal>
           ))}
@@ -57,9 +58,10 @@ export function ServicesSection() {
                       <Icon className="h-5 w-5" />
                     </div>
                     <div className="space-y-2.5">
-                      <span className="mono-label text-blue">{service.label}</span>
-                      <h3 className="text-xl font-medium text-sand">{service.title}</h3>
-                      <p className="text-[16px] md:text-[17px] leading-relaxed text-sand/75">{service.description}</p>
+                      <span className="text-card-eyebrow">{service.label}</span>
+                      <h3 className="text-card-title-lg">{service.title}</h3>
+                      <p className="text-card-body">{service.description}</p>
+
                     </div>
                   </div>
                   <div className="pt-5">

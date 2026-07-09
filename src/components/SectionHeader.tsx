@@ -23,17 +23,10 @@ export function SectionHeader({
         className
       )}
     >
-      {eyebrow && (
-        <span className="mono-label text-blue">{eyebrow}</span>
-      )}
-      <h2 className="text-[2rem] sm:text-4xl md:text-[2.6rem] lg:text-[3rem] font-medium tracking-tight text-sand leading-[1.12]">
-        {title}
-      </h2>
-      {description && (
-        <p className="text-sand/85 max-w-2xl text-[17px] sm:text-lg md:text-xl leading-relaxed">
-          {description}
-        </p>
-      )}
+      {eyebrow && <span className="text-section-eyebrow">{eyebrow}</span>}
+      <h2 className="text-section-title">{title}</h2>
+      {description && <p className="text-section-lead">{description}</p>}
     </div>
   );
 }
+
