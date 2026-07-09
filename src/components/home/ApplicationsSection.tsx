@@ -30,8 +30,9 @@ export function ApplicationsSection() {
                   <div className="w-11 h-11 rounded-sm bg-blue/10 border border-blue/25 flex items-center justify-center text-blue">
                     <Icon className="w-5 h-5" />
                   </div>
-                  <h3 className="text-lg font-medium text-sand">{useCase.title}</h3>
-                  <p className="text-[16px] md:text-[17px] text-sand/75 leading-relaxed">{useCase.description}</p>
+                  <h3 className="text-card-title">{useCase.title}</h3>
+                  <p className="text-card-body">{useCase.description}</p>
+
                 </div>
               </Reveal>
             );
