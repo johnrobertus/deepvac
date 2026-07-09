@@ -30,7 +30,8 @@ const Catalogues = () => {
       description: t("placeholderDocs.customTvac.description"),
       tags: ["Overview", "TVAC", "Custom"],
       pdfUrl: "/brochures/deepvac-company-overview-capabilities.pdf",
-      coverUrl: "",
+      coverUrl: "/brochures/deepvac-company-overview-cover.jpg",
+
     },
     { id: "service-portfolio", title: t("placeholderDocs.servicePortfolio.title"), description: t("placeholderDocs.servicePortfolio.description"), tags: ["Service", "Overview"], pdfUrl: "", coverUrl: "" },
   ];
