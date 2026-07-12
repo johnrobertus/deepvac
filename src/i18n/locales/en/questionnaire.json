@@ -3,7 +3,7 @@
     "eyebrow": "Detailed technical inquiry",
     "title": "TVAC system questionnaire",
     "description": "A structured technical brief for thermal vacuum and space-simulation systems. Use this to share configuration intent with our engineering team — leave any field blank if a specification is still open.",
-    "estimatedTime": "Estimated time: 10–15 minutes",
+    "estimatedTime": "Estimated time: 10–15 minutes",
     "reassurance": "All technical fields are optional. Only contact details and consent are required to submit."
   },
   "wizard": {
@@ -179,7 +179,7 @@
     "dutCount": "Max. number of DUTs tested",
     "dutCountPh": "Enter maximum number of DUTs",
     "vacuum": "Required vacuum level (mbar)",
-    "vacuumOptions": ["1 × 10⁻⁵ mbar", "1 × 10⁻⁶ mbar", "< 1 × 10⁻⁷ mbar"],
+    "vacuumOptions": ["1 × 10⁻⁵ mbar", "1 × 10⁻⁶ mbar", "< 1 × 10⁻⁷ mbar"],
     "highVacPump": "High vacuum pump",
     "highVacOptions": ["Cryo pump", "Turbomolecular pump"],
     "highVacNested": ["Maglev turbomolecular pump", "Mechanical turbomolecular pump"],
@@ -293,7 +293,7 @@
     "installSpace": "Installation space limitations",
     "installSpacePh": "Describe space, ceiling height, floor load limits, access restrictions, transport path, etc.",
     "power": "Power supply specifications",
-    "powerOptions": ["230 V / 1-phase", "400 V / 3-phase"],
+    "powerOptions": ["230 V / 1-phase", "400 V / 3-phase"],
     "powerMaxPh": "Max. power consumption (kW)",
     "utilities": "Utilities available",
     "utilitiesOptions": [
