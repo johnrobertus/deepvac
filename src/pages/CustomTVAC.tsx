@@ -72,7 +72,7 @@ const CustomTVAC = () => {
                 {tc("cta.questionnaire.start")}
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
+            <Button asChild variant="outline" size="lg" className="font-mono text-xs tracking-wide w-full sm:w-auto">
               <Link to={localizedPath("/contact", lang)}>{tc("cta.questionnaire.talkToEngineer")}</Link>
             </Button>
           </div>
@@ -124,7 +124,7 @@ const CustomTVAC = () => {
               {tc("cta.questionnaire.configure")}
             </Link>
           </Button>
-          <Button asChild variant="outline" size="lg">
+          <Button asChild variant="outline" size="lg" className="font-mono text-xs tracking-wide">
             <Link to={localizedPath("/contact", lang)}>{tc("buttons.requestConsultation")}</Link>
           </Button>
         </CTABand>
@@ -228,7 +228,7 @@ const CustomTVAC = () => {
               {tc("cta.questionnaire.submitDetailed")}
             </Link>
           </Button>
-          <Button asChild variant="outline" size="lg">
+          <Button asChild variant="outline" size="lg" className="font-mono text-xs tracking-wide">
             <Link to={localizedPath("/contact", lang)}>{tc("buttons.requestConsultation")}</Link>
           </Button>
         </CTABand>

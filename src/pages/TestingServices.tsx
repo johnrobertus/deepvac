@@ -121,7 +121,7 @@ export const TestingServices = () => {
             <Button asChild size="lg" className="font-mono text-xs tracking-wide w-full sm:w-auto">
               <Link to={lp("/contact")}>{t("testing.ctaPrimary")}</Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
+            <Button asChild variant="outline" size="lg" className="font-mono text-xs tracking-wide w-full sm:w-auto">
               <a href="#capabilities">{t("testing.ctaSecondary")}</a>
             </Button>
           </div>

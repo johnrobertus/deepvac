@@ -64,7 +64,7 @@ const Services = () => {
             <Button asChild size="lg" className="font-mono text-xs tracking-wide w-full sm:w-auto">
               <Link to={localizedPath("/contact", lang)}>{tc("buttons.discussRequirements")}</Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
+            <Button asChild variant="outline" size="lg" className="font-mono text-xs tracking-wide w-full sm:w-auto">
               <Link to={localizedPath("/products", lang)}>{tc("buttons.exploreChamberProducts")}</Link>
             </Button>
           </div>
@@ -154,7 +154,7 @@ const Services = () => {
               {tc("cta.questionnaire.configure")}
             </Link>
           </Button>
-          <Button asChild variant="outline" size="lg">
+          <Button asChild variant="outline" size="lg" className="font-mono text-xs tracking-wide">
             <Link to={localizedPath("/contact", lang)}>{tc("buttons.talkToEngineer")}</Link>
           </Button>
         </CTABand>

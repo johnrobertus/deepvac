@@ -81,7 +81,7 @@ const Products = () => {
             <Button asChild size="lg" className="font-mono text-xs tracking-wide w-full sm:w-auto">
               <Link to={localizedPath("/contact", lang)}>{tc("buttons.requestConsultation")}</Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
+            <Button asChild variant="outline" size="lg" className="font-mono text-xs tracking-wide w-full sm:w-auto">
               <Link to={localizedPath("/catalogs", lang)}>{tc("buttons.downloadProductOverview")}</Link>
             </Button>
           </div>
@@ -217,10 +217,10 @@ const Products = () => {
               {tc("cta.questionnaire.configure")}
             </Link>
           </Button>
-          <Button asChild variant="outline" size="lg">
+          <Button asChild variant="outline" size="lg" className="font-mono text-xs tracking-wide">
             <Link to={localizedPath("/contact", lang)}>{tc("buttons.requestQuote")}</Link>
           </Button>
-          <Button asChild variant="ghost" size="lg" className="text-gray hover:text-sand">
+          <Button asChild variant="ghost" size="lg" className="font-mono text-xs tracking-wide text-gray hover:text-sand">
             <Link to={localizedPath("/contact", lang)}>{tc("buttons.talkToEngineer")}</Link>
           </Button>
         </CTABand>

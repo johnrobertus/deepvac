@@ -40,7 +40,7 @@ const NotFound = () => {
                   {t("common:buttons.returnToHomepage")}
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg">
+              <Button asChild variant="outline" size="lg" className="font-mono text-xs tracking-wide">
                 <Link to={localizedPath("/contact", lang)}>{t("common:buttons.contactUs")}</Link>
               </Button>
             </div>

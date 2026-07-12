@@ -53,7 +53,7 @@ function ServicePageTemplate({ seoKey, nsKey, heroImage, children }: ServicePage
             <Button asChild size="lg" className="font-mono text-xs tracking-wide w-full sm:w-auto">
               <Link to={localizedPath("/contact", lang)}>{tc("buttons.discussRequirements")}</Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
+            <Button asChild variant="outline" size="lg" className="font-mono text-xs tracking-wide w-full sm:w-auto">
               <Link to={localizedPath("/services", lang)}>{tc("buttons.allServices")}</Link>
             </Button>
           </div>
@@ -123,7 +123,7 @@ function ServicePageTemplate({ seoKey, nsKey, heroImage, children }: ServicePage
           <Button asChild size="lg" className="font-mono text-xs tracking-wide">
             <Link to={localizedPath("/contact", lang)}>{tc("buttons.talkToEngineer")}</Link>
           </Button>
-          <Button asChild variant="outline" size="lg">
+          <Button asChild variant="outline" size="lg" className="font-mono text-xs tracking-wide">
             <Link to={localizedPath("/contact", lang)}>{tc("buttons.requestQuote")}</Link>
           </Button>
         </CTABand>

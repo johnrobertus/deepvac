@@ -99,7 +99,7 @@ const TwinQCM = () => (
                 <Button asChild size="lg" className="font-mono text-xs tracking-wide">
                   <Link to="/contact">Request a Technical Consultation</Link>
                 </Button>
-                <Button asChild variant="outline" size="lg">
+                <Button asChild variant="outline" size="lg" className="font-mono text-xs tracking-wide">
                   <Link to="/contact">Discuss Integration</Link>
                 </Button>
               </div>
@@ -305,7 +305,7 @@ const TwinQCM = () => (
         <Button asChild size="lg" className="font-mono text-xs tracking-wide">
           <Link to="/contact">Request a Technical Consultation</Link>
         </Button>
-        <Button asChild variant="outline" size="lg">
+        <Button asChild variant="outline" size="lg" className="font-mono text-xs tracking-wide">
           <Link to="/contact">Discuss Integration</Link>
         </Button>
       </CTABand>
