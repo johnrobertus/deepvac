@@ -57,7 +57,7 @@ export function TrustBar({ items }: { items: string[] }) {
     <div className="border-y border-gray/20 py-8">
       <div className="container-wide flex flex-wrap items-center justify-center gap-8 md:gap-16">
         {items.map((item) => (
-          <span key={item} className="mono-label text-gray/80">{item}</span>
+          <span key={item} className="mono-label text-gray">{item}</span>
         ))}
       </div>
     </div>
@@ -76,11 +76,9 @@ export function CTABand({
   return (
     <section className="relative py-16 md:py-24 px-6 bg-surface border-t border-blue/20">
       <div className="container max-w-4xl text-center space-y-6">
-        <h2 className="text-3xl md:text-4xl font-medium tracking-tight text-sand">
-          {title}
-        </h2>
+        <h2 className="text-section-title">{title}</h2>
         {description && (
-          <p className="text-gray text-base max-w-xl mx-auto leading-relaxed">{description}</p>
+          <p className="text-section-lead mx-auto">{description}</p>
         )}
         {children && <div className="pt-4 flex flex-col sm:flex-row flex-wrap justify-center gap-4">{children}</div>}
       </div>
