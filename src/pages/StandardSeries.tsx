@@ -14,8 +14,9 @@ import { getHreflangs, getCanonical, localizedPath } from "@/lib/routes";
 import tseriesImg from "@/assets/tseries-chamber.png";
 import cseriesImg from "@/assets/cseries-chamber.png";
 
-const vacuum = "< 1 × 10⁻⁶ mbar";
-const minTemp = "-190 °C";
+const NBSP = "\u00A0";
+const vacuum = `<${NBSP}1${NBSP}×${NBSP}10⁻⁶${NBSP}mbar`;
+const minTemp = `−190${NBSP}°C`;
 
 const tSeriesIcons = [
   <Maximize className="w-4 h-4" />,
@@ -66,14 +67,14 @@ const StandardSeries = () => {
             <Button asChild size="lg" className="font-mono text-xs tracking-wide w-full sm:w-auto">
               <Link to={localizedPath("/contact", lang)}>{tc("buttons.requestTechnicalDetails")}</Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
+            <Button asChild variant="outline" size="lg" className="font-mono text-xs tracking-wide w-full sm:w-auto">
               <Link to={localizedPath("/catalogs", lang)}>{tc("buttons.downloadBrochure")}</Link>
             </Button>
           </div>
           <div className="flex flex-wrap gap-2 pt-4">
-            <TechChip label="Architecture" value="Modular" />
-            <TechChip label="Vacuum" value={vacuum} />
-            <TechChip label="Min Temp" value={minTemp} />
+            <TechChip label={t("standardSeries.techChips.architecture.label")} value={t("standardSeries.techChips.architecture.value")} />
+            <TechChip label={t("standardSeries.techChips.vacuum.label")} value={vacuum} />
+            <TechChip label={t("standardSeries.techChips.minTemp.label")} value={minTemp} />
           </div>
         </PageHero>
 
@@ -82,27 +83,27 @@ const StandardSeries = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <div>
               <div className="relative rounded-lg overflow-hidden border border-gray/10 bg-surface/40 h-[280px] lg:h-[420px] flex items-center justify-center">
-                <img src={tseriesImg} alt="Deepvac T Series Cubic Thermal Vacuum Chamber" className="w-full h-full object-contain p-6 lg:p-8" loading="lazy" />
+                <img src={tseriesImg} alt={t("standardSeries.alt.tSeries")} className="w-full h-full object-contain p-6 lg:p-8" loading="lazy" />
                 <div className="absolute top-3 left-3 glass-overlay rounded-md px-3 py-1.5">
-                  <span className="mono-label text-blue-light">T Series</span>
+                  <span className="mono-label text-blue-light">{t("standardSeries.badges.tSeries")}</span>
                 </div>
               </div>
             </div>
             <div className="space-y-6">
-              <div>
-                <span className="mono-label text-blue">{t("standardSeries.tSeries.eyebrow")}</span>
-                <h2 className="text-3xl md:text-4xl font-medium text-sand mt-2 tracking-tight">{t("standardSeries.tSeries.title")}</h2>
+              <div className="space-y-2">
+                <span className="text-section-eyebrow">{t("standardSeries.tSeries.eyebrow")}</span>
+                <h2 className="text-section-title">{t("standardSeries.tSeries.title")}</h2>
               </div>
-              <p className="text-sm text-gray leading-relaxed">{t("standardSeries.tSeries.description")}</p>
-              <p className="text-sm text-gray/70 leading-relaxed">
+              <p className="text-body">{t("standardSeries.tSeries.description")}</p>
+              <p className="text-body">
                 {t("standardSeries.tSeries.descriptionExtended", { vacuum, minTemp })}
               </p>
               <div className="grid grid-cols-2 gap-4 pt-2">
                 {tFeatures.map((f, i) => (
                   <div key={f.label} className="bento-card rounded-lg p-4 space-y-2">
                     <div className="text-blue">{tSeriesIcons[i]}</div>
-                    <h4 className="text-xs font-medium text-sand">{f.label}</h4>
-                    <p className="text-[11px] text-gray leading-relaxed">{f.detail.replace("{{vacuum}}", vacuum).replace("{{minTemp}}", minTemp)}</p>
+                    <h4 className="text-card-title">{f.label}</h4>
+                    <p className="text-card-body">{f.detail.replace("{{vacuum}}", vacuum).replace("{{minTemp}}", minTemp)}</p>
                   </div>
                 ))}
               </div>
@@ -117,27 +118,27 @@ const StandardSeries = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <div className="lg:order-2">
               <div className="relative rounded-lg overflow-hidden border border-gray/10 bg-surface/40 h-[280px] lg:h-[420px] flex items-center justify-center">
-                <img src={cseriesImg} alt="Deepvac C Series Cylindrical Thermal Vacuum Chamber" className="w-full h-full object-contain p-6 lg:p-8" loading="lazy" />
+                <img src={cseriesImg} alt={t("standardSeries.alt.cSeries")} className="w-full h-full object-contain p-6 lg:p-8" loading="lazy" />
                 <div className="absolute top-3 right-3 glass-overlay rounded-md px-3 py-1.5">
-                  <span className="mono-label text-blue-light">C Series</span>
+                  <span className="mono-label text-blue-light">{t("standardSeries.badges.cSeries")}</span>
                 </div>
               </div>
             </div>
             <div className="space-y-6 lg:order-1">
-              <div>
-                <span className="mono-label text-blue">{t("standardSeries.cSeries.eyebrow")}</span>
-                <h2 className="text-3xl md:text-4xl font-medium text-sand mt-2 tracking-tight">{t("standardSeries.cSeries.title")}</h2>
+              <div className="space-y-2">
+                <span className="text-section-eyebrow">{t("standardSeries.cSeries.eyebrow")}</span>
+                <h2 className="text-section-title">{t("standardSeries.cSeries.title")}</h2>
               </div>
-              <p className="text-sm text-gray leading-relaxed">{t("standardSeries.cSeries.description")}</p>
-              <p className="text-sm text-gray/70 leading-relaxed">
+              <p className="text-body">{t("standardSeries.cSeries.description")}</p>
+              <p className="text-body">
                 {t("standardSeries.cSeries.descriptionExtended", { vacuum, minTemp })}
               </p>
               <div className="grid grid-cols-2 gap-4 pt-2">
                 {cFeatures.map((f, i) => (
                   <div key={f.label} className="bento-card rounded-lg p-4 space-y-2">
                     <div className="text-blue">{cSeriesIcons[i]}</div>
-                    <h4 className="text-xs font-medium text-sand">{f.label}</h4>
-                    <p className="text-[11px] text-gray leading-relaxed">{f.detail.replace("{{vacuum}}", vacuum).replace("{{minTemp}}", minTemp)}</p>
+                    <h4 className="text-card-title">{f.label}</h4>
+                    <p className="text-card-body">{f.detail.replace("{{vacuum}}", vacuum).replace("{{minTemp}}", minTemp)}</p>
                   </div>
                 ))}
               </div>
@@ -159,7 +160,7 @@ const StandardSeries = () => {
             {applications.map((app: string) => (
               <div key={app} className="bento-card rounded-lg p-4 flex items-start gap-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-blue mt-1.5 shrink-0" />
-                <span className="text-sm text-sand">{app}</span>
+                <span className="text-card-body">{app}</span>
               </div>
             ))}
           </div>
@@ -170,11 +171,11 @@ const StandardSeries = () => {
           <div className="bento-card rounded-lg p-8 lg:p-10 border-l-2 border-l-blue/60">
             <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-6 items-center">
               <div className="space-y-3">
-                <span className="mono-label text-blue">{t("standardSeries.beyondStandard.eyebrow")}</span>
-                <h3 className="text-xl md:text-2xl font-medium text-sand tracking-tight">{t("standardSeries.beyondStandard.title")}</h3>
-                <p className="text-sm text-gray leading-relaxed max-w-xl">{t("standardSeries.beyondStandard.description")}</p>
+                <span className="text-section-eyebrow">{t("standardSeries.beyondStandard.eyebrow")}</span>
+                <h3 className="text-card-title-lg md:text-2xl">{t("standardSeries.beyondStandard.title")}</h3>
+                <p className="text-body">{t("standardSeries.beyondStandard.description")}</p>
               </div>
-              <Button asChild variant="outline" className="self-start group/btn">
+              <Button asChild variant="outline" className="font-mono text-xs tracking-wide self-start group/btn">
                 <Link to={localizedPath("/products/custom-tvac", lang)}>
                   {tc("buttons.exploreCustomTvac")}
                   <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover/btn:translate-x-1" />
@@ -188,14 +189,14 @@ const StandardSeries = () => {
         <Section>
           <div className="bento-card rounded-lg overflow-hidden grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-0">
             <div className="relative bg-surface overflow-hidden">
-              <img src="/brochures/deepvac-standard-series-cover.jpg" alt="Deepvac Standard Series Catalogue" className="w-full h-full object-cover" loading="lazy" />
+              <img src="/brochures/deepvac-standard-series-cover.jpg" alt={t("standardSeries.alt.brochureCover")} className="w-full h-full object-cover" loading="lazy" />
             </div>
             <div className="p-8 lg:p-10 flex flex-col justify-center space-y-4">
-              <span className="mono-label text-blue">{t("standardSeries.brochure.eyebrow")}</span>
-              <h3 className="text-xl md:text-2xl font-medium text-sand tracking-tight">{t("standardSeries.brochure.title")}</h3>
-              <p className="text-sm text-gray leading-relaxed max-w-xl">{t("standardSeries.brochure.description")}</p>
+              <span className="text-section-eyebrow">{t("standardSeries.brochure.eyebrow")}</span>
+              <h3 className="text-card-title-lg md:text-2xl">{t("standardSeries.brochure.title")}</h3>
+              <p className="text-body">{t("standardSeries.brochure.description")}</p>
               <div className="pt-2">
-                <Button asChild>
+                <Button asChild className="font-mono text-xs tracking-wide">
                   <a href="/brochures/deepvac-standard-series-catalogue-2026.pdf" target="_blank" rel="noopener noreferrer">
                     <Download className="w-4 h-4 mr-2" />
                     {tc("buttons.downloadPdf")}
@@ -212,8 +213,8 @@ const StandardSeries = () => {
           <Accordion type="single" collapsible className="max-w-3xl">
             {faqItems.map((faq, i) => (
               <AccordionItem key={i} value={`faq-${i}`} className="border-gray/15">
-                <AccordionTrigger className="text-sand text-sm text-left hover:no-underline">{faq.q.replace("{{vacuum}}", vacuum).replace("{{minTemp}}", minTemp)}</AccordionTrigger>
-                <AccordionContent className="text-gray text-sm leading-relaxed">{faq.a.replace("{{vacuum}}", vacuum).replace("{{minTemp}}", minTemp)}</AccordionContent>
+                <AccordionTrigger className="text-sand text-[15px] md:text-base text-left hover:no-underline">{faq.q.replace("{{vacuum}}", vacuum).replace("{{minTemp}}", minTemp)}</AccordionTrigger>
+                <AccordionContent className="text-sand/85 text-[15px] md:text-base leading-relaxed">{faq.a.replace("{{vacuum}}", vacuum).replace("{{minTemp}}", minTemp)}</AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
@@ -226,15 +227,15 @@ const StandardSeries = () => {
               {tc("cta.questionnaire.configureCustomVariant")}
             </Link>
           </Button>
-          <Button asChild variant="outline" size="lg">
+          <Button asChild variant="outline" size="lg" className="font-mono text-xs tracking-wide">
             <Link to={localizedPath("/contact", lang)}>{tc("buttons.requestQuote")}</Link>
           </Button>
-          <Button asChild variant="ghost" size="lg" className="text-gray hover:text-sand">
+          <Button asChild variant="ghost" size="lg" className="font-mono text-xs tracking-wide text-gray hover:text-sand">
             <Link to={localizedPath("/contact", lang)}>{tc("buttons.talkToEngineer")}</Link>
           </Button>
         </CTABand>
-        <p className="container mx-auto px-6 -mt-6 mb-12 flex items-start gap-1.5 text-[11px] text-gray/60 leading-relaxed font-mono max-w-2xl">
-          <Clock className="w-3 h-3 mt-0.5 text-blue/60 shrink-0" />
+        <p className="container mx-auto px-6 -mt-6 mb-12 flex items-start gap-1.5 text-card-meta text-gray/85 max-w-2xl">
+          <Clock className="w-3.5 h-3.5 mt-0.5 text-blue/70 shrink-0" />
           <span>{tc("cta.questionnaire.microcopyShort")}</span>
         </p>
       </PageShell>
