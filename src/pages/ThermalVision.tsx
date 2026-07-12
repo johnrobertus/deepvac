@@ -125,16 +125,16 @@ const ThermalVision = () => {
                 <span className="mono-label text-blue">
                   {t("thermalVision.splitLabel")}
                 </span>
-                <h2 className="text-3xl md:text-4xl font-medium text-sand mt-2 tracking-tight">
+                <h2 className="text-section-title mt-2">
                   {t("thermalVision.splitHeading")}
                 </h2>
               </div>
 
-              <p className="text-sm text-gray leading-relaxed">
+              <p className="text-body">
                 {t("thermalVision.bodyParagraph1")}
               </p>
 
-              <p className="text-sm text-gray leading-relaxed">
+              <p className="text-body">
                 {t("thermalVision.bodyParagraph2")}
               </p>
 

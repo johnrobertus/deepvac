@@ -52,7 +52,7 @@ const Team = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div className="space-y-6">
               <SectionHeader eyebrow={t("story.eyebrow")} title={t("story.title")} />
-              <div className="space-y-4 text-sm text-gray leading-relaxed">
+              <div className="space-y-4 text-body">
                 {storyParagraphs.map((p: string, i: number) => <p key={i}>{p}</p>)}
               </div>
             </div>
@@ -103,7 +103,7 @@ const Team = () => {
                       <Linkedin className="w-4 h-4" />
                     </a>
                   </div>
-                  <p className="text-sm text-gray leading-relaxed">{member.description}</p>
+                  <p className="text-body">{member.description}</p>
                   <div className="pt-2 border-t border-gray/10 space-y-2">
                     <span className="mono-label">{t("leadership.focusAreas")}</span>
                     <div className="flex flex-wrap gap-2">
@@ -129,7 +129,7 @@ const Team = () => {
                     <Icon className="w-5 h-5 text-blue" />
                   </div>
                   <h3 className="text-base font-medium text-sand">{item.title}</h3>
-                  <p className="text-sm text-gray leading-relaxed">{item.description}</p>
+                  <p className="text-body">{item.description}</p>
                 </div>
               );
             })}
@@ -144,7 +144,7 @@ const Team = () => {
                 <span className="w-1.5 h-1.5 rounded-full bg-blue mt-2 flex-shrink-0" />
                 <div>
                   <h3 className="text-sm font-medium text-sand">{item.title}</h3>
-                  <p className="text-sm text-gray leading-relaxed mt-1">{item.text}</p>
+                  <p className="text-body mt-1">{item.text}</p>
                 </div>
               </div>
             ))}

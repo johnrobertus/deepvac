@@ -50,7 +50,7 @@ const Blog = () => {
                   <h2 className="text-lg font-medium text-sand leading-snug">
                     {t(article.titleKey)}
                   </h2>
-                  <p className="text-sm text-gray leading-relaxed flex-1">
+                  <p className="text-body flex-1">
                     {t(article.descriptionKey)}
                   </p>
                   <span className="inline-flex items-center gap-1.5 text-sm text-blue group-hover:gap-2.5 transition-all mt-2">

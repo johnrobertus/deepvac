@@ -87,11 +87,11 @@ export function QuestionnaireCard({ className }: { className?: string }) {
             <p className="text-[13px] font-mono uppercase tracking-[0.18em] text-blue/80">
               {t("cta.questionnaire.specify")}
             </p>
-            <h2 className="text-xl md:text-2xl font-medium text-sand tracking-tight">
+            <h2 className="text-card-title-lg md:text-2xl">
               {t("cta.questionnaire.card.title")}
             </h2>
           </div>
-          <p className="text-sm text-gray leading-relaxed">{t("cta.questionnaire.card.text")}</p>
+          <p className="text-body">{t("cta.questionnaire.card.text")}</p>
           <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5 pt-1">
             <Button asChild size="lg" className="font-mono text-xs tracking-wide shrink-0">
               <Link to={to}>

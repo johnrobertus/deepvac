@@ -80,7 +80,7 @@ const TwinQCM = () => (
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-sand">
                 NDK Twin-QCM Outgassing Analysis
               </h1>
-              <p className="text-base text-gray leading-relaxed max-w-xl">
+              <p className="text-body max-w-xl">
                 Chamber-integrated QTGA sensor technology for quantitative outgassing measurement and contamination
                 analysis.
               </p>
@@ -121,13 +121,13 @@ const TwinQCM = () => (
       <Section>
         <SectionHeader eyebrow="Overview" title="Chamber-Integrated Outgassing Diagnostics" className="mb-10" />
         <div className="max-w-3xl space-y-5">
-          <p className="text-sm text-gray leading-relaxed">
+          <p className="text-body">
             The Twin-QCM platform combines precise mass detection with thermally resolved outgassing analysis in a
             compact, chamber-integrated subsystem. Instead of relying on a separate laboratory workflow, Deepvac
             integrates the technology directly into vacuum chambers, chamber upgrades, retrofit packages, and
             customer-specific test setups.
           </p>
-          <p className="text-sm text-gray leading-relaxed">
+          <p className="text-body">
             At the core of the system is a twin-electrode crystal design with a reaction electrode and a reference
             electrode on the same crystal blank. By evaluating the differential signal between both electrodes, the
             sensor reduces the influence of vibration, temperature drift, and other environmental disturbances,
@@ -144,16 +144,16 @@ const TwinQCM = () => (
         <SectionHeader eyebrow="Measurement Principle" title="How It Works" className="mb-10" />
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
           <div className="space-y-5">
-            <p className="text-sm text-gray leading-relaxed">
+            <p className="text-body">
               When outgassed species adsorb onto the crystal electrode, the resonance frequency decreases in proportion
               to the deposited mass. In QTGA operation, the sensor is cooled and heated in a controlled profile,
               allowing adsorption and desorption behavior to be tracked as a function of temperature and time.
             </p>
-            <p className="text-sm text-gray leading-relaxed">
+            <p className="text-body">
               This enables both total outgassing quantification and thermally resolved analysis of release behavior from
               materials, components, and assemblies.
             </p>
-            <p className="text-sm text-gray leading-relaxed">
+            <p className="text-body">
               Both Twin-TQCM and Twin-CQCM support simultaneous real-time measurement at 10.278 MHz fundamental
               frequency and 30.833 MHz 3rd overtone, combining wide dynamic range with higher sensitivity in a single
               measurement architecture. The sensing units support up to 20 m module distance, ≤1 ppm frequency detection
@@ -200,7 +200,7 @@ const TwinQCM = () => (
           <div className="bento-card rounded-lg p-8 space-y-4">
             <span className="mono-label text-blue">Thermoelectric</span>
             <h3 className="text-xl font-medium text-sand">Twin-TQCM</h3>
-            <p className="text-sm text-gray leading-relaxed">
+            <p className="text-body">
               The thermoelectric version is designed for applications where liquid nitrogen is not desired. It uses
               Peltier-based cooling and supports an operating temperature range from -80 to +125 °C. This makes it well
               suited for vacuum environment monitoring, cleanroom-related applications, compact material evaluation
@@ -218,7 +218,7 @@ const TwinQCM = () => (
           <div className="bento-card rounded-lg p-8 space-y-4">
             <span className="mono-label text-blue">Cryogenic</span>
             <h3 className="text-xl font-medium text-sand">Twin-CQCM</h3>
-            <p className="text-sm text-gray leading-relaxed">
+            <p className="text-body">
               The cryogenic version is intended for advanced outgassing characterization, ASTM E1559-oriented testing,
               and contamination-sensitive applications requiring cryogenic trapping. It supports an operating
               temperature range from -196 to +125 °C for high-fidelity analysis in environments where liquid nitrogen
@@ -262,7 +262,7 @@ const TwinQCM = () => (
           {applications.map((app) => (
             <div key={app} className="flex items-start gap-3 bento-card rounded-lg p-4">
               <ArrowRight className="w-3.5 h-3.5 text-blue mt-0.5 shrink-0" />
-              <span className="text-sm text-gray leading-relaxed">{app}</span>
+              <span className="text-body">{app}</span>
             </div>
           ))}
         </div>
@@ -274,13 +274,13 @@ const TwinQCM = () => (
       <Section className="bg-surface/30">
         <SectionHeader eyebrow="Engineering Partner" title="System Integration by Deepvac" className="mb-8" />
         <div className="max-w-3xl space-y-5">
-          <p className="text-sm text-gray leading-relaxed">
+          <p className="text-body">
             Deepvac offers NDK Twin-QCM technology as an integrated option within new vacuum chambers and as an add-on
             subsystem for existing installations. Depending on customer requirements, the platform can be implemented as
             part of chamber upgrades, retrofit packages, material qualification setups, or contamination-monitoring
             extensions.
           </p>
-          <p className="text-sm text-gray leading-relaxed">
+          <p className="text-body">
             This gives customers access to outgassing diagnostics directly within their chamber environment, reducing
             reliance on separate standalone measurement workflows.
           </p>

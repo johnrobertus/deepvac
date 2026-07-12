@@ -135,10 +135,10 @@ export const TestingServices = () => {
                 eyebrow={t("testing.scopeSection.eyebrow")}
                 title={t("testing.scopeSection.title")}
               />
-              <p className="text-sm text-gray leading-relaxed">
+              <p className="text-body">
                 {t("testing.scopeSection.p1")}
               </p>
-              <p className="text-sm text-gray leading-relaxed">
+              <p className="text-body">
                 {t("testing.scopeSection.p2")}
               </p>
             </div>
@@ -231,7 +231,7 @@ export const TestingServices = () => {
                       <span className="mono-label text-blue text-[13px] uppercase tracking-wider">
                         {t("testing.capabilities.equipmentLabel")}
                       </span>
-                      <p className="text-sm text-gray leading-relaxed mt-1">
+                      <p className="text-body mt-1">
                         {item.equipment}
                       </p>
                     </div>

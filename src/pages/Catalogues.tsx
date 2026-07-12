@@ -72,9 +72,9 @@ const Catalogues = () => {
               </div>
               <div className="p-8 lg:p-10 flex flex-col justify-center space-y-5">
                 <span className="mono-label text-blue">{t("featuredBrochure")}</span>
-                <h2 className="text-2xl md:text-3xl font-medium text-sand tracking-tight">{featured.title}</h2>
+                <h2 className="text-section-title">{featured.title}</h2>
                 {featured.subtitle && <p className="text-sm text-blue/80 font-mono uppercase tracking-wider">{featured.subtitle}</p>}
-                <p className="text-sm text-gray leading-relaxed">{featured.description}</p>
+                <p className="text-body">{featured.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {featured.tags.map((tag) => (
                     <span key={tag} className="px-2 py-1 text-[13px] font-mono uppercase tracking-wider text-blue border border-blue/20 rounded-sm bg-blue/5">{tag}</span>

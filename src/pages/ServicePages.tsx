@@ -63,7 +63,7 @@ function ServicePageTemplate({ seoKey, nsKey, heroImage, children }: ServicePage
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
             <div className="space-y-4">
               <SectionHeader eyebrow={t("template.overviewEyebrow")} title={t("template.overviewTitle")} />
-              <p className="text-sm text-gray leading-relaxed">{t(`${nsKey}.overview`)}</p>
+              <p className="text-body">{t(`${nsKey}.overview`)}</p>
             </div>
             {heroImage ? (
               <div className="relative w-full overflow-hidden rounded-lg" style={{ aspectRatio: "4/3" }}>

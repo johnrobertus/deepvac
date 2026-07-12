@@ -116,7 +116,7 @@ const Products = () => {
                         <span className="mono-label text-blue">{t(product.subtitleKey)}</span>
                         <h2 className="text-2xl md:text-3xl font-medium text-sand mt-2 tracking-tight">{t(product.titleKey)}</h2>
                       </div>
-                      <p className="text-sm text-gray leading-relaxed">{t(product.descriptionKey)}</p>
+                      <p className="text-body">{t(product.descriptionKey)}</p>
                       <Button asChild variant="outline" className="self-start group/btn">
                         <Link to={localizedPath(product.href, lang)}>
                           {t(product.ctaKey)}

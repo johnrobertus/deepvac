@@ -228,7 +228,7 @@ export function ContactSection() {
           <Reveal delay={100}>
             <div className="space-y-8">
               <div className="space-y-3">
-                <h3 className="text-2xl md:text-3xl font-medium text-sand tracking-tight">{t("formTitle")}</h3>
+                <h3 className="text-section-title">{t("formTitle")}</h3>
                 <p className="text-[16px] md:text-[17px] text-sand/80 leading-relaxed">{t("formDescription")}</p>
               </div>
 
@@ -352,7 +352,7 @@ export function ContactSection() {
                   <MapPin className="w-4 h-4 text-blue mt-0.5 shrink-0" />
                   <div>
                     <span className="mono-label mb-1 block">{tHome("contact.address")}</span>
-                    <p className="text-sm text-gray leading-relaxed">Deepvac GmbH<br />An der Universität 1<br />30823 Garbsen<br />Germany</p>
+                    <p className="text-body">Deepvac GmbH<br />An der Universität 1<br />30823 Garbsen<br />Germany</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">

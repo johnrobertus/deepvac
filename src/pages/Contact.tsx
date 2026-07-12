@@ -263,7 +263,7 @@ const Contact = () => {
 
               <div className="space-y-2 pt-2" id="project-inquiry-form">
                 <h2 className="text-2xl font-medium text-sand tracking-tight">{t("formTitle")}</h2>
-                <p className="text-sm text-gray/85 leading-relaxed">{t("formDescription")}</p>
+                <p className="text-body">{t("formDescription")}</p>
               </div>
 
               <aside
@@ -385,7 +385,7 @@ const Contact = () => {
                     <MapPin className="w-4 h-4 text-blue mt-0.5 shrink-0" />
                     <div>
                       <span className="mono-label mb-1 block">{t("address")}</span>
-                      <p className="text-sm text-gray leading-relaxed">Deepvac GmbH<br />An der Universität 1<br />30823 Garbsen<br />Germany</p>
+                      <p className="text-body">Deepvac GmbH<br />An der Universität 1<br />30823 Garbsen<br />Germany</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">

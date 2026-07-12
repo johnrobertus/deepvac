@@ -83,10 +83,10 @@ const Services = () => {
                       </div>
                       <div>
                         <span className="mono-label text-blue">{t("overview.serviceLabel")}</span>
-                        <h2 className="text-xl md:text-2xl font-medium text-sand tracking-tight">{s.title}</h2>
+                        <h2 className="text-card-title-lg md:text-2xl">{s.title}</h2>
                       </div>
                     </div>
-                    <p className="text-sm text-gray leading-relaxed max-w-2xl">{s.description}</p>
+                    <p className="text-body max-w-2xl">{s.description}</p>
                     <Button asChild variant="outline" className="self-start group/btn">
                       <Link to={localizedPath(serviceHrefs[i], lang)}>
                         {tc("buttons.learnMore")}
