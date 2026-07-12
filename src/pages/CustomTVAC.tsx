@@ -72,11 +72,11 @@ const CustomTVAC = () => {
                 {tc("cta.questionnaire.start")}
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
+            <Button asChild variant="outline" size="lg" className="font-mono text-xs tracking-wide w-full sm:w-auto">
               <Link to={localizedPath("/contact", lang)}>{tc("cta.questionnaire.talkToEngineer")}</Link>
             </Button>
           </div>
-          <p className="flex items-start gap-1.5 text-[11px] text-gray/60 leading-relaxed font-mono pt-3 max-w-xl">
+          <p className="flex items-start gap-1.5 text-[13px] text-gray/85 leading-relaxed font-mono pt-3 max-w-xl">
             <Clock className="w-3 h-3 mt-0.5 text-blue/60 shrink-0" />
             <span>{tc("cta.questionnaire.microcopyDetailed")}</span>
           </p>
@@ -92,7 +92,7 @@ const CustomTVAC = () => {
           <div className="rounded-lg overflow-hidden border border-gray/10 bg-surface/40 h-[280px] lg:h-[420px] flex items-center justify-center">
             <img src={customImg} alt="Deepvac Custom Thermal Vacuum Chamber System" className="w-full h-full object-contain p-6 lg:p-8" loading="lazy" />
           </div>
-          <p className="mt-3 font-mono text-xs text-gray text-center">{t("customTvac.heroCaption")}</p>
+          <p className="mt-3 font-mono text-card-meta text-center">{t("customTvac.heroCaption")}</p>
         </Section>
 
         <div className="section-divider" />
@@ -110,7 +110,7 @@ const CustomTVAC = () => {
               <BentoCard key={driver.title} className="flex flex-col gap-4">
                 <div className="text-blue">{driverIcons[i]}</div>
                 <h3 className="text-base font-medium text-sand">{driver.title}</h3>
-                <p className="text-xs text-gray leading-relaxed">{driver.description}</p>
+                <p className="text-card-meta">{driver.description}</p>
               </BentoCard>
             ))}
           </BentoGrid>
@@ -124,7 +124,7 @@ const CustomTVAC = () => {
               {tc("cta.questionnaire.configure")}
             </Link>
           </Button>
-          <Button asChild variant="outline" size="lg">
+          <Button asChild variant="outline" size="lg" className="font-mono text-xs tracking-wide">
             <Link to={localizedPath("/contact", lang)}>{tc("buttons.requestConsultation")}</Link>
           </Button>
         </CTABand>
@@ -143,7 +143,7 @@ const CustomTVAC = () => {
                 <h3 className="text-base font-medium text-sand">{dim.label}</h3>
                 <ul className="space-y-2">
                   {dim.items.map((item: string) => (
-                    <li key={item} className="flex items-start gap-2 text-xs text-gray leading-relaxed">
+                    <li key={item} className="flex items-start gap-2 text-card-meta">
                       <span className="w-1 h-1 rounded-full bg-blue mt-1.5 shrink-0" />
                       {item}
                     </li>
@@ -175,7 +175,7 @@ const CustomTVAC = () => {
                     <div className="text-blue">{stepIcons[i]}</div>
                     <h3 className="text-base font-medium text-sand">{step.title}</h3>
                   </div>
-                  <p className="text-xs text-gray leading-relaxed">{step.description}</p>
+                  <p className="text-card-meta">{step.description}</p>
                 </div>
               </div>
             ))}
@@ -188,7 +188,7 @@ const CustomTVAC = () => {
             <div className="bento-card rounded-lg p-6 border-l-2 border-l-blue/60 space-y-4">
               <span className="mono-label text-blue">{t("customTvac.crossLinks.relatedProducts")}</span>
               <h3 className="text-lg font-medium text-sand">{t("customTvac.crossLinks.standardSeriesTitle")}</h3>
-              <p className="text-xs text-gray leading-relaxed">{t("customTvac.crossLinks.standardSeriesDescription")}</p>
+              <p className="text-card-meta">{t("customTvac.crossLinks.standardSeriesDescription")}</p>
               <Button asChild variant="tertiary" className="self-start">
                 <Link to={localizedPath("/products/standard-series", lang)}>
                   {tc("buttons.viewStandardSeries")} <ArrowRight className="w-3 h-3 ml-1" />
@@ -198,7 +198,7 @@ const CustomTVAC = () => {
             <div className="bento-card rounded-lg p-6 border-l-2 border-l-blue/60 space-y-4">
               <span className="mono-label text-blue">{t("customTvac.crossLinks.engineeringServices")}</span>
               <h3 className="text-lg font-medium text-sand">{t("customTvac.crossLinks.engineeringServicesTitle")}</h3>
-              <p className="text-xs text-gray leading-relaxed">{t("customTvac.crossLinks.engineeringServicesDescription")}</p>
+              <p className="text-card-meta">{t("customTvac.crossLinks.engineeringServicesDescription")}</p>
               <Button asChild variant="tertiary" className="self-start">
                 <Link to={localizedPath("/services", lang)}>
                   {tc("buttons.exploreServices")} <ArrowRight className="w-3 h-3 ml-1" />
@@ -228,7 +228,7 @@ const CustomTVAC = () => {
               {tc("cta.questionnaire.submitDetailed")}
             </Link>
           </Button>
-          <Button asChild variant="outline" size="lg">
+          <Button asChild variant="outline" size="lg" className="font-mono text-xs tracking-wide">
             <Link to={localizedPath("/contact", lang)}>{tc("buttons.requestConsultation")}</Link>
           </Button>
         </CTABand>

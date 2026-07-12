@@ -64,7 +64,7 @@ const Services = () => {
             <Button asChild size="lg" className="font-mono text-xs tracking-wide w-full sm:w-auto">
               <Link to={localizedPath("/contact", lang)}>{tc("buttons.discussRequirements")}</Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
+            <Button asChild variant="outline" size="lg" className="font-mono text-xs tracking-wide w-full sm:w-auto">
               <Link to={localizedPath("/products", lang)}>{tc("buttons.exploreChamberProducts")}</Link>
             </Button>
           </div>
@@ -83,10 +83,10 @@ const Services = () => {
                       </div>
                       <div>
                         <span className="mono-label text-blue">{t("overview.serviceLabel")}</span>
-                        <h2 className="text-xl md:text-2xl font-medium text-sand tracking-tight">{s.title}</h2>
+                        <h2 className="text-card-title-lg md:text-2xl">{s.title}</h2>
                       </div>
                     </div>
-                    <p className="text-sm text-gray leading-relaxed max-w-2xl">{s.description}</p>
+                    <p className="text-body max-w-2xl">{s.description}</p>
                     <Button asChild variant="outline" className="self-start group/btn">
                       <Link to={localizedPath(serviceHrefs[i], lang)}>
                         {tc("buttons.learnMore")}
@@ -98,7 +98,7 @@ const Services = () => {
                     <span className="mono-label mb-3">{t("overview.keyDeliverables")}</span>
                     <ul className="space-y-2.5">
                       {s.deliverables.map((d: string) => (
-                        <li key={d} className="flex items-start gap-2 text-xs text-gray leading-relaxed">
+                        <li key={d} className="flex items-start gap-2 text-card-meta">
                           <span className="w-1 h-1 rounded-full bg-blue mt-1.5 shrink-0" />
                           {d}
                         </li>
@@ -154,11 +154,11 @@ const Services = () => {
               {tc("cta.questionnaire.configure")}
             </Link>
           </Button>
-          <Button asChild variant="outline" size="lg">
+          <Button asChild variant="outline" size="lg" className="font-mono text-xs tracking-wide">
             <Link to={localizedPath("/contact", lang)}>{tc("buttons.talkToEngineer")}</Link>
           </Button>
         </CTABand>
-        <p className="container mx-auto px-6 -mt-6 mb-12 flex items-start gap-1.5 text-[11px] text-gray/60 leading-relaxed font-mono max-w-2xl">
+        <p className="container mx-auto px-6 -mt-6 mb-12 flex items-start gap-1.5 text-[13px] text-gray/85 leading-relaxed font-mono max-w-2xl">
           <Clock className="w-3 h-3 mt-0.5 text-blue/60 shrink-0" />
           <span>{tc("cta.questionnaire.microcopyDetailed")}</span>
         </p>

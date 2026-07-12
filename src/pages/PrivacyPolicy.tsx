@@ -9,7 +9,7 @@ import { getHreflangs, getCanonical } from "@/lib/routes";
 function LegalSection({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <div className="space-y-3">
-      <h2 className="text-sand text-base font-medium">{title}</h2>
+      <h2 className="text-card-title">{title}</h2>
       {children}
     </div>
   );
@@ -64,8 +64,8 @@ export default function PrivacyPolicy() {
         <PageHero eyebrow={t("privacy.eyebrow")} title={t("privacy.title")} description="Deepvac GmbH" />
 
         <Section>
-          <div className="max-w-3xl space-y-8 text-gray text-sm leading-relaxed">
-            <p className="text-xs text-gray/60">{t("privacy.lastUpdated")}</p>
+          <div className="max-w-[70ch] space-y-8 text-body">
+            <p className="text-card-meta">{t("privacy.lastUpdated")}</p>
 
             <LegalSection title={t("privacy.sections.controller")}>
               <p>Deepvac GmbH</p>

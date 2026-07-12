@@ -36,7 +36,7 @@ export function PlaceholderImage({
       </svg>
 
       {/* Label */}
-      <span className="absolute bottom-2 right-3 font-mono text-[10px] uppercase tracking-widest text-gray/40">
+      <span className="absolute bottom-2 right-3 font-mono text-[13px] uppercase tracking-widest text-gray/80">
         [{assetId}: {type}_{aspectRatio.replace("/", "x")}]
       </span>
     </div>

@@ -52,7 +52,7 @@ const Careers = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div className="space-y-6">
               <SectionHeader eyebrow={t("mission.eyebrow")} title={t("mission.title")} />
-              <div className="space-y-4 text-sm text-gray leading-relaxed">
+              <div className="space-y-4 text-body">
                 {missionParagraphs.map((p: string, i: number) => <p key={i}>{p}</p>)}
               </div>
             </div>
@@ -60,7 +60,7 @@ const Careers = () => {
               <span className="mono-label text-blue">{t("mission.valuesTitle")}</span>
               <div className="space-y-3">
                 {values.map((v: string) => (
-                  <div key={v} className="flex items-start gap-3 text-sm text-gray leading-relaxed">
+                  <div key={v} className="flex items-start gap-3 text-body">
                     <CheckCircle2 className="w-4 h-4 text-blue mt-0.5 flex-shrink-0" />
                     <span>{v}</span>
                   </div>
@@ -79,7 +79,7 @@ const Careers = () => {
                 <div key={item.title} className="bento-card rounded-lg p-6 space-y-4">
                   <div className="w-10 h-10 rounded-sm bg-blue/10 border border-blue/20 flex items-center justify-center"><Icon className="w-5 h-5 text-blue" /></div>
                   <h3 className="text-base font-medium text-sand">{item.title}</h3>
-                  <p className="text-sm text-gray leading-relaxed">{item.description}</p>
+                  <p className="text-body">{item.description}</p>
                 </div>
               );
             })}
@@ -95,7 +95,7 @@ const Careers = () => {
                 <div key={reason.title} className="bento-card rounded-lg p-6 space-y-4">
                   <div className="w-10 h-10 rounded-sm bg-blue/10 border border-blue/20 flex items-center justify-center"><Icon className="w-5 h-5 text-blue" /></div>
                   <h3 className="text-base font-medium text-sand">{reason.title}</h3>
-                  <p className="text-sm text-gray leading-relaxed">{reason.description}</p>
+                  <p className="text-body">{reason.description}</p>
                 </div>
               );
             })}
@@ -106,7 +106,7 @@ const Careers = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div className="space-y-6">
               <SectionHeader eyebrow={t("fit.eyebrow")} title={t("fit.title")} />
-              <div className="space-y-4 text-sm text-gray leading-relaxed">
+              <div className="space-y-4 text-body">
                 {fitParagraphs.map((p: string, i: number) => <p key={i}>{p}</p>)}
               </div>
             </div>
@@ -114,7 +114,7 @@ const Careers = () => {
               <span className="mono-label text-blue">{t("fit.fitTitle")}</span>
               <div className="space-y-3">
                 {fitPoints.map((point: string) => (
-                  <div key={point} className="flex items-start gap-3 text-sm text-gray leading-relaxed">
+                  <div key={point} className="flex items-start gap-3 text-body">
                     <CheckCircle2 className="w-4 h-4 text-blue mt-0.5 flex-shrink-0" />
                     <span>{point}</span>
                   </div>
@@ -133,7 +133,7 @@ const Careers = () => {
             <div className="flex-1 space-y-4">
               <div className="space-y-2">
                 <h3 className="text-lg font-medium text-sand group-hover:text-blue transition-colors">{t("opportunities.generalApplication.title")}</h3>
-                <p className="text-sm text-gray leading-relaxed">{t("opportunities.generalApplication.description")}</p>
+                <p className="text-body">{t("opportunities.generalApplication.description")}</p>
               </div>
               <div className="flex flex-wrap gap-3 pt-1">
                 <span className="flex items-center gap-1.5 mono-label"><MapPin className="w-3 h-3" />{t("opportunities.generalApplication.location")}</span>
@@ -141,13 +141,13 @@ const Careers = () => {
                 <span className="mono-label text-blue">{t("opportunities.generalApplication.department")}</span>
               </div>
               <div className="pt-2 border-t border-white/10">
-                <p className="text-sm text-gray leading-relaxed">{t("opportunities.generalApplication.relevantBackgrounds")}</p>
+                <p className="text-body">{t("opportunities.generalApplication.relevantBackgrounds")}</p>
               </div>
             </div>
             <div className="lg:w-[220px] flex flex-col gap-4">
               <div className="bento-card rounded-lg p-4 space-y-3">
                 <span className="mono-label text-blue">{t("opportunities.generalApplication.whatToSend")}</span>
-                <div className="space-y-2 text-sm text-gray leading-relaxed">
+                <div className="space-y-2 text-body">
                   {sendItems.map((item: string) => (
                     <div key={item} className="flex items-start gap-2">
                       <CheckCircle2 className="w-4 h-4 text-blue mt-0.5 flex-shrink-0" />
@@ -178,7 +178,7 @@ const Careers = () => {
                     <div className="w-9 h-9 rounded-sm bg-blue/10 border border-blue/20 flex items-center justify-center"><Icon className="w-4 h-4 text-blue" /></div>
                   </div>
                   <h3 className="text-base font-medium text-sand">{item.title}</h3>
-                  <p className="text-sm text-gray leading-relaxed">{item.description}</p>
+                  <p className="text-body">{item.description}</p>
                 </div>
               );
             })}
@@ -189,13 +189,13 @@ const Careers = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div className="space-y-6">
               <SectionHeader eyebrow={t("culture.eyebrow")} title={t("culture.title")} />
-              <div className="space-y-4 text-sm text-gray leading-relaxed">
+              <div className="space-y-4 text-body">
                 {cultureParagraphs.map((p: string, i: number) => <p key={i}>{p}</p>)}
               </div>
             </div>
             <div className="bento-card rounded-lg p-6 space-y-5">
               <span className="mono-label text-blue">{t("culture.environmentTitle")}</span>
-              <div className="space-y-3 text-sm text-gray leading-relaxed">
+              <div className="space-y-3 text-body">
                 {envItems.map((item: string) => (
                   <div key={item} className="flex items-start gap-3">
                     <CheckCircle2 className="w-4 h-4 text-blue mt-0.5 flex-shrink-0" />

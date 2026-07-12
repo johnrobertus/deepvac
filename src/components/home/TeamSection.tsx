@@ -50,7 +50,7 @@ export function TeamSection() {
                       <span className="mono-label text-blue">{member.role}</span>
                     </div>
                     {linkedinUrls[i] ? (
-                      <a href={linkedinUrls[i]} target="_blank" rel="noopener noreferrer" className="mt-0.5 text-gray/40 transition-colors hover:text-blue" aria-label={`${member.name} LinkedIn profile`}>
+                      <a href={linkedinUrls[i]} target="_blank" rel="noopener noreferrer" className="mt-0.5 text-gray/80 transition-colors hover:text-blue" aria-label={`${member.name} LinkedIn profile`}>
                         <Linkedin className="h-4 w-4" />
                       </a>
                     ) : null}

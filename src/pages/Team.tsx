@@ -52,7 +52,7 @@ const Team = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div className="space-y-6">
               <SectionHeader eyebrow={t("story.eyebrow")} title={t("story.title")} />
-              <div className="space-y-4 text-sm text-gray leading-relaxed">
+              <div className="space-y-4 text-body">
                 {storyParagraphs.map((p: string, i: number) => <p key={i}>{p}</p>)}
               </div>
             </div>
@@ -60,7 +60,7 @@ const Team = () => {
               <span className="mono-label text-blue">{t("story.competenciesTitle")}</span>
               <div className="grid grid-cols-2 gap-3">
                 {competencies.map((skill: string) => (
-                  <div key={skill} className="flex items-center gap-2 text-xs text-gray">
+                  <div key={skill} className="flex items-center gap-2 text-card-meta">
                     <span className="w-1 h-1 rounded-full bg-blue flex-shrink-0" />
                     {skill}
                   </div>
@@ -99,16 +99,16 @@ const Team = () => {
                       <h3 className="text-lg font-medium text-sand">{member.name}</h3>
                       <span className="mono-label text-blue">{member.role}</span>
                     </div>
-                    <a href="https://www.linkedin.com/company/deepvac-gmbh/" target="_blank" rel="noopener noreferrer" className="text-gray/70 hover:text-blue transition-colors" aria-label={`${member.name} LinkedIn`}>
+                    <a href="https://www.linkedin.com/company/deepvac-gmbh/" target="_blank" rel="noopener noreferrer" className="text-gray hover:text-blue transition-colors" aria-label={`${member.name} LinkedIn`}>
                       <Linkedin className="w-4 h-4" />
                     </a>
                   </div>
-                  <p className="text-sm text-gray leading-relaxed">{member.description}</p>
+                  <p className="text-body">{member.description}</p>
                   <div className="pt-2 border-t border-gray/10 space-y-2">
                     <span className="mono-label">{t("leadership.focusAreas")}</span>
                     <div className="flex flex-wrap gap-2">
                       {member.focus.map((f: string) => (
-                        <span key={f} className="px-2 py-1 text-[10px] font-mono uppercase tracking-wider text-blue border border-blue/20 rounded-sm bg-blue/5">{f}</span>
+                        <span key={f} className="px-2 py-1 text-[13px] font-mono uppercase tracking-wider text-blue border border-blue/20 rounded-sm bg-blue/5">{f}</span>
                       ))}
                     </div>
                   </div>
@@ -129,7 +129,7 @@ const Team = () => {
                     <Icon className="w-5 h-5 text-blue" />
                   </div>
                   <h3 className="text-base font-medium text-sand">{item.title}</h3>
-                  <p className="text-sm text-gray leading-relaxed">{item.description}</p>
+                  <p className="text-body">{item.description}</p>
                 </div>
               );
             })}
@@ -144,7 +144,7 @@ const Team = () => {
                 <span className="w-1.5 h-1.5 rounded-full bg-blue mt-2 flex-shrink-0" />
                 <div>
                   <h3 className="text-sm font-medium text-sand">{item.title}</h3>
-                  <p className="text-sm text-gray leading-relaxed mt-1">{item.text}</p>
+                  <p className="text-body mt-1">{item.text}</p>
                 </div>
               </div>
             ))}

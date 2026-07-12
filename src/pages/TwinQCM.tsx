@@ -80,18 +80,18 @@ const TwinQCM = () => (
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-sand">
                 NDK Twin-QCM Outgassing Analysis
               </h1>
-              <p className="text-base text-gray leading-relaxed max-w-xl">
+              <p className="text-body max-w-xl">
                 Chamber-integrated QTGA sensor technology for quantitative outgassing measurement and contamination
                 analysis.
               </p>
-              <p className="text-sm text-gray/80 leading-relaxed max-w-xl">
+              <p className="text-body max-w-xl">
                 Deepvac integrates NDK&apos;s Twin-TQCM and Twin-CQCM sensor technology into new and existing vacuum
                 systems to enable quantitative outgassing measurement directly inside the test environment. Based on
                 quartz crystal microbalance sensing and QTGA, the platform detects mass deposition via frequency shift
                 and supports thermally resolved analysis of adsorption and desorption behavior under controlled vacuum
                 conditions.
               </p>
-              <p className="text-xs text-gray/60 leading-relaxed max-w-xl font-mono">
+              <p className="text-card-meta max-w-xl font-mono">
                 Technology developed and manufactured by NDK. Integrated, configured, and application-engineered by
                 Deepvac.
               </p>
@@ -99,7 +99,7 @@ const TwinQCM = () => (
                 <Button asChild size="lg" className="font-mono text-xs tracking-wide">
                   <Link to="/contact">Request a Technical Consultation</Link>
                 </Button>
-                <Button asChild variant="outline" size="lg">
+                <Button asChild variant="outline" size="lg" className="font-mono text-xs tracking-wide">
                   <Link to="/contact">Discuss Integration</Link>
                 </Button>
               </div>
@@ -121,13 +121,13 @@ const TwinQCM = () => (
       <Section>
         <SectionHeader eyebrow="Overview" title="Chamber-Integrated Outgassing Diagnostics" className="mb-10" />
         <div className="max-w-3xl space-y-5">
-          <p className="text-sm text-gray leading-relaxed">
+          <p className="text-body">
             The Twin-QCM platform combines precise mass detection with thermally resolved outgassing analysis in a
             compact, chamber-integrated subsystem. Instead of relying on a separate laboratory workflow, Deepvac
             integrates the technology directly into vacuum chambers, chamber upgrades, retrofit packages, and
             customer-specific test setups.
           </p>
-          <p className="text-sm text-gray leading-relaxed">
+          <p className="text-body">
             At the core of the system is a twin-electrode crystal design with a reaction electrode and a reference
             electrode on the same crystal blank. By evaluating the differential signal between both electrodes, the
             sensor reduces the influence of vibration, temperature drift, and other environmental disturbances,
@@ -144,16 +144,16 @@ const TwinQCM = () => (
         <SectionHeader eyebrow="Measurement Principle" title="How It Works" className="mb-10" />
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
           <div className="space-y-5">
-            <p className="text-sm text-gray leading-relaxed">
+            <p className="text-body">
               When outgassed species adsorb onto the crystal electrode, the resonance frequency decreases in proportion
               to the deposited mass. In QTGA operation, the sensor is cooled and heated in a controlled profile,
               allowing adsorption and desorption behavior to be tracked as a function of temperature and time.
             </p>
-            <p className="text-sm text-gray leading-relaxed">
+            <p className="text-body">
               This enables both total outgassing quantification and thermally resolved analysis of release behavior from
               materials, components, and assemblies.
             </p>
-            <p className="text-sm text-gray leading-relaxed">
+            <p className="text-body">
               Both Twin-TQCM and Twin-CQCM support simultaneous real-time measurement at 10.278 MHz fundamental
               frequency and 30.833 MHz 3rd overtone, combining wide dynamic range with higher sensitivity in a single
               measurement architecture. The sensing units support up to 20 m module distance, ≤1 ppm frequency detection
@@ -167,7 +167,7 @@ const TwinQCM = () => (
               alt="Differential Twin-QCM measurement reduces environmental interference and improves measurement stability under real operating conditions"
               className="w-full h-auto object-contain"
             />
-            <p className="text-[10px] font-mono text-gray/60 mt-3 text-center">
+            <p className="text-[13px] font-mono text-gray/85 mt-3 text-center">
               Differential Twin-QCM measurement reduces environmental interference and improves measurement stability
               under real operating conditions.
             </p>
@@ -185,7 +185,7 @@ const TwinQCM = () => (
             <div key={f.title} className="bento-card rounded-lg p-6 space-y-3">
               <div className="text-blue">{f.icon}</div>
               <h3 className="text-sm font-medium text-sand">{f.title}</h3>
-              <p className="text-xs text-gray leading-relaxed">{f.description}</p>
+              <p className="text-card-meta">{f.description}</p>
             </div>
           ))}
         </div>
@@ -200,17 +200,17 @@ const TwinQCM = () => (
           <div className="bento-card rounded-lg p-8 space-y-4">
             <span className="mono-label text-blue">Thermoelectric</span>
             <h3 className="text-xl font-medium text-sand">Twin-TQCM</h3>
-            <p className="text-sm text-gray leading-relaxed">
+            <p className="text-body">
               The thermoelectric version is designed for applications where liquid nitrogen is not desired. It uses
               Peltier-based cooling and supports an operating temperature range from -80 to +125 °C. This makes it well
               suited for vacuum environment monitoring, cleanroom-related applications, compact material evaluation
               setups, and chamber integrations with reduced operating complexity and lower running cost.
             </p>
             <div className="flex flex-wrap gap-2 pt-1">
-              <span className="font-mono text-[10px] uppercase tracking-widest text-blue-light/70 border border-gray/15 rounded-sm px-2 py-1">
+              <span className="font-mono text-[13px] uppercase tracking-widest text-blue-light/70 border border-gray/15 rounded-sm px-2 py-1">
                 -80 to +125 °C
               </span>
-              <span className="font-mono text-[10px] uppercase tracking-widest text-blue-light/70 border border-gray/15 rounded-sm px-2 py-1">
+              <span className="font-mono text-[13px] uppercase tracking-widest text-blue-light/70 border border-gray/15 rounded-sm px-2 py-1">
                 Peltier Cooling
               </span>
             </div>
@@ -218,17 +218,17 @@ const TwinQCM = () => (
           <div className="bento-card rounded-lg p-8 space-y-4">
             <span className="mono-label text-blue">Cryogenic</span>
             <h3 className="text-xl font-medium text-sand">Twin-CQCM</h3>
-            <p className="text-sm text-gray leading-relaxed">
+            <p className="text-body">
               The cryogenic version is intended for advanced outgassing characterization, ASTM E1559-oriented testing,
               and contamination-sensitive applications requiring cryogenic trapping. It supports an operating
               temperature range from -196 to +125 °C for high-fidelity analysis in environments where liquid nitrogen
               cooling is available.
             </p>
             <div className="flex flex-wrap gap-2 pt-1">
-              <span className="font-mono text-[10px] uppercase tracking-widest text-blue-light/70 border border-gray/15 rounded-sm px-2 py-1">
+              <span className="font-mono text-[13px] uppercase tracking-widest text-blue-light/70 border border-gray/15 rounded-sm px-2 py-1">
                 -196 to +125 °C
               </span>
-              <span className="font-mono text-[10px] uppercase tracking-widest text-blue-light/70 border border-gray/15 rounded-sm px-2 py-1">
+              <span className="font-mono text-[13px] uppercase tracking-widest text-blue-light/70 border border-gray/15 rounded-sm px-2 py-1">
                 LN₂ Cooling
               </span>
             </div>
@@ -245,7 +245,7 @@ const TwinQCM = () => (
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {specs.map((s) => (
               <div key={s.label} className="p-5 border-b border-r border-gray/10 last:border-r-0 space-y-1">
-                <span className="mono-label text-gray/60 text-[10px]">{s.label}</span>
+                <span className="mono-label text-gray/85 text-[13px]">{s.label}</span>
                 <p className="text-sm font-medium text-sand">{s.value}</p>
               </div>
             ))}
@@ -262,7 +262,7 @@ const TwinQCM = () => (
           {applications.map((app) => (
             <div key={app} className="flex items-start gap-3 bento-card rounded-lg p-4">
               <ArrowRight className="w-3.5 h-3.5 text-blue mt-0.5 shrink-0" />
-              <span className="text-sm text-gray leading-relaxed">{app}</span>
+              <span className="text-body">{app}</span>
             </div>
           ))}
         </div>
@@ -274,13 +274,13 @@ const TwinQCM = () => (
       <Section className="bg-surface/30">
         <SectionHeader eyebrow="Engineering Partner" title="System Integration by Deepvac" className="mb-8" />
         <div className="max-w-3xl space-y-5">
-          <p className="text-sm text-gray leading-relaxed">
+          <p className="text-body">
             Deepvac offers NDK Twin-QCM technology as an integrated option within new vacuum chambers and as an add-on
             subsystem for existing installations. Depending on customer requirements, the platform can be implemented as
             part of chamber upgrades, retrofit packages, material qualification setups, or contamination-monitoring
             extensions.
           </p>
-          <p className="text-sm text-gray leading-relaxed">
+          <p className="text-body">
             This gives customers access to outgassing diagnostics directly within their chamber environment, reducing
             reliance on separate standalone measurement workflows.
           </p>
@@ -305,7 +305,7 @@ const TwinQCM = () => (
         <Button asChild size="lg" className="font-mono text-xs tracking-wide">
           <Link to="/contact">Request a Technical Consultation</Link>
         </Button>
-        <Button asChild variant="outline" size="lg">
+        <Button asChild variant="outline" size="lg" className="font-mono text-xs tracking-wide">
           <Link to="/contact">Discuss Integration</Link>
         </Button>
       </CTABand>

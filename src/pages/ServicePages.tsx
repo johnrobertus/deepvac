@@ -53,7 +53,7 @@ function ServicePageTemplate({ seoKey, nsKey, heroImage, children }: ServicePage
             <Button asChild size="lg" className="font-mono text-xs tracking-wide w-full sm:w-auto">
               <Link to={localizedPath("/contact", lang)}>{tc("buttons.discussRequirements")}</Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
+            <Button asChild variant="outline" size="lg" className="font-mono text-xs tracking-wide w-full sm:w-auto">
               <Link to={localizedPath("/services", lang)}>{tc("buttons.allServices")}</Link>
             </Button>
           </div>
@@ -63,7 +63,7 @@ function ServicePageTemplate({ seoKey, nsKey, heroImage, children }: ServicePage
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
             <div className="space-y-4">
               <SectionHeader eyebrow={t("template.overviewEyebrow")} title={t("template.overviewTitle")} />
-              <p className="text-sm text-gray leading-relaxed">{t(`${nsKey}.overview`)}</p>
+              <p className="text-body">{t(`${nsKey}.overview`)}</p>
             </div>
             {heroImage ? (
               <div className="relative w-full overflow-hidden rounded-lg" style={{ aspectRatio: "4/3" }}>
@@ -86,7 +86,7 @@ function ServicePageTemplate({ seoKey, nsKey, heroImage, children }: ServicePage
             {deliverables.map((d) => (
               <div key={d.title} className="bento-card rounded-lg p-6 space-y-3">
                 <h3 className="text-base font-medium text-sand">{d.title}</h3>
-                <p className="text-xs text-gray leading-relaxed">{d.description}</p>
+                <p className="text-card-meta">{d.description}</p>
               </div>
             ))}
           </div>
@@ -110,7 +110,7 @@ function ServicePageTemplate({ seoKey, nsKey, heroImage, children }: ServicePage
             {crossLinks.map((link) => (
               <div key={link.href} className="bento-card rounded-lg p-6 border-l-2 border-l-blue/60 space-y-3">
                 <h3 className="text-base font-medium text-sand">{link.label}</h3>
-                <p className="text-xs text-gray leading-relaxed">{link.description}</p>
+                <p className="text-card-meta">{link.description}</p>
                 <Button asChild variant="tertiary" className="self-start">
                   <Link to={localizedPath(link.href, lang)}>{tc("buttons.learnMore")} <ArrowRight className="w-3 h-3 ml-1" /></Link>
                 </Button>
@@ -123,7 +123,7 @@ function ServicePageTemplate({ seoKey, nsKey, heroImage, children }: ServicePage
           <Button asChild size="lg" className="font-mono text-xs tracking-wide">
             <Link to={localizedPath("/contact", lang)}>{tc("buttons.talkToEngineer")}</Link>
           </Button>
-          <Button asChild variant="outline" size="lg">
+          <Button asChild variant="outline" size="lg" className="font-mono text-xs tracking-wide">
             <Link to={localizedPath("/contact", lang)}>{tc("buttons.requestQuote")}</Link>
           </Button>
         </CTABand>

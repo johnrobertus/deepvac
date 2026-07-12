@@ -217,7 +217,7 @@ const initialForm: FormState = {
 /* ---------- Small UI primitives ---------- */
 function MonoLabel({ children, required }: { children: React.ReactNode; required?: boolean }) {
   return (
-    <label className="block font-mono text-[11px] uppercase tracking-[0.08em] text-gray/90">
+    <label className="block font-mono text-[13px] uppercase tracking-[0.08em] text-gray/90">
       {children}
       {required && <span className="text-blue ml-1 text-sm align-middle" aria-hidden="true">*</span>}
       {required && <span className="sr-only"> (required)</span>}
@@ -494,7 +494,7 @@ export default function TvacQuestionnaire() {
 
   /* ---------- Step renderers ---------- */
   const StepNote = () => (
-    <p className="flex items-start gap-2.5 text-sm text-gray/85 mb-7">
+    <p className="flex items-start gap-2.5 text-body mb-7">
       <Info className="w-4 h-4 mt-0.5 shrink-0 text-blue/80" />
       <span className="leading-relaxed">{t("wizard.leaveBlankNote")}</span>
     </p>
@@ -790,7 +790,7 @@ export default function TvacQuestionnaire() {
           <div className="order-7 md:order-2"><MonoLabel>{t("s3.shroud")}</MonoLabel></div>
 
           <div className="order-2 grid content-start gap-2 md:order-3">
-            <label className="block min-h-[3rem] text-[13px] leading-snug text-gray/85">{t("s3.plateDims")} <span className="text-gray/60">({t("s3.plateNote")})</span></label>
+            <label className="block min-h-[3rem] text-[13px] leading-snug text-gray/85">{t("s3.plateDims")} <span className="text-gray/85">({t("s3.plateNote")})</span></label>
             <select className={cn(baseSelect, !form.chamberShape && "opacity-60 cursor-not-allowed")} disabled={!form.chamberShape} value={form.plateDimensions} onChange={(e) => set("plateDimensions")(e.target.value)}>
               <option value="">{form.chamberShape ? t("common.selectSize") : t("common.selectOption")}</option>
               {plateOptions.map((o) => <option key={o} value={o}>{o}</option>)}
@@ -828,8 +828,8 @@ export default function TvacQuestionnaire() {
             </FieldGroup>
           </div>
 
-          <span className="order-5 block font-mono text-[11px] uppercase tracking-[0.08em] text-blue md:order-9">{t("s3.plateCooling")}</span>
-          <span className="order-11 block font-mono text-[11px] uppercase tracking-[0.08em] text-blue md:order-10">{t("s3.shroudCooling")}</span>
+          <span className="order-5 block font-mono text-[13px] uppercase tracking-[0.08em] text-blue md:order-9">{t("s3.plateCooling")}</span>
+          <span className="order-11 block font-mono text-[13px] uppercase tracking-[0.08em] text-blue md:order-10">{t("s3.shroudCooling")}</span>
 
           <div className="order-6 flex flex-col gap-2 md:order-11">
             {plateCoolOpts.map((o, i) => <CheckItem key={o} label={o} checked={form.plateCooling[i]} onChange={() => toggleAt("plateCooling", i)} />)}
@@ -884,7 +884,7 @@ export default function TvacQuestionnaire() {
                 <div className="space-y-1"><label className="text-[13px] text-gray/85">{t("s4.elecCurrent")}</label><input className={baseInput} placeholder="A" value={form.elecCurrent} onChange={(e) => set("elecCurrent")(e.target.value)} /></div>
                 <div className="space-y-1"><label className="text-[13px] text-gray/85">{t("s4.elecNotes")}</label><input className={baseInput} placeholder={t("s4.elecNotesPh")} value={form.elecNotes} onChange={(e) => set("elecNotes")(e.target.value)} /></div>
               </FieldGroup>
-              <span className="block font-mono text-[11px] uppercase tracking-[0.08em] text-blue">{t("s4.elecConnector")}</span>
+              <span className="block font-mono text-[13px] uppercase tracking-[0.08em] text-blue">{t("s4.elecConnector")}</span>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 {elecConn.map((o, i) => <CheckItem key={o} label={o} checked={form.elecConnector[i]} onChange={() => toggleAt("elecConnector", i)} />)}
                 <OtherInput value={form.elecConnectorOther} {...setOther("elecConnectorOther")} placeholder={t("common.specify")} />
@@ -894,14 +894,14 @@ export default function TvacQuestionnaire() {
             <FieldGroup cols={2}>
               <div className="space-y-3">
                 <MonoLabel>{t("s4.rf")}</MonoLabel>
-                <span className="block font-mono text-[11px] uppercase tracking-[0.08em] text-blue">{t("common.type")}</span>
+                <span className="block font-mono text-[13px] uppercase tracking-[0.08em] text-blue">{t("common.type")}</span>
                 <div className="grid grid-cols-2 gap-2">{rfOpts.map((o, i) => <CheckItem key={o} label={o} checked={form.rfTypes[i]} onChange={() => toggleAt("rfTypes", i)} />)}</div>
                 <OtherInput value={form.rfTypeOther} {...setOther("rfTypeOther")} placeholder={t("common.specify")} />
                 <div className="space-y-1"><label className="text-[13px] text-gray/85">{t("common.quantity")}</label><input className={baseInput} placeholder={t("common.qty")} value={form.rfQty} onChange={(e) => set("rfQty")(e.target.value)} /></div>
               </div>
               <div className="space-y-3">
                 <MonoLabel>{t("s4.fiber")}</MonoLabel>
-                <span className="block font-mono text-[11px] uppercase tracking-[0.08em] text-blue">{t("common.type")}</span>
+                <span className="block font-mono text-[13px] uppercase tracking-[0.08em] text-blue">{t("common.type")}</span>
                 <div className="grid grid-cols-2 gap-2">{fiberOpts.map((o, i) => <CheckItem key={o} label={o} checked={form.fiberTypes[i]} onChange={() => toggleAt("fiberTypes", i)} />)}</div>
                 <OtherInput value={form.fiberTypeOther} {...setOther("fiberTypeOther")} placeholder={t("common.specify")} />
                 <div className="space-y-1"><label className="text-[13px] text-gray/85">{t("common.quantity")}</label><input className={baseInput} placeholder={t("common.qty")} value={form.fiberQty} onChange={(e) => set("fiberQty")(e.target.value)} /></div>
@@ -918,7 +918,7 @@ export default function TvacQuestionnaire() {
               </div>
               <div className="space-y-3">
                 <MonoLabel>{t("s4.motion")}</MonoLabel>
-                <span className="block font-mono text-[11px] uppercase tracking-[0.08em] text-blue">{t("common.type")}</span>
+                <span className="block font-mono text-[13px] uppercase tracking-[0.08em] text-blue">{t("common.type")}</span>
                 <div className="grid grid-cols-2 gap-2">{motionOpts.map((o, i) => <CheckItem key={o} label={o} checked={form.motionTypes[i]} onChange={() => toggleAt("motionTypes", i)} />)}</div>
                 <OtherInput value={form.motionTypeOther} {...setOther("motionTypeOther")} placeholder={t("common.specify")} />
                 <div className="space-y-1"><label className="text-[13px] text-gray/85">{t("common.quantity")}</label><input className={baseInput} placeholder={t("common.qty")} value={form.motionQty} onChange={(e) => set("motionQty")(e.target.value)} /></div>
@@ -936,7 +936,7 @@ export default function TvacQuestionnaire() {
                 <select className={baseSelect} value={form.remoteAccess} onChange={(e) => set("remoteAccess")(e.target.value)}>
                   <option value="">{t("common.selectOption")}</option>{yesNo.map((o) => <option key={o} value={o}>{o}</option>)}
                 </select>
-                <span className="block font-mono text-[11px] uppercase tracking-[0.08em] text-blue">{t("s4.remoteAccess")}</span>
+                <span className="block font-mono text-[13px] uppercase tracking-[0.08em] text-blue">{t("s4.remoteAccess")}</span>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">{remoteOpts.map((o, i) => <CheckItem key={o} label={o} checked={form.remoteOptions[i]} onChange={() => toggleAt("remoteOptions", i)} />)}</div>
               </div>
               <div className="space-y-2">
@@ -1058,7 +1058,7 @@ export default function TvacQuestionnaire() {
               {t("s5.consent")} <span className="text-blue ml-1" aria-hidden="true">*</span>
             </span>
           </label>
-          <p className="text-xs text-gray/70 font-mono">{t("wizard.submitHelp")}</p>
+          <p className="text-card-meta font-mono">{t("wizard.submitHelp")}</p>
         </div>
       </div>
     );
@@ -1090,7 +1090,7 @@ export default function TvacQuestionnaire() {
               <CheckCircle className="w-12 h-12 text-blue mx-auto" />
               <h1 className="text-3xl font-medium text-sand tracking-tight">{t("success.title")}</h1>
               <p className="text-gray text-sm leading-relaxed">{t("success.message")}</p>
-              <p className="text-gray/60 text-xs leading-relaxed">{t("success.reassurance")}</p>
+              <p className="text-gray/85 text-xs leading-relaxed">{t("success.reassurance")}</p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center pt-4">
                 <Button asChild variant="default" className="font-mono text-xs">
                   <Link to={customTvacPath}>{t("success.backToCustom")}</Link>
@@ -1123,7 +1123,7 @@ export default function TvacQuestionnaire() {
       </Helmet>
       <PageShell>
         <PageHero eyebrow={t("meta.eyebrow")} title={t("meta.title")} description={t("meta.description")}>
-          <div className="flex flex-wrap items-center gap-x-6 gap-y-2 pt-2 text-xs text-gray/70 font-mono">
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-2 pt-2 text-card-meta font-mono">
             <span className="flex items-center gap-2"><Clock className="w-3.5 h-3.5 text-blue/70" /> {t("meta.estimatedTime")}</span>
             <span className="flex items-center gap-2"><Info className="w-3.5 h-3.5 text-blue/70" /> {t("meta.reassurance")}</span>
           </div>
@@ -1154,7 +1154,7 @@ export default function TvacQuestionnaire() {
                       )}
                     >
                       <span className={cn(
-                        "w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-mono shrink-0 transition-colors",
+                        "w-6 h-6 rounded-full flex items-center justify-center text-[13px] font-mono shrink-0 transition-colors",
                         active ? "bg-blue text-background" : done ? "bg-gray/30 text-sand" : "bg-transparent border border-gray/30 text-gray/80 group-hover:border-blue/50 group-hover:text-sand"
                       )}>{idx}</span>
                       <span className={cn("text-xs font-mono tracking-wide truncate transition-colors", active ? "text-sand" : "text-gray/85 group-hover:text-sand")}>{label}</span>
@@ -1167,7 +1167,7 @@ export default function TvacQuestionnaire() {
             {/* Mobile */}
             <div className="md:hidden space-y-2">
               <div className="flex items-center justify-between gap-3 px-4 py-3 border border-gray/30 rounded-sm bg-surface/60">
-                <span className="text-[11px] font-mono text-blue">{t("wizard.stepLabel", { current: step, total: totalSteps })}</span>
+                <span className="text-[13px] font-mono text-blue">{t("wizard.stepLabel", { current: step, total: totalSteps })}</span>
                 <span className="text-sm font-medium text-sand truncate">{stepLabels[step - 1]}</span>
               </div>
               <div className="flex items-center gap-1.5">
@@ -1183,7 +1183,7 @@ export default function TvacQuestionnaire() {
                       aria-current={active ? "step" : undefined}
                       aria-label={`${t("wizard.stepLabel", { current: idx, total: totalSteps })}: ${label}`}
                       className={cn(
-                        "flex-1 h-9 rounded-sm border text-[11px] font-mono transition-colors cursor-pointer",
+                        "flex-1 h-9 rounded-sm border text-[13px] font-mono transition-colors cursor-pointer",
                         "focus:outline-none focus-visible:ring-2 focus-visible:ring-blue/40",
                         active
                           ? "bg-blue text-background border-blue"
@@ -1206,7 +1206,7 @@ export default function TvacQuestionnaire() {
               <AlertTriangle className="w-4 h-4 text-red-400 mt-0.5 shrink-0" />
               <div className="flex-1 space-y-1">
                 <p className="text-sm font-medium text-sand">{t("error.title")}</p>
-                <p className="text-xs text-gray/80 leading-relaxed">{submissionError}</p>
+                <p className="text-card-meta/80 leading-relaxed">{submissionError}</p>
               </div>
             </div>
           )}
@@ -1238,7 +1238,7 @@ export default function TvacQuestionnaire() {
                 <AlertDialogTrigger asChild>
                   <button
                     type="button"
-                    className="inline-flex items-center gap-1.5 text-xs text-gray/70 hover:text-sand transition-colors font-mono self-start focus:outline-none focus-visible:ring-2 focus-visible:ring-gray/40 rounded-sm px-1 py-0.5"
+                    className="inline-flex items-center gap-1.5 text-card-meta hover:text-sand transition-colors font-mono self-start focus:outline-none focus-visible:ring-2 focus-visible:ring-gray/40 rounded-sm px-1 py-0.5"
                   >
                     <RotateCcw className="w-3 h-3" /> {t("wizard.reset")}
                   </button>
@@ -1274,7 +1274,7 @@ export default function TvacQuestionnaire() {
                       size="sm"
                       onClick={handlePrint}
                       disabled={sending}
-                      className="font-mono text-xs text-gray/70 hover:text-sand"
+                      className="font-mono text-card-meta hover:text-sand"
                       title={t("wizard.savePdfHint")}
                     >
                       <FileDown className="w-4 h-4 mr-1.5" /> {t("wizard.savePdf")}

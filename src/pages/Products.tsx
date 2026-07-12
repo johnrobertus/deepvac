@@ -81,7 +81,7 @@ const Products = () => {
             <Button asChild size="lg" className="font-mono text-xs tracking-wide w-full sm:w-auto">
               <Link to={localizedPath("/contact", lang)}>{tc("buttons.requestConsultation")}</Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
+            <Button asChild variant="outline" size="lg" className="font-mono text-xs tracking-wide w-full sm:w-auto">
               <Link to={localizedPath("/catalogs", lang)}>{tc("buttons.downloadProductOverview")}</Link>
             </Button>
           </div>
@@ -116,7 +116,7 @@ const Products = () => {
                         <span className="mono-label text-blue">{t(product.subtitleKey)}</span>
                         <h2 className="text-2xl md:text-3xl font-medium text-sand mt-2 tracking-tight">{t(product.titleKey)}</h2>
                       </div>
-                      <p className="text-sm text-gray leading-relaxed">{t(product.descriptionKey)}</p>
+                      <p className="text-body">{t(product.descriptionKey)}</p>
                       <Button asChild variant="outline" className="self-start group/btn">
                         <Link to={localizedPath(product.href, lang)}>
                           {t(product.ctaKey)}
@@ -151,8 +151,8 @@ const Products = () => {
             {factors.map((row) => (
               <div key={row.label} className="grid grid-cols-3 border-b border-gray/10 last:border-b-0">
                 <div className="p-4 text-sm font-medium text-sand">{row.label}</div>
-                <div className="p-4 text-xs text-gray leading-relaxed border-l border-gray/10">{row.standard}</div>
-                <div className="p-4 text-xs text-gray leading-relaxed border-l border-gray/10">{row.custom}</div>
+                <div className="p-4 text-card-meta border-l border-gray/10">{row.standard}</div>
+                <div className="p-4 text-card-meta border-l border-gray/10">{row.custom}</div>
               </div>
             ))}
           </div>
@@ -164,11 +164,11 @@ const Products = () => {
                 <div className="space-y-2">
                   <div>
                     <span className="mono-label text-blue">{t("overview.configGuide.headers.standard")}</span>
-                    <p className="text-xs text-gray leading-relaxed mt-1">{row.standard}</p>
+                    <p className="text-card-meta mt-1">{row.standard}</p>
                   </div>
                   <div>
                     <span className="mono-label text-blue">{t("overview.configGuide.headers.custom")}</span>
-                    <p className="text-xs text-gray leading-relaxed mt-1">{row.custom}</p>
+                    <p className="text-card-meta mt-1">{row.custom}</p>
                   </div>
                 </div>
               </div>
@@ -217,14 +217,14 @@ const Products = () => {
               {tc("cta.questionnaire.configure")}
             </Link>
           </Button>
-          <Button asChild variant="outline" size="lg">
+          <Button asChild variant="outline" size="lg" className="font-mono text-xs tracking-wide">
             <Link to={localizedPath("/contact", lang)}>{tc("buttons.requestQuote")}</Link>
           </Button>
-          <Button asChild variant="ghost" size="lg" className="text-gray hover:text-sand">
+          <Button asChild variant="ghost" size="lg" className="font-mono text-xs tracking-wide text-gray hover:text-sand">
             <Link to={localizedPath("/contact", lang)}>{tc("buttons.talkToEngineer")}</Link>
           </Button>
         </CTABand>
-        <p className="container mx-auto px-6 -mt-6 mb-12 flex items-start gap-1.5 text-[11px] text-gray/60 leading-relaxed font-mono max-w-2xl">
+        <p className="container mx-auto px-6 -mt-6 mb-12 flex items-start gap-1.5 text-[13px] text-gray/85 leading-relaxed font-mono max-w-2xl">
           <Clock className="w-3 h-3 mt-0.5 text-blue/60 shrink-0" />
           <span>{tc("cta.questionnaire.microcopy")}</span>
         </p>

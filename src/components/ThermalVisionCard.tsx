@@ -51,10 +51,10 @@ export function ThermalVisionCard({ className, onInquiry }: ThermalVisionCardPro
 
         {/* Tags */}
         <div className="flex flex-wrap gap-2">
-          <span className="rounded-full bg-teal-800 px-3 py-1 text-[12px] font-medium text-white">
+          <span className="rounded-full bg-teal-800 px-3 py-1 text-[13px] font-medium text-white">
             Raumfahrt &amp; Verteidigung
           </span>
-          <span className="rounded-full bg-teal-800 px-3 py-1 text-[12px] font-medium text-white">
+          <span className="rounded-full bg-teal-800 px-3 py-1 text-[13px] font-medium text-white">
             TVAC-Systeme
           </span>
         </div>
