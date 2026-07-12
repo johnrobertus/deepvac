@@ -12,8 +12,8 @@
   },
   "trustBar": {
     "items": [
-      { "label": "Ultimate pressure", "text": "≤ 1 × 10⁻⁶ mbar across the standard series" },
-      { "label": "Temperature range", "text": "−190 °C to +150 °C — LN₂, GN₂, or mechanical cooling" },
+      { "label": "Ultimate pressure", "text": "≤ 1 × 10⁻⁶ mbar across the standard series" },
+      { "label": "Temperature range", "text": "−190 °C to +150 °C — LN₂, GN₂, or mechanical cooling" },
       { "label": "Chamber volume", "text": "65 to 2000 L, custom systems beyond" },
       { "label": "Engineering & manufacturing", "text": "Designed and built in Germany" }
     ]
@@ -70,8 +70,8 @@
       "specs": {
         "geometry": { "label": "Geometry", "value": "Cubic" },
         "volume": { "label": "Volume Range", "value": "65 to 2000 L" },
-        "pressure": { "label": "Ultimate Pressure", "value": "≤ 1 × 10⁻⁶ mbar" },
-        "temperature": { "label": "Temperature Range", "value": "-190 °C to +150 °C*" }
+        "pressure": { "label": "Ultimate Pressure", "value": "≤ 1 × 10⁻⁶ mbar" },
+        "temperature": { "label": "Temperature Range", "value": "−190 °C to +150 °C*" }
       },
       "note": "*Depending on the selected thermal concept, including direct LN₂ cooling, GN₂ circulation, or mechanical refrigeration."
     },
@@ -84,8 +84,8 @@
       "specs": {
         "geometry": { "label": "Geometry", "value": "Cylindrical" },
         "volume": { "label": "Volume Range", "value": "65 to 2000 L" },
-        "pressure": { "label": "Ultimate Pressure", "value": "≤ 1 × 10⁻⁶ mbar" },
-        "temperature": { "label": "Temperature Range", "value": "-190 °C to +150 °C*" }
+        "pressure": { "label": "Ultimate Pressure", "value": "≤ 1 × 10⁻⁶ mbar" },
+        "temperature": { "label": "Temperature Range", "value": "−190 °C to +150 °C*" }
       },
       "note": "*Depending on the selected thermal concept, including direct LN₂ cooling, GN₂ circulation, or mechanical refrigeration."
     },

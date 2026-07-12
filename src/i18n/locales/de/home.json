@@ -8,8 +8,8 @@
   },
   "trustBar": {
     "items": [
-      { "label": "Enddruck", "text": "≤ 1 × 10⁻⁶ mbar in der Standard-Serie" },
-      { "label": "Temperaturbereich", "text": "−190 °C bis +150 °C – LN₂-, GN₂- oder mechanische Kühlung" },
+      { "label": "Enddruck", "text": "≤ 1 × 10⁻⁶ mbar in der Standard-Serie" },
+      { "label": "Temperaturbereich", "text": "−190 °C bis +150 °C – LN₂-, GN₂- oder mechanische Kühlung" },
       { "label": "Kammervolumen", "text": "65 bis 2000 L, Custom-Systeme darüber hinaus" },
       { "label": "Engineering & Fertigung", "text": "Entwickelt und gefertigt in Deutschland" }
     ]
@@ -66,8 +66,8 @@
       "specs": {
         "geometry": { "label": "Geometrie", "value": "Kubisch" },
         "volume": { "label": "Volumenbereich", "value": "65 bis 2000 L" },
-        "pressure": { "label": "Enddruck", "value": "≤ 1 × 10⁻⁶ mbar" },
-        "temperature": { "label": "Temperaturbereich", "value": "-190 °C bis +150 °C*" }
+        "pressure": { "label": "Enddruck", "value": "≤ 1 × 10⁻⁶ mbar" },
+        "temperature": { "label": "Temperaturbereich", "value": "−190 °C bis +150 °C*" }
       },
       "note": "*Abhängig vom gewählten Thermalkonzept, einschließlich direkter LN₂-Kühlung, GN₂-Umwälzung oder mechanischer Kühlung."
     },
@@ -80,8 +80,8 @@
       "specs": {
         "geometry": { "label": "Geometrie", "value": "Zylindrisch" },
         "volume": { "label": "Volumenbereich", "value": "65 bis 2000 L" },
-        "pressure": { "label": "Enddruck", "value": "≤ 1 × 10⁻⁶ mbar" },
-        "temperature": { "label": "Temperaturbereich", "value": "-190 °C bis +150 °C*" }
+        "pressure": { "label": "Enddruck", "value": "≤ 1 × 10⁻⁶ mbar" },
+        "temperature": { "label": "Temperaturbereich", "value": "−190 °C bis +150 °C*" }
       },
       "note": "*Abhängig vom gewählten Thermalkonzept, einschließlich direkter LN₂-Kühlung, GN₂-Umwälzung oder mechanischer Kühlung."
     },
