@@ -84,14 +84,14 @@ const TwinQCM = () => (
                 Chamber-integrated QTGA sensor technology for quantitative outgassing measurement and contamination
                 analysis.
               </p>
-              <p className="text-sm text-gray/80 leading-relaxed max-w-xl">
+              <p className="text-body max-w-xl">
                 Deepvac integrates NDK&apos;s Twin-TQCM and Twin-CQCM sensor technology into new and existing vacuum
                 systems to enable quantitative outgassing measurement directly inside the test environment. Based on
                 quartz crystal microbalance sensing and QTGA, the platform detects mass deposition via frequency shift
                 and supports thermally resolved analysis of adsorption and desorption behavior under controlled vacuum
                 conditions.
               </p>
-              <p className="text-xs text-gray/85 leading-relaxed max-w-xl font-mono">
+              <p className="text-card-meta max-w-xl font-mono">
                 Technology developed and manufactured by NDK. Integrated, configured, and application-engineered by
                 Deepvac.
               </p>
@@ -185,7 +185,7 @@ const TwinQCM = () => (
             <div key={f.title} className="bento-card rounded-lg p-6 space-y-3">
               <div className="text-blue">{f.icon}</div>
               <h3 className="text-sm font-medium text-sand">{f.title}</h3>
-              <p className="text-xs text-gray leading-relaxed">{f.description}</p>
+              <p className="text-card-meta">{f.description}</p>
             </div>
           ))}
         </div>

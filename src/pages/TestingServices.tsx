@@ -183,7 +183,7 @@ export const TestingServices = () => {
                   <h3 className="text-sm font-medium text-sand leading-snug">
                     {step.title}
                   </h3>
-                  <p className="text-xs text-gray/90 leading-relaxed">
+                  <p className="text-card-meta/90 leading-relaxed">
                     {step.description}
                   </p>
                 </div>
@@ -220,7 +220,7 @@ export const TestingServices = () => {
                       <h3 className="text-base font-medium text-sand leading-snug">
                         {item.title}
                       </h3>
-                      <p className="text-xs text-gray/90 leading-relaxed">
+                      <p className="text-card-meta/90 leading-relaxed">
                         {item.short}
                       </p>
                     </div>
@@ -280,7 +280,7 @@ export const TestingServices = () => {
             {deliverables.map((d) => (
               <div key={d.title} className="bento-card rounded-lg p-6 space-y-3">
                 <h3 className="text-base font-medium text-sand">{d.title}</h3>
-                <p className="text-xs text-gray leading-relaxed">{d.description}</p>
+                <p className="text-card-meta">{d.description}</p>
               </div>
             ))}
           </div>
@@ -320,7 +320,7 @@ export const TestingServices = () => {
                 className="bento-card rounded-lg p-6 border-l-2 border-l-blue/60 space-y-3"
               >
                 <h3 className="text-base font-medium text-sand">{w.title}</h3>
-                <p className="text-xs text-gray leading-relaxed">{w.description}</p>
+                <p className="text-card-meta">{w.description}</p>
               </div>
             ))}
           </div>
@@ -340,7 +340,7 @@ export const TestingServices = () => {
                 className="bento-card rounded-lg p-6 border-l-2 border-l-blue/60 space-y-3 flex flex-col"
               >
                 <h3 className="text-base font-medium text-sand">{link.label}</h3>
-                <p className="text-xs text-gray leading-relaxed flex-1">
+                <p className="text-card-meta flex-1">
                   {link.description}
                 </p>
                 <Button asChild variant="tertiary" className="self-start">

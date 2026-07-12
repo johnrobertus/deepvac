@@ -406,7 +406,7 @@ const Contact = () => {
                     <Clock className="w-4 h-4 text-blue mt-0.5 shrink-0" />
                     <div>
                       <span className="mono-label mb-1 block">{t("responseTime")}</span>
-                      <p className="text-xs text-gray">{t("responseTimeValue")}</p>
+                      <p className="text-card-meta">{t("responseTimeValue")}</p>
                     </div>
                   </div>
                 </div>

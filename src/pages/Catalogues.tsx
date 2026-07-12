@@ -162,7 +162,7 @@ function BrochureCard({ doc }: { doc: Brochure }) {
           ))}
         </div>
         <h3 className="text-sm font-medium text-sand">{doc.title}</h3>
-        <p className="text-xs text-gray leading-relaxed flex-1">{doc.description}</p>
+        <p className="text-card-meta flex-1">{doc.description}</p>
         {hasFile ? (
           <Button asChild variant="tertiary" className="text-xs self-start">
             <a href={doc.pdfUrl} target="_blank" rel="noopener noreferrer">
@@ -170,7 +170,7 @@ function BrochureCard({ doc }: { doc: Brochure }) {
             </a>
           </Button>
         ) : (
-          <span className="text-xs text-gray font-mono">{t("availableSoon")}</span>
+          <span className="text-card-meta font-mono">{t("availableSoon")}</span>
         )}
       </div>
     </div>

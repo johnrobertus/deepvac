@@ -116,40 +116,40 @@ function CreditCard({
         </span>
       </div>
 
-      <p className="text-sm leading-relaxed text-gray">{entry.description}</p>
+      <p className="text-body">{entry.description}</p>
 
       {entry.license && (
-        <p className="text-xs text-gray/85">
+        <p className="text-card-meta">
           <span className="text-sand/85">{t("mediaCredits.license")}:</span>{" "}
           {entry.license}
         </p>
       )}
 
       {entry.ccBy && (
-        <p className="text-xs italic text-gray/85">
+        <p className="text-card-meta italic">
           {t("mediaCredits.ccByNote")}
         </p>
       )}
 
       {entry.notAiModified && (
-        <p className="text-xs italic text-gray/85">
+        <p className="text-card-meta italic">
           {t("mediaCredits.notAiModified")}
         </p>
       )}
 
       {entry.aiModified && (
-        <p className="text-xs italic text-gray/85">
+        <p className="text-card-meta italic">
           {t("mediaCredits.aiModified")}
         </p>
       )}
 
       <div className="flex flex-col gap-1.5 sm:flex-row sm:items-center sm:justify-between">
-        <span className="text-sm text-sand/80">{entry.credit}</span>
+        <span className="text-body">{entry.credit}</span>
         <a
           href={entry.sourceUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1 text-xs text-blue transition-colors hover:text-blue-light"
+          className="inline-flex items-center gap-1 text-[13px] text-blue transition-colors hover:text-blue-light"
         >
           {t("mediaCredits.viewSource")}
           <ArrowUpRight className="h-3 w-3" />
@@ -185,8 +185,8 @@ export default function MediaCredits() {
         />
 
         <Section>
-          <div className="max-w-3xl space-y-10">
-            <p className="text-sm leading-relaxed text-gray">
+          <div className="max-w-[70ch] space-y-10">
+            <p className="text-body">
               {t("mediaCredits.intro")}
             </p>
 
@@ -215,10 +215,10 @@ export default function MediaCredits() {
             </div>
 
             <div className="border-t border-gray/10 pt-8 space-y-4">
-              <p className="text-xs leading-relaxed text-gray/85">
+              <p className="text-card-meta">
                 {t("mediaCredits.nasaDisclaimer")}
               </p>
-              <p className="text-xs leading-relaxed text-gray/85">
+              <p className="text-card-meta">
                 {t("mediaCredits.disclaimer")}
               </p>
             </div>

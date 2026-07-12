@@ -98,7 +98,7 @@ const Services = () => {
                     <span className="mono-label mb-3">{t("overview.keyDeliverables")}</span>
                     <ul className="space-y-2.5">
                       {s.deliverables.map((d: string) => (
-                        <li key={d} className="flex items-start gap-2 text-xs text-gray leading-relaxed">
+                        <li key={d} className="flex items-start gap-2 text-card-meta">
                           <span className="w-1 h-1 rounded-full bg-blue mt-1.5 shrink-0" />
                           {d}
                         </li>

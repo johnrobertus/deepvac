@@ -32,7 +32,7 @@ export function ProductCard({
         <h3 className="text-lg font-medium text-sand transition-colors duration-300 group-hover:text-blue-light">
           {title}
         </h3>
-        {subtitle && <p className="text-sm text-gray/90 leading-relaxed transition-colors duration-300 group-hover:text-sand/85">{subtitle}</p>}
+        {subtitle && <p className="text-body transition-colors duration-300 group-hover:text-sand/85">{subtitle}</p>}
         {specs.length > 0 && (
           <div className="flex flex-wrap gap-2 pt-1">
             {specs.map((s) => (

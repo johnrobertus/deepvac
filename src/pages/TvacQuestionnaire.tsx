@@ -1058,7 +1058,7 @@ export default function TvacQuestionnaire() {
               {t("s5.consent")} <span className="text-blue ml-1" aria-hidden="true">*</span>
             </span>
           </label>
-          <p className="text-xs text-gray font-mono">{t("wizard.submitHelp")}</p>
+          <p className="text-card-meta font-mono">{t("wizard.submitHelp")}</p>
         </div>
       </div>
     );
@@ -1123,7 +1123,7 @@ export default function TvacQuestionnaire() {
       </Helmet>
       <PageShell>
         <PageHero eyebrow={t("meta.eyebrow")} title={t("meta.title")} description={t("meta.description")}>
-          <div className="flex flex-wrap items-center gap-x-6 gap-y-2 pt-2 text-xs text-gray font-mono">
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-2 pt-2 text-card-meta font-mono">
             <span className="flex items-center gap-2"><Clock className="w-3.5 h-3.5 text-blue/70" /> {t("meta.estimatedTime")}</span>
             <span className="flex items-center gap-2"><Info className="w-3.5 h-3.5 text-blue/70" /> {t("meta.reassurance")}</span>
           </div>
@@ -1206,7 +1206,7 @@ export default function TvacQuestionnaire() {
               <AlertTriangle className="w-4 h-4 text-red-400 mt-0.5 shrink-0" />
               <div className="flex-1 space-y-1">
                 <p className="text-sm font-medium text-sand">{t("error.title")}</p>
-                <p className="text-xs text-gray/80 leading-relaxed">{submissionError}</p>
+                <p className="text-card-meta/80 leading-relaxed">{submissionError}</p>
               </div>
             </div>
           )}
@@ -1238,7 +1238,7 @@ export default function TvacQuestionnaire() {
                 <AlertDialogTrigger asChild>
                   <button
                     type="button"
-                    className="inline-flex items-center gap-1.5 text-xs text-gray hover:text-sand transition-colors font-mono self-start focus:outline-none focus-visible:ring-2 focus-visible:ring-gray/40 rounded-sm px-1 py-0.5"
+                    className="inline-flex items-center gap-1.5 text-card-meta hover:text-sand transition-colors font-mono self-start focus:outline-none focus-visible:ring-2 focus-visible:ring-gray/40 rounded-sm px-1 py-0.5"
                   >
                     <RotateCcw className="w-3 h-3" /> {t("wizard.reset")}
                   </button>
@@ -1274,7 +1274,7 @@ export default function TvacQuestionnaire() {
                       size="sm"
                       onClick={handlePrint}
                       disabled={sending}
-                      className="font-mono text-xs text-gray hover:text-sand"
+                      className="font-mono text-card-meta hover:text-sand"
                       title={t("wizard.savePdfHint")}
                     >
                       <FileDown className="w-4 h-4 mr-1.5" /> {t("wizard.savePdf")}

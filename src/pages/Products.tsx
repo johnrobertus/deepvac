@@ -151,8 +151,8 @@ const Products = () => {
             {factors.map((row) => (
               <div key={row.label} className="grid grid-cols-3 border-b border-gray/10 last:border-b-0">
                 <div className="p-4 text-sm font-medium text-sand">{row.label}</div>
-                <div className="p-4 text-xs text-gray leading-relaxed border-l border-gray/10">{row.standard}</div>
-                <div className="p-4 text-xs text-gray leading-relaxed border-l border-gray/10">{row.custom}</div>
+                <div className="p-4 text-card-meta border-l border-gray/10">{row.standard}</div>
+                <div className="p-4 text-card-meta border-l border-gray/10">{row.custom}</div>
               </div>
             ))}
           </div>
@@ -164,11 +164,11 @@ const Products = () => {
                 <div className="space-y-2">
                   <div>
                     <span className="mono-label text-blue">{t("overview.configGuide.headers.standard")}</span>
-                    <p className="text-xs text-gray leading-relaxed mt-1">{row.standard}</p>
+                    <p className="text-card-meta mt-1">{row.standard}</p>
                   </div>
                   <div>
                     <span className="mono-label text-blue">{t("overview.configGuide.headers.custom")}</span>
-                    <p className="text-xs text-gray leading-relaxed mt-1">{row.custom}</p>
+                    <p className="text-card-meta mt-1">{row.custom}</p>
                   </div>
                 </div>
               </div>

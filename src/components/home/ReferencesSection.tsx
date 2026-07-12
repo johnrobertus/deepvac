@@ -43,7 +43,7 @@ export function ReferencesSection() {
                 <div className="p-5 space-y-2">
                   <span className="mono-label text-blue">Case Study</span>
                   <h3 className="text-sm font-medium text-sand">Reference Project {i}</h3>
-                  <p className="text-xs text-gray leading-relaxed">Project details, scope, and outcomes to be published.</p>
+                  <p className="text-card-meta">Project details, scope, and outcomes to be published.</p>
                 </div>
               </div>
             </Reveal>

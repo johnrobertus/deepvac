@@ -60,7 +60,7 @@ const Team = () => {
               <span className="mono-label text-blue">{t("story.competenciesTitle")}</span>
               <div className="grid grid-cols-2 gap-3">
                 {competencies.map((skill: string) => (
-                  <div key={skill} className="flex items-center gap-2 text-xs text-gray">
+                  <div key={skill} className="flex items-center gap-2 text-card-meta">
                     <span className="w-1 h-1 rounded-full bg-blue flex-shrink-0" />
                     {skill}
                   </div>
