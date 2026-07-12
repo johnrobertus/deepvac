@@ -13,24 +13,24 @@
   "trustBar": {
     "items": [
       {
-        "value": "≤ 1 × 10⁻⁶ mbar",
-        "label": "Ultimate pressure",
-        "detail": "Standard series"
+        "value": "Standard to custom",
+        "label": "System scope",
+        "detail": "Series platforms & application-specific systems"
       },
       {
-        "value": "−190 to +150 °C",
-        "label": "Temperature range",
-        "detail": "LN₂ · GN₂ · mechanical cooling"
+        "value": "Retrofit & upgrades",
+        "label": "Vendor-independent",
+        "detail": "Modernization of third-party & legacy systems"
       },
       {
-        "value": "65 – 2000 L",
-        "label": "Chamber volume",
-        "detail": "Custom systems beyond"
+        "value": "Concept → support",
+        "label": "Full lifecycle",
+        "detail": "One partner from design to operations"
       },
       {
-        "value": "Germany",
-        "label": "Engineering & manufacturing",
-        "detail": "Design & build from one source"
+        "value": "PLC · Modbus · OPC UA",
+        "label": "Control & data",
+        "detail": "Automation, data acquisition, remote access"
       }
     ]
   },
