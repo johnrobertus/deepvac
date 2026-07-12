@@ -13,24 +13,24 @@
   "trustBar": {
     "items": [
       {
-        "value": "≤ 1 × 10⁻⁶ mbar",
-        "label": "Enddruck",
-        "detail": "Standard-Serie"
+        "value": "Standard bis Custom",
+        "label": "Systemspektrum",
+        "detail": "Serienplattformen & anwendungsspezifische Systeme"
       },
       {
-        "value": "−190 bis +150 °C",
-        "label": "Temperaturbereich",
-        "detail": "LN₂ · GN₂ · mechanische Kühlung"
+        "value": "Retrofit & Upgrades",
+        "label": "Herstellerunabhängig",
+        "detail": "Modernisierung auch für Fremd- & Altsysteme"
       },
       {
-        "value": "65 – 2000 L",
-        "label": "Kammervolumen",
-        "detail": "Custom-Systeme darüber hinaus"
+        "value": "Konzept → Support",
+        "label": "Gesamter Lebenszyklus",
+        "detail": "Ein Partner von Entwicklung bis Betrieb"
       },
       {
-        "value": "Deutschland",
-        "label": "Engineering & Fertigung",
-        "detail": "Entwicklung & Fertigung aus einer Hand"
+        "value": "SPS · Modbus · OPC UA",
+        "label": "Steuerung & Daten",
+        "detail": "Automatisierung, Datenerfassung, Fernzugriff"
       }
     ]
   },
@@ -98,11 +98,11 @@
         },
         "pressure": {
           "label": "Enddruck",
-          "value": "≤ 1 × 10⁻⁶ mbar"
+          "value": "≤ 1 × 10⁻⁶ mbar"
         },
         "temperature": {
           "label": "Temperaturbereich",
-          "value": "−190 °C bis +150 °C*"
+          "value": "−190 °C bis +150 °C*"
         }
       },
       "note": "*Abhängig vom gewählten Thermalkonzept, einschließlich direkter LN₂-Kühlung, GN₂-Umwälzung oder mechanischer Kühlung."
@@ -128,11 +128,11 @@
         },
         "pressure": {
           "label": "Enddruck",
-          "value": "≤ 1 × 10⁻⁶ mbar"
+          "value": "≤ 1 × 10⁻⁶ mbar"
         },
         "temperature": {
           "label": "Temperaturbereich",
-          "value": "−190 °C bis +150 °C*"
+          "value": "−190 °C bis +150 °C*"
         }
       },
       "note": "*Abhängig vom gewählten Thermalkonzept, einschließlich direkter LN₂-Kühlung, GN₂-Umwälzung oder mechanischer Kühlung."
