@@ -219,16 +219,15 @@
   }
   .text-card-title {
     @apply text-lg font-medium leading-snug text-sand;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.01em;
   }
   .text-card-title-lg {
     @apply text-xl font-medium leading-snug text-sand;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.01em;
   }
   .text-card-body {
     @apply text-[15px] leading-relaxed text-sand/85 md:text-[16px];
-    hyphens: auto;
-    -webkit-hyphens: auto;
+    max-width: 65ch;
   }
   /* Smallest allowed text — labels, microcopy, meta rows */
   .text-card-meta {
@@ -240,21 +239,11 @@
   /* Body / prose scale for blocks of copy inside sections */
   .text-body {
     @apply text-[16px] leading-relaxed text-sand/85 md:text-[17px];
-    hyphens: auto;
-    -webkit-hyphens: auto;
     max-width: 65ch;
   }
   .text-body-lg {
     @apply text-[17px] leading-relaxed text-sand/90 md:text-[18px];
-    hyphens: auto;
-    -webkit-hyphens: auto;
     max-width: 65ch;
-  }
-
-  /* Accordion answers ≥ 15px, hyphenate for long DE words */
-  [data-radix-accordion-content] {
-    hyphens: auto;
-    -webkit-hyphens: auto;
   }
 
 
