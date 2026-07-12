@@ -28,6 +28,7 @@ export function SectionHeader({
       {description && (
         <p className={cn("text-section-lead", align === "center" && "mx-auto")}>{description}</p>
       )}
+    </div>
   );
 }
 
