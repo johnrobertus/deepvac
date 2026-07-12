@@ -42,7 +42,7 @@
     "messagePlaceholder": "Beispiel: Wir planen ein Kammer-Upgrade, benötigen Unterstützung bei der Modernisierung des Steuerungssystems oder suchen TVAC-Testkapazität für eine Satellitenkomponente."
   },
   "interests": {
-    "products": ["Standard TVAC Serie", "Custom TVAC System", "Thermal Vision"],
+    "products": ["Standard TVAC-Serie", "Custom TVAC System", "Thermal Vision"],
     "services": ["Testleistungen", "Steuerungstechnik", "Mechanische Konstruktion", "Retrofit & Modernisierung", "Wartung & Reparatur", "Subsystemintegration"],
     "other": ["Noch nicht sicher", "Allgemeine Beratung"]
   },
@@ -67,7 +67,7 @@
     "applicationArea": "Anwendungsbereich",
     "timeline": "Zeitrahmen",
     "select": "Auswählen...",
-    "chamberOptions": ["Standard T Serie", "Standard C Serie", "Custom TVAC", "Noch nicht sicher"],
+    "chamberOptions": ["Standard T-Serie", "Standard C-Serie", "Custom TVAC", "Noch nicht sicher"],
     "applicationOptions": ["Satellit / Raumfahrzeug", "Nutzlast / Komponente", "Forschung / Labor", "Industrie / Prozess", "Sonstiges"],
     "timelineOptions": ["Sofort (< 3 Monate)", "Kurzfristig (3–6 Monate)", "Planungsphase (6–12 Monate)", "Explorativ"]
   },

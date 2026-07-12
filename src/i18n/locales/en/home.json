@@ -1,11 +1,9 @@
 {
   "hero": {
-    "eyebrow": "THERMAL VACUUM SYSTEMS FOR AEROSPACE. ENGINEERED IN GERMANY.",
-    "title": "Modular & Custom Thermal Vacuum Systems\nEngineered in Germany for Aerospace Qualification.",
-    "description": "Deepvac engineers modular TVAC platforms, custom chamber systems, and control architecture — built in Germany for teams qualifying, integrating, or upgrading test infrastructure.",
+    "eyebrow": "ENGINEERED & BUILT IN GERMANY",
+    "title": "Modular & custom thermal vacuum systems for aerospace qualification.",
+    "description": "Deepvac engineers modular TVAC platforms, custom chamber systems, and control architecture for teams building, qualifying, or upgrading test infrastructure.",
     "cues": [
-      "MODULAR PLATFORMS",
-      "CUSTOM TVAC SYSTEMS",
       "CONTROL & AUTOMATION",
       "RETROFIT & SERVICE",
       "TEST-AS-A-SERVICE"
@@ -14,10 +12,10 @@
   },
   "trustBar": {
     "items": [
-      { "label": "Environment", "text": "Built for demanding aerospace and laboratory test environments" },
-      { "label": "Methodology", "text": "Designed for repeatable thermal vacuum workflows" },
-      { "label": "Configuration", "text": "Configured for geometry, interfaces, and test profiles" },
-      { "label": "Lifecycle", "text": "Supported through retrofit, service, and subsystem integration" }
+      { "label": "Ultimate pressure", "text": "≤ 1 × 10⁻⁶ mbar across the standard series" },
+      { "label": "Temperature range", "text": "−190 °C to +150 °C — LN₂, GN₂, or mechanical cooling" },
+      { "label": "Chamber volume", "text": "65 to 2000 L, custom systems beyond" },
+      { "label": "Engineering & manufacturing", "text": "Designed and built in Germany" }
     ]
   },
   "capabilities": {

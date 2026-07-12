@@ -4,10 +4,10 @@
     "title": "Thermovakuumkammer-Systeme",
     "description": "Deepvac entwickelt standardisierte und kundenspezifisch konstruierte Thermovakuumsysteme für die Raumfahrtqualifikation, Umweltsimulation und Forschungsanwendungen. Unsere Kammerplattformen decken ein breites Spektrum an Testanforderungen ab – von etablierten Workflows mit modularen Standardsystemen bis hin zu vollständig maßgeschneiderten Konfigurationen für komplexe Missionsprofile.",
     "standardSeries": {
-      "title": "Standard Serie",
+      "title": "Standard-Serie",
       "subtitle": "Vorkonstruierte TVAC-Plattformen",
-      "description": "Modulare Thermovakuumkammer-Systeme mit bewährten Architekturen, standardisierten Schnittstellen und reproduzierbarer Leistung für etablierte Testanforderungen. Verfügbar in kubischen (T Serie) und zylindrischen (C Serie) Konfigurationen.",
-      "cta": "Standard Serie entdecken",
+      "description": "Modulare Thermovakuumkammer-Systeme mit bewährten Architekturen, standardisierten Schnittstellen und reproduzierbarer Leistung für etablierte Testanforderungen. Verfügbar in kubischen (T-Serie) und zylindrischen (C-Serie) Konfigurationen.",
+      "cta": "Standard-Serie entdecken",
       "chips": ["Modulares Design", "Bewährte Architektur", "Standardisierte Schnittstellen"]
     },
     "customTvac": {
@@ -30,7 +30,7 @@
       "description": "Nutzen Sie den folgenden Vergleich, um den besten Ansatz für Ihre Testanforderungen, Zeitplanung und Integrationsbedingungen zu ermitteln.",
       "headers": {
         "requirement": "Anforderung",
-        "standard": "Standard Serie",
+        "standard": "Standard-Serie",
         "custom": "Custom TVAC"
       },
       "factors": [
@@ -72,7 +72,7 @@
       "items": [
         {
           "q": "Was unterscheidet eine Standardkammer von einer Custom-Konfiguration?",
-          "a": "Kammern der Standard Serie verwenden vorkonstruierte Designs mit bewährten Architekturen und bieten kürzere Lieferzeiten sowie etablierte Leistungshüllkurven. Custom-TVAC-Systeme werden vom Konzept bis zur Inbetriebnahme um anwendungsspezifische Anforderungen konstruiert – einschließlich Geometrie, Thermalprofil, Instrumentierung und Schnittstellenbedingungen."
+          "a": "Kammern der Standard-Serie verwenden vorkonstruierte Designs mit bewährten Architekturen und bieten kürzere Lieferzeiten sowie etablierte Leistungshüllkurven. Custom-TVAC-Systeme werden vom Konzept bis zur Inbetriebnahme um anwendungsspezifische Anforderungen konstruiert – einschließlich Geometrie, Thermalprofil, Instrumentierung und Schnittstellenbedingungen."
         },
         {
           "q": "Können Standardkammern für spezifische Testanforderungen modifiziert werden?",
@@ -94,13 +94,13 @@
     }
   },
   "standardSeries": {
-    "eyebrow": "Produkte / Standard Serie",
+    "eyebrow": "Produkte / Standard-Serie",
     "title": "Vorkonstruierte TVAC-Plattformen",
     "description": "Standardisierte Thermovakuumkammer-Plattformen mit modularen Konfigurationen und reproduzierbarer Leistung für Raumfahrtqualifikation, Umweltsimulation und Forschungstests.",
     "tSeries": {
       "eyebrow": "Kubische Thermovakuumkammern",
-      "title": "T Serie TVAC",
-      "description": "Kompakte kubische Thermovakuumkammer-Plattformen für reproduzierbare Umweltsimulation, Subsystem-Validierung und Laborworkflows. Die T Serie kombiniert kontrollierte thermische und Vakuumbedingungen mit einer standardisierten Architektur für Forschungs- und Qualifikationsanwendungen.",
+      "title": "T-Serie TVAC",
+      "description": "Kompakte kubische Thermovakuumkammer-Plattformen für reproduzierbare Umweltsimulation, Subsystem-Validierung und Laborworkflows. Die T-Serie kombiniert kontrollierte thermische und Vakuumbedingungen mit einer standardisierten Architektur für Forschungs- und Qualifikationsanwendungen.",
       "descriptionExtended": "Die kubische Kammergeometrie ermöglicht einfachen Nutzlastzugang, effiziente Innenraumnutzung und flexible Vorrichtungsmontage. Standardkonfigurationen unterstützen Vakuumleistung bis {{vacuum}} und thermischen Betrieb bis {{minTemp}}, abhängig vom gewählten Systemaufbau.",
       "features": [
         {
@@ -123,8 +123,8 @@
     },
     "cSeries": {
       "eyebrow": "Zylindrische Thermovakuumkammern",
-      "title": "C Serie TVAC",
-      "description": "Zylindrische Thermovakuumkammer-Plattformen für reproduzierbare Umweltsimulation, Subsystem-Qualifikation und robusten Laborbetrieb. Die C Serie kombiniert kontrollierte thermische und Vakuumbedingungen mit einer standardisierten Architektur für Forschungs- und Qualifikationsanwendungen.",
+      "title": "C-Serie TVAC",
+      "description": "Zylindrische Thermovakuumkammer-Plattformen für reproduzierbare Umweltsimulation, Subsystem-Qualifikation und robusten Laborbetrieb. Die C-Serie kombiniert kontrollierte thermische und Vakuumbedingungen mit einer standardisierten Architektur für Forschungs- und Qualifikationsanwendungen.",
       "descriptionExtended": "Die zylindrische Kammergeometrie unterstützt klassische Vakuumkammer-Layouts, effiziente Shroud-Integration und einen strukturell effizienten Formfaktor. Standardkonfigurationen unterstützen Vakuumleistung bis {{vacuum}} und thermischen Betrieb bis {{minTemp}}, abhängig vom gewählten Systemaufbau.",
       "features": [
         {
@@ -148,7 +148,7 @@
     "applicationFit": {
       "eyebrow": "Anwendungseignung",
       "title": "Konzipiert für anspruchsvolle Testumgebungen",
-      "description": "Plattformen der Standard Serie bedienen ein breites Spektrum an Raumfahrt-, Forschungs- und Industrietestanwendungen.",
+      "description": "Plattformen der Standard-Serie bedienen ein breites Spektrum an Raumfahrt-, Forschungs- und Industrietestanwendungen.",
       "items": [
         "Subsystem-Qualifikationsprüfung",
         "Umweltsimulation auf Komponentenebene",
@@ -165,16 +165,16 @@
     },
     "brochure": {
       "eyebrow": "Standard-Serie-Broschüre herunterladen",
-      "title": "Deepvac Standard Serie Katalog",
-      "description": "Erfahren Sie mehr über die Deepvac Standard Serie, einschließlich allgemeiner technischer Merkmale, Kammerkonfigurationen, Steuerungssystemfunktionen und optionaler Upgrades."
+      "title": "Deepvac Standard-Serie Katalog",
+      "description": "Erfahren Sie mehr über die Deepvac Standard-Serie, einschließlich allgemeiner technischer Merkmale, Kammerkonfigurationen, Steuerungssystemfunktionen und optionaler Upgrades."
     },
     "faq": {
       "eyebrow": "FAQ",
-      "title": "Fragen zur Standard Serie",
+      "title": "Fragen zur Standard-Serie",
       "items": [
         {
-          "q": "Welche Kammergrößen sind in der Standard Serie verfügbar?",
-          "a": "Die Standard Serie ist in kubischen und zylindrischen Kammerformaten über einen Bereich von Kammervolumina verfügbar. Spezifische Abmessungen werden entsprechend dem erforderlichen Testraum, der Nutzlastgröße und den Integrationsanforderungen ausgewählt."
+          "q": "Welche Kammergrößen sind in der Standard-Serie verfügbar?",
+          "a": "Die Standard-Serie ist in kubischen und zylindrischen Kammerformaten über einen Bereich von Kammervolumina verfügbar. Spezifische Abmessungen werden entsprechend dem erforderlichen Testraum, der Nutzlastgröße und den Integrationsanforderungen ausgewählt."
         },
         {
           "q": "Welches Vakuumniveau können Standard-Serie-Kammern erreichen?",
@@ -331,7 +331,7 @@
     "crossLinks": {
       "relatedProducts": "Verwandte Produkte",
       "standardSeriesTitle": "Standard-Serie-Plattformen",
-      "standardSeriesDescription": "Für etablierte Testanforderungen bietet die Deepvac Standard Serie vorkonstruierte T-Serie- und C-Serie-Plattformen.",
+      "standardSeriesDescription": "Für etablierte Testanforderungen bietet die Deepvac Standard-Serie vorkonstruierte T-Serie- und C-Serie-Plattformen.",
       "engineeringServices": "Engineering-Leistungen",
       "engineeringServicesTitle": "Design, Testing & Integration",
       "engineeringServicesDescription": "Deepvac bietet Steuerungstechnik, mechanische Konstruktion, Prüfdienstleistungen und Lifecycle-Support neben der Kammerentwicklung."
