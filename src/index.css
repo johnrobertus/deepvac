@@ -118,17 +118,26 @@
 
   h1, h2, h3, h4, h5, h6 {
     text-wrap: balance;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.01em;
     hyphens: none;
     -webkit-hyphens: none;
     @apply font-medium text-sand;
   }
+  /* Tight display tracking only applies to large sizes (>= ~2rem). */
   h1 { letter-spacing: -0.04em; }
-  h2 { letter-spacing: -0.035em; }
+  h2 { letter-spacing: -0.03em; }
 
   p {
     text-wrap: pretty;
     line-height: 1.7;
+  }
+
+  /* German hyphenation only — html[lang] already syncs per language. */
+  :lang(de) p,
+  :lang(de) .text-body,
+  :lang(de) .text-body-lg,
+  :lang(de) .text-card-body,
+  :lang(de) [data-radix-accordion-content] {
     hyphens: auto;
     -webkit-hyphens: auto;
   }
