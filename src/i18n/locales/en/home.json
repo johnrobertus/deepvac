@@ -98,11 +98,11 @@
         },
         "pressure": {
           "label": "Ultimate Pressure",
-          "value": "≤ 1 × 10⁻⁶ mbar"
+          "value": "≤ 1 × 10⁻⁶ mbar"
         },
         "temperature": {
           "label": "Temperature Range",
-          "value": "−190 °C to +150 °C*"
+          "value": "−190 °C to +150 °C*"
         }
       },
       "note": "*Depending on the selected thermal concept, including direct LN₂ cooling, GN₂ circulation, or mechanical refrigeration."
@@ -128,11 +128,11 @@
         },
         "pressure": {
           "label": "Ultimate Pressure",
-          "value": "≤ 1 × 10⁻⁶ mbar"
+          "value": "≤ 1 × 10⁻⁶ mbar"
         },
         "temperature": {
           "label": "Temperature Range",
-          "value": "−190 °C to +150 °C*"
+          "value": "−190 °C to +150 °C*"
         }
       },
       "note": "*Depending on the selected thermal concept, including direct LN₂ cooling, GN₂ circulation, or mechanical refrigeration."

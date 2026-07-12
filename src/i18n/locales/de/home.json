@@ -98,11 +98,11 @@
         },
         "pressure": {
           "label": "Enddruck",
-          "value": "≤ 1 × 10⁻⁶ mbar"
+          "value": "≤ 1 × 10⁻⁶ mbar"
         },
         "temperature": {
           "label": "Temperaturbereich",
-          "value": "−190 °C bis +150 °C*"
+          "value": "−190 °C bis +150 °C*"
         }
       },
       "note": "*Abhängig vom gewählten Thermalkonzept, einschließlich direkter LN₂-Kühlung, GN₂-Umwälzung oder mechanischer Kühlung."
@@ -128,11 +128,11 @@
         },
         "pressure": {
           "label": "Enddruck",
-          "value": "≤ 1 × 10⁻⁶ mbar"
+          "value": "≤ 1 × 10⁻⁶ mbar"
         },
         "temperature": {
           "label": "Temperaturbereich",
-          "value": "−190 °C bis +150 °C*"
+          "value": "−190 °C bis +150 °C*"
         }
       },
       "note": "*Abhängig vom gewählten Thermalkonzept, einschließlich direkter LN₂-Kühlung, GN₂-Umwälzung oder mechanischer Kühlung."
