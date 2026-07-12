@@ -52,7 +52,7 @@ export function ReferencesSection() {
 
         <Reveal delay={400}>
           <div className="mt-8 bento-card rounded-lg p-8 text-center space-y-3">
-            <p className="text-sm text-gray/40 italic max-w-lg mx-auto">
+            <p className="text-sm text-gray/80 italic max-w-lg mx-auto">
               "Customer testimonials will be added as project references become available."
             </p>
             <span className="mono-label text-gray/20">[TESTIMONIAL Placeholder]</span>

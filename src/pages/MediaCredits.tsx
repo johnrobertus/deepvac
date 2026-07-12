@@ -111,7 +111,7 @@ function CreditCard({
         <h3 className="font-mono text-xs uppercase tracking-widest text-blue">
           {entry.title}
         </h3>
-        <span className="shrink-0 font-mono text-[10px] uppercase tracking-wider text-gray/50">
+        <span className="shrink-0 font-mono text-[13px] uppercase tracking-wider text-gray/85">
           {entry.usage}
         </span>
       </div>
@@ -119,26 +119,26 @@ function CreditCard({
       <p className="text-sm leading-relaxed text-gray">{entry.description}</p>
 
       {entry.license && (
-        <p className="text-xs text-gray/60">
-          <span className="text-sand/60">{t("mediaCredits.license")}:</span>{" "}
+        <p className="text-xs text-gray/85">
+          <span className="text-sand/85">{t("mediaCredits.license")}:</span>{" "}
           {entry.license}
         </p>
       )}
 
       {entry.ccBy && (
-        <p className="text-xs italic text-gray/50">
+        <p className="text-xs italic text-gray/85">
           {t("mediaCredits.ccByNote")}
         </p>
       )}
 
       {entry.notAiModified && (
-        <p className="text-xs italic text-gray/50">
+        <p className="text-xs italic text-gray/85">
           {t("mediaCredits.notAiModified")}
         </p>
       )}
 
       {entry.aiModified && (
-        <p className="text-xs italic text-gray/50">
+        <p className="text-xs italic text-gray/85">
           {t("mediaCredits.aiModified")}
         </p>
       )}
@@ -215,10 +215,10 @@ export default function MediaCredits() {
             </div>
 
             <div className="border-t border-gray/10 pt-8 space-y-4">
-              <p className="text-xs leading-relaxed text-gray/50">
+              <p className="text-xs leading-relaxed text-gray/85">
                 {t("mediaCredits.nasaDisclaimer")}
               </p>
-              <p className="text-xs leading-relaxed text-gray/50">
+              <p className="text-xs leading-relaxed text-gray/85">
                 {t("mediaCredits.disclaimer")}
               </p>
             </div>

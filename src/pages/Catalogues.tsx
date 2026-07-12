@@ -77,7 +77,7 @@ const Catalogues = () => {
                 <p className="text-sm text-gray leading-relaxed">{featured.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {featured.tags.map((tag) => (
-                    <span key={tag} className="px-2 py-1 text-[10px] font-mono uppercase tracking-wider text-blue border border-blue/20 rounded-sm bg-blue/5">{tag}</span>
+                    <span key={tag} className="px-2 py-1 text-[13px] font-mono uppercase tracking-wider text-blue border border-blue/20 rounded-sm bg-blue/5">{tag}</span>
                   ))}
                 </div>
                 <div className="pt-2">
@@ -152,7 +152,7 @@ function BrochureCard({ doc }: { doc: Brochure }) {
       ) : (
         <div className="relative w-full overflow-hidden bg-surface blueprint-grid flex items-center justify-center" style={{ aspectRatio: "3/4" }}>
           <FileText className="w-10 h-10 text-gray/20" />
-          <span className="absolute bottom-2 right-3 font-mono text-[10px] uppercase tracking-widest text-gray/40">{t("comingSoon")}</span>
+          <span className="absolute bottom-2 right-3 font-mono text-[13px] uppercase tracking-widest text-gray/80">{t("comingSoon")}</span>
         </div>
       )}
       <div className="p-5 space-y-3 flex-1 flex flex-col">
@@ -170,7 +170,7 @@ function BrochureCard({ doc }: { doc: Brochure }) {
             </a>
           </Button>
         ) : (
-          <span className="text-xs text-gray/75 font-mono">{t("availableSoon")}</span>
+          <span className="text-xs text-gray font-mono">{t("availableSoon")}</span>
         )}
       </div>
     </div>

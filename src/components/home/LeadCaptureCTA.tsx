@@ -32,7 +32,7 @@ export function LeadCaptureCTA() {
                 </Link>
               </Button>
             </div>
-            <p className="flex items-center justify-center gap-1.5 text-[11px] text-gray/60 font-mono pt-1">
+            <p className="flex items-center justify-center gap-1.5 text-[13px] text-gray/85 font-mono pt-1">
               <Clock className="w-3 h-3 text-blue/60" />
               <span>{t("common:cta.questionnaire.microcopyShort")}</span>
             </p>

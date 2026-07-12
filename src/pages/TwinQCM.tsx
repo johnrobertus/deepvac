@@ -91,7 +91,7 @@ const TwinQCM = () => (
                 and supports thermally resolved analysis of adsorption and desorption behavior under controlled vacuum
                 conditions.
               </p>
-              <p className="text-xs text-gray/60 leading-relaxed max-w-xl font-mono">
+              <p className="text-xs text-gray/85 leading-relaxed max-w-xl font-mono">
                 Technology developed and manufactured by NDK. Integrated, configured, and application-engineered by
                 Deepvac.
               </p>
@@ -167,7 +167,7 @@ const TwinQCM = () => (
               alt="Differential Twin-QCM measurement reduces environmental interference and improves measurement stability under real operating conditions"
               className="w-full h-auto object-contain"
             />
-            <p className="text-[10px] font-mono text-gray/60 mt-3 text-center">
+            <p className="text-[13px] font-mono text-gray/85 mt-3 text-center">
               Differential Twin-QCM measurement reduces environmental interference and improves measurement stability
               under real operating conditions.
             </p>
@@ -207,10 +207,10 @@ const TwinQCM = () => (
               setups, and chamber integrations with reduced operating complexity and lower running cost.
             </p>
             <div className="flex flex-wrap gap-2 pt-1">
-              <span className="font-mono text-[10px] uppercase tracking-widest text-blue-light/70 border border-gray/15 rounded-sm px-2 py-1">
+              <span className="font-mono text-[13px] uppercase tracking-widest text-blue-light/70 border border-gray/15 rounded-sm px-2 py-1">
                 -80 to +125 °C
               </span>
-              <span className="font-mono text-[10px] uppercase tracking-widest text-blue-light/70 border border-gray/15 rounded-sm px-2 py-1">
+              <span className="font-mono text-[13px] uppercase tracking-widest text-blue-light/70 border border-gray/15 rounded-sm px-2 py-1">
                 Peltier Cooling
               </span>
             </div>
@@ -225,10 +225,10 @@ const TwinQCM = () => (
               cooling is available.
             </p>
             <div className="flex flex-wrap gap-2 pt-1">
-              <span className="font-mono text-[10px] uppercase tracking-widest text-blue-light/70 border border-gray/15 rounded-sm px-2 py-1">
+              <span className="font-mono text-[13px] uppercase tracking-widest text-blue-light/70 border border-gray/15 rounded-sm px-2 py-1">
                 -196 to +125 °C
               </span>
-              <span className="font-mono text-[10px] uppercase tracking-widest text-blue-light/70 border border-gray/15 rounded-sm px-2 py-1">
+              <span className="font-mono text-[13px] uppercase tracking-widest text-blue-light/70 border border-gray/15 rounded-sm px-2 py-1">
                 LN₂ Cooling
               </span>
             </div>
@@ -245,7 +245,7 @@ const TwinQCM = () => (
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {specs.map((s) => (
               <div key={s.label} className="p-5 border-b border-r border-gray/10 last:border-r-0 space-y-1">
-                <span className="mono-label text-gray/60 text-[10px]">{s.label}</span>
+                <span className="mono-label text-gray/85 text-[13px]">{s.label}</span>
                 <p className="text-sm font-medium text-sand">{s.value}</p>
               </div>
             ))}

@@ -86,12 +86,12 @@ export const TestingServices = () => {
         <div className="container-wide pt-8">
           <nav
             aria-label="Breadcrumb"
-            className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-gray/70"
+            className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-gray"
           >
             <Link to={lp("/")} className="hover:text-sand transition-colors">
               {t("testing.breadcrumbHome")}
             </Link>
-            <ChevronRight className="h-3 w-3 text-gray/40" />
+            <ChevronRight className="h-3 w-3 text-gray/80" />
             <span className="text-sand">{t("testing.breadcrumbCurrent")}</span>
           </nav>
         </div>
@@ -110,7 +110,7 @@ export const TestingServices = () => {
             {tags.map((tag) => (
               <span
                 key={tag}
-                className="font-mono text-[11px] uppercase tracking-wider text-blue/90 border border-blue/25 bg-blue/5 rounded-sm px-2.5 py-1"
+                className="font-mono text-[13px] uppercase tracking-wider text-blue/90 border border-blue/25 bg-blue/5 rounded-sm px-2.5 py-1"
               >
                 {tag}
               </span>
@@ -176,7 +176,7 @@ export const TestingServices = () => {
                     <div className="flex h-8 w-8 items-center justify-center rounded-sm border border-blue/20 bg-blue/10 text-blue">
                       <Icon className="w-4 h-4" />
                     </div>
-                    <span className="font-mono text-[10px] uppercase tracking-wider text-gray/60">
+                    <span className="font-mono text-[13px] uppercase tracking-wider text-gray/85">
                       0{i + 1}
                     </span>
                   </div>
@@ -228,7 +228,7 @@ export const TestingServices = () => {
 
                   <div className="space-y-3">
                     <div>
-                      <span className="mono-label text-blue text-[11px] uppercase tracking-wider">
+                      <span className="mono-label text-blue text-[13px] uppercase tracking-wider">
                         {t("testing.capabilities.equipmentLabel")}
                       </span>
                       <p className="text-sm text-gray leading-relaxed mt-1">
@@ -237,7 +237,7 @@ export const TestingServices = () => {
                     </div>
 
                     <div>
-                      <span className="mono-label text-blue text-[11px] uppercase tracking-wider">
+                      <span className="mono-label text-blue text-[13px] uppercase tracking-wider">
                         {t("testing.capabilities.testsLabel")}
                       </span>
                       <ul className="mt-1.5 space-y-1">
@@ -255,7 +255,7 @@ export const TestingServices = () => {
                   </div>
 
                   <div className="pt-2 border-t border-gray/10">
-                    <span className="mono-label text-[11px] text-gray/70 uppercase tracking-wider">
+                    <span className="mono-label text-[13px] text-gray uppercase tracking-wider">
                       {t("testing.capabilities.categoryLabel")}
                     </span>
                     <p className="text-xs text-sand/80 leading-relaxed mt-1">

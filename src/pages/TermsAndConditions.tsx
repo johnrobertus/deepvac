@@ -38,7 +38,7 @@ export default function TermsAndConditions() {
 
         <Section>
           <div className="max-w-3xl space-y-10 text-gray text-sm leading-relaxed">
-            <p className="text-xs text-gray/60">{t("terms.effectiveDate")}</p>
+            <p className="text-xs text-gray/85">{t("terms.effectiveDate")}</p>
 
             {/* Part A */}
             <PartHeader label={t("terms.partA")} />

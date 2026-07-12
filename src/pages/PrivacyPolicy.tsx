@@ -65,7 +65,7 @@ export default function PrivacyPolicy() {
 
         <Section>
           <div className="max-w-3xl space-y-8 text-gray text-sm leading-relaxed">
-            <p className="text-xs text-gray/60">{t("privacy.lastUpdated")}</p>
+            <p className="text-xs text-gray/85">{t("privacy.lastUpdated")}</p>
 
             <LegalSection title={t("privacy.sections.controller")}>
               <p>Deepvac GmbH</p>

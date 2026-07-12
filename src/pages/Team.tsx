@@ -99,7 +99,7 @@ const Team = () => {
                       <h3 className="text-lg font-medium text-sand">{member.name}</h3>
                       <span className="mono-label text-blue">{member.role}</span>
                     </div>
-                    <a href="https://www.linkedin.com/company/deepvac-gmbh/" target="_blank" rel="noopener noreferrer" className="text-gray/70 hover:text-blue transition-colors" aria-label={`${member.name} LinkedIn`}>
+                    <a href="https://www.linkedin.com/company/deepvac-gmbh/" target="_blank" rel="noopener noreferrer" className="text-gray hover:text-blue transition-colors" aria-label={`${member.name} LinkedIn`}>
                       <Linkedin className="w-4 h-4" />
                     </a>
                   </div>
@@ -108,7 +108,7 @@ const Team = () => {
                     <span className="mono-label">{t("leadership.focusAreas")}</span>
                     <div className="flex flex-wrap gap-2">
                       {member.focus.map((f: string) => (
-                        <span key={f} className="px-2 py-1 text-[10px] font-mono uppercase tracking-wider text-blue border border-blue/20 rounded-sm bg-blue/5">{f}</span>
+                        <span key={f} className="px-2 py-1 text-[13px] font-mono uppercase tracking-wider text-blue border border-blue/20 rounded-sm bg-blue/5">{f}</span>
                       ))}
                     </div>
                   </div>

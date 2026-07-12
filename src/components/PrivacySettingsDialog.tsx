@@ -56,7 +56,7 @@ export function PrivacySettingsDialog({ open, onOpenChange }: PrivacySettingsDia
               <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-blue" />
               <div>
                 <p className="text-sm font-medium text-sand">{t("privacySettings.googleMaps")}</p>
-                <p className="text-xs text-gray/60 leading-relaxed mt-1">
+                <p className="text-xs text-gray/85 leading-relaxed mt-1">
                   {t("privacySettings.googleMapsDescription")}
                 </p>
               </div>
@@ -64,7 +64,7 @@ export function PrivacySettingsDialog({ open, onOpenChange }: PrivacySettingsDia
             <Switch checked={mapsConsent} onCheckedChange={handleToggle} />
           </div>
 
-          <p className="text-[10px] text-gray/40 leading-relaxed">
+          <p className="text-[13px] text-gray/80 leading-relaxed">
             {t("privacySettings.note")}
           </p>
         </div>

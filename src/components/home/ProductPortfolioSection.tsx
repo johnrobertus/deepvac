@@ -51,7 +51,7 @@ export function ProductPortfolioSection() {
                       />
                       <div className="absolute bottom-3 left-3 flex flex-wrap gap-1.5">
                         {Array.isArray(overlays) && overlays.map((label) => (
-                          <span key={label} className="glass-overlay rounded-sm px-2.5 py-1 font-mono text-[11px] uppercase tracking-widest text-blue-light/95">{label}</span>
+                          <span key={label} className="glass-overlay rounded-sm px-2.5 py-1 font-mono text-[13px] uppercase tracking-widest text-blue-light/95">{label}</span>
                         ))}
                       </div>
                     </div>

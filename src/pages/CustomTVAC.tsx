@@ -76,7 +76,7 @@ const CustomTVAC = () => {
               <Link to={localizedPath("/contact", lang)}>{tc("cta.questionnaire.talkToEngineer")}</Link>
             </Button>
           </div>
-          <p className="flex items-start gap-1.5 text-[11px] text-gray/60 leading-relaxed font-mono pt-3 max-w-xl">
+          <p className="flex items-start gap-1.5 text-[13px] text-gray/85 leading-relaxed font-mono pt-3 max-w-xl">
             <Clock className="w-3 h-3 mt-0.5 text-blue/60 shrink-0" />
             <span>{tc("cta.questionnaire.microcopyDetailed")}</span>
           </p>

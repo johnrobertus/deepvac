@@ -134,7 +134,7 @@ const ThermalVision = () => {
                 {t("thermalVision.bodyParagraph1")}
               </p>
 
-              <p className="text-sm text-gray/70 leading-relaxed">
+              <p className="text-sm text-gray leading-relaxed">
                 {t("thermalVision.bodyParagraph2")}
               </p>
 
@@ -143,7 +143,7 @@ const ThermalVision = () => {
                   <div key={f.label} className="bento-card rounded-lg p-4 space-y-2 h-full">
                     <div className="text-blue">{featureIcons[i]}</div>
                     <h4 className="text-xs font-medium text-sand">{f.label}</h4>
-                    <p className="text-[11px] text-gray leading-relaxed">{f.detail}</p>
+                    <p className="text-[13px] text-gray leading-relaxed">{f.detail}</p>
                   </div>
                 ))}
               </div>
