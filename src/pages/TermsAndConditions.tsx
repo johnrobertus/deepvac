@@ -37,7 +37,7 @@ export default function TermsAndConditions() {
         <PageHero eyebrow={t("terms.eyebrow")} title={t("terms.title")} description="Deepvac GmbH" />
 
         <Section>
-          <div className="max-w-3xl space-y-10 text-gray text-sm leading-relaxed">
+          <div className="max-w-[70ch] space-y-10 text-body">
             <p className="text-card-meta">{t("terms.effectiveDate")}</p>
 
             {/* Part A */}
