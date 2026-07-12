@@ -26,12 +26,12 @@ export function PageHero({ eyebrow, title, description, children, className }: P
   return (
     <section className={cn("py-20 md:py-32 px-6", className)}>
       <div className="container max-w-5xl space-y-6">
-        {eyebrow && <span className="mono-label text-blue">{eyebrow}</span>}
+        {eyebrow && <span className="text-section-eyebrow">{eyebrow}</span>}
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-sand">
           {title}
         </h1>
         {description && (
-          <p className="text-lg text-gray max-w-2xl leading-relaxed">{description}</p>
+          <p className="text-body-lg text-sand/90">{description}</p>
         )}
         {children}
       </div>
