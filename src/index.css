@@ -118,13 +118,26 @@
 
   h1, h2, h3, h4, h5, h6 {
     text-wrap: balance;
-    letter-spacing: -0.04em;
+    letter-spacing: -0.02em;
+    hyphens: none;
+    -webkit-hyphens: none;
     @apply font-medium text-sand;
   }
+  h1 { letter-spacing: -0.04em; }
+  h2 { letter-spacing: -0.035em; }
 
   p {
     text-wrap: pretty;
     line-height: 1.7;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+  }
+
+  /* Buttons, labels, mono, and interactive controls never hyphenate */
+  button, [role="button"], label, .font-mono,
+  .mono-label, .mono-value {
+    hyphens: none;
+    -webkit-hyphens: none;
   }
 
   ::selection {
