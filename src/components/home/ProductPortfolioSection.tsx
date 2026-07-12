@@ -59,7 +59,7 @@ export function ProductPortfolioSection() {
                     <div className={`flex flex-col justify-center space-y-6 p-8 lg:p-10 ${i % 2 === 1 ? "lg:order-1" : ""}`}>
                       <div>
                         <span className="mono-label text-blue">{t(`${prefix}.subtitle`)}</span>
-                        <h3 className="mt-2 text-2xl font-medium tracking-tight text-sand md:text-3xl">{t(`${prefix}.title`)}</h3>
+                        <h3 className="mt-2 text-card-title-lg md:text-2xl">{t(`${prefix}.title`)}</h3>
                       </div>
                       <p className="text-[16px] leading-relaxed text-gray">{t(`${prefix}.description`)}</p>
                       <div className="grid grid-cols-1 gap-4 py-2 sm:grid-cols-2">

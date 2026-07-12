@@ -19,7 +19,7 @@ export function LeadCaptureCTA() {
         <Reveal>
           <div className="space-y-5">
             <span className="mono-label text-blue">{t("home:leadCapture.eyebrow")}</span>
-            <h2 className="mt-3 text-3xl font-medium tracking-tight text-sand md:text-4xl">{t("home:leadCapture.title")}</h2>
+            <h2 className="mt-3 text-section-title">{t("home:leadCapture.title")}</h2>
             <p className="mx-auto mt-4 max-w-2xl text-body">{t("home:leadCapture.description")}</p>
             <div className="flex flex-wrap justify-center gap-4 pt-4">
               <Button asChild size="lg" className="font-mono text-xs tracking-wide">
