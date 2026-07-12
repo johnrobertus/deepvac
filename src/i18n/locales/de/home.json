@@ -78,12 +78,12 @@
     "title": "Kammerplattformen",
     "description": "Standardisierte und kundenspezifisch entwickelte Thermovakuumsysteme für die Qualifikations- und Verifikationsprüfung von Raumfahrthardware unter kontrollierten Hochvakuum- und Thermalbedingungen.",
     "tSeries": {
-      "title": "T Serie TVAC",
+      "title": "T-Serie TVAC",
       "subtitle": "Kubische Thermovakuumkammern",
-      "description": "Kubische Thermovakuumkammern für die Qualifikation, Validierung und Umweltsimulation von Raumfahrthardware. Die T Serie bietet eine standardisierte Kammerplattform für kontrollierte Thermovakuumtests in Forschung, institutionellen und kommerziellen Raumfahrtanwendungen.",
+      "description": "Kubische Thermovakuumkammern für die Qualifikation, Validierung und Umweltsimulation von Raumfahrthardware. Die T-Serie bietet eine standardisierte Kammerplattform für kontrollierte Thermovakuumtests in Forschung, institutionellen und kommerziellen Raumfahrtanwendungen.",
       "overlays": [
         "Kubische Geometrie",
-        "Standard Serie",
+        "Standard-Serie",
         "Thermovakuumprüfung"
       ],
       "cta": "Plattform ansehen",
@@ -108,12 +108,12 @@
       "note": "*Abhängig vom gewählten Thermalkonzept, einschließlich direkter LN₂-Kühlung, GN₂-Umwälzung oder mechanischer Kühlung."
     },
     "cSeries": {
-      "title": "C Serie TVAC",
+      "title": "C-Serie TVAC",
       "subtitle": "Zylindrische Thermovakuumkammern",
-      "description": "Zylindrische Thermovakuumkammern für die Qualifikation, Validierung und Umweltsimulation von Raumfahrthardware. Die C Serie bietet eine standardisierte Kammerplattform für kontrollierte Thermovakuumtests in Forschung, institutionellen und kommerziellen Raumfahrtanwendungen.",
+      "description": "Zylindrische Thermovakuumkammern für die Qualifikation, Validierung und Umweltsimulation von Raumfahrthardware. Die C-Serie bietet eine standardisierte Kammerplattform für kontrollierte Thermovakuumtests in Forschung, institutionellen und kommerziellen Raumfahrtanwendungen.",
       "overlays": [
         "Zylindrische Geometrie",
-        "Standard Serie",
+        "Standard-Serie",
         "Thermovakuumprüfung"
       ],
       "cta": "Plattform ansehen",
@@ -140,9 +140,9 @@
     "custom": {
       "title": "Custom TVAC",
       "subtitle": "Anwendungsspezifische Thermovakuumsysteme",
-      "description": "Kundenspezifische Thermovakuumsysteme für Anwendungen außerhalb der Standard Serie. Diese Systeme werden für nicht-standardmäßige Geometrien, spezifische Kammervolumina, erweiterte Temperaturanforderungen und zusätzliche Subsysteme entwickelt.",
+      "description": "Kundenspezifische Thermovakuumsysteme für Anwendungen außerhalb der Standard-Serie. Diese Systeme werden für nicht-standardmäßige Geometrien, spezifische Kammervolumina, erweiterte Temperaturanforderungen und zusätzliche Subsysteme entwickelt.",
       "overlays": [
-        "Über die Standard Serie hinaus",
+        "Über die Standard-Serie hinaus",
         "Custom-Geometrie",
         "Spezielle TVAC-Systeme"
       ],
@@ -150,7 +150,7 @@
       "specs": {
         "scope": {
           "label": "Auslegungsumfang",
-          "value": "Außerhalb der Standard Serie"
+          "value": "Außerhalb der Standard-Serie"
         },
         "volume": {
           "label": "Volumen",
