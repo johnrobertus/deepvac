@@ -317,6 +317,138 @@
     opacity: 1;
     transform: translateY(0);
   }
+
+  /* ============================================================
+     Hero — width + height aware fluid sizing.
+     Header is fixed at 4rem; hero must fit within 100dvh minus that.
+     Mobile: natural document flow, stacked, no forced fit.
+     Desktop (lg+): fits within one viewport, vertically centered.
+     ============================================================ */
+  .hero-section {
+    min-height: 100svh;
+  }
+
+  .hero-content-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 100svh;
+    padding-top: calc(4rem + env(safe-area-inset-top, 0px) + 1.5rem);
+    padding-bottom: 3rem;
+  }
+
+  .hero-heading-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2.15rem, 8vw, 4.5rem);
+  }
+  .hero-title--de {
+    font-size: clamp(2rem, 7.5vw, 4rem);
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+  @media (min-width: 768px) {
+    .hero-description { font-size: 1.125rem; }
+  }
+
+  .hero-text-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .hero-cta-row { padding-top: 0.25rem; }
+  .hero-chips { padding-top: 0.25rem; }
+
+  .hero-chip {
+    padding: 0.5rem 0.875rem;
+    font-size: 11px;
+  }
+  @media (min-width: 640px) {
+    .hero-chip { padding: 0.5rem 0.875rem; font-size: 12px; }
+  }
+
+  /* Desktop layout: fit hero within one viewport, centered, header-aware */
+  @media (min-width: 1024px) {
+    .hero-section {
+      min-height: 100dvh;
+    }
+    .hero-content-wrap {
+      min-height: 100dvh;
+      justify-content: center;
+      padding-top: calc(4rem + clamp(1rem, 3dvh, 3.25rem));
+      padding-bottom: clamp(1rem, 3dvh, 3.25rem);
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.6fr) minmax(260px, 0.75fr);
+      gap: clamp(1.5rem, 3vw, 3rem);
+      align-items: center;
+    }
+    .hero-text-col {
+      gap: clamp(0.7rem, 1.6dvh, 1.4rem);
+    }
+    .hero-heading-block {
+      gap: clamp(0.5rem, 1dvh, 1rem);
+    }
+    .hero-title--en {
+      font-size: clamp(2.35rem, min(5vw, 7.2dvh), 5.2rem);
+    }
+    .hero-title--de {
+      font-size: clamp(2.15rem, min(4.6vw, 6.8dvh), 4.85rem);
+    }
+    .hero-description {
+      font-size: clamp(0.98rem, 1.9dvh, 1.15rem);
+      line-height: 1.55;
+    }
+    .hero-cta-row { padding-top: clamp(0.15rem, 0.6dvh, 0.5rem); }
+    .hero-chips { padding-top: clamp(0.15rem, 0.6dvh, 0.5rem); gap: clamp(0.4rem, 1dvh, 0.75rem); }
+    .hero-chip {
+      padding: clamp(0.35rem, 0.9dvh, 0.55rem) clamp(0.7rem, 1vw, 0.95rem);
+      font-size: clamp(10.5px, 1.4dvh, 12px);
+    }
+    .hero-funding-card {
+      width: clamp(250px, 23vw, 420px);
+      padding: clamp(0.9rem, 1.8dvh, 1.5rem) clamp(1.1rem, 2vw, 2rem);
+    }
+  }
+
+  /* Short desktop viewport safety fallbacks */
+  @media (min-width: 1024px) and (max-height: 900px) {
+    .hero-text-col { gap: clamp(0.55rem, 1.3dvh, 1rem); }
+    .hero-title--en { font-size: clamp(2.15rem, min(4.4vw, 6.6dvh), 4.4rem); }
+    .hero-title--de { font-size: clamp(2rem, min(4.1vw, 6.2dvh), 4.05rem); }
+    .hero-description { font-size: clamp(0.94rem, 1.8dvh, 1.05rem); }
+    .hero-funding-card { width: clamp(230px, 20vw, 360px); }
+    .hero-content-wrap {
+      padding-top: calc(4rem + clamp(0.75rem, 2dvh, 2rem));
+      padding-bottom: clamp(0.75rem, 2dvh, 2rem);
+    }
+  }
+
+  @media (min-width: 1024px) and (max-height: 760px) {
+    .hero-title { line-height: 1.02 !important; }
+    .hero-title--en { font-size: clamp(1.9rem, min(3.9vw, 6dvh), 3.6rem); }
+    .hero-title--de { font-size: clamp(1.75rem, min(3.7vw, 5.6dvh), 3.3rem); }
+    .hero-text-col { gap: clamp(0.45rem, 1dvh, 0.8rem); }
+    .hero-heading-block { gap: clamp(0.35rem, 0.8dvh, 0.7rem); }
+    .hero-description { font-size: clamp(0.9rem, 1.7dvh, 1rem); line-height: 1.5; }
+    .hero-chip {
+      padding: clamp(0.28rem, 0.7dvh, 0.4rem) clamp(0.55rem, 0.9vw, 0.8rem);
+      font-size: clamp(10px, 1.3dvh, 11.5px);
+    }
+    .hero-funding-card { width: clamp(210px, 18vw, 310px); padding: clamp(0.7rem, 1.4dvh, 1.1rem) clamp(0.9rem, 1.6vw, 1.4rem); }
+    .hero-content-wrap {
+      padding-top: calc(4rem + clamp(0.5rem, 1.5dvh, 1.25rem));
+      padding-bottom: clamp(0.5rem, 1.5dvh, 1.25rem);
+    }
+  }
 }
 
 @layer utilities {
