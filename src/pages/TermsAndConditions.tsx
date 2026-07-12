@@ -38,7 +38,7 @@ export default function TermsAndConditions() {
 
         <Section>
           <div className="max-w-3xl space-y-10 text-gray text-sm leading-relaxed">
-            <p className="text-xs text-gray/85">{t("terms.effectiveDate")}</p>
+            <p className="text-card-meta">{t("terms.effectiveDate")}</p>
 
             {/* Part A */}
             <PartHeader label={t("terms.partA")} />
@@ -190,7 +190,7 @@ function PartHeader({ label }: { label: string }) {
 function LS({ n, title, children }: { n: string; title: string; children: ReactNode }) {
   return (
     <div className="space-y-3">
-      <h3 className="text-sand text-base font-medium">
+      <h3 className="text-card-title">
         {n}. {title}
       </h3>
       {children}
