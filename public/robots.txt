@@ -10,4 +10,4 @@ Disallow: /*?*utm_
 Disallow: /*?*gclid
 
 # Canonical sitemap index (contains main, services, resources, legal sub-sitemaps)
-Sitemap: https://deepvac.space/sitemap.xml
+Sitemap: https://deepv.lovable.app/sitemap.xml

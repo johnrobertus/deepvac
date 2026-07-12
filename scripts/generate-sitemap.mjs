@@ -21,7 +21,7 @@ import { fileURLToPath } from "node:url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
 const PUBLIC_DIR = path.join(ROOT, "public");
-const BASE = "https://deepvac.space";
+const BASE = "https://deepv.lovable.app";
 
 /**
  * Each entry: paired EN/DE canonical paths + the source files whose git
