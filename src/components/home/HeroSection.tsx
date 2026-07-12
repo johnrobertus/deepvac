@@ -125,7 +125,7 @@ export function HeroSection() {
   const cues = t("hero.cues", { returnObjects: true }) as string[];
 
   return (
-    <section id="hero" className="relative w-full min-h-[100svh] md:min-h-[100svh] overflow-x-hidden">
+    <section id="hero" className="hero-section relative w-full overflow-x-hidden">
       {slides.map((slide, i) => {
         const isActive = i === activeIndex;
         const isNext = i === nextIndex;
@@ -177,27 +177,20 @@ export function HeroSection() {
         style={{ boxShadow: "inset 0 0 140px 42px hsl(0 0% 0% / 0.28)" }}
       />
 
-      <div
-        className="relative z-20 flex min-h-[100svh] flex-col justify-end pb-12 sm:pb-14 md:pb-24"
-        style={{ paddingTop: "calc(4rem + env(safe-area-inset-top, 0px) + 2rem)" }}
-      >
-
+      <div className="hero-content-wrap relative z-20">
         <div className="hero-container">
-          <div className="flex flex-col gap-8 md:items-end md:justify-between lg:grid lg:grid-cols-12 lg:items-center lg:gap-10 2xl:gap-16 3xl:gap-20">
-            <div className="max-w-[56rem] space-y-4 sm:space-y-5 lg:col-span-8">
+          <div className="hero-grid">
+            <div className="hero-text-col">
               <Reveal>
-                <div className="space-y-3 sm:space-y-4">
+                <div className="hero-heading-block">
                   <span className="mono-label text-blue-light/90 tracking-[0.08em]">{t("hero.eyebrow")}</span>
 
                   {(() => {
                     const isDe = i18n.language === "de";
                     return (
                       <h1
-                        className="max-w-full font-medium text-sand whitespace-pre-line [text-wrap:balance] md:max-w-[14ch] lg:max-w-[18ch] xl:max-w-[20ch] 2xl:max-w-[22ch]"
+                        className={`hero-title ${isDe ? "hero-title--de" : "hero-title--en"} max-w-full font-medium text-sand whitespace-pre-line [text-wrap:balance] md:max-w-[14ch] lg:max-w-[18ch] xl:max-w-[20ch] 2xl:max-w-[22ch]`}
                         style={{
-                          fontSize: isDe
-                            ? "clamp(2rem, 7.5vw, 4.85rem)"
-                            : "clamp(2.15rem, 8vw, 5.4rem)",
                           lineHeight: 1.08,
                           letterSpacing: "-0.03em",
                           hyphens: "none",
@@ -218,13 +211,12 @@ export function HeroSection() {
                 </div>
               </Reveal>
 
-
               <Reveal delay={100}>
-                <p className="max-w-2xl text-base leading-relaxed text-sand/90 md:text-lg">{t("hero.description")}</p>
+                <p className="hero-description max-w-2xl leading-relaxed text-sand/90">{t("hero.description")}</p>
               </Reveal>
 
               <Reveal delay={150}>
-                <div className="flex flex-col gap-3 pt-1 sm:flex-row sm:flex-wrap sm:gap-3 sm:pt-2">
+                <div className="hero-cta-row flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                   <Button asChild size="default" className="w-full font-mono text-sm tracking-wide sm:w-auto sm:h-12 sm:px-8 sm:text-base">
                     <Link to={contactPath}>{tc("buttons.discussRequirements")}</Link>
                   </Button>
@@ -241,12 +233,12 @@ export function HeroSection() {
               </Reveal>
 
               <Reveal delay={250}>
-                <div className="flex flex-col gap-2 pt-1 sm:flex-row sm:flex-wrap sm:gap-3">
+                <div className="hero-chips flex flex-col gap-2 sm:flex-row sm:flex-wrap">
                   {Array.isArray(cues) &&
                     cues.map((cue) => (
                       <span
                         key={cue}
-                        className="inline-flex w-full items-center gap-1.5 rounded-sm border border-sand/30 bg-background/40 px-3 py-2 font-mono text-[11px] uppercase tracking-widest text-sand/90 backdrop-blur-sm sm:w-auto sm:px-3.5 sm:py-2 sm:text-[12px]"
+                        className="hero-chip inline-flex w-full items-center gap-1.5 rounded-sm border border-sand/30 bg-background/40 font-mono uppercase tracking-widest text-sand/90 backdrop-blur-sm sm:w-auto"
                       >
                         <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-blue/80" />
                         {cue}
@@ -254,13 +246,12 @@ export function HeroSection() {
                     ))}
                 </div>
               </Reveal>
-
             </div>
 
             {/* Funding logo, right side, desktop only */}
-            <div className="hidden lg:col-span-4 lg:flex items-center justify-center lg:justify-end">
+            <div className="hero-funding-col hidden lg:flex items-center justify-center lg:justify-end">
               <Reveal delay={300}>
-                <div className="rounded-2xl border border-white/[0.08] bg-white/[0.07] px-8 py-6 backdrop-blur-md w-full max-w-[420px] 3xl:max-w-[460px]">
+                <div className="hero-funding-card rounded-2xl border border-white/[0.08] bg-white/[0.07] backdrop-blur-md">
                   <img
                     src={i18n.language === "de" ? existFundingHeroDe : existFundingHeroEn}
                     alt={
