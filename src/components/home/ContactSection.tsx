@@ -202,7 +202,7 @@ export function ContactSection() {
         <div className="container-wide">
           <div className="max-w-xl mx-auto text-center space-y-6">
             <CheckCircle className="w-12 h-12 text-blue mx-auto" />
-            <h2 className="text-3xl font-medium text-sand tracking-tight">{t("successNew.title")}</h2>
+            <h2 className="text-section-title">{t("successNew.title")}</h2>
             <p className="text-gray text-sm leading-relaxed">{t("successNew.body")}</p>
             <Button variant="outline" onClick={() => { setSubmitted(false); setForm(initialForm); setInterests([]); setConsent(false); }}>
               {tc("buttons.submitAnotherInquiry")}

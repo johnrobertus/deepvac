@@ -46,7 +46,7 @@ export function TeamSection() {
                 <div className="space-y-3.5 p-6">
                   <div className="flex items-start justify-between gap-4">
                     <div className="space-y-1">
-                      <h3 className="text-lg font-medium text-sand">{member.name}</h3>
+                      <h3 className="text-card-title">{member.name}</h3>
                       <span className="mono-label text-blue">{member.role}</span>
                     </div>
                     {linkedinUrls[i] ? (
