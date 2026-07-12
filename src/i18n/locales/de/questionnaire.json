@@ -179,7 +179,7 @@
     "dutCount": "Max. Anzahl getesteter DUTs",
     "dutCountPh": "Max. Anzahl der DUTs eingeben",
     "vacuum": "Erforderliches Vakuumniveau (mbar)",
-    "vacuumOptions": ["1 × 10⁻⁵ mbar", "1 × 10⁻⁶ mbar", "< 1 × 10⁻⁷ mbar"],
+    "vacuumOptions": ["1 × 10⁻⁵ mbar", "1 × 10⁻⁶ mbar", "< 1 × 10⁻⁷ mbar"],
     "highVacPump": "Hochvakuumpumpe",
     "highVacOptions": ["Kryopumpe", "Turbomolekularpumpe"],
     "highVacNested": ["Maglev-Turbomolekularpumpe", "Mechanische Turbomolekularpumpe"],
@@ -293,7 +293,7 @@
     "installSpace": "Aufstellraum-Beschränkungen",
     "installSpacePh": "Beschreiben Sie Raum, Deckenhöhe, Flächenlast, Zugangsbeschränkungen, Transportweg usw.",
     "power": "Spannungsversorgung",
-    "powerOptions": ["230 V / 1-phasig", "400 V / 3-phasig"],
+    "powerOptions": ["230 V / 1-phasig", "400 V / 3-phasig"],
     "powerMaxPh": "Max. Leistungsaufnahme (kW)",
     "utilities": "Verfügbare Medien",
     "utilitiesOptions": [
