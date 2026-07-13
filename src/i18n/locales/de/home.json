@@ -13,24 +13,24 @@
   "trustBar": {
     "items": [
       {
-        "value": "Standard bis Custom",
+        "value": "Serie bis Sonderbau",
         "label": "Systemspektrum",
-        "detail": "Serienplattformen & anwendungsspezifische Systeme"
+        "detail": "T- & C-Serie 65–2.000 L · −190 °C bis +150 °C · Hochvakuum ≤ 1 × 10⁻⁶ mbar"
       },
       {
-        "value": "Retrofit & Upgrades",
-        "label": "Herstellerunabhängig",
-        "detail": "Modernisierung auch für Fremd- & Altsysteme"
+        "value": "Jede Kammer, jeder Hersteller",
+        "label": "Retrofit & Upgrades",
+        "detail": "Modernisierung von Bestands- & Fremdanlagen — von Steuerung bis Vakuumtechnik"
       },
       {
-        "value": "Konzept → Support",
-        "label": "Gesamter Lebenszyklus",
-        "detail": "Ein Partner von Entwicklung bis Betrieb"
+        "value": "Ingenieure statt Account-Manager",
+        "label": "Full Lifecycle",
+        "detail": "Wer Ihr System entwickelt, betreut es — vom Konzept bis in den Betrieb"
       },
       {
-        "value": "SPS · Modbus · OPC UA",
+        "value": "Steuerung aus eigener Hand",
         "label": "Steuerung & Daten",
-        "detail": "Automatisierung, Datenerfassung, Fernzugriff"
+        "detail": "Eigene SPS, HMI & Datenerfassung — OPC UA, Modbus, Fernzugriff nativ"
       }
     ]
   },
