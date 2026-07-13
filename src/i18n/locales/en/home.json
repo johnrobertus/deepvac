@@ -13,9 +13,9 @@
   "trustBar": {
     "items": [
       {
-        "value": "Standard to custom",
-        "label": "System scope",
-        "detail": "T & C series 65–2,000 L · −190 °C to +150 °C · high vacuum ≤ 1 × 10⁻⁶ mbar"
+        "value": "Intelligence built in",
+        "label": "AI & analytics",
+        "detail": "Test analytics, anomaly detection & predictive maintenance — incl. Thermal Vision"
       },
       {
         "value": "Any chamber, any vendor",
@@ -23,7 +23,7 @@
         "detail": "Modernization of legacy & third-party systems — controls to vacuum subsystems"
       },
       {
-        "value": "Engineers, not account managers",
+        "value": "One team, one contact",
         "label": "Full lifecycle",
         "detail": "The team that designs your system supports it — concept to operations"
       },
