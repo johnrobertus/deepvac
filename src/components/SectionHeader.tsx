@@ -25,7 +25,9 @@ export function SectionHeader({
     >
       {eyebrow && <span className="text-section-eyebrow">{eyebrow}</span>}
       <h2 className="text-section-title">{title}</h2>
-      {description && <p className="text-section-lead">{description}</p>}
+      {description && (
+        <p className={cn("text-section-lead", align === "center" && "mx-auto")}>{description}</p>
+      )}
     </div>
   );
 }

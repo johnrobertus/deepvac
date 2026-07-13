@@ -210,7 +210,7 @@ export function Header() {
   const langButtonClass = (active: boolean) =>
     cn(
       "rounded-sm px-1.5 py-0.5 font-mono text-xs uppercase tracking-wider transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background",
-      active ? "text-sand" : "text-gray/75 hover:text-sand",
+      active ? "text-sand" : "text-gray hover:text-sand",
     );
 
   return (

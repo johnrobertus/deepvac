@@ -263,7 +263,7 @@ const Contact = () => {
 
               <div className="space-y-2 pt-2" id="project-inquiry-form">
                 <h2 className="text-2xl font-medium text-sand tracking-tight">{t("formTitle")}</h2>
-                <p className="text-sm text-gray/85 leading-relaxed">{t("formDescription")}</p>
+                <p className="text-body">{t("formDescription")}</p>
               </div>
 
               <aside
@@ -306,23 +306,23 @@ const Contact = () => {
                 <div className="border-t border-gray/20 pt-6 space-y-4">
                   <div className="space-y-1">
                     <span className="mono-label text-blue">{t("sections.interestTitle")}<span className="text-blue ml-1">*</span></span>
-                    <p className="text-[12px] text-gray/70">{t("sections.interestHelper")}</p>
+                    <p className="text-[13px] text-gray">{t("sections.interestHelper")}</p>
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-5">
                     <div className="space-y-1.5">
-                      <p className="text-[11px] font-mono uppercase tracking-wider text-gray/60 mb-1">{t("sections.interestProducts")}</p>
+                      <p className="text-[13px] font-mono uppercase tracking-wider text-gray/85 mb-1">{t("sections.interestProducts")}</p>
                       {productInterests.map((label) => (
                         <CheckboxItem key={label} label={label} checked={interests.includes(label)} onChange={() => toggleInterest(label)} />
                       ))}
                     </div>
                     <div className="space-y-1.5">
-                      <p className="text-[11px] font-mono uppercase tracking-wider text-gray/60 mb-1">{t("sections.interestServices")}</p>
+                      <p className="text-[13px] font-mono uppercase tracking-wider text-gray/85 mb-1">{t("sections.interestServices")}</p>
                       {serviceInterests.map((label) => (
                         <CheckboxItem key={label} label={label} checked={interests.includes(label)} onChange={() => toggleInterest(label)} />
                       ))}
                     </div>
                     <div className="space-y-1.5">
-                      <p className="text-[11px] font-mono uppercase tracking-wider text-gray/60 mb-1">{t("sections.interestOther")}</p>
+                      <p className="text-[13px] font-mono uppercase tracking-wider text-gray/85 mb-1">{t("sections.interestOther")}</p>
                       {otherInterests.map((label) => (
                         <CheckboxItem key={label} label={label} checked={interests.includes(label)} onChange={() => toggleInterest(label)} />
                       ))}
@@ -369,9 +369,9 @@ const Contact = () => {
                   <Button size="lg" className="font-mono text-xs tracking-wide" disabled={sending}>
                     {sending ? (<><Loader2 className="w-4 h-4 mr-2 animate-spin" /> {tc("buttons.sending")}</>) : t("submit.button")}
                   </Button>
-                  <div className="flex items-start gap-1.5 text-gray/70 max-w-md">
+                  <div className="flex items-start gap-1.5 text-gray max-w-md">
                     <Shield className="w-3 h-3 mt-1 shrink-0" />
-                    <span className="text-[11px] font-mono leading-snug">{t("submit.helper")}</span>
+                    <span className="text-[13px] font-mono leading-snug">{t("submit.helper")}</span>
                   </div>
                 </div>
               </form>
@@ -385,7 +385,7 @@ const Contact = () => {
                     <MapPin className="w-4 h-4 text-blue mt-0.5 shrink-0" />
                     <div>
                       <span className="mono-label mb-1 block">{t("address")}</span>
-                      <p className="text-sm text-gray leading-relaxed">Deepvac GmbH<br />An der Universität 1<br />30823 Garbsen<br />Germany</p>
+                      <p className="text-body">Deepvac GmbH<br />An der Universität 1<br />30823 Garbsen<br />Germany</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
@@ -406,7 +406,7 @@ const Contact = () => {
                     <Clock className="w-4 h-4 text-blue mt-0.5 shrink-0" />
                     <div>
                       <span className="mono-label mb-1 block">{t("responseTime")}</span>
-                      <p className="text-xs text-gray">{t("responseTimeValue")}</p>
+                      <p className="text-card-meta">{t("responseTimeValue")}</p>
                     </div>
                   </div>
                 </div>

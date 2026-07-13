@@ -23,15 +23,15 @@
         "sections": {
           "mechanical": {
             "title": "Mechanical Refrigeration",
-            "content": "Mechanical refrigeration systems use compressor-based cycles (typically cascade systems for temperatures below −40 °C) to extract heat from the chamber shroud or platen.",
+            "content": "Mechanical refrigeration systems use compressor-based cycles (typically cascade systems for temperatures below −40 °C) to extract heat from the chamber shroud or platen.",
             "advantages": [
               "No consumable cryogens — lower recurring operational cost",
               "Continuous operation without supply logistics",
-              "Good temperature controllability in the −70 °C to +150 °C range",
+              "Good temperature controllability in the −70 °C to +150 °C range",
               "Lower facility infrastructure requirements"
             ],
             "constraints": [
-              "Limited minimum temperature (typically −70 °C to −80 °C for dual-stage systems)",
+              "Limited minimum temperature (typically −70 °C to −80 °C for dual-stage systems)",
               "Slower cooldown rates compared to LN2 systems",
               "Higher initial equipment cost for cascade configurations",
               "Compressor maintenance and eventual replacement"
@@ -39,9 +39,9 @@
           },
           "ln2": {
             "title": "Liquid Nitrogen (LN₂) Circuits",
-            "content": "LN₂-based systems circulate liquid nitrogen through shroud or platen channels, achieving temperatures down to approximately −180 °C. The nitrogen is typically supplied from external dewars or bulk tanks.",
+            "content": "LN₂-based systems circulate liquid nitrogen through shroud or platen channels, achieving temperatures down to approximately −180 °C. The nitrogen is typically supplied from external dewars or bulk tanks.",
             "advantages": [
-              "Achieves very low temperatures (down to −180 °C)",
+              "Achieves very low temperatures (down to −180 °C)",
               "Fast cooldown rates",
               "Relatively simple system architecture",
               "Lower initial equipment cost compared to mechanical systems for deep-cold requirements"
@@ -151,8 +151,8 @@
             "title": "Thermal Requirements",
             "content": "The chamber must achieve and maintain specified thermal conditions with adequate precision:",
             "points": [
-              "Temperature range covering qualification extremes — often −65 °C to +125 °C or wider depending on the application",
-              "Temperature uniformity across the test item — typically ±3 °C to ±5 °C depending on test item size",
+              "Temperature range covering qualification extremes — often −65 °C to +125 °C or wider depending on the application",
+              "Temperature uniformity across the test item — typically ±3 °C to ±5 °C depending on test item size",
               "Controlled transition rates between hot and cold dwells",
               "Dwell time stability — maintaining setpoint within tolerance for specified durations (often 1–4 hours per dwell)",
               "Number of thermal cycles as defined by the qualification specification"
@@ -162,7 +162,7 @@
             "title": "Vacuum Requirements",
             "content": "The vacuum environment must be representative of orbital conditions and maintained throughout testing:",
             "points": [
-              "Operating pressure typically ≤ 1 × 10⁻⁵ mbar (some programs require ≤ 10⁻⁶ mbar)",
+              "Operating pressure typically ≤ 1 × 10⁻⁵ mbar (some programs require ≤ 10⁻⁶ mbar)",
               "Pump-down time compatible with test schedule constraints",
               "Leak rate within specification to maintain vacuum during long-duration tests",
               "Cleanliness requirements — particularly for optical or sensitive payloads (molecular and particulate contamination control)"

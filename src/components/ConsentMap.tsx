@@ -53,7 +53,7 @@ export function ConsentMap({ height = "h-44", mapUrl = DEFAULT_MAP_URL }: Consen
         <div className={height} style={{ filter: "invert(0.9) hue-rotate(180deg)" }}>
           <iframe src={mapUrl} width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Deepvac GmbH Location" />
         </div>
-        <button onClick={handleWithdraw} className="w-full text-center py-2 text-[10px] text-gray/40 hover:text-gray/60 transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring">
+        <button onClick={handleWithdraw} className="w-full text-center py-2 text-[13px] text-gray/80 hover:text-gray/85 transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring">
           {t("consent.withdrawConsent")}
         </button>
       </div>
@@ -63,15 +63,15 @@ export function ConsentMap({ height = "h-44", mapUrl = DEFAULT_MAP_URL }: Consen
   return (
     <div className={`${height} bg-surface flex flex-col items-center justify-center px-6 text-center`}>
       <MapPin className="w-5 h-5 text-blue mb-3" />
-      <p className="text-xs text-gray/70 mb-1.5">Deepvac GmbH · An der Universität 1 · 30823 Garbsen · Germany</p>
-      <button onClick={handleCopy} className="inline-flex items-center gap-1 text-[10px] text-gray/40 hover:text-gray/60 transition-colors mb-4 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring rounded-sm px-1">
+      <p className="text-card-meta mb-1.5">Deepvac GmbH · An der Universität 1 · 30823 Garbsen · Germany</p>
+      <button onClick={handleCopy} className="inline-flex items-center gap-1 text-[13px] text-gray/80 hover:text-gray/85 transition-colors mb-4 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring rounded-sm px-1">
         {copied ? <Check className="w-3 h-3" /> : <Copy className="w-3 h-3" />}
         {copied ? t("consent.copied") : t("consent.copyAddress")}
       </button>
       <h3 className="text-sm font-medium text-sand mb-1.5">{t("consent.mapTitle")}</h3>
-      <p className="text-[11px] text-gray/50 leading-relaxed max-w-sm mb-4">{t("consent.mapDescription")}</p>
+      <p className="text-[13px] text-gray/85 leading-relaxed max-w-sm mb-4">{t("consent.mapDescription")}</p>
       <Button size="sm" onClick={handleAccept} className="font-mono text-xs tracking-wide mb-2">{t("consent.acceptAndLoad")}</Button>
-      <Link to={localizedPath("/privacy-policy", lang)} className="text-[10px] text-blue/60 hover:text-blue transition-colors underline underline-offset-2 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring rounded-sm">
+      <Link to={localizedPath("/privacy-policy", lang)} className="text-[13px] text-blue/60 hover:text-blue transition-colors underline underline-offset-2 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring rounded-sm">
         {t("footer.privacyPolicy")}
       </Link>
     </div>

@@ -53,7 +53,7 @@ export function QuestionnaireCTA({
         </Link>
       </Button>
       {microcopy !== "none" && (
-        <p className="flex items-start gap-1.5 text-[11px] text-gray/60 leading-relaxed font-mono max-w-md">
+        <p className="flex items-start gap-1.5 text-[13px] text-gray/85 leading-relaxed font-mono max-w-md">
           {showClockIcon && <Clock className="w-3 h-3 mt-0.5 text-blue/60 shrink-0" />}
           <span>{t(`cta.questionnaire.${microcopy}`)}</span>
         </p>
@@ -84,14 +84,14 @@ export function QuestionnaireCard({ className }: { className?: string }) {
         </div>
         <div className="flex-1 space-y-3">
           <div className="space-y-2">
-            <p className="text-[10px] font-mono uppercase tracking-[0.18em] text-blue/80">
+            <p className="text-[13px] font-mono uppercase tracking-[0.18em] text-blue/80">
               {t("cta.questionnaire.specify")}
             </p>
-            <h2 className="text-xl md:text-2xl font-medium text-sand tracking-tight">
+            <h2 className="text-card-title-lg md:text-2xl">
               {t("cta.questionnaire.card.title")}
             </h2>
           </div>
-          <p className="text-sm text-gray leading-relaxed">{t("cta.questionnaire.card.text")}</p>
+          <p className="text-body">{t("cta.questionnaire.card.text")}</p>
           <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5 pt-1">
             <Button asChild size="lg" className="font-mono text-xs tracking-wide shrink-0">
               <Link to={to}>
@@ -100,7 +100,7 @@ export function QuestionnaireCard({ className }: { className?: string }) {
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </Button>
-            <p className="flex items-center gap-1.5 text-[11px] text-gray/60 font-mono">
+            <p className="flex items-center gap-1.5 text-[13px] text-gray/85 font-mono">
               <Clock className="w-3 h-3 text-blue/60" />
               <span>{t("cta.questionnaire.microcopyShort")}</span>
             </p>

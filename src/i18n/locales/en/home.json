@@ -1,23 +1,37 @@
 {
   "hero": {
-    "eyebrow": "THERMAL VACUUM SYSTEMS FOR AEROSPACE. ENGINEERED IN GERMANY.",
-    "title": "Modular & Custom Thermal Vacuum Systems\nEngineered in Germany for Aerospace Qualification.",
-    "description": "Deepvac engineers modular TVAC platforms, custom chamber systems, and control architecture — built in Germany for teams qualifying, integrating, or upgrading test infrastructure.",
+    "eyebrow": "ENGINEERED & BUILT IN GERMANY",
+    "title": "Modular & custom thermal vacuum systems for aerospace qualification.",
+    "description": "Deepvac engineers modular TVAC platforms, custom chamber systems, and control architecture for teams building, qualifying, or upgrading test infrastructure.",
     "cues": [
-      "MODULAR PLATFORMS",
-      "CUSTOM TVAC SYSTEMS",
       "CONTROL & AUTOMATION",
       "RETROFIT & SERVICE",
-      "TEST-AS-A-SERVICE"
+      "LONG-TERM SUPPORT"
     ],
     "source": "Source: NASA"
   },
   "trustBar": {
     "items": [
-      { "label": "Environment", "text": "Built for demanding aerospace and laboratory test environments" },
-      { "label": "Methodology", "text": "Designed for repeatable thermal vacuum workflows" },
-      { "label": "Configuration", "text": "Configured for geometry, interfaces, and test profiles" },
-      { "label": "Lifecycle", "text": "Supported through retrofit, service, and subsystem integration" }
+      {
+        "value": "Intelligence built in",
+        "label": "AI & analytics",
+        "detail": "Test analytics, anomaly detection & predictive maintenance — incl. Thermal Vision"
+      },
+      {
+        "value": "Any chamber, any vendor",
+        "label": "Retrofit & upgrades",
+        "detail": "Modernization of legacy & third-party systems — controls to vacuum subsystems"
+      },
+      {
+        "value": "One team, one contact",
+        "label": "Full lifecycle",
+        "detail": "The team that designs your system supports it — concept to operations"
+      },
+      {
+        "value": "Control built in-house",
+        "label": "Control & data",
+        "detail": "Own PLC, HMI & data acquisition — OPC UA, Modbus, remote access native"
+      }
     ]
   },
   "capabilities": {
@@ -67,13 +81,29 @@
       "title": "T Series TVAC",
       "subtitle": "Cubic Thermal Vacuum Chambers",
       "description": "Cubic thermal vacuum chambers for qualification, validation, and environmental simulation of aerospace hardware. The T Series provides a standardized chamber platform for controlled thermal vacuum testing across research, institutional, and commercial space applications.",
-      "overlays": ["Cubic Geometry", "Standard Series", "Thermal Vacuum Testing"],
+      "overlays": [
+        "Cubic Geometry",
+        "Standard Series",
+        "Thermal Vacuum Testing"
+      ],
       "cta": "View Platform",
       "specs": {
-        "geometry": { "label": "Geometry", "value": "Cubic" },
-        "volume": { "label": "Volume Range", "value": "65 to 2000 L" },
-        "pressure": { "label": "Ultimate Pressure", "value": "≤ 1 × 10⁻⁶ mbar" },
-        "temperature": { "label": "Temperature Range", "value": "-190 °C to +150 °C*" }
+        "geometry": {
+          "label": "Geometry",
+          "value": "Cubic"
+        },
+        "volume": {
+          "label": "Volume Range",
+          "value": "65 to 2000 L"
+        },
+        "pressure": {
+          "label": "Ultimate Pressure",
+          "value": "≤ 1 × 10⁻⁶ mbar"
+        },
+        "temperature": {
+          "label": "Temperature Range",
+          "value": "−190 °C to +150 °C*"
+        }
       },
       "note": "*Depending on the selected thermal concept, including direct LN₂ cooling, GN₂ circulation, or mechanical refrigeration."
     },
@@ -81,13 +111,29 @@
       "title": "C Series TVAC",
       "subtitle": "Cylindrical Thermal Vacuum Chambers",
       "description": "Cylindrical thermal vacuum chambers for qualification, validation, and environmental simulation of aerospace hardware. The C Series provides a standardized chamber platform for controlled thermal vacuum testing across research, institutional, and commercial space applications.",
-      "overlays": ["Cylindrical Geometry", "Standard Series", "Thermal Vacuum Testing"],
+      "overlays": [
+        "Cylindrical Geometry",
+        "Standard Series",
+        "Thermal Vacuum Testing"
+      ],
       "cta": "View Platform",
       "specs": {
-        "geometry": { "label": "Geometry", "value": "Cylindrical" },
-        "volume": { "label": "Volume Range", "value": "65 to 2000 L" },
-        "pressure": { "label": "Ultimate Pressure", "value": "≤ 1 × 10⁻⁶ mbar" },
-        "temperature": { "label": "Temperature Range", "value": "-190 °C to +150 °C*" }
+        "geometry": {
+          "label": "Geometry",
+          "value": "Cylindrical"
+        },
+        "volume": {
+          "label": "Volume Range",
+          "value": "65 to 2000 L"
+        },
+        "pressure": {
+          "label": "Ultimate Pressure",
+          "value": "≤ 1 × 10⁻⁶ mbar"
+        },
+        "temperature": {
+          "label": "Temperature Range",
+          "value": "−190 °C to +150 °C*"
+        }
       },
       "note": "*Depending on the selected thermal concept, including direct LN₂ cooling, GN₂ circulation, or mechanical refrigeration."
     },
@@ -95,13 +141,29 @@
       "title": "Custom TVAC",
       "subtitle": "Application-Specific Thermal Vacuum Systems",
       "description": "Custom thermal vacuum systems for applications beyond the standard series. These systems are developed for non-standard geometries, specific chamber volumes, extended temperature requirements, and additional subsystems tailored to dedicated test and qualification tasks.",
-      "overlays": ["Beyond Standard Series", "Custom Geometry", "Special TVAC Systems"],
+      "overlays": [
+        "Beyond Standard Series",
+        "Custom Geometry",
+        "Special TVAC Systems"
+      ],
       "cta": "Discuss Configuration",
       "specs": {
-        "scope": { "label": "Design Scope", "value": "Outside standard series" },
-        "volume": { "label": "Volume", "value": "Extended beyond standard range" },
-        "temperature": { "label": "Temperature", "value": "Extended beyond standard range" },
-        "features": { "label": "System Features", "value": "Project-specific subsystems" }
+        "scope": {
+          "label": "Design Scope",
+          "value": "Outside standard series"
+        },
+        "volume": {
+          "label": "Volume",
+          "value": "Extended beyond standard range"
+        },
+        "temperature": {
+          "label": "Temperature",
+          "value": "Extended beyond standard range"
+        },
+        "features": {
+          "label": "System Features",
+          "value": "Project-specific subsystems"
+        }
       },
       "note": "Custom systems can include dedicated interfaces, cryogenic shrouds, infrared heating, additional diagnostics, and other application-specific system extensions."
     }

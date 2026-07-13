@@ -23,15 +23,15 @@
         "sections": {
           "mechanical": {
             "title": "Mechanische Kühlung",
-            "content": "Mechanische Kühlsysteme nutzen kompressorbasierte Kreisläufe (typischerweise Kaskadensysteme für Temperaturen unter −40 °C), um Wärme vom Kammerschroud oder der Auflagefläche abzuführen.",
+            "content": "Mechanische Kühlsysteme nutzen kompressorbasierte Kreisläufe (typischerweise Kaskadensysteme für Temperaturen unter −40 °C), um Wärme vom Kammerschroud oder der Auflagefläche abzuführen.",
             "advantages": [
               "Kein Verbrauch von Kryogenen — geringere laufende Betriebskosten",
               "Dauerbetrieb ohne Versorgungslogistik",
-              "Gute Temperaturregelbarkeit im Bereich −70 °C bis +150 °C",
+              "Gute Temperaturregelbarkeit im Bereich −70 °C bis +150 °C",
               "Geringere Anforderungen an die Anlageninfrastruktur"
             ],
             "constraints": [
-              "Begrenzte Minimaltemperatur (typischerweise −70 °C bis −80 °C bei zweistufigen Systemen)",
+              "Begrenzte Minimaltemperatur (typischerweise −70 °C bis −80 °C bei zweistufigen Systemen)",
               "Langsamere Abkühlraten im Vergleich zu LN₂-Systemen",
               "Höhere anfängliche Ausrüstungskosten für Kaskadenkonfigurationen",
               "Kompressorwartung und eventuelle Erneuerung"
@@ -39,9 +39,9 @@
           },
           "ln2": {
             "title": "Flüssigstickstoff (LN₂) Kreisläufe",
-            "content": "LN₂-basierte Systeme zirkulieren Flüssigstickstoff durch Schroud- oder Platen-Kanäle und erreichen Temperaturen bis etwa −180 °C. Der Stickstoff wird typischerweise aus externen Dewargefäßen oder Großtanks zugeführt.",
+            "content": "LN₂-basierte Systeme zirkulieren Flüssigstickstoff durch Schroud- oder Platen-Kanäle und erreichen Temperaturen bis etwa −180 °C. Der Stickstoff wird typischerweise aus externen Dewargefäßen oder Großtanks zugeführt.",
             "advantages": [
-              "Erreicht sehr tiefe Temperaturen (bis −180 °C)",
+              "Erreicht sehr tiefe Temperaturen (bis −180 °C)",
               "Schnelle Abkühlraten",
               "Relativ einfache Systemarchitektur",
               "Geringere anfängliche Ausrüstungskosten im Vergleich zu mechanischen Systemen für Tiefkühlanforderungen"
@@ -151,8 +151,8 @@
             "title": "Thermische Anforderungen",
             "content": "Die Kammer muss spezifizierte thermische Bedingungen mit ausreichender Präzision erreichen und halten:",
             "points": [
-              "Temperaturbereich, der Qualifikationsextreme abdeckt — oft −65 °C bis +125 °C oder breiter je nach Anwendung",
-              "Temperaturgleichmäßigkeit über dem Prüfling — typischerweise ±3 °C bis ±5 °C je nach Prüflingsgröße",
+              "Temperaturbereich, der Qualifikationsextreme abdeckt — oft −65 °C bis +125 °C oder breiter je nach Anwendung",
+              "Temperaturgleichmäßigkeit über dem Prüfling — typischerweise ±3 °C bis ±5 °C je nach Prüflingsgröße",
               "Kontrollierte Übergangsraten zwischen Warm- und Kalt-Haltephasen",
               "Haltezeit-Stabilität — Halten des Sollwerts innerhalb der Toleranz für spezifizierte Dauern (oft 1–4 Stunden pro Haltephase)",
               "Anzahl der Thermalzyklen gemäß Qualifikationsspezifikation"
@@ -162,7 +162,7 @@
             "title": "Vakuumanforderungen",
             "content": "Die Vakuumumgebung muss repräsentativ für Orbitbedingungen sein und während der gesamten Prüfung aufrechterhalten werden:",
             "points": [
-              "Betriebsdruck typischerweise ≤ 1 × 10⁻⁵ mbar (einige Programme fordern ≤ 10⁻⁶ mbar)",
+              "Betriebsdruck typischerweise ≤ 1 × 10⁻⁵ mbar (einige Programme fordern ≤ 10⁻⁶ mbar)",
               "Abpumpzeit kompatibel mit Testterminbeschränkungen",
               "Leckrate innerhalb der Spezifikation zur Aufrechterhaltung des Vakuums bei Langzeittests",
               "Reinheitsanforderungen — besonders für optische oder empfindliche Nutzlasten (molekulare und partikuläre Kontaminationskontrolle)"

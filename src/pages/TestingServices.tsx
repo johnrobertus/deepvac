@@ -86,12 +86,12 @@ export const TestingServices = () => {
         <div className="container-wide pt-8">
           <nav
             aria-label="Breadcrumb"
-            className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-gray/70"
+            className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-gray"
           >
             <Link to={lp("/")} className="hover:text-sand transition-colors">
               {t("testing.breadcrumbHome")}
             </Link>
-            <ChevronRight className="h-3 w-3 text-gray/40" />
+            <ChevronRight className="h-3 w-3 text-gray/80" />
             <span className="text-sand">{t("testing.breadcrumbCurrent")}</span>
           </nav>
         </div>
@@ -110,7 +110,7 @@ export const TestingServices = () => {
             {tags.map((tag) => (
               <span
                 key={tag}
-                className="font-mono text-[11px] uppercase tracking-wider text-blue/90 border border-blue/25 bg-blue/5 rounded-sm px-2.5 py-1"
+                className="font-mono text-[13px] uppercase tracking-wider text-blue/90 border border-blue/25 bg-blue/5 rounded-sm px-2.5 py-1"
               >
                 {tag}
               </span>
@@ -121,7 +121,7 @@ export const TestingServices = () => {
             <Button asChild size="lg" className="font-mono text-xs tracking-wide w-full sm:w-auto">
               <Link to={lp("/contact")}>{t("testing.ctaPrimary")}</Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
+            <Button asChild variant="outline" size="lg" className="font-mono text-xs tracking-wide w-full sm:w-auto">
               <a href="#capabilities">{t("testing.ctaSecondary")}</a>
             </Button>
           </div>
@@ -135,10 +135,10 @@ export const TestingServices = () => {
                 eyebrow={t("testing.scopeSection.eyebrow")}
                 title={t("testing.scopeSection.title")}
               />
-              <p className="text-sm text-gray leading-relaxed">
+              <p className="text-body">
                 {t("testing.scopeSection.p1")}
               </p>
-              <p className="text-sm text-gray leading-relaxed">
+              <p className="text-body">
                 {t("testing.scopeSection.p2")}
               </p>
             </div>
@@ -176,14 +176,14 @@ export const TestingServices = () => {
                     <div className="flex h-8 w-8 items-center justify-center rounded-sm border border-blue/20 bg-blue/10 text-blue">
                       <Icon className="w-4 h-4" />
                     </div>
-                    <span className="font-mono text-[10px] uppercase tracking-wider text-gray/60">
+                    <span className="font-mono text-[13px] uppercase tracking-wider text-gray/85">
                       0{i + 1}
                     </span>
                   </div>
                   <h3 className="text-sm font-medium text-sand leading-snug">
                     {step.title}
                   </h3>
-                  <p className="text-xs text-gray/90 leading-relaxed">
+                  <p className="text-card-meta/90 leading-relaxed">
                     {step.description}
                   </p>
                 </div>
@@ -220,7 +220,7 @@ export const TestingServices = () => {
                       <h3 className="text-base font-medium text-sand leading-snug">
                         {item.title}
                       </h3>
-                      <p className="text-xs text-gray/90 leading-relaxed">
+                      <p className="text-card-meta/90 leading-relaxed">
                         {item.short}
                       </p>
                     </div>
@@ -228,16 +228,16 @@ export const TestingServices = () => {
 
                   <div className="space-y-3">
                     <div>
-                      <span className="mono-label text-blue text-[11px] uppercase tracking-wider">
+                      <span className="mono-label text-blue text-[13px] uppercase tracking-wider">
                         {t("testing.capabilities.equipmentLabel")}
                       </span>
-                      <p className="text-sm text-gray leading-relaxed mt-1">
+                      <p className="text-body mt-1">
                         {item.equipment}
                       </p>
                     </div>
 
                     <div>
-                      <span className="mono-label text-blue text-[11px] uppercase tracking-wider">
+                      <span className="mono-label text-blue text-[13px] uppercase tracking-wider">
                         {t("testing.capabilities.testsLabel")}
                       </span>
                       <ul className="mt-1.5 space-y-1">
@@ -255,7 +255,7 @@ export const TestingServices = () => {
                   </div>
 
                   <div className="pt-2 border-t border-gray/10">
-                    <span className="mono-label text-[11px] text-gray/70 uppercase tracking-wider">
+                    <span className="mono-label text-[13px] text-gray uppercase tracking-wider">
                       {t("testing.capabilities.categoryLabel")}
                     </span>
                     <p className="text-xs text-sand/80 leading-relaxed mt-1">
@@ -280,7 +280,7 @@ export const TestingServices = () => {
             {deliverables.map((d) => (
               <div key={d.title} className="bento-card rounded-lg p-6 space-y-3">
                 <h3 className="text-base font-medium text-sand">{d.title}</h3>
-                <p className="text-xs text-gray leading-relaxed">{d.description}</p>
+                <p className="text-card-meta">{d.description}</p>
               </div>
             ))}
           </div>
@@ -320,7 +320,7 @@ export const TestingServices = () => {
                 className="bento-card rounded-lg p-6 border-l-2 border-l-blue/60 space-y-3"
               >
                 <h3 className="text-base font-medium text-sand">{w.title}</h3>
-                <p className="text-xs text-gray leading-relaxed">{w.description}</p>
+                <p className="text-card-meta">{w.description}</p>
               </div>
             ))}
           </div>
@@ -340,7 +340,7 @@ export const TestingServices = () => {
                 className="bento-card rounded-lg p-6 border-l-2 border-l-blue/60 space-y-3 flex flex-col"
               >
                 <h3 className="text-base font-medium text-sand">{link.label}</h3>
-                <p className="text-xs text-gray leading-relaxed flex-1">
+                <p className="text-card-meta flex-1">
                   {link.description}
                 </p>
                 <Button asChild variant="tertiary" className="self-start">

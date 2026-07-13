@@ -118,13 +118,35 @@
 
   h1, h2, h3, h4, h5, h6 {
     text-wrap: balance;
-    letter-spacing: -0.04em;
+    letter-spacing: -0.01em;
+    hyphens: none;
+    -webkit-hyphens: none;
     @apply font-medium text-sand;
   }
+  /* Tight display tracking only applies to large sizes (>= ~2rem). */
+  h1 { letter-spacing: -0.04em; }
+  h2 { letter-spacing: -0.03em; }
 
   p {
     text-wrap: pretty;
     line-height: 1.7;
+  }
+
+  /* German hyphenation only — html[lang] already syncs per language. */
+  :lang(de) p,
+  :lang(de) .text-body,
+  :lang(de) .text-body-lg,
+  :lang(de) .text-card-body,
+  :lang(de) [data-radix-accordion-content] {
+    hyphens: auto;
+    -webkit-hyphens: auto;
+  }
+
+  /* Buttons, labels, mono, and interactive controls never hyphenate */
+  button, [role="button"], label, .font-mono,
+  .mono-label, .mono-value {
+    hyphens: none;
+    -webkit-hyphens: none;
   }
 
   ::selection {
@@ -197,20 +219,31 @@
   }
   .text-card-title {
     @apply text-lg font-medium leading-snug text-sand;
+    letter-spacing: -0.01em;
   }
   .text-card-title-lg {
     @apply text-xl font-medium leading-snug text-sand;
+    letter-spacing: -0.01em;
   }
   .text-card-body {
-    @apply text-[16px] leading-relaxed text-sand/80 md:text-[17px];
+    @apply text-[15px] leading-relaxed text-sand/85 md:text-[16px];
+    max-width: 65ch;
+  }
+  /* Smallest allowed text — labels, microcopy, meta rows */
+  .text-card-meta {
+    @apply font-mono text-[13px] leading-normal tracking-[0.02em] text-gray;
+    hyphens: none;
+    -webkit-hyphens: none;
   }
 
   /* Body / prose scale for blocks of copy inside sections */
   .text-body {
     @apply text-[16px] leading-relaxed text-sand/85 md:text-[17px];
+    max-width: 65ch;
   }
   .text-body-lg {
     @apply text-[17px] leading-relaxed text-sand/90 md:text-[18px];
+    max-width: 65ch;
   }
 
 

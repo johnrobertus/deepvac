@@ -8,21 +8,33 @@
       "subtitle": "Pre-Engineered TVAC Platforms",
       "description": "Modular thermal vacuum chamber systems with proven architectures, standardised interfaces, and repeatable performance for established test requirements. Available in cubic (T Series) and cylindrical (C Series) configurations.",
       "cta": "Explore Standard Series",
-      "chips": ["Modular Design", "Proven Architecture", "Standardised Interfaces"]
+      "chips": [
+        "Modular Design",
+        "Proven Architecture",
+        "Standardised Interfaces"
+      ]
     },
     "customTvac": {
       "title": "Custom TVAC",
       "subtitle": "Application-Specific Chamber Engineering",
       "description": "Fully bespoke thermal vacuum systems configured around mission-specific geometries, feedthrough requirements, thermal profiles, instrumentation needs, and integration constraints. Engineered from concept through commissioning.",
       "cta": "Discuss a Custom Configuration",
-      "chips": ["Custom Geometry", "Interface Engineering", "Full Integration"]
+      "chips": [
+        "Custom Geometry",
+        "Interface Engineering",
+        "Full Integration"
+      ]
     },
     "thermalVision": {
       "title": "Deepvac Thermal Vision",
       "subtitle": "In-Situ Thermal Monitoring Subsystem",
       "description": "Pressure-rated infrared camera system for real-time thermal surface mapping inside thermal vacuum chambers. Designed for integration into new and existing TVAC infrastructure.",
       "cta": "Explore Thermal Vision",
-      "chips": ["IR Camera System", "Pressure-Rated", "TVAC Integration"]
+      "chips": [
+        "IR Camera System",
+        "Pressure-Rated",
+        "TVAC Integration"
+      ]
     },
     "configGuide": {
       "eyebrow": "Configuration Guide",
@@ -193,6 +205,27 @@
     "cta": {
       "title": "Discuss Your Test Requirements",
       "description": "Contact Deepvac to identify the right Standard Series configuration for your application."
+    },
+    "badges": {
+      "tSeries": "T Series",
+      "cSeries": "C Series"
+    },
+    "techChips": {
+      "architecture": {
+        "label": "Architecture",
+        "value": "Modular"
+      },
+      "vacuum": {
+        "label": "Vacuum"
+      },
+      "minTemp": {
+        "label": "Min Temp"
+      }
+    },
+    "alt": {
+      "tSeries": "Deepvac T Series cubic thermal vacuum chamber",
+      "cSeries": "Deepvac C Series cylindrical thermal vacuum chamber",
+      "brochureCover": "Deepvac Standard Series Catalogue"
     }
   },
   "customTvac": {

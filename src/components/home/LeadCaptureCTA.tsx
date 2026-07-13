@@ -19,8 +19,8 @@ export function LeadCaptureCTA() {
         <Reveal>
           <div className="space-y-5">
             <span className="mono-label text-blue">{t("home:leadCapture.eyebrow")}</span>
-            <h2 className="mt-3 text-3xl font-medium tracking-tight text-sand md:text-4xl">{t("home:leadCapture.title")}</h2>
-            <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-gray">{t("home:leadCapture.description")}</p>
+            <h2 className="mt-3 text-section-title">{t("home:leadCapture.title")}</h2>
+            <p className="mx-auto mt-4 max-w-2xl text-body">{t("home:leadCapture.description")}</p>
             <div className="flex flex-wrap justify-center gap-4 pt-4">
               <Button asChild size="lg" className="font-mono text-xs tracking-wide">
                 <Link to={contactPath}>{t("common:buttons.requestConsultation")}</Link>
@@ -32,7 +32,7 @@ export function LeadCaptureCTA() {
                 </Link>
               </Button>
             </div>
-            <p className="flex items-center justify-center gap-1.5 text-[11px] text-gray/60 font-mono pt-1">
+            <p className="flex items-center justify-center gap-1.5 text-[13px] text-gray/85 font-mono pt-1">
               <Clock className="w-3 h-3 text-blue/60" />
               <span>{t("common:cta.questionnaire.microcopyShort")}</span>
             </p>

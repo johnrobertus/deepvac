@@ -26,12 +26,12 @@ export function PageHero({ eyebrow, title, description, children, className }: P
   return (
     <section className={cn("py-20 md:py-32 px-6", className)}>
       <div className="container max-w-5xl space-y-6">
-        {eyebrow && <span className="mono-label text-blue">{eyebrow}</span>}
+        {eyebrow && <span className="text-section-eyebrow">{eyebrow}</span>}
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-sand">
           {title}
         </h1>
         {description && (
-          <p className="text-lg text-gray max-w-2xl leading-relaxed">{description}</p>
+          <p className="text-body-lg text-sand/90">{description}</p>
         )}
         {children}
       </div>
@@ -57,7 +57,7 @@ export function TrustBar({ items }: { items: string[] }) {
     <div className="border-y border-gray/20 py-8">
       <div className="container-wide flex flex-wrap items-center justify-center gap-8 md:gap-16">
         {items.map((item) => (
-          <span key={item} className="mono-label text-gray/80">{item}</span>
+          <span key={item} className="mono-label text-gray">{item}</span>
         ))}
       </div>
     </div>
@@ -76,11 +76,9 @@ export function CTABand({
   return (
     <section className="relative py-16 md:py-24 px-6 bg-surface border-t border-blue/20">
       <div className="container max-w-4xl text-center space-y-6">
-        <h2 className="text-3xl md:text-4xl font-medium tracking-tight text-sand">
-          {title}
-        </h2>
+        <h2 className="text-section-title">{title}</h2>
         {description && (
-          <p className="text-gray text-base max-w-xl mx-auto leading-relaxed">{description}</p>
+          <p className="text-section-lead mx-auto">{description}</p>
         )}
         {children && <div className="pt-4 flex flex-col sm:flex-row flex-wrap justify-center gap-4">{children}</div>}
       </div>

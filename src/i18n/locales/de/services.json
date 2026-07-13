@@ -227,7 +227,7 @@
     "scenarios": ["Custom-Kammerentwicklungsprojekte", "Vorrichtungsdesign für spezifische Prüflinge", "Kammermodifikationen und -erweiterungen", "Durchführungs- und Port-Engineering", "Strukturbewertung bestehender Kammern", "Mechanische Konstruktion von Thermalshrouds"],
     "crossLinks": [
       { "label": "Custom-TVAC-Systeme", "href": "/products/custom-tvac", "description": "Vollständiges Custom-Kammer-Engineering einschließlich mechanischer Konstruktion." },
-      { "label": "Standard Serie", "href": "/products/standard-series", "description": "Standardplattformen mit bewährten mechanischen Architekturen." },
+      { "label": "Standard-Serie", "href": "/products/standard-series", "description": "Standardplattformen mit bewährten mechanischen Architekturen." },
       { "label": "Subsystem-Integration", "href": "/services/subsystem-integration", "description": "Mechanische Integration in breitere Subsystem-Baugruppen." },
       { "label": "Wartung & Reparatur", "href": "/services/maintenance-repair", "description": "Mechanische Reparatur- und Komponententausch-Leistungen." }
     ],
@@ -249,7 +249,7 @@
     "crossLinks": [
       { "label": "Steuerungstechnik", "href": "/services/control-systems-design", "description": "Neue Steuerungsarchitekturen für modernisierte Kammersysteme." },
       { "label": "Wartung & Reparatur", "href": "/services/maintenance-repair", "description": "Laufende Wartung zur Aufrechterhaltung der modernisierten Systemleistung." },
-      { "label": "Standard Serie", "href": "/products/standard-series", "description": "Wenn ein Austausch durch eine neue Plattform effektiver ist als Retrofit." },
+      { "label": "Standard-Serie", "href": "/products/standard-series", "description": "Wenn ein Austausch durch eine neue Plattform effektiver ist als Retrofit." },
       { "label": "Subsystem-Integration", "href": "/services/subsystem-integration", "description": "Integration von aufgerüsteten Subsystemen in bestehende Infrastruktur." }
     ],
     "ctaTitle": "Lassen Sie Ihr System für Modernisierung bewerten",
@@ -271,7 +271,7 @@
       { "label": "Retrofit & Modernisierung", "href": "/services/retrofit-modernization", "description": "Wenn Wartung den Bedarf an systemweiten Upgrades aufdeckt." },
       { "label": "Steuerungstechnik", "href": "/services/control-systems-design", "description": "Steuerungssystem-Fehlersuche und -Austauschunterstützung." },
       { "label": "Subsystem-Integration", "href": "/services/subsystem-integration", "description": "Austausch oder Upgrade integrierter Subsystemkomponenten." },
-      { "label": "Standard Serie", "href": "/products/standard-series", "description": "Wartungsprogramme für Deepvac Standard-Serie-Plattformen." }
+      { "label": "Standard-Serie", "href": "/products/standard-series", "description": "Wartungsprogramme für Deepvac Standard-Serie-Plattformen." }
     ],
     "ctaTitle": "Wartung planen oder Störung melden",
     "ctaDescription": "Kontaktieren Sie Deepvac zur Vereinbarung vorbeugender Wartung oder für technischen Support für Ihr Thermovakuumsystem."

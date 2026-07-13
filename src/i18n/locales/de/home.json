@@ -1,17 +1,37 @@
 {
   "hero": {
-    "eyebrow": "THERMALVAKUUMSYSTEME FÜR DIE RAUMFAHRT. ENTWICKELT IN DEUTSCHLAND.",
-    "title": "Modulare & Kundenspezifische Thermovakuumsysteme\nEntwickelt in Deutschland für die Raumfahrtqualifikation.",
-    "description": "Deepvac entwickelt modulare TVAC-Plattformen, kundenspezifische Kammersysteme und Steuerungsarchitekturen – entwickelt in Deutschland für Teams, die Testinfrastruktur qualifizieren, integrieren oder modernisieren.",
-    "cues": ["MODULARE PLATTFORMEN", "CUSTOM-TVAC-SYSTEME", "STEUERUNG & AUTOMATISIERUNG", "RETROFIT & SERVICE", "TEST-AS-A-SERVICE"],
+    "eyebrow": "ENTWICKELT & GEFERTIGT IN DEUTSCHLAND",
+    "title": "Modulare & kundenspezifische Thermovakuumsysteme für die Raumfahrtqualifikation.",
+    "description": "Deepvac entwickelt modulare TVAC-Plattformen, kundenspezifische Kammersysteme und Steuerungsarchitekturen für Teams, die Testinfrastruktur aufbauen, qualifizieren oder modernisieren.",
+    "cues": [
+      "STEUERUNG & AUTOMATISIERUNG",
+      "RETROFIT & SERVICE",
+      "LONG-TERM SUPPORT"
+    ],
     "source": "Quelle: NASA"
   },
   "trustBar": {
     "items": [
-      { "label": "Umgebung", "text": "Konzipiert für anspruchsvolle Raumfahrt- und Laborumgebungen" },
-      { "label": "Methodik", "text": "Ausgelegt für reproduzierbare Thermovakuum-Workflows" },
-      { "label": "Konfiguration", "text": "Konfigurierbar für Geometrie, Schnittstellen und Testprofile" },
-      { "label": "Lebenszyklus", "text": "Unterstützt durch Retrofit, Service und Subsystem-Integration" }
+      {
+        "value": "Intelligenz eingebaut",
+        "label": "KI & Analytik",
+        "detail": "Testanalytik, Anomalie-Erkennung & Predictive Maintenance — inkl. Thermal Vision"
+      },
+      {
+        "value": "Jede Kammer, jeder Hersteller",
+        "label": "Retrofit & Upgrades",
+        "detail": "Modernisierung von Bestands- & Fremdanlagen — von Steuerung bis Vakuumtechnik"
+      },
+      {
+        "value": "Ein Team, ein Ansprechpartner",
+        "label": "Full Lifecycle",
+        "detail": "Wer Ihr System entwickelt, betreut es — vom Konzept bis in den Betrieb"
+      },
+      {
+        "value": "Steuerung aus eigener Hand",
+        "label": "Steuerung & Daten",
+        "detail": "Eigene SPS, HMI & Datenerfassung — OPC UA, Modbus, Fernzugriff nativ"
+      }
     ]
   },
   "capabilities": {
@@ -58,44 +78,92 @@
     "title": "Kammerplattformen",
     "description": "Standardisierte und kundenspezifisch entwickelte Thermovakuumsysteme für die Qualifikations- und Verifikationsprüfung von Raumfahrthardware unter kontrollierten Hochvakuum- und Thermalbedingungen.",
     "tSeries": {
-      "title": "T Serie TVAC",
+      "title": "T-Serie TVAC",
       "subtitle": "Kubische Thermovakuumkammern",
-      "description": "Kubische Thermovakuumkammern für die Qualifikation, Validierung und Umweltsimulation von Raumfahrthardware. Die T Serie bietet eine standardisierte Kammerplattform für kontrollierte Thermovakuumtests in Forschung, institutionellen und kommerziellen Raumfahrtanwendungen.",
-      "overlays": ["Kubische Geometrie", "Standard Serie", "Thermovakuumprüfung"],
+      "description": "Kubische Thermovakuumkammern für die Qualifikation, Validierung und Umweltsimulation von Raumfahrthardware. Die T-Serie bietet eine standardisierte Kammerplattform für kontrollierte Thermovakuumtests in Forschung, institutionellen und kommerziellen Raumfahrtanwendungen.",
+      "overlays": [
+        "Kubische Geometrie",
+        "Standard-Serie",
+        "Thermovakuumprüfung"
+      ],
       "cta": "Plattform ansehen",
       "specs": {
-        "geometry": { "label": "Geometrie", "value": "Kubisch" },
-        "volume": { "label": "Volumenbereich", "value": "65 bis 2000 L" },
-        "pressure": { "label": "Enddruck", "value": "≤ 1 × 10⁻⁶ mbar" },
-        "temperature": { "label": "Temperaturbereich", "value": "-190 °C bis +150 °C*" }
+        "geometry": {
+          "label": "Geometrie",
+          "value": "Kubisch"
+        },
+        "volume": {
+          "label": "Volumenbereich",
+          "value": "65 bis 2000 L"
+        },
+        "pressure": {
+          "label": "Enddruck",
+          "value": "≤ 1 × 10⁻⁶ mbar"
+        },
+        "temperature": {
+          "label": "Temperaturbereich",
+          "value": "−190 °C bis +150 °C*"
+        }
       },
       "note": "*Abhängig vom gewählten Thermalkonzept, einschließlich direkter LN₂-Kühlung, GN₂-Umwälzung oder mechanischer Kühlung."
     },
     "cSeries": {
-      "title": "C Serie TVAC",
+      "title": "C-Serie TVAC",
       "subtitle": "Zylindrische Thermovakuumkammern",
-      "description": "Zylindrische Thermovakuumkammern für die Qualifikation, Validierung und Umweltsimulation von Raumfahrthardware. Die C Serie bietet eine standardisierte Kammerplattform für kontrollierte Thermovakuumtests in Forschung, institutionellen und kommerziellen Raumfahrtanwendungen.",
-      "overlays": ["Zylindrische Geometrie", "Standard Serie", "Thermovakuumprüfung"],
+      "description": "Zylindrische Thermovakuumkammern für die Qualifikation, Validierung und Umweltsimulation von Raumfahrthardware. Die C-Serie bietet eine standardisierte Kammerplattform für kontrollierte Thermovakuumtests in Forschung, institutionellen und kommerziellen Raumfahrtanwendungen.",
+      "overlays": [
+        "Zylindrische Geometrie",
+        "Standard-Serie",
+        "Thermovakuumprüfung"
+      ],
       "cta": "Plattform ansehen",
       "specs": {
-        "geometry": { "label": "Geometrie", "value": "Zylindrisch" },
-        "volume": { "label": "Volumenbereich", "value": "65 bis 2000 L" },
-        "pressure": { "label": "Enddruck", "value": "≤ 1 × 10⁻⁶ mbar" },
-        "temperature": { "label": "Temperaturbereich", "value": "-190 °C bis +150 °C*" }
+        "geometry": {
+          "label": "Geometrie",
+          "value": "Zylindrisch"
+        },
+        "volume": {
+          "label": "Volumenbereich",
+          "value": "65 bis 2000 L"
+        },
+        "pressure": {
+          "label": "Enddruck",
+          "value": "≤ 1 × 10⁻⁶ mbar"
+        },
+        "temperature": {
+          "label": "Temperaturbereich",
+          "value": "−190 °C bis +150 °C*"
+        }
       },
       "note": "*Abhängig vom gewählten Thermalkonzept, einschließlich direkter LN₂-Kühlung, GN₂-Umwälzung oder mechanischer Kühlung."
     },
     "custom": {
       "title": "Custom TVAC",
       "subtitle": "Anwendungsspezifische Thermovakuumsysteme",
-      "description": "Kundenspezifische Thermovakuumsysteme für Anwendungen außerhalb der Standard Serie. Diese Systeme werden für nicht-standardmäßige Geometrien, spezifische Kammervolumina, erweiterte Temperaturanforderungen und zusätzliche Subsysteme entwickelt.",
-      "overlays": ["Über die Standard Serie hinaus", "Custom-Geometrie", "Spezielle TVAC-Systeme"],
+      "description": "Kundenspezifische Thermovakuumsysteme für Anwendungen außerhalb der Standard-Serie. Diese Systeme werden für nicht-standardmäßige Geometrien, spezifische Kammervolumina, erweiterte Temperaturanforderungen und zusätzliche Subsysteme entwickelt.",
+      "overlays": [
+        "Über die Standard-Serie hinaus",
+        "Custom-Geometrie",
+        "Spezielle TVAC-Systeme"
+      ],
       "cta": "Konfiguration besprechen",
       "specs": {
-        "scope": { "label": "Auslegungsumfang", "value": "Außerhalb der Standard Serie" },
-        "volume": { "label": "Volumen", "value": "Über den Standardbereich hinaus" },
-        "temperature": { "label": "Temperatur", "value": "Über den Standardbereich hinaus" },
-        "features": { "label": "Systemmerkmale", "value": "Projektspezifische Subsysteme" }
+        "scope": {
+          "label": "Auslegungsumfang",
+          "value": "Außerhalb der Standard-Serie"
+        },
+        "volume": {
+          "label": "Volumen",
+          "value": "Über den Standardbereich hinaus"
+        },
+        "temperature": {
+          "label": "Temperatur",
+          "value": "Über den Standardbereich hinaus"
+        },
+        "features": {
+          "label": "Systemmerkmale",
+          "value": "Projektspezifische Subsysteme"
+        }
       },
       "note": "Custom-Systeme können dedizierte Schnittstellen, kryogene Shrouds, Infrarotheizungen, zusätzliche Diagnostik und weitere anwendungsspezifische Systemerweiterungen umfassen."
     }

@@ -59,7 +59,7 @@ const References = () => {
                     <Icon className="w-5 h-5 text-blue" />
                   </div>
                   <h3 className="text-base font-medium text-sand">{area.title}</h3>
-                  <p className="text-sm text-gray leading-relaxed">{area.description}</p>
+                  <p className="text-body">{area.description}</p>
                 </div>
               );
             })}

@@ -66,7 +66,7 @@ const Resources = () => {
                 >
                   <Icon className="w-8 h-8 text-blue" />
                   <h2 className="text-xl font-medium text-sand">{res.title}</h2>
-                  <p className="text-sm text-gray leading-relaxed flex-1">{res.description}</p>
+                  <p className="text-body flex-1">{res.description}</p>
                   <span className="inline-flex items-center gap-1.5 text-sm text-blue group-hover:gap-2.5 transition-all">
                     {t("buttons.learnMore")}
                     <ArrowRight className="w-4 h-4" />

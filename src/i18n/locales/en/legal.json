@@ -195,9 +195,10 @@
         "title": "Prices, Taxes, and Payment",
         "c1": "9.1 Prices are net prices plus applicable VAT and any other applicable taxes, duties, customs, or fees unless expressly included.",
         "c2": "9.2 Unless otherwise agreed, invoices are payable within fourteen calendar days from the invoice date without deduction.",
-        "c3": "9.3 Deepvac may require advance payment, milestone payments, or security, especially for custom developments, prototypes, or high-value Orders.",
-        "c4": "9.4 The Customer may set off only undisputed or finally adjudicated claims. Rights of retention apply only to claims arising from the same Contract.",
-        "c5": "9.5 In case of late payment, statutory default interest under German law applies. Deepvac may charge reasonable reminder and collection costs as permitted by law."
+        "c3": "9.3 Unless otherwise agreed in text form, payments are due as follows: 70 percent of the order value upon order confirmation and 30 percent upon delivery.",
+        "c4": "9.4 Deepvac may require advance payment, milestone payments, or security, especially for custom developments, prototypes, or high-value Orders.",
+        "c5": "9.5 The Customer may set off only undisputed or finally adjudicated claims. Rights of retention apply only to claims arising from the same Contract.",
+        "c6": "9.6 In case of late payment, statutory default interest under German law applies. Deepvac may charge reasonable reminder and collection costs as permitted by law."
       },
       "10": {
         "title": "Delivery, Deadlines, and Force Majeure",
