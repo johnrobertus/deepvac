@@ -15,22 +15,22 @@
       {
         "value": "Standard to custom",
         "label": "System scope",
-        "detail": "Series platforms & application-specific systems"
+        "detail": "T & C series 65–2,000 L · −190 °C to +150 °C · high vacuum ≤ 1 × 10⁻⁶ mbar"
       },
       {
-        "value": "Retrofit & upgrades",
-        "label": "Vendor-independent",
-        "detail": "Modernization of third-party & legacy systems"
+        "value": "Any chamber, any vendor",
+        "label": "Retrofit & upgrades",
+        "detail": "Modernization of legacy & third-party systems — controls to vacuum subsystems"
       },
       {
-        "value": "Concept → support",
+        "value": "Engineers, not account managers",
         "label": "Full lifecycle",
-        "detail": "One partner from design to operations"
+        "detail": "The team that designs your system supports it — concept to operations"
       },
       {
-        "value": "PLC · Modbus · OPC UA",
+        "value": "Control built in-house",
         "label": "Control & data",
-        "detail": "Automation, data acquisition, remote access"
+        "detail": "Own PLC, HMI & data acquisition — OPC UA, Modbus, remote access native"
       }
     ]
   },
