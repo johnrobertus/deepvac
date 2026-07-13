@@ -195,9 +195,10 @@
         "title": "Preise, Steuern und Zahlung",
         "c1": "9.1 Preise verstehen sich netto zuzüglich gesetzlicher Umsatzsteuer sowie sonstiger anwendbarer Steuern, Abgaben, Zölle oder Gebühren, sofern nicht ausdrücklich eingeschlossen.",
         "c2": "9.2 Soweit nicht anders vereinbart, sind Rechnungen innerhalb von vierzehn Kalendertagen ab Rechnungsdatum ohne Abzug zahlbar.",
-        "c3": "9.3 Deepvac kann Vorauszahlungen, Meilensteinzahlungen oder Sicherheiten verlangen, insbesondere bei kundenspezifischen Entwicklungen, Prototypen oder Aufträgen mit hohem Wert.",
-        "c4": "9.4 Der Kunde darf nur mit unbestrittenen oder rechtskräftig festgestellten Forderungen aufrechnen. Zurückbehaltungsrechte bestehen nur wegen Ansprüchen aus demselben Vertrag.",
-        "c5": "9.5 Bei Zahlungsverzug gelten die gesetzlichen Verzugszinsen nach deutschem Recht. Deepvac kann angemessene Mahn- und Inkassokosten im gesetzlich zulässigen Umfang berechnen."
+        "c3": "9.3 Soweit nicht abweichend in Textform vereinbart, sind Zahlungen wie folgt fällig: 70 % des Auftragswertes bei Auftragsbestätigung und 30 % bei Lieferung.",
+        "c4": "9.4 Deepvac kann Vorauszahlungen, Meilensteinzahlungen oder Sicherheiten verlangen, insbesondere bei kundenspezifischen Entwicklungen, Prototypen oder Aufträgen mit hohem Wert.",
+        "c5": "9.5 Der Kunde darf nur mit unbestrittenen oder rechtskräftig festgestellten Forderungen aufrechnen. Zurückbehaltungsrechte bestehen nur wegen Ansprüchen aus demselben Vertrag.",
+        "c6": "9.6 Bei Zahlungsverzug gelten die gesetzlichen Verzugszinsen nach deutschem Recht. Deepvac kann angemessene Mahn- und Inkassokosten im gesetzlich zulässigen Umfang berechnen."
       },
       "10": {
         "title": "Lieferung, Fristen und höhere Gewalt",

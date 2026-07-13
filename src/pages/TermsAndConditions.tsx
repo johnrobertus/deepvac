@@ -77,7 +77,7 @@ export default function TermsAndConditions() {
             <SimpleSection n="6" t={t} keys={["c1","c2","c3","c4"]} />
             <SimpleSection n="7" t={t} keys={["c1","c2","c3"]} />
             <SimpleSection n="8" t={t} keys={["c1","c2","c3","c4"]} />
-            <SimpleSection n="9" t={t} keys={["c1","c2","c3","c4","c5"]} />
+            <SimpleSection n="9" t={t} keys={["c1","c2","c3","c4","c5","c6"]} />
 
             <LS n="10" title={t("terms.sections.10.title")}>
               <p>{t("terms.sections.10.c1")}</p>
