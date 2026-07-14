@@ -24,7 +24,7 @@
   "sections": {
     "contact": "Contact details",
     "interestTitle": "What are you interested in?",
-    "interestHelper": "Select one or more areas so we can route your request correctly.",
+    "interestHelper": "Optional — helps us route your inquiry directly to the right engineer.",
     "interestProducts": "Products",
     "interestServices": "Services",
     "interestOther": "Other",
