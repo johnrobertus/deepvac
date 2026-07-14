@@ -148,13 +148,10 @@ const Contact = () => {
 
   const toggleInterest = (label: string) => {
     setInterests((prev) => prev.includes(label) ? prev.filter((i) => i !== label) : [...prev, label]);
-    if (validationErrors.interests) {
-      setValidationErrors((prev) => { const next = { ...prev }; delete next.interests; return next; });
-    }
   };
 
   const validateForm = (): boolean => {
-    const errors: Partial<Record<keyof FormData | "interests", string>> = {};
+    const errors: Partial<Record<keyof FormData, string>> = {};
     if (!form.firstName.trim()) errors.firstName = tc("form.validation.firstNameRequired");
     if (!form.lastName.trim()) errors.lastName = tc("form.validation.lastNameRequired");
     if (!form.email.trim()) {
@@ -163,7 +160,6 @@ const Contact = () => {
       errors.email = tc("form.validation.emailInvalid");
     }
     if (!form.company.trim()) errors.company = tc("form.validation.companyRequired");
-    if (interests.length === 0) errors.interests = t("validationNew.interestRequired");
     if (form.message.trim().length < 10) errors.message = t("validationNew.messageRequired");
     setValidationErrors(errors);
     return Object.keys(errors).length === 0;
