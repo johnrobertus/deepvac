@@ -119,7 +119,7 @@
   "terms": {
     "eyebrow": "Rechtliches",
     "title": "Allgemeine Geschäftsbedingungen",
-    "effectiveDate": "Gültig ab: 01.04.2026",
+    "effectiveDate": "Gültig ab: 14.07.2026",
     "partA": "Teil A — Allgemeine Bestimmungen",
     "partB": "Teil B — Leistung und Durchführung",
     "partC": "Teil C — Abnahme und Inbetriebnahme",
@@ -210,7 +210,7 @@
       },
       "11": {
         "title": "Versand, Gefahrübergang und Verpackung",
-        "c1": "11.1 Soweit nicht anders vereinbart, erfolgt die Lieferung EXW Geschäftsadresse von Deepvac (Incoterms 2020). Die Gefahr geht mit Bereitstellung zur Abholung oder Übergabe an den Frachtführer über, je nachdem, was zuerst eintritt.",
+        "c1": "11.1 Soweit nicht anders vereinbart, erfolgt die Lieferung EXW Geschäftsadresse von Deepvac (Incoterms 2020). Die Gefahr geht mit Bereitstellung zur Abholung oder Übergabe an den Frachtführer über, je nachdem, was zuerst eintritt. Vereinbaren die Parteien in Textform eine andere Klausel der Incoterms 2020, richten sich Lieferung, Gefahrübergang und die Verteilung transportbezogener Kosten nach der vereinbarten Klausel."
         "c2": "11.2 Der Kunde trägt Transport-, Versicherungs-, Zoll-, Export- und Importkosten, soweit nicht anders vereinbart.",
         "c3": "11.3 Verpackung wird zu Selbstkosten berechnet, soweit nicht anders vereinbart. Rücknahmefähige Verpackungen werden nur nach vorheriger Vereinbarung in Textform angenommen."
       },
@@ -219,7 +219,7 @@
         "c1": "12.1 Ist eine Abnahme vereinbart oder gesetzlich erforderlich, sind Abnahmekriterien und -verfahren vor Leistungsbeginn in Textform festzulegen.",
         "c2": "12.2 Ist eine Werksabnahmeprüfung (FAT) vereinbart, teilt Deepvac dem Kunden die Bereitschaft der Liefergegenstände zur FAT mit. Der Kunde hat innerhalb des vereinbarten Zeitrahmens, ersatzweise innerhalb von vierzehn Kalendertagen nach Mitteilung, an der FAT teilzunehmen.",
         "c3": "12.3 Ist eine Standortabnahmeprüfung (SAT) vereinbart, hat der Kunde sicherzustellen, dass der Aufstellungsort, Versorgungsanschlüsse, Infrastruktur und alle im Vertrag genannten Voraussetzungen vor dem vereinbarten SAT-Termin bereit und verfügbar sind. Verzögerungen durch unvollständige Standortbereitschaft gehen zu Lasten und auf Risiko des Kunden.",
-        "c4": "12.4 Umfasst der Leistungsumfang die Inbetriebnahme, führt Deepvac diese nach dem vereinbarten Verfahren durch. Die Inbetriebnahme ist abgeschlossen, wenn das System innerhalb der vereinbarten Parameter arbeitet.",
+        "c4": "12.4 Umfasst der Leistungsumfang die Inbetriebnahme, führt Deepvac diese nach dem vereinbarten Verfahren durch. Die Inbetriebnahme ist abgeschlossen, wenn das System innerhalb der vereinbarten Parameter arbeitet. Der Abschluss der Inbetriebnahme wird in Textform dokumentiert (Inbetriebnahmeprotokoll)."
         "c5intro": "12.5 Ist kein Abnahmeverfahren ausdrücklich vereinbart, gilt die Abnahme als erfolgt, wenn Deepvac dem Kunden in Textform mitgeteilt hat, dass die Liefergegenstände abnahmebereit sind, und in dieser Mitteilung auf den Abnahmemechanismus nach dieser Ziffer hingewiesen hat, und sodann:",
         "c5a": "der Kunde die Abnahme in Textform bestätigt, oder",
         "c5b": "der Kunde die Liefergegenstände produktiv nutzt, oder",
@@ -310,7 +310,7 @@
         "title": "Gewährleistung und Mängelansprüche",
         "c1": "20.1 Der Kunde hat Liefergegenstände unverzüglich nach Lieferung zu untersuchen, soweit dies im ordnungsgemäßen Geschäftsgang tunlich ist. Soweit § 377 HGB Anwendung findet, hat der Kunde die Liefergegenstände nach Maßgabe dieser Vorschrift zu untersuchen und Mängel anzuzeigen. In allen anderen Fällen hat der Kunde offensichtliche und versteckte Mängel in Textform unverzüglich nach Kenntniserlangung anzuzeigen.",
         "c2": "20.2 Bei berechtigten Mängeln wird Deepvac nach eigener Wahl den mangelhaften Liefergegenstand nachbessern oder ersetzen bzw. die mangelhafte Leistung erneut erbringen.",
-        "c3": "20.3 Die Verjährungsfrist für Mängelansprüche beträgt bei Waren zwölf Monate ab Lieferung und bei Werkleistungen zwölf Monate ab Abnahme, soweit nicht zwingendes Recht eine längere Frist vorschreibt. Ist eine Abnahme nach der Art der Werkleistung ausgeschlossen, beginnt die Verjährungsfrist mit der Fertigstellung. Dies gilt nicht bei arglistigem Verschweigen, Übernahme einer Garantie, Verletzung des Lebens, des Körpers oder der Gesundheit, vorsätzlichem Verhalten, grober Fahrlässigkeit oder zwingender Haftung nach dem anwendbaren Produkthaftungsrecht.",
+        "c3": "20.3 Die Verjährungsfrist für Mängelansprüche beträgt bei Waren zwölf Monate ab Lieferung und bei Werkleistungen zwölf Monate ab Abnahme, soweit nicht zwingendes Recht eine längere Frist vorschreibt. Umfasst der vereinbarte Leistungsumfang die Inbetriebnahme durch Deepvac, beginnt die Verjährungsfrist mit dem Abschluss der Inbetriebnahme gemäß Ziffer 12.4 oder, sofern ein Abnahmeverfahren vereinbart ist, mit der Abnahme; sie beginnt jedoch spätestens sechs Monate nach Lieferung, wenn sich die Inbetriebnahme oder Abnahme aus Gründen verzögert, die nicht von Deepvac zu vertreten sind. Ist eine Abnahme nach der Art der Werkleistung ausgeschlossen, beginnt die Verjährungsfrist mit der Fertigstellung. Dies gilt nicht bei arglistigem Verschweigen, Übernahme einer Garantie, Verletzung des Lebens, des Körpers oder der Gesundheit, vorsätzlichem Verhalten, grober Fahrlässigkeit oder zwingender Haftung nach dem anwendbaren Produkthaftungsrecht."
         "c4": "20.4 Ein Mangelanspruch besteht nicht bei unerheblichen Abweichungen, normalem Verschleiß, Mängeln infolge unsachgemäßer Nutzung, unbefugter Änderungen, Installationsfehlern durch den Kunden oder Dritte, ungeeigneten Betriebsbedingungen oder äußeren Einflüssen außerhalb der Kontrolle von Deepvac.",
         "c5": "20.5 Führen der Kunde oder Dritte ohne vorherige Zustimmung von Deepvac Nachbesserungsmaßnahmen durch, sind Mängelansprüche ausgeschlossen, sofern der Kunde nicht nachweist, dass diese Maßnahmen den Mangel weder verursacht noch verschlimmert haben.",
         "c6": "20.6 Bei Retrofit-, Modernisierungs- und Integrationsarbeiten an Bestandsanlagen beschränkt sich die Gewährleistung auf die von Deepvac erbrachten Arbeiten und die von Deepvac gelieferten Komponenten. Deepvac übernimmt keine Gewährleistung für die Bestandsanlage selbst oder für Mängel, die aus dem vorbestehenden Zustand der Bestandsanlage herrühren."
