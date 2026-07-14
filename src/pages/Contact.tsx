@@ -7,13 +7,14 @@ import { PageShell, PageHero, Section } from "@/components/PageShell";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Phone, Mail, MapPin, Clock, Shield, ArrowRight, CheckCircle, Loader2, ClipboardList, ClipboardCheck } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Shield, ArrowRight, ArrowUpRight, CheckCircle, Loader2, ClipboardList, ClipboardCheck, CalendarClock } from "lucide-react";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { ConsentMap } from "@/components/ConsentMap";
 import { useLanguage } from "@/components/LanguageProvider";
 import { getHreflangs, getCanonical, localizedPath } from "@/lib/routes";
 import { QuestionnaireCard } from "@/components/questionnaire/QuestionnaireCTA";
+import { CALENDLY_TECHNICAL_CALL_URL } from "@/lib/external-links";
 
 declare global {
   interface Window {
