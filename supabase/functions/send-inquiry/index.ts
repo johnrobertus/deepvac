@@ -440,7 +440,7 @@ Deno.serve(async (req) => {
         email: email, payload_hash: payloadHash, source,
       });
       return new Response(
-        JSON.stringify({ error: "Failed to send email", details: result }),
+        JSON.stringify({ error: "Failed to send email" }),
         { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
