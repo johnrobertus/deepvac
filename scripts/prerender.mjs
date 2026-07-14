@@ -42,6 +42,7 @@ const PORT = 4173 + Math.floor(Math.random() * 100);
 const ORIGIN = `http://127.0.0.1:${PORT}`;
 const NAV_TIMEOUT_MS = 15000;
 const SETTLE_MS = 250;
+const APP_READY_SELECTOR = "main";
 
 // ---------- static file server with SPA fallback ----------
 const MIME = {
@@ -197,13 +198,22 @@ async function prerenderOne(page, route, lang, seoEn, seoDe) {
   const url = `${ORIGIN}${routePath}`;
 
   const response = await page.goto(url, {
-    waitUntil: "networkidle",
+    waitUntil: "domcontentloaded",
     timeout: NAV_TIMEOUT_MS,
   });
   if (!response) throw new Error("no navigation response");
   if (response.status() >= 400) throw new Error(`HTTP ${response.status()}`);
 
-  await page.waitForSelector("#root > *", { timeout: NAV_TIMEOUT_MS });
+  // Do not wait for `networkidle`: the homepage can keep media/asset
+  // requests alive long enough to make CI flaky. Also avoid `#root > *`
+  // because toaster/live-region portals are root children and may be hidden.
+  // A rendered route always contains PageShell's <main>; the Suspense fallback
+  // intentionally does not, so this waits for the real page body.
+  await page.waitForSelector(APP_READY_SELECTOR, { state: "attached", timeout: NAV_TIMEOUT_MS });
+  await page.waitForFunction(
+    () => (document.querySelector("main")?.textContent ?? "").trim().length > 0,
+    { timeout: NAV_TIMEOUT_MS },
+  );
   await page.waitForTimeout(SETTLE_MS);
 
   let html = await page.content();

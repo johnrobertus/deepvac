@@ -71,6 +71,17 @@ export function computeMeta(route, lang, seoEn, seoDe) {
   };
 }
 
+function buildStaticFallbackBody(meta) {
+  return `
+      <main style="min-height:100vh;background:#000;color:#e6e6d6;padding:4rem 1.5rem;font-family:Arial,sans-serif;line-height:1.5">
+        <div style="max-width:72rem;margin:0 auto">
+          <p style="margin:0 0 1rem;color:#99ccd9;text-transform:uppercase;letter-spacing:.12em;font-size:.75rem">Deepvac</p>
+          <h1 style="margin:0 0 1rem;font-size:clamp(2rem,5vw,4rem);font-weight:500">${escapeHtml(meta.title)}</h1>
+          <p style="margin:0;max-width:48rem;color:#b0b0a8;font-size:1.125rem">${escapeHtml(meta.description)}</p>
+        </div>
+      </main>`;
+}
+
 export function rewriteHead(template, meta) {
   const {
     title, description, canonical, ogUrl, lang, altLang, altHref, xDefaultHref,
@@ -139,6 +150,11 @@ export function rewriteHead(template, meta) {
     `<link rel="alternate" hreflang="x-default" href="${escapeAttr(xDefaultHref)}" />`,
   ].join("\n    ");
   html = html.replace("</head>", `    ${hreflangs}\n  </head>`);
+
+  // Keep route files useful even if the full Playwright prerender pass cannot
+  // run in an environment. React createRoot will replace this immediately for
+  // normal visitors, while crawlers/no-JS agents still see visible body text.
+  html = html.replace('<div id="root"></div>', `<div id="root">${buildStaticFallbackBody(meta)}\n    </div>`);
 
   return html;
 }
