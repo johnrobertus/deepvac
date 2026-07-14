@@ -46,6 +46,58 @@ const StandardSeries = () => {
   const applications = t("standardSeries.applicationFit.items", { returnObjects: true }) as string[];
   const faqItems = t("standardSeries.faq.items", { returnObjects: true }) as Array<{ q: string; a: string }>;
 
+  const productsPath = localizedPath("/products", lang);
+  const productsUrl = `https://deepvac.space${productsPath}`;
+  const homeUrl = lang === "de" ? "https://deepvac.space/de" : "https://deepvac.space/";
+  const homeName = lang === "de" ? "Startseite" : "Home";
+  const productsName = t("standardSeries.eyebrow") ? (lang === "de" ? "Produkte" : "Products") : "Products";
+  const pageName = t("standardSeries.title") as string;
+
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((f) => ({
+      "@type": "Question",
+      name: f.q.replace("{{vacuum}}", vacuum).replace("{{minTemp}}", minTemp),
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: f.a.replace("{{vacuum}}", vacuum).replace("{{minTemp}}", minTemp),
+      },
+    })),
+  };
+
+  const tSeriesDesc = (t("standardSeries.tSeries.description") as string).replace("{{vacuum}}", vacuum).replace("{{minTemp}}", minTemp);
+  const cSeriesDesc = (t("standardSeries.cSeries.description") as string).replace("{{vacuum}}", vacuum).replace("{{minTemp}}", minTemp);
+
+  const productsJsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: "T Series TVAC",
+      brand: { "@type": "Brand", name: "Deepvac" },
+      description: tSeriesDesc,
+      url: canonical,
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: "C Series TVAC",
+      brand: { "@type": "Brand", name: "Deepvac" },
+      description: cSeriesDesc,
+      url: canonical,
+    },
+  ];
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: homeName, item: homeUrl },
+      { "@type": "ListItem", position: 2, name: productsName, item: productsUrl },
+      { "@type": "ListItem", position: 3, name: pageName, item: canonical },
+    ],
+  };
+
   return (
     <Layout>
       <Helmet>
@@ -56,6 +108,10 @@ const StandardSeries = () => {
         {hreflangs.map((h) => (
           <link key={h.lang} rel="alternate" hrefLang={h.lang} href={h.href} />
         ))}
+        <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(productsJsonLd[0])}</script>
+        <script type="application/ld+json">{JSON.stringify(productsJsonLd[1])}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
       </Helmet>
       <PageShell>
         <PageHero
