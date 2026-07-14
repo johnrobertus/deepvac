@@ -181,22 +181,22 @@ export function HeroSection() {
               alt=""
               className="absolute inset-0 h-full w-full object-cover"
               loading={i === 0 ? "eager" : "lazy"}
+              {...(i === 0 ? { fetchPriority: "high" as const } : {})}
             />
-            <video
-              ref={(el) => {
-                videoRefs.current[i] = el;
-              }}
-              src={slide.video}
-              poster={slide.poster}
-              muted
-              playsInline
-              preload={i === 0 ? "auto" : "metadata"}
-              className="absolute inset-0 h-full w-full object-cover"
-              aria-hidden="true"
-            />
-          </div>
-        );
-      })}
+            {videosMounted && !reducedMotion && (
+              <video
+                ref={(el) => {
+                  videoRefs.current[i] = el;
+                }}
+                src={slide.video}
+                poster={slide.poster}
+                muted
+                playsInline
+                preload={i === 0 ? "auto" : "none"}
+                className="absolute inset-0 h-full w-full object-cover"
+                aria-hidden="true"
+              />
+            )}
 
       <div
         className="absolute inset-0 z-10"
