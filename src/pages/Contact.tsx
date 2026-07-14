@@ -282,7 +282,7 @@ const Contact = () => {
                 </ul>
               </aside>
 
-              <form className="space-y-7" onSubmit={handleSubmit}>
+              <form className="space-y-7" onSubmit={handleSubmit} onFocusCapture={ensureTurnstileScript} onInputCapture={ensureTurnstileScript}>
                 {/* Section 1 — Contact details */}
                 <div className="space-y-5">
                   <span className="mono-label text-blue">{t("sections.contact")}</span>
