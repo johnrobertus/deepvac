@@ -177,5 +177,12 @@
     "switchToEn": "Switch to English",
     "dismiss": "Schließen",
     "regionLabel": "Sprachvorschlag"
+  },
+  "bookCall": {
+    "inlinePrompt": "Lieber direkt sprechen?",
+    "linkLabel": "Technisches Erstgespräch buchen",
+    "cardTitle": "Lieber direkt sprechen?",
+    "cardDescription": "Buchen Sie ein technisches Anforderungsgespräch mit unserem Engineering-Team – wir gehen Anwendung, Anforderungen und mögliche Konfigurationen gemeinsam durch.",
+    "cardButton": "Technisches Erstgespräch buchen"
   }
 }
