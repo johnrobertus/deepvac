@@ -326,8 +326,8 @@ const Contact = () => {
                       ))}
                     </div>
                   </div>
-                  </div>
                 </div>
+
 
                 {/* Section 3 — Project context */}
                 <div className="border-t border-gray/20 pt-6 space-y-5">
