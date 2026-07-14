@@ -16,14 +16,14 @@ const CoolingSystems = () => {
 
       <ArticleSection title={t(`${p}.sections.mechanical.title`)}>
         <p>{t(`${p}.sections.mechanical.content`)}</p>
-        <BulletGroup heading="Advantages" items={t(`${p}.sections.mechanical.advantages`, { returnObjects: true }) as string[]} />
-        <BulletGroup heading="Constraints" items={t(`${p}.sections.mechanical.constraints`, { returnObjects: true }) as string[]} />
+        <BulletGroup heading={t("blog.labels.advantages")} items={t(`${p}.sections.mechanical.advantages`, { returnObjects: true }) as string[]} />
+        <BulletGroup heading={t("blog.labels.constraints")} items={t(`${p}.sections.mechanical.constraints`, { returnObjects: true }) as string[]} />
       </ArticleSection>
 
       <ArticleSection title={t(`${p}.sections.ln2.title`)}>
         <p>{t(`${p}.sections.ln2.content`)}</p>
-        <BulletGroup heading="Advantages" items={t(`${p}.sections.ln2.advantages`, { returnObjects: true }) as string[]} />
-        <BulletGroup heading="Constraints" items={t(`${p}.sections.ln2.constraints`, { returnObjects: true }) as string[]} />
+        <BulletGroup heading={t("blog.labels.advantages")} items={t(`${p}.sections.ln2.advantages`, { returnObjects: true }) as string[]} />
+        <BulletGroup heading={t("blog.labels.constraints")} items={t(`${p}.sections.ln2.constraints`, { returnObjects: true }) as string[]} />
       </ArticleSection>
 
       <ArticleSection title={t(`${p}.sections.hybrid.title`)}>
@@ -68,9 +68,10 @@ function BulletGroup({ heading, items }: { heading: string; items: string[] }) {
 }
 
 function Conclusion({ text }: { text: string }) {
+  const { t } = useTranslation("blog");
   return (
     <div className="border-t border-gray/15 pt-6 space-y-2">
-      <h2 className="text-lg font-medium text-sand">Takeaway</h2>
+      <h2 className="text-lg font-medium text-sand">{t("blog.labels.takeaway")}</h2>
       <p className="text-sm">{text}</p>
     </div>
   );

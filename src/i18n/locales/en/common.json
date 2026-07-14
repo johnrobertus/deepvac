@@ -169,5 +169,20 @@
     "disclaimer": "All trademarks, names, logos, insignia, and other protected identifiers remain the property of their respective owners. Source references are provided for attribution and identification purposes only.",
     "nasaDisclaimer": "Selected background footage sourced from NASA media libraries and used for illustrative purposes only. No affiliation with or endorsement by NASA is implied.",
     "footerLink": "Media Credits"
+  },
+  "languageBanner": {
+    "messageDe": "Diese Seite ist auch auf Deutsch verfügbar.",
+    "switchToDe": "Zur deutschen Version",
+    "messageEn": "This page is also available in English.",
+    "switchToEn": "Switch to English",
+    "dismiss": "Dismiss",
+    "regionLabel": "Language suggestion"
+  },
+  "bookCall": {
+    "inlinePrompt": "Prefer a direct conversation?",
+    "linkLabel": "Book a technical requirements call",
+    "cardTitle": "Prefer to talk directly?",
+    "cardDescription": "Book a technical requirements call with our engineering team — we walk through your application, requirements, and possible configurations together.",
+    "cardButton": "Book a technical requirements call"
   }
 }

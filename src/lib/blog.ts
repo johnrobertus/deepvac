@@ -40,4 +40,20 @@ export const blogArticles: BlogArticle[] = [
     seoTitleKey: "blog.articles.aerospaceQualification.seoTitle",
     seoDescriptionKey: "blog.articles.aerospaceQualification.seoDescription",
   },
+  {
+    slug: "tvac-cost-drivers",
+    categoryKey: "blog.categories.decisionSupport",
+    titleKey: "blog.articles.tvacCostDrivers.title",
+    descriptionKey: "blog.articles.tvacCostDrivers.description",
+    seoTitleKey: "blog.articles.tvacCostDrivers.seoTitle",
+    seoDescriptionKey: "blog.articles.tvacCostDrivers.seoDescription",
+  },
+  {
+    slug: "tvac-test-campaign",
+    categoryKey: "blog.categories.engineeringGuide",
+    titleKey: "blog.articles.tvacTestCampaign.title",
+    descriptionKey: "blog.articles.tvacTestCampaign.description",
+    seoTitleKey: "blog.articles.tvacTestCampaign.seoTitle",
+    seoDescriptionKey: "blog.articles.tvacTestCampaign.seoDescription",
+  },
 ];

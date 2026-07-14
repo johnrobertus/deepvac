@@ -7,13 +7,14 @@ import { PageShell, PageHero, Section } from "@/components/PageShell";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Phone, Mail, MapPin, Clock, Shield, ArrowRight, CheckCircle, Loader2, ClipboardList, ClipboardCheck } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Shield, ArrowRight, ArrowUpRight, CheckCircle, Loader2, ClipboardList, ClipboardCheck, CalendarClock } from "lucide-react";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { ConsentMap } from "@/components/ConsentMap";
 import { useLanguage } from "@/components/LanguageProvider";
 import { getHreflangs, getCanonical, localizedPath } from "@/lib/routes";
 import { QuestionnaireCard } from "@/components/questionnaire/QuestionnaireCTA";
+import { CALENDLY_TECHNICAL_CALL_URL } from "@/lib/external-links";
 
 declare global {
   interface Window {
@@ -101,9 +102,10 @@ const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
   const [honeypot, setHoneypot] = useState("");
-  const [validationErrors, setValidationErrors] = useState<Partial<Record<keyof FormData | "interests", string>>>({});
+  const [validationErrors, setValidationErrors] = useState<Partial<Record<keyof FormData, string>>>({});
   const turnstileRef = useRef<HTMLDivElement>(null);
   const turnstileWidgetId = useRef<string | null>(null);
+  const turnstileScriptLoaded = useRef(false);
 
   const productInterests = t("interests.products", { returnObjects: true }) as string[];
   const serviceInterests = t("interests.services", { returnObjects: true }) as string[];
@@ -113,7 +115,9 @@ const Contact = () => {
   const existingSystemOptions = t("existingSystemOptions", { returnObjects: true }) as string[];
   const faqItems = t("faq.items", { returnObjects: true }) as Array<{ q: string; a: string }>;
 
-  useEffect(() => {
+  const ensureTurnstileScript = () => {
+    if (turnstileScriptLoaded.current) return;
+    turnstileScriptLoaded.current = true;
     if (!document.getElementById("cf-turnstile-script")) {
       const script = document.createElement("script");
       script.id = "cf-turnstile-script";
@@ -121,7 +125,7 @@ const Contact = () => {
       script.async = true; script.defer = true;
       document.head.appendChild(script);
     }
-  }, []);
+  };
 
   useEffect(() => {
     if (!turnstileRef.current) return;
@@ -145,13 +149,10 @@ const Contact = () => {
 
   const toggleInterest = (label: string) => {
     setInterests((prev) => prev.includes(label) ? prev.filter((i) => i !== label) : [...prev, label]);
-    if (validationErrors.interests) {
-      setValidationErrors((prev) => { const next = { ...prev }; delete next.interests; return next; });
-    }
   };
 
   const validateForm = (): boolean => {
-    const errors: Partial<Record<keyof FormData | "interests", string>> = {};
+    const errors: Partial<Record<keyof FormData, string>> = {};
     if (!form.firstName.trim()) errors.firstName = tc("form.validation.firstNameRequired");
     if (!form.lastName.trim()) errors.lastName = tc("form.validation.lastNameRequired");
     if (!form.email.trim()) {
@@ -160,7 +161,6 @@ const Contact = () => {
       errors.email = tc("form.validation.emailInvalid");
     }
     if (!form.company.trim()) errors.company = tc("form.validation.companyRequired");
-    if (interests.length === 0) errors.interests = t("validationNew.interestRequired");
     if (form.message.trim().length < 10) errors.message = t("validationNew.messageRequired");
     setValidationErrors(errors);
     return Object.keys(errors).length === 0;
@@ -174,9 +174,32 @@ const Contact = () => {
 
     setSending(true);
     try {
+      ensureTurnstileScript();
       let turnstileToken = "";
       if (window.turnstile && turnstileWidgetId.current) {
         turnstileToken = window.turnstile.getResponse(turnstileWidgetId.current) || "";
+      }
+      if (!turnstileToken) {
+        const deadline = Date.now() + 5000;
+        while (Date.now() < deadline) {
+          await new Promise((r) => setTimeout(r, 200));
+          if (window.turnstile && turnstileRef.current && !turnstileWidgetId.current) {
+            try {
+              turnstileWidgetId.current = window.turnstile.render(turnstileRef.current, {
+                sitekey: TURNSTILE_SITE_KEY, callback: () => {}, size: "invisible",
+              });
+            } catch { /* already rendered */ }
+          }
+          if (window.turnstile && turnstileWidgetId.current) {
+            turnstileToken = window.turnstile.getResponse(turnstileWidgetId.current) || "";
+            if (turnstileToken) break;
+          }
+        }
+      }
+      if (!turnstileToken) {
+        if (window.turnstile && turnstileWidgetId.current) { window.turnstile.reset(turnstileWidgetId.current); }
+        toast.error(tc("form.errors.submissionFailedDirect"));
+        return;
       }
       const { data, error } = await supabase.functions.invoke("send-inquiry", {
         body: {
@@ -244,6 +267,16 @@ const Contact = () => {
     );
   }
 
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: (faqItems || []).map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
   return (
     <Layout>
       <Helmet>
@@ -252,6 +285,7 @@ const Contact = () => {
         <meta name="description" content={tSeo("contact.description")} />
         <link rel="canonical" href={canonical} />
         {hreflangs.map((h) => (<link key={h.lang} rel="alternate" hrefLang={h.lang} href={h.href} />))}
+        <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
       </Helmet>
       <PageShell>
         <PageHero eyebrow={t("eyebrow")} title={t("title")} description={t("description")} />
@@ -259,12 +293,11 @@ const Contact = () => {
         <Section>
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-12 lg:gap-16">
             <div className="space-y-8">
-              <QuestionnaireCard />
-
-              <div className="space-y-2 pt-2" id="project-inquiry-form">
+              <div className="space-y-2" id="project-inquiry-form">
                 <h2 className="text-2xl font-medium text-sand tracking-tight">{t("formTitle")}</h2>
                 <p className="text-body">{t("formDescription")}</p>
               </div>
+
 
               <aside
                 aria-label={t("prepareCard.title")}
@@ -284,7 +317,27 @@ const Contact = () => {
                 </ul>
               </aside>
 
-              <form className="space-y-7" onSubmit={handleSubmit}>
+              <aside
+                aria-label={tc("bookCall.cardTitle")}
+                className="bento-card rounded-lg p-5 sm:p-6 space-y-3 border-blue/20"
+              >
+                <div className="flex items-start gap-3">
+                  <CalendarClock className="w-4 h-4 text-blue mt-0.5 shrink-0" aria-hidden="true" />
+                  <div className="space-y-1">
+                    <p className="mono-label text-blue">{tc("bookCall.cardTitle")}</p>
+                    <p className="text-[13px] text-gray/85 leading-relaxed">{tc("bookCall.cardDescription")}</p>
+                  </div>
+                </div>
+                <Button asChild className="w-full">
+                  <a href={CALENDLY_TECHNICAL_CALL_URL} target="_blank" rel="noopener noreferrer">
+                    {tc("bookCall.cardButton")}
+                    <ArrowUpRight className="h-4 w-4 ml-2" aria-hidden="true" />
+                  </a>
+                </Button>
+              </aside>
+
+
+              <form className="space-y-7" onSubmit={handleSubmit} onFocusCapture={ensureTurnstileScript} onInputCapture={ensureTurnstileScript}>
                 {/* Section 1 — Contact details */}
                 <div className="space-y-5">
                   <span className="mono-label text-blue">{t("sections.contact")}</span>
@@ -305,7 +358,7 @@ const Contact = () => {
                 {/* Section 2 — Area of interest */}
                 <div className="border-t border-gray/20 pt-6 space-y-4">
                   <div className="space-y-1">
-                    <span className="mono-label text-blue">{t("sections.interestTitle")}<span className="text-blue ml-1">*</span></span>
+                    <span className="mono-label text-blue">{t("sections.interestTitle")}</span>
                     <p className="text-[13px] text-gray">{t("sections.interestHelper")}</p>
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-5">
@@ -328,8 +381,8 @@ const Contact = () => {
                       ))}
                     </div>
                   </div>
-                  {validationErrors.interests && <p className="text-[13px] text-red-400">{validationErrors.interests}</p>}
                 </div>
+
 
                 {/* Section 3 — Project context */}
                 <div className="border-t border-gray/20 pt-6 space-y-5">
@@ -375,7 +428,10 @@ const Contact = () => {
                   </div>
                 </div>
               </form>
+
+              <QuestionnaireCard />
             </div>
+
 
             <div className="space-y-6">
               <div className="bento-card rounded-lg p-6 space-y-6">

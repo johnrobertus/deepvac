@@ -41,6 +41,20 @@ export function BlogArticlePage({
         {hreflangs.map((h) => (
           <link key={h.lang} rel="alternate" hrefLang={h.lang} href={h.href} />
         ))}
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          headline: t(titleKey),
+          description: t(seoDescriptionKey),
+          inLanguage: lang,
+          url: canonical,
+          mainEntityOfPage: canonical,
+          publisher: {
+            "@type": "Organization",
+            name: "Deepvac GmbH",
+            url: "https://deepvac.space",
+          },
+        })}</script>
       </Helmet>
       <PageShell>
         <section className="py-20 md:py-32 px-6">

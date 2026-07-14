@@ -8,6 +8,10 @@ export interface RouteEntry {
 /**
  * Central route map — single source of truth for all route operations.
  * Used by: App.tsx routing, language switcher, hreflang, canonical, internal links.
+ *
+ * NOTE: Keep scripts/generate-static-meta.mjs in sync with this list — it
+ * emits per-route static index.html files with the correct <title>, meta,
+ * canonical, hreflang, and og:* tags for each entry below.
  */
 export const routeMap: readonly RouteEntry[] = [
   { en: "/", de: "/de" },
@@ -29,6 +33,8 @@ export const routeMap: readonly RouteEntry[] = [
   { en: "/resources/blog/cooling-systems", de: "/de/ressourcen/blog/kuehlsysteme" },
   { en: "/resources/blog/retrofit-vs-replacement", de: "/de/ressourcen/blog/retrofit-vs-neubeschaffung" },
   { en: "/resources/blog/aerospace-qualification-testing", de: "/de/ressourcen/blog/raumfahrtqualifikation" },
+  { en: "/resources/blog/tvac-cost-drivers", de: "/de/ressourcen/blog/tvac-kostentreiber" },
+  { en: "/resources/blog/tvac-test-campaign", de: "/de/ressourcen/blog/tvac-testkampagne" },
   { en: "/careers", de: "/de/karriere" },
   { en: "/references", de: "/de/referenzen" },
   { en: "/contact", de: "/de/kontakt" },

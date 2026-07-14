@@ -113,7 +113,7 @@
       "eyebrow": "Cubic Thermal Vacuum Chambers",
       "title": "T Series TVAC",
       "description": "Compact cubic thermal vacuum chamber platforms designed for repeatable environmental simulation, subsystem validation, and laboratory workflows. The T Series combines controlled thermal and vacuum conditions with a standardised architecture for research and qualification applications.",
-      "descriptionExtended": "The cubic chamber geometry provides straightforward payload access, efficient interior utilisation, and flexible fixture mounting. Standard configurations support vacuum performance down to {{vacuum}} and thermal operation down to {{minTemp}}, depending on the selected system setup.",
+      "descriptionExtended": "Its cubic geometry provides a flat base plate and maximized usable floor area — ideal for fixtures, optical benches, and fast integration of planar-mounted hardware. Standard configurations support vacuum performance down to {{vacuum}} and thermal operation down to {{minTemp}}, depending on the selected system setup.",
       "features": [
         {
           "label": "Cubic Geometry",
@@ -137,7 +137,7 @@
       "eyebrow": "Cylindrical Thermal Vacuum Chambers",
       "title": "C Series TVAC",
       "description": "Cylindrical thermal vacuum chamber platforms designed for repeatable environmental simulation, subsystem qualification, and robust laboratory operation. The C Series combines controlled thermal and vacuum conditions with a standardised architecture for research and qualification applications.",
-      "descriptionExtended": "The cylindrical chamber geometry supports classic vacuum chamber layouts, efficient shroud integration, and a structurally efficient form factor. Standard configurations support vacuum performance down to {{vacuum}} and thermal operation down to {{minTemp}}, depending on the selected system setup.",
+      "descriptionExtended": "Its cylindrical geometry provides an inherently pressure-stable vessel with efficient, homogeneous shroud coverage — ideal for larger volumes and radiative thermal balance testing. Standard configurations support vacuum performance down to {{vacuum}} and thermal operation down to {{minTemp}}, depending on the selected system setup.",
       "features": [
         {
           "label": "Cylindrical Geometry",
@@ -173,7 +173,7 @@
     "beyondStandard": {
       "eyebrow": "Beyond Standard",
       "title": "Need a Custom Configuration?",
-      "description": "When test requirements exceed the standard platform scope, including non-standard geometries, specialised feedthrough configurations, or application-specific thermal profiles, Deepvac offers fully custom-engineered TVAC solutions."
+      "description": "When test requirements exceed the standard platform scope, including non-standard geometries, specialised feedthrough configurations, application-specific thermal profiles, volumes below and above the standard series, or ultimate pressures down to the 10⁻⁷ mbar range, Deepvac offers fully custom-engineered TVAC solutions."
     },
     "brochure": {
       "eyebrow": "Download Standard Series Brochure",
@@ -199,6 +199,10 @@
         {
           "q": "How are Standard Series chambers delivered and commissioned?",
           "a": "Deepvac provides full delivery, installation, and commissioning support including system integration, acceptance testing, and operator training."
+        },
+        {
+          "q": "Can the chambers reach pressures below 1 × 10⁻⁶ mbar?",
+          "a": "Yes. The standard series is specified at ≤ 1 × 10⁻⁶ mbar, which covers most qualification workflows. For applications requiring lower ultimate pressures, configurations down to the 10⁻⁷ mbar range are available with adapted pumping systems — discussed individually per project."
         }
       ]
     },
@@ -231,7 +235,7 @@
   "customTvac": {
     "eyebrow": "Products - Custom TVAC",
     "title": "Application-Specific Thermal Vacuum Engineering",
-    "description": "When standard chamber platforms cannot meet your test requirements, Deepvac develops fully custom thermal vacuum systems, engineered from concept through commissioning around your specific geometry, thermal profile, instrumentation, and integration constraints.",
+    "description": "When standard chamber platforms cannot meet your test requirements, Deepvac develops fully custom thermal vacuum systems, engineered from concept through commissioning around your specific geometry, thermal profile, instrumentation, and integration constraints. Custom configurations cover volumes below and above the standard series and ultimate pressures down to the 10⁻⁷ mbar range.",
     "heroCaption": "Custom thermal vacuum chamber, engineered, integrated, and commissioned by Deepvac.",
     "projectDrivers": {
       "eyebrow": "Project Drivers",

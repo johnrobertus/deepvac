@@ -6,9 +6,8 @@
     "cues": [
       "STEUERUNG & AUTOMATISIERUNG",
       "RETROFIT & SERVICE",
-      "LONG-TERM SUPPORT"
-    ],
-    "source": "Quelle: NASA"
+      "LANGZEIT-SUPPORT"
+    ]
   },
   "trustBar": {
     "items": [
@@ -80,7 +79,7 @@
     "tSeries": {
       "title": "T-Serie TVAC",
       "subtitle": "Kubische Thermovakuumkammern",
-      "description": "Kubische Thermovakuumkammern für die Qualifikation, Validierung und Umweltsimulation von Raumfahrthardware. Die T-Serie bietet eine standardisierte Kammerplattform für kontrollierte Thermovakuumtests in Forschung, institutionellen und kommerziellen Raumfahrtanwendungen.",
+      "description": "Kubische Thermovakuumkammern für die Qualifikation, Validierung und Umweltsimulation von Raumfahrthardware. Die kubische Geometrie bietet eine ebene Grundplatte und maximale nutzbare Stellfläche — ideal für Vorrichtungen, optische Bänke und die schnelle Integration planar montierter Hardware.",
       "overlays": [
         "Kubische Geometrie",
         "Standard-Serie",
@@ -105,12 +104,12 @@
           "value": "−190 °C bis +150 °C*"
         }
       },
-      "note": "*Abhängig vom gewählten Thermalkonzept, einschließlich direkter LN₂-Kühlung, GN₂-Umwälzung oder mechanischer Kühlung."
+      "note": "*Temperaturbereich abhängig vom gewählten Thermalkonzept (direkte LN₂-Kühlung, GN₂-Umwälzung oder mechanische Kühlung). Niedrigere Enddrücke bis in den Bereich von 10⁻⁷ mbar sind abhängig von der Pumpenkonfiguration möglich."
     },
     "cSeries": {
       "title": "C-Serie TVAC",
       "subtitle": "Zylindrische Thermovakuumkammern",
-      "description": "Zylindrische Thermovakuumkammern für die Qualifikation, Validierung und Umweltsimulation von Raumfahrthardware. Die C-Serie bietet eine standardisierte Kammerplattform für kontrollierte Thermovakuumtests in Forschung, institutionellen und kommerziellen Raumfahrtanwendungen.",
+      "description": "Zylindrische Thermovakuumkammern für die Qualifikation, Validierung und Umweltsimulation von Raumfahrthardware. Die zylindrische Geometrie bietet einen inhärent druckstabilen Behälter mit effizienter, homogener Shroud-Abdeckung — ideal für größere Volumina und radiative Thermal-Balance-Tests.",
       "overlays": [
         "Zylindrische Geometrie",
         "Standard-Serie",
@@ -135,7 +134,7 @@
           "value": "−190 °C bis +150 °C*"
         }
       },
-      "note": "*Abhängig vom gewählten Thermalkonzept, einschließlich direkter LN₂-Kühlung, GN₂-Umwälzung oder mechanischer Kühlung."
+      "note": "*Temperaturbereich abhängig vom gewählten Thermalkonzept (direkte LN₂-Kühlung, GN₂-Umwälzung oder mechanische Kühlung). Niedrigere Enddrücke bis in den Bereich von 10⁻⁷ mbar sind abhängig von der Pumpenkonfiguration möglich."
     },
     "custom": {
       "title": "Custom TVAC",
@@ -154,7 +153,7 @@
         },
         "volume": {
           "label": "Volumen",
-          "value": "Über den Standardbereich hinaus"
+          "value": "Unterhalb und oberhalb des Standardbereichs"
         },
         "temperature": {
           "label": "Temperatur",
@@ -165,7 +164,7 @@
           "value": "Projektspezifische Subsysteme"
         }
       },
-      "note": "Custom-Systeme können dedizierte Schnittstellen, kryogene Shrouds, Infrarotheizungen, zusätzliche Diagnostik und weitere anwendungsspezifische Systemerweiterungen umfassen."
+      "note": "Custom-Systeme können dedizierte Schnittstellen, kryogene Shrouds, Infrarotheizungen, zusätzliche Diagnostik, Volumina unterhalb und oberhalb der Standard-Serie sowie Enddrücke bis in den 10⁻⁷-mbar-Bereich umfassen."
     }
   },
   "applications": {
