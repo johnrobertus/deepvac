@@ -177,5 +177,12 @@
     "switchToEn": "Switch to English",
     "dismiss": "Dismiss",
     "regionLabel": "Language suggestion"
+  },
+  "bookCall": {
+    "inlinePrompt": "Prefer a direct conversation?",
+    "linkLabel": "Book a technical requirements call",
+    "cardTitle": "Prefer to talk directly?",
+    "cardDescription": "Book a technical requirements call with our engineering team — we walk through your application, requirements, and possible configurations together.",
+    "cardButton": "Book a technical requirements call"
   }
 }
