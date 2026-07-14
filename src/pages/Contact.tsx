@@ -101,9 +101,10 @@ const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
   const [honeypot, setHoneypot] = useState("");
-  const [validationErrors, setValidationErrors] = useState<Partial<Record<keyof FormData | "interests", string>>>({});
+  const [validationErrors, setValidationErrors] = useState<Partial<Record<keyof FormData, string>>>({});
   const turnstileRef = useRef<HTMLDivElement>(null);
   const turnstileWidgetId = useRef<string | null>(null);
+  const turnstileScriptLoaded = useRef(false);
 
   const productInterests = t("interests.products", { returnObjects: true }) as string[];
   const serviceInterests = t("interests.services", { returnObjects: true }) as string[];
@@ -113,7 +114,9 @@ const Contact = () => {
   const existingSystemOptions = t("existingSystemOptions", { returnObjects: true }) as string[];
   const faqItems = t("faq.items", { returnObjects: true }) as Array<{ q: string; a: string }>;
 
-  useEffect(() => {
+  const ensureTurnstileScript = () => {
+    if (turnstileScriptLoaded.current) return;
+    turnstileScriptLoaded.current = true;
     if (!document.getElementById("cf-turnstile-script")) {
       const script = document.createElement("script");
       script.id = "cf-turnstile-script";
@@ -121,7 +124,7 @@ const Contact = () => {
       script.async = true; script.defer = true;
       document.head.appendChild(script);
     }
-  }, []);
+  };
 
   useEffect(() => {
     if (!turnstileRef.current) return;
