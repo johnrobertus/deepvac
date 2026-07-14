@@ -48,6 +48,18 @@ const CustomTVAC = () => {
   const steps = t("customTvac.process.steps", { returnObjects: true }) as Array<{ step: string; title: string; description: string }>;
   const faqItems = t("customTvac.faq.items", { returnObjects: true }) as Array<{ q: string; a: string }>;
 
+  const productsUrl = `https://deepvac.space${localizedPath("/products", lang)}`;
+  const homeUrl = lang === "de" ? "https://deepvac.space/de" : "https://deepvac.space/";
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: lang === "de" ? "Startseite" : "Home", item: homeUrl },
+      { "@type": "ListItem", position: 2, name: lang === "de" ? "Produkte" : "Products", item: productsUrl },
+      { "@type": "ListItem", position: 3, name: t("customTvac.title") as string, item: canonical },
+    ],
+  };
+
   return (
     <Layout>
       <Helmet>
@@ -58,6 +70,7 @@ const CustomTVAC = () => {
         {hreflangs.map((h) => (
           <link key={h.lang} rel="alternate" hrefLang={h.lang} href={h.href} />
         ))}
+        <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
       </Helmet>
       <PageShell>
         <PageHero

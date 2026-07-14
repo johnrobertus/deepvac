@@ -243,6 +243,16 @@ const Contact = () => {
     );
   }
 
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: (faqItems || []).map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
   return (
     <Layout>
       <Helmet>
@@ -251,6 +261,7 @@ const Contact = () => {
         <meta name="description" content={tSeo("contact.description")} />
         <link rel="canonical" href={canonical} />
         {hreflangs.map((h) => (<link key={h.lang} rel="alternate" hrefLang={h.lang} href={h.href} />))}
+        <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
       </Helmet>
       <PageShell>
         <PageHero eyebrow={t("eyebrow")} title={t("title")} description={t("description")} />

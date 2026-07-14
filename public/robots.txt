@@ -6,8 +6,6 @@ Allow: /
 
 # Disallow internal/utility paths that should never appear in search results
 Disallow: /api/
-Disallow: /*?*utm_
-Disallow: /*?*gclid
 
 # Canonical sitemap index (contains main, services, resources, legal sub-sitemaps)
 Sitemap: https://deepvac.space/sitemap.xml

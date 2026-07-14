@@ -26,6 +26,8 @@ export function HeroSection() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [nextIndex, setNextIndex] = useState<number | null>(null);
   const [transitioning, setTransitioning] = useState(false);
+  const [videosMounted, setVideosMounted] = useState(false);
+  const [reducedMotion, setReducedMotion] = useState(false);
 
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
   const fadeTimerRef = useRef<number | null>(null);
@@ -91,6 +93,38 @@ export function HeroSection() {
   );
 
   useEffect(() => {
+    if (typeof window === "undefined") return;
+    const mql = window.matchMedia("(prefers-reduced-motion: reduce)");
+    setReducedMotion(mql.matches);
+  }, []);
+
+  useEffect(() => {
+    if (reducedMotion) return;
+    if (typeof window === "undefined") return;
+
+    let handle: number | null = null;
+    let timeout: number | null = null;
+    const mount = () => setVideosMounted(true);
+
+    const w = window as unknown as {
+      requestIdleCallback?: (cb: () => void, opts?: { timeout: number }) => number;
+      cancelIdleCallback?: (handle: number) => void;
+    };
+    if (typeof w.requestIdleCallback === "function") {
+      handle = w.requestIdleCallback(mount, { timeout: 2500 });
+    } else {
+      timeout = window.setTimeout(mount, 1500);
+    }
+
+    return () => {
+      if (handle != null && typeof w.cancelIdleCallback === "function") w.cancelIdleCallback(handle);
+      if (timeout != null) window.clearTimeout(timeout);
+    };
+  }, [reducedMotion]);
+
+  useEffect(() => {
+    if (!videosMounted || reducedMotion) return;
+
     const videos = videoRefs.current;
 
     videos.forEach((video) => {
@@ -106,15 +140,16 @@ export function HeroSection() {
         video.removeEventListener("timeupdate", handleTimeUpdate);
       });
     };
-  }, [handleEnded, handleTimeUpdate]);
+  }, [handleEnded, handleTimeUpdate, videosMounted, reducedMotion]);
 
   useEffect(() => {
+    if (!videosMounted || reducedMotion) return;
     const firstVideo = videoRefs.current[0];
     if (firstVideo) {
       firstVideo.currentTime = 0;
       firstVideo.play().catch(() => {});
     }
-  }, []);
+  }, [videosMounted, reducedMotion]);
 
   useEffect(() => {
     return () => {
@@ -146,22 +181,27 @@ export function HeroSection() {
               alt=""
               className="absolute inset-0 h-full w-full object-cover"
               loading={i === 0 ? "eager" : "lazy"}
+              {...(i === 0 ? { fetchPriority: "high" as const } : {})}
             />
-            <video
-              ref={(el) => {
-                videoRefs.current[i] = el;
-              }}
-              src={slide.video}
-              poster={slide.poster}
-              muted
-              playsInline
-              preload={i === 0 ? "auto" : "metadata"}
-              className="absolute inset-0 h-full w-full object-cover"
-              aria-hidden="true"
-            />
+            {videosMounted && !reducedMotion && (
+              <video
+                ref={(el) => {
+                  videoRefs.current[i] = el;
+                }}
+                src={slide.video}
+                poster={slide.poster}
+                muted
+                playsInline
+                preload={i === 0 ? "auto" : "none"}
+                className="absolute inset-0 h-full w-full object-cover"
+                aria-hidden="true"
+              />
+            )}
           </div>
         );
       })}
+
+
 
       <div
         className="absolute inset-0 z-10"
