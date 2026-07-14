@@ -258,12 +258,11 @@ const Contact = () => {
         <Section>
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-12 lg:gap-16">
             <div className="space-y-8">
-              <QuestionnaireCard />
-
-              <div className="space-y-2 pt-2" id="project-inquiry-form">
+              <div className="space-y-2" id="project-inquiry-form">
                 <h2 className="text-2xl font-medium text-sand tracking-tight">{t("formTitle")}</h2>
                 <p className="text-body">{t("formDescription")}</p>
               </div>
+
 
               <aside
                 aria-label={t("prepareCard.title")}
