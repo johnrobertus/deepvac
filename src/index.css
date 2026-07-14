@@ -351,6 +351,14 @@
     transform: translateY(0);
   }
 
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      opacity: 1 !important;
+      transform: none !important;
+      transition: none !important;
+    }
+  }
+
   /* ============================================================
      Hero — width + height aware fluid sizing.
      Header is fixed at 4rem; hero must fit within 100dvh minus that.
