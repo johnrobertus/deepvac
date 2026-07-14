@@ -1,0 +1,421 @@
+[
+  {
+    "en": "/",
+    "de": "/de",
+    "seoKey": "home",
+    "sitemap": {
+      "group": "main",
+      "priority": 1.0,
+      "changefreq": "weekly",
+      "sources": [
+        "src/pages/Index.tsx",
+        "src/components/home",
+        "src/i18n/locales/en/home.json",
+        "src/i18n/locales/de/home.json"
+      ]
+    }
+  },
+  {
+    "en": "/products",
+    "de": "/de/produkte",
+    "seoKey": "products",
+    "sitemap": {
+      "group": "main",
+      "priority": 0.95,
+      "changefreq": "weekly",
+      "sources": [
+        "src/pages/Products.tsx",
+        "src/i18n/locales/en/products.json",
+        "src/i18n/locales/de/products.json"
+      ]
+    }
+  },
+  {
+    "en": "/products/standard-series",
+    "de": "/de/produkte/standard-serie",
+    "seoKey": "standardSeries",
+    "sitemap": {
+      "group": "main",
+      "priority": 0.9,
+      "changefreq": "monthly",
+      "sources": [
+        "src/pages/StandardSeries.tsx",
+        "src/i18n/locales/en/products.json",
+        "src/i18n/locales/de/products.json"
+      ]
+    }
+  },
+  {
+    "en": "/products/custom-tvac",
+    "de": "/de/produkte/custom-tvac",
+    "seoKey": "customTvac",
+    "sitemap": {
+      "group": "main",
+      "priority": 0.9,
+      "changefreq": "monthly",
+      "sources": [
+        "src/pages/CustomTVAC.tsx",
+        "src/i18n/locales/en/products.json",
+        "src/i18n/locales/de/products.json"
+      ]
+    }
+  },
+  {
+    "en": "/products/thermal-vision",
+    "de": "/de/produkte/thermal-vision",
+    "seoKey": "thermalVision",
+    "sitemap": {
+      "group": "main",
+      "priority": 0.85,
+      "changefreq": "monthly",
+      "sources": [
+        "src/pages/ThermalVision.tsx",
+        "src/i18n/locales/en/products.json",
+        "src/i18n/locales/de/products.json"
+      ]
+    }
+  },
+  {
+    "en": "/references",
+    "de": "/de/referenzen",
+    "seoKey": "references",
+    "sitemap": {
+      "group": "main",
+      "priority": 0.9,
+      "changefreq": "monthly",
+      "sources": [
+        "src/pages/References.tsx",
+        "src/i18n/locales/en/references.json",
+        "src/i18n/locales/de/references.json"
+      ]
+    }
+  },
+  {
+    "en": "/contact",
+    "de": "/de/kontakt",
+    "seoKey": "contact",
+    "sitemap": {
+      "group": "main",
+      "priority": 0.95,
+      "changefreq": "monthly",
+      "sources": [
+        "src/pages/Contact.tsx",
+        "src/i18n/locales/en/contact.json",
+        "src/i18n/locales/de/contact.json"
+      ]
+    }
+  },
+  {
+    "en": "/team",
+    "de": "/de/team",
+    "seoKey": "team",
+    "sitemap": {
+      "group": "main",
+      "priority": 0.7,
+      "changefreq": "monthly",
+      "sources": [
+        "src/pages/Team.tsx",
+        "src/i18n/locales/en/team.json",
+        "src/i18n/locales/de/team.json"
+      ]
+    }
+  },
+  {
+    "en": "/services",
+    "de": "/de/leistungen",
+    "seoKey": "services",
+    "sitemap": {
+      "group": "services",
+      "priority": 0.95,
+      "changefreq": "weekly",
+      "sources": [
+        "src/pages/Services.tsx",
+        "src/i18n/locales/en/services.json",
+        "src/i18n/locales/de/services.json"
+      ]
+    }
+  },
+  {
+    "en": "/services/retrofit-modernization",
+    "de": "/de/leistungen/retrofit-modernisierung",
+    "seoKey": "retrofitModernization",
+    "sitemap": {
+      "group": "services",
+      "priority": 0.9,
+      "changefreq": "monthly",
+      "sources": [
+        "src/pages/ServicePages.tsx",
+        "src/i18n/locales/en/services.json",
+        "src/i18n/locales/de/services.json"
+      ]
+    }
+  },
+  {
+    "en": "/services/testing-services",
+    "de": "/de/leistungen/pruefdienstleistungen",
+    "seoKey": "testingServices",
+    "sitemap": {
+      "group": "services",
+      "priority": 0.85,
+      "changefreq": "monthly",
+      "sources": [
+        "src/pages/ServicePages.tsx",
+        "src/i18n/locales/en/services.json",
+        "src/i18n/locales/de/services.json"
+      ]
+    }
+  },
+  {
+    "en": "/services/control-systems-design",
+    "de": "/de/leistungen/steuerungstechnik",
+    "seoKey": "controlSystems",
+    "sitemap": {
+      "group": "services",
+      "priority": 0.8,
+      "changefreq": "monthly",
+      "sources": [
+        "src/pages/ServicePages.tsx",
+        "src/i18n/locales/en/services.json",
+        "src/i18n/locales/de/services.json"
+      ]
+    }
+  },
+  {
+    "en": "/services/mechanical-design",
+    "de": "/de/leistungen/mechanische-konstruktion",
+    "seoKey": "mechanicalDesign",
+    "sitemap": {
+      "group": "services",
+      "priority": 0.8,
+      "changefreq": "monthly",
+      "sources": [
+        "src/pages/ServicePages.tsx",
+        "src/i18n/locales/en/services.json",
+        "src/i18n/locales/de/services.json"
+      ]
+    }
+  },
+  {
+    "en": "/services/maintenance-repair",
+    "de": "/de/leistungen/wartung-reparatur",
+    "seoKey": "maintenanceRepair",
+    "sitemap": {
+      "group": "services",
+      "priority": 0.8,
+      "changefreq": "monthly",
+      "sources": [
+        "src/pages/ServicePages.tsx",
+        "src/i18n/locales/en/services.json",
+        "src/i18n/locales/de/services.json"
+      ]
+    }
+  },
+  {
+    "en": "/services/subsystem-integration",
+    "de": "/de/leistungen/subsystem-integration",
+    "seoKey": "subsystemIntegration",
+    "sitemap": {
+      "group": "services",
+      "priority": 0.8,
+      "changefreq": "monthly",
+      "sources": [
+        "src/pages/ServicePages.tsx",
+        "src/i18n/locales/en/services.json",
+        "src/i18n/locales/de/services.json"
+      ]
+    }
+  },
+  {
+    "en": "/resources",
+    "de": "/de/ressourcen",
+    "seoKey": "resources",
+    "sitemap": {
+      "group": "resources",
+      "priority": 0.6,
+      "changefreq": "monthly",
+      "sources": ["src/pages/Resources.tsx"]
+    }
+  },
+  {
+    "en": "/catalogs",
+    "de": "/de/kataloge",
+    "seoKey": "catalogs",
+    "sitemap": {
+      "group": "resources",
+      "priority": 0.7,
+      "changefreq": "monthly",
+      "sources": [
+        "src/pages/Catalogues.tsx",
+        "src/i18n/locales/en/catalogs.json",
+        "src/i18n/locales/de/catalogs.json"
+      ]
+    }
+  },
+  {
+    "en": "/resources/blog",
+    "de": "/de/ressourcen/blog",
+    "seoKey": "blog",
+    "sitemap": {
+      "group": "resources",
+      "priority": 0.6,
+      "changefreq": "weekly",
+      "sources": [
+        "src/pages/Blog.tsx",
+        "src/i18n/locales/en/blog.json",
+        "src/i18n/locales/de/blog.json"
+      ]
+    }
+  },
+  {
+    "en": "/resources/blog/cooling-systems",
+    "de": "/de/ressourcen/blog/kuehlsysteme",
+    "seoKey": "blogCoolingSystems",
+    "sitemap": {
+      "group": "resources",
+      "priority": 0.5,
+      "changefreq": "monthly",
+      "sources": [
+        "src/pages/blog/CoolingSystems.tsx",
+        "src/i18n/locales/en/blog.json",
+        "src/i18n/locales/de/blog.json"
+      ]
+    }
+  },
+  {
+    "en": "/resources/blog/retrofit-vs-replacement",
+    "de": "/de/ressourcen/blog/retrofit-vs-neubeschaffung",
+    "seoKey": "blogRetrofitVsReplacement",
+    "sitemap": {
+      "group": "resources",
+      "priority": 0.5,
+      "changefreq": "monthly",
+      "sources": [
+        "src/pages/blog/RetrofitVsReplacement.tsx",
+        "src/i18n/locales/en/blog.json",
+        "src/i18n/locales/de/blog.json"
+      ]
+    }
+  },
+  {
+    "en": "/resources/blog/aerospace-qualification-testing",
+    "de": "/de/ressourcen/blog/raumfahrtqualifikation",
+    "seoKey": "blogAerospaceQualification",
+    "sitemap": {
+      "group": "resources",
+      "priority": 0.5,
+      "changefreq": "monthly",
+      "sources": [
+        "src/pages/blog/AerospaceQualification.tsx",
+        "src/i18n/locales/en/blog.json",
+        "src/i18n/locales/de/blog.json"
+      ]
+    }
+  },
+  {
+    "en": "/resources/blog/tvac-cost-drivers",
+    "de": "/de/ressourcen/blog/tvac-kostentreiber",
+    "seoKey": "blogTvacCostDrivers",
+    "sitemap": {
+      "group": "resources",
+      "priority": 0.5,
+      "changefreq": "monthly",
+      "sources": [
+        "src/pages/blog/TvacCostDrivers.tsx",
+        "src/i18n/locales/en/blog.json",
+        "src/i18n/locales/de/blog.json"
+      ]
+    }
+  },
+  {
+    "en": "/resources/blog/tvac-test-campaign",
+    "de": "/de/ressourcen/blog/tvac-testkampagne",
+    "seoKey": "blogTvacTestCampaign",
+    "sitemap": {
+      "group": "resources",
+      "priority": 0.5,
+      "changefreq": "monthly",
+      "sources": [
+        "src/pages/blog/TvacTestCampaign.tsx",
+        "src/i18n/locales/en/blog.json",
+        "src/i18n/locales/de/blog.json"
+      ]
+    }
+  },
+  {
+    "en": "/careers",
+    "de": "/de/karriere",
+    "seoKey": "careers",
+    "sitemap": {
+      "group": "resources",
+      "priority": 0.5,
+      "changefreq": "monthly",
+      "sources": [
+        "src/pages/Careers.tsx",
+        "src/i18n/locales/en/careers.json",
+        "src/i18n/locales/de/careers.json"
+      ]
+    }
+  },
+  {
+    "en": "/imprint",
+    "de": "/de/impressum",
+    "seoKey": "imprint",
+    "sitemap": {
+      "group": "legal",
+      "priority": 0.3,
+      "changefreq": "yearly",
+      "sources": [
+        "src/pages/Imprint.tsx",
+        "src/i18n/locales/en/legal.json",
+        "src/i18n/locales/de/legal.json"
+      ]
+    }
+  },
+  {
+    "en": "/privacy-policy",
+    "de": "/de/datenschutz",
+    "seoKey": "privacyPolicy",
+    "sitemap": {
+      "group": "legal",
+      "priority": 0.3,
+      "changefreq": "yearly",
+      "sources": [
+        "src/pages/PrivacyPolicy.tsx",
+        "src/i18n/locales/en/legal.json",
+        "src/i18n/locales/de/legal.json"
+      ]
+    }
+  },
+  {
+    "en": "/terms-and-conditions",
+    "de": "/de/agb",
+    "seoKey": "termsAndConditions",
+    "sitemap": {
+      "group": "legal",
+      "priority": 0.3,
+      "changefreq": "yearly",
+      "sources": [
+        "src/pages/TermsAndConditions.tsx",
+        "src/i18n/locales/en/legal.json",
+        "src/i18n/locales/de/legal.json"
+      ]
+    }
+  },
+  {
+    "en": "/media-credits",
+    "de": "/de/medienquellen",
+    "seoKey": "mediaCredits",
+    "sitemap": {
+      "group": "legal",
+      "priority": 0.2,
+      "changefreq": "yearly",
+      "sources": ["src/pages/MediaCredits.tsx"]
+    }
+  },
+  {
+    "en": "/tvac-questionnaire",
+    "de": "/de/tvac-fragebogen",
+    "seoKey": "questionnaire",
+    "sitemap": null
+  }
+]

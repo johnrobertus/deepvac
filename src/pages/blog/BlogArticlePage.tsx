@@ -6,55 +6,78 @@ import { PageShell, Section, CTABand } from "@/components/PageShell";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/components/LanguageProvider";
 import { getHreflangs, getCanonical, localizedPath } from "@/lib/routes";
+import { blogArticles } from "@/lib/blog";
 import { ArrowLeft } from "lucide-react";
 import { type ReactNode } from "react";
 
 interface BlogArticlePageProps {
-  seoTitleKey: string;
-  seoDescriptionKey: string;
+  /** Article slug — must match an entry in blogArticles registry */
+  slug: string;
   categoryKey: string;
   titleKey: string;
   children: ReactNode;
 }
 
 export function BlogArticlePage({
-  seoTitleKey,
-  seoDescriptionKey,
+  slug,
   categoryKey,
   titleKey,
   children,
 }: BlogArticlePageProps) {
   const { t } = useTranslation("blog");
+  const { t: tSeo } = useTranslation("seo");
   const { t: tc } = useTranslation("common");
   const { lang } = useLanguage();
   const { pathname } = useLocation();
   const hreflangs = getHreflangs(pathname);
   const canonical = getCanonical(pathname, lang);
 
+  const article = blogArticles.find((a) => a.slug === slug);
+  const seoKey = article?.seoKey ?? "resources";
+  const datePublished = article?.datePublished ?? "";
+  const dateModified = article?.dateModified ?? datePublished;
+
+  const seoTitle = tSeo(`${seoKey}.title`);
+  const seoDescription = tSeo(`${seoKey}.description`);
+  const headline = t(titleKey);
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline,
+    description: seoDescription,
+    inLanguage: lang,
+    url: canonical,
+    mainEntityOfPage: canonical,
+    ...(datePublished ? { datePublished } : {}),
+    ...(dateModified ? { dateModified } : {}),
+    author: {
+      "@type": "Organization",
+      name: "Deepvac GmbH",
+      url: "https://deepvac.space",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Deepvac GmbH",
+      url: "https://deepvac.space",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://deepvac.space/logo.png",
+      },
+    },
+  };
+
   return (
     <Layout>
       <Helmet>
         <html lang={lang} />
-        <title>{t(seoTitleKey)}</title>
-        <meta name="description" content={t(seoDescriptionKey)} />
+        <title>{seoTitle}</title>
+        <meta name="description" content={seoDescription} />
         <link rel="canonical" href={canonical} />
         {hreflangs.map((h) => (
           <link key={h.lang} rel="alternate" hrefLang={h.lang} href={h.href} />
         ))}
-        <script type="application/ld+json">{JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "BlogPosting",
-          headline: t(titleKey),
-          description: t(seoDescriptionKey),
-          inLanguage: lang,
-          url: canonical,
-          mainEntityOfPage: canonical,
-          publisher: {
-            "@type": "Organization",
-            name: "Deepvac GmbH",
-            url: "https://deepvac.space",
-          },
-        })}</script>
+        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
       <PageShell>
         <section className="py-20 md:py-32 px-6">
@@ -68,7 +91,7 @@ export function BlogArticlePage({
             </Link>
             <span className="mono-label text-blue block">{t(categoryKey)}</span>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight text-sand">
-              {t(titleKey)}
+              {headline}
             </h1>
           </div>
         </section>

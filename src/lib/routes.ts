@@ -1,49 +1,21 @@
+import routeMapData from "./route-map.json";
+
 export type Lang = "en" | "de";
 
 export interface RouteEntry {
   en: string;
   de: string;
+  seoKey: string;
 }
 
 /**
  * Central route map — single source of truth for all route operations.
- * Used by: App.tsx routing, language switcher, hreflang, canonical, internal links.
- *
- * NOTE: Keep scripts/generate-static-meta.mjs in sync with this list — it
- * emits per-route static index.html files with the correct <title>, meta,
- * canonical, hreflang, and og:* tags for each entry below.
+ * Backed by src/lib/route-map.json (shared with scripts/generate-sitemap.mjs
+ * and scripts/generate-static-meta.mjs). Add/remove routes in the JSON only.
  */
-export const routeMap: readonly RouteEntry[] = [
-  { en: "/", de: "/de" },
-  { en: "/products", de: "/de/produkte" },
-  { en: "/products/standard-series", de: "/de/produkte/standard-serie" },
-  { en: "/products/custom-tvac", de: "/de/produkte/custom-tvac" },
-  { en: "/products/thermal-vision", de: "/de/produkte/thermal-vision" },
-  { en: "/services", de: "/de/leistungen" },
-  { en: "/services/testing-services", de: "/de/leistungen/pruefdienstleistungen" },
-  { en: "/services/control-systems-design", de: "/de/leistungen/steuerungstechnik" },
-  { en: "/services/mechanical-design", de: "/de/leistungen/mechanische-konstruktion" },
-  { en: "/services/retrofit-modernization", de: "/de/leistungen/retrofit-modernisierung" },
-  { en: "/services/maintenance-repair", de: "/de/leistungen/wartung-reparatur" },
-  { en: "/services/subsystem-integration", de: "/de/leistungen/subsystem-integration" },
-  { en: "/team", de: "/de/team" },
-  { en: "/resources", de: "/de/ressourcen" },
-  { en: "/catalogs", de: "/de/kataloge" },
-  { en: "/resources/blog", de: "/de/ressourcen/blog" },
-  { en: "/resources/blog/cooling-systems", de: "/de/ressourcen/blog/kuehlsysteme" },
-  { en: "/resources/blog/retrofit-vs-replacement", de: "/de/ressourcen/blog/retrofit-vs-neubeschaffung" },
-  { en: "/resources/blog/aerospace-qualification-testing", de: "/de/ressourcen/blog/raumfahrtqualifikation" },
-  { en: "/resources/blog/tvac-cost-drivers", de: "/de/ressourcen/blog/tvac-kostentreiber" },
-  { en: "/resources/blog/tvac-test-campaign", de: "/de/ressourcen/blog/tvac-testkampagne" },
-  { en: "/careers", de: "/de/karriere" },
-  { en: "/references", de: "/de/referenzen" },
-  { en: "/contact", de: "/de/kontakt" },
-  { en: "/tvac-questionnaire", de: "/de/tvac-fragebogen" },
-  { en: "/imprint", de: "/de/impressum" },
-  { en: "/privacy-policy", de: "/de/datenschutz" },
-  { en: "/terms-and-conditions", de: "/de/agb" },
-  { en: "/media-credits", de: "/de/medienquellen" },
-] as const;
+export const routeMap: readonly RouteEntry[] = (routeMapData as Array<Record<string, unknown>>).map(
+  (r) => ({ en: r.en as string, de: r.de as string, seoKey: r.seoKey as string }),
+);
 
 // English alias routes (kept for backward compatibility, no DE equivalents needed)
 export const enAliases: Record<string, string> = {

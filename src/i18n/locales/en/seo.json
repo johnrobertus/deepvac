@@ -94,5 +94,29 @@
   "questionnaire": {
     "title": "Technical TVAC Questionnaire | Deepvac",
     "description": "Submit detailed technical requirements for a custom thermal vacuum or space simulation system. Unknown specifications can be left blank."
+  },
+  "blog": {
+    "title": "Engineering Blog | Deepvac",
+    "description": "Technical articles on thermal vacuum systems, space simulation, qualification testing, retrofit decisions, and TVAC engineering practice."
+  },
+  "blogCoolingSystems": {
+    "title": "TVAC Cooling Systems: Mechanical vs LN2 | Deepvac",
+    "description": "Engineering overview of thermal vacuum cooling architectures — mechanical refrigeration, LN2 circuits, and hybrid approaches with their trade-offs."
+  },
+  "blogRetrofitVsReplacement": {
+    "title": "TVAC Retrofit vs Replacement Decision Guide | Deepvac",
+    "description": "Structured framework for evaluating thermal vacuum chamber retrofit versus replacement — technical condition, lifecycle cost, and operational fit."
+  },
+  "blogAerospaceQualification": {
+    "title": "Aerospace Qualification Testing in TVAC | Deepvac",
+    "description": "Environmental test requirements for aerospace hardware qualification in thermal vacuum chambers — standards, thermal cycling, and chamber capabilities."
+  },
+  "blogTvacCostDrivers": {
+    "title": "TVAC Chamber Cost: Seven Price Drivers | Deepvac",
+    "description": "What does a thermal vacuum chamber cost? A practical guide to the seven drivers: volume, thermal concept, vacuum, interfaces, controls, docs, services."
+  },
+  "blogTvacTestCampaign": {
+    "title": "Inside a TVAC Test Campaign: Six Phases | Deepvac",
+    "description": "From test plan through pump-down, thermal cycling, and monitoring to the final data package — how a thermal vacuum test campaign is structured."
   }
 }

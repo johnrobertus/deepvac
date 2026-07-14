@@ -4,11 +4,9 @@
  *
  * The app is a Vite CSR SPA — social/preview crawlers only see the static
  * index.html head. This script runs postbuild and writes a dedicated
- * dist/<route>/index.html for every route pair in src/lib/routes.ts, with
- * the correct <title>, description, canonical, og:*, twitter:*, hreflang
- * and <html lang> injected server-side.
- *
- * Keep the route list here in sync with src/lib/routes.ts.
+ * dist/<route>/index.html for every route pair in src/lib/route-map.json,
+ * with the correct <title>, description, canonical, og:*, twitter:*,
+ * hreflang and <html lang> injected server-side.
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -19,42 +17,11 @@ const ROOT = path.resolve(__dirname, "..");
 const DIST = path.join(ROOT, "dist");
 const BASE = "https://deepvac.space";
 
-// Mirror of src/lib/routes.ts routeMap. Add a `seoKey` matching a top-level
-// key in src/i18n/locales/{en,de}/seo.json. If a route has no dedicated
-// seo entry, fall back to "home".
-const routes = [
-  { en: "/", de: "/de", seoKey: "home" },
-  { en: "/products", de: "/de/produkte", seoKey: "products" },
-  { en: "/products/standard-series", de: "/de/produkte/standard-serie", seoKey: "standardSeries" },
-  { en: "/products/custom-tvac", de: "/de/produkte/custom-tvac", seoKey: "customTvac" },
-  { en: "/products/thermal-vision", de: "/de/produkte/thermal-vision", seoKey: "thermalVision" },
-  { en: "/services", de: "/de/leistungen", seoKey: "services" },
-  { en: "/services/testing-services", de: "/de/leistungen/pruefdienstleistungen", seoKey: "testingServices" },
-  { en: "/services/control-systems-design", de: "/de/leistungen/steuerungstechnik", seoKey: "controlSystems" },
-  { en: "/services/mechanical-design", de: "/de/leistungen/mechanische-konstruktion", seoKey: "mechanicalDesign" },
-  { en: "/services/retrofit-modernization", de: "/de/leistungen/retrofit-modernisierung", seoKey: "retrofitModernization" },
-  { en: "/services/maintenance-repair", de: "/de/leistungen/wartung-reparatur", seoKey: "maintenanceRepair" },
-  { en: "/services/subsystem-integration", de: "/de/leistungen/subsystem-integration", seoKey: "subsystemIntegration" },
-  { en: "/team", de: "/de/team", seoKey: "team" },
-  { en: "/resources", de: "/de/ressourcen", seoKey: "resources" },
-  { en: "/catalogs", de: "/de/kataloge", seoKey: "catalogs" },
-  { en: "/resources/blog", de: "/de/ressourcen/blog", seoKey: "resources" },
-  { en: "/resources/blog/cooling-systems", de: "/de/ressourcen/blog/kuehlsysteme", seoKey: "resources" },
-  { en: "/resources/blog/retrofit-vs-replacement", de: "/de/ressourcen/blog/retrofit-vs-neubeschaffung", seoKey: "resources" },
-  { en: "/resources/blog/aerospace-qualification-testing", de: "/de/ressourcen/blog/raumfahrtqualifikation", seoKey: "resources" },
-  { en: "/resources/blog/tvac-cost-drivers", de: "/de/ressourcen/blog/tvac-kostentreiber", seoKey: "resources" },
-  { en: "/resources/blog/tvac-test-campaign", de: "/de/ressourcen/blog/tvac-testkampagne", seoKey: "resources" },
-  { en: "/careers", de: "/de/karriere", seoKey: "careers" },
-  { en: "/references", de: "/de/referenzen", seoKey: "references" },
-  { en: "/contact", de: "/de/kontakt", seoKey: "contact" },
-  { en: "/tvac-questionnaire", de: "/de/tvac-fragebogen", seoKey: "questionnaire" },
-  { en: "/imprint", de: "/de/impressum", seoKey: "imprint" },
-  { en: "/privacy-policy", de: "/de/datenschutz", seoKey: "privacyPolicy" },
-  { en: "/terms-and-conditions", de: "/de/agb", seoKey: "termsAndConditions" },
-  { en: "/media-credits", de: "/de/medienquellen", seoKey: "mediaCredits" },
-];
+const routeMap = JSON.parse(
+  fs.readFileSync(path.join(ROOT, "src/lib/route-map.json"), "utf8"),
+);
 
-function escapeAttr(v) {
+export function escapeAttr(v) {
   return String(v)
     .replace(/&/g, "&amp;")
     .replace(/"/g, "&quot;")
@@ -62,24 +29,53 @@ function escapeAttr(v) {
     .replace(/>/g, "&gt;");
 }
 
-function escapeHtml(v) {
+export function escapeHtml(v) {
   return String(v)
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;");
 }
 
-function loadSeo(lang) {
+export function loadSeo(lang) {
   const p = path.join(ROOT, "src/i18n/locales", lang, "seo.json");
   return JSON.parse(fs.readFileSync(p, "utf8"));
 }
 
-function pick(seo, key) {
+export function pickSeo(seo, key) {
   if (seo[key] && seo[key].title && seo[key].description) return seo[key];
   return seo.home;
 }
 
-function rewriteHead(template, { title, description, canonical, ogUrl, lang, altLang, altHref, xDefaultHref }) {
+/**
+ * Compute the canonical head values for a route+lang. Exported so the
+ * prerender pass can produce identical output as this static writer.
+ */
+export function computeMeta(route, lang, seoEn, seoDe) {
+  const seo = lang === "de" ? pickSeo(seoDe, route.seoKey) : pickSeo(seoEn, route.seoKey);
+  const enUrl = BASE + route.en;
+  const deUrl = BASE + route.de;
+  const canonical = lang === "de" ? deUrl : enUrl;
+  return {
+    title: seo.title,
+    description: seo.description,
+    canonical,
+    ogUrl: canonical,
+    lang,
+    altLang: lang === "de" ? "en" : "de",
+    altHref: lang === "de" ? enUrl : deUrl,
+    xDefaultHref: enUrl,
+    ogLocale: lang === "de" ? "de_DE" : "en_US",
+    ogLocaleAlt: lang === "de" ? "en_US" : "de_DE",
+    enUrl,
+    deUrl,
+  };
+}
+
+export function rewriteHead(template, meta) {
+  const {
+    title, description, canonical, ogUrl, lang, altLang, altHref, xDefaultHref,
+    ogLocale, ogLocaleAlt,
+  } = meta;
   let html = template;
 
   // <html lang="…">
@@ -107,15 +103,13 @@ function rewriteHead(template, { title, description, canonical, ogUrl, lang, alt
   );
 
   // og:locale + alternate
-  const ogLocale = lang === "de" ? "de_DE" : "en_US";
-  const ogAlt = lang === "de" ? "en_US" : "de_DE";
   html = html.replace(
     /<meta\s+property="og:locale"\s+content="[^"]*"\s*\/?>/,
     `<meta property="og:locale" content="${ogLocale}" />`,
   );
   html = html.replace(
     /<meta\s+property="og:locale:alternate"\s+content="[^"]*"\s*\/?>/,
-    `<meta property="og:locale:alternate" content="${ogAlt}" />`,
+    `<meta property="og:locale:alternate" content="${ogLocaleAlt}" />`,
   );
 
   // og:title / og:description
@@ -149,19 +143,20 @@ function rewriteHead(template, { title, description, canonical, ogUrl, lang, alt
   return html;
 }
 
-function writeRouteFile(routePath, html) {
-  // Root EN "/" — dist/index.html already exists; overwrite in place.
-  if (routePath === "/") {
-    fs.writeFileSync(path.join(DIST, "index.html"), html);
-    return path.join(DIST, "index.html");
-  }
+export function routeOutputPath(routePath) {
+  if (routePath === "/") return path.join(DIST, "index.html");
   const clean = routePath.replace(/^\/+/, "");
-  const outDir = path.join(DIST, clean);
-  fs.mkdirSync(outDir, { recursive: true });
-  const outFile = path.join(outDir, "index.html");
+  return path.join(DIST, clean, "index.html");
+}
+
+function writeRouteFile(routePath, html) {
+  const outFile = routeOutputPath(routePath);
+  fs.mkdirSync(path.dirname(outFile), { recursive: true });
   fs.writeFileSync(outFile, html);
   return outFile;
 }
+
+export { routeMap, BASE, DIST, ROOT };
 
 function main() {
   const indexPath = path.join(DIST, "index.html");
@@ -174,39 +169,17 @@ function main() {
   const seoDe = loadSeo("de");
 
   let count = 0;
-  for (const r of routes) {
-    const enSeo = pick(seoEn, r.seoKey);
-    const deSeo = pick(seoDe, r.seoKey);
-    const enUrl = BASE + r.en;
-    const deUrl = BASE + r.de;
-
-    const enHtml = rewriteHead(template, {
-      title: enSeo.title,
-      description: enSeo.description,
-      canonical: enUrl,
-      ogUrl: enUrl,
-      lang: "en",
-      altLang: "de",
-      altHref: deUrl,
-      xDefaultHref: enUrl,
-    });
-    const deHtml = rewriteHead(template, {
-      title: deSeo.title,
-      description: deSeo.description,
-      canonical: deUrl,
-      ogUrl: deUrl,
-      lang: "de",
-      altLang: "en",
-      altHref: enUrl,
-      xDefaultHref: enUrl,
-    });
-
-    writeRouteFile(r.en, enHtml);
-    writeRouteFile(r.de, deHtml);
+  for (const r of routeMap) {
+    const enMeta = computeMeta(r, "en", seoEn, seoDe);
+    const deMeta = computeMeta(r, "de", seoEn, seoDe);
+    writeRouteFile(r.en, rewriteHead(template, enMeta));
+    writeRouteFile(r.de, rewriteHead(template, deMeta));
     count += 2;
   }
 
   console.log(`[static-meta] wrote ${count} route index.html files under dist/`);
 }
 
-main();
+// Only run when invoked directly (not when imported by prerender)
+const invokedDirectly = fileURLToPath(import.meta.url) === path.resolve(process.argv[1] || "");
+if (invokedDirectly) main();

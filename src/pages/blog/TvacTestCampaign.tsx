@@ -9,8 +9,7 @@ const TvacTestCampaign = () => {
 
   return (
     <BlogArticlePage
-      seoTitleKey={`${p}.seoTitle`}
-      seoDescriptionKey={`${p}.seoDescription`}
+      slug="tvac-test-campaign"
       categoryKey="blog.categories.engineeringGuide"
       titleKey={`${p}.title`}
     >
