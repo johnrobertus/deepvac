@@ -169,5 +169,13 @@
     "disclaimer": "Alle Marken, Namen, Logos, Insignien und sonstigen geschützten Kennzeichen verbleiben im Eigentum ihrer jeweiligen Inhaber. Quellenangaben dienen ausschließlich der Zuordnung und Identifikation.",
     "nasaDisclaimer": "Ausgewähltes Hintergrundmaterial stammt aus NASA-Medienbibliotheken und wird ausschließlich zu Illustrationszwecken verwendet. Eine Zugehörigkeit zu oder Billigung durch die NASA wird nicht impliziert.",
     "footerLink": "Medienquellen"
+  },
+  "languageBanner": {
+    "messageDe": "Diese Seite ist auch auf Deutsch verfügbar.",
+    "switchToDe": "Zur deutschen Version",
+    "messageEn": "This page is also available in English.",
+    "switchToEn": "Switch to English",
+    "dismiss": "Schließen",
+    "regionLabel": "Sprachvorschlag"
   }
 }
