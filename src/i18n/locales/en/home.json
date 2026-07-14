@@ -79,7 +79,7 @@
     "tSeries": {
       "title": "T Series TVAC",
       "subtitle": "Cubic Thermal Vacuum Chambers",
-      "description": "Cubic thermal vacuum chambers for qualification, validation, and environmental simulation of aerospace hardware. The T Series provides a standardized chamber platform for controlled thermal vacuum testing across research, institutional, and commercial space applications.",
+      "description": "Cubic thermal vacuum chambers for qualification, validation, and environmental simulation of aerospace hardware. Its cubic geometry provides a flat base plate and maximized usable floor area — ideal for fixtures, optical benches, and fast integration of planar-mounted hardware.",
       "overlays": [
         "Cubic Geometry",
         "Standard Series",
