@@ -9,6 +9,8 @@ import { Button } from "@/components/ui/button";
 import { Satellite, FlaskConical, Factory, Microscope } from "lucide-react";
 import { useLanguage } from "@/components/LanguageProvider";
 import { getHreflangs, getCanonical, localizedPath } from "@/lib/routes";
+import existFundingEn from "@/assets/exist-funding-en.jpg";
+import existFundingDe from "@/assets/exist-funding-de.png";
 
 const areaIcons = [Satellite, FlaskConical, Factory, Microscope];
 
