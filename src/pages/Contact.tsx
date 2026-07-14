@@ -174,9 +174,32 @@ const Contact = () => {
 
     setSending(true);
     try {
+      ensureTurnstileScript();
       let turnstileToken = "";
       if (window.turnstile && turnstileWidgetId.current) {
         turnstileToken = window.turnstile.getResponse(turnstileWidgetId.current) || "";
+      }
+      if (!turnstileToken) {
+        const deadline = Date.now() + 5000;
+        while (Date.now() < deadline) {
+          await new Promise((r) => setTimeout(r, 200));
+          if (window.turnstile && turnstileRef.current && !turnstileWidgetId.current) {
+            try {
+              turnstileWidgetId.current = window.turnstile.render(turnstileRef.current, {
+                sitekey: TURNSTILE_SITE_KEY, callback: () => {}, size: "invisible",
+              });
+            } catch { /* already rendered */ }
+          }
+          if (window.turnstile && turnstileWidgetId.current) {
+            turnstileToken = window.turnstile.getResponse(turnstileWidgetId.current) || "";
+            if (turnstileToken) break;
+          }
+        }
+      }
+      if (!turnstileToken) {
+        if (window.turnstile && turnstileWidgetId.current) { window.turnstile.reset(turnstileWidgetId.current); }
+        toast.error(tc("form.errors.submissionFailedDirect"));
+        return;
       }
       const { data, error } = await supabase.functions.invoke("send-inquiry", {
         body: {
