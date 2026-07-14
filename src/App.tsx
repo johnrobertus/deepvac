@@ -36,6 +36,7 @@ import CoolingSystems from "./pages/blog/CoolingSystems";
 import RetrofitVsReplacement from "./pages/blog/RetrofitVsReplacement";
 import AerospaceQualification from "./pages/blog/AerospaceQualification";
 import TvacCostDrivers from "./pages/blog/TvacCostDrivers";
+import TvacTestCampaign from "./pages/blog/TvacTestCampaign";
 import { ScrollToTop } from "./components/ScrollToTop";
 import TvacQuestionnaire from "./pages/TvacQuestionnaire";
 
@@ -75,6 +76,7 @@ const App = () => (
               <Route path="/resources/blog/retrofit-vs-replacement" element={<RetrofitVsReplacement />} />
               <Route path="/resources/blog/aerospace-qualification-testing" element={<AerospaceQualification />} />
               <Route path="/resources/blog/tvac-cost-drivers" element={<TvacCostDrivers />} />
+              <Route path="/resources/blog/tvac-test-campaign" element={<TvacTestCampaign />} />
               <Route path="/careers" element={<Careers />} />
               <Route path="/references" element={<References />} />
               <Route path="/contact" element={<Contact />} />
@@ -105,6 +107,7 @@ const App = () => (
               <Route path="/de/ressourcen/blog/retrofit-vs-neubeschaffung" element={<RetrofitVsReplacement />} />
               <Route path="/de/ressourcen/blog/raumfahrtqualifikation" element={<AerospaceQualification />} />
               <Route path="/de/ressourcen/blog/tvac-kostentreiber" element={<TvacCostDrivers />} />
+              <Route path="/de/ressourcen/blog/tvac-testkampagne" element={<TvacTestCampaign />} />
               <Route path="/de/karriere" element={<Careers />} />
               <Route path="/de/referenzen" element={<References />} />
               <Route path="/de/kontakt" element={<Contact />} />

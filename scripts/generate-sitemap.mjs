@@ -253,6 +253,16 @@ const routes = [
   },
   {
     group: "resources",
+    en: "/resources/blog/tvac-test-campaign", de: "/de/ressourcen/blog/tvac-testkampagne",
+    priority: 0.5, changefreq: "monthly",
+    sources: [
+      "src/pages/blog/TvacTestCampaign.tsx",
+      "src/i18n/locales/en/blog.json",
+      "src/i18n/locales/de/blog.json",
+    ],
+  },
+  {
+    group: "resources",
     en: "/careers", de: "/de/karriere",
     priority: 0.5, changefreq: "monthly",
     sources: [
