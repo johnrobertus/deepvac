@@ -34,6 +34,7 @@ export const routeMap: readonly RouteEntry[] = [
   { en: "/resources/blog/retrofit-vs-replacement", de: "/de/ressourcen/blog/retrofit-vs-neubeschaffung" },
   { en: "/resources/blog/aerospace-qualification-testing", de: "/de/ressourcen/blog/raumfahrtqualifikation" },
   { en: "/resources/blog/tvac-cost-drivers", de: "/de/ressourcen/blog/tvac-kostentreiber" },
+  { en: "/resources/blog/tvac-test-campaign", de: "/de/ressourcen/blog/tvac-testkampagne" },
   { en: "/careers", de: "/de/karriere" },
   { en: "/references", de: "/de/referenzen" },
   { en: "/contact", de: "/de/kontakt" },

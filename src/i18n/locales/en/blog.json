@@ -278,6 +278,76 @@
           }
         },
         "conclusion": "The honest answer to 'what does a thermal vacuum chamber cost' is: it depends on seven decisions that you control. The fastest route to a realistic budget figure is a structured requirements definition — our technical TVAC questionnaire walks through exactly these parameters and gives our engineering team what it needs to prepare a substantiated budgetary quotation."
+      },
+      "tvacTestCampaign": {
+        "title": "Inside a Thermal Vacuum Test Campaign: From Test Plan to Data Package",
+        "description": "What actually happens between 'we need a TVAC test' and a signed-off data package — the six phases of a campaign, and what to prepare as a customer.",
+        "seoTitle": "How a TVAC Test Campaign Works: The Six Phases | Deepvac",
+        "seoDescription": "From requirements and test plan through pump-down, thermal cycling, and monitoring to the final data package — how a thermal vacuum test campaign is structured and what customers should prepare.",
+        "intro": "For teams testing hardware under thermal vacuum for the first time, the campaign itself is often a black box: hardware goes in, weeks pass, a report comes out. In reality, a well-run TVAC campaign follows a clear structure — and most delays and surprises trace back to steps that were skipped or compressed at the beginning. This is what the process looks like, phase by phase, and what you can prepare on your side to keep it on schedule.",
+        "sections": {
+          "requirements": {
+            "title": "1. Requirements and test plan",
+            "content": "Everything downstream is defined here: qualification or acceptance levels, temperature extremes and dwell times, number of cycles, pressure requirements, success criteria, and abort criteria. A test plan that leaves these open forces decisions under time pressure later — usually with the chamber already booked.",
+            "points": [
+              "Define pass/fail and abort criteria before the campaign, not during it.",
+              "Derive levels and durations from the applicable standard or mission requirements, with margins agreed explicitly.",
+              "Clarify early which data, sampling rates, and formats the final report must contain."
+            ]
+          },
+          "setup": {
+            "title": "2. Test setup and instrumentation",
+            "content": "The test item is integrated with its fixturing, thermocouples and sensors are placed and verified, harnessing is routed through feedthroughs, and the complete setup is checked against the interface definition. Sensor placement decided here determines what the data can prove later.",
+            "points": [
+              "Agree sensor positions against the thermal model — the reference points must match the analysis.",
+              "Verify every signal end-to-end before closing the chamber; a dead channel found under vacuum costs a repressurization.",
+              "Document the as-built configuration with photos before the door closes."
+            ]
+          },
+          "pumpdown": {
+            "title": "3. Pump-down and bake-out",
+            "content": "After closing, the chamber is evacuated in stages while pressure, leak behavior, and outgassing are monitored. Depending on cleanliness requirements, a bake-out phase drives residual moisture and volatiles out of the setup before the thermal program starts.",
+            "points": [
+              "Pump-down time depends on the setup's outgassing load, not just chamber size — cables, adhesives, and composites matter.",
+              "Contamination-sensitive campaigns may add witness samples or quartz crystal monitoring."
+            ]
+          },
+          "cycling": {
+            "title": "4. Thermal cycling and dwells",
+            "content": "The core of the campaign: the test item is driven through the specified temperature profile — transitions, hot and cold dwells, functional tests at the extremes. Stable, reproducible control is what turns days of chamber time into valid qualification data.",
+            "points": [
+              "Functional checks at temperature extremes should be scripted and rehearsed in advance.",
+              "Dwell criteria (stabilization definitions) must be agreed before the test — they define when the clock starts."
+            ]
+          },
+          "monitoring": {
+            "title": "5. Monitoring and anomaly handling",
+            "content": "Campaigns run around the clock. Continuous monitoring, defined alarm thresholds, and a clear escalation path decide whether an anomaly costs an hour or the campaign. This is also where automated control systems and remote access pay for themselves.",
+            "points": [
+              "Agree who decides what when a limit is exceeded at 3 a.m. — before the campaign starts.",
+              "Log everything; anomalies are often explained by data from hours before the event."
+            ]
+          },
+          "datapackage": {
+            "title": "6. Return to ambient and data package",
+            "content": "Controlled repressurization and warm-up protect the hardware at the end just as the profile protected it during the test. The campaign closes with a structured data package: profiles, sensor data, events, deviations, and the assessment against the success criteria defined in phase one.",
+            "points": [
+              "The report should be traceable back to the test plan — requirement by requirement.",
+              "Raw data belongs to the deliverable; summaries alone limit later analysis."
+            ]
+          },
+          "prepare": {
+            "title": "What to prepare as a customer",
+            "content": "The customer side determines campaign speed more than most teams expect. The items below are the usual sources of delay — all of them avoidable.",
+            "factors": [
+              "A complete interface list: signals, supplies, mechanical mounts, and thermal reference points.",
+              "Hardware that is vacuum-compatible and cleaned to the agreed level, with materials documented.",
+              "Operating procedures for functional tests, executable by the test team or your engineer on site.",
+              "A decision-maker reachable for the abort/continue calls."
+            ]
+          }
+        },
+        "conclusion": "A TVAC campaign is won in the first phase: a precise test plan, agreed criteria, and a complete interface definition turn chamber time into evidence instead of surprises. Our technical TVAC questionnaire covers exactly these points — whether the test runs on your infrastructure or through our testing services."
       }
     }
   }
