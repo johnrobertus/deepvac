@@ -373,7 +373,10 @@ const Contact = () => {
                   </div>
                 </div>
               </form>
+
+              <QuestionnaireCard />
             </div>
+
 
             <div className="space-y-6">
               <div className="bento-card rounded-lg p-6 space-y-6">
