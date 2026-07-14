@@ -612,7 +612,7 @@ async function handleQuestionnaire(
       status: "failed", reason: `resend_error_${res.status}`,
       email, payload_hash: payloadHash, source,
     });
-    return new Response(JSON.stringify({ error: "Failed to send email", details: result }),
+    return new Response(JSON.stringify({ error: "Failed to send email" }),
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } });
   }
 
