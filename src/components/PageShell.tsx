@@ -76,6 +76,7 @@ export function CTABand({
   description?: string;
   children?: ReactNode;
 }) {
+  const { t } = useTranslation("common");
   return (
     <section className="relative py-16 md:py-24 px-6 bg-surface border-t border-blue/20">
       <div className="container max-w-4xl text-center space-y-6">
@@ -84,6 +85,18 @@ export function CTABand({
           <p className="text-section-lead mx-auto">{description}</p>
         )}
         {children && <div className="pt-4 flex flex-col sm:flex-row flex-wrap justify-center gap-4">{children}</div>}
+        <p className="text-sm text-gray pt-2">
+          {t("bookCall.inlinePrompt")}{" "}
+          <a
+            href={CALENDLY_TECHNICAL_CALL_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 text-gray hover:text-sand underline underline-offset-4 transition-colors"
+          >
+            {t("bookCall.linkLabel")}
+            <ArrowUpRight className="w-3.5 h-3.5" aria-hidden="true" />
+          </a>
+        </p>
       </div>
     </section>
   );
