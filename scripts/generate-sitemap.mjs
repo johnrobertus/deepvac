@@ -243,6 +243,16 @@ const routes = [
   },
   {
     group: "resources",
+    en: "/resources/blog/tvac-cost-drivers", de: "/de/ressourcen/blog/tvac-kostentreiber",
+    priority: 0.5, changefreq: "monthly",
+    sources: [
+      "src/pages/blog/TvacCostDrivers.tsx",
+      "src/i18n/locales/en/blog.json",
+      "src/i18n/locales/de/blog.json",
+    ],
+  },
+  {
+    group: "resources",
     en: "/careers", de: "/de/karriere",
     priority: 0.5, changefreq: "monthly",
     sources: [

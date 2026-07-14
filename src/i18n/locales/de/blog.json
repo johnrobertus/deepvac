@@ -13,6 +13,11 @@
       "engineeringGuide": "Engineering-Leitfaden",
       "decisionSupport": "Entscheidungshilfe"
     },
+    "labels": {
+      "advantages": "Vorteile",
+      "constraints": "Grenzen",
+      "takeaway": "Fazit"
+    },
     "articles": {
       "coolingSystems": {
         "title": "Kühlsysteme für Thermovakuumkammern",
@@ -192,6 +197,87 @@
           }
         },
         "conclusion": "Die Raumfahrtqualifikationsprüfung erfordert ein gut charakterisiertes, ordnungsgemäß instrumentiertes Thermovakuumsystem. Kammerauswahl und Testplanung sollten früh im Programm beginnen, um sicherzustellen, dass die Anlage valide Qualifikationsdaten innerhalb der Termin- und Budgetvorgaben liefern kann."
+      },
+      "tvacCostDrivers": {
+        "title": "Was kostet eine Thermovakuumkammer? Die sieben Kostentreiber",
+        "description": "Sieben Engineering-Entscheidungen bestimmen den Großteil des Preises eines TVAC-Systems. Wer sie kennt, spezifiziert, was die Testkampagne wirklich braucht.",
+        "seoTitle": "Thermovakuumkammer: Kosten & die sieben Preistreiber | Deepvac",
+        "seoDescription": "Was kostet eine Thermovakuumkammer? Volumen, Thermalkonzept, Vakuumniveau, Schnittstellen, Steuerung, Dokumentation und Services – ein praxisnaher Leitfaden zu den sieben Kostentreibern.",
+        "intro": "Für Thermovakuumkammern gibt es keinen Listenpreis – und wer einen nennt, ohne Fragen zu stellen, rät. Je nach Anforderungen können zwei Systeme mit gleichem Nennvolumen um ein Mehrfaches im Preis auseinanderliegen. Die gute Nachricht: Der Großteil dieser Spanne geht auf sieben Engineering-Entscheidungen zurück – und jede davon liegt in Ihrer Hand. Wer diese Treiber kennt, spezifiziert, was die Testkampagne tatsächlich braucht, und bezahlt nicht für Fähigkeiten, die sie nicht benötigt.",
+        "sections": {
+          "volume": {
+            "title": "1. Kammervolumen und Geometrie",
+            "content": "Der Behälter ist das Fundament der Kostenstruktur. Wandstärken, Flanschgrößen, Türmechanik, Fertigungsaufwand und die zum Evakuieren nötige Pumpleistung skalieren mit der Größe. Mindestens so wichtig wie das Bruttovolumen ist das nutzbare Volumen: der Raum, der nach Einbau von Shrouds, Thermalplatten und Vorrichtungen tatsächlich für den Prüfling bleibt.",
+            "points": [
+              "Spezifizieren Sie die Prüflings-Hüllkontur und die nötigen Freiräume – nicht eine runde Kammergröße.",
+              "Kubische Geometrien maximieren die planare Montagefläche; zylindrische Behälter sind bei größeren Volumina strukturell effizient.",
+              "Ein Sprung in der Kammerklasse bedeutet oft auch einen Sprung bei Pump-, Thermal- und Handling-Systemen."
+            ]
+          },
+          "thermal": {
+            "title": "2. Temperaturbereich und Thermalkonzept",
+            "content": "Die Wahl zwischen direkter LN₂-Kühlung, geschlossener GN₂-Umwälzung und mechanischer Kühlung ist eine der größten Einzelentscheidungen – in beide Richtungen. Sie bestimmt die erreichbare Minimaltemperatur, Rampenraten und Homogenität und verteilt die Kosten zwischen Investition und Betrieb: LN₂-basierte Konzepte verbrauchen im Betrieb Flüssigstickstoff, mechanische Kühlung verlagert die Kosten in die Maschine selbst.",
+            "points": [
+              "Fragen Sie, welche Minimaltemperatur Ihre Qualifikationslevel wirklich erfordern – jede zusätzlichen 20 K Marge kosten echtes Geld.",
+              "Hohe Rampenraten und enge Homogenitätsanforderungen treiben Shroud-Auslegung, Strömungsarchitektur und Regelungskomplexität.",
+              "Denken Sie an die Auslastung: Bei häufigen Kampagnen dominiert der LN₂-Verbrauch die Lebenszykluskosten, bei gelegentlicher Nutzung die Investition."
+            ]
+          },
+          "vacuum": {
+            "title": "3. Vakuumniveau und Pumparchitektur",
+            "content": "Der Schritt vom 10⁻⁵- in den 10⁻⁶-mbar-Bereich – und von dort Richtung 10⁻⁷ mbar – verändert die Pumparchitektur, die Anforderungen an Werkstoffe und Oberflächenbehandlung sowie die Dichtheitsanforderungen jeder Verbindung und Durchführung. Kontaminationsempfindliche Hardware bringt zusätzlich ausgasungsarme Materialauswahl und Ausheizfähigkeit ins Spiel.",
+            "points": [
+              "Leiten Sie den erforderlichen Enddruck aus Teststandard und Hardware-Empfindlichkeit ab – nicht aus Gewohnheit.",
+              "Reinheitsanforderungen (Ausgasung, Partikel) können die Kosten ebenso beeinflussen wie die Druckangabe selbst.",
+              "Jede Durchführung und jede Dichtung ist Teil des Vakuumbudgets – mehr Schnittstellen bedeuten mehr Engineering."
+            ]
+          },
+          "interfaces": {
+            "title": "4. Durchführungen, Schnittstellen und Vorrichtungen",
+            "content": "Elektrische, HF-, optische und Fluid-Durchführungen, Thermalplatten, Schaugläser und kundenspezifische Vorrichtungen machen aus einem Behälter eine Testumgebung. Einzeln sind es kleine Positionen, in Summe nicht – und eine spätere Nachrüstung ist deutlich teurer als eine Vorhaltung im ursprünglichen Design.",
+            "points": [
+              "Listen Sie früh jedes Signal, jede Versorgung und jede mechanische Schnittstelle Ihres Prüflings auf.",
+              "Planen Sie sinnvolle Reserven an Durchführungsflanschen – Blindflansche sind günstig, neue Durchbrüche nicht.",
+              "Kundenspezifische Vorrichtungen und Adapterstrukturen sind Engineering-Aufwand, keine Katalogware."
+            ]
+          },
+          "controls": {
+            "title": "5. Steuerungssystem und Datenerfassung",
+            "content": "Die Spanne reicht von handbetätigten Ventilen mit Schreiber bis zum vollautomatisierten SPS-System mit Rezeptursteuerung, Verriegelungen, Datenerfassung und Fernzugriff. Automatisierung kostet zunächst Geld und zahlt es über Reproduzierbarkeit, unbeaufsichtigten Betrieb und Bedienerzeit zurück – gerade bei mehrtägigen Zyklierkampagnen.",
+            "points": [
+              "Reproduzierbare, dokumentierte Testdurchführung ist eine Eigenschaft des Steuerungssystems, keine Bedienerqualität.",
+              "Schnittstellen wie OPC UA oder Modbus sind relevant, wenn das System in bestehende Infrastruktur eingebunden werden muss.",
+              "Kanalzahl und Logging-Anforderungen der Datenerfassung sollten aus dem Testplan kommen."
+            ]
+          },
+          "documentation": {
+            "title": "6. Dokumentation und Qualifikationsniveau",
+            "content": "Ein Forschungssystem und ein System für die Raumfahrtqualifikation können dieselbe Hardware teilen und sich im Preis dennoch deutlich unterscheiden – der Unterschied ist Dokumentation: Werks- und Standortabnahme (FAT/SAT), Kalibrierzertifikate, Materialrückverfolgbarkeit und Konformitätsdokumentation. Dieser Treiber wird in frühen Budgets regelmäßig unterschätzt.",
+            "points": [
+              "Klären Sie, welche Abnahmetests, Zertifikate und Rückverfolgbarkeitsstufen Ihr Qualitätssystem verlangt.",
+              "Dokumentationsanforderungen gehören in die Spezifikation – nicht in einen Änderungsantrag nach Bestellung."
+            ]
+          },
+          "services": {
+            "title": "7. Services rund um das System",
+            "content": "Installation, Inbetriebnahme, Bedienerschulung, Wartung und die spätere Erweiterbarkeit gehören zum realen Kostenbild. Eine Kammer, die fünfzehn Jahre läuft, wird einmal gekauft, aber durchgehend betrieben – Supportstruktur und Upgrade-Pfade bestimmen, was diese Jahre kosten.",
+            "points": [
+              "Fragen Sie, wie das System in Betrieb genommen wird, wer die Bediener schult und wie Wartung aussieht.",
+              "Eine retrofit-freundliche Architektur schützt die Investition, wenn Anforderungen wachsen."
+            ]
+          },
+          "budget": {
+            "title": "Das Budget im Griff behalten",
+            "content": "Der wirksamste Kostenhebel ist eine präzise Spezifikation. Teuer werden Systeme, die 'zur Sicherheit' um Maximalwerte herum spezifiziert werden statt um die tatsächliche Testaufgabe.",
+            "factors": [
+              "Spezifizieren Sie von den Testanforderungen aufwärts, nicht vom größten denkbaren Anwendungsfall abwärts.",
+              "Nutzen Sie eine standardisierte Plattform, wo sie passt, und reservieren Sie Custom-Engineering für die Parameter, die es wirklich erfordern.",
+              "Bewerten Sie Lebenszykluskosten – LN₂-Verbrauch, Wartung, Bedienerzeit – neben dem Kaufpreis.",
+              "Definieren Sie Dokumentations- und Abnahmeanforderungen von Anfang an."
+            ]
+          }
+        },
+        "conclusion": "Die ehrliche Antwort auf 'Was kostet eine Thermovakuumkammer?' lautet: Es hängt von sieben Entscheidungen ab, die Sie steuern. Der schnellste Weg zu einer belastbaren Budgetzahl ist eine strukturierte Anforderungsdefinition – unser technischer TVAC-Fragebogen führt genau durch diese Parameter und gibt unserem Engineering-Team, was es für ein fundiertes Budgetangebot braucht."
       }
     }
   }
