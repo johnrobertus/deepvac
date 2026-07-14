@@ -26,6 +26,8 @@ export function HeroSection() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [nextIndex, setNextIndex] = useState<number | null>(null);
   const [transitioning, setTransitioning] = useState(false);
+  const [videosMounted, setVideosMounted] = useState(false);
+  const [reducedMotion, setReducedMotion] = useState(false);
 
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
   const fadeTimerRef = useRef<number | null>(null);
