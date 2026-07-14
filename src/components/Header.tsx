@@ -64,6 +64,9 @@ function DropdownMenu({
   t: (key: string) => string;
 }) {
   const ref = useRef<HTMLDivElement>(null);
+  const triggerRef = useRef<HTMLButtonElement>(null);
+  const itemRefs = useRef<Array<HTMLAnchorElement | null>>([]);
+  const pendingFocusRef = useRef<"first" | "last" | null>(null);
   const active = isActivePath(pathname, baseHref, lang);
 
   useEffect(() => {
@@ -72,24 +75,83 @@ function DropdownMenu({
         onClose();
       }
     }
-    function handleEscape(e: KeyboardEvent) {
-      if (e.key === "Escape") onClose();
-    }
     if (open) {
       document.addEventListener("mousedown", handleClickOutside);
-      document.addEventListener("keydown", handleEscape);
     }
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
-      document.removeEventListener("keydown", handleEscape);
     };
   }, [open, onClose]);
+
+  // After opening via keyboard, move focus to the requested item
+  useEffect(() => {
+    if (open && pendingFocusRef.current) {
+      const target = pendingFocusRef.current === "last" ? items.length - 1 : 0;
+      itemRefs.current[target]?.focus();
+      pendingFocusRef.current = null;
+    }
+  }, [open, items.length]);
+
+  const closeAndFocusTrigger = () => {
+    onClose();
+    triggerRef.current?.focus();
+  };
+
+  const handleTriggerKeyDown = (e: React.KeyboardEvent<HTMLButtonElement>) => {
+    if (e.key === "ArrowDown" || e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      pendingFocusRef.current = "first";
+      if (!open) onToggle();
+      else itemRefs.current[0]?.focus();
+    } else if (e.key === "ArrowUp") {
+      e.preventDefault();
+      pendingFocusRef.current = "last";
+      if (!open) onToggle();
+      else itemRefs.current[items.length - 1]?.focus();
+    } else if (e.key === "Escape" && open) {
+      e.preventDefault();
+      onClose();
+    }
+  };
+
+  const handleItemKeyDown = (e: React.KeyboardEvent<HTMLAnchorElement>, i: number) => {
+    switch (e.key) {
+      case "ArrowDown":
+        e.preventDefault();
+        itemRefs.current[(i + 1) % items.length]?.focus();
+        break;
+      case "ArrowUp":
+        e.preventDefault();
+        itemRefs.current[(i - 1 + items.length) % items.length]?.focus();
+        break;
+      case "Home":
+        e.preventDefault();
+        itemRefs.current[0]?.focus();
+        break;
+      case "End":
+        e.preventDefault();
+        itemRefs.current[items.length - 1]?.focus();
+        break;
+      case "Escape":
+        e.preventDefault();
+        closeAndFocusTrigger();
+        break;
+      case "Tab":
+        // Let natural tab order proceed; just close the menu
+        onClose();
+        break;
+      default:
+        break;
+    }
+  };
 
   return (
     <div ref={ref} className="relative">
       <button
+        ref={triggerRef}
         type="button"
         onClick={onToggle}
+        onKeyDown={handleTriggerKeyDown}
         aria-expanded={open}
         aria-haspopup="menu"
         className={cn(
@@ -103,7 +165,11 @@ function DropdownMenu({
       </button>
 
       {open && (
-        <div className="absolute left-0 top-full z-50 mt-3 min-w-[240px] overflow-hidden rounded-lg border border-gray/15 border-t-2 border-t-blue bg-surface shadow-lg animate-fade-in">
+        <div
+          role="menu"
+          aria-label={label}
+          className="absolute left-0 top-full z-50 mt-3 min-w-[240px] overflow-hidden rounded-lg border border-gray/15 border-t-2 border-t-blue bg-surface shadow-lg animate-fade-in"
+        >
           <div className="py-2">
             {items.map((item, i) => {
               const locHref = localizedPath(item.href, lang);
@@ -113,9 +179,13 @@ function DropdownMenu({
                 <Link
                   key={item.href}
                   to={locHref}
+                  ref={(el) => { itemRefs.current[i] = el; }}
+                  role="menuitem"
+                  tabIndex={-1}
                   onClick={onClose}
+                  onKeyDown={(e) => handleItemKeyDown(e, i)}
                   className={cn(
-                    "block px-4 py-2.5 text-[15px] transition-colors duration-150",
+                    "block px-4 py-2.5 text-[15px] transition-colors duration-150 focus-visible:outline-none focus-visible:bg-surface-raised focus-visible:text-sand",
                     itemActive ? "bg-surface-raised text-sand" : "text-gray hover:bg-surface-raised hover:text-sand",
                     i === 0 && !itemActive && "font-medium text-sand",
                   )}
