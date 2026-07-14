@@ -46,7 +46,9 @@ const Team = () => {
         ))}
       </Helmet>
       <PageShell>
-        <PageHero eyebrow={t("eyebrow")} title={t("title")} description={t("description")} />
+        <PageHero eyebrow={t("eyebrow")} title={t("title")} description={t("description")}>
+          <p className="text-body-lg text-gray">{t("origin")}</p>
+        </PageHero>
 
         <Section>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
