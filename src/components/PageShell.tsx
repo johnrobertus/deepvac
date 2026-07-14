@@ -1,5 +1,8 @@
 import { cn } from "@/lib/utils";
 import { ReactNode } from "react";
+import { useTranslation } from "react-i18next";
+import { ArrowUpRight } from "lucide-react";
+import { CALENDLY_TECHNICAL_CALL_URL } from "@/lib/external-links";
 
 interface PageShellProps {
   children: ReactNode;
