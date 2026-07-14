@@ -113,7 +113,7 @@
       "eyebrow": "Kubische Thermovakuumkammern",
       "title": "T-Serie TVAC",
       "description": "Kompakte kubische Thermovakuumkammer-Plattformen für reproduzierbare Umweltsimulation, Subsystem-Validierung und Laborworkflows. Die T-Serie kombiniert kontrollierte thermische und Vakuumbedingungen mit einer standardisierten Architektur für Forschungs- und Qualifikationsanwendungen.",
-      "descriptionExtended": "Die kubische Kammergeometrie ermöglicht einfachen Nutzlastzugang, effiziente Innenraumnutzung und flexible Vorrichtungsmontage. Standardkonfigurationen unterstützen Vakuumleistung bis {{vacuum}} und thermischen Betrieb bis {{minTemp}}, abhängig vom gewählten Systemaufbau.",
+      "descriptionExtended": "Die kubische Geometrie bietet eine ebene Grundplatte und maximale nutzbare Stellfläche — ideal für Vorrichtungen, optische Bänke und die schnelle Integration planar montierter Hardware. Standardkonfigurationen unterstützen Vakuumleistung bis {{vacuum}} und thermischen Betrieb bis {{minTemp}}, abhängig vom gewählten Systemaufbau.",
       "features": [
         {
           "label": "Kubische Geometrie",
@@ -137,7 +137,7 @@
       "eyebrow": "Zylindrische Thermovakuumkammern",
       "title": "C-Serie TVAC",
       "description": "Zylindrische Thermovakuumkammer-Plattformen für reproduzierbare Umweltsimulation, Subsystem-Qualifikation und robusten Laborbetrieb. Die C-Serie kombiniert kontrollierte thermische und Vakuumbedingungen mit einer standardisierten Architektur für Forschungs- und Qualifikationsanwendungen.",
-      "descriptionExtended": "Die zylindrische Kammergeometrie unterstützt klassische Vakuumkammer-Layouts, effiziente Shroud-Integration und einen strukturell effizienten Formfaktor. Standardkonfigurationen unterstützen Vakuumleistung bis {{vacuum}} und thermischen Betrieb bis {{minTemp}}, abhängig vom gewählten Systemaufbau.",
+      "descriptionExtended": "Die zylindrische Geometrie bietet einen inhärent druckstabilen Behälter mit effizienter, homogener Shroud-Abdeckung — ideal für größere Volumina und radiative Thermal-Balance-Tests. Standardkonfigurationen unterstützen Vakuumleistung bis {{vacuum}} und thermischen Betrieb bis {{minTemp}}, abhängig vom gewählten Systemaufbau.",
       "features": [
         {
           "label": "Zylindrische Geometrie",
@@ -173,7 +173,7 @@
     "beyondStandard": {
       "eyebrow": "Über den Standard hinaus",
       "title": "Benötigen Sie eine Custom-Konfiguration?",
-      "description": "Wenn Testanforderungen den Rahmen der Standardplattform übersteigen – einschließlich nicht-standardmäßiger Geometrien, spezialisierter Durchführungskonfigurationen oder anwendungsspezifischer Thermalprofile – bietet Deepvac vollständig kundenspezifisch konstruierte TVAC-Lösungen."
+      "description": "Wenn Testanforderungen den Rahmen der Standardplattform übersteigen – einschließlich nicht-standardmäßiger Geometrien, spezialisierter Durchführungskonfigurationen, anwendungsspezifischer Thermalprofile, Volumina unterhalb und oberhalb der Standard-Serie oder Enddrücken bis in den 10⁻⁷-mbar-Bereich – bietet Deepvac vollständig kundenspezifisch konstruierte TVAC-Lösungen."
     },
     "brochure": {
       "eyebrow": "Standard-Serie-Broschüre herunterladen",
@@ -199,6 +199,10 @@
         {
           "q": "Wie werden Standard-Serie-Kammern geliefert und in Betrieb genommen?",
           "a": "Deepvac bietet vollständige Liefer-, Installations- und Inbetriebnahmeunterstützung einschließlich Systemintegration, Abnahmeprüfung und Bedienereinweisung."
+        },
+        {
+          "q": "Erreichen die Kammern auch Drücke unter 1 × 10⁻⁶ mbar?",
+          "a": "Ja. Die Standard-Serie ist mit ≤ 1 × 10⁻⁶ mbar spezifiziert, was die meisten Qualifikationsabläufe abdeckt. Für Anwendungen mit niedrigeren Enddrücken sind Konfigurationen bis in den 10⁻⁷-mbar-Bereich mit angepassten Pumpsystemen möglich — projektspezifisch abgestimmt."
         }
       ]
     },
@@ -231,7 +235,7 @@
   "customTvac": {
     "eyebrow": "Produkte — Custom TVAC",
     "title": "Anwendungsspezifisches Thermovakuum-Engineering",
-    "description": "Wenn standardmäßige Kammerplattformen Ihre Testanforderungen nicht erfüllen können, entwickelt Deepvac vollständig kundenspezifische Thermovakuumsysteme – vom Konzept bis zur Inbetriebnahme um Ihre spezifische Geometrie, Ihr Thermalprofil, Ihre Instrumentierung und Ihre Integrationsbedingungen herum konstruiert.",
+    "description": "Wenn standardmäßige Kammerplattformen Ihre Testanforderungen nicht erfüllen können, entwickelt Deepvac vollständig kundenspezifische Thermovakuumsysteme – vom Konzept bis zur Inbetriebnahme um Ihre spezifische Geometrie, Ihr Thermalprofil, Ihre Instrumentierung und Ihre Integrationsbedingungen herum konstruiert. Custom-Konfigurationen decken Volumina unterhalb und oberhalb der Standard-Serie sowie Enddrücke bis in den 10⁻⁷-mbar-Bereich ab.",
     "heroCaption": "Kundenspezifische Thermovakuumkammer – entwickelt, integriert und in Betrieb genommen von Deepvac.",
     "projectDrivers": {
       "eyebrow": "Projekttreiber",

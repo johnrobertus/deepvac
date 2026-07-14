@@ -9,6 +9,8 @@ import { Button } from "@/components/ui/button";
 import { Satellite, FlaskConical, Factory, Microscope } from "lucide-react";
 import { useLanguage } from "@/components/LanguageProvider";
 import { getHreflangs, getCanonical, localizedPath } from "@/lib/routes";
+import existFundingEn from "@/assets/exist-funding-en.jpg";
+import existFundingDe from "@/assets/exist-funding-de.png";
 
 const areaIcons = [Satellite, FlaskConical, Factory, Microscope];
 
@@ -82,6 +84,29 @@ const References = () => {
             ))}
           </div>
         </Section>
+
+        <Section>
+          <SectionHeader
+            eyebrow={t("origin.eyebrow")}
+            title={t("origin.title")}
+            className="mb-10"
+          />
+          <div className="bento-card rounded-lg overflow-hidden grid grid-cols-1 md:grid-cols-2 gap-0">
+            <div className="p-8 md:p-10 flex items-center">
+              <p className="text-body whitespace-normal">{t("origin.description")}</p>
+            </div>
+            <div className="bg-white/95 p-6 flex items-center justify-center">
+              <img
+                src={lang === "de" ? existFundingDe : existFundingEn}
+                alt={t("origin.altText")}
+                className="w-full h-auto max-w-md block"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </Section>
+
+
 
 
         <CTABand title={t("cta.title")} description={t("cta.description")}>

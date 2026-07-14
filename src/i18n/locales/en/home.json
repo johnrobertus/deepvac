@@ -7,8 +7,7 @@
       "CONTROL & AUTOMATION",
       "RETROFIT & SERVICE",
       "LONG-TERM SUPPORT"
-    ],
-    "source": "Source: NASA"
+    ]
   },
   "trustBar": {
     "items": [
@@ -80,7 +79,7 @@
     "tSeries": {
       "title": "T Series TVAC",
       "subtitle": "Cubic Thermal Vacuum Chambers",
-      "description": "Cubic thermal vacuum chambers for qualification, validation, and environmental simulation of aerospace hardware. The T Series provides a standardized chamber platform for controlled thermal vacuum testing across research, institutional, and commercial space applications.",
+      "description": "Cubic thermal vacuum chambers for qualification, validation, and environmental simulation of aerospace hardware. Its cubic geometry provides a flat base plate and maximized usable floor area — ideal for fixtures, optical benches, and fast integration of planar-mounted hardware.",
       "overlays": [
         "Cubic Geometry",
         "Standard Series",
@@ -105,12 +104,12 @@
           "value": "−190 °C to +150 °C*"
         }
       },
-      "note": "*Depending on the selected thermal concept, including direct LN₂ cooling, GN₂ circulation, or mechanical refrigeration."
+      "note": "*Temperature range depending on the selected thermal concept (direct LN₂ cooling, GN₂ circulation, or mechanical refrigeration). Lower ultimate pressures down to the 10⁻⁷ mbar range are available depending on the pumping configuration."
     },
     "cSeries": {
       "title": "C Series TVAC",
       "subtitle": "Cylindrical Thermal Vacuum Chambers",
-      "description": "Cylindrical thermal vacuum chambers for qualification, validation, and environmental simulation of aerospace hardware. The C Series provides a standardized chamber platform for controlled thermal vacuum testing across research, institutional, and commercial space applications.",
+      "description": "Cylindrical thermal vacuum chambers for qualification, validation, and environmental simulation of aerospace hardware. Its cylindrical geometry provides an inherently pressure-stable vessel with efficient, homogeneous shroud coverage — ideal for larger volumes and radiative thermal balance testing.",
       "overlays": [
         "Cylindrical Geometry",
         "Standard Series",
@@ -135,7 +134,7 @@
           "value": "−190 °C to +150 °C*"
         }
       },
-      "note": "*Depending on the selected thermal concept, including direct LN₂ cooling, GN₂ circulation, or mechanical refrigeration."
+      "note": "*Temperature range depending on the selected thermal concept (direct LN₂ cooling, GN₂ circulation, or mechanical refrigeration). Lower ultimate pressures down to the 10⁻⁷ mbar range are available depending on the pumping configuration."
     },
     "custom": {
       "title": "Custom TVAC",
@@ -154,7 +153,7 @@
         },
         "volume": {
           "label": "Volume",
-          "value": "Extended beyond standard range"
+          "value": "Below and beyond the standard range"
         },
         "temperature": {
           "label": "Temperature",
@@ -165,7 +164,7 @@
           "value": "Project-specific subsystems"
         }
       },
-      "note": "Custom systems can include dedicated interfaces, cryogenic shrouds, infrared heating, additional diagnostics, and other application-specific system extensions."
+      "note": "Custom systems can include dedicated interfaces, cryogenic shrouds, infrared heating, additional diagnostics, volumes below and above the standard series, and ultimate pressures down to the 10⁻⁷ mbar range."
     }
   },
   "applications": {
