@@ -36,7 +36,7 @@ const RetrofitVsReplacement = () => {
       </Section>
 
       <div className="border-t border-gray/15 pt-6 space-y-2">
-        <h2 className="text-lg font-medium text-sand">Takeaway</h2>
+        <h2 className="text-lg font-medium text-sand">{t("blog.labels.takeaway")}</h2>
         <p className="text-sm">{t(`${p}.conclusion`)}</p>
       </div>
     </BlogArticlePage>

@@ -13,6 +13,11 @@
       "engineeringGuide": "Engineering Guide",
       "decisionSupport": "Decision Support"
     },
+    "labels": {
+      "advantages": "Advantages",
+      "constraints": "Constraints",
+      "takeaway": "Takeaway"
+    },
     "articles": {
       "coolingSystems": {
         "title": "Cooling Systems for Thermal Vacuum Chambers",
@@ -192,6 +197,87 @@
           }
         },
         "conclusion": "Aerospace qualification testing demands a well-characterized, properly instrumented thermal vacuum system. Chamber selection and test planning should begin early in the program to ensure the facility can deliver valid qualification data within schedule and budget constraints."
+      },
+      "tvacCostDrivers": {
+        "title": "What Drives the Cost of a Thermal Vacuum Chamber?",
+        "description": "Seven engineering decisions determine most of a TVAC system's price. Understanding them helps you specify what your test campaign actually needs.",
+        "seoTitle": "TVAC Chamber Cost: The Seven Price Drivers | Deepvac",
+        "seoDescription": "What does a thermal vacuum chamber cost? Volume, thermal concept, vacuum level, interfaces, controls, documentation and services — a practical guide to the seven cost drivers.",
+        "intro": "There is no list price for a thermal vacuum chamber — and any vendor who quotes one without asking questions is guessing. Depending on requirements, two systems with the same nominal volume can differ in price by a factor of several. The good news: most of that spread comes down to seven engineering decisions, and every one of them is under your control. Understanding these drivers helps you specify what your test campaign actually needs — and avoid paying for capability it doesn't.",
+        "sections": {
+          "volume": {
+            "title": "1. Chamber volume and geometry",
+            "content": "The vessel is the foundation of the cost structure. Wall thickness, flange sizes, door mechanisms, machining effort, and the pumping capacity needed to evacuate the volume all scale with size. Just as important as raw volume is usable volume: the space actually available for your test item after shrouds, thermal plates, and fixturing are installed.",
+            "points": [
+              "Specify the test item envelope and required clearances, not a round chamber number.",
+              "Cubic geometries maximize planar mounting area; cylindrical vessels are structurally efficient at larger volumes.",
+              "A step up in chamber class often means a step up in pumping, thermal, and handling systems as well."
+            ]
+          },
+          "thermal": {
+            "title": "2. Temperature range and thermal concept",
+            "content": "The choice between direct LN₂ cooling, closed-loop GN₂ circulation, and mechanical refrigeration is one of the largest single cost decisions — in both directions. It sets the achievable minimum temperature, ramp rates, and uniformity, and it splits cost between initial investment and operating cost: LN₂-based concepts consume liquid nitrogen in operation, while mechanical refrigeration shifts cost toward the machine itself.",
+            "points": [
+              "Ask what minimum temperature your qualification levels actually require — every additional 20 K of margin costs real money.",
+              "High ramp rates and tight uniformity requirements drive shroud design, flow architecture, and control complexity.",
+              "Consider utilization: for frequent campaigns, LN₂ consumption dominates lifecycle cost; for occasional use, capex does."
+            ]
+          },
+          "vacuum": {
+            "title": "3. Vacuum level and pumping architecture",
+            "content": "Moving from the 10⁻⁵ to the 10⁻⁶ mbar range, and from there toward 10⁻⁷ mbar, changes the pumping architecture, the demands on materials and surface treatment, and the leak-tightness requirements of every joint and feedthrough. Contamination-sensitive hardware adds low-outgassing material selection and bake-out capability on top.",
+            "points": [
+              "Derive the required ultimate pressure from the test standard and hardware sensitivity, not from habit.",
+              "Cleanliness requirements (outgassing, particulates) can influence cost as much as the pressure figure itself.",
+              "Every feedthrough and seal is part of the vacuum budget — more interfaces mean more engineering."
+            ]
+          },
+          "interfaces": {
+            "title": "4. Feedthroughs, interfaces, and fixturing",
+            "content": "Electrical, RF, optical, and fluid feedthroughs, thermal plates, viewports, and customer-specific fixturing turn a vessel into a test environment. They are individually small line items that add up — and retrofitting them later is far more expensive than provisioning them in the initial design.",
+            "points": [
+              "List every signal, supply, and mechanical interface your test item needs — early.",
+              "Plan sensible spare capacity on feedthrough flanges; blank ports are cheap, new penetrations are not.",
+              "Custom fixturing and adapter structures are engineering effort, not catalogue items."
+            ]
+          },
+          "controls": {
+            "title": "5. Control system and data acquisition",
+            "content": "The span reaches from manually operated valves with a chart recorder to fully automated PLC systems with recipe control, interlocks, data acquisition, and remote access. Automation costs money upfront and pays it back in reproducibility, unattended operation, and operator time — especially over multi-day thermal cycling campaigns.",
+            "points": [
+              "Reproducible, documented test execution is a control-system property, not an operator skill.",
+              "Interfaces such as OPC UA or Modbus matter if the system must integrate into existing infrastructure.",
+              "Channel count and logging requirements for data acquisition should come from the test plan."
+            ]
+          },
+          "documentation": {
+            "title": "6. Documentation and qualification level",
+            "content": "A research-grade system and an aerospace-qualification system can share the same hardware and still differ noticeably in price — the difference is documentation: factory and site acceptance testing, calibration certificates, material traceability, and compliance documentation. This driver is routinely underestimated in early budgeting.",
+            "points": [
+              "Clarify which acceptance tests, certificates, and traceability levels your quality system requires.",
+              "Documentation requirements should be part of the specification, not a change request after ordering."
+            ]
+          },
+          "services": {
+            "title": "7. Services around the system",
+            "content": "Installation, commissioning, operator training, maintenance, and the ability to upgrade the system later are part of the real cost picture. A chamber that runs for fifteen years is bought once but operated continuously — support structure and upgrade paths determine what those years cost.",
+            "points": [
+              "Ask how the system is commissioned, who trains the operators, and what maintenance looks like.",
+              "Retrofit-friendly architecture protects the investment as requirements evolve."
+            ]
+          },
+          "budget": {
+            "title": "Keeping the budget under control",
+            "content": "The most effective cost lever is a precise specification. Systems become expensive when they are specified around maximum values 'to be safe' rather than around the actual test envelope.",
+            "factors": [
+              "Specify from the test requirements upward, not from the largest imaginable use case downward.",
+              "Use a standardized platform where it fits and reserve custom engineering for the parameters that genuinely require it.",
+              "Evaluate lifecycle cost — LN₂ consumption, maintenance, operator time — alongside the purchase price.",
+              "Define documentation and acceptance requirements up front."
+            ]
+          }
+        },
+        "conclusion": "The honest answer to 'what does a thermal vacuum chamber cost' is: it depends on seven decisions that you control. The fastest route to a realistic budget figure is a structured requirements definition — our technical TVAC questionnaire walks through exactly these parameters and gives our engineering team what it needs to prepare a substantiated budgetary quotation."
       }
     }
   }

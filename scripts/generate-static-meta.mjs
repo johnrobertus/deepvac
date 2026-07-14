@@ -42,6 +42,7 @@ const routes = [
   { en: "/resources/blog/cooling-systems", de: "/de/ressourcen/blog/kuehlsysteme", seoKey: "resources" },
   { en: "/resources/blog/retrofit-vs-replacement", de: "/de/ressourcen/blog/retrofit-vs-neubeschaffung", seoKey: "resources" },
   { en: "/resources/blog/aerospace-qualification-testing", de: "/de/ressourcen/blog/raumfahrtqualifikation", seoKey: "resources" },
+  { en: "/resources/blog/tvac-cost-drivers", de: "/de/ressourcen/blog/tvac-kostentreiber", seoKey: "resources" },
   { en: "/careers", de: "/de/karriere", seoKey: "careers" },
   { en: "/references", de: "/de/referenzen", seoKey: "references" },
   { en: "/contact", de: "/de/kontakt", seoKey: "contact" },
