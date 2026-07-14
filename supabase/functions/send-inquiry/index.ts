@@ -521,12 +521,13 @@ async function handleQuestionnaire(
   } else {
     const secret = Deno.env.get("TURNSTILE_SECRET_KEY");
     if (secret) {
-      console.warn("Turnstile token missing on questionnaire — allowing with warning");
       await logInquiry(supabaseAdmin, {
         ip_address: ip, user_agent: userAgent,
-        status: "warning", reason: "turnstile_missing",
+        status: "blocked", reason: "turnstile_missing",
         email: d.email || null, payload_hash: payloadHash, source,
       });
+      return new Response(JSON.stringify({ error: "Verification failed. Please try again." }),
+        { status: 403, headers: { ...corsHeaders, "Content-Type": "application/json" } });
     }
   }
 
