@@ -326,7 +326,7 @@ const Contact = () => {
                       ))}
                     </div>
                   </div>
-                  {validationErrors.interests && <p className="text-[13px] text-red-400">{validationErrors.interests}</p>}
+                  </div>
                 </div>
 
                 {/* Section 3 — Project context */}
