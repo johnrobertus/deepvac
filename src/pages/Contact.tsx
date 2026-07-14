@@ -101,9 +101,10 @@ const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
   const [honeypot, setHoneypot] = useState("");
-  const [validationErrors, setValidationErrors] = useState<Partial<Record<keyof FormData | "interests", string>>>({});
+  const [validationErrors, setValidationErrors] = useState<Partial<Record<keyof FormData, string>>>({});
   const turnstileRef = useRef<HTMLDivElement>(null);
   const turnstileWidgetId = useRef<string | null>(null);
+  const turnstileScriptLoaded = useRef(false);
 
   const productInterests = t("interests.products", { returnObjects: true }) as string[];
   const serviceInterests = t("interests.services", { returnObjects: true }) as string[];
@@ -113,7 +114,9 @@ const Contact = () => {
   const existingSystemOptions = t("existingSystemOptions", { returnObjects: true }) as string[];
   const faqItems = t("faq.items", { returnObjects: true }) as Array<{ q: string; a: string }>;
 
-  useEffect(() => {
+  const ensureTurnstileScript = () => {
+    if (turnstileScriptLoaded.current) return;
+    turnstileScriptLoaded.current = true;
     if (!document.getElementById("cf-turnstile-script")) {
       const script = document.createElement("script");
       script.id = "cf-turnstile-script";
@@ -121,7 +124,7 @@ const Contact = () => {
       script.async = true; script.defer = true;
       document.head.appendChild(script);
     }
-  }, []);
+  };
 
   useEffect(() => {
     if (!turnstileRef.current) return;
@@ -145,13 +148,10 @@ const Contact = () => {
 
   const toggleInterest = (label: string) => {
     setInterests((prev) => prev.includes(label) ? prev.filter((i) => i !== label) : [...prev, label]);
-    if (validationErrors.interests) {
-      setValidationErrors((prev) => { const next = { ...prev }; delete next.interests; return next; });
-    }
   };
 
   const validateForm = (): boolean => {
-    const errors: Partial<Record<keyof FormData | "interests", string>> = {};
+    const errors: Partial<Record<keyof FormData, string>> = {};
     if (!form.firstName.trim()) errors.firstName = tc("form.validation.firstNameRequired");
     if (!form.lastName.trim()) errors.lastName = tc("form.validation.lastNameRequired");
     if (!form.email.trim()) {
@@ -160,7 +160,6 @@ const Contact = () => {
       errors.email = tc("form.validation.emailInvalid");
     }
     if (!form.company.trim()) errors.company = tc("form.validation.companyRequired");
-    if (interests.length === 0) errors.interests = t("validationNew.interestRequired");
     if (form.message.trim().length < 10) errors.message = t("validationNew.messageRequired");
     setValidationErrors(errors);
     return Object.keys(errors).length === 0;
@@ -259,12 +258,11 @@ const Contact = () => {
         <Section>
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-12 lg:gap-16">
             <div className="space-y-8">
-              <QuestionnaireCard />
-
-              <div className="space-y-2 pt-2" id="project-inquiry-form">
+              <div className="space-y-2" id="project-inquiry-form">
                 <h2 className="text-2xl font-medium text-sand tracking-tight">{t("formTitle")}</h2>
                 <p className="text-body">{t("formDescription")}</p>
               </div>
+
 
               <aside
                 aria-label={t("prepareCard.title")}
@@ -284,7 +282,7 @@ const Contact = () => {
                 </ul>
               </aside>
 
-              <form className="space-y-7" onSubmit={handleSubmit}>
+              <form className="space-y-7" onSubmit={handleSubmit} onFocusCapture={ensureTurnstileScript} onInputCapture={ensureTurnstileScript}>
                 {/* Section 1 — Contact details */}
                 <div className="space-y-5">
                   <span className="mono-label text-blue">{t("sections.contact")}</span>
@@ -305,7 +303,7 @@ const Contact = () => {
                 {/* Section 2 — Area of interest */}
                 <div className="border-t border-gray/20 pt-6 space-y-4">
                   <div className="space-y-1">
-                    <span className="mono-label text-blue">{t("sections.interestTitle")}<span className="text-blue ml-1">*</span></span>
+                    <span className="mono-label text-blue">{t("sections.interestTitle")}</span>
                     <p className="text-[13px] text-gray">{t("sections.interestHelper")}</p>
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-5">
@@ -328,8 +326,8 @@ const Contact = () => {
                       ))}
                     </div>
                   </div>
-                  {validationErrors.interests && <p className="text-[13px] text-red-400">{validationErrors.interests}</p>}
                 </div>
+
 
                 {/* Section 3 — Project context */}
                 <div className="border-t border-gray/20 pt-6 space-y-5">
@@ -375,7 +373,10 @@ const Contact = () => {
                   </div>
                 </div>
               </form>
+
+              <QuestionnaireCard />
             </div>
+
 
             <div className="space-y-6">
               <div className="bento-card rounded-lg p-6 space-y-6">

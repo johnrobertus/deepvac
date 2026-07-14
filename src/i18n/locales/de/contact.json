@@ -24,7 +24,7 @@
   "sections": {
     "contact": "Kontaktdaten",
     "interestTitle": "Wofür interessieren Sie sich?",
-    "interestHelper": "Wählen Sie einen oder mehrere Bereiche aus, damit wir Ihre Anfrage korrekt zuordnen können.",
+    "interestHelper": "Optional — hilft uns, Ihre Anfrage direkt dem richtigen Ingenieur zuzuordnen.",
     "interestProducts": "Produkte",
     "interestServices": "Leistungen",
     "interestOther": "Sonstiges",

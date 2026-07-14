@@ -230,9 +230,6 @@ const StandardSeries = () => {
           <Button asChild variant="outline" size="lg" className="font-mono text-xs tracking-wide">
             <Link to={localizedPath("/contact", lang)}>{tc("buttons.requestQuote")}</Link>
           </Button>
-          <Button asChild variant="ghost" size="lg" className="font-mono text-xs tracking-wide text-gray hover:text-sand">
-            <Link to={localizedPath("/contact", lang)}>{tc("buttons.talkToEngineer")}</Link>
-          </Button>
         </CTABand>
         <p className="container mx-auto px-6 -mt-6 mb-12 flex items-start gap-1.5 text-card-meta text-gray/85 max-w-2xl">
           <Clock className="w-3.5 h-3.5 mt-0.5 text-blue/70 shrink-0" />

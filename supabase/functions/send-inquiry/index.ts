@@ -354,19 +354,8 @@ Deno.serve(async (req) => {
       );
     }
 
-    // Project Inquiry: require interests + non-empty message
+    // Project Inquiry: require non-empty message (interests are now optional)
     if (isProjectInquiry) {
-      if (interests.length === 0) {
-        await logInquiry(supabaseAdmin, {
-          ip_address: ip, user_agent: userAgent,
-          status: "blocked", reason: "validation_missing_interests",
-          email, payload_hash: payloadHash, source,
-        });
-        return new Response(
-          JSON.stringify({ error: "Please select at least one area of interest." }),
-          { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
-        );
-      }
       if (!message || message.length < 10) {
         await logInquiry(supabaseAdmin, {
           ip_address: ip, user_agent: userAgent,
