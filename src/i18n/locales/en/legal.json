@@ -119,7 +119,7 @@
   "terms": {
     "eyebrow": "Legal",
     "title": "General Terms and Conditions",
-    "effectiveDate": "Effective date: 1 April 2026",
+    "effectiveDate": "Effective date: 14 July 2026",
     "partA": "Part A — General Provisions",
     "partB": "Part B — Performance and Execution",
     "partC": "Part C — Acceptance and Commissioning",
@@ -210,7 +210,7 @@
       },
       "11": {
         "title": "Shipping, Risk Transfer, and Packaging",
-        "c1": "11.1 Unless otherwise agreed, delivery is EXW Deepvac's business address (Incoterms 2020). Risk transfers upon provision for collection or handover to the carrier, whichever occurs first.",
+        "c1": "11.1 Unless otherwise agreed, delivery is EXW Deepvac's business address (Incoterms 2020). Risk transfers upon provision for collection or handover to the carrier, whichever occurs first. Where the parties agree on a different Incoterms 2020 rule in text form, the agreed rule governs delivery, transfer of risk, and the allocation of transport-related costs.",
         "c2": "11.2 The Customer bears transport, insurance, customs, export, and import costs unless otherwise agreed.",
         "c3": "11.3 Packaging is charged at cost unless otherwise agreed. Returnable packaging is accepted only by prior agreement in text form."
       },
@@ -219,7 +219,7 @@
         "c1": "12.1 If acceptance is agreed or legally required, acceptance criteria and procedure shall be defined in text form before the start of performance.",
         "c2": "12.2 Where a factory acceptance test (FAT) is agreed, Deepvac shall notify the Customer when the Deliverables are ready for FAT. The Customer shall participate within the agreed timeframe or, absent an agreement, within fourteen calendar days of notification.",
         "c3": "12.3 Where a site acceptance test (SAT) is agreed, the Customer shall ensure that the installation site, utilities, infrastructure, and all prerequisites specified in the Contract are ready and available before the agreed SAT date. Delays caused by incomplete site readiness shall be at the Customer's cost and risk.",
-        "c4": "12.4 Where commissioning is part of the scope, Deepvac shall perform commissioning according to the agreed procedure. Commissioning is complete when the System operates within the agreed parameters.",
+        "c4": "12.4 Where commissioning is part of the scope, Deepvac shall perform commissioning according to the agreed procedure. Commissioning is complete when the System operates within the agreed parameters. Completion of commissioning shall be documented in text form (commissioning protocol).",
         "c5intro": "12.5 If no acceptance procedure is expressly agreed, acceptance occurs when Deepvac has notified the Customer in text form that the Deliverables are ready for acceptance and, in that notice, has informed the Customer of the acceptance mechanism under this clause, and then:",
         "c5a": "the Customer confirms acceptance in text form, or",
         "c5b": "the Customer uses the Deliverables productively, or",
@@ -310,7 +310,7 @@
         "title": "Warranty and Defect Claims",
         "c1": "20.1 The Customer shall inspect Deliverables without undue delay after delivery, insofar as this is feasible in the ordinary course of business. If Section 377 HGB applies, the Customer shall inspect the Deliverables and notify defects in accordance with that provision. In all other cases, the Customer shall notify apparent defects and hidden defects in text form without undue delay after becoming aware of them.",
         "c2": "20.2 In case of justified defects, Deepvac shall, at its discretion, repair or replace the defective Deliverable or re-perform the defective Service.",
-        "c3": "20.3 The limitation period for defect claims is twelve months from delivery in the case of goods and twelve months from acceptance in the case of work results, unless mandatory law requires a longer period. Where acceptance is excluded by the nature of the work, the limitation period begins upon completion. This does not apply in cases of fraudulent concealment, assumption of a guarantee, injury to life, body, or health, intentional misconduct, gross negligence, or mandatory liability under applicable product liability law.",
+        "c3": "20.3 The limitation period for defect claims is twelve months from delivery in the case of goods and twelve months from acceptance in the case of work results, unless mandatory law requires a longer period. Where commissioning by Deepvac is part of the agreed scope, the limitation period begins upon completion of commissioning pursuant to clause 12.4 or, where an acceptance procedure is agreed, upon acceptance; it begins, however, no later than six months after delivery if commissioning or acceptance is delayed for reasons not attributable to Deepvac. Where acceptance is excluded by the nature of the work, the limitation period begins upon completion. This does not apply in cases of fraudulent concealment, assumption of a guarantee, injury to life, body, or health, intentional misconduct, gross negligence, or mandatory liability under applicable product liability law.",
         "c4": "20.4 No defect claim exists for insignificant deviations, normal wear and tear, defects caused by improper use, unauthorized modification, installation errors by the Customer or third parties, unsuitable operating conditions, or external influences beyond Deepvac's control.",
         "c5": "20.5 If the Customer or third parties perform remedial actions without Deepvac's prior consent, defect claims are excluded unless the Customer proves that such actions did not cause or aggravate the defect.",
         "c6": "20.6 For retrofit, modernization, and integration work on Legacy Systems, warranty is limited to the work performed by Deepvac and the components supplied by Deepvac. Deepvac does not assume warranty for the Legacy System itself or for defects arising from the Legacy System's pre-existing condition."
