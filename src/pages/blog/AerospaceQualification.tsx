@@ -7,8 +7,7 @@ const AerospaceQualification = () => {
 
   return (
     <BlogArticlePage
-      seoTitleKey={`${p}.seoTitle`}
-      seoDescriptionKey={`${p}.seoDescription`}
+      slug="aerospace-qualification-testing"
       categoryKey="blog.categories.engineeringGuide"
       titleKey={`${p}.title`}
     >
