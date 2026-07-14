@@ -7,8 +7,7 @@ const RetrofitVsReplacement = () => {
 
   return (
     <BlogArticlePage
-      seoTitleKey={`${p}.seoTitle`}
-      seoDescriptionKey={`${p}.seoDescription`}
+      slug="retrofit-vs-replacement"
       categoryKey="blog.categories.decisionSupport"
       titleKey={`${p}.title`}
     >

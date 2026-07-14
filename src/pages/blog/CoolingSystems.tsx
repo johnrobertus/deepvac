@@ -7,8 +7,7 @@ const CoolingSystems = () => {
 
   return (
     <BlogArticlePage
-      seoTitleKey={`${p}.seoTitle`}
-      seoDescriptionKey={`${p}.seoDescription`}
+      slug="cooling-systems"
       categoryKey="blog.categories.engineeringGuide"
       titleKey={`${p}.title`}
     >
