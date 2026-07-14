@@ -197,6 +197,11 @@ export function HeroSection() {
                 aria-hidden="true"
               />
             )}
+          </div>
+        );
+      })}
+
+
 
       <div
         className="absolute inset-0 z-10"
