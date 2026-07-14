@@ -28,7 +28,7 @@ export default {
         "3xl": "1600px",
       },
       fontFamily: {
-        sans: ["Inter", "system-ui", "sans-serif"],
+        sans: ['"Manrope Variable"', "system-ui", "sans-serif"],
         mono: ['"Geist Mono"', "monospace"],
       },
       colors: {
