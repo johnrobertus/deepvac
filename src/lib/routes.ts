@@ -8,6 +8,10 @@ export interface RouteEntry {
 /**
  * Central route map — single source of truth for all route operations.
  * Used by: App.tsx routing, language switcher, hreflang, canonical, internal links.
+ *
+ * NOTE: Keep scripts/generate-static-meta.mjs in sync with this list — it
+ * emits per-route static index.html files with the correct <title>, meta,
+ * canonical, hreflang, and og:* tags for each entry below.
  */
 export const routeMap: readonly RouteEntry[] = [
   { en: "/", de: "/de" },
