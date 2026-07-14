@@ -289,12 +289,15 @@ Deno.serve(async (req) => {
     } else {
       const secret = Deno.env.get("TURNSTILE_SECRET_KEY");
       if (secret) {
-        console.warn("Turnstile token missing but secret configured — allowing request with warning");
         await logInquiry(supabaseAdmin, {
           ip_address: ip, user_agent: userAgent,
-          status: "warning", reason: "turnstile_missing",
+          status: "blocked", reason: "turnstile_missing",
           email: data.email || null, payload_hash: payloadHash, source,
         });
+        return new Response(
+          JSON.stringify({ error: "Verification failed. Please try again." }),
+          { status: 403, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+        );
       }
     }
 
@@ -437,7 +440,7 @@ Deno.serve(async (req) => {
         email: email, payload_hash: payloadHash, source,
       });
       return new Response(
-        JSON.stringify({ error: "Failed to send email", details: result }),
+        JSON.stringify({ error: "Failed to send email" }),
         { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
@@ -518,12 +521,13 @@ async function handleQuestionnaire(
   } else {
     const secret = Deno.env.get("TURNSTILE_SECRET_KEY");
     if (secret) {
-      console.warn("Turnstile token missing on questionnaire — allowing with warning");
       await logInquiry(supabaseAdmin, {
         ip_address: ip, user_agent: userAgent,
-        status: "warning", reason: "turnstile_missing",
+        status: "blocked", reason: "turnstile_missing",
         email: d.email || null, payload_hash: payloadHash, source,
       });
+      return new Response(JSON.stringify({ error: "Verification failed. Please try again." }),
+        { status: 403, headers: { ...corsHeaders, "Content-Type": "application/json" } });
     }
   }
 
@@ -608,7 +612,7 @@ async function handleQuestionnaire(
       status: "failed", reason: `resend_error_${res.status}`,
       email, payload_hash: payloadHash, source,
     });
-    return new Response(JSON.stringify({ error: "Failed to send email", details: result }),
+    return new Response(JSON.stringify({ error: "Failed to send email" }),
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } });
   }
 
