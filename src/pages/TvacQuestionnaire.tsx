@@ -440,6 +440,31 @@ export default function TvacQuestionnaire() {
       if (w && turnstileWidgetId.current) {
         turnstileToken = w.getResponse(turnstileWidgetId.current) || "";
       }
+      if (!turnstileToken) {
+        const deadline = Date.now() + 5000;
+        while (Date.now() < deadline) {
+          await new Promise((r) => setTimeout(r, 200));
+          const ww = (window as any).turnstile;
+          if (ww && turnstileRef.current && !turnstileWidgetId.current) {
+            try {
+              turnstileWidgetId.current = ww.render(turnstileRef.current, {
+                sitekey: TURNSTILE_SITE_KEY, callback: () => {}, size: "invisible",
+              });
+            } catch { /* already rendered */ }
+          }
+          if (ww && turnstileWidgetId.current) {
+            turnstileToken = ww.getResponse(turnstileWidgetId.current) || "";
+            if (turnstileToken) break;
+          }
+        }
+      }
+      if (!turnstileToken) {
+        const ww = (window as any).turnstile;
+        if (ww && turnstileWidgetId.current) { ww.reset(turnstileWidgetId.current); }
+        setSubmissionError(t("error.message"));
+        toast.error(t("error.title"));
+        return;
+      }
       const { data, error } = await supabase.functions.invoke("send-inquiry", {
         body: {
           kind: "questionnaire",
