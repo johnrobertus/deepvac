@@ -7,13 +7,14 @@ import { PageShell, PageHero, Section } from "@/components/PageShell";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Phone, Mail, MapPin, Clock, Shield, ArrowRight, CheckCircle, Loader2, ClipboardList, ClipboardCheck } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Shield, ArrowRight, ArrowUpRight, CheckCircle, Loader2, ClipboardList, ClipboardCheck, CalendarClock } from "lucide-react";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { ConsentMap } from "@/components/ConsentMap";
 import { useLanguage } from "@/components/LanguageProvider";
 import { getHreflangs, getCanonical, localizedPath } from "@/lib/routes";
 import { QuestionnaireCard } from "@/components/questionnaire/QuestionnaireCTA";
+import { CALENDLY_TECHNICAL_CALL_URL } from "@/lib/external-links";
 
 declare global {
   interface Window {
@@ -292,6 +293,26 @@ const Contact = () => {
                   ))}
                 </ul>
               </aside>
+
+              <aside
+                aria-label={tc("bookCall.cardTitle")}
+                className="bento-card rounded-lg p-5 sm:p-6 space-y-3 border-blue/20"
+              >
+                <div className="flex items-start gap-3">
+                  <CalendarClock className="w-4 h-4 text-blue mt-0.5 shrink-0" aria-hidden="true" />
+                  <div className="space-y-1">
+                    <p className="mono-label text-blue">{tc("bookCall.cardTitle")}</p>
+                    <p className="text-[13px] text-gray/85 leading-relaxed">{tc("bookCall.cardDescription")}</p>
+                  </div>
+                </div>
+                <Button asChild className="w-full">
+                  <a href={CALENDLY_TECHNICAL_CALL_URL} target="_blank" rel="noopener noreferrer">
+                    {tc("bookCall.cardButton")}
+                    <ArrowUpRight className="h-4 w-4 ml-2" aria-hidden="true" />
+                  </a>
+                </Button>
+              </aside>
+
 
               <form className="space-y-7" onSubmit={handleSubmit} onFocusCapture={ensureTurnstileScript} onInputCapture={ensureTurnstileScript}>
                 {/* Section 1 — Contact details */}
