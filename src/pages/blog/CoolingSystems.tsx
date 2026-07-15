@@ -11,7 +11,7 @@ const CoolingSystems = () => {
       categoryKey="blog.categories.engineeringGuide"
       titleKey={`${p}.title`}
     >
-      <p className="text-base">{t(`${p}.intro`)}</p>
+      <p className="text-lg leading-relaxed text-sand/90">{t(`${p}.intro`)}</p>
 
       <ArticleSection title={t(`${p}.sections.mechanical.title`)}>
         <p>{t(`${p}.sections.mechanical.content`)}</p>
@@ -51,7 +51,7 @@ function ArticleSection({ title, children }: { title: string; children: React.Re
 
 function BulletList({ items }: { items: string[] }) {
   return (
-    <ul className="list-disc list-outside pl-5 space-y-2 text-sm text-gray">
+    <ul className="list-disc list-outside pl-5 space-y-2 marker:text-blue/70">
       {items.map((item, i) => <li key={i}>{item}</li>)}
     </ul>
   );
@@ -60,7 +60,7 @@ function BulletList({ items }: { items: string[] }) {
 function BulletGroup({ heading, items }: { heading: string; items: string[] }) {
   return (
     <div className="space-y-2">
-      <h3 className="text-sm font-medium text-sand/80">{heading}</h3>
+      <h3 className="mono-label">{heading}</h3>
       <BulletList items={items} />
     </div>
   );
@@ -71,7 +71,7 @@ function Conclusion({ text }: { text: string }) {
   return (
     <div className="border-t border-gray/15 pt-6 space-y-2">
       <h2 className="text-lg font-medium text-sand">{t("blog.labels.takeaway")}</h2>
-      <p className="text-sm">{text}</p>
+      <p>{text}</p>
     </div>
   );
 }

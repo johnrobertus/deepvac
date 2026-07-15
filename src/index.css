@@ -152,6 +152,27 @@
     background: hsl(var(--blue) / 0.25);
     color: hsl(var(--sand));
   }
+
+  /* Themed scrollbars — default OS-white bars break the dark monolith look */
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(0 0% 18%) hsl(var(--background));
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--background));
+  }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(0 0% 18%);
+    border-radius: 5px;
+    border: 2px solid hsl(var(--background));
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(0 0% 26%);
+  }
 }
 
 @layer components {

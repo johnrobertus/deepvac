@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { ArrowRight } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 import { BookCallDialog } from "@/components/BookCallDialog";
 import { Button } from "@/components/ui/button";
@@ -280,14 +279,6 @@ export function HeroSection() {
                   >
                     <Link to={contactPath}>{tc("buttons.discussRequirements")}</Link>
                   </Button>
-
-                  <Link
-                    to={localizedPath("/products", lang)}
-                    className="link-underline inline-flex items-center gap-1.5 self-center py-1 font-mono text-sm tracking-wide text-sand/70 transition-colors hover:text-sand sm:self-auto sm:text-base"
-                  >
-                    {tc("buttons.exploreProducts")}
-                    <ArrowRight className="h-4 w-4" aria-hidden="true" />
-                  </Link>
                 </div>
               </Reveal>
 
