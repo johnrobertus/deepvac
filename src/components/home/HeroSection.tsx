@@ -229,7 +229,7 @@ export function HeroSection() {
                     const isDe = i18n.language === "de";
                     return (
                       <h1
-                        className={`hero-title ${isDe ? "hero-title--de" : "hero-title--en"} max-w-full font-medium text-sand whitespace-pre-line [text-wrap:balance] md:max-w-[14ch] lg:max-w-[18ch] xl:max-w-[20ch] 2xl:max-w-[22ch]`}
+                        className={`hero-title ${isDe ? "hero-title--de" : "hero-title--en"} max-w-full text-sand whitespace-pre-line [text-wrap:balance] md:max-w-[14ch] lg:max-w-[18ch] xl:max-w-[20ch] 2xl:max-w-[22ch]`}
                         style={{
                           lineHeight: 1.08,
                           letterSpacing: "-0.03em",
