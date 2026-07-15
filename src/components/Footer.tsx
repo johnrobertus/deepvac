@@ -134,21 +134,21 @@ export function Footer() {
           <p className="font-mono text-[13px] text-gray">{t("footer.copyright", { year: new Date().getFullYear() })}</p>
 
           <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
-            <Link to={lp("/imprint")} className="text-[14px] text-gray transition-colors hover:text-sand">
+            <Link to={lp("/imprint")} className="text-[15px] text-gray transition-colors hover:text-sand">
               {t("footer.imprint")}
             </Link>
-            <Link to={lp("/terms-and-conditions")} className="text-[14px] text-gray transition-colors hover:text-sand">
+            <Link to={lp("/terms-and-conditions")} className="text-[15px] text-gray transition-colors hover:text-sand">
               {t("footer.termsAndConditions")}
             </Link>
-            <Link to={lp("/privacy-policy")} className="text-[14px] text-gray transition-colors hover:text-sand">
+            <Link to={lp("/privacy-policy")} className="text-[15px] text-gray transition-colors hover:text-sand">
               {t("footer.privacyPolicy")}
             </Link>
-            <Link to={lp("/media-credits")} className="text-[14px] text-gray transition-colors hover:text-sand">
+            <Link to={lp("/media-credits")} className="text-[15px] text-gray transition-colors hover:text-sand">
               {t("mediaCredits.footerLink")}
             </Link>
             <button
               onClick={() => setPrivacyOpen(true)}
-              className="text-[14px] text-gray transition-colors hover:text-sand"
+              className="text-[15px] text-gray transition-colors hover:text-sand"
             >
               {t("footer.privacySettings")}
             </button>

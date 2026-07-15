@@ -104,7 +104,7 @@ const Products = () => {
                       />
                       <div className="absolute bottom-3 left-3 flex flex-wrap gap-1.5">
                         {chips.map((chip: string) => (
-                          <span key={chip} className="glass-overlay rounded-sm px-2 py-1 font-mono text-[9px] uppercase tracking-widest text-blue-light/80">
+                          <span key={chip} className="glass-overlay rounded-sm px-2 py-1 font-mono text-[11px] uppercase tracking-widest text-blue-light/80">
                             {chip}
                           </span>
                         ))}

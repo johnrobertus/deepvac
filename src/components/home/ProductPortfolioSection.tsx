@@ -66,7 +66,7 @@ export function ProductPortfolioSection() {
                         {specsArr.map((spec) => (
                           <div key={spec.label} className="rounded-md border border-gray/15 bg-background/30 px-4 py-3.5">
                             <span className="mono-label">{spec.label}</span>
-                            <p className="mt-1.5 font-mono text-[14px] text-sand">{spec.value}</p>
+                            <p className="mt-1.5 mono-value">{spec.value}</p>
                           </div>
                         ))}
                       </div>

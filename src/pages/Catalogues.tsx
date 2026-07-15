@@ -158,7 +158,7 @@ function BrochureCard({ doc }: { doc: Brochure }) {
       <div className="p-5 space-y-3 flex-1 flex flex-col">
         <div className="flex flex-wrap gap-1.5">
           {doc.tags.map((tag) => (
-            <span key={tag} className="px-1.5 py-0.5 text-[9px] font-mono uppercase tracking-wider text-gray border border-gray/20 rounded-sm">{tag}</span>
+            <span key={tag} className="px-1.5 py-0.5 text-[11px] font-mono uppercase tracking-wider text-gray border border-gray/20 rounded-sm">{tag}</span>
           ))}
         </div>
         <h3 className="text-sm font-medium text-sand">{doc.title}</h3>

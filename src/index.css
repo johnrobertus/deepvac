@@ -91,7 +91,7 @@
     @apply bg-background text-foreground font-sans;
     overflow-x: hidden;
     font-size: 17px;
-    line-height: 1.65;
+    line-height: 1.7;
   }
 
   @media (max-width: 640px) {
@@ -129,7 +129,6 @@
 
   p {
     text-wrap: pretty;
-    line-height: 1.7;
   }
 
   /* German hyphenation only — html[lang] already syncs per language. */
@@ -186,10 +185,6 @@
 
   .mono-value {
     @apply font-mono text-base tabular-nums text-sand;
-  }
-
-  .surface-card {
-    @apply bg-surface border border-gray/30 rounded-lg;
   }
 
   .text-helper {
