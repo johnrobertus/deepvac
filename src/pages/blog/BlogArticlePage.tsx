@@ -84,7 +84,7 @@ export function BlogArticlePage({
           <div className="container max-w-3xl space-y-6">
             <Link
               to={localizedPath("/resources/blog", lang)}
-              className="inline-flex items-center gap-1.5 text-sm text-gray hover:text-sand transition-colors"
+              className="inline-flex items-center gap-1.5 text-[15px] text-gray hover:text-sand transition-colors"
             >
               <ArrowLeft className="w-4 h-4" />
               {t("blog.backToBlog")}
@@ -97,7 +97,7 @@ export function BlogArticlePage({
         </section>
 
         <Section>
-          <article className="max-w-3xl mx-auto space-y-8 text-gray leading-relaxed">
+          <article className="max-w-2xl mx-auto space-y-8 text-sand/85 leading-relaxed">
             {children}
           </article>
         </Section>

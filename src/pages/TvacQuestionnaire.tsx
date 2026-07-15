@@ -217,7 +217,7 @@ const initialForm: FormState = {
 /* ---------- Small UI primitives ---------- */
 function MonoLabel({ children, required }: { children: React.ReactNode; required?: boolean }) {
   return (
-    <label className="block font-mono text-[13px] uppercase tracking-[0.08em] text-gray/90">
+    <label className="block mono-label">
       {children}
       {required && <span className="text-blue ml-1 text-sm align-middle" aria-hidden="true">*</span>}
       {required && <span className="sr-only"> (required)</span>}
@@ -853,8 +853,8 @@ export default function TvacQuestionnaire() {
             </FieldGroup>
           </div>
 
-          <span className="order-5 block font-mono text-[13px] uppercase tracking-[0.08em] text-blue md:order-9">{t("s3.plateCooling")}</span>
-          <span className="order-11 block font-mono text-[13px] uppercase tracking-[0.08em] text-blue md:order-10">{t("s3.shroudCooling")}</span>
+          <span className="order-5 block text-card-eyebrow md:order-9">{t("s3.plateCooling")}</span>
+          <span className="order-11 block text-card-eyebrow md:order-10">{t("s3.shroudCooling")}</span>
 
           <div className="order-6 flex flex-col gap-2 md:order-11">
             {plateCoolOpts.map((o, i) => <CheckItem key={o} label={o} checked={form.plateCooling[i]} onChange={() => toggleAt("plateCooling", i)} />)}
@@ -909,7 +909,7 @@ export default function TvacQuestionnaire() {
                 <div className="space-y-1"><label className="text-[13px] text-gray/85">{t("s4.elecCurrent")}</label><input className={baseInput} placeholder="A" value={form.elecCurrent} onChange={(e) => set("elecCurrent")(e.target.value)} /></div>
                 <div className="space-y-1"><label className="text-[13px] text-gray/85">{t("s4.elecNotes")}</label><input className={baseInput} placeholder={t("s4.elecNotesPh")} value={form.elecNotes} onChange={(e) => set("elecNotes")(e.target.value)} /></div>
               </FieldGroup>
-              <span className="block font-mono text-[13px] uppercase tracking-[0.08em] text-blue">{t("s4.elecConnector")}</span>
+              <span className="block text-card-eyebrow">{t("s4.elecConnector")}</span>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 {elecConn.map((o, i) => <CheckItem key={o} label={o} checked={form.elecConnector[i]} onChange={() => toggleAt("elecConnector", i)} />)}
                 <OtherInput value={form.elecConnectorOther} {...setOther("elecConnectorOther")} placeholder={t("common.specify")} />
@@ -919,14 +919,14 @@ export default function TvacQuestionnaire() {
             <FieldGroup cols={2}>
               <div className="space-y-3">
                 <MonoLabel>{t("s4.rf")}</MonoLabel>
-                <span className="block font-mono text-[13px] uppercase tracking-[0.08em] text-blue">{t("common.type")}</span>
+                <span className="block text-card-eyebrow">{t("common.type")}</span>
                 <div className="grid grid-cols-2 gap-2">{rfOpts.map((o, i) => <CheckItem key={o} label={o} checked={form.rfTypes[i]} onChange={() => toggleAt("rfTypes", i)} />)}</div>
                 <OtherInput value={form.rfTypeOther} {...setOther("rfTypeOther")} placeholder={t("common.specify")} />
                 <div className="space-y-1"><label className="text-[13px] text-gray/85">{t("common.quantity")}</label><input className={baseInput} placeholder={t("common.qty")} value={form.rfQty} onChange={(e) => set("rfQty")(e.target.value)} /></div>
               </div>
               <div className="space-y-3">
                 <MonoLabel>{t("s4.fiber")}</MonoLabel>
-                <span className="block font-mono text-[13px] uppercase tracking-[0.08em] text-blue">{t("common.type")}</span>
+                <span className="block text-card-eyebrow">{t("common.type")}</span>
                 <div className="grid grid-cols-2 gap-2">{fiberOpts.map((o, i) => <CheckItem key={o} label={o} checked={form.fiberTypes[i]} onChange={() => toggleAt("fiberTypes", i)} />)}</div>
                 <OtherInput value={form.fiberTypeOther} {...setOther("fiberTypeOther")} placeholder={t("common.specify")} />
                 <div className="space-y-1"><label className="text-[13px] text-gray/85">{t("common.quantity")}</label><input className={baseInput} placeholder={t("common.qty")} value={form.fiberQty} onChange={(e) => set("fiberQty")(e.target.value)} /></div>
@@ -943,7 +943,7 @@ export default function TvacQuestionnaire() {
               </div>
               <div className="space-y-3">
                 <MonoLabel>{t("s4.motion")}</MonoLabel>
-                <span className="block font-mono text-[13px] uppercase tracking-[0.08em] text-blue">{t("common.type")}</span>
+                <span className="block text-card-eyebrow">{t("common.type")}</span>
                 <div className="grid grid-cols-2 gap-2">{motionOpts.map((o, i) => <CheckItem key={o} label={o} checked={form.motionTypes[i]} onChange={() => toggleAt("motionTypes", i)} />)}</div>
                 <OtherInput value={form.motionTypeOther} {...setOther("motionTypeOther")} placeholder={t("common.specify")} />
                 <div className="space-y-1"><label className="text-[13px] text-gray/85">{t("common.quantity")}</label><input className={baseInput} placeholder={t("common.qty")} value={form.motionQty} onChange={(e) => set("motionQty")(e.target.value)} /></div>
@@ -961,7 +961,7 @@ export default function TvacQuestionnaire() {
                 <select className={baseSelect} value={form.remoteAccess} onChange={(e) => set("remoteAccess")(e.target.value)}>
                   <option value="">{t("common.selectOption")}</option>{yesNo.map((o) => <option key={o} value={o}>{o}</option>)}
                 </select>
-                <span className="block font-mono text-[13px] uppercase tracking-[0.08em] text-blue">{t("s4.remoteAccess")}</span>
+                <span className="block text-card-eyebrow">{t("s4.remoteAccess")}</span>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">{remoteOpts.map((o, i) => <CheckItem key={o} label={o} checked={form.remoteOptions[i]} onChange={() => toggleAt("remoteOptions", i)} />)}</div>
               </div>
               <div className="space-y-2">

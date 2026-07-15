@@ -11,7 +11,7 @@ const AerospaceQualification = () => {
       categoryKey="blog.categories.engineeringGuide"
       titleKey={`${p}.title`}
     >
-      <p className="text-base">{t(`${p}.intro`)}</p>
+      <p className="text-lg leading-relaxed text-sand/90">{t(`${p}.intro`)}</p>
 
       {["standards", "thermalRequirements", "vacuumRequirements", "instrumentation", "chamberCapability"].map((key) => (
         <Section key={key} title={t(`${p}.sections.${key}.title`)}>
@@ -22,7 +22,7 @@ const AerospaceQualification = () => {
 
       <div className="border-t border-gray/15 pt-6 space-y-2">
         <h2 className="text-lg font-medium text-sand">{t("blog.labels.takeaway")}</h2>
-        <p className="text-sm">{t(`${p}.conclusion`)}</p>
+        <p>{t(`${p}.conclusion`)}</p>
       </div>
     </BlogArticlePage>
   );
@@ -39,7 +39,7 @@ function Section({ title, children }: { title: string; children: React.ReactNode
 
 function BulletList({ items }: { items: string[] }) {
   return (
-    <ul className="list-disc list-outside pl-5 space-y-2 text-sm text-gray">
+    <ul className="list-disc list-outside pl-5 space-y-2 marker:text-blue/70">
       {items.map((item, i) => <li key={i}>{item}</li>)}
     </ul>
   );

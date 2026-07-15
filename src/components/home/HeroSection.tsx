@@ -2,6 +2,7 @@ import { useEffect, useRef, useState, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Reveal } from "@/components/Reveal";
+import { BookCallDialog } from "@/components/BookCallDialog";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/components/LanguageProvider";
 import { localizedPath } from "@/lib/routes";
@@ -28,6 +29,7 @@ export function HeroSection() {
   const [transitioning, setTransitioning] = useState(false);
   const [videosMounted, setVideosMounted] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
+  const [bookCallOpen, setBookCallOpen] = useState(false);
 
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
   const fadeTimerRef = useRef<number | null>(null);
@@ -229,7 +231,7 @@ export function HeroSection() {
                     const isDe = i18n.language === "de";
                     return (
                       <h1
-                        className={`hero-title ${isDe ? "hero-title--de" : "hero-title--en"} max-w-full font-medium text-sand whitespace-pre-line [text-wrap:balance] md:max-w-[14ch] lg:max-w-[18ch] xl:max-w-[20ch] 2xl:max-w-[22ch]`}
+                        className={`hero-title ${isDe ? "hero-title--de" : "hero-title--en"} max-w-full text-sand whitespace-pre-line [text-wrap:balance] md:max-w-[14ch] lg:max-w-[18ch] xl:max-w-[20ch] 2xl:max-w-[22ch]`}
                         style={{
                           lineHeight: 1.08,
                           letterSpacing: "-0.03em",
@@ -256,9 +258,17 @@ export function HeroSection() {
               </Reveal>
 
               <Reveal delay={150}>
-                <div className="hero-cta-row flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-                  <Button asChild size="default" className="w-full font-mono text-sm tracking-wide sm:w-auto sm:h-12 sm:px-8 sm:text-base">
-                    <Link to={contactPath}>{tc("buttons.discussRequirements")}</Link>
+                <div className="hero-cta-row flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+                  <Button
+                    size="default"
+                    onClick={() => setBookCallOpen(true)}
+                    className="w-full font-mono text-sm tracking-wide sm:w-auto sm:h-12 sm:px-8 sm:text-base"
+                  >
+                    <span className="relative flex h-2 w-2" aria-hidden="true">
+                      <span className="absolute inline-flex h-full w-full animate-[ping_2.5s_cubic-bezier(0,0,0.2,1)_infinite] rounded-full bg-primary-foreground/30" />
+                      <span className="relative inline-flex h-2 w-2 rounded-full bg-primary-foreground/80" />
+                    </span>
+                    {tc("bookCall.heroCta")}
                   </Button>
 
                   <Button
@@ -267,7 +277,7 @@ export function HeroSection() {
                     size="default"
                     className="w-full border-sand/25 font-mono text-sm tracking-wide text-sand/80 backdrop-blur-sm hover:border-sand/40 hover:text-sand sm:w-auto sm:h-12 sm:px-8 sm:text-base"
                   >
-                    <Link to={localizedPath("/products", lang)}>{tc("buttons.exploreProducts")}</Link>
+                    <Link to={contactPath}>{tc("buttons.discussRequirements")}</Link>
                   </Button>
                 </div>
               </Reveal>
@@ -315,6 +325,8 @@ export function HeroSection() {
           background: "linear-gradient(to bottom, hsl(0 0% 0% / 0) 0%, hsl(var(--background)) 100%)",
         }}
       />
+
+      <BookCallDialog open={bookCallOpen} onOpenChange={setBookCallOpen} />
     </section>
   );
 }

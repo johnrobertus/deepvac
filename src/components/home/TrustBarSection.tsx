@@ -33,7 +33,7 @@ export function TrustBarSection() {
                   </span>
                   <span className="mono-label">{item.label}</span>
                   {item.detail && (
-                    <span className="text-sm text-sand/60 leading-snug">{item.detail}</span>
+                    <span className="text-[15px] text-sand/70 leading-snug">{item.detail}</span>
                   )}
                 </div>
               </div>

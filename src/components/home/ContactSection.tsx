@@ -203,7 +203,7 @@ export function ContactSection() {
           <div className="max-w-xl mx-auto text-center space-y-6">
             <CheckCircle className="w-12 h-12 text-blue mx-auto" />
             <h2 className="text-section-title">{t("successNew.title")}</h2>
-            <p className="text-gray text-sm leading-relaxed">{t("successNew.body")}</p>
+            <p className="text-body mx-auto">{t("successNew.body")}</p>
             <Button variant="outline" onClick={() => { setSubmitted(false); setForm(initialForm); setInterests([]); setConsent(false); }}>
               {tc("buttons.submitAnotherInquiry")}
             </Button>
@@ -229,7 +229,7 @@ export function ContactSection() {
             <div className="space-y-8">
               <div className="space-y-3">
                 <h3 className="text-section-title">{t("formTitle")}</h3>
-                <p className="text-[16px] md:text-[17px] text-sand/80 leading-relaxed">{t("formDescription")}</p>
+                <p className="text-body">{t("formDescription")}</p>
               </div>
 
               <aside
@@ -273,7 +273,7 @@ export function ContactSection() {
                 <div className="border-t border-gray/20 pt-6 space-y-4">
                   <div className="space-y-1.5">
                     <span className="mono-label text-blue">{t("sections.interestTitle")}<span className="text-blue ml-1">*</span></span>
-                    <p className="text-[14px] md:text-[15px] text-sand/85">{t("sections.interestHelper")}</p>
+                    <p className="text-[15px] text-sand/85">{t("sections.interestHelper")}</p>
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-5">
                     <div className="space-y-1.5">
@@ -359,14 +359,14 @@ export function ContactSection() {
                   <Phone className="w-4 h-4 text-blue mt-0.5 shrink-0" />
                   <div>
                     <span className="mono-label mb-1 block">{tHome("contact.phone")}</span>
-                    <a href="tel:+4915783027099" className="text-sm text-gray hover:text-sand transition-colors">+49 157 830 270 99</a>
+                    <a href="tel:+4915783027099" className="text-[15px] text-gray hover:text-sand transition-colors">+49 157 830 270 99</a>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <Mail className="w-4 h-4 text-blue mt-0.5 shrink-0" />
                   <div>
                     <span className="mono-label mb-1 block">{tHome("contact.email")}</span>
-                    <a href="mailto:info@deepvac.space" className="text-sm text-gray hover:text-sand transition-colors">info@deepvac.space</a>
+                    <a href="mailto:info@deepvac.space" className="text-[15px] text-gray hover:text-sand transition-colors">info@deepvac.space</a>
                   </div>
                 </div>
               </div>
@@ -381,8 +381,8 @@ export function ContactSection() {
                 rel="noopener noreferrer"
                 aria-label="Follow Deepvac on LinkedIn (opens in new tab)"
                 className="bento-card rounded-lg p-4 flex items-center justify-between group block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue/70 focus-visible:ring-offset-2 focus-visible:ring-offset-background">
-                <span className="text-sm text-gray group-hover:text-sand transition-colors">{tc("footer.followDeepvac")}</span>
-                <span className="text-sm text-blue font-mono">LinkedIn →</span>
+                <span className="text-[15px] text-gray group-hover:text-sand transition-colors">{tc("footer.followDeepvac")}</span>
+                <span className="font-mono text-[13px] text-blue">LinkedIn →</span>
               </a>
             </div>
           </Reveal>
