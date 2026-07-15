@@ -31,10 +31,10 @@ const servicesMenu: NavItem[] = [
 ];
 
 const navLinks: NavItem[] = [
-  { labelKey: "nav.team", href: "/team" },
-  { labelKey: "nav.resources", href: "/resources" },
-  { labelKey: "nav.careers", href: "/careers" },
   { labelKey: "nav.references", href: "/references" },
+  { labelKey: "nav.resources", href: "/resources" },
+  { labelKey: "nav.team", href: "/team" },
+  { labelKey: "nav.careers", href: "/careers" },
 ];
 
 function isActivePath(pathname: string, href: string, lang: "en" | "de") {
@@ -339,6 +339,18 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-4 lg:flex">
+          <Link
+            to={localizedPath("/contact", lang)}
+            className={cn(
+              "relative rounded-sm text-[15px] transition-colors duration-200 py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+              isActivePath(pathname, "/contact", lang)
+                ? "text-sand after:content-[''] after:absolute after:left-0 after:right-0 after:-bottom-1 after:h-px after:bg-blue/60"
+                : "text-gray hover:text-sand",
+            )}
+          >
+            {t("nav.contact")}
+          </Link>
+
           {/* Language switcher — text toggle */}
           <div className="flex items-center gap-1" role="group" aria-label="Language">
             <button
@@ -403,6 +415,16 @@ export function Header() {
                 );
               })}
             </div>
+
+            <Link
+              to={localizedPath("/contact", lang)}
+              className={cn(
+                "block text-base py-2 transition-colors",
+                isActivePath(pathname, "/contact", lang) ? "text-sand" : "text-gray hover:text-sand",
+              )}
+            >
+              {t("nav.contact")}
+            </Link>
 
             {/* Mobile language switcher — text toggle */}
             <div className="flex items-center gap-2 border-t border-gray/10 pt-4" role="group" aria-label="Language">

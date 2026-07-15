@@ -2,7 +2,8 @@ import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import { Link, useLocation } from "react-router-dom";
 import { Layout } from "@/components/Layout";
-import { PageShell, PageHero, Section } from "@/components/PageShell";
+import { PageShell, PageHero, Section, CTABand } from "@/components/PageShell";
+import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/components/LanguageProvider";
 import { getHreflangs, getCanonical, localizedPath } from "@/lib/routes";
 import { FileText, BookOpen, ArrowRight } from "lucide-react";
@@ -76,6 +77,20 @@ const Resources = () => {
             })}
           </div>
         </Section>
+
+        <CTABand
+          title={lang === "de" ? "Die passende Testinfrastruktur für Ihr Programm?" : "The Right Test Infrastructure for Your Program?"}
+          description={lang === "de"
+            ? "Besprechen Sie Ihre Anforderungen direkt mit unserem Engineering-Team."
+            : "Discuss your requirements directly with our engineering team."}
+        >
+          <Button asChild>
+            <Link to={localizedPath("/contact", lang)}>{t("buttons.requestConsultation")}</Link>
+          </Button>
+          <Button asChild variant="outline">
+            <Link to={localizedPath("/products", lang)}>{t("buttons.exploreProducts")}</Link>
+          </Button>
+        </CTABand>
       </PageShell>
     </Layout>
   );

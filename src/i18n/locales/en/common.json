@@ -2,7 +2,7 @@
   "nav": {
     "products": "Products",
     "services": "Services",
-    "engineering": "Engineering",
+    "engineering": "Services",
     "team": "Team",
     "resources": "Resources",
     "careers": "Careers",
@@ -18,7 +18,8 @@
     "maintenanceRepair": "Maintenance & Repair",
     "subsystemIntegration": "Subsystem Integration",
     "talkToEngineer": "Talk to an Engineer",
-    "configureTvac": "Configure TVAC System"
+    "configureTvac": "Configure TVAC System",
+    "contact": "Contact"
   },
   "footer": {
     "description": "Advanced thermal vacuum systems for aerospace qualification, space simulation, and environmental testing.",
