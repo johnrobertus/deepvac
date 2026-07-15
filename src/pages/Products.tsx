@@ -60,6 +60,16 @@ const Products = () => {
   const factors = t("overview.configGuide.factors", { returnObjects: true }) as Array<{ label: string; standard: string; custom: string }>;
   const faqItems = t("overview.faq.items", { returnObjects: true }) as Array<{ q: string; a: string }>;
 
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
   return (
     <Layout>
       <Helmet>
@@ -70,6 +80,7 @@ const Products = () => {
         {hreflangs.map((h) => (
           <link key={h.lang} rel="alternate" hrefLang={h.lang} href={h.href} />
         ))}
+        <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
       </Helmet>
       <PageShell>
         <PageHero
@@ -200,8 +211,8 @@ const Products = () => {
           <Accordion type="single" collapsible className="max-w-3xl">
             {faqItems.map((faq, i) => (
               <AccordionItem key={i} value={`faq-${i}`} className="border-gray/15">
-                <AccordionTrigger className="text-sand text-sm text-left hover:no-underline">{faq.q}</AccordionTrigger>
-                <AccordionContent className="text-gray text-sm leading-relaxed">{faq.a}</AccordionContent>
+                <AccordionTrigger className="text-sand text-[15px] md:text-base text-left hover:no-underline">{faq.q}</AccordionTrigger>
+                <AccordionContent className="text-sand/85 text-[15px] md:text-base leading-relaxed">{faq.a}</AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
