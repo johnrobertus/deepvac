@@ -15,6 +15,7 @@ import { useLanguage } from "@/components/LanguageProvider";
 import { getHreflangs, getCanonical, localizedPath } from "@/lib/routes";
 import { QuestionnaireCard } from "@/components/questionnaire/QuestionnaireCTA";
 import { BookCallDialog } from "@/components/BookCallDialog";
+import { trackEvent } from "@/lib/analytics";
 
 declare global {
   interface Window {
@@ -252,6 +253,7 @@ const Contact = () => {
         return;
       }
       setSubmitted(true); setValidationErrors({});
+      trackEvent("form_submitted", { page: "contact", interests: interests.join(", ") || "none" });
       turnstileWidgetId.current = null;
       toast.success(tc("form.success.toast"));
     } catch (err: any) {

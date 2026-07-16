@@ -8,6 +8,7 @@ import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { ConsentMap } from "@/components/ConsentMap";
 import { useLanguage } from "@/components/LanguageProvider";
+import { trackEvent } from "@/lib/analytics";
 
 const TURNSTILE_SITE_KEY = "0x4AAAAAACu_Uqbd5b8IkXxU";
 
@@ -185,6 +186,7 @@ export function ContactSection() {
         return;
       }
       setSubmitted(true); setValidationErrors({});
+      trackEvent("form_submitted", { page: "home", interests: interests.join(", ") || "none" });
       turnstileWidgetId.current = null;
       toast.success(tc("form.success.toast"));
     } catch (err: any) {
@@ -362,14 +364,14 @@ export function ContactSection() {
                   <Phone className="w-4 h-4 text-blue mt-0.5 shrink-0" />
                   <div>
                     <span className="mono-label mb-1 block">{tHome("contact.phone")}</span>
-                    <a href="tel:+4915783027099" className="text-[15px] text-gray hover:text-sand transition-colors">+49 157 830 270 99</a>
+                    <a href="tel:+4915783027099" onClick={() => trackEvent("contact_phone_click")} className="text-[15px] text-gray hover:text-sand transition-colors">+49 157 830 270 99</a>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <Mail className="w-4 h-4 text-blue mt-0.5 shrink-0" />
                   <div>
                     <span className="mono-label mb-1 block">{tHome("contact.email")}</span>
-                    <a href="mailto:info@deepvac.space" className="text-[15px] text-gray hover:text-sand transition-colors">info@deepvac.space</a>
+                    <a href="mailto:info@deepvac.space" onClick={() => trackEvent("contact_email_click")} className="text-[15px] text-gray hover:text-sand transition-colors">info@deepvac.space</a>
                   </div>
                 </div>
               </div>

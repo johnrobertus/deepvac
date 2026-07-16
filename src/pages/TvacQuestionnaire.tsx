@@ -24,6 +24,7 @@ import { useLanguage } from "@/components/LanguageProvider";
 import { getHreflangs, getCanonical, localizedPath } from "@/lib/routes";
 import { cn } from "@/lib/utils";
 import { QuestionnairePrintView } from "@/components/questionnaire/QuestionnairePrintView";
+import { trackEvent } from "@/lib/analytics";
 
 const TURNSTILE_SITE_KEY = "0x4AAAAAACu_Uqbd5b8IkXxU";
 
@@ -486,6 +487,7 @@ export default function TvacQuestionnaire() {
         throw new Error(msg);
       }
       setSubmitted(true);
+      trackEvent("questionnaire_submitted");
       turnstileWidgetId.current = null;
       toast.success(t("success.title"));
     } catch (err: any) {
