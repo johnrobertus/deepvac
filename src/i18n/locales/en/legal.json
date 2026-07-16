@@ -14,7 +14,7 @@
   "privacy": {
     "eyebrow": "Legal",
     "title": "Privacy Policy",
-    "lastUpdated": "Last updated: 29 March 2026",
+    "lastUpdated": "Last updated: July 2026",
     "sections": {
       "controller": "Controller",
       "generalInfo": "General Information on Data Processing",
@@ -64,6 +64,7 @@
         "Art. 6(1)(f) GDPR, for general business communication and other inquiries"
       ],
       "contactFormNote": "Your data will not be shared with third parties unless this is necessary to process your request, required by law, or otherwise legally permitted.",
+      "contactFormProcessor": "For the technical receipt and processing of form inquiries we use the Supabase platform (Supabase Inc., USA) as a processor pursuant to Art. 28 GDPR. Where personal data is transferred to third countries in this context, the transfer is based on the EU Standard Contractual Clauses.",
       "contactFormRetention": "We store your inquiry only for as long as necessary to process it. Where statutory retention obligations apply, storage may continue for the duration required by applicable law.",
       "provisionOfData": "Provision of Personal Data",
       "provisionOfDataText": "The provision of personal data is neither legally nor contractually required. However, certain information may be necessary for us to process and respond to your inquiry. If you do not provide the relevant data, we may be unable to handle your request.",
@@ -89,6 +90,12 @@
       "turnstileText3": "Cloudflare processes this data as a processor on the basis of our instructions. The data is used exclusively for abuse prevention and is not used for tracking, profiling, or advertising purposes.",
       "turnstileLegal": "Legal basis: Art. 6(1)(f) GDPR. Our legitimate interest lies in protecting our contact forms from spam and automated abuse.",
       "turnstileMoreInfo": "For more information, see the Cloudflare Privacy Policy at https://www.cloudflare.com/privacypolicy/.",
+      "calendly": "Appointment Scheduling via Calendly",
+      "calendlyText": "For online appointment scheduling we integrate the Calendly service provided by Calendly LLC, 271 17th St NW, Atlanta, Georgia 30363, USA. The booking calendar is only loaded after you have expressly consented in the booking dialog. No data is transferred to Calendly before you give consent.",
+      "calendlyText2": "Once the calendar is loaded, your IP address and technical connection data are transferred to Calendly. If you book an appointment, Calendly additionally processes the details you enter (e.g. name, email address, selected time slot, optional message). Processing also takes place on servers in the USA; the transfer is based on appropriate safeguards pursuant to Art. 44 et seq. GDPR (EU Standard Contractual Clauses or certification under the EU-U.S. Data Privacy Framework).",
+      "calendlyText3": "You may withdraw your consent at any time with effect for the future – directly in the booking dialog via “Withdraw consent” or by clearing this website's local browser data.",
+      "calendlyLegal": "Legal basis: Art. 6(1)(a) GDPR (consent); for carrying out a booked appointment, Art. 6(1)(b) GDPR.",
+      "calendlyMoreInfo": "Further information is available in Calendly's privacy policy: https://calendly.com/privacy",
       "dataRetention": "Data Retention",
       "dataRetentionText": "Personal data is stored only for as long as necessary for the respective processing purpose or as required by statutory retention periods under German law.",
       "dataRetentionText2": "Business correspondence may be retained in accordance with applicable commercial and tax retention obligations.",
