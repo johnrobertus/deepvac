@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useId } from "react";
 import { Link, useLocation, useSearchParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
@@ -31,26 +31,28 @@ function FormField({
 }: {
   label: string; placeholder: string; type?: string; required?: boolean; name: string; value: string; onChange: (val: string) => void; error?: string;
 }) {
+  const fieldId = `field-${name}`;
   return (
     <div className="space-y-2">
-      <label className="mono-label text-gray/90">{label}{required && <span className="text-blue ml-1">*</span>}</label>
+      <label htmlFor={fieldId} className="mono-label text-gray/90">{label}{required && <span className="text-blue ml-1">*</span>}</label>
       <input
-        type={type} name={name} required={required} value={value}
+        id={fieldId} type={type} name={name} required={required} value={value}
         onChange={(e) => onChange(e.target.value)}
         className={`w-full bg-surface border rounded-sm px-4 py-3 text-base text-sand placeholder:text-gray/55 hover:border-gray/50 focus:outline-none focus:bg-surface-raised focus:border-blue/70 focus:ring-2 focus:ring-blue/25 transition-colors duration-200 ${error ? "border-red-400/60" : "border-gray/30"}`}
-        placeholder={placeholder} aria-invalid={!!error}
+        placeholder={placeholder} aria-invalid={!!error} aria-describedby={error ? `${fieldId}-error` : undefined}
       />
-      {error && <p className="text-[13px] text-red-400">{error}</p>}
+      {error && <p id={`${fieldId}-error`} className="text-[13px] text-red-400">{error}</p>}
     </div>
   );
 }
 
 function SelectField({ label, options, value, onChange }: { label: string; options: string[]; value: string; onChange: (val: string) => void }) {
   const { t } = useTranslation("contact");
+  const selectId = useId();
   return (
     <div className="space-y-2">
-      <label className="mono-label text-gray/90">{label}</label>
-      <select value={value} onChange={(e) => onChange(e.target.value)} className="w-full bg-surface border border-gray/30 rounded-sm px-4 py-3 text-base text-sand hover:border-gray/50 focus:outline-none focus:bg-surface-raised focus:border-blue/70 focus:ring-2 focus:ring-blue/25 transition-colors duration-200 appearance-none">
+      <label htmlFor={selectId} className="mono-label text-gray/90">{label}</label>
+      <select id={selectId} value={value} onChange={(e) => onChange(e.target.value)} className="w-full bg-surface border border-gray/30 rounded-sm px-4 py-3 text-base text-sand hover:border-gray/50 focus:outline-none focus:bg-surface-raised focus:border-blue/70 focus:ring-2 focus:ring-blue/25 transition-colors duration-200 appearance-none">
         <option value="" className="bg-surface text-gray">{t("qualifiers.select")}</option>
         {options.map((opt) => <option key={opt} value={opt} className="bg-surface text-sand">{opt}</option>)}
       </select>
@@ -420,8 +422,9 @@ const Contact = () => {
 
                 {/* Message */}
                 <div className="border-t border-gray/20 pt-6 space-y-2">
-                  <label className="mono-label text-gray/90">{t("fields.messageLabel")}<span className="text-blue ml-1">*</span></label>
+                  <label htmlFor="field-message" className="mono-label text-gray/90">{t("fields.messageLabel")}<span className="text-blue ml-1">*</span></label>
                   <textarea
+                    id="field-message"
                     value={form.message} onChange={(e) => set("message")(e.target.value)}
                     className={`w-full bg-surface border rounded-sm px-4 py-3 text-base text-sand placeholder:text-gray/55 hover:border-gray/50 focus:outline-none focus:bg-surface-raised focus:border-blue/70 focus:ring-2 focus:ring-blue/25 transition-colors duration-200 min-h-[140px] resize-y ${validationErrors.message ? "border-red-400/60" : "border-gray/30"}`}
                     placeholder={t("fields.messagePlaceholder")} aria-invalid={!!validationErrors.message}
