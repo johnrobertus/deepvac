@@ -45,6 +45,9 @@ const StandardSeries = () => {
   const cFeatures = t("standardSeries.cSeries.features", { returnObjects: true }) as Array<{ label: string; detail: string }>;
   const applications = t("standardSeries.applicationFit.items", { returnObjects: true }) as string[];
   const faqItems = t("standardSeries.faq.items", { returnObjects: true }) as Array<{ q: string; a: string }>;
+  const techRows = t("standardSeries.techData.rows", { returnObjects: true }) as Array<{ label: string; values: string[] }>;
+  const techCommon = t("standardSeries.techData.common", { returnObjects: true }) as Array<{ label: string; value: string }>;
+  const techCooling = t("standardSeries.techData.cooling", { returnObjects: true }) as Array<{ label: string; value: string }>;
 
   const productsPath = localizedPath("/products", lang);
   const productsUrl = `https://deepvac.space${productsPath}`;
@@ -204,6 +207,80 @@ const StandardSeries = () => {
 
         <div className="section-divider" />
 
+        {/* Technical data across all sizes */}
+        <Section>
+          <SectionHeader
+            eyebrow={t("standardSeries.techData.eyebrow")}
+            title={t("standardSeries.techData.title")}
+            description={t("standardSeries.techData.description")}
+            className="mb-10"
+          />
+          <div className="overflow-x-auto rounded-lg border border-gray/15">
+            <table className="w-full min-w-[720px] text-left">
+              <thead>
+                <tr className="border-b border-gray/15 bg-surface">
+                  <th scope="col" className="px-4 py-3.5 mono-label">{t("standardSeries.techData.sizesLabel")}</th>
+                  {["65", "125", "250", "500", "1000", "2000"].map((v) => (
+                    <th key={v} scope="col" className="px-4 py-3.5 text-right mono-value">{v}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {techRows.map((row, i) => (
+                  <tr key={i} className="border-b border-gray/15 last:border-0">
+                    <th scope="row" className="px-4 py-3.5 text-[15px] font-normal leading-snug text-gray">{row.label}</th>
+                    {row.values.map((v, j) => (
+                      <td key={j} className="px-4 py-3.5 text-right mono-value">{v}</td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <div className="mt-12 grid gap-12 lg:grid-cols-2">
+            <div>
+              <h3 className="text-card-title-lg mb-5">{t("standardSeries.techData.commonTitle")}</h3>
+              <dl className="divide-y divide-gray/15 border-y border-gray/15">
+                {techCommon.map((item, i) => (
+                  <div key={i} className="flex flex-col gap-1 py-3 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6">
+                    <dt className="text-[15px] leading-snug text-gray">{item.label}</dt>
+                    <dd className="font-mono text-[15px] tabular-nums text-sand sm:text-right">{item.value}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+            <div>
+              <h3 className="text-card-title-lg mb-5">{t("standardSeries.techData.coolingTitle")}</h3>
+              <dl className="divide-y divide-gray/15 border-y border-gray/15">
+                {techCooling.map((item, i) => (
+                  <div key={i} className="flex flex-col gap-1 py-3 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6">
+                    <dt className="text-[15px] leading-snug text-gray">{item.label}</dt>
+                    <dd className="font-mono text-[15px] tabular-nums text-sand sm:text-right">{item.value}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          </div>
+
+          {/* Options & add-ons */}
+          <div className="mt-12 flex flex-col gap-5 rounded-lg border border-blue/20 bg-blue/5 p-6 sm:flex-row sm:items-center sm:justify-between md:p-8">
+            <div>
+              <span className="text-card-eyebrow">{t("standardSeries.techData.options.eyebrow")}</span>
+              <h3 className="mt-1.5 text-card-title-lg">{t("standardSeries.techData.options.title")}</h3>
+              <p className="mt-1.5 max-w-xl text-[15px] leading-relaxed text-gray">{t("standardSeries.techData.options.description")}</p>
+            </div>
+            <Button asChild variant="outline" className="shrink-0 font-mono text-xs tracking-wide">
+              <Link to={localizedPath("/products/thermal-vision", lang)}>
+                {t("standardSeries.techData.options.link")}
+                <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
+              </Link>
+            </Button>
+          </div>
+        </Section>
+
+        <div className="section-divider" />
+
         {/* Application Fit */}
         <Section className="bg-surface/30">
           <SectionHeader
@@ -284,7 +361,7 @@ const StandardSeries = () => {
             </Link>
           </Button>
           <Button asChild variant="outline" size="lg" className="font-mono text-xs tracking-wide">
-            <Link to={localizedPath("/contact", lang)}>{tc("buttons.requestQuote")}</Link>
+            <Link to={`${localizedPath("/contact", lang)}?interest=standard-series`}>{tc("buttons.requestQuote")}</Link>
           </Button>
         </CTABand>
         <p className="container mx-auto px-6 -mt-6 mb-12 flex items-start gap-1.5 text-card-meta text-gray/85 max-w-2xl">
