@@ -34,6 +34,16 @@ function ServicePageTemplate({ seoKey, nsKey, heroImage, children }: ServicePage
 
   const deliverables = t(`${nsKey}.deliverables`, { returnObjects: true }) as Array<{ title: string; description: string }>;
   const scenarios = t(`${nsKey}.scenarios`, { returnObjects: true }) as string[];
+
+  // Preselects the matching interest checkbox on the contact form
+  const interestByNs: Record<string, string> = {
+    controlSystems: "controls",
+    mechanicalDesign: "mechanical",
+    retrofit: "retrofit",
+    maintenance: "maintenance",
+    subsystemIntegration: "subsystems",
+  };
+  const contactHref = `${localizedPath("/contact", lang)}${interestByNs[nsKey] ? `?interest=${interestByNs[nsKey]}` : ""}`;
   const crossLinks = t(`${nsKey}.crossLinks`, { returnObjects: true }) as Array<{ label: string; href: string; description: string }>;
 
   return (
@@ -51,7 +61,7 @@ function ServicePageTemplate({ seoKey, nsKey, heroImage, children }: ServicePage
         <PageHero eyebrow={t(`${nsKey}.eyebrow`)} title={t(`${nsKey}.title`)} description={t(`${nsKey}.description`)}>
           <div className="flex flex-col sm:flex-row flex-wrap gap-3 pt-4">
             <Button asChild size="lg" className="font-mono text-xs tracking-wide w-full sm:w-auto">
-              <Link to={localizedPath("/contact", lang)}>{tc("buttons.discussRequirements")}</Link>
+              <Link to={contactHref}>{tc("buttons.discussRequirements")}</Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="font-mono text-xs tracking-wide w-full sm:w-auto">
               <Link to={localizedPath("/services", lang)}>{tc("buttons.allServices")}</Link>
@@ -121,10 +131,10 @@ function ServicePageTemplate({ seoKey, nsKey, heroImage, children }: ServicePage
 
         <CTABand title={t(`${nsKey}.ctaTitle`)} description={t(`${nsKey}.ctaDescription`)}>
           <Button asChild size="lg" className="font-mono text-xs tracking-wide">
-            <Link to={localizedPath("/contact", lang)}>{tc("buttons.talkToEngineer")}</Link>
+            <Link to={contactHref}>{tc("buttons.talkToEngineer")}</Link>
           </Button>
           <Button asChild variant="outline" size="lg" className="font-mono text-xs tracking-wide">
-            <Link to={localizedPath("/contact", lang)}>{tc("buttons.requestQuote")}</Link>
+            <Link to={contactHref}>{tc("buttons.requestQuote")}</Link>
           </Button>
         </CTABand>
       </PageShell>

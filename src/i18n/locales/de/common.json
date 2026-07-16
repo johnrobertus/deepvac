@@ -2,7 +2,7 @@
   "nav": {
     "products": "Produkte",
     "services": "Leistungen",
-    "engineering": "Engineering",
+    "engineering": "Leistungen",
     "team": "Team",
     "resources": "Ressourcen",
     "careers": "Karriere",
@@ -18,7 +18,8 @@
     "maintenanceRepair": "Wartung & Reparatur",
     "subsystemIntegration": "Subsystem-Integration",
     "talkToEngineer": "Ingenieur kontaktieren",
-    "configureTvac": "TVAC-System konfigurieren"
+    "configureTvac": "TVAC-System konfigurieren",
+    "contact": "Kontakt"
   },
   "footer": {
     "description": "Hochentwickelte Thermovakuumsysteme für die Raumfahrtqualifikation, Weltraumsimulation und Umweltprüfung.",

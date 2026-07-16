@@ -95,6 +95,10 @@
           "a": "Deepvac offers lifecycle services including preventive maintenance, repair, retrofit and modernisation, control system upgrades, and subsystem integration support for all chamber systems."
         },
         {
+          "q": "What is included in the scope of delivery of a chamber system?",
+          "a": "A Deepvac chamber system is delivered as an operational complete system: vacuum chamber, pumping system, thermal system, control cabinet with in-house control software, and technical documentation. Commissioning and operator training are provided on site depending on the project. The binding scope of delivery is defined per project in the quotation."
+        },
+        {
           "q": "Does Deepvac provide testing services alongside chamber systems?",
           "a": "Yes. Deepvac offers thermal vacuum testing services including test campaign execution, data acquisition, and engineering support for qualification, validation, and development programs."
         }
