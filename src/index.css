@@ -153,6 +153,26 @@
     color: hsl(var(--sand));
   }
 
+  /* Subtle radar-glow pulse for the primary booking CTA — synced to the live dot (2.5s) */
+  @keyframes cta-pulse {
+    0% {
+      box-shadow: 0 0 0 0 hsl(var(--blue) / 0.45);
+    }
+    70% {
+      box-shadow: 0 0 0 12px hsl(var(--blue) / 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 hsl(var(--blue) / 0);
+    }
+  }
+  .cta-pulse {
+    animation: cta-pulse 2.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+  .cta-pulse:hover,
+  .cta-pulse:focus-visible {
+    animation: none;
+  }
+
   /* Themed scrollbars — default OS-white bars break the dark monolith look */
   html {
     scrollbar-width: thin;
