@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useId } from "react";
 import { useTranslation } from "react-i18next";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Button } from "@/components/ui/button";
@@ -8,6 +8,7 @@ import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { ConsentMap } from "@/components/ConsentMap";
 import { useLanguage } from "@/components/LanguageProvider";
+import { trackEvent } from "@/lib/analytics";
 
 const TURNSTILE_SITE_KEY = "0x4AAAAAACu_Uqbd5b8IkXxU";
 
@@ -16,26 +17,28 @@ function FormField({
 }: {
   label: string; placeholder: string; type?: string; required?: boolean; name: string; value: string; onChange: (val: string) => void; error?: string;
 }) {
+  const fieldId = `field-${name}`;
   return (
     <div className="space-y-2">
-      <label className="mono-label text-gray/90">{label}{required && <span className="text-blue ml-1">*</span>}</label>
+      <label htmlFor={fieldId} className="mono-label text-gray/90">{label}{required && <span className="text-blue ml-1">*</span>}</label>
       <input
-        type={type} name={name} required={required} value={value}
+        id={fieldId} type={type} name={name} required={required} value={value}
         onChange={(e) => onChange(e.target.value)}
         className={`w-full bg-surface border rounded-sm px-4 py-3 text-base text-sand placeholder:text-gray/55 hover:border-gray/50 focus:outline-none focus:bg-surface-raised focus:border-blue/70 focus:ring-2 focus:ring-blue/25 transition-colors duration-200 ${error ? "border-red-400/60" : "border-gray/30"}`}
-        placeholder={placeholder} aria-invalid={!!error}
+        placeholder={placeholder} aria-invalid={!!error} aria-describedby={error ? `${fieldId}-error` : undefined}
       />
-      {error && <p className="text-[13px] text-red-400">{error}</p>}
+      {error && <p id={`${fieldId}-error`} className="text-[13px] text-red-400">{error}</p>}
     </div>
   );
 }
 
 function SelectField({ label, options, value, onChange }: { label: string; options: string[]; value: string; onChange: (val: string) => void }) {
   const { t } = useTranslation("contact");
+  const selectId = useId();
   return (
     <div className="space-y-2">
-      <label className="mono-label text-gray/90">{label}</label>
-      <select value={value} onChange={(e) => onChange(e.target.value)} className="w-full bg-surface border border-gray/30 rounded-sm px-4 py-3 text-base text-sand hover:border-gray/50 focus:outline-none focus:bg-surface-raised focus:border-blue/70 focus:ring-2 focus:ring-blue/25 transition-colors duration-200 appearance-none">
+      <label htmlFor={selectId} className="mono-label text-gray/90">{label}</label>
+      <select id={selectId} value={value} onChange={(e) => onChange(e.target.value)} className="w-full bg-surface border border-gray/30 rounded-sm px-4 py-3 text-base text-sand hover:border-gray/50 focus:outline-none focus:bg-surface-raised focus:border-blue/70 focus:ring-2 focus:ring-blue/25 transition-colors duration-200 appearance-none">
         <option value="" className="bg-surface text-gray">{t("qualifiers.select")}</option>
         {options.map((opt) => <option key={opt} value={opt} className="bg-surface text-sand">{opt}</option>)}
       </select>
@@ -183,6 +186,7 @@ export function ContactSection() {
         return;
       }
       setSubmitted(true); setValidationErrors({});
+      trackEvent("form_submitted", { page: "home", interests: interests.join(", ") || "none" });
       turnstileWidgetId.current = null;
       toast.success(tc("form.success.toast"));
     } catch (err: any) {
@@ -228,7 +232,7 @@ export function ContactSection() {
           <Reveal delay={100}>
             <div className="space-y-8">
               <div className="space-y-3">
-                <h3 className="text-section-title">{t("formTitle")}</h3>
+                <h2 className="text-section-title">{t("formTitle")}</h2>
                 <p className="text-body">{t("formDescription")}</p>
               </div>
 
@@ -311,8 +315,9 @@ export function ContactSection() {
 
                 {/* Message */}
                 <div className="border-t border-gray/20 pt-6 space-y-2">
-                  <label className="mono-label text-gray/90">{t("fields.messageLabel")}<span className="text-blue ml-1">*</span></label>
+                  <label htmlFor="field-message" className="mono-label text-gray/90">{t("fields.messageLabel")}<span className="text-blue ml-1">*</span></label>
                   <textarea
+                    id="field-message"
                     value={form.message} onChange={(e) => set("message")(e.target.value)}
                     className={`w-full bg-surface border rounded-sm px-4 py-3 text-base text-sand placeholder:text-gray/55 hover:border-gray/50 focus:outline-none focus:bg-surface-raised focus:border-blue/70 focus:ring-2 focus:ring-blue/25 transition-colors duration-200 min-h-[140px] resize-y ${validationErrors.message ? "border-red-400/60" : "border-gray/30"}`}
                     placeholder={t("fields.messagePlaceholder")} aria-invalid={!!validationErrors.message}
@@ -359,14 +364,14 @@ export function ContactSection() {
                   <Phone className="w-4 h-4 text-blue mt-0.5 shrink-0" />
                   <div>
                     <span className="mono-label mb-1 block">{tHome("contact.phone")}</span>
-                    <a href="tel:+4915783027099" className="text-[15px] text-gray hover:text-sand transition-colors">+49 157 830 270 99</a>
+                    <a href="tel:+4915783027099" onClick={() => trackEvent("contact_phone_click")} className="text-[15px] text-gray hover:text-sand transition-colors">+49 157 830 270 99</a>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <Mail className="w-4 h-4 text-blue mt-0.5 shrink-0" />
                   <div>
                     <span className="mono-label mb-1 block">{tHome("contact.email")}</span>
-                    <a href="mailto:info@deepvac.space" className="text-[15px] text-gray hover:text-sand transition-colors">info@deepvac.space</a>
+                    <a href="mailto:info@deepvac.space" onClick={() => trackEvent("contact_email_click")} className="text-[15px] text-gray hover:text-sand transition-colors">info@deepvac.space</a>
                   </div>
                 </div>
               </div>

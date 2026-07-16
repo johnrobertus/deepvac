@@ -124,6 +124,7 @@ export default function PrivacyPolicy() {
                 ))}
               </ul>
               <p>{t("privacy.sections.contactFormNote")}</p>
+              <p>{t("privacy.sections.contactFormProcessor")}</p>
               <p>{t("privacy.sections.contactFormRetention")}</p>
             </LegalSection>
 
@@ -165,6 +166,14 @@ export default function PrivacyPolicy() {
               <p>{t("privacy.sections.turnstileText3")}</p>
               <p>{t("privacy.sections.turnstileLegal")}</p>
               <p>{t("privacy.sections.turnstileMoreInfo")}</p>
+            </LegalSection>
+
+            <LegalSection title={t("privacy.sections.calendly")}>
+              <p>{t("privacy.sections.calendlyText")}</p>
+              <p>{t("privacy.sections.calendlyText2")}</p>
+              <p>{t("privacy.sections.calendlyText3")}</p>
+              <p>{t("privacy.sections.calendlyLegal")}</p>
+              <p>{t("privacy.sections.calendlyMoreInfo")}</p>
             </LegalSection>
 
             <LegalSection title={t("privacy.sections.dataRetention")}>

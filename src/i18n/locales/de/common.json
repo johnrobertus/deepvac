@@ -194,5 +194,8 @@
     "consentAccept": "Akzeptieren & Kalender laden",
     "consentWithdraw": "Einwilligung widerrufen",
     "loading": "Kalender wird geladen"
+  },
+  "a11y": {
+    "skipToContent": "Zum Inhalt springen"
   }
 }

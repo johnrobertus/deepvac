@@ -12,6 +12,7 @@ import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/components/LanguageProvider";
 import { localizedPath } from "@/lib/routes";
 import { CALENDLY_TECHNICAL_CALL_URL } from "@/lib/external-links";
+import { trackEvent } from "@/lib/analytics";
 
 const STORAGE_KEY = "deepvac-calendly-consent";
 
@@ -54,9 +55,30 @@ export function BookCallDialog({ open, onOpenChange }: BookCallDialogProps) {
     return () => window.removeEventListener("storage", onStorage);
   }, []);
 
+  useEffect(() => {
+    if (open) trackEvent("book_call_opened");
+  }, [open]);
+
+  // Calendly signals a completed booking via postMessage
+  useEffect(() => {
+    if (!open || !consented) return;
+    const onMessage = (e: MessageEvent) => {
+      if (
+        typeof e.origin === "string" &&
+        e.origin.endsWith("calendly.com") &&
+        (e.data as { event?: string } | null)?.event === "calendly.event_scheduled"
+      ) {
+        trackEvent("book_call_booked");
+      }
+    };
+    window.addEventListener("message", onMessage);
+    return () => window.removeEventListener("message", onMessage);
+  }, [open, consented]);
+
   const handleAccept = useCallback(() => {
     writeConsent(true);
     setConsented(true);
+    trackEvent("book_call_consent");
   }, []);
 
   const handleWithdraw = useCallback(() => {

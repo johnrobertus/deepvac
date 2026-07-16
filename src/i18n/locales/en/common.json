@@ -194,5 +194,8 @@
     "consentAccept": "Accept & load calendar",
     "consentWithdraw": "Withdraw consent",
     "loading": "Loading calendar"
+  },
+  "a11y": {
+    "skipToContent": "Skip to content"
   }
 }
