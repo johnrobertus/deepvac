@@ -22,7 +22,7 @@ import { SectionHeader } from "@/components/SectionHeader";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/components/LanguageProvider";
 import { getHreflangs, getCanonical, localizedPath } from "@/lib/routes";
-import testingHero from "@/assets/testing-hero.png";
+import testingHero from "@/assets/testing-hero.webp";
 
 type ScopeItem = {
   title: string;
@@ -86,7 +86,7 @@ export const TestingServices = () => {
         <div className="container-wide pt-8">
           <nav
             aria-label="Breadcrumb"
-            className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-gray"
+            className="flex items-center gap-2 mono-label"
           >
             <Link to={lp("/")} className="hover:text-sand transition-colors">
               {t("testing.breadcrumbHome")}

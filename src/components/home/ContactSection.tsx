@@ -277,19 +277,19 @@ export function ContactSection() {
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-5">
                     <div className="space-y-1.5">
-                      <p className="text-[13px] font-mono uppercase tracking-wider text-gray mb-1.5">{t("sections.interestProducts")}</p>
+                      <p className="mono-label mb-1.5">{t("sections.interestProducts")}</p>
                       {productInterests.map((label) => (
                         <CheckboxItem key={label} label={label} checked={interests.includes(label)} onChange={() => toggleInterest(label)} />
                       ))}
                     </div>
                     <div className="space-y-1.5">
-                      <p className="text-[13px] font-mono uppercase tracking-wider text-gray mb-1.5">{t("sections.interestServices")}</p>
+                      <p className="mono-label mb-1.5">{t("sections.interestServices")}</p>
                       {serviceInterests.map((label) => (
                         <CheckboxItem key={label} label={label} checked={interests.includes(label)} onChange={() => toggleInterest(label)} />
                       ))}
                     </div>
                     <div className="space-y-1.5">
-                      <p className="text-[13px] font-mono uppercase tracking-wider text-gray mb-1.5">{t("sections.interestOther")}</p>
+                      <p className="mono-label mb-1.5">{t("sections.interestOther")}</p>
                       {otherInterests.map((label) => (
                         <CheckboxItem key={label} label={label} checked={interests.includes(label)} onChange={() => toggleInterest(label)} />
                       ))}

@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import thermalHero from "@/assets/thermal-vision-hero.png";
+import thermalHero from "@/assets/thermal-vision-hero.webp";
 
 interface ThermalVisionCardProps {
   className?: string;

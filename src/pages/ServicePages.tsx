@@ -10,11 +10,11 @@ import { PlaceholderImage } from "@/components/PlaceholderImage";
 import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/components/LanguageProvider";
 import { getHreflangs, getCanonical, localizedPath } from "@/lib/routes";
-import mechanicalDesignHero from "@/assets/mechanical-design-hero.png";
-import controlSystemsHero from "@/assets/control-systems-hero.png";
-import retrofitHero from "@/assets/retrofit-hero.png";
-import maintenanceHero from "@/assets/maintenance-hero.png";
-import subsystemHero from "@/assets/subsystem-hero.png";
+import mechanicalDesignHero from "@/assets/mechanical-design-hero.webp";
+import controlSystemsHero from "@/assets/control-systems-hero.webp";
+import retrofitHero from "@/assets/retrofit-hero.webp";
+import maintenanceHero from "@/assets/maintenance-hero.webp";
+import subsystemHero from "@/assets/subsystem-hero.webp";
 
 interface ServicePageProps {
   seoKey: string;
