@@ -234,6 +234,100 @@
       "tSeries": "Deepvac T Series cubic thermal vacuum chamber",
       "cSeries": "Deepvac C Series cylindrical thermal vacuum chamber",
       "brochureCover": "Deepvac Standard Series Catalogue"
+    },
+    "techData": {
+      "eyebrow": "Technical Data",
+      "title": "Sizes & Key Specifications at a Glance",
+      "description": "Six standard sizes, one system architecture — valid for the T-Series (cubic) and C-Series (cylindrical). Binding values per configuration in the catalog and quotation.",
+      "sizesLabel": "Nominal volume (L)",
+      "rows": [
+        {
+          "label": "Turbomolecular pump pumping speed (L/s, nominal)",
+          "values": [
+            "300",
+            "450",
+            "500",
+            "900",
+            "1200",
+            "2200"
+          ]
+        },
+        {
+          "label": "Backing pump pumping speed (m³/h, nominal)",
+          "values": [
+            "16",
+            "16",
+            "25",
+            "40",
+            "63",
+            "100"
+          ]
+        }
+      ],
+      "commonTitle": "Characteristics Shared Across All Sizes",
+      "common": [
+        {
+          "label": "Working pressure",
+          "value": "≤ 1 × 10⁻⁶ mbar"
+        },
+        {
+          "label": "Temperature uniformity",
+          "value": "± 2 K"
+        },
+        {
+          "label": "Temperature stability (steady-state)",
+          "value": "± 0.5 K"
+        },
+        {
+          "label": "Temperature change rate",
+          "value": "≥ 1 K/min (heating & cooling)"
+        },
+        {
+          "label": "Temperature sensing",
+          "value": "Pt100"
+        },
+        {
+          "label": "Control system",
+          "value": "Freely programmable PLC, 7\" touch panel, 0.1 °C setpoint resolution"
+        },
+        {
+          "label": "Data logging & export",
+          "value": "USB storage, export as CSV / TXT / XLS, PC control"
+        },
+        {
+          "label": "Chamber material",
+          "value": "AISI 304 stainless steel, polished interior"
+        },
+        {
+          "label": "Process ports (standard)",
+          "value": "ISO-K 100 or ISO-K 160, further flanges on request"
+        }
+      ],
+      "coolingTitle": "Temperature Range by Cooling Concept (Thermal Plate)",
+      "cooling": [
+        {
+          "label": "Direct LN₂ injection with surface-mounted heaters",
+          "value": "−180 °C to +150 °C"
+        },
+        {
+          "label": "GN₂ closed-circuit circulation",
+          "value": "−180 °C to +150 °C"
+        },
+        {
+          "label": "Mechanical cooling",
+          "value": "−70 °C to +125 °C"
+        },
+        {
+          "label": "Flooded LN₂ heat exchanger (two-phase boiling mode)",
+          "value": "down to approx. −190 °C"
+        }
+      ],
+      "options": {
+        "eyebrow": "Options & Add-ons",
+        "title": "Thermal Vision",
+        "description": "In-situ thermographic observation of the test article during TVAC testing — available as an add-on for standard and custom chambers.",
+        "link": "Explore Thermal Vision"
+      }
     }
   },
   "customTvac": {

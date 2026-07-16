@@ -234,6 +234,100 @@
       "tSeries": "Deepvac T-Serie kubische Thermovakuumkammer",
       "cSeries": "Deepvac C-Serie zylindrische Thermovakuumkammer",
       "brochureCover": "Deepvac Standard-Serie Katalog"
+    },
+    "techData": {
+      "eyebrow": "Technische Daten",
+      "title": "Baugrößen & Kennwerte im Überblick",
+      "description": "Sechs Standard-Baugrößen, identische Systemarchitektur — gültig für T-Serie (kubisch) und C-Serie (zylindrisch). Verbindliche Werte je Konfiguration im Katalog und Angebot.",
+      "sizesLabel": "Nennvolumen (L)",
+      "rows": [
+        {
+          "label": "Saugvermögen Turbomolekularpumpe (L/s, nominal)",
+          "values": [
+            "300",
+            "450",
+            "500",
+            "900",
+            "1200",
+            "2200"
+          ]
+        },
+        {
+          "label": "Saugvermögen Vorvakuumpumpe (m³/h, nominal)",
+          "values": [
+            "16",
+            "16",
+            "25",
+            "40",
+            "63",
+            "100"
+          ]
+        }
+      ],
+      "commonTitle": "Gemeinsame Kennwerte aller Baugrößen",
+      "common": [
+        {
+          "label": "Arbeitsdruck",
+          "value": "≤ 1 × 10⁻⁶ mbar"
+        },
+        {
+          "label": "Temperaturuniformität",
+          "value": "± 2 K"
+        },
+        {
+          "label": "Temperaturstabilität (stationär)",
+          "value": "± 0,5 K"
+        },
+        {
+          "label": "Temperaturänderungsrate",
+          "value": "≥ 1 K/min (Heizen & Kühlen)"
+        },
+        {
+          "label": "Temperatursensorik",
+          "value": "Pt100"
+        },
+        {
+          "label": "Steuerung",
+          "value": "Frei programmierbare SPS, 7\"-Touchpanel, 0,1 °C Sollwertauflösung"
+        },
+        {
+          "label": "Datenerfassung & Export",
+          "value": "USB-Speicherung, Export als CSV / TXT / XLS, PC-Anbindung"
+        },
+        {
+          "label": "Kammermaterial",
+          "value": "Edelstahl AISI 304, innen poliert"
+        },
+        {
+          "label": "Prozessports (Standard)",
+          "value": "ISO-K 100 bzw. ISO-K 160, weitere Flansche nach Anforderung"
+        }
+      ],
+      "coolingTitle": "Temperaturbereich nach Kühlkonzept (Thermalplatte)",
+      "cooling": [
+        {
+          "label": "LN₂-Direkteinspritzung mit Flächenheizern",
+          "value": "−180 °C bis +150 °C"
+        },
+        {
+          "label": "GN₂-Umwälzung (geschlossener Kreislauf)",
+          "value": "−180 °C bis +150 °C"
+        },
+        {
+          "label": "Mechanische Kühlung",
+          "value": "−70 °C bis +125 °C"
+        },
+        {
+          "label": "Gefluteter LN₂-Wärmetauscher (Zweiphasen-Siedebetrieb)",
+          "value": "bis ca. −190 °C"
+        }
+      ],
+      "options": {
+        "eyebrow": "Optionen & Add-ons",
+        "title": "Thermal Vision",
+        "description": "Thermografische In-situ-Beobachtung des Prüflings während des TVAC-Tests — als Add-on für Standard- und Custom-Kammern.",
+        "link": "Thermal Vision entdecken"
+      }
     }
   },
   "customTvac": {
