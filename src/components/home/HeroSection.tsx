@@ -262,7 +262,7 @@ export function HeroSection() {
                   <Button
                     size="default"
                     onClick={() => setBookCallOpen(true)}
-                    className="w-full font-mono text-sm tracking-wide sm:w-auto sm:h-12 sm:px-8 sm:text-base"
+                    className="cta-pulse w-full font-mono text-sm tracking-wide sm:w-auto sm:h-12 sm:px-8 sm:text-base"
                   >
                     <span className="relative flex h-2 w-2" aria-hidden="true">
                       <span className="absolute inline-flex h-full w-full animate-[ping_2.5s_cubic-bezier(0,0,0.2,1)_infinite] rounded-full bg-primary-foreground/30" />
