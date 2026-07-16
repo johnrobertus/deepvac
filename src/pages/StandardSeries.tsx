@@ -11,8 +11,8 @@ import { ArrowRight, Maximize, Circle, Thermometer, Gauge, Cpu, Download, Clipbo
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { useLanguage } from "@/components/LanguageProvider";
 import { getHreflangs, getCanonical, localizedPath } from "@/lib/routes";
-import tseriesImg from "@/assets/tseries-chamber.png";
-import cseriesImg from "@/assets/cseries-chamber.png";
+import tseriesImg from "@/assets/tseries-chamber.webp";
+import cseriesImg from "@/assets/cseries-chamber.webp";
 
 const NBSP = "\u00A0";
 const vacuum = `<${NBSP}1${NBSP}×${NBSP}10⁻⁶${NBSP}mbar`;

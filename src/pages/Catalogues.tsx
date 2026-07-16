@@ -73,7 +73,7 @@ const Catalogues = () => {
               <div className="p-8 lg:p-10 flex flex-col justify-center space-y-5">
                 <span className="mono-label text-blue">{t("featuredBrochure")}</span>
                 <h2 className="text-section-title">{featured.title}</h2>
-                {featured.subtitle && <p className="text-sm text-blue/80 font-mono uppercase tracking-wider">{featured.subtitle}</p>}
+                {featured.subtitle && <p className="text-card-eyebrow">{featured.subtitle}</p>}
                 <p className="text-body">{featured.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {featured.tags.map((tag) => (
@@ -158,7 +158,7 @@ function BrochureCard({ doc }: { doc: Brochure }) {
       <div className="p-5 space-y-3 flex-1 flex flex-col">
         <div className="flex flex-wrap gap-1.5">
           {doc.tags.map((tag) => (
-            <span key={tag} className="px-1.5 py-0.5 text-[11px] font-mono uppercase tracking-wider text-gray border border-gray/20 rounded-sm">{tag}</span>
+            <span key={tag} className="px-1.5 py-0.5 text-[11px] font-mono uppercase tracking-widest text-gray border border-gray/20 rounded-sm">{tag}</span>
           ))}
         </div>
         <h3 className="text-sm font-medium text-sand">{doc.title}</h3>

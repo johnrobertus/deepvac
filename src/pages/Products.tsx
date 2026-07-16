@@ -10,9 +10,9 @@ import { ArrowRight, Box, Cog, Camera, ClipboardList, Clock } from "lucide-react
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { useLanguage } from "@/components/LanguageProvider";
 import { getHreflangs, getCanonical, localizedPath } from "@/lib/routes";
-import tseriesImg from "@/assets/tseries-chamber.png";
-import cseriesImg from "@/assets/cseries-chamber.png";
-import customImg from "@/assets/custom-chamber.png";
+import tseriesImg from "@/assets/tseries-chamber.webp";
+import cseriesImg from "@/assets/cseries-chamber.webp";
+import customImg from "@/assets/custom-chamber.webp";
 import thermalVisionImg from "@/assets/thermal-vision-product.jpg";
 
 const Products = () => {
