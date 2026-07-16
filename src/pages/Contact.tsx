@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useSearchParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import { Layout } from "@/components/Layout";
@@ -7,14 +7,14 @@ import { PageShell, PageHero, Section } from "@/components/PageShell";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Phone, Mail, MapPin, Clock, Shield, ArrowRight, ArrowUpRight, CheckCircle, Loader2, ClipboardList, ClipboardCheck, CalendarClock } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Shield, ArrowRight, CheckCircle, Loader2, ClipboardList, ClipboardCheck, CalendarClock } from "lucide-react";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { ConsentMap } from "@/components/ConsentMap";
 import { useLanguage } from "@/components/LanguageProvider";
 import { getHreflangs, getCanonical, localizedPath } from "@/lib/routes";
 import { QuestionnaireCard } from "@/components/questionnaire/QuestionnaireCTA";
-import { CALENDLY_TECHNICAL_CALL_URL } from "@/lib/external-links";
+import { BookCallDialog } from "@/components/BookCallDialog";
 
 declare global {
   interface Window {
@@ -110,6 +110,30 @@ const Contact = () => {
   const productInterests = t("interests.products", { returnObjects: true }) as string[];
   const serviceInterests = t("interests.services", { returnObjects: true }) as string[];
   const otherInterests = t("interests.other", { returnObjects: true }) as string[];
+
+  const [searchParams] = useSearchParams();
+  const [bookCallOpen, setBookCallOpen] = useState(false);
+
+  // Deep links from product/service pages preselect the matching interest
+  useEffect(() => {
+    const key = searchParams.get("interest");
+    if (!key) return;
+    const paramToLabel: Record<string, string | undefined> = {
+      "standard-series": productInterests[0],
+      "custom-tvac": productInterests[1],
+      "thermal-vision": productInterests[2],
+      testing: serviceInterests[0],
+      controls: serviceInterests[1],
+      mechanical: serviceInterests[2],
+      retrofit: serviceInterests[3],
+      maintenance: serviceInterests[4],
+      subsystems: serviceInterests[5],
+    };
+    const label = paramToLabel[key];
+    if (label) setInterests((prev) => (prev.includes(label) ? prev : [...prev, label]));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const projectStageOptions = t("projectStageOptions", { returnObjects: true }) as string[];
   const timelineOptionsNew = t("timelineOptionsNew", { returnObjects: true }) as string[];
   const existingSystemOptions = t("existingSystemOptions", { returnObjects: true }) as string[];
@@ -328,12 +352,11 @@ const Contact = () => {
                     <p className="text-[13px] text-gray/85 leading-relaxed">{tc("bookCall.cardDescription")}</p>
                   </div>
                 </div>
-                <Button asChild className="w-full">
-                  <a href={CALENDLY_TECHNICAL_CALL_URL} target="_blank" rel="noopener noreferrer">
-                    {tc("bookCall.cardButton")}
-                    <ArrowUpRight className="h-4 w-4 ml-2" aria-hidden="true" />
-                  </a>
+                <Button className="w-full" onClick={() => setBookCallOpen(true)}>
+                  {tc("bookCall.cardButton")}
+                  <CalendarClock className="h-4 w-4 ml-2" aria-hidden="true" />
                 </Button>
+                <BookCallDialog open={bookCallOpen} onOpenChange={setBookCallOpen} />
               </aside>
 
 

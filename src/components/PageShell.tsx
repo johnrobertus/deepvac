@@ -1,8 +1,8 @@
 import { cn } from "@/lib/utils";
-import { ReactNode } from "react";
+import { ReactNode, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { ArrowUpRight } from "lucide-react";
-import { CALENDLY_TECHNICAL_CALL_URL } from "@/lib/external-links";
+import { CalendarClock } from "lucide-react";
+import { BookCallDialog } from "@/components/BookCallDialog";
 
 interface PageShellProps {
   children: ReactNode;
@@ -77,6 +77,7 @@ export function CTABand({
   children?: ReactNode;
 }) {
   const { t } = useTranslation("common");
+  const [bookCallOpen, setBookCallOpen] = useState(false);
   return (
     <section className="relative py-16 md:py-24 px-6 bg-surface border-t border-blue/20">
       <div className="container max-w-4xl text-center space-y-6">
@@ -85,18 +86,18 @@ export function CTABand({
           <p className="text-section-lead mx-auto">{description}</p>
         )}
         {children && <div className="pt-4 flex flex-col sm:flex-row flex-wrap justify-center gap-4">{children}</div>}
-        <p className="text-sm text-gray pt-2">
+        <p className="text-[15px] text-gray pt-2">
           {t("bookCall.inlinePrompt")}{" "}
-          <a
-            href={CALENDLY_TECHNICAL_CALL_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 text-gray hover:text-sand underline underline-offset-4 transition-colors"
+          <button
+            type="button"
+            onClick={() => setBookCallOpen(true)}
+            className="inline-flex items-center gap-1.5 text-gray hover:text-sand underline underline-offset-4 transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
           >
             {t("bookCall.linkLabel")}
-            <ArrowUpRight className="w-3.5 h-3.5" aria-hidden="true" />
-          </a>
+            <CalendarClock className="w-3.5 h-3.5" aria-hidden="true" />
+          </button>
         </p>
+        <BookCallDialog open={bookCallOpen} onOpenChange={setBookCallOpen} />
       </div>
     </section>
   );
