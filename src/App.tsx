@@ -12,6 +12,7 @@ import { ScrollToTop } from "./components/ScrollToTop";
 const Products = lazy(() => import("./pages/Products"));
 const StandardSeries = lazy(() => import("./pages/StandardSeries"));
 const CustomTVAC = lazy(() => import("./pages/CustomTVAC"));
+const Options = lazy(() => import("./pages/Options"));
 const ThermalVision = lazy(() => import("./pages/ThermalVision"));
 const Services = lazy(() => import("./pages/Services"));
 const ControlSystemsDesign = lazy(() =>
