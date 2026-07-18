@@ -70,6 +70,7 @@ const App = () => (
                 <Route path="/products" element={<Products />} />
                 <Route path="/products/standard-series" element={<StandardSeries />} />
                 <Route path="/products/custom-tvac" element={<CustomTVAC />} />
+                <Route path="/products/options" element={<Options />} />
                 <Route path="/products/thermal-vision" element={<ThermalVision />} />
                 <Route path="/services" element={<Services />} />
                 <Route path="/services/testing-services" element={<TestingServices />} />
