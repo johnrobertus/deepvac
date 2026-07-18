@@ -95,13 +95,15 @@ const References = () => {
             <div className="p-8 md:p-10 flex items-center">
               <p className="text-body whitespace-normal">{t("origin.description")}</p>
             </div>
-            <div className="bg-white/95 p-6 flex items-center justify-center">
-              <img
-                src={lang === "de" ? existFundingDe : existFundingEn}
-                alt={t("origin.altText")}
-                className="w-full h-auto max-w-md block"
-                loading="lazy"
-              />
+            <div className="p-6 md:p-8 flex items-center justify-center">
+              <div className="w-full max-w-md rounded-lg border border-gray/15 bg-white/95 p-5 md:p-6">
+                <img
+                  src={lang === "de" ? existFundingDe : existFundingEn}
+                  alt={t("origin.altText")}
+                  className="w-full h-auto block"
+                  loading="lazy"
+                />
+              </div>
             </div>
           </div>
         </Section>

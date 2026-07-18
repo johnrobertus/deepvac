@@ -1,12 +1,12 @@
 {
   "eyebrow": "Karriere",
   "title": "Bauen Sie Systeme, die Raumfahrthardware testen",
-  "description": "Deepvac sucht Ingenieure, die den gesamten technischen Umfang der Thermovakuumsystem-Entwicklung abdecken möchten – vom Konzept und Subsystem-Design bis zu Integration und Inbetriebnahme.",
+  "description": "Deepvac sucht Ingenieure, die den gesamten technischen Umfang der Thermalvakuumsystem-Entwicklung abdecken möchten – vom Konzept und Subsystem-Design bis zu Integration und Inbetriebnahme.",
   "mission": {
     "eyebrow": "Unsere Mission",
-    "title": "Engineering von Thermovakuumsystemen für anspruchsvolle Anwendungen",
+    "title": "Engineering von Thermalvakuumsystemen für anspruchsvolle Anwendungen",
     "paragraphs": [
-      "Deepvac entwickelt fortschrittliche Thermovakuumsysteme für Raumfahrt-, Forschungs- und industrielle Testumgebungen. Unsere Arbeit umfasst den gesamten Engineering-Umfang dieser Systeme – einschließlich mechanischer Konstruktion, thermischer Subsysteme, Vakuumarchitektur, Steuerungssysteme, Instrumentierung und Gesamtsystemintegration.",
+      "Deepvac entwickelt fortschrittliche Thermalvakuumsysteme für Raumfahrt-, Forschungs- und industrielle Testumgebungen. Unsere Arbeit umfasst den gesamten Engineering-Umfang dieser Systeme – einschließlich mechanischer Konstruktion, thermischer Subsysteme, Vakuumarchitektur, Steuerungssysteme, Instrumentierung und Gesamtsystemintegration.",
       "Wir bauen ein Team von Ingenieuren auf, die disziplinübergreifend arbeiten, Verantwortung für technische Entscheidungen übernehmen und Wert auf langfristige Leistung und Zuverlässigkeit der von ihnen konstruierten Systeme legen."
     ],
     "valuesTitle": "Was uns wichtig ist",
@@ -22,7 +22,7 @@
     "eyebrow": "Ihre Arbeit",
     "title": "Woran Sie arbeiten werden",
     "items": [
-      { "title": "Systemkonzeptentwicklung", "description": "Überführung von Kundenanforderungen in technisch fundierte Systemkonzepte für Thermovakuum- und Weltraumsimulationsanwendungen." },
+      { "title": "Systemkonzeptentwicklung", "description": "Überführung von Kundenanforderungen in technisch fundierte Systemkonzepte für Thermalvakuum- und Weltraumsimulationsanwendungen." },
       { "title": "Subsystem-Engineering", "description": "Konstruktion und Spezifikation von Vakuum-, Thermal-, Mechanik-, Steuerungs- und Instrumentierungssubsystemen einschließlich Schnittstellen und Komponentenauswahl." },
       { "title": "Integration & Inbetriebnahme", "description": "Unterstützung bei Aufbau, Abnahmeprüfung, Fehlersuche und Inbetriebnahme vollständiger Systeme in realen Projektumgebungen." },
       { "title": "Dokumentation & Reviews", "description": "Erstellung von Engineering-Dokumentation, Berechnungen, Spezifikationen und Design-Review-Material mit Fokus auf Klarheit und Zuverlässigkeit." }
@@ -60,7 +60,7 @@
     "description": "Wir bauen derzeit unser Team auf und freuen uns über Bewerbungen von Ingenieuren mit relevantem technischen Hintergrund, die in Garbsen, Deutschland, mitarbeiten möchten.",
     "generalApplication": {
       "title": "Initiativbewerbung",
-      "description": "Wir sind immer daran interessiert, von Ingenieuren zu hören, die zur Konstruktion, Entwicklung, Integration und Inbetriebnahme fortschrittlicher Thermovakuumsysteme beitragen möchten. Auch wenn keine spezifische Stelle ausgeschrieben ist, die zu Ihrem Hintergrund passt, ermutigen wir Sie, Kontakt aufzunehmen.",
+      "description": "Wir sind immer daran interessiert, von Ingenieuren zu hören, die zur Konstruktion, Entwicklung, Integration und Inbetriebnahme fortschrittlicher Thermalvakuumsysteme beitragen möchten. Auch wenn keine spezifische Stelle ausgeschrieben ist, die zu Ihrem Hintergrund passt, ermutigen wir Sie, Kontakt aufzunehmen.",
       "location": "Garbsen, Deutschland",
       "type": "Vollzeit",
       "department": "Engineering",

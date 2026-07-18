@@ -32,11 +32,11 @@
             "advantages": [
               "No consumable cryogens — lower recurring operational cost",
               "Continuous operation without supply logistics",
-              "Good temperature controllability in the −70 °C to +150 °C range",
+              "Good temperature controllability in the −90 °C to +150 °C range",
               "Lower facility infrastructure requirements"
             ],
             "constraints": [
-              "Limited minimum temperature (typically −70 °C to −80 °C for dual-stage systems)",
+              "Limited minimum temperature (typically down to approx. −90 °C for dual-stage systems)",
               "Slower cooldown rates compared to LN2 systems",
               "Higher initial equipment cost for cascade configurations",
               "Compressor maintenance and eventual replacement"

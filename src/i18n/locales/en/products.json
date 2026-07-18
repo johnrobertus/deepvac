@@ -315,7 +315,7 @@
         },
         {
           "label": "Mechanical cooling",
-          "value": "−70 °C to +125 °C"
+          "value": "−90 °C to +150 °C"
         },
         {
           "label": "Flooded LN₂ heat exchanger (two-phase boiling mode)",

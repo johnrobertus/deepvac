@@ -1,12 +1,12 @@
 {
   "overview": {
     "eyebrow": "Produktpalette",
-    "title": "Thermovakuumkammer-Systeme",
-    "description": "Deepvac entwickelt standardisierte und kundenspezifisch konstruierte Thermovakuumsysteme für die Raumfahrtqualifikation, Umweltsimulation und Forschungsanwendungen. Unsere Kammerplattformen decken ein breites Spektrum an Testanforderungen ab – von etablierten Workflows mit modularen Standardsystemen bis hin zu vollständig maßgeschneiderten Konfigurationen für komplexe Missionsprofile.",
+    "title": "Thermalvakuumkammer-Systeme",
+    "description": "Deepvac entwickelt standardisierte und kundenspezifisch konstruierte Thermalvakuumsysteme für die Raumfahrtqualifikation, Umweltsimulation und Forschungsanwendungen. Unsere Kammerplattformen decken ein breites Spektrum an Testanforderungen ab – von etablierten Workflows mit modularen Standardsystemen bis hin zu vollständig maßgeschneiderten Konfigurationen für komplexe Missionsprofile.",
     "standardSeries": {
       "title": "Standard-Serie",
       "subtitle": "Vorkonstruierte TVAC-Plattformen",
-      "description": "Modulare Thermovakuumkammer-Systeme mit bewährten Architekturen, standardisierten Schnittstellen und reproduzierbarer Leistung für etablierte Testanforderungen. Verfügbar in kubischen (T-Serie) und zylindrischen (C-Serie) Konfigurationen.",
+      "description": "Modulare Thermalvakuumkammer-Systeme mit bewährten Architekturen, standardisierten Schnittstellen und reproduzierbarer Leistung für etablierte Testanforderungen. Verfügbar in kubischen (T-Serie) und zylindrischen (C-Serie) Konfigurationen.",
       "cta": "Standard-Serie entdecken",
       "chips": [
         "Modulares Design",
@@ -17,7 +17,7 @@
     "customTvac": {
       "title": "Custom TVAC",
       "subtitle": "Anwendungsspezifisches Kammer-Engineering",
-      "description": "Vollständig maßgeschneiderte Thermovakuumsysteme, konfiguriert um missionsspezifische Geometrien, Durchführungsanforderungen, Thermalprofile, Instrumentierungsbedürfnisse und Integrationsbedingungen. Vom Konzept bis zur Inbetriebnahme engineered.",
+      "description": "Vollständig maßgeschneiderte Thermalvakuumsysteme, konfiguriert um missionsspezifische Geometrien, Durchführungsanforderungen, Thermalprofile, Instrumentierungsbedürfnisse und Integrationsbedingungen. Vom Konzept bis zur Inbetriebnahme engineered.",
       "cta": "Konfiguration besprechen",
       "chips": [
         "Custom-Geometrie",
@@ -28,7 +28,7 @@
     "thermalVision": {
       "title": "Deepvac Thermal Vision",
       "subtitle": "In-Situ-Thermalüberwachungssubsystem",
-      "description": "Druckfestes Infrarot-Kamerasystem für die Echtzeit-Thermalflächenkartierung in Thermovakuumkammern. Konzipiert für die Integration in neue und bestehende TVAC-Infrastruktur.",
+      "description": "Druckfestes Infrarot-Kamerasystem für die Echtzeit-Thermalflächenkartierung in Thermalvakuumkammern. Konzipiert für die Integration in neue und bestehende TVAC-Infrastruktur.",
       "cta": "Thermal Vision entdecken",
       "chips": [
         "IR-Kamerasystem",
@@ -100,7 +100,7 @@
         },
         {
           "q": "Bietet Deepvac neben Kammersystemen auch Prüfdienstleistungen an?",
-          "a": "Ja. Deepvac bietet Thermovakuum-Prüfdienstleistungen einschließlich Testkampagnendurchführung, Datenerfassung und Engineering-Unterstützung für Qualifikations-, Validierungs- und Entwicklungsprogramme."
+          "a": "Ja. Deepvac bietet Thermalvakuum-Prüfdienstleistungen einschließlich Testkampagnendurchführung, Datenerfassung und Engineering-Unterstützung für Qualifikations-, Validierungs- und Entwicklungsprogramme."
         }
       ]
     },
@@ -112,11 +112,11 @@
   "standardSeries": {
     "eyebrow": "Produkte / Standard-Serie",
     "title": "Vorkonstruierte TVAC-Plattformen",
-    "description": "Standardisierte Thermovakuumkammer-Plattformen mit modularen Konfigurationen und reproduzierbarer Leistung für Raumfahrtqualifikation, Umweltsimulation und Forschungstests.",
+    "description": "Standardisierte Thermalvakuumkammer-Plattformen mit modularen Konfigurationen und reproduzierbarer Leistung für Raumfahrtqualifikation, Umweltsimulation und Forschungstests.",
     "tSeries": {
-      "eyebrow": "Kubische Thermovakuumkammern",
+      "eyebrow": "Kubische Thermalvakuumkammern",
       "title": "T-Serie TVAC",
-      "description": "Kompakte kubische Thermovakuumkammer-Plattformen für reproduzierbare Umweltsimulation, Subsystem-Validierung und Laborworkflows. Die T-Serie kombiniert kontrollierte thermische und Vakuumbedingungen mit einer standardisierten Architektur für Forschungs- und Qualifikationsanwendungen.",
+      "description": "Kompakte kubische Thermalvakuumkammer-Plattformen für reproduzierbare Umweltsimulation, Subsystem-Validierung und Laborworkflows. Die T-Serie kombiniert kontrollierte thermische und Vakuumbedingungen mit einer standardisierten Architektur für Forschungs- und Qualifikationsanwendungen.",
       "descriptionExtended": "Die kubische Geometrie bietet eine ebene Grundplatte und maximale nutzbare Stellfläche — ideal für Vorrichtungen, optische Bänke und die schnelle Integration planar montierter Hardware. Standardkonfigurationen unterstützen Vakuumleistung bis {{vacuum}} und thermischen Betrieb bis {{minTemp}}, abhängig vom gewählten Systemaufbau.",
       "features": [
         {
@@ -138,9 +138,9 @@
       ]
     },
     "cSeries": {
-      "eyebrow": "Zylindrische Thermovakuumkammern",
+      "eyebrow": "Zylindrische Thermalvakuumkammern",
       "title": "C-Serie TVAC",
-      "description": "Zylindrische Thermovakuumkammer-Plattformen für reproduzierbare Umweltsimulation, Subsystem-Qualifikation und robusten Laborbetrieb. Die C-Serie kombiniert kontrollierte thermische und Vakuumbedingungen mit einer standardisierten Architektur für Forschungs- und Qualifikationsanwendungen.",
+      "description": "Zylindrische Thermalvakuumkammer-Plattformen für reproduzierbare Umweltsimulation, Subsystem-Qualifikation und robusten Laborbetrieb. Die C-Serie kombiniert kontrollierte thermische und Vakuumbedingungen mit einer standardisierten Architektur für Forschungs- und Qualifikationsanwendungen.",
       "descriptionExtended": "Die zylindrische Geometrie bietet einen inhärent druckstabilen Behälter mit effizienter, homogener Shroud-Abdeckung — ideal für größere Volumina und radiative Thermal-Balance-Tests. Standardkonfigurationen unterstützen Vakuumleistung bis {{vacuum}} und thermischen Betrieb bis {{minTemp}}, abhängig vom gewählten Systemaufbau.",
       "features": [
         {
@@ -231,8 +231,8 @@
       }
     },
     "alt": {
-      "tSeries": "Deepvac T-Serie kubische Thermovakuumkammer",
-      "cSeries": "Deepvac C-Serie zylindrische Thermovakuumkammer",
+      "tSeries": "Deepvac T-Serie kubische Thermalvakuumkammer",
+      "cSeries": "Deepvac C-Serie zylindrische Thermalvakuumkammer",
       "brochureCover": "Deepvac Standard-Serie Katalog"
     },
     "techData": {
@@ -315,7 +315,7 @@
         },
         {
           "label": "Mechanische Kühlung",
-          "value": "−70 °C bis +125 °C"
+          "value": "−90 °C bis +150 °C"
         },
         {
           "label": "Gefluteter LN₂-Wärmetauscher (Zweiphasen-Siedebetrieb)",
@@ -332,13 +332,13 @@
   },
   "customTvac": {
     "eyebrow": "Produkte — Custom TVAC",
-    "title": "Anwendungsspezifisches Thermovakuum-Engineering",
-    "description": "Wenn standardmäßige Kammerplattformen Ihre Testanforderungen nicht erfüllen können, entwickelt Deepvac vollständig kundenspezifische Thermovakuumsysteme – vom Konzept bis zur Inbetriebnahme um Ihre spezifische Geometrie, Ihr Thermalprofil, Ihre Instrumentierung und Ihre Integrationsbedingungen herum konstruiert. Custom-Konfigurationen decken Volumina unterhalb und oberhalb der Standard-Serie sowie Enddrücke bis in den 10⁻⁷-mbar-Bereich ab.",
-    "heroCaption": "Kundenspezifische Thermovakuumkammer – entwickelt, integriert und in Betrieb genommen von Deepvac.",
+    "title": "Anwendungsspezifisches Thermalvakuum-Engineering",
+    "description": "Wenn standardmäßige Kammerplattformen Ihre Testanforderungen nicht erfüllen können, entwickelt Deepvac vollständig kundenspezifische Thermalvakuumsysteme – vom Konzept bis zur Inbetriebnahme um Ihre spezifische Geometrie, Ihr Thermalprofil, Ihre Instrumentierung und Ihre Integrationsbedingungen herum konstruiert. Custom-Konfigurationen decken Volumina unterhalb und oberhalb der Standard-Serie sowie Enddrücke bis in den 10⁻⁷-mbar-Bereich ab.",
+    "heroCaption": "Kundenspezifische Thermalvakuumkammer – entwickelt, integriert und in Betrieb genommen von Deepvac.",
     "projectDrivers": {
       "eyebrow": "Projekttreiber",
       "title": "Wenn Standard nicht ausreicht",
-      "description": "Kundenspezifische Thermovakuumsysteme werden konstruiert, wenn Ihre Anwendung Fähigkeiten, Geometrien oder Integrationsanforderungen erfordert, die über den Rahmen standardisierter Kammerplattformen hinausgehen.",
+      "description": "Kundenspezifische Thermalvakuumsysteme werden konstruiert, wenn Ihre Anwendung Fähigkeiten, Geometrien oder Integrationsanforderungen erfordert, die über den Rahmen standardisierter Kammerplattformen hinausgehen.",
       "items": [
         {
           "title": "Nicht-standardmäßige Geometrien",
@@ -434,7 +434,7 @@
     "process": {
       "eyebrow": "Projektworkflow",
       "title": "Vom Konzept zur Inbetriebnahme",
-      "description": "Deepvac unterstützt den gesamten Entwicklungslebenszyklus kundenspezifischer Thermovakuumsysteme – von der ersten Anforderungsbesprechung über Engineering, Fertigung und Installation.",
+      "description": "Deepvac unterstützt den gesamten Entwicklungslebenszyklus kundenspezifischer Thermalvakuumsysteme – von der ersten Anforderungsbesprechung über Engineering, Fertigung und Installation.",
       "steps": [
         {
           "step": "01",
@@ -523,11 +523,11 @@
   "thermalVision": {
     "eyebrow": "Produkte / Engineering-Systeme",
     "title": "Deepvac Thermal Vision",
-    "heroDescription": "Druckdichte Integration von Thermalkameras für Thermovakuumkammern. Kontinuierliche Infrarotbildgebung unter Hochvakuum und extremen Temperaturbedingungen, mit aktivem Thermomanagement, Temperaturstabilisierung der Kamera und vollständiger Engineering-Integration in die Kammer.",
+    "heroDescription": "Druckdichte Integration von Thermalkameras für Thermalvakuumkammern. Kontinuierliche Infrarotbildgebung unter Hochvakuum und extremen Temperaturbedingungen, mit aktivem Thermomanagement, Temperaturstabilisierung der Kamera und vollständiger Engineering-Integration in die Kammer.",
     "imageLabel": "Druckdichtes Kameragehäuse",
     "splitLabel": "Systemüberblick",
     "splitHeading": "Integrierte Thermografie für TVAC-Systeme",
-    "bodyParagraph1": "Handelsübliche Infrarotkameras können ohne spezifische technische Maßnahmen nicht direkt unter Hochvakuum und extremen Temperaturbedingungen betrieben werden. Deepvac Thermal Vision löst diese Herausforderung mit einem druckdichten Gehäuse und IR-transparentem Sichtfenster und ermöglicht dadurch eine kontinuierliche, kalibrierte thermische Bildgebung von Prüflingen innerhalb von Thermovakuumkammern.",
+    "bodyParagraph1": "Handelsübliche Infrarotkameras können ohne spezifische technische Maßnahmen nicht direkt unter Hochvakuum und extremen Temperaturbedingungen betrieben werden. Deepvac Thermal Vision löst diese Herausforderung mit einem druckdichten Gehäuse und IR-transparentem Sichtfenster und ermöglicht dadurch eine kontinuierliche, kalibrierte thermische Bildgebung von Prüflingen innerhalb von Thermalvakuumkammern.",
     "bodyParagraph2": "Das System umfasst einen aktiven Kühlkreislauf mit optionaler Heizung, der die Kamera unter allen Kammerbedingungen innerhalb ihres spezifizierten Betriebstemperaturbereichs hält. Deepvac übernimmt das vollständige Integrationsengineering, einschließlich Gehäuseauslegung, Thermomanagement, Sichtfensterspezifikation und mechanischer Schnittstellenauslegung, sowohl für neue TVAC-Anlagen als auch für das Retrofit bestehender Systeme.",
     "chips": {
       "environment": {
@@ -577,7 +577,7 @@
       },
       {
         "label": "Integration für Neuanlagen & Retrofit",
-        "detail": "Mechanische und thermische Schnittstellenauslegung für die Integration in neue TVAC-Anlagen oder die Nachrüstung bestehender Thermovakuumkammern. Lieferung aus einer Hand."
+        "detail": "Mechanische und thermische Schnittstellenauslegung für die Integration in neue TVAC-Anlagen oder die Nachrüstung bestehender Thermalvakuumkammern. Lieferung aus einer Hand."
       }
     ]
   }

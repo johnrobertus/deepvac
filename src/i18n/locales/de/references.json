@@ -1,11 +1,11 @@
 {
   "eyebrow": "Referenzen",
   "title": "Referenzen & Projekterfahrung",
-  "description": "Anwendungsbereiche und Projektformate im Thermovakuum-Engineering von Deepvac.",
+  "description": "Anwendungsbereiche und Projektformate im Thermalvakuum-Engineering von Deepvac.",
   "industries": {
     "eyebrow": "Branchen",
     "title": "Anwendungsbereiche",
-    "description": "Deepvac entwickelt Thermovakuumsysteme für Kunden in diesen primären Anwendungsdomänen.",
+    "description": "Deepvac entwickelt Thermalvakuumsysteme für Kunden in diesen primären Anwendungsdomänen.",
     "items": [
       {
         "title": "Raumfahrt & Weltraum",
@@ -13,7 +13,7 @@
       },
       {
         "title": "Forschung & Entwicklung",
-        "description": "Thermovakuumprüfung im Labor- und Entwicklungsmaßstab für akademische und institutionelle Forschungsprogramme."
+        "description": "Thermalvakuumprüfung im Labor- und Entwicklungsmaßstab für akademische und institutionelle Forschungsprogramme."
       },
       {
         "title": "Industrielle Anwendungen",
@@ -28,7 +28,7 @@
   "projectScope": {
     "eyebrow": "Projektumfang",
     "title": "Arten von Beauftragungen",
-    "description": "Deepvac unterstützt Projekte über den gesamten Lebenszyklus von Thermovakuumsystemen.",
+    "description": "Deepvac unterstützt Projekte über den gesamten Lebenszyklus von Thermalvakuumsystemen.",
     "types": [
       "Standardkammer-Lieferung",
       "Custom-TVAC-Entwicklung",
@@ -45,7 +45,7 @@
   "origin": {
     "eyebrow": "Herkunft & Förderung",
     "title": "Eine Universitätsausgründung mit institutionellem Rückhalt",
-    "description": "Deepvac ist als Ausgründungsprojekt an der Leibniz Universität Hannover entstanden und entwickelt seine Thermovakuumsysteme auf dem Campus Maschinenbau in Garbsen. Das Unternehmen wird durch das EXIST-Gründungsstipendium des Bundesministeriums für Wirtschaft und Energie gefördert und durch die Europäische Union kofinanziert.",
+    "description": "Deepvac ist als Ausgründungsprojekt an der Leibniz Universität Hannover entstanden und entwickelt seine Thermalvakuumsysteme auf dem Campus Maschinenbau in Garbsen. Das Unternehmen wird durch das EXIST-Gründungsstipendium des Bundesministeriums für Wirtschaft und Energie gefördert und durch die Europäische Union kofinanziert.",
     "altText": "EXIST-Förderprogramm, gefördert durch das Bundesministerium für Wirtschaft und Energie und kofinanziert durch die Europäische Union"
   }
 }

@@ -149,7 +149,7 @@
         "c6": "2.6 „Bestellung“ bezeichnet die Bestellung des Kunden, die Annahme eines Angebots oder eine sonstige schriftliche Anweisung zur Durchführung.",
         "c7": "2.7 „Vertrag“ bezeichnet die nach Ziffer 4 zustande kommende verbindliche Vereinbarung einschließlich aller in Ziffer 5 genannten Dokumente.",
         "c8": "2.8 „Software“ bezeichnet SPS-Programme, HMI-Anwendungen, übergeordnete Steuerungslogik, Regelsequenzen, Datenerfassungsroutinen, Automatisierungsskripte, Ereignisprotokollkonfigurationen, Schnittstellentreiber sowie jede andere von Deepvac im Rahmen des Vertrags entwickelte oder bereitgestellte Software.",
-        "c9": "2.9 „System“ bezeichnet ein Thermovakuumkammersystem einschließlich aller integrierten mechanischen, thermischen, Vakuum-, elektrischen, Instrumentierungs- und Steuerungskomponenten gemäß dem Vertrag.",
+        "c9": "2.9 „System“ bezeichnet ein Thermalvakuumkammersystem einschließlich aller integrierten mechanischen, thermischen, Vakuum-, elektrischen, Instrumentierungs- und Steuerungskomponenten gemäß dem Vertrag.",
         "c10": "2.10 „Bestandsanlage“ bezeichnet vorhandene Anlagen, Infrastruktur, Steuerungen oder Installationen am Standort des Kunden oder im Besitz des Kunden, die nicht von Deepvac im Rahmen des jeweiligen Vertrags geliefert werden.",
         "c11": "2.11 „FAT“ bezeichnet die Werksabnahmeprüfung (Factory Acceptance Test), die in den Räumlichkeiten von Deepvac oder eines Subunternehmers durchgeführt wird.",
         "c12": "2.12 „SAT“ bezeichnet die Standortabnahmeprüfung (Site Acceptance Test), die nach Lieferung, Installation oder Inbetriebnahme am Standort des Kunden durchgeführt wird.",
@@ -239,7 +239,7 @@
       },
       "13": {
         "title": "Lieferung von Kammersystemen und Hardware",
-        "c1": "13.1 Diese Ziffer gilt für die Lieferung standardisierter und kundenspezifisch konstruierter Thermovakuumkammersysteme, Kammerplattformen und zugehöriger Hardware.",
+        "c1": "13.1 Diese Ziffer gilt für die Lieferung standardisierter und kundenspezifisch konstruierter Thermalvakuumkammersysteme, Kammerplattformen und zugehöriger Hardware.",
         "c2": "13.2 Die Spezifikation des Systems wird ausschließlich durch die Vertragsdokumente bestimmt. Abmessungen, Leistungsparameter, Schnittstellen und Zubehör werden nur geschuldet, soweit sie ausdrücklich vereinbart sind.",
         "c3": "13.3 Standardkammerplattformen werden in der zum Zeitpunkt der Auftragsbestätigung gültigen Konfiguration der jeweiligen Produktdokumentation geliefert. Optionen und Erweiterungen sind nur enthalten, wenn sie in der Auftragsbestätigung ausdrücklich aufgeführt sind.",
         "c4": "13.4 Montage, Installation und Inbetriebnahme am Standort des Kunden sind nur enthalten, wenn dies ausdrücklich vereinbart ist. Soweit nicht vereinbart, kann Deepvac diese als gesonderte Leistungen anbieten.",
@@ -247,7 +247,7 @@
       },
       "14": {
         "title": "Kundenspezifische Systeme und Projektgeschäft",
-        "c1": "14.1 Diese Ziffer gilt für kundenspezifisch konstruierte Thermovakuumsysteme, anwendungsspezifische Entwicklungen und projektbasierte Engineering-Leistungen.",
+        "c1": "14.1 Diese Ziffer gilt für kundenspezifisch konstruierte Thermalvakuumsysteme, anwendungsspezifische Entwicklungen und projektbasierte Engineering-Leistungen.",
         "c2": "14.2 Der Projektumfang wird durch die vereinbarte Spezifikation, die Leistungsbeschreibung und den Projektplan bestimmt. Leistungen über den vereinbarten Umfang hinaus bedürfen eines Änderungsauftrags nach Ziffer 7.",
         "c3": "14.3 Engineering-Entscheidungen innerhalb der vereinbarten Spezifikation liegen im fachlichen Ermessen von Deepvac, sofern der Vertrag für bestimmte Entscheidungen nicht die Zustimmung des Kunden vorsieht.",
         "c4": "14.4 Der Kunde benennt einen fachkundigen Projektansprechpartner und trifft offene Entscheidungen rechtzeitig. Verzögerte Entscheidungen berechtigen Deepvac, den Zeitplan anzupassen und Zusatzkosten in Rechnung zu stellen.",
@@ -256,7 +256,7 @@
       },
       "15": {
         "title": "Prüfleistungen",
-        "c1": "15.1 Diese Ziffer gilt für Thermovakuumprüfungen, Umweltsimulation, Testkampagnendurchführung und damit zusammenhängende Prüfleistungen.",
+        "c1": "15.1 Diese Ziffer gilt für Thermalvakuumprüfungen, Umweltsimulation, Testkampagnendurchführung und damit zusammenhängende Prüfleistungen.",
         "c2": "15.2 Prüfungen werden nach dem vereinbarten Prüfplan durchgeführt. Ist kein Prüfplan vereinbart, erfolgen die Prüfungen nach den für den Auftrag geeigneten Standardverfahren von Deepvac.",
         "c3": "15.3 Der Kunde bleibt allein verantwortlich für Konstruktion, vorgesehenen Verwendungszweck, Sicherheit, rechtliche Konformität und regulatorische Compliance des Prüfgegenstands.",
         "c4": "15.4 Prüfergebnisse gelten nur für die geprüfte Konfiguration und die im Prüfbericht dokumentierten Randbedingungen. Jede Übertragung auf andere Konfigurationen, Umgebungen oder Anwendungsfälle erfolgt auf Risiko des Kunden.",
@@ -273,7 +273,7 @@
       },
       "16": {
         "title": "Retrofit, Modernisierung und Integration",
-        "c1": "16.1 Diese Ziffer gilt für Retrofit-, Modernisierungs-, Upgrade- und Subsystem-Integrationsarbeiten an bestehenden Thermovakuumsystemen, unabhängig davon, ob diese ursprünglich von Deepvac oder von Dritten geliefert wurden.",
+        "c1": "16.1 Diese Ziffer gilt für Retrofit-, Modernisierungs-, Upgrade- und Subsystem-Integrationsarbeiten an bestehenden Thermalvakuumsystemen, unabhängig davon, ob diese ursprünglich von Deepvac oder von Dritten geliefert wurden.",
         "c2": "16.2 Der Umfang von Retrofit- und Modernisierungsarbeiten wird ausschließlich durch die vereinbarte Spezifikation bestimmt. Deepvac übernimmt keine Verantwortung für den Gesamtzustand oder die Gesamtleistung der Bestandsanlage über den ausdrücklich vereinbarten Umfang hinaus.",
         "c3": "16.3 Begutachtung und Angebotsstellung durch Deepvac basieren auf dem sichtbaren und dokumentierten Zustand der Bestandsanlage zum Zeitpunkt der Besichtigung. Verdeckte Mängel, undokumentierte Änderungen oder Verschlechterungen, die zum Zeitpunkt der Begutachtung nicht erkennbar waren, sind nicht Bestandteil des vereinbarten Leistungsumfangs.",
         "c4": "16.4 Weicht der tatsächliche Zustand der Bestandsanlage vom dokumentierten oder mitgeteilten Zustand ab, sind zur Erreichung des vereinbarten Ergebnisses erforderliche Zusatzarbeiten als Änderungsauftrag nach Ziffer 7 zu behandeln und gesondert zu vergüten.",

@@ -2,13 +2,13 @@
   "overview": {
     "eyebrow": "Engineering-Leistungen",
     "title": "Durchgängiger TVAC-Engineering-Support",
-    "description": "Deepvac bietet Engineering-Leistungen über den gesamten Lebenszyklus von Thermovakuumsystemen – von Steuerungsarchitektur und Testkampagnendurchführung bis zu Retrofit, Wartung und Subsystem-Integration. Jede Leistung basiert auf praktischer Kammer-Engineering-Erfahrung.",
+    "description": "Deepvac bietet Engineering-Leistungen über den gesamten Lebenszyklus von Thermalvakuumsystemen – von Steuerungsarchitektur und Testkampagnendurchführung bis zu Retrofit, Wartung und Subsystem-Integration. Jede Leistung basiert auf praktischer Kammer-Engineering-Erfahrung.",
     "serviceLabel": "Leistung",
     "keyDeliverables": "Kernleistungen",
     "items": [
       {
         "title": "Prüfdienstleistungen",
-        "description": "Durchführung und Unterstützung von Thermovakuum-Testkampagnen für Qualifikation, Validierung und Entwicklungsprogramme mit stabiler Umgebungskontrolle und reproduzierbaren Workflows.",
+        "description": "Durchführung und Unterstützung von Thermalvakuum-Testkampagnen für Qualifikation, Validierung und Entwicklungsprogramme mit stabiler Umgebungskontrolle und reproduzierbaren Workflows.",
         "deliverables": ["Testkampagnendurchführung", "Datenerfassung und Berichterstattung", "Qualifikations- und Abnahmeprüfung", "Engineering-Unterstützung"]
       },
       {
@@ -46,14 +46,14 @@
       "eyebrow": "FAQ",
       "title": "Fragen zu Leistungen",
       "items": [
-        { "q": "Bietet Deepvac Leistungen für Kammern anderer Hersteller an?", "a": "Ja. Die Servicefähigkeiten von Deepvac – einschließlich Retrofit, Wartung, Reparatur und Steuerungssystem-Upgrades – können auf Thermovakuumsysteme verschiedener Hersteller angewendet werden." },
-        { "q": "Kann Deepvac Testkampagnen an Kundenstandorten unterstützen?", "a": "Deepvac bietet Prüfdienstleistungen einschließlich Vor-Ort-Unterstützung für Thermovakuum-Testkampagnen, abhängig von Projektanforderungen und Anlagenzugang." },
+        { "q": "Bietet Deepvac Leistungen für Kammern anderer Hersteller an?", "a": "Ja. Die Servicefähigkeiten von Deepvac – einschließlich Retrofit, Wartung, Reparatur und Steuerungssystem-Upgrades – können auf Thermalvakuumsysteme verschiedener Hersteller angewendet werden." },
+        { "q": "Kann Deepvac Testkampagnen an Kundenstandorten unterstützen?", "a": "Deepvac bietet Prüfdienstleistungen einschließlich Vor-Ort-Unterstützung für Thermalvakuum-Testkampagnen, abhängig von Projektanforderungen und Anlagenzugang." },
         { "q": "Wie steht das Leistungsangebot von Deepvac im Verhältnis zu seinen Kammerprodukten?", "a": "Die Engineering-Leistungen von Deepvac ergänzen die Kammerprodukte und bieten integrierte Unterstützung von der ersten Systemauslegung bis zum langfristigen Betrieb. Leistungen sind auch unabhängig für bestehende Kammerinfrastruktur verfügbar." }
       ]
     },
     "cta": {
       "title": "Besprechen Sie Ihre Engineering-Anforderungen",
-      "description": "Ob Sie Testunterstützung, Steuerungstechnik oder Lifecycle-Leistungen für Ihre Thermovakuum-Infrastruktur benötigen – Deepvac kann helfen."
+      "description": "Ob Sie Testunterstützung, Steuerungstechnik oder Lifecycle-Leistungen für Ihre Thermalvakuum-Infrastruktur benötigen – Deepvac kann helfen."
     }
   },
   "template": {
@@ -71,7 +71,7 @@
     "title": "Prüfdienstleistungen für Qualifikations- und Entwicklungsprogramme",
     "subline": "End-to-End-Unterstützung von Testkampagnen für Raumfahrt-, Forschungs- und industrielle Entwicklungsprogramme – von Planung und Aufbau bis zu Durchführung, Datenerfassung und Berichterstattung.",
     "description": "Deepvac unterstützt kontrollierte Testkampagnen für Komponenten, Baugruppen und Subsystem-Hardware. Unsere Prüfdienstleistungen verbinden strukturierte Planung, Prüflingsintegration, kontrollierte Durchführung, messtechnische Unterstützung und Dokumentation auf Engineering-Niveau.",
-    "tags": ["Qualifikationsprüfung", "Umweltprüfung", "Thermovakuumprüfung", "Datenerfassung", "Testkampagnendurchführung"],
+    "tags": ["Qualifikationsprüfung", "Umweltprüfung", "Thermalvakuumprüfung", "Datenerfassung", "Testkampagnendurchführung"],
     "ctaPrimary": "Testkampagne besprechen",
     "ctaSecondary": "Kompetenzen ansehen",
     "breadcrumbHome": "Start",
@@ -97,7 +97,7 @@
     "capabilities": {
       "eyebrow": "Kompetenzen",
       "title": "Prüfkompetenzen",
-      "intro": "Unsere Kompetenzen umfassen umweltbezogene, thermovakuum-, mechanische, dynamische, messbasierte und stoßbezogene Testprogramme. Je nach Projekt kann Deepvac einzelne Tests, vollständige Kampagnen oder ausgewählte Phasen wie Aufbau, Instrumentierung, Überwachung, Durchführung und Berichterstattung unterstützen.",
+      "intro": "Unsere Kompetenzen umfassen umweltbezogene, thermalvakuum-, mechanische, dynamische, messbasierte und stoßbezogene Testprogramme. Je nach Projekt kann Deepvac einzelne Tests, vollständige Kampagnen oder ausgewählte Phasen wie Aufbau, Instrumentierung, Überwachung, Durchführung und Berichterstattung unterstützen.",
       "equipmentLabel": "Unterstützte Testaufbauten / Equipment",
       "testsLabel": "Tests / Kompetenzen",
       "categoryLabel": "Kategorie",
@@ -157,7 +157,7 @@
       "items": [
         "Qualifikation von Satellitensubsystemen",
         "Umweltscreening auf Komponentenebene",
-        "Thermovakuum- und Thermozyklierungskampagnen",
+        "Thermalvakuum- und Thermozyklierungskampagnen",
         "Hardware-Abnahmeprüfung",
         "Forschungs- und Entwicklungsprogramme",
         "Bewertung von Werkstoffen und Strukturbauteilen",
@@ -169,7 +169,7 @@
       "eyebrow": "Warum Deepvac",
       "title": "Warum Deepvac für Prüfdienstleistungen",
       "items": [
-        { "title": "Engineering-geführte Testdurchführung", "description": "Testkampagnen werden mit Systemverständnis für Thermovakuumsysteme, Instrumentierung, Steuerungssysteme und Qualifikations-Workflows unterstützt." },
+        { "title": "Engineering-geführte Testdurchführung", "description": "Testkampagnen werden mit Systemverständnis für Thermalvakuumsysteme, Instrumentierung, Steuerungssysteme und Qualifikations-Workflows unterstützt." },
         { "title": "Kontrollierte und reproduzierbare Prozesse", "description": "Fokus auf stabile Testbedingungen, definierte Verfahren, nachvollziehbare Daten und reproduzierbare Durchführung." },
         { "title": "Integriertes Systemwissen", "description": "Deepvac vereint Expertise in Kammersystemen, Steuerungstechnik, Messtechnik und Testumgebungsintegration." },
         { "title": "Vom Aufbau bis zum Bericht", "description": "Die Unterstützung kann den gesamten Kampagnen-Workflow oder ausgewählte Phasen je nach Projektbedarf abdecken." }
@@ -179,8 +179,8 @@
       "eyebrow": "Verwandt",
       "title": "Verwandte Produkte & Leistungen",
       "items": [
-        { "label": "Standard-Serie-Kammern", "href": "/products/standard-series", "description": "Vorkonstruierte Thermovakuumkammer-Plattformen für Standard-Qualifikations- und Entwicklungstestanforderungen." },
-        { "label": "Custom-TVAC-Systeme", "href": "/products/custom-tvac", "description": "Anwendungsspezifische Thermovakuumsysteme für spezialisierte Testumgebungen und komplexe Qualifikations-Workflows." },
+        { "label": "Standard-Serie-Kammern", "href": "/products/standard-series", "description": "Vorkonstruierte Thermalvakuumkammer-Plattformen für Standard-Qualifikations- und Entwicklungstestanforderungen." },
+        { "label": "Custom-TVAC-Systeme", "href": "/products/custom-tvac", "description": "Anwendungsspezifische Thermalvakuumsysteme für spezialisierte Testumgebungen und komplexe Qualifikations-Workflows." },
         { "label": "Steuerungstechnik", "href": "/services/control-systems-design", "description": "Steuerungs- und Datenerfassungsarchitekturen für präzise Überwachung, Automatisierung und Betrieb von Testumgebungen." },
         { "label": "Subsystem-Integration", "href": "/services/subsystem-integration", "description": "Integration von Kammersubsystemen, Instrumentierung, Steuerungshardware und Testumgebungskomponenten." },
         { "label": "Mechanische Konstruktion", "href": "/services/mechanical-design", "description": "Mechanische Vorrichtungen, Schnittstellen und Systemkomponenten für Testumgebungen und Kammerintegration." }
@@ -195,8 +195,8 @@
   "controlSystems": {
     "eyebrow": "Leistungen",
     "title": "Steuerungstechnik",
-    "description": "Auslegung von Kammersteuerungsarchitekturen, Automatisierungslogik, Benutzerschnittstellen, Instrumentierungsintegration und zuverlässigen Betriebskonzepten für Thermovakuum-Testumgebungen.",
-    "overview": "Deepvac entwirft und implementiert Steuerungssysteme für Thermovakuumkammern – vom Sensorintegration und Automatisierungslogik bis zu Mensch-Maschine-Schnittstellen und Datenerfassung. Unsere Steuerungsarchitekturen sind auf Betriebszuverlässigkeit, Prozessreproduzierbarkeit und unkomplizierte Systemwartung ausgelegt.",
+    "description": "Auslegung von Kammersteuerungsarchitekturen, Automatisierungslogik, Benutzerschnittstellen, Instrumentierungsintegration und zuverlässigen Betriebskonzepten für Thermalvakuum-Testumgebungen.",
+    "overview": "Deepvac entwirft und implementiert Steuerungssysteme für Thermalvakuumkammern – vom Sensorintegration und Automatisierungslogik bis zu Mensch-Maschine-Schnittstellen und Datenerfassung. Unsere Steuerungsarchitekturen sind auf Betriebszuverlässigkeit, Prozessreproduzierbarkeit und unkomplizierte Systemwartung ausgelegt.",
     "deliverables": [
       { "title": "Steuerungsarchitektur-Design", "description": "Systemebenen-Steuerungsarchitektur-Spezifikation einschließlich Hardwareauswahl, Netzwerktopologie und Funktionszuordnung." },
       { "title": "Automatisierung & HMI-Entwicklung", "description": "SPS-Programmierung, Sequenzautomatisierung, Alarmmanagement und Benutzerschnittstellendesign für intuitive Systembedienung." },
@@ -216,8 +216,8 @@
   "mechanicalDesign": {
     "eyebrow": "Leistungen",
     "title": "Mechanische Konstruktion",
-    "description": "Engineering von Kammerbaugruppen, Schnittstellen, Vorrichtungen, Tragstrukturen und kundenspezifischen mechanischen Integrationskonzepten für Thermovakuumsysteme.",
-    "overview": "Deepvac bietet mechanische Konstruktionsleistungen für Thermovakuumkammersysteme – von Strukturanalyse und Kammergeometriedefinition bis zu Vorrichtungstechnik, Durchführungsintegration und Schnittstellenspezifikation.",
+    "description": "Engineering von Kammerbaugruppen, Schnittstellen, Vorrichtungen, Tragstrukturen und kundenspezifischen mechanischen Integrationskonzepten für Thermalvakuumsysteme.",
+    "overview": "Deepvac bietet mechanische Konstruktionsleistungen für Thermalvakuumkammersysteme – von Strukturanalyse und Kammergeometriedefinition bis zu Vorrichtungstechnik, Durchführungsintegration und Schnittstellenspezifikation.",
     "deliverables": [
       { "title": "Kammerstrukturkonstruktion", "description": "Behältergeometrie, Strukturanalyse, Werkstoffauswahl und detaillierte Fertigungsdokumentation für Kammerschalen und Baugruppen." },
       { "title": "Vorrichtungs- & Tragstruktur-Engineering", "description": "Konstruktion von Prüflingsvorrichtungen, Montagesystemen, Tragstrukturen und Nutzlastaufnahmehardware." },
@@ -238,7 +238,7 @@
     "eyebrow": "Leistungen",
     "title": "Retrofit & Modernisierung",
     "description": "Technische Upgrades für bestehende TVAC-Systeme zur Verbesserung von Zuverlässigkeit, Sicherheit, Regelgenauigkeit, Bedienbarkeit und Lebensdauerwert.",
-    "overview": "Deepvac modernisiert bestehende Thermovakuumsysteme – adressiert Steuerungssystem-Obsoleszenz, Sicherheitsverbesserungen, Betriebseffizienz und Leistungssteigerung. Unser Ansatz beginnt mit einer systematischen Bewertung des bestehenden Systems, gefolgt von der Konstruktion gezielter Upgrades.",
+    "overview": "Deepvac modernisiert bestehende Thermalvakuumsysteme – adressiert Steuerungssystem-Obsoleszenz, Sicherheitsverbesserungen, Betriebseffizienz und Leistungssteigerung. Unser Ansatz beginnt mit einer systematischen Bewertung des bestehenden Systems, gefolgt von der Konstruktion gezielter Upgrades.",
     "deliverables": [
       { "title": "Systembewertung", "description": "Umfassende Bewertung bestehender Kammersysteme einschließlich Steuerung, Instrumentierung, mechanischem Zustand und Sicherheitskonformität." },
       { "title": "Upgrade-Engineering", "description": "Konstruktion von Retrofit-Lösungen einschließlich Hardwarespezifikationen, Systemarchitektur-Updates und Implementierungsplanung." },
@@ -253,13 +253,13 @@
       { "label": "Subsystem-Integration", "href": "/services/subsystem-integration", "description": "Integration von aufgerüsteten Subsystemen in bestehende Infrastruktur." }
     ],
     "ctaTitle": "Lassen Sie Ihr System für Modernisierung bewerten",
-    "ctaDescription": "Kontaktieren Sie Deepvac zur Bewertung Ihrer bestehenden Thermovakuum-Infrastruktur und Identifikation von Upgrade-Möglichkeiten."
+    "ctaDescription": "Kontaktieren Sie Deepvac zur Bewertung Ihrer bestehenden Thermalvakuum-Infrastruktur und Identifikation von Upgrade-Möglichkeiten."
   },
   "maintenance": {
     "eyebrow": "Leistungen",
     "title": "Wartung & Reparatur",
     "description": "Diagnostik, vorbeugende Wartung, Reparatur und technischer Support zur Reduzierung von Ausfallzeiten und Sicherstellung langfristiger Kammerverfügbarkeit.",
-    "overview": "Deepvac bietet Wartungs- und Reparaturleistungen für Thermovakuumkammersysteme – unterstützt Betriebskontinuität, reduziert ungeplante Ausfallzeiten und verlängert den Ausrüstungslebenszyklus.",
+    "overview": "Deepvac bietet Wartungs- und Reparaturleistungen für Thermalvakuumkammersysteme – unterstützt Betriebskontinuität, reduziert ungeplante Ausfallzeiten und verlängert den Ausrüstungslebenszyklus.",
     "deliverables": [
       { "title": "Vorbeugende Wartung", "description": "Planmäßige Inspektion, Wartung und Kalibrierungsprogramme zur Aufrechterhaltung der Systemleistung und Vermeidung ungeplanter Ausfälle." },
       { "title": "Diagnostik & Fehlersuche", "description": "Systematische Fehleridentifikation und Ursachenanalyse für mechanische, Vakuum-, thermische und Steuerungssystemprobleme." },
@@ -274,7 +274,7 @@
       { "label": "Standard-Serie", "href": "/products/standard-series", "description": "Wartungsprogramme für Deepvac Standard-Serie-Plattformen." }
     ],
     "ctaTitle": "Wartung planen oder Störung melden",
-    "ctaDescription": "Kontaktieren Sie Deepvac zur Vereinbarung vorbeugender Wartung oder für technischen Support für Ihr Thermovakuumsystem."
+    "ctaDescription": "Kontaktieren Sie Deepvac zur Vereinbarung vorbeugender Wartung oder für technischen Support für Ihr Thermalvakuumsystem."
   },
   "subsystemIntegration": {
     "eyebrow": "Leistungen",
@@ -295,6 +295,6 @@
       { "label": "Prüfdienstleistungen", "href": "/services/testing-services", "description": "Testdurchführung in integrierten Systemumgebungen." }
     ],
     "ctaTitle": "Besprechen Sie Ihre Integrationsanforderungen",
-    "ctaDescription": "Kontaktieren Sie Deepvac zur Planung der Subsystem-Integration für Ihre Thermovakuum-Testumgebung."
+    "ctaDescription": "Kontaktieren Sie Deepvac zur Planung der Subsystem-Integration für Ihre Thermalvakuum-Testumgebung."
   }
 }

@@ -20,7 +20,7 @@
   </url>
   <url>
     <loc>https://deepvac.space/catalogs</loc>
-    <lastmod>2026-07-16T06:52:40+00:00</lastmod>
+    <lastmod>2026-07-18T21:49:27+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/catalogs"/>
@@ -29,7 +29,7 @@
   </url>
   <url>
     <loc>https://deepvac.space/de/kataloge</loc>
-    <lastmod>2026-07-16T06:52:40+00:00</lastmod>
+    <lastmod>2026-07-18T21:49:27+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/catalogs"/>
@@ -38,7 +38,7 @@
   </url>
   <url>
     <loc>https://deepvac.space/resources/blog</loc>
-    <lastmod>2026-07-14T20:41:09+00:00</lastmod>
+    <lastmod>2026-07-18T21:49:27+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.60</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog"/>
@@ -47,7 +47,7 @@
   </url>
   <url>
     <loc>https://deepvac.space/de/ressourcen/blog</loc>
-    <lastmod>2026-07-14T20:41:09+00:00</lastmod>
+    <lastmod>2026-07-18T21:49:27+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.60</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog"/>
@@ -56,7 +56,7 @@
   </url>
   <url>
     <loc>https://deepvac.space/resources/blog/cooling-systems</loc>
-    <lastmod>2026-07-15T23:00:18+00:00</lastmod>
+    <lastmod>2026-07-18T21:49:27+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.50</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/cooling-systems"/>
@@ -65,7 +65,7 @@
   </url>
   <url>
     <loc>https://deepvac.space/de/ressourcen/blog/kuehlsysteme</loc>
-    <lastmod>2026-07-15T23:00:18+00:00</lastmod>
+    <lastmod>2026-07-18T21:49:27+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.50</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/cooling-systems"/>
@@ -74,7 +74,7 @@
   </url>
   <url>
     <loc>https://deepvac.space/resources/blog/retrofit-vs-replacement</loc>
-    <lastmod>2026-07-15T23:00:18+00:00</lastmod>
+    <lastmod>2026-07-18T21:49:27+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.50</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/retrofit-vs-replacement"/>
@@ -83,7 +83,7 @@
   </url>
   <url>
     <loc>https://deepvac.space/de/ressourcen/blog/retrofit-vs-neubeschaffung</loc>
-    <lastmod>2026-07-15T23:00:18+00:00</lastmod>
+    <lastmod>2026-07-18T21:49:27+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.50</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/retrofit-vs-replacement"/>
@@ -92,7 +92,7 @@
   </url>
   <url>
     <loc>https://deepvac.space/resources/blog/aerospace-qualification-testing</loc>
-    <lastmod>2026-07-15T23:00:18+00:00</lastmod>
+    <lastmod>2026-07-18T21:49:27+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.50</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/aerospace-qualification-testing"/>
@@ -101,7 +101,7 @@
   </url>
   <url>
     <loc>https://deepvac.space/de/ressourcen/blog/raumfahrtqualifikation</loc>
-    <lastmod>2026-07-15T23:00:18+00:00</lastmod>
+    <lastmod>2026-07-18T21:49:27+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.50</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/aerospace-qualification-testing"/>
@@ -110,7 +110,7 @@
   </url>
   <url>
     <loc>https://deepvac.space/resources/blog/tvac-cost-drivers</loc>
-    <lastmod>2026-07-15T23:00:18+00:00</lastmod>
+    <lastmod>2026-07-18T21:49:27+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.50</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/tvac-cost-drivers"/>
@@ -119,7 +119,7 @@
   </url>
   <url>
     <loc>https://deepvac.space/de/ressourcen/blog/tvac-kostentreiber</loc>
-    <lastmod>2026-07-15T23:00:18+00:00</lastmod>
+    <lastmod>2026-07-18T21:49:27+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.50</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/tvac-cost-drivers"/>
@@ -128,7 +128,7 @@
   </url>
   <url>
     <loc>https://deepvac.space/resources/blog/tvac-test-campaign</loc>
-    <lastmod>2026-07-15T23:00:18+00:00</lastmod>
+    <lastmod>2026-07-18T21:49:27+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.50</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/tvac-test-campaign"/>
@@ -137,7 +137,7 @@
   </url>
   <url>
     <loc>https://deepvac.space/de/ressourcen/blog/tvac-testkampagne</loc>
-    <lastmod>2026-07-15T23:00:18+00:00</lastmod>
+    <lastmod>2026-07-18T21:49:27+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.50</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/tvac-test-campaign"/>
@@ -146,7 +146,7 @@
   </url>
   <url>
     <loc>https://deepvac.space/careers</loc>
-    <lastmod>2026-07-14T20:41:09+00:00</lastmod>
+    <lastmod>2026-07-18T21:49:27+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.50</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/careers"/>
@@ -155,7 +155,7 @@
   </url>
   <url>
     <loc>https://deepvac.space/de/karriere</loc>
-    <lastmod>2026-07-14T20:41:09+00:00</lastmod>
+    <lastmod>2026-07-18T21:49:27+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.50</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/careers"/>
