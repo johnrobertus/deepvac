@@ -580,5 +580,89 @@
         "detail": "Mechanical and thermal interface engineering for integration into new TVAC installations or retrofit of existing thermal vacuum chambers. Single-source delivery."
       }
     ]
+  },
+  "options": {
+    "eyebrow": "Configurable options",
+    "title": "Chamber options at a glance",
+    "description": "Every Deepvac chamber — standard or custom — can be tailored with the following options. Categories mirror the way we structure quotes and engineering documentation.",
+    "note": "Not every combination is available on every platform. We confirm feasibility during the technical clarification.",
+    "categories": {
+      "thermal": "Thermal",
+      "vacuum": "Vacuum & pumping",
+      "instrumentation": "Instrumentation & data",
+      "interfaces": "Interfaces & handling"
+    },
+    "items": [
+      {
+        "slug": "solar-simulation",
+        "category": "thermal",
+        "name": "Solar simulation (AM0-class)",
+        "description": "Collimated solar simulator adapted to the chamber geometry — typical irradiance up to 1.5 solar constants, spectral match tuned to space-relevant AM0 profiles.",
+        "benefits": ["Radiative heat load close to space conditions", "Integrated shutter & irradiance monitoring"]
+      },
+      {
+        "slug": "viewports-thermography",
+        "category": "thermal",
+        "name": "Optical & IR-transparent viewports",
+        "description": "Additional flanged viewports in BK7, sapphire or ZnSe — the basis for thermography and the {{link}} add-on.",
+        "linkLabel": "Thermal Vision",
+        "linkTo": "/products/thermal-vision",
+        "benefits": ["Non-contact temperature measurement", "Compatible with external optical benches"]
+      },
+      {
+        "slug": "cryo-shrouds",
+        "category": "thermal",
+        "name": "Cryogenic shrouds",
+        "description": "LN₂-cooled shrouds surrounding the test volume for deep cold soak and contamination sinks. Available as full-wrap or panel configurations.",
+        "benefits": ["Effective temperatures below −180 °C", "Cryopumping effect on condensables"]
+      },
+      {
+        "slug": "bake-out",
+        "category": "vacuum",
+        "name": "Bake-out heating",
+        "description": "Vessel and shroud bake-out up to 150 °C for accelerated outgassing before qualification runs. Programmable ramp/soak profiles via the control system.",
+        "benefits": ["Faster ultimate-pressure convergence", "Reduced background contamination"]
+      },
+      {
+        "slug": "dry-pumping",
+        "category": "vacuum",
+        "name": "Oil-free (dry) pumping",
+        "description": "Fully oil-free pumping train — dry backing pump plus turbomolecular high vacuum stage — for hydrocarbon-sensitive payloads and optical hardware.",
+        "benefits": ["No hydrocarbon backstreaming", "Clean environment for optics & sensors"]
+      },
+      {
+        "slug": "rga",
+        "category": "instrumentation",
+        "name": "Residual Gas Analyzer (RGA)",
+        "description": "Quadrupole mass spectrometer integrated on a dedicated flange for leak isolation, outgassing spectra and process qualification down to the 10⁻¹¹ mbar partial-pressure range.",
+        "benefits": ["Identify leaks vs. outgassing", "Documented process qualification"]
+      },
+      {
+        "slug": "qcm",
+        "category": "instrumentation",
+        "name": "Contamination monitoring (QCM / TQCM)",
+        "description": "Quartz-crystal microbalance heads — thermally controlled variants included — for real-time monitoring of molecular contamination during thermal cycles.",
+        "benefits": ["Quantifies deposition rates", "Supports cleanliness verification"]
+      },
+      {
+        "slug": "feedthroughs",
+        "category": "interfaces",
+        "name": "Custom feedthroughs & signal I/O",
+        "description": "Application-specific flange packages: HV power, LV signal, fiber-optic, fluid and RF feedthroughs, arranged per your interface control document.",
+        "benefits": ["Clean cable routing", "Documented ICD compliance"]
+      },
+      {
+        "slug": "handling",
+        "category": "interfaces",
+        "name": "Handling & fixture package",
+        "description": "Motorized doors, integrated fixture rails, cleanroom-compatible baseplates and lifting accessories — matched to your test article's mass and footprint.",
+        "benefits": ["Safer, faster integration", "Repeatable test article positioning"]
+      }
+    ],
+    "cta": {
+      "title": "Which options fit your test campaign?",
+      "description": "Send us your test article envelope and we come back with a configuration proposal — Standard Series with the right options, or a Custom TVAC where the standard scope is not enough."
+    }
   }
 }
+

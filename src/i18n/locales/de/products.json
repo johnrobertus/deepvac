@@ -580,5 +580,89 @@
         "detail": "Mechanische und thermische Schnittstellenauslegung für die Integration in neue TVAC-Anlagen oder die Nachrüstung bestehender Thermalvakuumkammern. Lieferung aus einer Hand."
       }
     ]
+  },
+  "options": {
+    "eyebrow": "Konfigurierbare Optionen",
+    "title": "Kammer-Optionen im Überblick",
+    "description": "Jede Deepvac-Kammer — Standard oder Custom — lässt sich mit den folgenden Optionen zuschneiden. Die Kategorien entsprechen der Struktur unserer Angebote und Engineering-Dokumentation.",
+    "note": "Nicht jede Kombination ist auf jeder Plattform verfügbar. Die Machbarkeit klären wir in der technischen Abstimmung.",
+    "categories": {
+      "thermal": "Thermal",
+      "vacuum": "Vakuum & Pumpen",
+      "instrumentation": "Messtechnik & Daten",
+      "interfaces": "Schnittstellen & Handling"
+    },
+    "items": [
+      {
+        "slug": "solar-simulation",
+        "category": "thermal",
+        "name": "Solarsimulation (AM0-Klasse)",
+        "description": "Kollimierter Solarsimulator, an die Kammergeometrie angepasst — typische Bestrahlungsstärke bis 1,5 Solarkonstanten, spektrale Anpassung an raumfahrtrelevante AM0-Profile.",
+        "benefits": ["Strahlungslast nahe an Weltraumbedingungen", "Integrierter Shutter & Bestrahlungsüberwachung"]
+      },
+      {
+        "slug": "viewports-thermography",
+        "category": "thermal",
+        "name": "Optische & IR-durchlässige Schaugläser",
+        "description": "Zusätzliche Flansch-Schaugläser aus BK7, Saphir oder ZnSe — die Grundlage für Thermografie und unser {{link}}-Add-on.",
+        "linkLabel": "Thermal Vision",
+        "linkTo": "/products/thermal-vision",
+        "benefits": ["Berührungslose Temperaturmessung", "Kompatibel mit externen optischen Bänken"]
+      },
+      {
+        "slug": "cryo-shrouds",
+        "category": "thermal",
+        "name": "Kryogene Shrouds",
+        "description": "LN₂-gekühlte Shrouds um das Testvolumen für tiefe Kaltphasen und Kontaminationssenken. Verfügbar als vollflächige Auskleidung oder Panel-Konfiguration.",
+        "benefits": ["Effektive Temperaturen unter −180 °C", "Kryopump-Effekt auf kondensierbare Anteile"]
+      },
+      {
+        "slug": "bake-out",
+        "category": "vacuum",
+        "name": "Bake-out-Heizung",
+        "description": "Ausheizung von Behälter und Shroud bis 150 °C für beschleunigtes Ausgasen vor Qualifikationsläufen. Programmierbare Rampen-/Halteprofile über die Steuerung.",
+        "benefits": ["Schnellere Konvergenz zum Enddruck", "Reduzierte Hintergrundkontamination"]
+      },
+      {
+        "slug": "dry-pumping",
+        "category": "vacuum",
+        "name": "Ölfreies (trockenes) Pumpen",
+        "description": "Vollständig ölfreier Pumpstand — trockene Vorpumpe plus Turbomolekularstufe — für kohlenwasserstoffempfindliche Nutzlasten und optische Hardware.",
+        "benefits": ["Keine Kohlenwasserstoff-Rückströmung", "Saubere Umgebung für Optik & Sensorik"]
+      },
+      {
+        "slug": "rga",
+        "category": "instrumentation",
+        "name": "Restgasanalysator (RGA)",
+        "description": "Quadrupol-Massenspektrometer an dediziertem Flansch für Leckortung, Ausgasungs-Spektren und Prozessqualifikation bis in den Partialdruckbereich von 10⁻¹¹ mbar.",
+        "benefits": ["Unterscheidung Leck vs. Ausgasung", "Dokumentierte Prozessqualifikation"]
+      },
+      {
+        "slug": "qcm",
+        "category": "instrumentation",
+        "name": "Kontaminations-Monitoring (QCM / TQCM)",
+        "description": "Quarzkristall-Mikrowaagen — auch temperaturgeregelte Varianten — zur Echtzeit-Überwachung molekularer Kontamination während Thermalzyklen.",
+        "benefits": ["Quantifiziert Ablagerungsraten", "Unterstützt Sauberkeitsnachweise"]
+      },
+      {
+        "slug": "feedthroughs",
+        "category": "interfaces",
+        "name": "Kundenspezifische Durchführungen & Signal-I/O",
+        "description": "Anwendungsspezifische Flanschpakete: HV-Leistungs-, LV-Signal-, LWL-, Fluid- und HF-Durchführungen, angeordnet nach Ihrem Interface-Control-Dokument.",
+        "benefits": ["Saubere Kabelführung", "Nachweisbare ICD-Konformität"]
+      },
+      {
+        "slug": "handling",
+        "category": "interfaces",
+        "name": "Handling- & Vorrichtungspaket",
+        "description": "Motorisierte Türen, integrierte Vorrichtungsschienen, reinraumkompatible Grundplatten und Hebehilfen — abgestimmt auf Masse und Grundfläche Ihres Prüflings.",
+        "benefits": ["Sicherere, schnellere Integration", "Reproduzierbare Positionierung des Prüflings"]
+      }
+    ],
+    "cta": {
+      "title": "Welche Optionen passen zu Ihrer Testkampagne?",
+      "description": "Senden Sie uns die Eckdaten Ihres Prüflings, und wir kommen mit einem Konfigurationsvorschlag zurück — Standard-Serie mit passenden Optionen oder eine Custom-TVAC, wenn der Standardumfang nicht ausreicht."
+    }
   }
 }
+

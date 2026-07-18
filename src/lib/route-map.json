@@ -61,6 +61,21 @@
     }
   },
   {
+    "en": "/products/options",
+    "de": "/de/produkte/optionen",
+    "seoKey": "options",
+    "sitemap": {
+      "group": "main",
+      "priority": 0.85,
+      "changefreq": "monthly",
+      "sources": [
+        "src/pages/Options.tsx",
+        "src/i18n/locales/en/products.json",
+        "src/i18n/locales/de/products.json"
+      ]
+    }
+  },
+  {
     "en": "/products/thermal-vision",
     "de": "/de/produkte/thermal-vision",
     "seoKey": "thermalVision",

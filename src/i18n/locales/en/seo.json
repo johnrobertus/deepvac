@@ -15,6 +15,10 @@
     "title": "Custom Thermal Vacuum Systems | Deepvac",
     "description": "Application-specific thermal vacuum engineering — custom chamber systems engineered from concept through commissioning for demanding test requirements."
   },
+  "options": {
+    "title": "TVAC Chamber Options | Deepvac",
+    "description": "Configure your thermal vacuum chamber: solar simulation, bake-out, oil-free pumping, RGA, thermography viewports and more — all Deepvac chamber options at a glance."
+  },
   "services": {
     "title": "TVAC Engineering Services | Deepvac",
     "description": "End-to-end engineering services for thermal vacuum systems — from control systems design and testing to retrofit, maintenance, and subsystem integration."
