@@ -2,8 +2,8 @@
   "eyebrow": "Contact",
   "title": "Discuss Your Thermal Vacuum Requirements",
   "description": "Whether you need a chamber platform, a custom TVAC configuration, or engineering support for modernization and integration — our team is ready to discuss your project.",
-  "formTitle": "Tell us about your project",
-  "formDescription": "Whether you need a TVAC system, testing support, retrofit work, control design, mechanical engineering, or subsystem integration, send us a short overview. We will route your request to the right specialist.",
+  "formTitle": "Project Inquiry",
+  "formDescription": "Send us a short overview — we route your request directly to the right specialist.",
   "prepareCard": {
     "title": "What to include in your inquiry",
     "subtitle": "Sharing these details up front helps our engineering team respond with the right scope and the right contact.",
@@ -42,13 +42,46 @@
     "messagePlaceholder": "Example: We are planning a chamber upgrade, need support with control system modernization, or are looking for TVAC testing capacity for a satellite component."
   },
   "interests": {
-    "products": ["Standard TVAC Series", "Custom TVAC System", "Thermal Vision"],
-    "services": ["Testing Services", "Control Systems Design", "Mechanical Design", "Retrofit & Modernization", "Maintenance & Repair", "Subsystem Integration"],
-    "other": ["Not sure yet", "General consultation"]
+    "products": [
+      "Standard TVAC Series",
+      "Custom TVAC System",
+      "Thermal Vision"
+    ],
+    "services": [
+      "Testing Services",
+      "Control Systems Design",
+      "Mechanical Design",
+      "Retrofit & Modernization",
+      "Maintenance & Repair",
+      "Subsystem Integration"
+    ],
+    "other": [
+      "Not sure yet",
+      "General consultation"
+    ]
   },
-  "projectStageOptions": ["Early evaluation", "Requirements already defined", "Request for quotation", "Existing system needs support", "Upgrade or retrofit project", "Not sure yet"],
-  "timelineOptionsNew": ["Immediate", "Within 3 months", "3 to 6 months", "6 to 12 months", "Later", "Not sure yet"],
-  "existingSystemOptions": ["No, new project", "Yes, existing Deepvac system", "Yes, existing third-party system", "Not sure"],
+  "projectStageOptions": [
+    "Early evaluation",
+    "Requirements already defined",
+    "Request for quotation",
+    "Existing system needs support",
+    "Upgrade or retrofit project",
+    "Not sure yet"
+  ],
+  "timelineOptionsNew": [
+    "Immediate",
+    "Within 3 months",
+    "3 to 6 months",
+    "6 to 12 months",
+    "Later",
+    "Not sure yet"
+  ],
+  "existingSystemOptions": [
+    "No, new project",
+    "Yes, existing Deepvac system",
+    "Yes, existing third-party system",
+    "Not sure"
+  ],
   "submit": {
     "button": "Send Project Inquiry",
     "helper": "Your request will be reviewed by our technical team and routed to the right contact."
@@ -67,9 +100,25 @@
     "applicationArea": "Application Area",
     "timeline": "Timeline",
     "select": "Select...",
-    "chamberOptions": ["Standard T Series", "Standard C Series", "Custom TVAC", "Not sure yet"],
-    "applicationOptions": ["Satellite / Spacecraft", "Payload / Component", "Research / Laboratory", "Industrial / Process", "Other"],
-    "timelineOptions": ["Immediate (< 3 months)", "Near-term (3–6 months)", "Planning phase (6–12 months)", "Exploratory"]
+    "chamberOptions": [
+      "Standard T Series",
+      "Standard C Series",
+      "Custom TVAC",
+      "Not sure yet"
+    ],
+    "applicationOptions": [
+      "Satellite / Spacecraft",
+      "Payload / Component",
+      "Research / Laboratory",
+      "Industrial / Process",
+      "Other"
+    ],
+    "timelineOptions": [
+      "Immediate (< 3 months)",
+      "Near-term (3–6 months)",
+      "Planning phase (6–12 months)",
+      "Exploratory"
+    ]
   },
   "contactDetails": "Contact Details",
   "address": "Address",
@@ -82,10 +131,22 @@
     "eyebrow": "FAQ",
     "title": "Contact & Project Questions",
     "items": [
-      { "q": "What information should I prepare before contacting Deepvac?", "a": "A productive initial conversation typically covers: test article dimensions and mass, required pressure and temperature ranges, thermal cycling requirements, feedthrough and instrumentation needs, facility constraints, and project timeline. Deepvac can guide this requirements definition process if needed." },
-      { "q": "What is the typical response time?", "a": "Deepvac aims to respond to technical inquiries within two business days. Complex configuration requests may require additional time for initial technical assessment." },
-      { "q": "Can Deepvac support projects outside Germany?", "a": "Yes. Deepvac provides engineering, delivery, installation, and commissioning services internationally. Project logistics are discussed during the initial consultation." },
-      { "q": "Is there a minimum project size?", "a": "Deepvac serves projects ranging from standard chamber deliveries to complex custom system developments. Contact us to discuss your specific requirements and scope." }
+      {
+        "q": "What information should I prepare before contacting Deepvac?",
+        "a": "A productive initial conversation typically covers: test article dimensions and mass, required pressure and temperature ranges, thermal cycling requirements, feedthrough and instrumentation needs, facility constraints, and project timeline. Deepvac can guide this requirements definition process if needed."
+      },
+      {
+        "q": "What is the typical response time?",
+        "a": "Deepvac aims to respond to technical inquiries within two business days. Complex configuration requests may require additional time for initial technical assessment."
+      },
+      {
+        "q": "Can Deepvac support projects outside Germany?",
+        "a": "Yes. Deepvac provides engineering, delivery, installation, and commissioning services internationally. Project logistics are discussed during the initial consultation."
+      },
+      {
+        "q": "Is there a minimum project size?",
+        "a": "Deepvac serves projects ranging from standard chamber deliveries to complex custom system developments. Contact us to discuss your specific requirements and scope."
+      }
     ]
   },
   "cta": {
