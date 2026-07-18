@@ -2,8 +2,8 @@
   "eyebrow": "Kontakt",
   "title": "Besprechen Sie Ihre Thermovakuum-Anforderungen",
   "description": "Ob Sie eine Kammerplattform, eine kundenspezifische TVAC-Konfiguration oder Engineering-Unterstützung für Modernisierung und Integration benötigen – unser Team steht bereit, Ihr Projekt zu besprechen.",
-  "formTitle": "Erzählen Sie uns von Ihrem Projekt",
-  "formDescription": "Ob Sie ein TVAC-System, Testunterstützung, Retrofit, Steuerungsdesign, mechanische Konstruktion oder Subsystemintegration benötigen — senden Sie uns einen kurzen Überblick. Wir leiten Ihre Anfrage an die zuständigen Spezialisten weiter.",
+  "formTitle": "Projektanfrage",
+  "formDescription": "Senden Sie uns einen kurzen Überblick – wir leiten Ihre Anfrage direkt an den passenden Spezialisten weiter.",
   "prepareCard": {
     "title": "Was Ihre Anfrage enthalten sollte",
     "subtitle": "Diese Angaben vorab helfen unserem Engineering-Team, den richtigen Umfang und Ansprechpartner zuzuordnen.",
@@ -42,13 +42,46 @@
     "messagePlaceholder": "Beispiel: Wir planen ein Kammer-Upgrade, benötigen Unterstützung bei der Modernisierung des Steuerungssystems oder suchen TVAC-Testkapazität für eine Satellitenkomponente."
   },
   "interests": {
-    "products": ["Standard TVAC-Serie", "Custom TVAC System", "Thermal Vision"],
-    "services": ["Testleistungen", "Steuerungstechnik", "Mechanische Konstruktion", "Retrofit & Modernisierung", "Wartung & Reparatur", "Subsystemintegration"],
-    "other": ["Noch nicht sicher", "Allgemeine Beratung"]
+    "products": [
+      "Standard TVAC-Serie",
+      "Custom TVAC System",
+      "Thermal Vision"
+    ],
+    "services": [
+      "Testleistungen",
+      "Steuerungstechnik",
+      "Mechanische Konstruktion",
+      "Retrofit & Modernisierung",
+      "Wartung & Reparatur",
+      "Subsystemintegration"
+    ],
+    "other": [
+      "Noch nicht sicher",
+      "Allgemeine Beratung"
+    ]
   },
-  "projectStageOptions": ["Frühe Evaluierung", "Anforderungen bereits definiert", "Angebotsanfrage", "Bestehendes System benötigt Support", "Upgrade- oder Retrofit-Projekt", "Noch nicht sicher"],
-  "timelineOptionsNew": ["Sofort", "Innerhalb von 3 Monaten", "3 bis 6 Monate", "6 bis 12 Monate", "Später", "Noch nicht sicher"],
-  "existingSystemOptions": ["Nein, neues Projekt", "Ja, bestehendes Deepvac-System", "Ja, bestehendes Drittanbieter-System", "Nicht sicher"],
+  "projectStageOptions": [
+    "Frühe Evaluierung",
+    "Anforderungen bereits definiert",
+    "Angebotsanfrage",
+    "Bestehendes System benötigt Support",
+    "Upgrade- oder Retrofit-Projekt",
+    "Noch nicht sicher"
+  ],
+  "timelineOptionsNew": [
+    "Sofort",
+    "Innerhalb von 3 Monaten",
+    "3 bis 6 Monate",
+    "6 bis 12 Monate",
+    "Später",
+    "Noch nicht sicher"
+  ],
+  "existingSystemOptions": [
+    "Nein, neues Projekt",
+    "Ja, bestehendes Deepvac-System",
+    "Ja, bestehendes Drittanbieter-System",
+    "Nicht sicher"
+  ],
   "submit": {
     "button": "Projektanfrage senden",
     "helper": "Ihre Anfrage wird von unserem Fachteam geprüft und an den richtigen Ansprechpartner weitergeleitet."
@@ -67,9 +100,25 @@
     "applicationArea": "Anwendungsbereich",
     "timeline": "Zeitrahmen",
     "select": "Auswählen...",
-    "chamberOptions": ["Standard T-Serie", "Standard C-Serie", "Custom TVAC", "Noch nicht sicher"],
-    "applicationOptions": ["Satellit / Raumfahrzeug", "Nutzlast / Komponente", "Forschung / Labor", "Industrie / Prozess", "Sonstiges"],
-    "timelineOptions": ["Sofort (< 3 Monate)", "Kurzfristig (3–6 Monate)", "Planungsphase (6–12 Monate)", "Explorativ"]
+    "chamberOptions": [
+      "Standard T-Serie",
+      "Standard C-Serie",
+      "Custom TVAC",
+      "Noch nicht sicher"
+    ],
+    "applicationOptions": [
+      "Satellit / Raumfahrzeug",
+      "Nutzlast / Komponente",
+      "Forschung / Labor",
+      "Industrie / Prozess",
+      "Sonstiges"
+    ],
+    "timelineOptions": [
+      "Sofort (< 3 Monate)",
+      "Kurzfristig (3–6 Monate)",
+      "Planungsphase (6–12 Monate)",
+      "Explorativ"
+    ]
   },
   "contactDetails": "Kontaktdaten",
   "address": "Adresse",
@@ -82,10 +131,22 @@
     "eyebrow": "FAQ",
     "title": "Kontakt- & Projektfragen",
     "items": [
-      { "q": "Welche Informationen sollte ich vor der Kontaktaufnahme mit Deepvac vorbereiten?", "a": "Ein produktives Erstgespräch umfasst typischerweise: Prüflingsabmessungen und -masse, erforderliche Druck- und Temperaturbereiche, thermische Zyklusanforderungen, Durchführungs- und Instrumentierungsbedürfnisse, Anlagenbedingungen und Projektzeitplan. Deepvac kann bei Bedarf bei der Anforderungsdefinition unterstützen." },
-      { "q": "Wie ist die typische Antwortzeit?", "a": "Deepvac strebt an, auf technische Anfragen innerhalb von zwei Werktagen zu antworten. Komplexe Konfigurationsanfragen können zusätzliche Zeit für eine erste technische Bewertung erfordern." },
-      { "q": "Kann Deepvac Projekte außerhalb Deutschlands unterstützen?", "a": "Ja. Deepvac bietet Engineering, Lieferung, Installation und Inbetriebnahme international an. Projektlogistik wird während der Erstberatung besprochen." },
-      { "q": "Gibt es eine Mindestprojektgröße?", "a": "Deepvac bedient Projekte von Standardkammer-Lieferungen bis zu komplexen Custom-Systementwicklungen. Kontaktieren Sie uns, um Ihre spezifischen Anforderungen und den Umfang zu besprechen." }
+      {
+        "q": "Welche Informationen sollte ich vor der Kontaktaufnahme mit Deepvac vorbereiten?",
+        "a": "Ein produktives Erstgespräch umfasst typischerweise: Prüflingsabmessungen und -masse, erforderliche Druck- und Temperaturbereiche, thermische Zyklusanforderungen, Durchführungs- und Instrumentierungsbedürfnisse, Anlagenbedingungen und Projektzeitplan. Deepvac kann bei Bedarf bei der Anforderungsdefinition unterstützen."
+      },
+      {
+        "q": "Wie ist die typische Antwortzeit?",
+        "a": "Deepvac strebt an, auf technische Anfragen innerhalb von zwei Werktagen zu antworten. Komplexe Konfigurationsanfragen können zusätzliche Zeit für eine erste technische Bewertung erfordern."
+      },
+      {
+        "q": "Kann Deepvac Projekte außerhalb Deutschlands unterstützen?",
+        "a": "Ja. Deepvac bietet Engineering, Lieferung, Installation und Inbetriebnahme international an. Projektlogistik wird während der Erstberatung besprochen."
+      },
+      {
+        "q": "Gibt es eine Mindestprojektgröße?",
+        "a": "Deepvac bedient Projekte von Standardkammer-Lieferungen bis zu komplexen Custom-Systementwicklungen. Kontaktieren Sie uns, um Ihre spezifischen Anforderungen und den Umfang zu besprechen."
+      }
     ]
   },
   "cta": {
