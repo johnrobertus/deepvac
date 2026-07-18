@@ -32,11 +32,11 @@
             "advantages": [
               "Kein Verbrauch von Kryogenen — geringere laufende Betriebskosten",
               "Dauerbetrieb ohne Versorgungslogistik",
-              "Gute Temperaturregelbarkeit im Bereich −70 °C bis +150 °C",
+              "Gute Temperaturregelbarkeit im Bereich −90 °C bis +150 °C",
               "Geringere Anforderungen an die Anlageninfrastruktur"
             ],
             "constraints": [
-              "Begrenzte Minimaltemperatur (typischerweise −70 °C bis −80 °C bei zweistufigen Systemen)",
+              "Begrenzte Minimaltemperatur (typischerweise bis ca. −90 °C bei zweistufigen Systemen)",
               "Langsamere Abkühlraten im Vergleich zu LN₂-Systemen",
               "Höhere anfängliche Ausrüstungskosten für Kaskadenkonfigurationen",
               "Kompressorwartung und eventuelle Erneuerung"
