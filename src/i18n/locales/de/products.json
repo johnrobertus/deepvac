@@ -582,87 +582,244 @@
     ]
   },
   "options": {
-    "eyebrow": "Konfigurierbare Optionen",
-    "title": "Kammer-Optionen im Überblick",
-    "description": "Jede Deepvac-Kammer — Standard oder Custom — lässt sich mit den folgenden Optionen zuschneiden. Die Kategorien entsprechen der Struktur unserer Angebote und Engineering-Dokumentation.",
-    "note": "Nicht jede Kombination ist auf jeder Plattform verfügbar. Die Machbarkeit klären wir in der technischen Abstimmung.",
+    "eyebrow": "Kammerkonfiguration",
+    "title": "Optionen",
+    "description": "Jede Deepvac-Kammer basiert auf einer bewährten Grundkonfiguration. Optionen erweitern sie – oder passen die Basis selbst an – exakt an Ihre Testanforderungen. Manche Optionen ergänzen Funktionen, andere verändern die Grundausstattung.",
+    "note": "Nicht jede Kombination ist auf jeder Plattform verfügbar – die Machbarkeit klären wir in der technischen Abstimmung.",
+    "catalog": {
+      "eyebrow": "Katalog",
+      "title": "Alle Optionen im Überblick",
+      "hint": "Option auswählen, um zu den Details zu springen."
+    },
+    "details": {
+      "eyebrow": "Im Detail",
+      "title": "Was die einzelnen Optionen leisten"
+    },
+    "purposeLabel": "Zweck",
+    "benefitsLabel": "Nutzen",
+    "backToOverview": "Zurück zur Übersicht",
     "categories": {
-      "thermal": "Thermal",
-      "vacuum": "Vakuum & Pumpen",
-      "instrumentation": "Messtechnik & Daten",
-      "interfaces": "Schnittstellen & Handling"
+      "thermal": "Thermische Leistung",
+      "vacuum": "Vakuum & Reinheit",
+      "observation": "Beobachtung & Diagnostik",
+      "integration": "Integration & Infrastruktur"
     },
     "items": [
       {
-        "slug": "solar-simulation",
+        "slug": "solar-simulator",
         "category": "thermal",
-        "name": "Solarsimulation (AM0-Klasse)",
-        "description": "Kollimierter Solarsimulator, an die Kammergeometrie angepasst — typische Bestrahlungsstärke bis 1,5 Solarkonstanten, spektrale Anpassung an raumfahrtrelevante AM0-Profile.",
-        "benefits": ["Strahlungslast nahe an Weltraumbedingungen", "Integrierter Shutter & Bestrahlungsüberwachung"]
+        "name": "Solarsimulator",
+        "purpose": "Nachbildung solarer Strahlungswärmelasten",
+        "description": "Ein Solarsimulator bringt einen kalibrierten Strahlungsfluss in die Kammer ein und bildet die solare Einstrahlung im Orbit nach. Das erweitert die Testabdeckung um sonnenzugewandte Betriebsfälle und transiente Beleuchtungsszenarien.",
+        "benefits": [
+          "Simulation solarer Wärmeeinträge",
+          "Erweiterte Testszenarien"
+        ]
       },
       {
-        "slug": "viewports-thermography",
+        "slug": "infrared-heaters",
         "category": "thermal",
-        "name": "Optische & IR-durchlässige Schaugläser",
-        "description": "Zusätzliche Flansch-Schaugläser aus BK7, Saphir oder ZnSe — die Grundlage für Thermografie und unser {{link}}-Add-on.",
-        "linkLabel": "Thermal Vision",
-        "linkTo": "/products/thermal-vision",
-        "benefits": ["Berührungslose Temperaturmessung", "Kompatibel mit externen optischen Bänken"]
+        "name": "Infrarotstrahler",
+        "purpose": "Zusätzliche Strahlungswärmelast",
+        "description": "IR-Strahler bringen eine zusätzliche Strahlungswärmelast direkt auf den Prüfling. Das ermöglicht schnellere Temperaturrampen und die Simulation radiativer Erwärmungsfälle.",
+        "benefits": [
+          "Schnellere Temperaturanstiege",
+          "Simulation radiativer Erwärmung"
+        ]
       },
       {
-        "slug": "cryo-shrouds",
+        "slug": "temperature-control-zones",
         "category": "thermal",
-        "name": "Kryogene Shrouds",
-        "description": "LN₂-gekühlte Shrouds um das Testvolumen für tiefe Kaltphasen und Kontaminationssenken. Verfügbar als vollflächige Auskleidung oder Panel-Konfiguration.",
-        "benefits": ["Effektive Temperaturen unter −180 °C", "Kryopump-Effekt auf kondensierbare Anteile"]
+        "name": "Zusätzliche Temperaturregelzonen",
+        "purpose": "Unabhängige Regelung einzelner Bereiche",
+        "description": "Unabhängig geregelte Temperaturzonen erlauben die separate Regelung einzelner Bereiche von Shroud oder Thermalplatte. Das verbessert die Uniformität und ermöglicht komplexere Temperaturprofile.",
+        "benefits": [
+          "Bessere Temperatur-Uniformität",
+          "Komplexere Temperaturprofile"
+        ]
+      },
+      {
+        "slug": "temperature-sensors",
+        "category": "thermal",
+        "name": "Zusätzliche Temperatursensoren",
+        "purpose": "Erhöhung der Messstellenanzahl",
+        "description": "Zusätzliche Sensorkanäle erhöhen die Anzahl der Messstellen an Prüfling und Shroud. Eine dichtere Instrumentierung verbessert das Temperatur-Mapping und die Korrelation thermischer Modelle.",
+        "benefits": [
+          "Verbessertes Temperatur-Mapping"
+        ]
       },
       {
         "slug": "bake-out",
         "category": "vacuum",
-        "name": "Bake-out-Heizung",
-        "description": "Ausheizung von Behälter und Shroud bis 150 °C für beschleunigtes Ausgasen vor Qualifikationsläufen. Programmierbare Rampen-/Halteprofile über die Steuerung.",
-        "benefits": ["Schnellere Konvergenz zum Enddruck", "Reduzierte Hintergrundkontamination"]
+        "name": "Beheizte Kammerwände (Bake-out)",
+        "purpose": "Beheizung der Innenflächen zur Beschleunigung des Ausgasens",
+        "description": "Eine integrierte Wandheizung erwärmt die Innenflächen und beschleunigt das Ausgasen von adsorbiertem Wasser und Kontaminationen. Das verkürzt die Abpumpzeit und verbessert die erreichbare Vakuumqualität.",
+        "benefits": [
+          "Verkürzte Abpumpzeit",
+          "Verbesserte Vakuumreinheit"
+        ]
       },
       {
-        "slug": "dry-pumping",
+        "slug": "cryogenic-traps",
         "category": "vacuum",
-        "name": "Ölfreies (trockenes) Pumpen",
-        "description": "Vollständig ölfreier Pumpstand — trockene Vorpumpe plus Turbomolekularstufe — für kohlenwasserstoffempfindliche Nutzlasten und optische Hardware.",
-        "benefits": ["Keine Kohlenwasserstoff-Rückströmung", "Saubere Umgebung für Optik & Sensorik"]
+        "name": "Kryofallen",
+        "purpose": "Kondensation von Wasserdampf und anderen kondensierbaren Gasen",
+        "description": "Kryofallen kondensieren Wasserdampf und andere kondensierbare Gase an gekühlten Flächen. Das verbessert Vakuumreinheit und Druckstabilität, insbesondere bei langen Testkampagnen.",
+        "benefits": [
+          "Verbesserte Vakuumreinheit",
+          "Höhere Druckstabilität"
+        ]
       },
       {
-        "slug": "rga",
-        "category": "instrumentation",
-        "name": "Restgasanalysator (RGA)",
-        "description": "Quadrupol-Massenspektrometer an dediziertem Flansch für Leckortung, Ausgasungs-Spektren und Prozessqualifikation bis in den Partialdruckbereich von 10⁻¹¹ mbar.",
-        "benefits": ["Unterscheidung Leck vs. Ausgasung", "Dokumentierte Prozessqualifikation"]
+        "slug": "roots-booster",
+        "category": "vacuum",
+        "name": "Beschleunigtes Abpumpen (Roots-Booster)",
+        "purpose": "Einbau eines Roots-Boosters",
+        "description": "Ein Roots-Booster im Pumpstand erhöht das effektive Saugvermögen im Feinvakuumbereich. Das Ergebnis ist eine deutlich verkürzte Abpumpzeit.",
+        "benefits": [
+          "Verkürzte Abpumpzeit"
+        ]
       },
       {
-        "slug": "qcm",
-        "category": "instrumentation",
-        "name": "Kontaminations-Monitoring (QCM / TQCM)",
-        "description": "Quarzkristall-Mikrowaagen — auch temperaturgeregelte Varianten — zur Echtzeit-Überwachung molekularer Kontamination während Thermalzyklen.",
-        "benefits": ["Quantifiziert Ablagerungsraten", "Unterstützt Sauberkeitsnachweise"]
+        "slug": "oil-free-pumping",
+        "category": "vacuum",
+        "name": "Vollständig ölfreies Vakuumpumpsystem",
+        "purpose": "Ausstattung des Pumpstands mit trockenen Pumpen",
+        "description": "Der Pumpstand wird ausschließlich mit trockenen Pumpen ausgeführt. Das minimiert das Risiko einer Kohlenwasserstoff-Kontamination von Kammer und Prüfling.",
+        "benefits": [
+          "Minimierte Kohlenwasserstoff-Kontamination"
+        ]
       },
       {
-        "slug": "feedthroughs",
-        "category": "interfaces",
-        "name": "Kundenspezifische Durchführungen & Signal-I/O",
-        "description": "Anwendungsspezifische Flanschpakete: HV-Leistungs-, LV-Signal-, LWL-, Fluid- und HF-Durchführungen, angeordnet nach Ihrem Interface-Control-Dokument.",
-        "benefits": ["Saubere Kabelführung", "Nachweisbare ICD-Konformität"]
+        "slug": "nitrogen-venting",
+        "category": "vacuum",
+        "name": "Automatisches Belüften & Spülen mit trockenem Stickstoff",
+        "purpose": "Kontrolliertes Fluten und Spülen",
+        "description": "Automatisierte Belüftungs- und Spülzyklen mit trockenem Stickstoff sorgen für ein kontrolliertes Fluten der Kammer. Das reduziert das Kontaminationsrisiko und beschleunigt Probenwechsel.",
+        "benefits": [
+          "Reduziertes Kontaminationsrisiko",
+          "Schnellere Probenwechsel"
+        ]
       },
       {
-        "slug": "handling",
-        "category": "interfaces",
-        "name": "Handling- & Vorrichtungspaket",
-        "description": "Motorisierte Türen, integrierte Vorrichtungsschienen, reinraumkompatible Grundplatten und Hebehilfen — abgestimmt auf Masse und Grundfläche Ihres Prüflings.",
-        "benefits": ["Sicherere, schnellere Integration", "Reproduzierbare Positionierung des Prüflings"]
+        "slug": "residual-gas-analysis",
+        "category": "vacuum",
+        "name": "Restgasanalyse (RGA)",
+        "purpose": "Kontrolle der Restgaszusammensetzung",
+        "description": "Ein Restgasanalysator überwacht die Zusammensetzung des Restgases in der Kammer. Das erhöht die Aussagekraft Ihrer Tests – von Lecksignaturen bis zum Ausgasverhalten.",
+        "benefits": [
+          "Höhere Aussagekraft der Tests"
+        ]
+      },
+      {
+        "slug": "qcm-monitoring",
+        "category": "vacuum",
+        "name": "QCM-Überwachung",
+        "purpose": "Überwachung von Kondensation und Kontamination",
+        "description": "Quarzkristall-Mikrowaagen überwachen Kondensation und molekulare Kontamination während des Tests. Das ermöglicht eine quantitative Bewertung der Kontamination.",
+        "benefits": [
+          "Quantitative Bewertung der Kontamination"
+        ]
+      },
+      {
+        "slug": "helium-leak-test",
+        "category": "vacuum",
+        "name": "Helium-Lecktest-Vorbereitung",
+        "purpose": "Anschlüsse für die Dichtheitsprüfung",
+        "description": "Dedizierte Anschlüsse bereiten die Kammer für die Helium-Lecksuche vor. Das beschleunigt Abnahmeprüfungen und wiederkehrende Dichtheitsnachweise.",
+        "benefits": [
+          "Beschleunigte Abnahme"
+        ]
+      },
+      {
+        "slug": "viewing-window-znse",
+        "category": "observation",
+        "name": "Schauglas (optional ZnSe für Thermografie)",
+        "purpose": "Beobachtung des Prüflings; ZnSe für IR-Transmission",
+        "description": "Ein vakuumtaugliches Schauglas ermöglicht die direkte Beobachtung des Prüflings während des Tests. Mit optionalem ZnSe-Fenster wird die Kammerwand IR-durchlässig – die Grundlage für Thermografie und unser {{link}}-Add-on.",
+        "linkLabel": "Thermal Vision",
+        "linkTo": "/products/thermal-vision",
+        "benefits": [
+          "Sichtprüfung ohne Belüften",
+          "Thermografie zeigt Hotspots und Defekte"
+        ]
+      },
+      {
+        "slug": "optical-viewports",
+        "category": "observation",
+        "name": "Schaugläser & optische Anschlüsse",
+        "purpose": "Sichtprüfung, optische Messungen",
+        "description": "Zusätzliche Schaugläser und optische Durchführungen ermöglichen Sichtprüfung und optische Messungen. Erweiterte Diagnostik – ohne die Kammer zu öffnen.",
+        "benefits": [
+          "Erweiterte Diagnostik ohne Öffnen der Kammer"
+        ]
+      },
+      {
+        "slug": "interior-camera",
+        "category": "observation",
+        "name": "Innenraumkamera",
+        "purpose": "Videoüberwachung des Prüflings",
+        "description": "Eine vakuumtaugliche Kamera liefert eine kontinuierliche Videoüberwachung des Prüflings. Das erhöht Betriebssicherheit und Dokumentationsqualität.",
+        "benefits": [
+          "Erhöhte Betriebssicherheit"
+        ]
+      },
+      {
+        "slug": "remote-monitoring",
+        "category": "observation",
+        "name": "Fernüberwachung & erweiterte Datenaufzeichnung",
+        "purpose": "Netzwerkübertragung und Datenexport",
+        "description": "Netzwerkbasierter Fernzugriff und erweiterte Datenaufzeichnung mit Exportfunktionen. Volle Rückverfolgbarkeit und vereinfachte Auswertung Ihrer Testdaten.",
+        "benefits": [
+          "Volle Rückverfolgbarkeit",
+          "Vereinfachte Auswertung"
+        ]
+      },
+      {
+        "slug": "process-connections",
+        "category": "integration",
+        "name": "Zusätzliche Prozessanschlüsse",
+        "purpose": "Vakuumdurchführungen für Strom, Signale und Sensorik",
+        "description": "Zusätzliche Vakuumdurchführungen für Strom, Signale und Sensorik vereinfachen die Integration Ihres Testaufbaus. Ausgelegt nach Ihren Harness- und Schnittstellenanforderungen.",
+        "benefits": [
+          "Vereinfachte Integration"
+        ]
+      },
+      {
+        "slug": "vibration-isolation",
+        "category": "integration",
+        "name": "Schwingungsentkopplung",
+        "purpose": "Mechanische Entkopplung der Pumpen",
+        "description": "Die mechanische Entkopplung des Pumpstands reduziert die Schwingungsübertragung auf die Kammer. Empfindliche Prüflinge bleiben während des Tests ungestört.",
+        "benefits": [
+          "Reduzierte Vibrationen am Prüfling"
+        ]
+      },
+      {
+        "slug": "water-cooling",
+        "category": "integration",
+        "name": "Wasserkühlung",
+        "purpose": "Wärmeabfuhr über Wasserkühlung",
+        "description": "Wärmeabfuhr über Wasserkühlung statt Luftkühlung. Das reduziert den Wärmeeintrag in den Raum und senkt den Geräuschpegel.",
+        "benefits": [
+          "Geringere Wärmeabgabe",
+          "Niedrigerer Geräuschpegel"
+        ]
       }
     ],
+    "crossSell": {
+      "standard": {
+        "title": "Standard-Serie mit Optionen",
+        "description": "Der schnellste und wirtschaftlichste Weg: eine Standard-Serie-Kammer, konfiguriert mit den passenden Optionen aus dieser Liste."
+      },
+      "custom": {
+        "title": "Wenn Standard nicht reicht: Custom TVAC",
+        "description": "Für Volumina, Temperaturen oder Schnittstellen außerhalb des Standardumfangs entwickeln wir die Kammer applikationsspezifisch."
+      }
+    },
     "cta": {
       "title": "Welche Optionen passen zu Ihrer Testkampagne?",
-      "description": "Senden Sie uns die Eckdaten Ihres Prüflings, und wir kommen mit einem Konfigurationsvorschlag zurück — Standard-Serie mit passenden Optionen oder eine Custom-TVAC, wenn der Standardumfang nicht ausreicht."
+      "description": "Nennen Sie uns Prüfling und Anforderungen – wir antworten mit einem konkreten Konfigurationsvorschlag: Standard-Serie mit den passenden Optionen oder ein Custom TVAC, wo der Standardumfang nicht ausreicht."
     }
   }
 }
-

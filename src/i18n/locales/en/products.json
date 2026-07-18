@@ -582,87 +582,244 @@
     ]
   },
   "options": {
-    "eyebrow": "Configurable options",
-    "title": "Chamber options at a glance",
-    "description": "Every Deepvac chamber — standard or custom — can be tailored with the following options. Categories mirror the way we structure quotes and engineering documentation.",
-    "note": "Not every combination is available on every platform. We confirm feasibility during the technical clarification.",
+    "eyebrow": "Chamber configuration",
+    "title": "Options",
+    "description": "Every Deepvac chamber starts from a proven base configuration. Options extend it — or adapt the base itself — to match your exact test requirements. Some options add capability on top; others modify the underlying configuration.",
+    "note": "Not every combination is available on every platform — we confirm feasibility during the technical clarification.",
+    "catalog": {
+      "eyebrow": "Catalog",
+      "title": "All options at a glance",
+      "hint": "Select an option to jump to its details."
+    },
+    "details": {
+      "eyebrow": "In detail",
+      "title": "What each option does"
+    },
+    "purposeLabel": "Purpose",
+    "benefitsLabel": "Benefits",
+    "backToOverview": "Back to overview",
     "categories": {
-      "thermal": "Thermal",
-      "vacuum": "Vacuum & pumping",
-      "instrumentation": "Instrumentation & data",
-      "interfaces": "Interfaces & handling"
+      "thermal": "Thermal performance",
+      "vacuum": "Vacuum & cleanliness",
+      "observation": "Observation & diagnostics",
+      "integration": "Integration & infrastructure"
     },
     "items": [
       {
-        "slug": "solar-simulation",
+        "slug": "solar-simulator",
         "category": "thermal",
-        "name": "Solar simulation (AM0-class)",
-        "description": "Collimated solar simulator adapted to the chamber geometry — typical irradiance up to 1.5 solar constants, spectral match tuned to space-relevant AM0 profiles.",
-        "benefits": ["Radiative heat load close to space conditions", "Integrated shutter & irradiance monitoring"]
+        "name": "Solar Simulator",
+        "purpose": "Replication of radiant solar heat loads",
+        "description": "A solar simulator introduces a calibrated radiant flux into the chamber to replicate solar illumination in orbit. This extends test coverage to sun-facing operating cases and transient illumination scenarios.",
+        "benefits": [
+          "Simulation of solar heating",
+          "Extended test scenarios"
+        ]
       },
       {
-        "slug": "viewports-thermography",
+        "slug": "infrared-heaters",
         "category": "thermal",
-        "name": "Optical & IR-transparent viewports",
-        "description": "Additional flanged viewports in BK7, sapphire or ZnSe — the basis for thermography and the {{link}} add-on.",
-        "linkLabel": "Thermal Vision",
-        "linkTo": "/products/thermal-vision",
-        "benefits": ["Non-contact temperature measurement", "Compatible with external optical benches"]
+        "name": "Infrared Heaters",
+        "purpose": "Additional radiant heat load",
+        "description": "IR heater arrays apply an additional radiant heat load directly onto the test specimen. They enable faster temperature ramps and the simulation of radiative heating cases.",
+        "benefits": [
+          "Faster temperature rises",
+          "Simulation of radiant heating"
+        ]
       },
       {
-        "slug": "cryo-shrouds",
+        "slug": "temperature-control-zones",
         "category": "thermal",
-        "name": "Cryogenic shrouds",
-        "description": "LN₂-cooled shrouds surrounding the test volume for deep cold soak and contamination sinks. Available as full-wrap or panel configurations.",
-        "benefits": ["Effective temperatures below −180 °C", "Cryopumping effect on condensables"]
+        "name": "Additional Temperature Control Zones",
+        "purpose": "Independent regulation of individual areas",
+        "description": "Independently controlled thermal zones allow separate regulation of individual areas of the shroud or thermal plate. This improves uniformity and enables more complex temperature profiles.",
+        "benefits": [
+          "Better temperature uniformity",
+          "More complex temperature profiles"
+        ]
+      },
+      {
+        "slug": "temperature-sensors",
+        "category": "thermal",
+        "name": "Additional Temperature Sensors",
+        "purpose": "Increased number of measurement points",
+        "description": "Additional sensor channels increase the number of measurement points on specimen and shroud. Denser instrumentation improves temperature mapping and thermal model correlation.",
+        "benefits": [
+          "Improved temperature mapping"
+        ]
       },
       {
         "slug": "bake-out",
         "category": "vacuum",
-        "name": "Bake-out heating",
-        "description": "Vessel and shroud bake-out up to 150 °C for accelerated outgassing before qualification runs. Programmable ramp/soak profiles via the control system.",
-        "benefits": ["Faster ultimate-pressure convergence", "Reduced background contamination"]
+        "name": "Heated Chamber Walls (Bake-out)",
+        "purpose": "Heating of the inner surfaces to accelerate outgassing",
+        "description": "Integrated wall heating raises the temperature of the inner surfaces to accelerate outgassing of adsorbed water and contaminants. This shortens pump-down times and improves the achievable vacuum quality.",
+        "benefits": [
+          "Reduced pump-down time",
+          "Improved vacuum purity"
+        ]
       },
       {
-        "slug": "dry-pumping",
+        "slug": "cryogenic-traps",
         "category": "vacuum",
-        "name": "Oil-free (dry) pumping",
-        "description": "Fully oil-free pumping train — dry backing pump plus turbomolecular high vacuum stage — for hydrocarbon-sensitive payloads and optical hardware.",
-        "benefits": ["No hydrocarbon backstreaming", "Clean environment for optics & sensors"]
+        "name": "Cryogenic Traps",
+        "purpose": "Condensation of water vapour and other condensable gases",
+        "description": "Cryogenic traps condense water vapour and other condensable gases on cooled surfaces. This improves vacuum purity and pressure stability, particularly during long test campaigns.",
+        "benefits": [
+          "Improved vacuum purity",
+          "Higher pressure stability"
+        ]
       },
       {
-        "slug": "rga",
-        "category": "instrumentation",
-        "name": "Residual Gas Analyzer (RGA)",
-        "description": "Quadrupole mass spectrometer integrated on a dedicated flange for leak isolation, outgassing spectra and process qualification down to the 10⁻¹¹ mbar partial-pressure range.",
-        "benefits": ["Identify leaks vs. outgassing", "Documented process qualification"]
+        "slug": "roots-booster",
+        "category": "vacuum",
+        "name": "Accelerated Pumping (Roots Booster)",
+        "purpose": "Installation of a Roots booster",
+        "description": "A Roots booster added to the pumping train increases the effective pumping speed in the medium vacuum range. The result is a significantly reduced pump-down time.",
+        "benefits": [
+          "Reduced pump-down time"
+        ]
       },
       {
-        "slug": "qcm",
-        "category": "instrumentation",
-        "name": "Contamination monitoring (QCM / TQCM)",
-        "description": "Quartz-crystal microbalance heads — thermally controlled variants included — for real-time monitoring of molecular contamination during thermal cycles.",
-        "benefits": ["Quantifies deposition rates", "Supports cleanliness verification"]
+        "slug": "oil-free-pumping",
+        "category": "vacuum",
+        "name": "Fully Oil-Free Vacuum Pumping",
+        "purpose": "Pumping system equipped exclusively with dry pumps",
+        "description": "The pumping system is equipped exclusively with dry pumps. This minimises the risk of hydrocarbon contamination of chamber and test specimen.",
+        "benefits": [
+          "Minimised hydrocarbon contamination"
+        ]
       },
       {
-        "slug": "feedthroughs",
-        "category": "interfaces",
-        "name": "Custom feedthroughs & signal I/O",
-        "description": "Application-specific flange packages: HV power, LV signal, fiber-optic, fluid and RF feedthroughs, arranged per your interface control document.",
-        "benefits": ["Clean cable routing", "Documented ICD compliance"]
+        "slug": "nitrogen-venting",
+        "category": "vacuum",
+        "name": "Automatic Venting & Purging with Dry Nitrogen",
+        "purpose": "Controlled venting and purging",
+        "description": "Automated venting and purge cycles with dry nitrogen ensure controlled repressurisation of the chamber. This reduces contamination risk and speeds up specimen changes.",
+        "benefits": [
+          "Reduced contamination risk",
+          "Faster specimen changes"
+        ]
       },
       {
-        "slug": "handling",
-        "category": "interfaces",
-        "name": "Handling & fixture package",
-        "description": "Motorized doors, integrated fixture rails, cleanroom-compatible baseplates and lifting accessories — matched to your test article's mass and footprint.",
-        "benefits": ["Safer, faster integration", "Repeatable test article positioning"]
+        "slug": "residual-gas-analysis",
+        "category": "vacuum",
+        "name": "Residual Gas Analysis (RGA)",
+        "purpose": "Monitoring of the residual gas composition",
+        "description": "A residual gas analyser monitors the composition of the residual gas in the chamber. This adds diagnostic depth to your tests — from leak signatures to outgassing behaviour.",
+        "benefits": [
+          "Greater significance of test results"
+        ]
+      },
+      {
+        "slug": "qcm-monitoring",
+        "category": "vacuum",
+        "name": "QCM Monitoring",
+        "purpose": "Monitoring of condensation and contamination",
+        "description": "Quartz crystal microbalances monitor condensation and molecular contamination during the test. This enables a quantitative assessment of contamination levels.",
+        "benefits": [
+          "Quantitative assessment of contamination"
+        ]
+      },
+      {
+        "slug": "helium-leak-test",
+        "category": "vacuum",
+        "name": "Helium Leak Test Preparation",
+        "purpose": "Connections for leak testing",
+        "description": "Dedicated connections prepare the chamber for helium leak testing. This accelerates acceptance testing and recurring tightness verification.",
+        "benefits": [
+          "Accelerated acceptance testing"
+        ]
+      },
+      {
+        "slug": "viewing-window-znse",
+        "category": "observation",
+        "name": "Viewing Window (optional ZnSe for Thermography)",
+        "purpose": "Observation of the specimen; ZnSe for IR transmission",
+        "description": "A vacuum-rated viewport allows direct observation of the test specimen during the test. With an optional ZnSe window, infrared radiation passes through the chamber wall — the basis for thermography and our {{link}} add-on.",
+        "linkLabel": "Thermal Vision",
+        "linkTo": "/products/thermal-vision",
+        "benefits": [
+          "Visual inspection without venting",
+          "Thermography reveals hotspots and defects"
+        ]
+      },
+      {
+        "slug": "optical-viewports",
+        "category": "observation",
+        "name": "Viewing Windows & Optical Connections",
+        "purpose": "Visual inspection, optical measurements",
+        "description": "Additional viewports and optical feedthroughs enable visual inspection and optical measurements. Advanced diagnostics — without opening the chamber.",
+        "benefits": [
+          "Advanced diagnostics without opening the chamber"
+        ]
+      },
+      {
+        "slug": "interior-camera",
+        "category": "observation",
+        "name": "Interior Camera",
+        "purpose": "Video monitoring of the test specimen",
+        "description": "A vacuum-compatible camera provides continuous video monitoring of the test specimen. This increases operational reliability and documentation quality.",
+        "benefits": [
+          "Increased operational reliability"
+        ]
+      },
+      {
+        "slug": "remote-monitoring",
+        "category": "observation",
+        "name": "Remote Monitoring & Advanced Data Logging",
+        "purpose": "Network transfer and data export",
+        "description": "Network-based remote access and extended data logging with export functions. Full traceability and simplified evaluation of your test data.",
+        "benefits": [
+          "Full traceability",
+          "Simplified evaluation"
+        ]
+      },
+      {
+        "slug": "process-connections",
+        "category": "integration",
+        "name": "Additional Process Connections",
+        "purpose": "Vacuum feedthroughs for power, signals and sensors",
+        "description": "Additional vacuum feedthroughs for power, signals and sensors simplify the integration of your test setup. Configured to your harness and interface requirements.",
+        "benefits": [
+          "Simplified integration"
+        ]
+      },
+      {
+        "slug": "vibration-isolation",
+        "category": "integration",
+        "name": "Vibration Isolation",
+        "purpose": "Mechanical decoupling of the pumps",
+        "description": "Mechanical decoupling of the pumping system reduces vibration transfer to the chamber. Sensitive specimens remain undisturbed during the test.",
+        "benefits": [
+          "Reduced vibrations at the test specimen"
+        ]
+      },
+      {
+        "slug": "water-cooling",
+        "category": "integration",
+        "name": "Water Cooling",
+        "purpose": "Heat dissipation via water cooling",
+        "description": "Heat dissipation via water cooling instead of air cooling. This reduces heat emission into the lab and lowers the noise level.",
+        "benefits": [
+          "Reduced heat emission",
+          "Lower noise level"
+        ]
       }
     ],
+    "crossSell": {
+      "standard": {
+        "title": "Standard Series with options",
+        "description": "The fastest and most economical route: a Standard Series chamber configured with the right options from this list."
+      },
+      "custom": {
+        "title": "When standard is not enough: Custom TVAC",
+        "description": "For volumes, temperatures or interfaces outside the standard scope, we engineer the chamber application-specifically."
+      }
+    },
     "cta": {
       "title": "Which options fit your test campaign?",
-      "description": "Send us your test article envelope and we come back with a configuration proposal — Standard Series with the right options, or a Custom TVAC where the standard scope is not enough."
+      "description": "Tell us about your test article and requirements — we respond with a concrete configuration proposal: a Standard Series chamber with the right options, or a Custom TVAC where the standard scope is not enough."
     }
   }
 }
-

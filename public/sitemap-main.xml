@@ -20,7 +20,7 @@
   </url>
   <url>
     <loc>https://deepvac.space/products</loc>
-    <lastmod>2026-07-18T21:49:27+00:00</lastmod>
+    <lastmod>2026-07-18T22:34:47+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/products"/>
@@ -29,7 +29,7 @@
   </url>
   <url>
     <loc>https://deepvac.space/de/produkte</loc>
-    <lastmod>2026-07-18T21:49:27+00:00</lastmod>
+    <lastmod>2026-07-18T22:34:47+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/products"/>
@@ -38,7 +38,7 @@
   </url>
   <url>
     <loc>https://deepvac.space/products/standard-series</loc>
-    <lastmod>2026-07-18T21:49:27+00:00</lastmod>
+    <lastmod>2026-07-18T22:35:40+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/products/standard-series"/>
@@ -47,7 +47,7 @@
   </url>
   <url>
     <loc>https://deepvac.space/de/produkte/standard-serie</loc>
-    <lastmod>2026-07-18T21:49:27+00:00</lastmod>
+    <lastmod>2026-07-18T22:35:40+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/products/standard-series"/>
@@ -56,7 +56,7 @@
   </url>
   <url>
     <loc>https://deepvac.space/products/custom-tvac</loc>
-    <lastmod>2026-07-18T21:49:27+00:00</lastmod>
+    <lastmod>2026-07-18T22:35:47+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/products/custom-tvac"/>
@@ -65,7 +65,7 @@
   </url>
   <url>
     <loc>https://deepvac.space/de/produkte/custom-tvac</loc>
-    <lastmod>2026-07-18T21:49:27+00:00</lastmod>
+    <lastmod>2026-07-18T22:35:47+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/products/custom-tvac"/>
@@ -73,8 +73,26 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/products/custom-tvac"/>
   </url>
   <url>
+    <loc>https://deepvac.space/products/options</loc>
+    <lastmod>2026-07-18T22:35:33+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/products/options"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/produkte/optionen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/products/options"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/de/produkte/optionen</loc>
+    <lastmod>2026-07-18T22:35:33+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/products/options"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/produkte/optionen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/products/options"/>
+  </url>
+  <url>
     <loc>https://deepvac.space/products/thermal-vision</loc>
-    <lastmod>2026-07-18T21:49:27+00:00</lastmod>
+    <lastmod>2026-07-18T22:34:47+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/products/thermal-vision"/>
@@ -83,7 +101,7 @@
   </url>
   <url>
     <loc>https://deepvac.space/de/produkte/thermal-vision</loc>
-    <lastmod>2026-07-18T21:49:27+00:00</lastmod>
+    <lastmod>2026-07-18T22:34:47+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/products/thermal-vision"/>
