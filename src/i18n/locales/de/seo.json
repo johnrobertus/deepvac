@@ -1,43 +1,43 @@
 {
   "home": {
-    "title": "Deepvac | Thermovakuumsysteme für die Raumfahrtqualifikation",
-    "description": "Deepvac entwickelt modulare und kundenspezifische Thermovakuumsysteme für Raumfahrtqualifikation, thermische Zyklierung und Weltraumumgebungssimulation. Entwickelt in Deutschland."
+    "title": "Deepvac | Thermalvakuumsysteme für die Raumfahrtqualifikation",
+    "description": "Deepvac entwickelt modulare und kundenspezifische Thermalvakuumsysteme für Raumfahrtqualifikation, thermische Zyklierung und Weltraumumgebungssimulation. Entwickelt in Deutschland."
   },
   "products": {
-    "title": "Thermovakuumkammer-Systeme | Deepvac",
-    "description": "Standardisierte und kundenspezifisch konstruierte Thermovakuumsysteme für Raumfahrtqualifikation, Umweltsimulation und Forschungsanwendungen."
+    "title": "Thermalvakuumkammer-Systeme | Deepvac",
+    "description": "Standardisierte und kundenspezifisch konstruierte Thermalvakuumsysteme für Raumfahrtqualifikation, Umweltsimulation und Forschungsanwendungen."
   },
   "standardSeries": {
     "title": "Standard-Serie TVAC-Plattformen | Deepvac",
-    "description": "Vorkonstruierte Thermovakuumkammer-Plattformen mit modularen Konfigurationen für Raumfahrtqualifikation, Umweltsimulation und Forschungsprüfung."
+    "description": "Vorkonstruierte Thermalvakuumkammer-Plattformen mit modularen Konfigurationen für Raumfahrtqualifikation, Umweltsimulation und Forschungsprüfung."
   },
   "customTvac": {
-    "title": "Kundenspezifische Thermovakuumsysteme | Deepvac",
-    "description": "Anwendungsspezifisches Thermovakuum-Engineering – kundenspezifische Kammersysteme vom Konzept bis zur Inbetriebnahme für anspruchsvolle Testanforderungen."
+    "title": "Kundenspezifische Thermalvakuumsysteme | Deepvac",
+    "description": "Anwendungsspezifisches Thermalvakuum-Engineering – kundenspezifische Kammersysteme vom Konzept bis zur Inbetriebnahme für anspruchsvolle Testanforderungen."
   },
   "services": {
     "title": "TVAC-Engineering-Leistungen | Deepvac",
-    "description": "Durchgängige Engineering-Leistungen für Thermovakuumsysteme – von Steuerungstechnik und Testing bis zu Retrofit, Wartung und Subsystem-Integration."
+    "description": "Durchgängige Engineering-Leistungen für Thermalvakuumsysteme – von Steuerungstechnik und Testing bis zu Retrofit, Wartung und Subsystem-Integration."
   },
   "testingServices": {
-    "title": "Thermovakuum-Prüfdienstleistungen | Deepvac",
-    "description": "Durchführung von Thermovakuum-Testkampagnen mit Engineering-Präzision für Qualifikations-, Validierungs- und Entwicklungsprogramme."
+    "title": "Thermalvakuum-Prüfdienstleistungen | Deepvac",
+    "description": "Durchführung von Thermalvakuum-Testkampagnen mit Engineering-Präzision für Qualifikations-, Validierungs- und Entwicklungsprogramme."
   },
   "controlSystems": {
     "title": "Steuerungstechnik für TVAC | Deepvac",
-    "description": "Auslegung von Kammersteuerungsarchitekturen, Automatisierungslogik, Instrumentierungsintegration und zuverlässigen Betriebskonzepten für Thermovakuumumgebungen."
+    "description": "Auslegung von Kammersteuerungsarchitekturen, Automatisierungslogik, Instrumentierungsintegration und zuverlässigen Betriebskonzepten für Thermalvakuumumgebungen."
   },
   "mechanicalDesign": {
     "title": "Mechanische Konstruktion für TVAC-Systeme | Deepvac",
-    "description": "Engineering von Kammerbaugruppen, Schnittstellen, Vorrichtungen und mechanischen Integrationskonzepten für Thermovakuumsysteme."
+    "description": "Engineering von Kammerbaugruppen, Schnittstellen, Vorrichtungen und mechanischen Integrationskonzepten für Thermalvakuumsysteme."
   },
   "retrofitModernization": {
     "title": "TVAC Retrofit & Modernisierung | Deepvac",
-    "description": "Technische Upgrades für bestehende Thermovakuumsysteme zur Verbesserung von Zuverlässigkeit, Sicherheit, Regelgenauigkeit und Lebensdauerwert."
+    "description": "Technische Upgrades für bestehende Thermalvakuumsysteme zur Verbesserung von Zuverlässigkeit, Sicherheit, Regelgenauigkeit und Lebensdauerwert."
   },
   "maintenanceRepair": {
     "title": "TVAC Wartung & Reparatur | Deepvac",
-    "description": "Diagnostik, vorbeugende Wartung, Reparatur und technischer Support für Thermovakuumkammersysteme."
+    "description": "Diagnostik, vorbeugende Wartung, Reparatur und technischer Support für Thermalvakuumkammersysteme."
   },
   "subsystemIntegration": {
     "title": "Subsystem-Integration für TVAC | Deepvac",
@@ -45,27 +45,27 @@
   },
   "team": {
     "title": "Unser Team | Deepvac",
-    "description": "Lernen Sie das Engineering-Team hinter Deepvac kennen – Spezialisten für Thermovakuumsystem-Auslegung, Steuerungsarchitektur und Kammerentwicklung."
+    "description": "Lernen Sie das Engineering-Team hinter Deepvac kennen – Spezialisten für Thermalvakuumsystem-Auslegung, Steuerungsarchitektur und Kammerentwicklung."
   },
   "catalogs": {
     "title": "Kataloge & Ressourcen | Deepvac",
-    "description": "Produktbroschüren, technische Übersichten und Engineering-Dokumentation für Deepvac Thermovakuumsysteme zum Download."
+    "description": "Produktbroschüren, technische Übersichten und Engineering-Dokumentation für Deepvac Thermalvakuumsysteme zum Download."
   },
   "resources": {
     "title": "Ressourcen | Deepvac",
-    "description": "Technische Dokumentation, Produktkataloge und Engineering-Wissen für Thermovakuumsysteme."
+    "description": "Technische Dokumentation, Produktkataloge und Engineering-Wissen für Thermalvakuumsysteme."
   },
   "careers": {
     "title": "Karriere bei Deepvac | Engineering-Stellen",
-    "description": "Werden Sie Teil von Deepvac und bauen Sie Thermovakuumsysteme für die Raumfahrtqualifikation. Engineering-Positionen in Garbsen, Deutschland."
+    "description": "Werden Sie Teil von Deepvac und bauen Sie Thermalvakuumsysteme für die Raumfahrtqualifikation. Engineering-Positionen in Garbsen, Deutschland."
   },
   "references": {
     "title": "Referenzen & Projekterfahrung | Deepvac",
-    "description": "Projektkategorien, Anwendungsbereiche und Kooperationsformate, die den Thermovakuum-Engineering-Umfang von Deepvac demonstrieren."
+    "description": "Projektkategorien, Anwendungsbereiche und Kooperationsformate, die den Thermalvakuum-Engineering-Umfang von Deepvac demonstrieren."
   },
   "contact": {
     "title": "Deepvac kontaktieren | Engineering-Anfrage",
-    "description": "Besprechen Sie Ihre Thermovakuum-Anforderungen mit unserem Engineering-Team. Angebot, technische Beratung oder Projektevaluierung anfragen."
+    "description": "Besprechen Sie Ihre Thermalvakuum-Anforderungen mit unserem Engineering-Team. Angebot, technische Beratung oder Projektevaluierung anfragen."
   },
   "imprint": {
     "title": "Impressum | Deepvac GmbH",
@@ -89,34 +89,34 @@
   },
   "thermalVision": {
     "title": "Deepvac Thermal Vision – Thermalkamera für TVAC | Deepvac",
-    "description": "Kalibrierte Infrarot-Bildgebung unter Hochvakuum-Bedingungen. Thermalkamera-Integration für neue und bestehende Thermovakuumsysteme."
+    "description": "Kalibrierte Infrarot-Bildgebung unter Hochvakuum-Bedingungen. Thermalkamera-Integration für neue und bestehende Thermalvakuumsysteme."
   },
   "questionnaire": {
     "title": "Technischer TVAC-Fragebogen | Deepvac",
-    "description": "Übermitteln Sie detaillierte technische Anforderungen für ein kundenspezifisches Thermovakuum- oder Weltraumsimulationssystem. Unbekannte Angaben können leer bleiben."
+    "description": "Übermitteln Sie detaillierte technische Anforderungen für ein kundenspezifisches Thermalvakuum- oder Weltraumsimulationssystem. Unbekannte Angaben können leer bleiben."
   },
   "blog": {
     "title": "Engineering-Blog | Deepvac",
-    "description": "Technische Beiträge zu Thermovakuumsystemen, Weltraumsimulation, Qualifikationsprüfung, Retrofit-Entscheidungen und TVAC-Engineering-Praxis."
+    "description": "Technische Beiträge zu Thermalvakuumsystemen, Weltraumsimulation, Qualifikationsprüfung, Retrofit-Entscheidungen und TVAC-Engineering-Praxis."
   },
   "blogCoolingSystems": {
     "title": "TVAC-Kühlsysteme: Mechanisch vs. LN2 | Deepvac",
-    "description": "Engineering-Überblick zu Thermovakuum-Kühlarchitekturen – mechanische Kühlung, LN2-Kreisläufe und Hybridansätze mit ihren technischen Abwägungen."
+    "description": "Engineering-Überblick zu Thermalvakuum-Kühlarchitekturen – mechanische Kühlung, LN2-Kreisläufe und Hybridansätze mit ihren technischen Abwägungen."
   },
   "blogRetrofitVsReplacement": {
     "title": "TVAC-Retrofit oder Neubeschaffung? Leitfaden | Deepvac",
-    "description": "Strukturierter Entscheidungsrahmen zur Bewertung von Thermovakuumkammer-Retrofit vs. Neubeschaffung – technischer Zustand, Kosten, Betriebspassung."
+    "description": "Strukturierter Entscheidungsrahmen zur Bewertung von Thermalvakuumkammer-Retrofit vs. Neubeschaffung – technischer Zustand, Kosten, Betriebspassung."
   },
   "blogAerospaceQualification": {
     "title": "Raumfahrtqualifikation im TVAC | Deepvac",
-    "description": "Umweltprüfanforderungen für die Raumfahrt-Hardware-Qualifikation in Thermovakuumkammern – Normen, Temperaturzyklierung und Kammerleistung."
+    "description": "Umweltprüfanforderungen für die Raumfahrt-Hardware-Qualifikation in Thermalvakuumkammern – Normen, Temperaturzyklierung und Kammerleistung."
   },
   "blogTvacCostDrivers": {
-    "title": "Thermovakuumkammer: 7 Kostentreiber im Überblick | Deepvac",
-    "description": "Was kostet eine Thermovakuumkammer? Praxisleitfaden zu den sieben Kostentreibern: Volumen, Thermalkonzept, Vakuum, Schnittstellen, Steuerung, Services."
+    "title": "Thermalvakuumkammer: 7 Kostentreiber im Überblick | Deepvac",
+    "description": "Was kostet eine Thermalvakuumkammer? Praxisleitfaden zu den sieben Kostentreibern: Volumen, Thermalkonzept, Vakuum, Schnittstellen, Steuerung, Services."
   },
   "blogTvacTestCampaign": {
     "title": "TVAC-Testkampagne: Ablauf in sechs Phasen | Deepvac",
-    "description": "Vom Testplan über Abpumpen, Thermalzyklen und Monitoring bis zum finalen Datenpaket – wie eine Thermovakuum-Testkampagne strukturiert ist."
+    "description": "Vom Testplan über Abpumpen, Thermalzyklen und Monitoring bis zum finalen Datenpaket – wie eine Thermalvakuum-Testkampagne strukturiert ist."
   }
 }

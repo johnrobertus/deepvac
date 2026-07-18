@@ -2,12 +2,12 @@
   "blog": {
     "eyebrow": "Engineering-Wissen",
     "title": "Blog",
-    "description": "Technische Orientierung, Entscheidungshilfen und Engineering-Betrachtungen für Thermovakuumsysteme.",
+    "description": "Technische Orientierung, Entscheidungshilfen und Engineering-Betrachtungen für Thermalvakuumsysteme.",
     "readArticle": "Artikel lesen",
     "backToBlog": "Zurück zum Blog",
     "seo": {
       "title": "Engineering Blog | Deepvac",
-      "description": "Technische Artikel zu Thermovakuumsystemen — Kühlarchitekturen, Retrofit-Entscheidungen, Anforderungen an die Raumfahrtqualifikation und Engineering Best Practices."
+      "description": "Technische Artikel zu Thermalvakuumsystemen — Kühlarchitekturen, Retrofit-Entscheidungen, Anforderungen an die Raumfahrtqualifikation und Engineering Best Practices."
     },
     "categories": {
       "engineeringGuide": "Engineering-Leitfaden",
@@ -20,11 +20,11 @@
     },
     "articles": {
       "coolingSystems": {
-        "title": "Kühlsysteme für Thermovakuumkammern",
+        "title": "Kühlsysteme für Thermalvakuumkammern",
         "description": "Ein Überblick über Kühlarchitekturen in TVAC-Systemen — von mechanischer Kühlung über Flüssigstickstoff-Kreisläufe bis hin zu Hybridansätzen — und die Abwägungen, die bestimmen, welcher Ansatz zu Ihren Testanforderungen passt.",
-        "seoTitle": "Kühlsysteme für Thermovakuumkammern | Deepvac",
+        "seoTitle": "Kühlsysteme für Thermalvakuumkammern | Deepvac",
         "seoDescription": "Engineering-Überblick über TVAC-Kühlarchitekturen — mechanische Kühlung, LN₂-Kreisläufe und Hybridansätze. Abwägungen für Ihre Testanforderungen verstehen.",
-        "intro": "Thermovakuumkammern erfordern kontrollierte Kühlung, um die kalten Bedingungen des Weltraums zu simulieren. Die Wahl des Kühlsystems beeinflusst unmittelbar den erreichbaren Temperaturbereich, die Abkühlrate, die Temperaturgleichmäßigkeit, die Betriebskosten und die Systemkomplexität. Es gibt keinen universell überlegenen Ansatz — die richtige Lösung hängt von Testanforderungen, Anlagenbedingungen und Lebenszyklus-Betrachtungen ab.",
+        "intro": "Thermalvakuumkammern erfordern kontrollierte Kühlung, um die kalten Bedingungen des Weltraums zu simulieren. Die Wahl des Kühlsystems beeinflusst unmittelbar den erreichbaren Temperaturbereich, die Abkühlrate, die Temperaturgleichmäßigkeit, die Betriebskosten und die Systemkomplexität. Es gibt keinen universell überlegenen Ansatz — die richtige Lösung hängt von Testanforderungen, Anlagenbedingungen und Lebenszyklus-Betrachtungen ab.",
         "sections": {
           "mechanical": {
             "title": "Mechanische Kühlung",
@@ -85,10 +85,10 @@
       },
       "retrofitVsReplacement": {
         "title": "Wann Retrofit sinnvoller ist als Neubeschaffung",
-        "description": "Ein strukturierter Bewertungsrahmen für die Entscheidung, ob ein bestehendes Thermovakuumsystem modernisiert oder durch ein neues ersetzt werden soll — basierend auf technischem Zustand, Betriebsanforderungen und Lebenszykluskosten.",
+        "description": "Ein strukturierter Bewertungsrahmen für die Entscheidung, ob ein bestehendes Thermalvakuumsystem modernisiert oder durch ein neues ersetzt werden soll — basierend auf technischem Zustand, Betriebsanforderungen und Lebenszykluskosten.",
         "seoTitle": "TVAC Retrofit vs. Neubeschaffung — Entscheidungsrahmen | Deepvac",
         "seoDescription": "Strukturierter Entscheidungsrahmen zur Bewertung von TVAC-Retrofit vs. Neubeschaffung — technischer Zustand, Lebenszykluskosten und Betriebsanforderungen.",
-        "intro": "Thermovakuumsysteme sind langlebige Investitionsgüter. Wenn die Leistung nachlässt, Steuerungen veralten oder sich Testanforderungen ändern, stellt sich die Frage: das bestehende System retrofittieren oder vollständig ersetzen. Beide Wege haben ihre Berechtigung. Die Entscheidung sollte auf einer technischen Bewertung basieren, nicht auf Annahmen.",
+        "intro": "Thermalvakuumsysteme sind langlebige Investitionsgüter. Wenn die Leistung nachlässt, Steuerungen veralten oder sich Testanforderungen ändern, stellt sich die Frage: das bestehende System retrofittieren oder vollständig ersetzen. Beide Wege haben ihre Berechtigung. Die Entscheidung sollte auf einer technischen Bewertung basieren, nicht auf Annahmen.",
         "sections": {
           "retrofitFavored": {
             "title": "Wann Retrofit typischerweise bevorzugt wird",
@@ -137,14 +137,14 @@
       },
       "aerospaceQualification": {
         "title": "Kernanforderungen für die Raumfahrtqualifikationsprüfung",
-        "description": "Ein Überblick über die Umweltprüfanforderungen, die Thermovakuumsysteme für die Qualifikation von Raumfahrt-Hardware erfüllen müssen — von Normenkonformität bis zur Kammerleistungsfähigkeit.",
+        "description": "Ein Überblick über die Umweltprüfanforderungen, die Thermalvakuumsysteme für die Qualifikation von Raumfahrt-Hardware erfüllen müssen — von Normenkonformität bis zur Kammerleistungsfähigkeit.",
         "seoTitle": "Anforderungen an die Raumfahrtqualifikationsprüfung für TVAC | Deepvac",
-        "seoDescription": "Überblick über Umweltprüfanforderungen für die Raumfahrt-Hardware-Qualifikation in Thermovakuumkammern — Normen, Temperaturzyklierung und Kammerleistung.",
-        "intro": "Die Raumfahrtqualifikationsprüfung verifiziert, dass Hardware die Weltraumumgebung übersteht und dort funktioniert. Thermovakuumtests sind ein Kernelement dieser Qualifikation und simulieren die kombinierten Effekte von Vakuum und extremer Temperaturzyklierung. Das Prüfsystem muss spezifische Anforderungen erfüllen, um valide Qualifikationsdaten zu liefern.",
+        "seoDescription": "Überblick über Umweltprüfanforderungen für die Raumfahrt-Hardware-Qualifikation in Thermalvakuumkammern — Normen, Temperaturzyklierung und Kammerleistung.",
+        "intro": "Die Raumfahrtqualifikationsprüfung verifiziert, dass Hardware die Weltraumumgebung übersteht und dort funktioniert. Thermalvakuumtests sind ein Kernelement dieser Qualifikation und simulieren die kombinierten Effekte von Vakuum und extremer Temperaturzyklierung. Das Prüfsystem muss spezifische Anforderungen erfüllen, um valide Qualifikationsdaten zu liefern.",
         "sections": {
           "standards": {
             "title": "Anwendbare Normen und Tailoring",
-            "content": "Thermovakuumtests in der Raumfahrt werden typischerweise durch Normen wie ECSS-E-ST-10-03C (europäisch) oder MIL-STD-1540 / SMC-S-016 (US) geregelt. Diese definieren Testlevel, Dauern und Akzeptanzkriterien.",
+            "content": "Thermalvakuumtests in der Raumfahrt werden typischerweise durch Normen wie ECSS-E-ST-10-03C (europäisch) oder MIL-STD-1540 / SMC-S-016 (US) geregelt. Diese definieren Testlevel, Dauern und Akzeptanzkriterien.",
             "points": [
               "Normen definieren Basisanforderungen — spezifische Programme passen Testbedingungen oft an",
               "Qualifikationslevel sind strenger als Akzeptanzlevel (breiterer Temperaturbereich, mehr Zyklen, längere Haltezeiten)",
@@ -192,18 +192,18 @@
               "Durchführungskapazität für Leistungs-, Signal- und Fluidleitungen zum Prüfling",
               "Mechanische Schnittstelle für Prüflingsmontage — Tragfähigkeit, Orientierung und Zugänglichkeit",
               "Thermische Schroud- oder Platen-Abdeckung geeignet für gleichmäßigen Wärmeaustausch",
-              "Optische Ports oder Zugangsklappen falls für Funktionsprüfung während Thermovakuum-Exposition erforderlich"
+              "Optische Ports oder Zugangsklappen falls für Funktionsprüfung während Thermalvakuum-Exposition erforderlich"
             ]
           }
         },
-        "conclusion": "Die Raumfahrtqualifikationsprüfung erfordert ein gut charakterisiertes, ordnungsgemäß instrumentiertes Thermovakuumsystem. Kammerauswahl und Testplanung sollten früh im Programm beginnen, um sicherzustellen, dass die Anlage valide Qualifikationsdaten innerhalb der Termin- und Budgetvorgaben liefern kann."
+        "conclusion": "Die Raumfahrtqualifikationsprüfung erfordert ein gut charakterisiertes, ordnungsgemäß instrumentiertes Thermalvakuumsystem. Kammerauswahl und Testplanung sollten früh im Programm beginnen, um sicherzustellen, dass die Anlage valide Qualifikationsdaten innerhalb der Termin- und Budgetvorgaben liefern kann."
       },
       "tvacCostDrivers": {
-        "title": "Was kostet eine Thermovakuumkammer? Die sieben Kostentreiber",
+        "title": "Was kostet eine Thermalvakuumkammer? Die sieben Kostentreiber",
         "description": "Sieben Engineering-Entscheidungen bestimmen den Großteil des Preises eines TVAC-Systems. Wer sie kennt, spezifiziert, was die Testkampagne wirklich braucht.",
-        "seoTitle": "Thermovakuumkammer: Kosten & die sieben Preistreiber | Deepvac",
-        "seoDescription": "Was kostet eine Thermovakuumkammer? Volumen, Thermalkonzept, Vakuumniveau, Schnittstellen, Steuerung, Dokumentation und Services – ein praxisnaher Leitfaden zu den sieben Kostentreibern.",
-        "intro": "Für Thermovakuumkammern gibt es keinen Listenpreis – und wer einen nennt, ohne Fragen zu stellen, rät. Je nach Anforderungen können zwei Systeme mit gleichem Nennvolumen um ein Mehrfaches im Preis auseinanderliegen. Die gute Nachricht: Der Großteil dieser Spanne geht auf sieben Engineering-Entscheidungen zurück – und jede davon liegt in Ihrer Hand. Wer diese Treiber kennt, spezifiziert, was die Testkampagne tatsächlich braucht, und bezahlt nicht für Fähigkeiten, die sie nicht benötigt.",
+        "seoTitle": "Thermalvakuumkammer: Kosten & die sieben Preistreiber | Deepvac",
+        "seoDescription": "Was kostet eine Thermalvakuumkammer? Volumen, Thermalkonzept, Vakuumniveau, Schnittstellen, Steuerung, Dokumentation und Services – ein praxisnaher Leitfaden zu den sieben Kostentreibern.",
+        "intro": "Für Thermalvakuumkammern gibt es keinen Listenpreis – und wer einen nennt, ohne Fragen zu stellen, rät. Je nach Anforderungen können zwei Systeme mit gleichem Nennvolumen um ein Mehrfaches im Preis auseinanderliegen. Die gute Nachricht: Der Großteil dieser Spanne geht auf sieben Engineering-Entscheidungen zurück – und jede davon liegt in Ihrer Hand. Wer diese Treiber kennt, spezifiziert, was die Testkampagne tatsächlich braucht, und bezahlt nicht für Fähigkeiten, die sie nicht benötigt.",
         "sections": {
           "volume": {
             "title": "1. Kammervolumen und Geometrie",
@@ -277,14 +277,14 @@
             ]
           }
         },
-        "conclusion": "Die ehrliche Antwort auf 'Was kostet eine Thermovakuumkammer?' lautet: Es hängt von sieben Entscheidungen ab, die Sie steuern. Der schnellste Weg zu einer belastbaren Budgetzahl ist eine strukturierte Anforderungsdefinition – unser technischer TVAC-Fragebogen führt genau durch diese Parameter und gibt unserem Engineering-Team, was es für ein fundiertes Budgetangebot braucht."
+        "conclusion": "Die ehrliche Antwort auf 'Was kostet eine Thermalvakuumkammer?' lautet: Es hängt von sieben Entscheidungen ab, die Sie steuern. Der schnellste Weg zu einer belastbaren Budgetzahl ist eine strukturierte Anforderungsdefinition – unser technischer TVAC-Fragebogen führt genau durch diese Parameter und gibt unserem Engineering-Team, was es für ein fundiertes Budgetangebot braucht."
       },
       "tvacTestCampaign": {
         "title": "So läuft eine TVAC-Testkampagne ab: vom Testplan zum Datenpaket",
         "description": "Was zwischen 'wir brauchen einen TVAC-Test' und dem abgenommenen Datenpaket wirklich passiert – die sechs Phasen einer Kampagne und was Sie als Kunde vorbereiten sollten.",
         "seoTitle": "TVAC-Testkampagne: Ablauf in sechs Phasen | Deepvac",
-        "seoDescription": "Von Anforderungen und Testplan über Abpumpen, Thermalzyklen und Monitoring bis zum finalen Datenpaket – wie eine Thermovakuum-Testkampagne strukturiert ist und was Kunden vorbereiten sollten.",
-        "intro": "Für Teams, die Hardware zum ersten Mal im Thermovakuum testen, ist die Kampagne oft eine Blackbox: Hardware rein, Wochen vergehen, ein Bericht kommt raus. Tatsächlich folgt eine gut geführte TVAC-Kampagne einer klaren Struktur – und die meisten Verzögerungen und Überraschungen gehen auf Schritte zurück, die am Anfang übersprungen oder gestaucht wurden. So sieht der Ablauf Phase für Phase aus – und das können Sie auf Ihrer Seite vorbereiten, damit der Zeitplan hält.",
+        "seoDescription": "Von Anforderungen und Testplan über Abpumpen, Thermalzyklen und Monitoring bis zum finalen Datenpaket – wie eine Thermalvakuum-Testkampagne strukturiert ist und was Kunden vorbereiten sollten.",
+        "intro": "Für Teams, die Hardware zum ersten Mal im Thermalvakuum testen, ist die Kampagne oft eine Blackbox: Hardware rein, Wochen vergehen, ein Bericht kommt raus. Tatsächlich folgt eine gut geführte TVAC-Kampagne einer klaren Struktur – und die meisten Verzögerungen und Überraschungen gehen auf Schritte zurück, die am Anfang übersprungen oder gestaucht wurden. So sieht der Ablauf Phase für Phase aus – und das können Sie auf Ihrer Seite vorbereiten, damit der Zeitplan hält.",
         "sections": {
           "requirements": {
             "title": "1. Anforderungen und Testplan",
