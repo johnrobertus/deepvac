@@ -589,7 +589,7 @@
     "catalog": {
       "eyebrow": "Katalog",
       "title": "Alle Optionen im Überblick",
-      "hint": "Option auswählen, um zu den Details zu springen."
+      "hint": "Option auswählen, um die Detailseite zu öffnen."
     },
     "details": {
       "eyebrow": "Im Detail",
@@ -598,6 +598,7 @@
     "purposeLabel": "Zweck",
     "benefitsLabel": "Nutzen",
     "backToOverview": "Zurück zur Übersicht",
+    "detailSeoTitle": "{{name}} | Deepvac",
     "categories": {
       "thermal": "Thermische Leistung",
       "vacuum": "Vakuum & Reinheit",

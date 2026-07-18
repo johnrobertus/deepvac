@@ -41,6 +41,28 @@ export function loadSeo(lang) {
   return JSON.parse(fs.readFileSync(p, "utf8"));
 }
 
+const optionItemsByLang = new Map();
+
+function loadOptionItems(lang) {
+  if (optionItemsByLang.has(lang)) return optionItemsByLang.get(lang);
+
+  const p = path.join(ROOT, "src/i18n/locales", lang, "products.json");
+  const products = JSON.parse(fs.readFileSync(p, "utf8"));
+  const items = products.options?.items ?? [];
+  optionItemsByLang.set(lang, items);
+  return items;
+}
+
+function optionSeo(slug, lang) {
+  const item = loadOptionItems(lang).find((candidate) => candidate.slug === slug);
+  if (!item) return null;
+
+  return {
+    title: `${item.name} | Deepvac`,
+    description: item.description.replace("{{link}}", item.linkLabel ?? ""),
+  };
+}
+
 export function pickSeo(seo, key) {
   if (seo[key] && seo[key].title && seo[key].description) return seo[key];
   return seo.home;
@@ -51,7 +73,8 @@ export function pickSeo(seo, key) {
  * prerender pass can produce identical output as this static writer.
  */
 export function computeMeta(route, lang, seoEn, seoDe) {
-  const seo = lang === "de" ? pickSeo(seoDe, route.seoKey) : pickSeo(seoEn, route.seoKey);
+  const baseSeo = lang === "de" ? pickSeo(seoDe, route.seoKey) : pickSeo(seoEn, route.seoKey);
+  const seo = route.optionSlug ? optionSeo(route.optionSlug, lang) ?? baseSeo : baseSeo;
   const enUrl = BASE + route.en;
   const deUrl = BASE + route.de;
   const canonical = lang === "de" ? deUrl : enUrl;

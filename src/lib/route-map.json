@@ -76,6 +76,329 @@
     }
   },
   {
+    "en": "/products/options/solar-simulator",
+    "de": "/de/produkte/optionen/solarsimulator",
+    "seoKey": "options",
+    "optionSlug": "solar-simulator",
+    "sitemap": {
+      "group": "main",
+      "priority": 0.7,
+      "changefreq": "monthly",
+      "sources": [
+        "src/pages/OptionDetail.tsx",
+        "src/lib/optionCatalog.ts",
+        "src/i18n/locales/en/products.json",
+        "src/i18n/locales/de/products.json"
+      ]
+    }
+  },
+  {
+    "en": "/products/options/infrared-heaters",
+    "de": "/de/produkte/optionen/infrarotstrahler",
+    "seoKey": "options",
+    "optionSlug": "infrared-heaters",
+    "sitemap": {
+      "group": "main",
+      "priority": 0.7,
+      "changefreq": "monthly",
+      "sources": [
+        "src/pages/OptionDetail.tsx",
+        "src/lib/optionCatalog.ts",
+        "src/i18n/locales/en/products.json",
+        "src/i18n/locales/de/products.json"
+      ]
+    }
+  },
+  {
+    "en": "/products/options/temperature-control-zones",
+    "de": "/de/produkte/optionen/temperaturregelzonen",
+    "seoKey": "options",
+    "optionSlug": "temperature-control-zones",
+    "sitemap": {
+      "group": "main",
+      "priority": 0.7,
+      "changefreq": "monthly",
+      "sources": [
+        "src/pages/OptionDetail.tsx",
+        "src/lib/optionCatalog.ts",
+        "src/i18n/locales/en/products.json",
+        "src/i18n/locales/de/products.json"
+      ]
+    }
+  },
+  {
+    "en": "/products/options/temperature-sensors",
+    "de": "/de/produkte/optionen/temperatursensoren",
+    "seoKey": "options",
+    "optionSlug": "temperature-sensors",
+    "sitemap": {
+      "group": "main",
+      "priority": 0.7,
+      "changefreq": "monthly",
+      "sources": [
+        "src/pages/OptionDetail.tsx",
+        "src/lib/optionCatalog.ts",
+        "src/i18n/locales/en/products.json",
+        "src/i18n/locales/de/products.json"
+      ]
+    }
+  },
+  {
+    "en": "/products/options/bake-out",
+    "de": "/de/produkte/optionen/beheizte-kammerwaende",
+    "seoKey": "options",
+    "optionSlug": "bake-out",
+    "sitemap": {
+      "group": "main",
+      "priority": 0.7,
+      "changefreq": "monthly",
+      "sources": [
+        "src/pages/OptionDetail.tsx",
+        "src/lib/optionCatalog.ts",
+        "src/i18n/locales/en/products.json",
+        "src/i18n/locales/de/products.json"
+      ]
+    }
+  },
+  {
+    "en": "/products/options/cryogenic-traps",
+    "de": "/de/produkte/optionen/kryofallen",
+    "seoKey": "options",
+    "optionSlug": "cryogenic-traps",
+    "sitemap": {
+      "group": "main",
+      "priority": 0.7,
+      "changefreq": "monthly",
+      "sources": [
+        "src/pages/OptionDetail.tsx",
+        "src/lib/optionCatalog.ts",
+        "src/i18n/locales/en/products.json",
+        "src/i18n/locales/de/products.json"
+      ]
+    }
+  },
+  {
+    "en": "/products/options/roots-booster",
+    "de": "/de/produkte/optionen/roots-booster",
+    "seoKey": "options",
+    "optionSlug": "roots-booster",
+    "sitemap": {
+      "group": "main",
+      "priority": 0.7,
+      "changefreq": "monthly",
+      "sources": [
+        "src/pages/OptionDetail.tsx",
+        "src/lib/optionCatalog.ts",
+        "src/i18n/locales/en/products.json",
+        "src/i18n/locales/de/products.json"
+      ]
+    }
+  },
+  {
+    "en": "/products/options/oil-free-pumping",
+    "de": "/de/produkte/optionen/oelfreies-vakuumpumpsystem",
+    "seoKey": "options",
+    "optionSlug": "oil-free-pumping",
+    "sitemap": {
+      "group": "main",
+      "priority": 0.7,
+      "changefreq": "monthly",
+      "sources": [
+        "src/pages/OptionDetail.tsx",
+        "src/lib/optionCatalog.ts",
+        "src/i18n/locales/en/products.json",
+        "src/i18n/locales/de/products.json"
+      ]
+    }
+  },
+  {
+    "en": "/products/options/nitrogen-venting",
+    "de": "/de/produkte/optionen/stickstoff-belueftung-spuelung",
+    "seoKey": "options",
+    "optionSlug": "nitrogen-venting",
+    "sitemap": {
+      "group": "main",
+      "priority": 0.7,
+      "changefreq": "monthly",
+      "sources": [
+        "src/pages/OptionDetail.tsx",
+        "src/lib/optionCatalog.ts",
+        "src/i18n/locales/en/products.json",
+        "src/i18n/locales/de/products.json"
+      ]
+    }
+  },
+  {
+    "en": "/products/options/residual-gas-analysis",
+    "de": "/de/produkte/optionen/restgasanalyse",
+    "seoKey": "options",
+    "optionSlug": "residual-gas-analysis",
+    "sitemap": {
+      "group": "main",
+      "priority": 0.7,
+      "changefreq": "monthly",
+      "sources": [
+        "src/pages/OptionDetail.tsx",
+        "src/lib/optionCatalog.ts",
+        "src/i18n/locales/en/products.json",
+        "src/i18n/locales/de/products.json"
+      ]
+    }
+  },
+  {
+    "en": "/products/options/qcm-monitoring",
+    "de": "/de/produkte/optionen/qcm-ueberwachung",
+    "seoKey": "options",
+    "optionSlug": "qcm-monitoring",
+    "sitemap": {
+      "group": "main",
+      "priority": 0.7,
+      "changefreq": "monthly",
+      "sources": [
+        "src/pages/OptionDetail.tsx",
+        "src/lib/optionCatalog.ts",
+        "src/i18n/locales/en/products.json",
+        "src/i18n/locales/de/products.json"
+      ]
+    }
+  },
+  {
+    "en": "/products/options/helium-leak-test",
+    "de": "/de/produkte/optionen/helium-lecktest-vorbereitung",
+    "seoKey": "options",
+    "optionSlug": "helium-leak-test",
+    "sitemap": {
+      "group": "main",
+      "priority": 0.7,
+      "changefreq": "monthly",
+      "sources": [
+        "src/pages/OptionDetail.tsx",
+        "src/lib/optionCatalog.ts",
+        "src/i18n/locales/en/products.json",
+        "src/i18n/locales/de/products.json"
+      ]
+    }
+  },
+  {
+    "en": "/products/options/viewing-window-znse",
+    "de": "/de/produkte/optionen/znse-schauglas-thermografie",
+    "seoKey": "options",
+    "optionSlug": "viewing-window-znse",
+    "sitemap": {
+      "group": "main",
+      "priority": 0.7,
+      "changefreq": "monthly",
+      "sources": [
+        "src/pages/OptionDetail.tsx",
+        "src/lib/optionCatalog.ts",
+        "src/i18n/locales/en/products.json",
+        "src/i18n/locales/de/products.json"
+      ]
+    }
+  },
+  {
+    "en": "/products/options/optical-viewports",
+    "de": "/de/produkte/optionen/schauglaeser-optische-anschluesse",
+    "seoKey": "options",
+    "optionSlug": "optical-viewports",
+    "sitemap": {
+      "group": "main",
+      "priority": 0.7,
+      "changefreq": "monthly",
+      "sources": [
+        "src/pages/OptionDetail.tsx",
+        "src/lib/optionCatalog.ts",
+        "src/i18n/locales/en/products.json",
+        "src/i18n/locales/de/products.json"
+      ]
+    }
+  },
+  {
+    "en": "/products/options/interior-camera",
+    "de": "/de/produkte/optionen/innenraumkamera",
+    "seoKey": "options",
+    "optionSlug": "interior-camera",
+    "sitemap": {
+      "group": "main",
+      "priority": 0.7,
+      "changefreq": "monthly",
+      "sources": [
+        "src/pages/OptionDetail.tsx",
+        "src/lib/optionCatalog.ts",
+        "src/i18n/locales/en/products.json",
+        "src/i18n/locales/de/products.json"
+      ]
+    }
+  },
+  {
+    "en": "/products/options/remote-monitoring",
+    "de": "/de/produkte/optionen/fernueberwachung-datenaufzeichnung",
+    "seoKey": "options",
+    "optionSlug": "remote-monitoring",
+    "sitemap": {
+      "group": "main",
+      "priority": 0.7,
+      "changefreq": "monthly",
+      "sources": [
+        "src/pages/OptionDetail.tsx",
+        "src/lib/optionCatalog.ts",
+        "src/i18n/locales/en/products.json",
+        "src/i18n/locales/de/products.json"
+      ]
+    }
+  },
+  {
+    "en": "/products/options/process-connections",
+    "de": "/de/produkte/optionen/prozessanschluesse",
+    "seoKey": "options",
+    "optionSlug": "process-connections",
+    "sitemap": {
+      "group": "main",
+      "priority": 0.7,
+      "changefreq": "monthly",
+      "sources": [
+        "src/pages/OptionDetail.tsx",
+        "src/lib/optionCatalog.ts",
+        "src/i18n/locales/en/products.json",
+        "src/i18n/locales/de/products.json"
+      ]
+    }
+  },
+  {
+    "en": "/products/options/vibration-isolation",
+    "de": "/de/produkte/optionen/schwingungsentkopplung",
+    "seoKey": "options",
+    "optionSlug": "vibration-isolation",
+    "sitemap": {
+      "group": "main",
+      "priority": 0.7,
+      "changefreq": "monthly",
+      "sources": [
+        "src/pages/OptionDetail.tsx",
+        "src/lib/optionCatalog.ts",
+        "src/i18n/locales/en/products.json",
+        "src/i18n/locales/de/products.json"
+      ]
+    }
+  },
+  {
+    "en": "/products/options/water-cooling",
+    "de": "/de/produkte/optionen/wasserkuehlung",
+    "seoKey": "options",
+    "optionSlug": "water-cooling",
+    "sitemap": {
+      "group": "main",
+      "priority": 0.7,
+      "changefreq": "monthly",
+      "sources": [
+        "src/pages/OptionDetail.tsx",
+        "src/lib/optionCatalog.ts",
+        "src/i18n/locales/en/products.json",
+        "src/i18n/locales/de/products.json"
+      ]
+    }
+  },
+  {
     "en": "/products/thermal-vision",
     "de": "/de/produkte/thermal-vision",
     "seoKey": "thermalVision",
