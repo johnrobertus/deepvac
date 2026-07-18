@@ -174,6 +174,15 @@ const CustomTVAC = () => {
               </div>
             ))}
           </div>
+          <p className="mt-6 text-[13px] text-gray">
+            <Link
+              to={localizedPath("/products/options", lang)}
+              className="inline-flex items-center gap-1 text-blue hover:text-sand underline underline-offset-4 transition-colors"
+            >
+              {tc("buttons.browseOptions")}
+              <ArrowRight className="w-3 h-3" aria-hidden="true" />
+            </Link>
+          </p>
         </Section>
 
         <div className="section-divider" />

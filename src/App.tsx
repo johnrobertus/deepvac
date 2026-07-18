@@ -12,6 +12,7 @@ import { ScrollToTop } from "./components/ScrollToTop";
 const Products = lazy(() => import("./pages/Products"));
 const StandardSeries = lazy(() => import("./pages/StandardSeries"));
 const CustomTVAC = lazy(() => import("./pages/CustomTVAC"));
+const Options = lazy(() => import("./pages/Options"));
 const ThermalVision = lazy(() => import("./pages/ThermalVision"));
 const Services = lazy(() => import("./pages/Services"));
 const ControlSystemsDesign = lazy(() =>
@@ -69,6 +70,7 @@ const App = () => (
                 <Route path="/products" element={<Products />} />
                 <Route path="/products/standard-series" element={<StandardSeries />} />
                 <Route path="/products/custom-tvac" element={<CustomTVAC />} />
+                <Route path="/products/options" element={<Options />} />
                 <Route path="/products/thermal-vision" element={<ThermalVision />} />
                 <Route path="/services" element={<Services />} />
                 <Route path="/services/testing-services" element={<TestingServices />} />
@@ -102,6 +104,7 @@ const App = () => (
                 <Route path="/de/produkte" element={<Products />} />
                 <Route path="/de/produkte/standard-serie" element={<StandardSeries />} />
                 <Route path="/de/produkte/custom-tvac" element={<CustomTVAC />} />
+                <Route path="/de/produkte/optionen" element={<Options />} />
                 <Route path="/de/produkte/thermal-vision" element={<ThermalVision />} />
                 <Route path="/de/leistungen" element={<Services />} />
                 <Route path="/de/leistungen/pruefdienstleistungen" element={<TestingServices />} />

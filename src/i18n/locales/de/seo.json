@@ -15,6 +15,10 @@
     "title": "Kundenspezifische Thermalvakuumsysteme | Deepvac",
     "description": "Anwendungsspezifisches Thermalvakuum-Engineering – kundenspezifische Kammersysteme vom Konzept bis zur Inbetriebnahme für anspruchsvolle Testanforderungen."
   },
+  "options": {
+    "title": "Optionen für TVAC-Kammern | Deepvac",
+    "description": "Konfigurieren Sie Ihre Thermal-Vakuumkammer: Solarsimulation, Bake-out, ölfreies Pumpen, RGA, Thermografie-Schaugläser und mehr — alle Deepvac-Optionen im Überblick."
+  },
   "services": {
     "title": "TVAC-Engineering-Leistungen | Deepvac",
     "description": "Durchgängige Engineering-Leistungen für Thermalvakuumsysteme – von Steuerungstechnik und Testing bis zu Retrofit, Wartung und Subsystem-Integration."
