@@ -1,7 +1,7 @@
 {
   "overview": {
     "eyebrow": "Produktpalette",
-    "title": "Thermalvakuumkammer-Systeme",
+    "title": "Übersicht",
     "description": "Deepvac entwickelt standardisierte und kundenspezifisch konstruierte Thermalvakuumsysteme für die Raumfahrtqualifikation, Umweltsimulation und Forschungsanwendungen. Unsere Kammerplattformen decken ein breites Spektrum an Testanforderungen ab – von etablierten Workflows mit modularen Standardsystemen bis hin zu vollständig maßgeschneiderten Konfigurationen für komplexe Missionsprofile.",
     "standardSeries": {
       "title": "Standard-Serie",
@@ -111,7 +111,7 @@
   },
   "standardSeries": {
     "eyebrow": "Produkte / Standard-Serie",
-    "title": "Vorkonstruierte TVAC-Plattformen",
+    "title": "Standard-Serie",
     "description": "Standardisierte Thermalvakuumkammer-Plattformen mit modularen Konfigurationen und reproduzierbarer Leistung für Raumfahrtqualifikation, Umweltsimulation und Forschungstests.",
     "tSeries": {
       "eyebrow": "Kubische Thermalvakuumkammern",
@@ -332,7 +332,7 @@
   },
   "customTvac": {
     "eyebrow": "Produkte — Custom TVAC",
-    "title": "Anwendungsspezifisches Thermalvakuum-Engineering",
+    "title": "Custom TVAC",
     "description": "Wenn standardmäßige Kammerplattformen Ihre Testanforderungen nicht erfüllen können, entwickelt Deepvac vollständig kundenspezifische Thermalvakuumsysteme – vom Konzept bis zur Inbetriebnahme um Ihre spezifische Geometrie, Ihr Thermalprofil, Ihre Instrumentierung und Ihre Integrationsbedingungen herum konstruiert. Custom-Konfigurationen decken Volumina unterhalb und oberhalb der Standard-Serie sowie Enddrücke bis in den 10⁻⁷-mbar-Bereich ab.",
     "heroCaption": "Kundenspezifische Thermalvakuumkammer – entwickelt, integriert und in Betrieb genommen von Deepvac.",
     "projectDrivers": {
@@ -522,7 +522,7 @@
   },
   "thermalVision": {
     "eyebrow": "Produkte / Engineering-Systeme",
-    "title": "Deepvac Thermal Vision",
+    "title": "Thermal Vision",
     "heroDescription": "Druckdichte Integration von Thermalkameras für Thermalvakuumkammern. Kontinuierliche Infrarotbildgebung unter Hochvakuum und extremen Temperaturbedingungen, mit aktivem Thermomanagement, Temperaturstabilisierung der Kamera und vollständiger Engineering-Integration in die Kammer.",
     "imageLabel": "Druckdichtes Kameragehäuse",
     "splitLabel": "Systemüberblick",
