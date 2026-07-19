@@ -6,6 +6,7 @@ export interface RouteEntry {
   en: string;
   de: string;
   seoKey: string;
+  optionSlug?: string;
 }
 
 /**
@@ -14,7 +15,12 @@ export interface RouteEntry {
  * and scripts/generate-static-meta.mjs). Add/remove routes in the JSON only.
  */
 export const routeMap: readonly RouteEntry[] = (routeMapData as Array<Record<string, unknown>>).map(
-  (r) => ({ en: r.en as string, de: r.de as string, seoKey: r.seoKey as string }),
+  (r) => ({
+    en: r.en as string,
+    de: r.de as string,
+    seoKey: r.seoKey as string,
+    optionSlug: r.optionSlug as string | undefined,
+  }),
 );
 
 // English alias routes (kept for backward compatibility, no DE equivalents needed)
@@ -90,6 +96,13 @@ export function getCanonical(
   const entry = findRouteEntry(currentPath);
   if (entry) return `${baseUrl}${entry[lang]}`;
   return `${baseUrl}${currentPath}`;
+}
+
+/**
+ * Resolve a concrete option detail URL to the stable option slug used by i18n.
+ */
+export function getOptionSlugFromPath(currentPath: string): string | undefined {
+  return findRouteEntry(currentPath)?.optionSlug;
 }
 
 /**
