@@ -34,21 +34,13 @@
     ]
   },
   "capabilities": {
-    "eyebrow": "Kernkompetenzen",
-    "title": "Engineering-Kompetenzen über den gesamten TVAC-Lebenszyklus",
-    "description": "Deepvac vereint Kammerplattformen, Steuerungstechnik, mechanische Konstruktion, Subsystem-Integration und Lifecycle-Support in einem ingenieurgetriebenen Gesamtangebot.",
+    "eyebrow": "Kerntechnologie",
+    "title": "Die Technologie hinter jedem Deepvac-System",
+    "description": "Kammerplattform, Thermalsystem und Vakuumtechnik werden als eine integrierte Architektur ausgelegt — die Basis für stabile, reproduzierbare Thermalvakuumtests.",
     "items": [
       {
         "title": "TVAC-Kammerplattformen",
         "description": "Standardisierte und kundenspezifische Thermalvakuumkammern für Raumfahrtqualifikation, thermische Zyklierung und Weltraumumgebungssimulation."
-      },
-      {
-        "title": "Steuerungs- & Automatisierungssysteme",
-        "description": "SPS-basierte Steuerungsarchitekturen, Automatisierung, Datenerfassung und Überwachungslogik für stabile, reproduzierbare Testdurchführung."
-      },
-      {
-        "title": "Mechanische Konstruktion & Schnittstellen",
-        "description": "Kammerlayouts, Vorrichtungen, Durchführungen, Montagekonzepte und Tragstrukturen für kundenspezifische Testkonfigurationen."
       },
       {
         "title": "Thermische Regelsysteme",
@@ -57,18 +49,6 @@
       {
         "title": "Vakuumsystemtechnik",
         "description": "Vakuumarchitekturen mit Pumpen, Ventilen, Sensoren und Schutzlogik für zuverlässigen Hochvakuumbetrieb."
-      },
-      {
-        "title": "Testkampagnen-Unterstützung",
-        "description": "Engineering- und Betriebsunterstützung für Thermalvakuum-Testkampagnen, von der Vorbereitung bis zur Durchführung."
-      },
-      {
-        "title": "Subsystem-Integration",
-        "description": "Integration von thermischen, Vakuum-, Instrumentierungs- und Steuerungssubsystemen zu kohärenten Testumgebungen."
-      },
-      {
-        "title": "Retrofit, Wartung & Reparatur",
-        "description": "Modernisierung, Wartung, Reparatur und gezielte Upgrades für bestehende Thermalvakuum-Infrastruktur."
       }
     ]
   },
