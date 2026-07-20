@@ -34,21 +34,13 @@
     ]
   },
   "capabilities": {
-    "eyebrow": "Core Capabilities",
-    "title": "Engineering Capabilities Across the Full TVAC Lifecycle",
-    "description": "Deepvac combines chamber platforms, control engineering, mechanical design, subsystem integration, and lifecycle support in one engineering-driven offering.",
+    "eyebrow": "Core Technology",
+    "title": "The Technology Behind Every Deepvac System",
+    "description": "Chamber platform, thermal system, and vacuum engineering are designed as one integrated architecture — the foundation for stable, reproducible thermal vacuum testing.",
     "items": [
       {
         "title": "TVAC Chamber Platforms",
         "description": "Standardized and custom thermal vacuum chamber platforms for aerospace qualification, thermal cycling, and space environment simulation."
-      },
-      {
-        "title": "Control & Automation Systems",
-        "description": "PLC-based control architectures, automation, data acquisition, and supervisory logic for stable, reproducible test execution."
-      },
-      {
-        "title": "Mechanical Design & Interfaces",
-        "description": "Chamber layouts, fixtures, feedthroughs, mounting concepts, and support structures for customer-specific test configurations."
       },
       {
         "title": "Thermal Control Systems",
@@ -57,18 +49,6 @@
       {
         "title": "Vacuum Systems Engineering",
         "description": "Vacuum architectures with pumps, valves, sensors, and protection logic for reliable high-vacuum operation."
-      },
-      {
-        "title": "Test Campaign Support",
-        "description": "Engineering and operational support for thermal vacuum test campaigns, from setup and preparation to execution."
-      },
-      {
-        "title": "Subsystem Integration",
-        "description": "Integration of thermal, vacuum, instrumentation, and control subsystems into coherent test environments."
-      },
-      {
-        "title": "Retrofit, Maintenance & Repair",
-        "description": "Modernization, maintenance, repair, and targeted upgrades for existing thermal vacuum infrastructure."
       }
     ]
   },
