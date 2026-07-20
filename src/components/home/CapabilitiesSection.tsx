@@ -23,7 +23,7 @@ export function CapabilitiesSection() {
           />
         </Reveal>
 
-        <BentoGrid className="lg:grid-cols-4">
+        <BentoGrid className="lg:grid-cols-3">
           {Array.isArray(items) && items.map((item, i) => {
             const Icon = icons[i] || Crosshair;
             const featured = featuredIndexes.includes(i);
