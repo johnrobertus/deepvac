@@ -2,10 +2,10 @@ import { useTranslation } from "react-i18next";
 import { SectionHeader } from "@/components/SectionHeader";
 import { BentoGrid, BentoCard } from "@/components/BentoGrid";
 import { Reveal } from "@/components/Reveal";
-import { Crosshair, Settings, Thermometer, Gauge, Cpu, RefreshCw, Wrench, Workflow } from "lucide-react";
+import { Crosshair, Thermometer, Gauge } from "lucide-react";
 
-const icons = [Crosshair, Cpu, Settings, Thermometer, Gauge, Wrench, Workflow, RefreshCw];
-const featuredIndexes = [0, 1];
+const icons = [Crosshair, Thermometer, Gauge];
+const featuredIndexes: number[] = [];
 
 export function CapabilitiesSection() {
   const { t } = useTranslation("home");
