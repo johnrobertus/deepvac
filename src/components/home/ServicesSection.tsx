@@ -20,7 +20,7 @@ export function ServicesSection() {
   const { t } = useTranslation("home");
   const { lang } = useLanguage();
 
-  const pillars = t("services.pillars", { returnObjects: true }) as { title: string; description: string }[];
+  const items = t("services.items", { returnObjects: true }) as { label: string; title: string; description: string }[];
   const items = t("services.items", { returnObjects: true }) as { label: string; title: string; description: string }[];
 
   return (
