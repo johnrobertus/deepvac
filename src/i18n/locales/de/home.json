@@ -33,25 +33,6 @@
       }
     ]
   },
-  "capabilities": {
-    "eyebrow": "Kerntechnologie",
-    "title": "Die Technologie hinter jedem Deepvac-System",
-    "description": "Kammerplattform, Thermalsystem und Vakuumtechnik werden als eine integrierte Architektur ausgelegt — die Basis für stabile, reproduzierbare Thermalvakuumtests.",
-    "items": [
-      {
-        "title": "TVAC-Kammerplattformen",
-        "description": "Standardisierte und kundenspezifische Thermalvakuumkammern für Raumfahrtqualifikation, thermische Zyklierung und Weltraumumgebungssimulation."
-      },
-      {
-        "title": "Thermische Regelsysteme",
-        "description": "Thermalplatten-, Shroud- und Temperaturregellösungen für stabile Profile, Zyklierung, Ausheizen und Qualifikationsabläufe."
-      },
-      {
-        "title": "Vakuumsystemtechnik",
-        "description": "Vakuumarchitekturen mit Pumpen, Ventilen, Sensoren und Schutzlogik für zuverlässigen Hochvakuumbetrieb."
-      }
-    ]
-  },
   "productPortfolio": {
     "eyebrow": "Produktportfolio",
     "title": "Kammerplattformen",
@@ -179,9 +160,26 @@
     ]
   },
   "services": {
-    "eyebrow": "Engineering-Leistungen",
-    "title": "Unterstützung über den gesamten TVAC-Lebenszyklus",
-    "description": "Deepvac entwickelt neue Kammersysteme, modernisiert Bestandsanlagen und hält Testinfrastruktur im Betrieb — von der Subsystem-Integration bis zum langfristigen Lifecycle-Support.",
+    "eyebrow": "Technologie & Leistungen",
+    "title": "Technologie & Leistungen über den gesamten TVAC-Lebenszyklus",
+    "description": "Jedes Deepvac-System vereint Kammerplattform, Thermalsystem und Vakuumtechnik in einer integrierten Architektur. Darauf aufbauend entwickelt Deepvac neue Kammersysteme, modernisiert Bestandsanlagen und hält Testinfrastruktur im Betrieb — von der Subsystem-Integration bis zum langfristigen Lifecycle-Support.",
+    "tech": [
+      {
+        "label": "Kerntechnologie",
+        "title": "TVAC-Kammerplattformen",
+        "description": "Standardisierte und kundenspezifische Thermalvakuumkammern für Raumfahrtqualifikation, thermische Zyklierung und Weltraumumgebungssimulation."
+      },
+      {
+        "label": "Kerntechnologie",
+        "title": "Thermische Regelsysteme",
+        "description": "Thermalplatten-, Shroud- und Temperaturregellösungen für stabile Profile, Zyklierung, Ausheizen und Qualifikationsabläufe."
+      },
+      {
+        "label": "Kerntechnologie",
+        "title": "Vakuumsystemtechnik",
+        "description": "Vakuumarchitekturen mit Pumpen, Ventilen, Sensoren und Schutzlogik für zuverlässigen Hochvakuumbetrieb."
+      }
+    ],
     "items": [
       {
         "label": "Kampagnenunterstützung",

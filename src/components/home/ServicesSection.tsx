@@ -2,11 +2,12 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Reveal } from "@/components/Reveal";
-import { ArrowRight, Thermometer, Gauge, Settings, RefreshCw, Wrench, Boxes } from "lucide-react";
+import { ArrowRight, Crosshair, Thermometer, Gauge, Activity, Cpu, Settings, RefreshCw, Wrench, Boxes } from "lucide-react";
 import { useLanguage } from "@/components/LanguageProvider";
 import { localizedPath } from "@/lib/routes";
 
-const serviceIcons = [Thermometer, Gauge, Settings, RefreshCw, Wrench, Boxes];
+const techIcons = [Crosshair, Thermometer, Gauge];
+const serviceIcons = [Activity, Cpu, Settings, RefreshCw, Wrench, Boxes];
 const serviceHrefs = [
   "/services/testing-services",
   "/services/control-systems-design",
@@ -16,11 +17,14 @@ const serviceHrefs = [
   "/services/subsystem-integration",
 ];
 
+type SectionCard = { label: string; title: string; description: string };
+
 export function ServicesSection() {
   const { t } = useTranslation("home");
   const { lang } = useLanguage();
 
-  const items = t("services.items", { returnObjects: true }) as { label: string; title: string; description: string }[];
+  const tech = t("services.tech", { returnObjects: true }) as SectionCard[];
+  const items = t("services.items", { returnObjects: true }) as SectionCard[];
 
   return (
     <section id="services" className="bg-surface/30 px-6 py-20 md:py-28">
@@ -34,12 +38,31 @@ export function ServicesSection() {
           />
         </Reveal>
 
-
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {Array.isArray(items) && items.map((service, i) => {
-            const Icon = serviceIcons[i] || Thermometer;
+          {Array.isArray(tech) && tech.map((item, i) => {
+            const Icon = techIcons[i] || Crosshair;
             return (
-              <Reveal key={service.title} delay={120 + i * 60}>
+              <Reveal key={item.title} delay={i * 60}>
+                <div className="bento-card flex h-full flex-col rounded-lg p-7">
+                  <div className="space-y-4">
+                    <div className="flex h-11 w-11 items-center justify-center rounded-sm border border-blue/25 bg-blue/10 text-blue">
+                      <Icon className="h-5 w-5" />
+                    </div>
+                    <div className="space-y-2.5">
+                      <span className="text-card-eyebrow">{item.label}</span>
+                      <h3 className="text-card-title-lg">{item.title}</h3>
+                      <p className="text-card-body">{item.description}</p>
+                    </div>
+                  </div>
+                </div>
+              </Reveal>
+            );
+          })}
+
+          {Array.isArray(items) && items.map((service, i) => {
+            const Icon = serviceIcons[i] || Settings;
+            return (
+              <Reveal key={service.title} delay={180 + i * 60}>
                 <div className="bento-card group flex h-full flex-col justify-between rounded-lg p-7 transition-all duration-300 hover:border-blue/25 hover:bg-background/40">
                   <div className="space-y-4">
                     <div className="flex h-11 w-11 items-center justify-center rounded-sm border border-blue/25 bg-blue/10 text-blue">
@@ -49,7 +72,6 @@ export function ServicesSection() {
                       <span className="text-card-eyebrow">{service.label}</span>
                       <h3 className="text-card-title-lg">{service.title}</h3>
                       <p className="text-card-body">{service.description}</p>
-
                     </div>
                   </div>
                   <div className="pt-5">

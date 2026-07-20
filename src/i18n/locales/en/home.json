@@ -33,25 +33,6 @@
       }
     ]
   },
-  "capabilities": {
-    "eyebrow": "Core Technology",
-    "title": "The Technology Behind Every Deepvac System",
-    "description": "Chamber platform, thermal system, and vacuum engineering are designed as one integrated architecture — the foundation for stable, reproducible thermal vacuum testing.",
-    "items": [
-      {
-        "title": "TVAC Chamber Platforms",
-        "description": "Standardized and custom thermal vacuum chamber platforms for aerospace qualification, thermal cycling, and space environment simulation."
-      },
-      {
-        "title": "Thermal Control Systems",
-        "description": "Thermal plate, shroud, and temperature control solutions for stable profiles, cycling, bake-out, and qualification workflows."
-      },
-      {
-        "title": "Vacuum Systems Engineering",
-        "description": "Vacuum architectures with pumps, valves, sensors, and protection logic for reliable high-vacuum operation."
-      }
-    ]
-  },
   "productPortfolio": {
     "eyebrow": "Product Portfolio",
     "title": "Chamber Platforms",
@@ -179,9 +160,26 @@
     ]
   },
   "services": {
-    "eyebrow": "Engineering Services",
-    "title": "Support Across the Full TVAC Lifecycle",
-    "description": "Deepvac builds new chamber systems, modernizes existing installations, and keeps test infrastructure running — from subsystem integration to long-term lifecycle support.",
+    "eyebrow": "Technology & Services",
+    "title": "Technology & Services Across the Full TVAC Lifecycle",
+    "description": "Every Deepvac system combines chamber platform, thermal system, and vacuum engineering in one integrated architecture. Around this core, Deepvac builds new chamber systems, modernizes existing installations, and keeps test infrastructure running — from subsystem integration to long-term lifecycle support.",
+    "tech": [
+      {
+        "label": "Core technology",
+        "title": "TVAC Chamber Platforms",
+        "description": "Standardized and custom thermal vacuum chamber platforms for aerospace qualification, thermal cycling, and space environment simulation."
+      },
+      {
+        "label": "Core technology",
+        "title": "Thermal Control Systems",
+        "description": "Thermal plate, shroud, and temperature control solutions for stable profiles, cycling, bake-out, and qualification workflows."
+      },
+      {
+        "label": "Core technology",
+        "title": "Vacuum Systems Engineering",
+        "description": "Vacuum architectures with pumps, valves, sensors, and protection logic for reliable high-vacuum operation."
+      }
+    ],
     "items": [
       {
         "label": "Campaign support",

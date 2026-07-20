@@ -5,7 +5,6 @@ import { Layout } from "@/components/Layout";
 import { PageShell } from "@/components/PageShell";
 import { HeroSection } from "@/components/home/HeroSection";
 import { TrustBarSection } from "@/components/home/TrustBarSection";
-import { CapabilitiesSection } from "@/components/home/CapabilitiesSection";
 import { ProductPortfolioSection } from "@/components/home/ProductPortfolioSection";
 import { ApplicationsSection } from "@/components/home/ApplicationsSection";
 import { ServicesSection } from "@/components/home/ServicesSection";
@@ -84,7 +83,6 @@ const Index = () => {
       <PageShell className="pt-0">
         <HeroSection />
         <TrustBarSection />
-        <CapabilitiesSection />
         <div className="section-divider" />
         <ProductPortfolioSection />
         <ApplicationsSection />
