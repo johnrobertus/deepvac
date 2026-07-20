@@ -65,7 +65,7 @@
           "value": "−190 °C bis +150 °C*"
         }
       },
-      "note": "*Temperaturbereich abhängig vom gewählten Thermalkonzept (direkte LN₂-Kühlung, GN₂-Umwälzung oder mechanische Kühlung). Niedrigere Enddrücke bis in den Bereich von 10⁻⁷ mbar sind abhängig von der Pumpenkonfiguration möglich."
+      "note": "*Temperaturbereich abhängig vom gewählten Thermalkonzept (direkte LN₂-Kühlung, GN₂-Umwälzung oder mechanische Kühlung). Niedrigere Betriebsdrücke bis in den Bereich von 10⁻⁷ mbar sind abhängig von der Pumpenkonfiguration möglich."
     },
     "cSeries": {
       "title": "C-Serie TVAC",
@@ -95,7 +95,7 @@
           "value": "−190 °C bis +150 °C*"
         }
       },
-      "note": "*Temperaturbereich abhängig vom gewählten Thermalkonzept (direkte LN₂-Kühlung, GN₂-Umwälzung oder mechanische Kühlung). Niedrigere Enddrücke bis in den Bereich von 10⁻⁷ mbar sind abhängig von der Pumpenkonfiguration möglich."
+      "note": "*Temperaturbereich abhängig vom gewählten Thermalkonzept (direkte LN₂-Kühlung, GN₂-Umwälzung oder mechanische Kühlung). Niedrigere Betriebsdrücke bis in den Bereich von 10⁻⁷ mbar sind abhängig von der Pumpenkonfiguration möglich."
     },
     "custom": {
       "title": "Custom TVAC",

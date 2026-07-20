@@ -65,7 +65,7 @@
           "value": "−190 °C to +150 °C*"
         }
       },
-      "note": "*Temperature range depending on the selected thermal concept (direct LN₂ cooling, GN₂ circulation, or mechanical refrigeration). Lower ultimate pressures down to the 10⁻⁷ mbar range are available depending on the pumping configuration."
+      "note": "*Temperature range depending on the selected thermal concept (direct LN₂ cooling, GN₂ circulation, or mechanical refrigeration). Lower operating pressures down to the 10⁻⁷ mbar range are available depending on the pumping configuration."
     },
     "cSeries": {
       "title": "C Series TVAC",
@@ -95,7 +95,7 @@
           "value": "−190 °C to +150 °C*"
         }
       },
-      "note": "*Temperature range depending on the selected thermal concept (direct LN₂ cooling, GN₂ circulation, or mechanical refrigeration). Lower ultimate pressures down to the 10⁻⁷ mbar range are available depending on the pumping configuration."
+      "note": "*Temperature range depending on the selected thermal concept (direct LN₂ cooling, GN₂ circulation, or mechanical refrigeration). Lower operating pressures down to the 10⁻⁷ mbar range are available depending on the pumping configuration."
     },
     "custom": {
       "title": "Custom TVAC",
