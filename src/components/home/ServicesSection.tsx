@@ -20,7 +20,6 @@ export function ServicesSection() {
   const { t } = useTranslation("home");
   const { lang } = useLanguage();
 
-  const pillars = t("services.pillars", { returnObjects: true }) as { title: string; description: string }[];
   const items = t("services.items", { returnObjects: true }) as { label: string; title: string; description: string }[];
 
   return (
@@ -35,17 +34,6 @@ export function ServicesSection() {
           />
         </Reveal>
 
-        <div className="mb-8 grid grid-cols-1 gap-px overflow-hidden rounded-lg border border-gray/10 bg-gray/10 lg:grid-cols-3">
-          {Array.isArray(pillars) && pillars.map((pillar, i) => (
-            <Reveal key={pillar.title} delay={i * 70}>
-              <div className="h-full bg-background/60 px-6 py-7">
-                <h3 className="text-card-title">{pillar.title}</h3>
-                <p className="mt-3 text-card-body">{pillar.description}</p>
-
-              </div>
-            </Reveal>
-          ))}
-        </div>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {Array.isArray(items) && items.map((service, i) => {
