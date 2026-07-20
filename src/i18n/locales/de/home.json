@@ -182,40 +182,26 @@
     "eyebrow": "Engineering-Leistungen",
     "title": "Unterstützung über den gesamten TVAC-Lebenszyklus",
     "description": "Deepvac entwickelt neue Kammersysteme, modernisiert Bestandsanlagen und hält Testinfrastruktur im Betrieb — von der Subsystem-Integration bis zum langfristigen Lifecycle-Support.",
-    "pillars": [
-      {
-        "title": "Neuentwicklung von Kammern",
-        "description": "Auslegung, Fertigung und Inbetriebnahme neuer Thermalvakuumkammern — von der Anforderungsspezifikation bis zum abgenommenen, betriebsbereiten System."
-      },
-      {
-        "title": "Modernisierung & Upgrades",
-        "description": "Gezielte Upgrades für Bestandssysteme zur Verbesserung von Steuerungsqualität, Zuverlässigkeit, Bedienbarkeit und langfristiger technischer Leistungsfähigkeit."
-      },
-      {
-        "title": "Betrieb & Lifecycle-Support",
-        "description": "Wartung, Reparatur und Kampagnenunterstützung, um Testinfrastruktur verfügbar, stabil und einsatzbereit zu halten."
-      }
-    ],
     "items": [
       {
         "label": "Kampagnenunterstützung",
         "title": "Prüfdienstleistungen",
-        "description": "Unterstützung bei Qualifikations-, Validierungs- und Entwicklungskampagnen, die stabile Umgebungskontrolle und reproduzierbare Workflows erfordern."
+        "description": "Engineering- und Betriebsunterstützung für Qualifikations-, Validierungs- und Entwicklungskampagnen — von Aufbau und Vorbereitung bis zur stabilen, reproduzierbaren Durchführung."
       },
       {
         "label": "Steuerungsarchitektur",
         "title": "Steuerungstechnik",
-        "description": "Entwicklung von Kammersteuerungsarchitekturen, Automatisierungslogik, Benutzerschnittstellen und Instrumentierungsintegration für zuverlässigen Systembetrieb."
+        "description": "Entwicklung SPS-basierter Steuerungsarchitekturen, Automatisierungs- und Überwachungslogik, Benutzerschnittstellen, Datenerfassung und Instrumentierungsintegration für stabile, reproduzierbare Testdurchführung."
       },
       {
         "label": "Mechanisches Engineering",
         "title": "Mechanische Konstruktion",
-        "description": "Engineering von Kammerbaugruppen, Schnittstellen, Vorrichtungen, Tragstrukturen und anwendungsspezifischen mechanischen Integrationskonzepten."
+        "description": "Engineering von Kammerlayouts, Baugruppen, Schnittstellen, Durchführungen, Vorrichtungen, Montagekonzepten und Tragstrukturen für anwendungsspezifische Testkonfigurationen."
       },
       {
         "label": "Bestandssystem-Upgrades",
         "title": "Retrofit & Modernisierung",
-        "description": "Technische Upgrades für bestehende TVAC-Systeme zur Verbesserung von Zuverlässigkeit, Bedienbarkeit, Sicherheit, Regelgenauigkeit und Lebensdauerleistung."
+        "description": "Gezielte technische Upgrades für bestehende TVAC-Systeme zur Verbesserung von Zuverlässigkeit, Bedienbarkeit, Sicherheit, Regelgenauigkeit und Lebensdauerleistung."
       },
       {
         "label": "Verfügbarkeitsunterstützung",
