@@ -57,7 +57,7 @@
           "value": "65 to 2000 L"
         },
         "pressure": {
-          "label": "Ultimate Pressure",
+          "label": "Operating pressure",
           "value": "≤ 1 × 10⁻⁶ mbar"
         },
         "temperature": {
@@ -87,7 +87,7 @@
           "value": "65 to 2000 L"
         },
         "pressure": {
-          "label": "Ultimate Pressure",
+          "label": "Operating pressure",
           "value": "≤ 1 × 10⁻⁶ mbar"
         },
         "temperature": {

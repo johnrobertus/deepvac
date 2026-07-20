@@ -57,7 +57,7 @@
           "value": "65 bis 2000 L"
         },
         "pressure": {
-          "label": "Enddruck",
+          "label": "Betriebsdruck",
           "value": "≤ 1 × 10⁻⁶ mbar"
         },
         "temperature": {
@@ -87,7 +87,7 @@
           "value": "65 bis 2000 L"
         },
         "pressure": {
-          "label": "Enddruck",
+          "label": "Betriebsdruck",
           "value": "≤ 1 × 10⁻⁶ mbar"
         },
         "temperature": {
