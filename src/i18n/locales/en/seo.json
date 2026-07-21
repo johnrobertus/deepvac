@@ -1,7 +1,7 @@
 {
   "home": {
-    "title": "Deepvac | Thermal Vacuum Systems for Space Qualification",
-    "description": "Deepvac develops modular and custom thermal vacuum systems for aerospace qualification, thermal cycling, and space environment simulation. Engineered in Germany."
+    "title": "Deepvac: TVAC Systems for Space Qualification",
+    "description": "Modular and custom thermal vacuum systems for qualification, space simulation, retrofit, and engineering, developed and built in Germany."
   },
   "products": {
     "title": "Thermal Vacuum Chamber Systems | Deepvac",
@@ -9,19 +9,19 @@
   },
   "standardSeries": {
     "title": "Standard Series TVAC Platforms | Deepvac",
-    "description": "Pre-engineered thermal vacuum chamber platforms with modular configurations for aerospace qualification, environmental simulation, and research testing."
+    "description": "Modular TVAC platforms for faster selection and reliable space qualification. Compare chamber sizes, performance data, and configuration options."
   },
   "customTvac": {
-    "title": "Custom Thermal Vacuum Systems | Deepvac",
-    "description": "Application-specific thermal vacuum engineering — custom chamber systems engineered from concept through commissioning for demanding test requirements."
+    "title": "Custom TVAC for Complex Test Requirements | Deepvac",
+    "description": "Custom thermal vacuum systems for demanding geometries, temperature ranges, interfaces, and test profiles, from concept through commissioning."
   },
   "options": {
     "title": "TVAC Chamber Options | Deepvac",
     "description": "Configure your thermal vacuum chamber: solar simulation, bake-out, oil-free pumping, RGA, thermography viewports and more — all Deepvac chamber options at a glance."
   },
   "services": {
-    "title": "TVAC Engineering Services | Deepvac",
-    "description": "End-to-end engineering services for thermal vacuum systems — from control systems design and testing to retrofit, maintenance, and subsystem integration."
+    "title": "TVAC Engineering and Services | Deepvac",
+    "description": "Vendor-independent TVAC engineering for controls, testing, retrofit, maintenance, and subsystem integration for new and existing systems."
   },
   "testingServices": {
     "title": "Thermal Vacuum Testing Services | Deepvac",
@@ -64,12 +64,12 @@
     "description": "Join Deepvac and build thermal vacuum systems for aerospace qualification. Engineering positions in Garbsen, Germany."
   },
   "references": {
-    "title": "References & Project Experience | Deepvac",
-    "description": "Project categories, application areas, and collaboration formats demonstrating Deepvac's thermal vacuum engineering scope."
+    "title": "TVAC Projects and Engineering Experience | Deepvac",
+    "description": "Explore Deepvac project types, application areas, and TVAC engineering experience for space qualification, research, and system modernization."
   },
   "contact": {
-    "title": "Contact Deepvac | Engineering Inquiry",
-    "description": "Discuss your thermal vacuum requirements with our engineering team. Request a quote, technical consultation, or project evaluation."
+    "title": "Request a TVAC Project | Contact Deepvac",
+    "description": "Request a TVAC system, retrofit, test service, or engineering support. Deepvac typically responds to technical inquiries within two business days."
   },
   "imprint": {
     "title": "Imprint | Deepvac GmbH",
