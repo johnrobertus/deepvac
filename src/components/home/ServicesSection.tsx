@@ -14,7 +14,6 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/Reveal";
-import { SectionHeader } from "@/components/SectionHeader";
 import { useLanguage } from "@/components/LanguageProvider";
 import { localizedPath } from "@/lib/routes";
 import thermalPlateAsset from "@/assets/services-thermal-plate-reference.png.asset.json";
@@ -70,13 +69,11 @@ function IconTile({ icon: Icon }: { icon: LucideIcon }) {
 
 function PillarHeading({
   id,
-  label,
   title,
   description,
   icon,
 }: {
   id: string;
-  label: string;
   title: string;
   description: string;
   icon: LucideIcon;
@@ -84,15 +81,12 @@ function PillarHeading({
   return (
     <header className="border-b border-gray/15 pb-6">
       <div className="flex items-start justify-between gap-5">
-        <div className="min-w-0">
-          <span className="text-card-eyebrow">{label}</span>
-          <h3 id={id} className="mt-3 text-xl font-medium leading-[1.18] text-sand sm:text-2xl">
-            {title}
-          </h3>
-        </div>
+        <h3 id={id} className="max-w-[18rem] text-xl font-medium leading-[1.18] text-sand sm:text-2xl">
+          {title}
+        </h3>
         <IconTile icon={icon} />
       </div>
-      <p className="mt-4 text-[15px] leading-relaxed text-sand/80 md:text-[16px]">{description}</p>
+      <p className="mt-5 text-[15px] leading-relaxed text-sand/80 md:text-[16px]">{description}</p>
     </header>
   );
 }
@@ -180,18 +174,14 @@ export function ServicesSection() {
   const retrofit = t("pillars.retrofit", { returnObjects: true }) as CapabilityPillar;
 
   return (
-    <section id="services" aria-label={t("title")} className="bg-surface/30 px-6 py-20 md:py-28">
+    <section id="services" aria-labelledby="technology-services-title" className="bg-surface/30 px-6 py-10 md:py-14">
       <div className="container-wide">
-        <Reveal>
-          <SectionHeader
-            eyebrow={t("eyebrow")}
-            title={t("title")}
-            description={t("description")}
-            className="mb-12 max-w-4xl"
-          />
-        </Reveal>
+        <h2 id="technology-services-title" className="sr-only">
+          {t("title")}
+        </h2>
+        <p className="sr-only">{t("description")}</p>
 
-        <Reveal delay={60}>
+        <Reveal>
           <div className="overflow-hidden rounded-lg border border-border bg-surface shadow-[var(--shadow-card)]">
             <div role="list" aria-label={t("title")} className="grid md:grid-cols-3">
               {Array.isArray(lifecycle) &&
@@ -205,16 +195,11 @@ export function ServicesSection() {
                         index > 0 ? "border-t border-border md:border-l md:border-t-0" : ""
                       }`}
                     >
-                      <div className="flex items-start gap-4">
+                      <div className="flex items-center gap-4">
                         <IconTile icon={Icon} />
-                        <div className="min-w-0">
-                          <span className="mono-label text-blue tabular-nums">
-                            {String(index + 1).padStart(2, "0")}
-                          </span>
-                          <h3 className="mt-2 text-card-title-lg">{stage.title}</h3>
-                        </div>
+                        <h3 className="text-card-title-lg">{stage.title}</h3>
                       </div>
-                      <p className="mt-4 text-card-body">{stage.description}</p>
+                      <p className="mt-5 text-card-body">{stage.description}</p>
                     </div>
                   );
                 })}
@@ -227,7 +212,6 @@ export function ServicesSection() {
             <article aria-labelledby="services-pillar-modular" className="bento-card flex h-full flex-col rounded-lg p-6 sm:p-7">
               <PillarHeading
                 id="services-pillar-modular"
-                label={modular.label}
                 title={modular.title}
                 description={modular.description}
                 icon={Boxes}
@@ -243,7 +227,6 @@ export function ServicesSection() {
             <article aria-labelledby="services-pillar-custom" className="bento-card flex h-full flex-col rounded-lg p-6 sm:p-7">
               <PillarHeading
                 id="services-pillar-custom"
-                label={custom.label}
                 title={custom.title}
                 description={custom.description}
                 icon={Settings}
@@ -259,7 +242,6 @@ export function ServicesSection() {
             <article aria-labelledby="services-pillar-retrofit" className="bento-card flex h-full flex-col rounded-lg p-6 sm:p-7">
               <PillarHeading
                 id="services-pillar-retrofit"
-                label={retrofit.label}
                 title={retrofit.title}
                 description={retrofit.description}
                 icon={RefreshCw}
