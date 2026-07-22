@@ -6,7 +6,7 @@ import { Reveal } from "@/components/Reveal";
 import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/components/LanguageProvider";
 import { localizedPath } from "@/lib/routes";
-import tseriesImg from "@/assets/tseries-chamber.webp";
+import tseriesImg from "@/assets/product-tseries-chamber.webp";
 import cseriesImg from "@/assets/cseries-chamber.webp";
 import customImg from "@/assets/custom-chamber.webp";
 
