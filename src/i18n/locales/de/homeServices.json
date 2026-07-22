@@ -1,0 +1,107 @@
+{
+  "eyebrow": "Technologie & Leistungen",
+  "title": "Über den gesamten TVAC-Lebenszyklus",
+  "description": "Deepvac verbindet vorkonfigurierte modulare Systeme, vollständig kundenspezifisches Engineering und herstellerunabhängige Modernisierung – vom ersten Konzept bis zum langfristigen Betrieb der TVAC-Infrastruktur.",
+  "lifecycle": [
+    {
+      "title": "Neue Kammerentwicklung",
+      "description": "Konzept, Engineering und Lieferung neuer Systeme."
+    },
+    {
+      "title": "Modernisierung & Upgrades",
+      "description": "Retrofit, Subsystem-Upgrades und Integration in Bestandsanlagen."
+    },
+    {
+      "title": "Betrieb & Lifecycle-Support",
+      "description": "Wartung, Reparatur, Fehlersuche und langfristiger Support."
+    }
+  ],
+  "pillars": {
+    "modular": {
+      "label": "Säule 01",
+      "title": "Modulare Systeme & Standard-Serie",
+      "description": "Vorkonfigurierte, modulare und frei konfigurierbare Systeme für schnellere Umsetzung, bewährte Leistung und projektspezifische Auslegung.",
+      "cta": "Standard-Serie entdecken",
+      "rows": [
+        {
+          "title": "Thermalsystem-Pakete",
+          "alt": "Aluminium-Thermalplatte mit integrierter Kupferrohr-Wärmeübertragung",
+          "bullets": [
+            "Thermalplatten",
+            "Kryogene Shrouds",
+            "LN₂- und GN₂-Systeme",
+            "Temperaturregelung"
+          ]
+        },
+        {
+          "title": "Vakuumsystem-Pakete",
+          "alt": "Schnittansicht einer Turbomolekularpumpe mit sichtbaren Rotorstufen",
+          "bullets": [
+            "Turbomolekular- und Vorpumpen",
+            "Ventile und Vakuumkomponenten",
+            "Druckmesstechnik",
+            "Vakuumsteuerung und Schutzlogik"
+          ]
+        },
+        {
+          "title": "Standard-Kammerkonzepte",
+          "alt": "Kubische Thermalvakuumkammer der Deepvac T-Serie",
+          "bullets": [
+            "T-Serie (kubisch)",
+            "C-Serie (zylindrisch)",
+            "Mehrere Volumenklassen",
+            "Modulare Optionen und Schnittstellen"
+          ]
+        }
+      ]
+    },
+    "custom": {
+      "label": "Säule 02",
+      "title": "Vollständig kundenspezifisches Design & Engineering",
+      "description": "Von Grund auf entwickelt – für anwendungsspezifische Geometrien, Schnittstellen, Prüfabläufe und Leistungsziele.",
+      "cta": "Custom-Projekt besprechen",
+      "rows": [
+        {
+          "title": "Mechanische Konstruktion & Schnittstellen",
+          "description": "Kundenspezifische Kammerlayouts, Vorrichtungen, Durchführungen, Flansche, Schnittstellen und Tragstrukturen."
+        },
+        {
+          "title": "Steuerungssysteme & Automatisierung",
+          "description": "Individuelle SPS-/HMI-Architektur, Sequenzen, Verriegelungen, Prüfrezepte, Fernzugriff und übergeordnete Steuerungslogik."
+        },
+        {
+          "title": "Daten, KI & intelligente Funktionen",
+          "description": "Datenerfassung, Analytik, KI-gestützte Erkenntnisse, vorausschauende Wartung und erweiterte Regelungsoptimierung."
+        },
+        {
+          "title": "Systemintegration & Testinfrastruktur",
+          "description": "Kammer, Thermaltechnik, Vakuum, Steuerung, Software, Instrumentierung und Diagnostik als integriertes Gesamtsystem."
+        }
+      ]
+    },
+    "retrofit": {
+      "label": "Säule 03",
+      "title": "Retrofit, Modernisierung & Upgrades",
+      "description": "Lebensdauer verlängern, Leistung verbessern und neue Technologien in bestehende TVAC-Systeme integrieren – unabhängig vom ursprünglichen Hersteller.",
+      "cta": "Bestandsanlage verbessern",
+      "rows": [
+        {
+          "title": "Retrofit & Modernisierung",
+          "description": "Modernisierung von Thermal-, Vakuum-, Steuerungs- und Instrumentierungssystemen sowie Austausch obsoleter Komponenten."
+        },
+        {
+          "title": "Subsystem-Integration & Upgrades",
+          "description": "Integration von Pumpen, Steuerungen, Sensoren, Durchführungen, Kameras, RGA, QCM und weiteren Subsystemen."
+        },
+        {
+          "title": "Wartung & Reparatur",
+          "description": "Vorbeugende Wartung, Kalibrierung, Kammerreinigung, Fehleranalyse, Reparatur und Ersatzteile."
+        },
+        {
+          "title": "Leistungsverbesserung",
+          "description": "Verbesserung von Zuverlässigkeit, Effizienz, Datenqualität, Sicherheit und Anlagenverfügbarkeit."
+        }
+      ]
+    }
+  }
+}
