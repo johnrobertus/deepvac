@@ -84,10 +84,11 @@ const Index = () => {
         <HeroSection />
         <TrustBarSection />
         <div className="section-divider" />
+        <ServicesSection />
+        <div className="section-divider" />
         <ProductPortfolioSection />
         <ApplicationsSection />
         <div className="section-divider" />
-        <ServicesSection />
         <WhyDeepvacSection />
         <div className="section-divider" />
         <TeamSection />

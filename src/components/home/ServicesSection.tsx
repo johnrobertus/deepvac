@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/Reveal";
+import { SectionHeader } from "@/components/SectionHeader";
 import { useLanguage } from "@/components/LanguageProvider";
 import { localizedPath } from "@/lib/routes";
 import thermalPlateAsset from "@/assets/services-thermal-plate-reference.png.asset.json";
@@ -174,14 +175,18 @@ export function ServicesSection() {
   const retrofit = t("pillars.retrofit", { returnObjects: true }) as CapabilityPillar;
 
   return (
-    <section id="services" aria-labelledby="technology-services-title" className="bg-surface/30 px-6 py-10 md:py-14">
+    <section id="services" aria-labelledby="technology-services-title" className="bg-surface/30 px-6 py-20 md:py-28">
       <div className="container-wide">
-        <h2 id="technology-services-title" className="sr-only">
-          {t("title")}
-        </h2>
-        <p className="sr-only">{t("description")}</p>
-
         <Reveal>
+          <SectionHeader
+            eyebrow={t("eyebrow")}
+            title={t("title")}
+            description={t("description")}
+            className="mb-12 max-w-4xl"
+          />
+        </Reveal>
+
+        <Reveal delay={60}>
           <div className="overflow-hidden rounded-lg border border-border bg-surface shadow-[var(--shadow-card)]">
             <div role="list" aria-label={t("title")} className="grid md:grid-cols-3">
               {Array.isArray(lifecycle) &&
