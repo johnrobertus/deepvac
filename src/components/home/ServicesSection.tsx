@@ -102,7 +102,7 @@ function CapabilityRows({ rows, icons }: { rows: CapabilityRow[]; icons: LucideI
               </div>
               <div className="min-w-0">
                 <h4 className="text-[15px] font-medium leading-snug text-sand">{row.title}</h4>
-                <p className="mt-1.5 text-[14px] leading-relaxed text-sand/72 sm:text-[15px]">
+                <p className="mt-1.5 text-[14px] leading-relaxed text-sand/70 sm:text-[15px]">
                   {row.description}
                 </p>
               </div>
@@ -117,7 +117,7 @@ function PillarCta({ href, label }: { href: string; label: string }) {
   return (
     <Link
       to={href}
-      className="mt-6 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-sm border border-blue/45 px-4 py-3 text-center text-[15px] font-medium text-blue transition-colors duration-200 hover:border-blue/70 hover:bg-blue/10 hover:text-blue-light"
+      className="mt-6 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-sm border border-blue/40 px-4 py-3 text-center text-[15px] font-medium text-blue transition-colors duration-200 hover:border-blue/70 hover:bg-blue/10 hover:text-blue-light"
     >
       {label}
       <ArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -149,7 +149,7 @@ export function ServicesSection() {
           </Reveal>
 
           <Reveal delay={80}>
-            <div className="h-full rounded-lg border border-blue/25 bg-background/55 p-5 sm:p-6">
+            <div className="h-full rounded-lg border border-blue/25 bg-background/60 p-5 sm:p-6">
               <div
                 role="list"
                 aria-label={t("title")}
@@ -164,7 +164,7 @@ export function ServicesSection() {
                           role="listitem"
                           className="flex min-w-0 items-start gap-4 rounded-sm border border-transparent p-2 lg:flex-col lg:items-center lg:px-1 lg:text-center"
                         >
-                          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-blue/45 bg-blue/[0.08] text-blue">
+                          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-blue/40 bg-blue/[0.08] text-blue">
                             <Icon className="h-5 w-5" aria-hidden="true" />
                           </div>
                           <div className="min-w-0">
@@ -181,7 +181,7 @@ export function ServicesSection() {
                         </div>
 
                         {index < lifecycle.length - 1 && (
-                          <div aria-hidden="true" className="flex justify-center text-blue/55">
+                          <div aria-hidden="true" className="flex justify-center text-blue/50">
                             <ArrowDown className="h-5 w-5 lg:hidden" />
                             <ArrowRight className="hidden h-5 w-5 lg:block" />
                           </div>
@@ -195,10 +195,10 @@ export function ServicesSection() {
         </div>
 
         <div className="mt-8 grid grid-cols-1 items-stretch gap-5 lg:grid-cols-3 xl:gap-6">
-          <Reveal>
+          <Reveal className="h-full">
             <article
               aria-labelledby="services-pillar-modular"
-              className="flex h-full flex-col rounded-lg border border-border bg-surface p-5 transition-colors duration-300 hover:border-blue/35 hover:bg-background/40 sm:p-6"
+              className="flex h-full flex-col rounded-lg border border-border bg-surface p-5 transition-colors duration-300 hover:border-blue/40 hover:bg-background/40 sm:p-6"
             >
               <PillarHeading
                 id="services-pillar-modular"
@@ -245,10 +245,10 @@ export function ServicesSection() {
             </article>
           </Reveal>
 
-          <Reveal delay={70}>
+          <Reveal className="h-full" delay={70}>
             <article
               aria-labelledby="services-pillar-custom"
-              className="flex h-full flex-col rounded-lg border border-border bg-surface p-5 transition-colors duration-300 hover:border-blue/35 hover:bg-background/40 sm:p-6"
+              className="flex h-full flex-col rounded-lg border border-border bg-surface p-5 transition-colors duration-300 hover:border-blue/40 hover:bg-background/40 sm:p-6"
             >
               <PillarHeading
                 id="services-pillar-custom"
@@ -266,10 +266,10 @@ export function ServicesSection() {
             </article>
           </Reveal>
 
-          <Reveal delay={140}>
+          <Reveal className="h-full" delay={140}>
             <article
               aria-labelledby="services-pillar-retrofit"
-              className="flex h-full flex-col rounded-lg border border-border bg-surface p-5 transition-colors duration-300 hover:border-blue/35 hover:bg-background/40 sm:p-6"
+              className="flex h-full flex-col rounded-lg border border-border bg-surface p-5 transition-colors duration-300 hover:border-blue/40 hover:bg-background/40 sm:p-6"
             >
               <PillarHeading
                 id="services-pillar-retrofit"
