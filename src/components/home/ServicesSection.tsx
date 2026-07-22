@@ -17,7 +17,8 @@ import {
 import { Reveal } from "@/components/Reveal";
 import { useLanguage } from "@/components/LanguageProvider";
 import { localizedPath } from "@/lib/routes";
-import thermalPlateImage from "@/assets/services-thermal-plate-reference.jpg";
+import thermalPlateAsset from "@/assets/services-thermal-plate-reference.png.asset.json";
+const thermalPlateImage = thermalPlateAsset.url;
 import vacuumPumpImage from "@/assets/services-vacuum-pump-cutaway.svg";
 import chamberImage from "@/assets/tseries-chamber.webp";
 
