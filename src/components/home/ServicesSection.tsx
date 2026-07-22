@@ -180,7 +180,7 @@ export function ServicesSection() {
   const retrofit = t("pillars.retrofit", { returnObjects: true }) as CapabilityPillar;
 
   return (
-    <section id="services" aria-labelledby="technology-services-title" className="bg-surface/30 px-6 py-20 md:py-28">
+    <section id="services" aria-label={t("title")} className="bg-surface/30 px-6 py-20 md:py-28">
       <div className="container-wide">
         <Reveal>
           <SectionHeader
