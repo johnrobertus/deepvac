@@ -4,6 +4,7 @@ import { initReactI18next } from "react-i18next";
 // EN namespaces (source of truth)
 import enCommon from "./locales/en/common.json";
 import enHome from "./locales/en/home.json";
+import enHomeServices from "./locales/en/homeServices.json";
 import enProducts from "./locales/en/products.json";
 import enServices from "./locales/en/services.json";
 import enTeam from "./locales/en/team.json";
@@ -20,6 +21,7 @@ import enQuestionnaire from "./locales/en/questionnaire.json";
 // DE namespaces (derived, mirrors EN 1:1)
 import deCommon from "./locales/de/common.json";
 import deHome from "./locales/de/home.json";
+import deHomeServices from "./locales/de/homeServices.json";
 import deProducts from "./locales/de/products.json";
 import deServices from "./locales/de/services.json";
 import deTeam from "./locales/de/team.json";
@@ -38,6 +40,7 @@ i18n.use(initReactI18next).init({
     en: {
       common: enCommon,
       home: enHome,
+      homeServices: enHomeServices,
       products: enProducts,
       services: enServices,
       team: enTeam,
@@ -54,6 +57,7 @@ i18n.use(initReactI18next).init({
     de: {
       common: deCommon,
       home: deHome,
+      homeServices: deHomeServices,
       products: deProducts,
       services: deServices,
       team: deTeam,
