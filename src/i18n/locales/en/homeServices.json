@@ -1,0 +1,107 @@
+{
+  "eyebrow": "Technology & Services",
+  "title": "Across the Full TVAC Lifecycle",
+  "description": "Deepvac combines pre-engineered modular systems, fully custom engineering, and vendor-independent modernization to support TVAC infrastructure from first concept through long-term operation.",
+  "lifecycle": [
+    {
+      "title": "New Chamber Development",
+      "description": "Concept, engineering and new-system delivery."
+    },
+    {
+      "title": "Modernization & Upgrades",
+      "description": "Retrofit, subsystem upgrades and integration for existing systems."
+    },
+    {
+      "title": "Operations & Lifecycle Support",
+      "description": "Maintenance, repair, troubleshooting and long-term support."
+    }
+  ],
+  "pillars": {
+    "modular": {
+      "label": "Pillar 01",
+      "title": "Modular Systems & Standard Series",
+      "description": "Pre-engineered, modular and configurable systems for faster delivery, proven performance and project-specific configuration.",
+      "cta": "Explore Standard Series",
+      "rows": [
+        {
+          "title": "Thermal System Packages",
+          "alt": "Aluminum thermal plate with integrated copper heat-transfer tubing",
+          "bullets": [
+            "Thermal plates",
+            "Cryogenic shrouds",
+            "LN₂ / GN₂ systems",
+            "Temperature control"
+          ]
+        },
+        {
+          "title": "Vacuum System Packages",
+          "alt": "Cutaway view of a turbomolecular pump showing the rotor stages",
+          "bullets": [
+            "Turbomolecular & backing pumps",
+            "Valves & vacuum components",
+            "Pressure instrumentation",
+            "Vacuum control & protection"
+          ]
+        },
+        {
+          "title": "Standard Chamber Concepts",
+          "alt": "Deepvac T Series cubic thermal vacuum chamber",
+          "bullets": [
+            "T Series (cubic)",
+            "C Series (cylindrical)",
+            "Multiple volume classes",
+            "Modular options & interfaces"
+          ]
+        }
+      ]
+    },
+    "custom": {
+      "label": "Pillar 02",
+      "title": "Fully Custom Design & Engineering",
+      "description": "Tailored from scratch for application-specific geometry, interfaces, test workflows and performance targets.",
+      "cta": "Discuss Your Custom Project",
+      "rows": [
+        {
+          "title": "Mechanical Design & Interfaces",
+          "description": "Custom chamber layouts, fixtures, feedthroughs, flanges, interfaces and support structures."
+        },
+        {
+          "title": "Control Systems & Automation",
+          "description": "Custom PLC/HMI architecture, sequences, interlocks, test recipes, remote access and supervisory logic."
+        },
+        {
+          "title": "Data, AI & Smart Features",
+          "description": "Data acquisition, analytics, AI-supported insight, predictive maintenance and advanced control optimization."
+        },
+        {
+          "title": "System Integration & Test Infrastructure",
+          "description": "Chamber, thermal, vacuum, controls, software, instrumentation and diagnostics as one integrated system."
+        }
+      ]
+    },
+    "retrofit": {
+      "label": "Pillar 03",
+      "title": "Retrofit, Modernization & Upgrades",
+      "description": "Extend service life, improve performance and integrate new technology into existing TVAC systems — independent of the original manufacturer.",
+      "cta": "Improve Your Existing System",
+      "rows": [
+        {
+          "title": "Retrofit & Modernization",
+          "description": "Upgrade thermal, vacuum, control and instrumentation systems and replace obsolete components."
+        },
+        {
+          "title": "Subsystem Integration & Upgrades",
+          "description": "Integrate pumps, controllers, sensors, feedthroughs, cameras, RGA, QCM and other subsystems."
+        },
+        {
+          "title": "Maintenance & Repair",
+          "description": "Preventive maintenance, calibration, chamber cleaning, fault analysis, repair and spare parts."
+        },
+        {
+          "title": "Performance Improvement",
+          "description": "Improve reliability, efficiency, data quality, safety and operational availability."
+        }
+      ]
+    }
+  }
+}
