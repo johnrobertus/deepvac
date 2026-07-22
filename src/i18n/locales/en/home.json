@@ -33,45 +33,6 @@
       }
     ]
   },
-  "capabilities": {
-    "eyebrow": "Core Capabilities",
-    "title": "Engineering Capabilities Across the Full TVAC Lifecycle",
-    "description": "Deepvac combines chamber platforms, control engineering, mechanical design, subsystem integration, and lifecycle support in one engineering-driven offering.",
-    "items": [
-      {
-        "title": "TVAC Chamber Platforms",
-        "description": "Standardized and custom thermal vacuum chamber platforms for aerospace qualification, thermal cycling, and space environment simulation."
-      },
-      {
-        "title": "Control & Automation Systems",
-        "description": "PLC-based control architectures, automation, data acquisition, and supervisory logic for stable, reproducible test execution."
-      },
-      {
-        "title": "Mechanical Design & Interfaces",
-        "description": "Chamber layouts, fixtures, feedthroughs, mounting concepts, and support structures for customer-specific test configurations."
-      },
-      {
-        "title": "Thermal Control Systems",
-        "description": "Thermal plate, shroud, and temperature control solutions for stable profiles, cycling, bake-out, and qualification workflows."
-      },
-      {
-        "title": "Vacuum Systems Engineering",
-        "description": "Vacuum architectures with pumps, valves, sensors, and protection logic for reliable high-vacuum operation."
-      },
-      {
-        "title": "Test Campaign Support",
-        "description": "Engineering and operational support for thermal vacuum test campaigns, from setup and preparation to execution."
-      },
-      {
-        "title": "Subsystem Integration",
-        "description": "Integration of thermal, vacuum, instrumentation, and control subsystems into coherent test environments."
-      },
-      {
-        "title": "Retrofit, Maintenance & Repair",
-        "description": "Modernization, maintenance, repair, and targeted upgrades for existing thermal vacuum infrastructure."
-      }
-    ]
-  },
   "productPortfolio": {
     "eyebrow": "Product Portfolio",
     "title": "Chamber Platforms",
@@ -96,7 +57,7 @@
           "value": "65 to 2000 L"
         },
         "pressure": {
-          "label": "Ultimate Pressure",
+          "label": "Operating pressure",
           "value": "≤ 1 × 10⁻⁶ mbar"
         },
         "temperature": {
@@ -104,7 +65,7 @@
           "value": "−190 °C to +150 °C*"
         }
       },
-      "note": "*Temperature range depending on the selected thermal concept (direct LN₂ cooling, GN₂ circulation, or mechanical refrigeration). Lower ultimate pressures down to the 10⁻⁷ mbar range are available depending on the pumping configuration."
+      "note": "*Temperature range depending on the selected thermal concept (direct LN₂ cooling, GN₂ circulation, or mechanical refrigeration). Lower operating pressures down to the 10⁻⁷ mbar range are available depending on the pumping configuration."
     },
     "cSeries": {
       "title": "C Series TVAC",
@@ -126,7 +87,7 @@
           "value": "65 to 2000 L"
         },
         "pressure": {
-          "label": "Ultimate Pressure",
+          "label": "Operating pressure",
           "value": "≤ 1 × 10⁻⁶ mbar"
         },
         "temperature": {
@@ -134,7 +95,7 @@
           "value": "−190 °C to +150 °C*"
         }
       },
-      "note": "*Temperature range depending on the selected thermal concept (direct LN₂ cooling, GN₂ circulation, or mechanical refrigeration). Lower ultimate pressures down to the 10⁻⁷ mbar range are available depending on the pumping configuration."
+      "note": "*Temperature range depending on the selected thermal concept (direct LN₂ cooling, GN₂ circulation, or mechanical refrigeration). Lower operating pressures down to the 10⁻⁷ mbar range are available depending on the pumping configuration."
     },
     "custom": {
       "title": "Custom TVAC",
@@ -199,43 +160,46 @@
     ]
   },
   "services": {
-    "eyebrow": "Engineering Services",
-    "title": "Support Across the Full TVAC Lifecycle",
-    "description": "Deepvac builds new chamber systems, modernizes existing installations, and keeps test infrastructure running — from subsystem integration to long-term lifecycle support.",
-    "pillars": [
+    "eyebrow": "Technology & Services",
+    "title": "Technology & Services Across the Full TVAC Lifecycle",
+    "description": "Every Deepvac system combines chamber platform, thermal system, and vacuum engineering in one integrated architecture. Around this core, Deepvac builds new chamber systems, modernizes existing installations, and keeps test infrastructure running — from subsystem integration to long-term lifecycle support.",
+    "tech": [
       {
-        "title": "New Chamber Development",
-        "description": "Design, fabrication, and commissioning of new thermal vacuum chambers — from requirements specification to an accepted, operational system."
+        "label": "Core technology",
+        "title": "TVAC Chamber Platforms",
+        "description": "Standardized and custom thermal vacuum chamber platforms for aerospace qualification, thermal cycling, and space environment simulation."
       },
       {
-        "title": "Modernization & Upgrades",
-        "description": "Targeted upgrades for legacy systems to improve control quality, reliability, operability, and long-term technical performance."
+        "label": "Core technology",
+        "title": "Thermal Control Systems",
+        "description": "Thermal plate, shroud, and temperature control solutions for stable profiles, cycling, bake-out, and qualification workflows."
       },
       {
-        "title": "Operations & Lifecycle Support",
-        "description": "Maintenance, repair, and campaign support to keep test infrastructure available, stable, and ready for demanding qualification workflows."
+        "label": "Core technology",
+        "title": "Vacuum Systems Engineering",
+        "description": "Vacuum architectures with pumps, valves, sensors, and protection logic for reliable high-vacuum operation."
       }
     ],
     "items": [
       {
         "label": "Campaign support",
         "title": "Testing Services",
-        "description": "Support for qualification, validation, and development test campaigns requiring stable environmental control and repeatable workflows."
+        "description": "Engineering and operational support for qualification, validation, and development test campaigns — from setup and preparation to stable, repeatable execution."
       },
       {
         "label": "Control architecture",
         "title": "Control Systems Design",
-        "description": "Design of chamber control architectures, automation logic, user interfaces, and instrumentation integration for reliable system operation."
+        "description": "Design of PLC-based control architectures, automation and supervisory logic, user interfaces, data acquisition, and instrumentation integration for stable, reproducible test execution."
       },
       {
         "label": "Mechanical engineering",
         "title": "Mechanical Design",
-        "description": "Engineering of chamber assemblies, interfaces, fixturing, support structures, and application-specific mechanical integration concepts."
+        "description": "Engineering of chamber layouts, assemblies, interfaces, feedthroughs, fixturing, mounting concepts, and support structures for application-specific test configurations."
       },
       {
         "label": "Legacy system upgrades",
         "title": "Retrofit & Modernization",
-        "description": "Technical upgrades for legacy TVAC systems to improve reliability, operability, safety, control precision, and lifecycle performance."
+        "description": "Targeted technical upgrades for legacy TVAC systems to improve reliability, operability, safety, control precision, and lifecycle performance."
       },
       {
         "label": "Availability support",

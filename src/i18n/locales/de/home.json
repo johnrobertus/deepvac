@@ -33,45 +33,6 @@
       }
     ]
   },
-  "capabilities": {
-    "eyebrow": "Kernkompetenzen",
-    "title": "Engineering-Kompetenzen über den gesamten TVAC-Lebenszyklus",
-    "description": "Deepvac vereint Kammerplattformen, Steuerungstechnik, mechanische Konstruktion, Subsystem-Integration und Lifecycle-Support in einem ingenieurgetriebenen Gesamtangebot.",
-    "items": [
-      {
-        "title": "TVAC-Kammerplattformen",
-        "description": "Standardisierte und kundenspezifische Thermalvakuumkammern für Raumfahrtqualifikation, thermische Zyklierung und Weltraumumgebungssimulation."
-      },
-      {
-        "title": "Steuerungs- & Automatisierungssysteme",
-        "description": "SPS-basierte Steuerungsarchitekturen, Automatisierung, Datenerfassung und Überwachungslogik für stabile, reproduzierbare Testdurchführung."
-      },
-      {
-        "title": "Mechanische Konstruktion & Schnittstellen",
-        "description": "Kammerlayouts, Vorrichtungen, Durchführungen, Montagekonzepte und Tragstrukturen für kundenspezifische Testkonfigurationen."
-      },
-      {
-        "title": "Thermische Regelsysteme",
-        "description": "Thermalplatten-, Shroud- und Temperaturregellösungen für stabile Profile, Zyklierung, Ausheizen und Qualifikationsabläufe."
-      },
-      {
-        "title": "Vakuumsystemtechnik",
-        "description": "Vakuumarchitekturen mit Pumpen, Ventilen, Sensoren und Schutzlogik für zuverlässigen Hochvakuumbetrieb."
-      },
-      {
-        "title": "Testkampagnen-Unterstützung",
-        "description": "Engineering- und Betriebsunterstützung für Thermalvakuum-Testkampagnen, von der Vorbereitung bis zur Durchführung."
-      },
-      {
-        "title": "Subsystem-Integration",
-        "description": "Integration von thermischen, Vakuum-, Instrumentierungs- und Steuerungssubsystemen zu kohärenten Testumgebungen."
-      },
-      {
-        "title": "Retrofit, Wartung & Reparatur",
-        "description": "Modernisierung, Wartung, Reparatur und gezielte Upgrades für bestehende Thermalvakuum-Infrastruktur."
-      }
-    ]
-  },
   "productPortfolio": {
     "eyebrow": "Produktportfolio",
     "title": "Kammerplattformen",
@@ -96,7 +57,7 @@
           "value": "65 bis 2000 L"
         },
         "pressure": {
-          "label": "Enddruck",
+          "label": "Betriebsdruck",
           "value": "≤ 1 × 10⁻⁶ mbar"
         },
         "temperature": {
@@ -104,7 +65,7 @@
           "value": "−190 °C bis +150 °C*"
         }
       },
-      "note": "*Temperaturbereich abhängig vom gewählten Thermalkonzept (direkte LN₂-Kühlung, GN₂-Umwälzung oder mechanische Kühlung). Niedrigere Enddrücke bis in den Bereich von 10⁻⁷ mbar sind abhängig von der Pumpenkonfiguration möglich."
+      "note": "*Temperaturbereich abhängig vom gewählten Thermalkonzept (direkte LN₂-Kühlung, GN₂-Umwälzung oder mechanische Kühlung). Niedrigere Betriebsdrücke bis in den Bereich von 10⁻⁷ mbar sind abhängig von der Pumpenkonfiguration möglich."
     },
     "cSeries": {
       "title": "C-Serie TVAC",
@@ -126,7 +87,7 @@
           "value": "65 bis 2000 L"
         },
         "pressure": {
-          "label": "Enddruck",
+          "label": "Betriebsdruck",
           "value": "≤ 1 × 10⁻⁶ mbar"
         },
         "temperature": {
@@ -134,7 +95,7 @@
           "value": "−190 °C bis +150 °C*"
         }
       },
-      "note": "*Temperaturbereich abhängig vom gewählten Thermalkonzept (direkte LN₂-Kühlung, GN₂-Umwälzung oder mechanische Kühlung). Niedrigere Enddrücke bis in den Bereich von 10⁻⁷ mbar sind abhängig von der Pumpenkonfiguration möglich."
+      "note": "*Temperaturbereich abhängig vom gewählten Thermalkonzept (direkte LN₂-Kühlung, GN₂-Umwälzung oder mechanische Kühlung). Niedrigere Betriebsdrücke bis in den Bereich von 10⁻⁷ mbar sind abhängig von der Pumpenkonfiguration möglich."
     },
     "custom": {
       "title": "Custom TVAC",
@@ -199,43 +160,46 @@
     ]
   },
   "services": {
-    "eyebrow": "Engineering-Leistungen",
-    "title": "Unterstützung über den gesamten TVAC-Lebenszyklus",
-    "description": "Deepvac entwickelt neue Kammersysteme, modernisiert Bestandsanlagen und hält Testinfrastruktur im Betrieb — von der Subsystem-Integration bis zum langfristigen Lifecycle-Support.",
-    "pillars": [
+    "eyebrow": "Technologie & Leistungen",
+    "title": "Technologie & Leistungen über den gesamten TVAC-Lebenszyklus",
+    "description": "Jedes Deepvac-System vereint Kammerplattform, Thermalsystem und Vakuumtechnik in einer integrierten Architektur. Darauf aufbauend entwickelt Deepvac neue Kammersysteme, modernisiert Bestandsanlagen und hält Testinfrastruktur im Betrieb — von der Subsystem-Integration bis zum langfristigen Lifecycle-Support.",
+    "tech": [
       {
-        "title": "Neuentwicklung von Kammern",
-        "description": "Auslegung, Fertigung und Inbetriebnahme neuer Thermalvakuumkammern — von der Anforderungsspezifikation bis zum abgenommenen, betriebsbereiten System."
+        "label": "Kerntechnologie",
+        "title": "TVAC-Kammerplattformen",
+        "description": "Standardisierte und kundenspezifische Thermalvakuumkammern für Raumfahrtqualifikation, thermische Zyklierung und Weltraumumgebungssimulation."
       },
       {
-        "title": "Modernisierung & Upgrades",
-        "description": "Gezielte Upgrades für Bestandssysteme zur Verbesserung von Steuerungsqualität, Zuverlässigkeit, Bedienbarkeit und langfristiger technischer Leistungsfähigkeit."
+        "label": "Kerntechnologie",
+        "title": "Thermische Regelsysteme",
+        "description": "Thermalplatten-, Shroud- und Temperaturregellösungen für stabile Profile, Zyklierung, Ausheizen und Qualifikationsabläufe."
       },
       {
-        "title": "Betrieb & Lifecycle-Support",
-        "description": "Wartung, Reparatur und Kampagnenunterstützung, um Testinfrastruktur verfügbar, stabil und einsatzbereit zu halten."
+        "label": "Kerntechnologie",
+        "title": "Vakuumsystemtechnik",
+        "description": "Vakuumarchitekturen mit Pumpen, Ventilen, Sensoren und Schutzlogik für zuverlässigen Hochvakuumbetrieb."
       }
     ],
     "items": [
       {
         "label": "Kampagnenunterstützung",
         "title": "Prüfdienstleistungen",
-        "description": "Unterstützung bei Qualifikations-, Validierungs- und Entwicklungskampagnen, die stabile Umgebungskontrolle und reproduzierbare Workflows erfordern."
+        "description": "Engineering- und Betriebsunterstützung für Qualifikations-, Validierungs- und Entwicklungskampagnen — von Aufbau und Vorbereitung bis zur stabilen, reproduzierbaren Durchführung."
       },
       {
         "label": "Steuerungsarchitektur",
         "title": "Steuerungstechnik",
-        "description": "Entwicklung von Kammersteuerungsarchitekturen, Automatisierungslogik, Benutzerschnittstellen und Instrumentierungsintegration für zuverlässigen Systembetrieb."
+        "description": "Entwicklung SPS-basierter Steuerungsarchitekturen, Automatisierungs- und Überwachungslogik, Benutzerschnittstellen, Datenerfassung und Instrumentierungsintegration für stabile, reproduzierbare Testdurchführung."
       },
       {
         "label": "Mechanisches Engineering",
         "title": "Mechanische Konstruktion",
-        "description": "Engineering von Kammerbaugruppen, Schnittstellen, Vorrichtungen, Tragstrukturen und anwendungsspezifischen mechanischen Integrationskonzepten."
+        "description": "Engineering von Kammerlayouts, Baugruppen, Schnittstellen, Durchführungen, Vorrichtungen, Montagekonzepten und Tragstrukturen für anwendungsspezifische Testkonfigurationen."
       },
       {
         "label": "Bestandssystem-Upgrades",
         "title": "Retrofit & Modernisierung",
-        "description": "Technische Upgrades für bestehende TVAC-Systeme zur Verbesserung von Zuverlässigkeit, Bedienbarkeit, Sicherheit, Regelgenauigkeit und Lebensdauerleistung."
+        "description": "Gezielte technische Upgrades für bestehende TVAC-Systeme zur Verbesserung von Zuverlässigkeit, Bedienbarkeit, Sicherheit, Regelgenauigkeit und Lebensdauerleistung."
       },
       {
         "label": "Verfügbarkeitsunterstützung",

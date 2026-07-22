@@ -1,7 +1,7 @@
 {
   "overview": {
     "eyebrow": "Product Range",
-    "title": "Thermal Vacuum Chamber Systems",
+    "title": "Overview",
     "description": "Deepvac develops standardised and custom-engineered thermal vacuum systems for aerospace qualification, environmental simulation, and research applications. Our chamber platforms address a range of test requirements, from established workflows using modular standard systems to fully bespoke configurations for complex mission profiles.",
     "standardSeries": {
       "title": "Standard Series",
@@ -110,8 +110,8 @@
     }
   },
   "standardSeries": {
-    "eyebrow": "Products / Standard Series",
-    "title": "Pre-Engineered TVAC Platforms",
+    "eyebrow": "Products / Standard TVAC",
+    "title": "Standard TVAC",
     "description": "Standardised thermal vacuum chamber platforms with modular configurations and repeatable performance for aerospace qualification, environmental simulation, and research testing.",
     "tSeries": {
       "eyebrow": "Cubic Thermal Vacuum Chambers",
@@ -332,7 +332,7 @@
   },
   "customTvac": {
     "eyebrow": "Products - Custom TVAC",
-    "title": "Application-Specific Thermal Vacuum Engineering",
+    "title": "Custom TVAC",
     "description": "When standard chamber platforms cannot meet your test requirements, Deepvac develops fully custom thermal vacuum systems, engineered from concept through commissioning around your specific geometry, thermal profile, instrumentation, and integration constraints. Custom configurations cover volumes below and above the standard series and ultimate pressures down to the 10⁻⁷ mbar range.",
     "heroCaption": "Custom thermal vacuum chamber, engineered, integrated, and commissioned by Deepvac.",
     "projectDrivers": {
@@ -522,7 +522,7 @@
   },
   "thermalVision": {
     "eyebrow": "Products / Engineering Systems",
-    "title": "Deepvac Thermal Vision",
+    "title": "Thermal Vision",
     "heroDescription": "Pressure-tight thermal camera integration for thermal vacuum chambers. Continuous infrared imaging under high-vacuum and extreme temperature conditions, with active thermal management, temperature stabilization of the camera, and full chamber integration engineering.",
     "imageLabel": "Pressure-Tight Camera Enclosure",
     "splitLabel": "System Overview",
@@ -583,7 +583,7 @@
   },
   "options": {
     "eyebrow": "Chamber configuration",
-    "title": "Options",
+    "title": "Options TVAC",
     "description": "Every Deepvac chamber starts from a proven base configuration. Options extend it — or adapt the base itself — to match your exact test requirements. Some options add capability on top; others modify the underlying configuration.",
     "note": "Not every combination is available on every platform — we confirm feasibility during the technical clarification.",
     "catalog": {
