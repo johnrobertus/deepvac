@@ -18,7 +18,10 @@
     "labels": {
       "advantages": "Vorteile",
       "constraints": "Grenzen",
-      "takeaway": "Fazit"
+      "takeaway": "Fazit",
+      "faqTitle": "Häufige Fragen",
+      "relatedTitle": "Verwandte Artikel",
+      "relatedSolutions": "Passende Lösungen"
     },
     "articles": {
       "coolingSystems": {

@@ -18,7 +18,10 @@
     "labels": {
       "advantages": "Advantages",
       "constraints": "Constraints",
-      "takeaway": "Takeaway"
+      "takeaway": "Takeaway",
+      "faqTitle": "Frequently Asked Questions",
+      "relatedTitle": "Related Articles",
+      "relatedSolutions": "Related Solutions"
     },
     "articles": {
       "coolingSystems": {
