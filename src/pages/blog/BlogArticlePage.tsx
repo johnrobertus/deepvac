@@ -7,11 +7,10 @@ import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/components/LanguageProvider";
 import { getHreflangs, getCanonical, localizedPath } from "@/lib/routes";
 import { blogArticles } from "@/lib/blog";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ExternalLink } from "lucide-react";
 import { type ReactNode } from "react";
 
 interface BlogArticlePageProps {
-  /** Article slug — must match an entry in blogArticles registry */
   slug: string;
   categoryKey: string;
   titleKey: string;
@@ -29,13 +28,17 @@ export function BlogArticlePage({
   const { t: tc } = useTranslation("common");
   const { lang } = useLanguage();
   const { pathname } = useLocation();
+
   const hreflangs = getHreflangs(pathname);
   const canonical = getCanonical(pathname, lang);
 
-  const article = blogArticles.find((a) => a.slug === slug);
+  const article = blogArticles.find((candidate) => candidate.slug === slug);
   const seoKey = article?.seoKey ?? "resources";
   const datePublished = article?.datePublished ?? "";
   const dateModified = article?.dateModified ?? datePublished;
+  const intent = article?.searchIntent[lang];
+  const references = article?.references ?? [];
+  const technicalNote = article?.technicalNote?.[lang];
 
   const seoTitle = tSeo(`${seoKey}.title`);
   const seoDescription = tSeo(`${seoKey}.description`);
@@ -51,6 +54,18 @@ export function BlogArticlePage({
     mainEntityOfPage: canonical,
     ...(datePublished ? { datePublished } : {}),
     ...(dateModified ? { dateModified } : {}),
+    ...(intent?.primaryKeyword ? { keywords: intent.primaryKeyword } : {}),
+    ...(intent?.primaryQuestion
+      ? {
+          about: {
+            "@type": "Thing",
+            name: intent.primaryQuestion,
+          },
+        }
+      : {}),
+    ...(references.length > 0
+      ? { citation: references.map((reference) => reference.url) }
+      : {}),
     author: {
       "@type": "Organization",
       name: "Deepvac GmbH",
@@ -73,12 +88,21 @@ export function BlogArticlePage({
         <html lang={lang} />
         <title>{seoTitle}</title>
         <meta name="description" content={seoDescription} />
+        {intent?.primaryKeyword && (
+          <meta name="keywords" content={intent.primaryKeyword} />
+        )}
         <link rel="canonical" href={canonical} />
-        {hreflangs.map((h) => (
-          <link key={h.lang} rel="alternate" hrefLang={h.lang} href={h.href} />
+        {hreflangs.map((item) => (
+          <link
+            key={item.lang}
+            rel="alternate"
+            hrefLang={item.lang}
+            href={item.href}
+          />
         ))}
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
+
       <PageShell>
         <section className="py-20 md:py-32 px-6">
           <div className="container max-w-3xl space-y-6">
@@ -89,7 +113,9 @@ export function BlogArticlePage({
               <ArrowLeft className="w-4 h-4" />
               {t("blog.backToBlog")}
             </Link>
-            <span className="mono-label text-blue block">{t(categoryKey)}</span>
+            <span className="mono-label text-blue block">
+              {t(categoryKey)}
+            </span>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight text-sand">
               {headline}
             </h1>
@@ -98,15 +124,63 @@ export function BlogArticlePage({
 
         <Section>
           <article className="max-w-2xl mx-auto space-y-8 text-sand/85 leading-relaxed">
+            {technicalNote && (
+              <aside className="rounded-lg border border-blue/25 bg-blue/5 p-5 space-y-2">
+                <h2 className="mono-label text-blue">
+                  {t("blog.labels.technicalNote")}
+                </h2>
+                <p className="text-sm text-sand/80">{technicalNote}</p>
+              </aside>
+            )}
+
             {children}
+
+            {references.length > 0 && (
+              <div className="border-t border-gray/15 pt-8 space-y-4">
+                <h2 className="text-xl md:text-2xl font-medium text-sand">
+                  {t("blog.labels.referencesTitle")}
+                </h2>
+                <p className="text-sm text-sand/70">
+                  {t("blog.labels.referencesNote")}
+                </p>
+                <ol className="space-y-3">
+                  {references.map((reference) => (
+                    <li key={reference.url}>
+                      <a
+                        href={reference.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="group inline-flex items-start gap-2 text-sm text-sand/85 hover:text-sand transition-colors"
+                      >
+                        <ExternalLink className="w-4 h-4 mt-0.5 shrink-0 text-blue" />
+                        <span>
+                          <span className="font-medium">
+                            {reference.title}
+                          </span>
+                          <span className="block text-sand/60">
+                            {reference.publisher}
+                          </span>
+                        </span>
+                      </a>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            )}
           </article>
         </Section>
 
         <CTABand
-          title={lang === "de" ? "Fragen zu diesem Thema?" : "Questions About This Topic?"}
-          description={lang === "de"
-            ? "Unser Engineering-Team steht für technische Rückfragen zur Verfügung."
-            : "Our engineering team is available for technical follow-up."}
+          title={
+            lang === "de"
+              ? "Konkrete Randbedingungen klären"
+              : "Clarify a Specific Test Case"
+          }
+          description={
+            lang === "de"
+              ? "Für eine belastbare Auslegung sind Prüfling, Testprofil und Standortbedingungen gemeinsam zu betrachten."
+              : "A defensible configuration starts with the test item, verification profile and site constraints."
+          }
         >
           <Button asChild>
             <Link to={localizedPath("/contact", lang)}>

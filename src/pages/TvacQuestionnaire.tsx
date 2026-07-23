@@ -26,6 +26,16 @@ import { cn } from "@/lib/utils";
 import { QuestionnairePrintView } from "@/components/questionnaire/QuestionnairePrintView";
 import { trackEvent } from "@/lib/analytics";
 
+declare global {
+  interface Window {
+    turnstile?: {
+      render: (el: HTMLElement, opts: { sitekey: string; callback?: () => void; size?: string }) => string;
+      getResponse: (id: string) => string | undefined;
+      reset: (id: string) => void;
+    };
+  }
+}
+
 const TURNSTILE_SITE_KEY = "0x4AAAAAACu_Uqbd5b8IkXxU";
 
 /* ---------- Dynamic logic constants (verbatim from Q11-5.html) ---------- */
@@ -329,7 +339,7 @@ export default function TvacQuestionnaire() {
     if (submitted) return;
     if (!turnstileRef.current) return;
     const interval = setInterval(() => {
-      const w = (window as any).turnstile;
+      const w = window.turnstile;
       if (w && turnstileRef.current && !turnstileWidgetId.current) {
         turnstileWidgetId.current = w.render(turnstileRef.current, {
           sitekey: TURNSTILE_SITE_KEY, callback: () => {}, size: "invisible",
@@ -437,7 +447,7 @@ export default function TvacQuestionnaire() {
     setSubmissionError(null);
     try {
       let turnstileToken = "";
-      const w = (window as any).turnstile;
+      const w = window.turnstile;
       if (w && turnstileWidgetId.current) {
         turnstileToken = w.getResponse(turnstileWidgetId.current) || "";
       }
@@ -445,7 +455,7 @@ export default function TvacQuestionnaire() {
         const deadline = Date.now() + 5000;
         while (Date.now() < deadline) {
           await new Promise((r) => setTimeout(r, 200));
-          const ww = (window as any).turnstile;
+          const ww = window.turnstile;
           if (ww && turnstileRef.current && !turnstileWidgetId.current) {
             try {
               turnstileWidgetId.current = ww.render(turnstileRef.current, {
@@ -460,7 +470,7 @@ export default function TvacQuestionnaire() {
         }
       }
       if (!turnstileToken) {
-        const ww = (window as any).turnstile;
+        const ww = window.turnstile;
         if (ww && turnstileWidgetId.current) { ww.reset(turnstileWidgetId.current); }
         setSubmissionError(t("error.message"));
         toast.error(t("error.title"));
@@ -490,14 +500,14 @@ export default function TvacQuestionnaire() {
       trackEvent("questionnaire_submitted");
       turnstileWidgetId.current = null;
       toast.success(t("success.title"));
-    } catch (err: any) {
+    } catch (err: unknown) {
       console.error("Questionnaire submission error:", err);
-      const msg = err?.message?.includes("Too many requests")
+      const msg = err instanceof Error && err.message.includes("Too many requests")
         ? t("error.tooManyRequests")
         : t("error.message");
       setSubmissionError(msg);
       toast.error(t("error.title"));
-      const w = (window as any).turnstile;
+      const w = window.turnstile;
       if (w && turnstileWidgetId.current) { w.reset(turnstileWidgetId.current); }
     } finally {
       setSending(false);

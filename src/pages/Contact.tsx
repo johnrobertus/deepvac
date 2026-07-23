@@ -20,7 +20,7 @@ import { trackEvent } from "@/lib/analytics";
 declare global {
   interface Window {
     turnstile?: {
-      render: (el: HTMLElement, opts: any) => string;
+      render: (el: HTMLElement, opts: { sitekey: string; callback?: () => void; size?: string }) => string;
       getResponse: (id: string) => string | undefined;
       reset: (id: string) => void;
     };
@@ -256,13 +256,12 @@ const Contact = () => {
       trackEvent("form_submitted", { page: "contact", interests: interests.join(", ") || "none" });
       turnstileWidgetId.current = null;
       toast.success(tc("form.success.toast"));
-    } catch (err: any) {
+    } catch (err: unknown) {
       console.error("Submission error:", err);
-      if (err?.message?.includes("Too many requests")) {
-        toast.error(tc("form.errors.tooManyRequests"));
-      } else {
-        toast.error(tc("form.errors.submissionFailedDirect"));
-      }
+      const message = err instanceof Error && err.message.includes("Too many requests")
+        ? tc("form.errors.tooManyRequests")
+        : tc("form.errors.submissionFailedDirect");
+      toast.error(message);
       if (window.turnstile && turnstileWidgetId.current) { window.turnstile.reset(turnstileWidgetId.current); }
     } finally { setSending(false); }
   };

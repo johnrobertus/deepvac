@@ -19,7 +19,7 @@ function writeConsent(value: boolean) {
     if (typeof window === "undefined") return;
     if (value) localStorage.setItem(STORAGE_KEY, "true");
     else localStorage.removeItem(STORAGE_KEY);
-  } catch {}
+  } catch { /* no-op */ }
 }
 
 interface PrivacySettingsDialogProps {

@@ -17,7 +17,7 @@
   },
   "options": {
     "title": "TVAC Chamber Options | Deepvac",
-    "description": "Configure your thermal vacuum chamber: solar simulation, bake-out, oil-free pumping, RGA, thermography viewports and more — all Deepvac chamber options at a glance."
+    "description": "Configure your thermal vacuum chamber: solar simulation, bake-out, oil-free pumping, RGA, thermography viewports and more – all Deepvac chamber options at a glance."
   },
   "services": {
     "title": "TVAC Engineering and Services | Deepvac",
@@ -49,7 +49,7 @@
   },
   "team": {
     "title": "Our Team | Deepvac",
-    "description": "Meet the engineering team behind Deepvac — specialists in thermal vacuum system design, control architecture, and chamber development."
+    "description": "Meet the engineering team behind Deepvac – specialists in thermal vacuum system design, control architecture, and chamber development."
   },
   "catalogs": {
     "title": "Catalogues & Resources | Deepvac",
@@ -104,23 +104,111 @@
     "description": "Technical articles on thermal vacuum systems, space simulation, qualification testing, retrofit decisions, and TVAC engineering practice."
   },
   "blogCoolingSystems": {
-    "title": "TVAC Cooling Systems: Mechanical vs LN2 | Deepvac",
-    "description": "Engineering overview of thermal vacuum cooling architectures — mechanical refrigeration, LN2 circuits, and hybrid approaches with their trade-offs."
+    "title": "Cooling Systems for Thermal Vacuum Chambers | Deepvac",
+    "description": "Compare mechanical refrigeration, nitrogen-based cooling and combined TVAC thermal concepts, including range, site infrastructure and operating trade-offs."
   },
   "blogRetrofitVsReplacement": {
-    "title": "TVAC Retrofit vs Replacement Decision Guide | Deepvac",
-    "description": "Structured framework for evaluating thermal vacuum chamber retrofit versus replacement — technical condition, lifecycle cost, and operational fit."
+    "title": "TVAC Retrofit vs Replacement: Decision Framework | Deepvac",
+    "description": "A condition-based framework for comparing TVAC retrofit and replacement by vessel condition, target capability, downtime, documentation and lifecycle cost."
   },
   "blogAerospaceQualification": {
     "title": "Aerospace Qualification Testing in TVAC | Deepvac",
-    "description": "Environmental test requirements for aerospace hardware qualification in thermal vacuum chambers — standards, thermal cycling, and chamber capabilities."
+    "description": "How programme-specific standards, thermal and vacuum boundaries, instrumentation, calibration and documentation shape a TVAC qualification campaign."
   },
   "blogTvacCostDrivers": {
-    "title": "TVAC Chamber Cost: Seven Price Drivers | Deepvac",
-    "description": "What does a thermal vacuum chamber cost? A practical guide to the seven drivers: volume, thermal concept, vacuum, interfaces, controls, docs, services."
+    "title": "TVAC Chamber Cost: Seven Engineering Drivers | Deepvac",
+    "description": "How envelope, thermal concept, working pressure, interfaces, controls, documentation and lifecycle scope drive thermal-vacuum system cost."
   },
   "blogTvacTestCampaign": {
-    "title": "Inside a TVAC Test Campaign: Six Phases | Deepvac",
-    "description": "From test plan through pump-down, thermal cycling, and monitoring to the final data package — how a thermal vacuum test campaign is structured."
+    "title": "TVAC Test Campaign: From Plan to Data Package | Deepvac",
+    "description": "The traceable phases of a thermal-vacuum campaign, from requirements and setup through execution, anomaly handling and final data delivery."
+  },
+  "blogWhatIsTvacTesting": {
+    "title": "What Is Thermal Vacuum (TVAC) Testing? | Deepvac",
+    "description": "Thermal vacuum testing exposes space hardware to vacuum and temperature extremes. What TVAC means, how a chamber works and where it fits in qualification."
+  },
+  "blogVacuumLevelsExplained": {
+    "title": "Vacuum Levels Explained: Rough to UHV | Deepvac",
+    "description": "Rough, medium, high and ultra-high vacuum explained with pump, gauge and molecular-flow context, including why many TVAC specifications use high vacuum."
+  },
+  "blogOutgassingBasics": {
+    "title": "Outgassing in Vacuum: TML, CVCM, Bake-Out | Deepvac",
+    "description": "Outgassing in vacuum explained: desorption physics, ECSS TML and CVCM screening limits, typical problem materials, bake-out practice and QCM/RGA monitoring."
+  },
+  "blogTvacTestTypes": {
+    "title": "TVAC Test Types: Cycling, Balance, Bake-Out | Deepvac",
+    "description": "TVAC test types compared: thermal vacuum cycling, thermal balance, bake-out, starts and soaks – goals, typical profiles and qualification vs acceptance."
+  },
+  "blogSpaceEnvironmentSimulation": {
+    "title": "Space Environment Simulation in TVAC Chambers | Deepvac",
+    "description": "How space simulation chambers recreate vacuum, the 3 K cold sink, solar flux and eclipses – and which parts of the space environment stay out of reach."
+  },
+  "blogTvacChamberSizing": {
+    "title": "TVAC Chamber Sizing: Choosing the Right Volume | Deepvac",
+    "description": "TVAC chamber sizing explained: nominal vs usable volume, clearance rules of thumb, cubic vs cylindrical geometry and growth margin without oversizing costs."
+  },
+  "blogEcssStandardsOverview": {
+    "title": "ECSS, SMC-S-016 & NASA GEVS for TVAC | Deepvac",
+    "description": "TVAC standards overview: ECSS-E-ST-10-03C Rev.1, SMC-S-016 and GSFC-STD-7000B, including tailoring, verification approaches and chamber implications."
+  },
+  "blogTvacFacilityRequirements": {
+    "title": "TVAC Facility Requirements: Lab Setup | Deepvac",
+    "description": "TVAC facility requirements explained: floor load, transport path, electrical supply, cooling, LN₂ safety, cleanliness and IT – plus a practical site checklist."
+  },
+  "blogPumpingSystemSelection": {
+    "title": "TVAC Pumping Systems: Selection Guide | Deepvac",
+    "description": "Vacuum pumping system selection for TVAC chambers: oil-free backing pumps, turbo pumps, roots boosters, cryo traps, sizing drivers and RGA monitoring explained."
+  },
+  "blogCryoShroudsThermalPlates": {
+    "title": "Cryo Shrouds & Thermal Plates in TVAC | Deepvac",
+    "description": "Cryo shrouds and thermal plates explained: construction, LN₂ and GN₂ cooling concepts, uniformity, view factors and when a TVAC test needs a shroud at all."
+  },
+  "blogContaminationControl": {
+    "title": "Contamination Control in TVAC Testing | Deepvac",
+    "description": "Contamination control in thermal vacuum testing: molecular vs particulate sources, prevention via bake-out and materials, QCM and RGA monitoring in practice."
+  },
+  "blogViewportsOpticalAccess": {
+    "title": "TVAC Viewports & Optical Access | Deepvac",
+    "description": "Vacuum chamber viewports: window materials from fused silica to ZnSe, thermography options, port sizing, contamination pitfalls and spare-port strategy."
+  },
+  "blogTemperatureMeasurement": {
+    "title": "Temperature Measurement in TVAC Chambers | Deepvac",
+    "description": "Thermocouple or PT100 in vacuum? Sensor selection, mounting, channel planning and calibration for TVAC temperature measurement – with common error sources."
+  },
+  "blogSolarSimulationVsIr": {
+    "title": "Solar Simulation vs IR Heating in TVAC | Deepvac",
+    "description": "Solar simulator, IR lamp arrays or heater plates? How to impose external heat flux in a TVAC chamber, when spectral fidelity matters and how each is controlled."
+  },
+  "blogLeakDetectionBasics": {
+    "title": "Helium Leak Testing of Vacuum Chambers | Deepvac",
+    "description": "How helium leak detection works: vacuum vs sniffer method, what leak rates in mbar·l/s mean in practice, virtual leaks, and when to test a TVAC chamber."
+  },
+  "blogTvacAutomation": {
+    "title": "TVAC Automation: PLC Control and Recipes | Deepvac",
+    "description": "What a modern TVAC control system does: recipe execution, safety interlocks, data logging, alarming and remote monitoring – plus controls retrofit for old."
+  },
+  "blogCubesatTesting": {
+    "title": "CubeSat Thermal Vacuum (TVAC) Testing | Deepvac",
+    "description": "CubeSat thermal vacuum testing: why the TVAC screen matters for smallsats, what a campaign includes, chamber sizing for 1U–16U and budget-friendly options."
+  },
+  "blogElectricPropulsionTesting": {
+    "title": "Electric Propulsion Vacuum Testing | Deepvac",
+    "description": "Why electric propulsion vacuum testing needs custom facilities: pumping speed for xenon flow, background pressure effects, sputter protection, diagnostics."
+  },
+  "blogOpticsElectronicsTesting": {
+    "title": "Testing Optics & Electronics in Vacuum | Deepvac",
+    "description": "Testing electronics in vacuum: why boards overheat without convection, how contamination reaches optics, and which monitoring – QCM, RGA, IR imaging – helps."
+  },
+  "blogInHouseVsExternalTesting": {
+    "title": "In-House vs External TVAC Testing | Deepvac",
+    "description": "In-house vs external TVAC testing: utilization thresholds, hidden costs of ownership and of test services, hybrid strategies and a decision checklist."
+  },
+  "blogUsedVsNewTvac": {
+    "title": "Used TVAC Chamber vs New: What to Check | Deepvac",
+    "description": "Buy a used thermal vacuum chamber or new? Real risks – seal history, contamination legacy, obsolete controls – plus inspection checklist and retrofit path."
+  },
+  "blogTvacLeadTimes": {
+    "title": "TVAC Chamber Lead Time: What Drives It | Deepvac",
+    "description": "Vacuum chamber lead time explained: engineering, long-lead pumps and chillers, vessel fabrication, acceptance and commissioning – and what customers control."
   }
 }

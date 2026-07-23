@@ -571,7 +571,9 @@
       "group": "resources",
       "priority": 0.6,
       "changefreq": "monthly",
-      "sources": ["src/pages/Resources.tsx"]
+      "sources": [
+        "src/pages/Resources.tsx"
+      ]
     }
   },
   {
@@ -680,6 +682,292 @@
     }
   },
   {
+    "en": "/resources/blog/what-is-thermal-vacuum-testing",
+    "de": "/de/ressourcen/blog/was-ist-thermalvakuumtest",
+    "seoKey": "blogWhatIsTvacTesting",
+    "sitemap": {
+      "group": "resources",
+      "priority": 0.55,
+      "changefreq": "monthly",
+      "sources": [
+        "src/content/blog"
+      ]
+    }
+  },
+  {
+    "en": "/resources/blog/vacuum-levels-explained",
+    "de": "/de/ressourcen/blog/vakuumbereiche-erklaert",
+    "seoKey": "blogVacuumLevelsExplained",
+    "sitemap": {
+      "group": "resources",
+      "priority": 0.55,
+      "changefreq": "monthly",
+      "sources": [
+        "src/content/blog"
+      ]
+    }
+  },
+  {
+    "en": "/resources/blog/outgassing-in-vacuum",
+    "de": "/de/ressourcen/blog/ausgasung-im-vakuum",
+    "seoKey": "blogOutgassingBasics",
+    "sitemap": {
+      "group": "resources",
+      "priority": 0.55,
+      "changefreq": "monthly",
+      "sources": [
+        "src/content/blog"
+      ]
+    }
+  },
+  {
+    "en": "/resources/blog/tvac-test-types",
+    "de": "/de/ressourcen/blog/tvac-testarten",
+    "seoKey": "blogTvacTestTypes",
+    "sitemap": {
+      "group": "resources",
+      "priority": 0.55,
+      "changefreq": "monthly",
+      "sources": [
+        "src/content/blog"
+      ]
+    }
+  },
+  {
+    "en": "/resources/blog/space-environment-simulation",
+    "de": "/de/ressourcen/blog/weltraumumgebung-simulieren",
+    "seoKey": "blogSpaceEnvironmentSimulation",
+    "sitemap": {
+      "group": "resources",
+      "priority": 0.55,
+      "changefreq": "monthly",
+      "sources": [
+        "src/content/blog"
+      ]
+    }
+  },
+  {
+    "en": "/resources/blog/tvac-chamber-sizing",
+    "de": "/de/ressourcen/blog/tvac-kammer-dimensionierung",
+    "seoKey": "blogTvacChamberSizing",
+    "sitemap": {
+      "group": "resources",
+      "priority": 0.55,
+      "changefreq": "monthly",
+      "sources": [
+        "src/content/blog"
+      ]
+    }
+  },
+  {
+    "en": "/resources/blog/ecss-tvac-standards",
+    "de": "/de/ressourcen/blog/ecss-normen-tvac-tests",
+    "seoKey": "blogEcssStandardsOverview",
+    "sitemap": {
+      "group": "resources",
+      "priority": 0.55,
+      "changefreq": "monthly",
+      "sources": [
+        "src/content/blog"
+      ]
+    }
+  },
+  {
+    "en": "/resources/blog/tvac-facility-requirements",
+    "de": "/de/ressourcen/blog/tvac-anlagen-infrastruktur",
+    "seoKey": "blogTvacFacilityRequirements",
+    "sitemap": {
+      "group": "resources",
+      "priority": 0.55,
+      "changefreq": "monthly",
+      "sources": [
+        "src/content/blog"
+      ]
+    }
+  },
+  {
+    "en": "/resources/blog/tvac-pumping-systems",
+    "de": "/de/ressourcen/blog/vakuumpumpstand-tvac",
+    "seoKey": "blogPumpingSystemSelection",
+    "sitemap": {
+      "group": "resources",
+      "priority": 0.55,
+      "changefreq": "monthly",
+      "sources": [
+        "src/content/blog"
+      ]
+    }
+  },
+  {
+    "en": "/resources/blog/cryo-shrouds-thermal-plates",
+    "de": "/de/ressourcen/blog/kryo-shrouds-thermalplatten",
+    "seoKey": "blogCryoShroudsThermalPlates",
+    "sitemap": {
+      "group": "resources",
+      "priority": 0.55,
+      "changefreq": "monthly",
+      "sources": [
+        "src/content/blog"
+      ]
+    }
+  },
+  {
+    "en": "/resources/blog/contamination-control-tvac",
+    "de": "/de/ressourcen/blog/kontaminationskontrolle-tvac",
+    "seoKey": "blogContaminationControl",
+    "sitemap": {
+      "group": "resources",
+      "priority": 0.55,
+      "changefreq": "monthly",
+      "sources": [
+        "src/content/blog"
+      ]
+    }
+  },
+  {
+    "en": "/resources/blog/tvac-viewports-optical-access",
+    "de": "/de/ressourcen/blog/schauglaeser-optischer-zugang",
+    "seoKey": "blogViewportsOpticalAccess",
+    "sitemap": {
+      "group": "resources",
+      "priority": 0.55,
+      "changefreq": "monthly",
+      "sources": [
+        "src/content/blog"
+      ]
+    }
+  },
+  {
+    "en": "/resources/blog/temperature-measurement-tvac",
+    "de": "/de/ressourcen/blog/temperaturmessung-tvac",
+    "seoKey": "blogTemperatureMeasurement",
+    "sitemap": {
+      "group": "resources",
+      "priority": 0.55,
+      "changefreq": "monthly",
+      "sources": [
+        "src/content/blog"
+      ]
+    }
+  },
+  {
+    "en": "/resources/blog/solar-simulation-vs-infrared",
+    "de": "/de/ressourcen/blog/solarsimulation-vs-infrarot",
+    "seoKey": "blogSolarSimulationVsIr",
+    "sitemap": {
+      "group": "resources",
+      "priority": 0.55,
+      "changefreq": "monthly",
+      "sources": [
+        "src/content/blog"
+      ]
+    }
+  },
+  {
+    "en": "/resources/blog/helium-leak-testing-tvac",
+    "de": "/de/ressourcen/blog/helium-lecktest-tvac",
+    "seoKey": "blogLeakDetectionBasics",
+    "sitemap": {
+      "group": "resources",
+      "priority": 0.55,
+      "changefreq": "monthly",
+      "sources": [
+        "src/content/blog"
+      ]
+    }
+  },
+  {
+    "en": "/resources/blog/tvac-chamber-automation",
+    "de": "/de/ressourcen/blog/tvac-automatisierung-steuerung",
+    "seoKey": "blogTvacAutomation",
+    "sitemap": {
+      "group": "resources",
+      "priority": 0.55,
+      "changefreq": "monthly",
+      "sources": [
+        "src/content/blog"
+      ]
+    }
+  },
+  {
+    "en": "/resources/blog/cubesat-tvac-testing",
+    "de": "/de/ressourcen/blog/cubesat-tvac-test",
+    "seoKey": "blogCubesatTesting",
+    "sitemap": {
+      "group": "resources",
+      "priority": 0.55,
+      "changefreq": "monthly",
+      "sources": [
+        "src/content/blog"
+      ]
+    }
+  },
+  {
+    "en": "/resources/blog/electric-propulsion-vacuum-testing",
+    "de": "/de/ressourcen/blog/elektrische-antriebe-vakuumtest",
+    "seoKey": "blogElectricPropulsionTesting",
+    "sitemap": {
+      "group": "resources",
+      "priority": 0.55,
+      "changefreq": "monthly",
+      "sources": [
+        "src/content/blog"
+      ]
+    }
+  },
+  {
+    "en": "/resources/blog/testing-optics-electronics-vacuum",
+    "de": "/de/ressourcen/blog/optik-elektronik-vakuumtest",
+    "seoKey": "blogOpticsElectronicsTesting",
+    "sitemap": {
+      "group": "resources",
+      "priority": 0.55,
+      "changefreq": "monthly",
+      "sources": [
+        "src/content/blog"
+      ]
+    }
+  },
+  {
+    "en": "/resources/blog/in-house-vs-external-tvac-testing",
+    "de": "/de/ressourcen/blog/inhouse-vs-externe-tvac-tests",
+    "seoKey": "blogInHouseVsExternalTesting",
+    "sitemap": {
+      "group": "resources",
+      "priority": 0.55,
+      "changefreq": "monthly",
+      "sources": [
+        "src/content/blog"
+      ]
+    }
+  },
+  {
+    "en": "/resources/blog/used-tvac-chamber-vs-new",
+    "de": "/de/ressourcen/blog/gebrauchte-tvac-kammer-vs-neu",
+    "seoKey": "blogUsedVsNewTvac",
+    "sitemap": {
+      "group": "resources",
+      "priority": 0.55,
+      "changefreq": "monthly",
+      "sources": [
+        "src/content/blog"
+      ]
+    }
+  },
+  {
+    "en": "/resources/blog/tvac-chamber-lead-time",
+    "de": "/de/ressourcen/blog/tvac-kammer-lieferzeit",
+    "seoKey": "blogTvacLeadTimes",
+    "sitemap": {
+      "group": "resources",
+      "priority": 0.55,
+      "changefreq": "monthly",
+      "sources": [
+        "src/content/blog"
+      ]
+    }
+  },
+  {
     "en": "/careers",
     "de": "/de/karriere",
     "seoKey": "careers",
@@ -747,7 +1035,9 @@
       "group": "legal",
       "priority": 0.2,
       "changefreq": "yearly",
-      "sources": ["src/pages/MediaCredits.tsx"]
+      "sources": [
+        "src/pages/MediaCredits.tsx"
+      ]
     }
   },
   {

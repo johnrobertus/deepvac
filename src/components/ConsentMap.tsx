@@ -17,7 +17,7 @@ function readConsent(): boolean {
 }
 
 function writeConsent(value: boolean) {
-  try { if (typeof window === "undefined") return; if (value) { localStorage.setItem(STORAGE_KEY, "true"); } else { localStorage.removeItem(STORAGE_KEY); } } catch {}
+  try { if (typeof window === "undefined") return; if (value) { localStorage.setItem(STORAGE_KEY, "true"); } else { localStorage.removeItem(STORAGE_KEY); } } catch { /* no-op */ }
 }
 
 interface ConsentMapProps { height?: string; mapUrl?: string; }

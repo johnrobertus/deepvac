@@ -1,0 +1,60 @@
+# Deepvac
+
+> Deepvac GmbH designs and builds thermal vacuum (TVAC) chambers and systems for aerospace qualification, space simulation, and research. Chamber, controls, and service from one source — engineered and built in Germany (Garbsen).
+
+Deepvac offers standardized Standard Series TVAC platforms (cubic T Series and cylindrical C Series, 65-2000 L, working pressure <= 1e-6 mbar, -180 to +150 C), fully custom TVAC systems, the Deepvac Thermal Vision in-chamber infrared camera, and engineering services (testing, control systems, mechanical design, retrofit & modernization, maintenance, subsystem integration). All pages are available in English and German (/de/...).
+
+## Core pages
+
+- [Thermal vacuum chambers](https://deepvac.space/products): TVAC product overview
+- [Standard Series TVAC](https://deepvac.space/products/standard-series): modular chamber platforms, sizes and performance data
+- [Custom TVAC](https://deepvac.space/products/custom-tvac): bespoke systems for special geometries and requirements
+- [Chamber options](https://deepvac.space/products/options): solar simulation, bake-out, oil-free pumping, RGA, QCM, viewports and more
+- [Deepvac Thermal Vision](https://deepvac.space/products/thermal-vision): pressure-rated infrared camera for in-chamber thermography
+- [Engineering services](https://deepvac.space/services): testing, controls, mechanical design, retrofit, maintenance, integration
+- [TVAC testing services](https://deepvac.space/services/testing-services): thermal vacuum test campaign execution
+- [Technical TVAC questionnaire](https://deepvac.space/tvac-questionnaire): structured requirements capture for a quotation
+- [Contact](https://deepvac.space/contact): technical inquiries
+
+## Engineering blog
+
+Technical guidance on thermal vacuum testing, chamber engineering, and procurement decisions. Every article is available in English and German.
+
+### Fundamentals
+
+- [Outgassing in Vacuum: TML, CVCM and Bake-Out Explained](https://deepvac.space/resources/blog/outgassing-in-vacuum): Why materials release gas in vacuum, how ECSS outgassing screening with TML and CVCM works, which materials cause trouble – and how bake-out, QCM and RGA keep contamination under control.
+- [Space Environment Simulation: Recreating Orbit on the Ground](https://deepvac.space/resources/blog/space-environment-simulation): Vacuum, a 3 K cold sink, 1361 W/m² of sunlight: what the thermal space environment does to hardware, how TVAC chambers replicate each element – and what no chamber can do.
+- [TVAC Test Types: From Thermal Cycling to Thermal Balance](https://deepvac.space/resources/blog/tvac-test-types): Thermal vacuum cycling, thermal balance, bake-out, starts and soaks: what each TVAC test type verifies, how a typical profile looks and how qualification differs from acceptance.
+- [TVAC Chamber Sizing: How to Choose the Right Volume](https://deepvac.space/resources/blog/tvac-chamber-sizing): Nominal litres say little: how shroud, thermal plate and fixturing shrink usable volume, which clearances matter, cubic vs cylindrical geometry – and how much growth margin is sensible.
+- [ECSS, SMC-S-016 and NASA GEVS: Thermal Vacuum Test Standards Explained](https://deepvac.space/resources/blog/ecss-tvac-standards): How ECSS-E-ST-10-03C Rev.1, SMC-S-016 and NASA GEVS frame thermal-vacuum verification, how tailoring works and why project requirements remain binding.
+- [Vacuum Levels Explained: From Rough Vacuum to UHV](https://deepvac.space/resources/blog/vacuum-levels-explained): The conventional vacuum ranges, how gas behaviour and equipment change with pressure, and why many thermal-vacuum specifications use the high-vacuum range.
+- [What Is Thermal Vacuum (TVAC) Testing?](https://deepvac.space/resources/blog/what-is-thermal-vacuum-testing): An engineer's introduction to thermal vacuum testing: which space conditions a TVAC chamber simulates, why hardware fails in vacuum, and where the test sits in qualification.
+
+### Engineering guides
+
+- [Cooling Systems for Thermal Vacuum Chambers](https://deepvac.space/resources/blog/cooling-systems): How mechanical refrigeration, nitrogen-based cooling and combined concepts affect TVAC temperature range, infrastructure and operating effort.
+- [Key Requirements for Aerospace Qualification Testing](https://deepvac.space/resources/blog/aerospace-qualification-testing): How programme-specific standards, thermal and vacuum boundaries, instrumentation and documentation shape TVAC qualification testing.
+- [Inside a Thermal Vacuum Test Campaign: From Test Plan to Data Package](https://deepvac.space/resources/blog/tvac-test-campaign): The traceable phases of a TVAC campaign, from requirements and setup through execution, anomaly handling and the final data package.
+- [Helium Leak Testing for TVAC Chambers: Methods, Units, Practice](https://deepvac.space/resources/blog/helium-leak-testing-tvac): How helium leak detection works, what leak rates in mbar·l/s actually mean, how virtual leaks differ from real ones – and when a chamber should be tested.
+- [Temperature Measurement in TVAC: Sensors, Mounting and Calibration](https://deepvac.space/resources/blog/temperature-measurement-tvac): Thermocouple or PT100? How to select, mount and calibrate temperature sensors in vacuum – and deliver traceable data for qualification tests.
+- [TVAC Facility Requirements: What Your Building Must Provide](https://deepvac.space/resources/blog/tvac-facility-requirements): Floor loads, transport path, power, heat rejection, LN₂ safety, cleanliness and IT: what a facility must provide before a thermal vacuum system arrives – with a practical site checklist.
+- [Solar Simulation vs Infrared Heating: Imposing Heat Flux in TVAC](https://deepvac.space/resources/blog/solar-simulation-vs-infrared): Solar simulators, IR lamp arrays and heater plates all impose external heat flux in a thermal vacuum chamber – with very different fidelity, cost and complexity.
+- [TVAC Automation: What a Modern Chamber Control System Does](https://deepvac.space/resources/blog/tvac-chamber-automation): Recipe execution, safety interlocks, data logging, alarming and remote access: why reproducible TVAC testing is above all a controls property.
+- [TVAC Pumping Systems: How to Select the Right Architecture](https://deepvac.space/resources/blog/tvac-pumping-systems): From oil-free backing pumps to turbomolecular pumps, roots boosters and cryo traps: how a TVAC pumping system is structured, sized and monitored – and which drivers actually matter.
+- [Contamination Control in Thermal Vacuum Testing](https://deepvac.space/resources/blog/contamination-control-tvac): Molecular films and particles can quietly degrade optics, sensors and coatings during a TVAC test. How contamination arises, how QCM and RGA measure it, and how you keep a campaign clean.
+- [Viewports and Optical Access in TVAC Chambers](https://deepvac.space/resources/blog/tvac-viewports-optical-access): From simple sight glasses to ZnSe windows for thermography and in-chamber IR cameras: how to plan optical access into a TVAC chamber – materials, ports and pitfalls.
+- [Cryo Shrouds and Thermal Plates: How TVAC Chambers Get Cold](https://deepvac.space/resources/blog/cryo-shrouds-thermal-plates): Radiative cold sink or conductive interface? How cryo shrouds and thermal plates are built, cooled and controlled – and when your test actually needs which.
+
+### Applications
+
+- [CubeSat TVAC Testing: What Small Satellites Really Need](https://deepvac.space/resources/blog/cubesat-tvac-testing): Why thermal vacuum testing pays off even for CubeSats, what a typical campaign looks like, and how to right-size chamber and budget for 1U to 16U.
+- [Electric Propulsion Testing in Vacuum: Why Thruster Facilities Are a Class of Their Own](https://deepvac.space/resources/blog/electric-propulsion-vacuum-testing): A firing Hall or ion thruster turns the vacuum chamber into a continuous gas-load problem. What makes electric propulsion test facilities special – and how to scope one.
+- [Testing Optics and Electronics in Vacuum: The Two Traps That Catch Bench-Proven Hardware](https://deepvac.space/resources/blog/testing-optics-electronics-vacuum): Electronics that run cool on the bench can overheat in vacuum, and clean-looking optics can grow molecular films. How to plan thermal vacuum tests for sensitive payloads.
+
+### Decision support
+
+- [When Retrofit Makes More Sense Than Replacement](https://deepvac.space/resources/blog/retrofit-vs-replacement): A condition-based framework for deciding whether to modernise an existing thermal-vacuum system or replace it.
+- [What Drives the Cost of a Thermal Vacuum Chamber?](https://deepvac.space/resources/blog/tvac-cost-drivers): The engineering choices that drive TVAC system cost: envelope, thermal concept, working pressure, interfaces, controls, documentation and lifecycle scope.
+- [TVAC Chamber Lead Time: What Actually Drives Delivery](https://deepvac.space/resources/blog/tvac-chamber-lead-time): The delivery time of a thermal vacuum chamber is set by engineering, long-lead components and acceptance testing – and partly by you. Where the time goes and how to shorten it.
+- [In-House vs External TVAC Testing: A Decision Framework](https://deepvac.space/resources/blog/in-house-vs-external-tvac-testing): Own chamber or test service? The answer depends on campaign cadence, iteration speed and hidden costs on both sides. A framework for the build-or-buy decision in environmental testing.
+- [Used TVAC Chamber vs New: Evaluating the Second-Hand Market](https://deepvac.space/resources/blog/used-tvac-chamber-vs-new): A used vacuum chamber can cost a fraction of a new system – or the same, once controls, contamination history and adaptation are priced in. What to check before you buy.
