@@ -10,7 +10,9 @@
       "description": "Technical articles on thermal vacuum systems — cooling architectures, retrofit decisions, aerospace qualification requirements, and engineering best practices."
     },
     "categories": {
+      "basics": "BASICS",
       "engineeringGuide": "Engineering Guide",
+      "applications": "APPLICATIONS",
       "decisionSupport": "Decision Support"
     },
     "labels": {
