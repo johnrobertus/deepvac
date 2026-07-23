@@ -12,7 +12,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { useLanguage } from "@/components/LanguageProvider";
 import { getHreflangs, getCanonical, localizedPath } from "@/lib/routes";
 import tseriesImg from "@/assets/tseries-chamber.webp";
-import cseriesImg from "@/assets/cseries-chamber.webp";
+import cseriesImg from "@/assets/cseries-chamber.avif";
 
 const NBSP = "\u00A0";
 const vacuum = `<${NBSP}1${NBSP}×${NBSP}10⁻⁶${NBSP}mbar`;
