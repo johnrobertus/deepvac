@@ -6,8 +6,11 @@ import { PageShell, PageHero, Section, CTABand } from "@/components/PageShell";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/components/LanguageProvider";
 import { getHreflangs, getCanonical, localizedPath } from "@/lib/routes";
-import { blogArticles } from "@/lib/blog";
+import { allListItems, blogPostPath, type BlogListItem } from "@/lib/blogContent";
 import { ArrowRight } from "lucide-react";
+
+// Display order for category groups on the blog index.
+const CATEGORY_ORDER = ["basics", "engineeringGuide", "applications", "decisionSupport"];
 
 const Blog = () => {
   const { t } = useTranslation("blog");
@@ -16,6 +19,33 @@ const Blog = () => {
   const { pathname } = useLocation();
   const hreflangs = getHreflangs(pathname);
   const canonical = getCanonical(pathname, lang);
+
+  const sorted = [...allListItems].sort((a, b) =>
+    b.datePublished.localeCompare(a.datePublished),
+  );
+
+  const groups = CATEGORY_ORDER.map((cat) => ({
+    cat,
+    items: sorted.filter((i) => i.category === cat),
+  })).filter((g) => g.items.length > 0);
+
+  const renderCard = (item: BlogListItem) => (
+    <Link
+      key={item.articleKey}
+      to={blogPostPath(item, lang)}
+      className="bento-card rounded-lg overflow-hidden flex flex-col group"
+    >
+      <div className="p-6 flex flex-col gap-4 flex-1">
+        <span className="mono-label text-blue">{t(`blog.categories.${item.category}`)}</span>
+        <h2 className="text-lg font-medium text-sand leading-snug">{item[lang].title}</h2>
+        <p className="text-body flex-1">{item[lang].description}</p>
+        <span className="inline-flex items-center gap-1.5 text-sm text-blue group-hover:gap-2.5 transition-all mt-2">
+          {t("blog.readArticle")}
+          <ArrowRight className="w-4 h-4" />
+        </span>
+      </div>
+    </Link>
+  );
 
   return (
     <Layout>
@@ -35,44 +65,27 @@ const Blog = () => {
           description={t("blog.description")}
         />
 
-        <Section>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {blogArticles.map((article) => (
-              <Link
-                key={article.slug}
-                to={localizedPath(`/resources/blog/${article.slug}`, lang)}
-                className="bento-card rounded-lg overflow-hidden flex flex-col group"
-              >
-                <div className="p-6 flex flex-col gap-4 flex-1">
-                  <span className="mono-label text-blue">
-                    {t(article.categoryKey)}
-                  </span>
-                  <h2 className="text-lg font-medium text-sand leading-snug">
-                    {t(article.titleKey)}
-                  </h2>
-                  <p className="text-body flex-1">
-                    {t(article.descriptionKey)}
-                  </p>
-                  <span className="inline-flex items-center gap-1.5 text-sm text-blue group-hover:gap-2.5 transition-all mt-2">
-                    {t("blog.readArticle")}
-                    <ArrowRight className="w-4 h-4" />
-                  </span>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </Section>
+        {groups.map((g) => (
+          <Section key={g.cat} className="pb-8 md:pb-10">
+            <h2 className="text-sm font-medium uppercase tracking-[0.12em] text-gray mb-6">
+              {t(`blog.categories.${g.cat}`)}
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {g.items.map(renderCard)}
+            </div>
+          </Section>
+        ))}
 
         <CTABand
           title={lang === "de" ? "Technische Frage?" : "Have a Technical Question?"}
-          description={lang === "de"
-            ? "Besprechen Sie Ihre Anforderungen direkt mit unserem Engineering-Team."
-            : "Discuss your requirements directly with our engineering team."}
+          description={
+            lang === "de"
+              ? "Besprechen Sie Ihre Anforderungen direkt mit unserem Engineering-Team."
+              : "Discuss your requirements directly with our engineering team."
+          }
         >
           <Button asChild>
-            <Link to={localizedPath("/contact", lang)}>
-              {tc("buttons.contactEngineering")}
-            </Link>
+            <Link to={localizedPath("/contact", lang)}>{tc("buttons.contactEngineering")}</Link>
           </Button>
         </CTABand>
       </PageShell>
