@@ -1,0 +1,117 @@
+name: Materialize optimized chamber images
+
+on:
+  push:
+    branches:
+      - preview
+    paths:
+      - .github/workflows/materialize-chamber-images.yml
+
+permissions:
+  contents: write
+
+jobs:
+  materialize:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Reconstruct optimized image assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+          mkdir -p src/assets
+
+          reconstruct() {
+            local image="$1"
+            local expected_parts="$2"
+            local expected_sha="$3"
+            local parts=(".image-staging/${image}.avif"/part-*.b64)
+
+            if [[ "${#parts[@]}" -ne "$expected_parts" ]]; then
+              echo "Expected ${expected_parts} chunks for ${image}, found ${#parts[@]}" >&2
+              exit 1
+            fi
+
+            cat "${parts[@]}" | tr -d '\n\r' | base64 --decode > "src/assets/${image}.avif"
+            echo "${expected_sha}  src/assets/${image}.avif" | sha256sum --check --strict
+          }
+
+          reconstruct product-tseries-chamber 6 6f2f28603931a08d0fea9cbf3a305b375a219126e73a6a9e3d01873a51d721eb
+          reconstruct cseries-chamber 7 3affef143a073686f6244f4df4cad1af293d243d6bc516dedf832717c62a9bdd
+          reconstruct custom-chamber 8 6783e1736a72bb44af6c5b7cee0687f44fb57c16ea1435f1c4ac6283222519c9
+
+      - name: Replace image imports and remove superseded assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+
+          replacements = {
+              '"@/assets/product-tseries-chamber.webp"': '"@/assets/product-tseries-chamber.avif"',
+              '"@/assets/cseries-chamber.webp"': '"@/assets/cseries-chamber.avif"',
+              '"@/assets/custom-chamber.webp"': '"@/assets/custom-chamber.avif"',
+          }
+          expected_counts = {
+              '"@/assets/product-tseries-chamber.webp"': 1,
+              '"@/assets/cseries-chamber.webp"': 3,
+              '"@/assets/custom-chamber.webp"': 3,
+          }
+
+          files = [path for path in Path("src").rglob("*") if path.suffix in {".ts", ".tsx"}]
+          counts = {old: 0 for old in replacements}
+
+          for path in files:
+              text = path.read_text(encoding="utf-8")
+              updated = text
+              for old, new in replacements.items():
+                  count = updated.count(old)
+                  counts[old] += count
+                  updated = updated.replace(old, new)
+              if updated != text:
+                  path.write_text(updated, encoding="utf-8")
+
+          for old, expected in expected_counts.items():
+              actual = counts[old]
+              if actual != expected:
+                  raise SystemExit(f"Expected {expected} occurrences of {old}, found {actual}")
+          PY
+
+          rm -f \
+            src/assets/product-tseries-chamber.webp \
+            src/assets/cseries-chamber.webp \
+            src/assets/custom-chamber.webp
+          rm -rf .image-staging
+
+      - name: Install dependencies
+        run: npm ci --legacy-peer-deps
+
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Build
+        run: npm run build
+
+      - name: Commit optimized assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -f .github/workflows/materialize-chamber-images.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --check
+          git commit -m "Replace chamber portfolio images with optimized assets"
+          git push origin HEAD:preview
