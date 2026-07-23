@@ -38,7 +38,7 @@
   </url>
   <url>
     <loc>https://deepvac.space/resources/blog</loc>
-    <lastmod>2026-07-18T21:49:27+00:00</lastmod>
+    <lastmod>2026-07-23T09:10:03+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.60</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog"/>
@@ -47,7 +47,7 @@
   </url>
   <url>
     <loc>https://deepvac.space/de/ressourcen/blog</loc>
-    <lastmod>2026-07-18T21:49:27+00:00</lastmod>
+    <lastmod>2026-07-23T09:10:03+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.60</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog"/>
@@ -56,7 +56,7 @@
   </url>
   <url>
     <loc>https://deepvac.space/resources/blog/cooling-systems</loc>
-    <lastmod>2026-07-18T21:49:27+00:00</lastmod>
+    <lastmod>2026-07-23T09:10:03+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.50</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/cooling-systems"/>
@@ -65,7 +65,7 @@
   </url>
   <url>
     <loc>https://deepvac.space/de/ressourcen/blog/kuehlsysteme</loc>
-    <lastmod>2026-07-18T21:49:27+00:00</lastmod>
+    <lastmod>2026-07-23T09:10:03+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.50</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/cooling-systems"/>
@@ -74,7 +74,7 @@
   </url>
   <url>
     <loc>https://deepvac.space/resources/blog/retrofit-vs-replacement</loc>
-    <lastmod>2026-07-18T21:49:27+00:00</lastmod>
+    <lastmod>2026-07-23T09:10:03+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.50</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/retrofit-vs-replacement"/>
@@ -83,7 +83,7 @@
   </url>
   <url>
     <loc>https://deepvac.space/de/ressourcen/blog/retrofit-vs-neubeschaffung</loc>
-    <lastmod>2026-07-18T21:49:27+00:00</lastmod>
+    <lastmod>2026-07-23T09:10:03+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.50</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/retrofit-vs-replacement"/>
@@ -92,7 +92,7 @@
   </url>
   <url>
     <loc>https://deepvac.space/resources/blog/aerospace-qualification-testing</loc>
-    <lastmod>2026-07-18T21:49:27+00:00</lastmod>
+    <lastmod>2026-07-23T09:10:03+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.50</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/aerospace-qualification-testing"/>
@@ -101,7 +101,7 @@
   </url>
   <url>
     <loc>https://deepvac.space/de/ressourcen/blog/raumfahrtqualifikation</loc>
-    <lastmod>2026-07-18T21:49:27+00:00</lastmod>
+    <lastmod>2026-07-23T09:10:03+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.50</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/aerospace-qualification-testing"/>
@@ -110,7 +110,7 @@
   </url>
   <url>
     <loc>https://deepvac.space/resources/blog/tvac-cost-drivers</loc>
-    <lastmod>2026-07-18T21:49:27+00:00</lastmod>
+    <lastmod>2026-07-23T09:10:03+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.50</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/tvac-cost-drivers"/>
@@ -119,7 +119,7 @@
   </url>
   <url>
     <loc>https://deepvac.space/de/ressourcen/blog/tvac-kostentreiber</loc>
-    <lastmod>2026-07-18T21:49:27+00:00</lastmod>
+    <lastmod>2026-07-23T09:10:03+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.50</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/tvac-cost-drivers"/>
@@ -128,7 +128,7 @@
   </url>
   <url>
     <loc>https://deepvac.space/resources/blog/tvac-test-campaign</loc>
-    <lastmod>2026-07-18T21:49:27+00:00</lastmod>
+    <lastmod>2026-07-23T09:10:03+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.50</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/tvac-test-campaign"/>
@@ -137,12 +137,408 @@
   </url>
   <url>
     <loc>https://deepvac.space/de/ressourcen/blog/tvac-testkampagne</loc>
-    <lastmod>2026-07-18T21:49:27+00:00</lastmod>
+    <lastmod>2026-07-23T09:10:03+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.50</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/tvac-test-campaign"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/ressourcen/blog/tvac-testkampagne"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/resources/blog/tvac-test-campaign"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/resources/blog/what-is-thermal-vacuum-testing</loc>
+    <lastmod>2026-07-23T08:48:22+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/what-is-thermal-vacuum-testing"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/ressourcen/blog/was-ist-thermalvakuumtest"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/resources/blog/what-is-thermal-vacuum-testing"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/de/ressourcen/blog/was-ist-thermalvakuumtest</loc>
+    <lastmod>2026-07-23T08:48:22+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/what-is-thermal-vacuum-testing"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/ressourcen/blog/was-ist-thermalvakuumtest"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/resources/blog/what-is-thermal-vacuum-testing"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/resources/blog/vacuum-levels-explained</loc>
+    <lastmod>2026-07-23T08:48:22+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/vacuum-levels-explained"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/ressourcen/blog/vakuumbereiche-erklaert"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/resources/blog/vacuum-levels-explained"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/de/ressourcen/blog/vakuumbereiche-erklaert</loc>
+    <lastmod>2026-07-23T08:48:22+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/vacuum-levels-explained"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/ressourcen/blog/vakuumbereiche-erklaert"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/resources/blog/vacuum-levels-explained"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/resources/blog/outgassing-in-vacuum</loc>
+    <lastmod>2026-07-23T08:48:22+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/outgassing-in-vacuum"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/ressourcen/blog/ausgasung-im-vakuum"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/resources/blog/outgassing-in-vacuum"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/de/ressourcen/blog/ausgasung-im-vakuum</loc>
+    <lastmod>2026-07-23T08:48:22+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/outgassing-in-vacuum"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/ressourcen/blog/ausgasung-im-vakuum"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/resources/blog/outgassing-in-vacuum"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/resources/blog/tvac-test-types</loc>
+    <lastmod>2026-07-23T08:48:22+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/tvac-test-types"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/ressourcen/blog/tvac-testarten"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/resources/blog/tvac-test-types"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/de/ressourcen/blog/tvac-testarten</loc>
+    <lastmod>2026-07-23T08:48:22+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/tvac-test-types"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/ressourcen/blog/tvac-testarten"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/resources/blog/tvac-test-types"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/resources/blog/space-environment-simulation</loc>
+    <lastmod>2026-07-23T08:48:22+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/space-environment-simulation"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/ressourcen/blog/weltraumumgebung-simulieren"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/resources/blog/space-environment-simulation"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/de/ressourcen/blog/weltraumumgebung-simulieren</loc>
+    <lastmod>2026-07-23T08:48:22+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/space-environment-simulation"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/ressourcen/blog/weltraumumgebung-simulieren"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/resources/blog/space-environment-simulation"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/resources/blog/tvac-chamber-sizing</loc>
+    <lastmod>2026-07-23T08:48:22+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/tvac-chamber-sizing"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/ressourcen/blog/tvac-kammer-dimensionierung"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/resources/blog/tvac-chamber-sizing"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/de/ressourcen/blog/tvac-kammer-dimensionierung</loc>
+    <lastmod>2026-07-23T08:48:22+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/tvac-chamber-sizing"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/ressourcen/blog/tvac-kammer-dimensionierung"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/resources/blog/tvac-chamber-sizing"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/resources/blog/ecss-tvac-standards</loc>
+    <lastmod>2026-07-23T08:48:22+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/ecss-tvac-standards"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/ressourcen/blog/ecss-normen-tvac-tests"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/resources/blog/ecss-tvac-standards"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/de/ressourcen/blog/ecss-normen-tvac-tests</loc>
+    <lastmod>2026-07-23T08:48:22+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/ecss-tvac-standards"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/ressourcen/blog/ecss-normen-tvac-tests"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/resources/blog/ecss-tvac-standards"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/resources/blog/tvac-facility-requirements</loc>
+    <lastmod>2026-07-23T08:48:22+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/tvac-facility-requirements"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/ressourcen/blog/tvac-anlagen-infrastruktur"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/resources/blog/tvac-facility-requirements"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/de/ressourcen/blog/tvac-anlagen-infrastruktur</loc>
+    <lastmod>2026-07-23T08:48:22+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/tvac-facility-requirements"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/ressourcen/blog/tvac-anlagen-infrastruktur"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/resources/blog/tvac-facility-requirements"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/resources/blog/tvac-pumping-systems</loc>
+    <lastmod>2026-07-23T08:48:22+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/tvac-pumping-systems"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/ressourcen/blog/vakuumpumpstand-tvac"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/resources/blog/tvac-pumping-systems"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/de/ressourcen/blog/vakuumpumpstand-tvac</loc>
+    <lastmod>2026-07-23T08:48:22+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/tvac-pumping-systems"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/ressourcen/blog/vakuumpumpstand-tvac"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/resources/blog/tvac-pumping-systems"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/resources/blog/cryo-shrouds-thermal-plates</loc>
+    <lastmod>2026-07-23T08:48:22+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/cryo-shrouds-thermal-plates"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/ressourcen/blog/kryo-shrouds-thermalplatten"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/resources/blog/cryo-shrouds-thermal-plates"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/de/ressourcen/blog/kryo-shrouds-thermalplatten</loc>
+    <lastmod>2026-07-23T08:48:22+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/cryo-shrouds-thermal-plates"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/ressourcen/blog/kryo-shrouds-thermalplatten"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/resources/blog/cryo-shrouds-thermal-plates"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/resources/blog/contamination-control-tvac</loc>
+    <lastmod>2026-07-23T08:48:22+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/contamination-control-tvac"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/ressourcen/blog/kontaminationskontrolle-tvac"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/resources/blog/contamination-control-tvac"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/de/ressourcen/blog/kontaminationskontrolle-tvac</loc>
+    <lastmod>2026-07-23T08:48:22+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/contamination-control-tvac"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/ressourcen/blog/kontaminationskontrolle-tvac"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/resources/blog/contamination-control-tvac"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/resources/blog/tvac-viewports-optical-access</loc>
+    <lastmod>2026-07-23T08:48:22+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/tvac-viewports-optical-access"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/ressourcen/blog/schauglaeser-optischer-zugang"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/resources/blog/tvac-viewports-optical-access"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/de/ressourcen/blog/schauglaeser-optischer-zugang</loc>
+    <lastmod>2026-07-23T08:48:22+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/tvac-viewports-optical-access"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/ressourcen/blog/schauglaeser-optischer-zugang"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/resources/blog/tvac-viewports-optical-access"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/resources/blog/temperature-measurement-tvac</loc>
+    <lastmod>2026-07-23T08:48:22+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/temperature-measurement-tvac"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/ressourcen/blog/temperaturmessung-tvac"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/resources/blog/temperature-measurement-tvac"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/de/ressourcen/blog/temperaturmessung-tvac</loc>
+    <lastmod>2026-07-23T08:48:22+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/temperature-measurement-tvac"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/ressourcen/blog/temperaturmessung-tvac"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/resources/blog/temperature-measurement-tvac"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/resources/blog/solar-simulation-vs-infrared</loc>
+    <lastmod>2026-07-23T08:48:22+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/solar-simulation-vs-infrared"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/ressourcen/blog/solarsimulation-vs-infrarot"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/resources/blog/solar-simulation-vs-infrared"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/de/ressourcen/blog/solarsimulation-vs-infrarot</loc>
+    <lastmod>2026-07-23T08:48:22+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/solar-simulation-vs-infrared"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/ressourcen/blog/solarsimulation-vs-infrarot"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/resources/blog/solar-simulation-vs-infrared"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/resources/blog/helium-leak-testing-tvac</loc>
+    <lastmod>2026-07-23T08:48:22+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/helium-leak-testing-tvac"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/ressourcen/blog/helium-lecktest-tvac"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/resources/blog/helium-leak-testing-tvac"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/de/ressourcen/blog/helium-lecktest-tvac</loc>
+    <lastmod>2026-07-23T08:48:22+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/helium-leak-testing-tvac"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/ressourcen/blog/helium-lecktest-tvac"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/resources/blog/helium-leak-testing-tvac"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/resources/blog/tvac-chamber-automation</loc>
+    <lastmod>2026-07-23T08:48:22+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/tvac-chamber-automation"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/ressourcen/blog/tvac-automatisierung-steuerung"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/resources/blog/tvac-chamber-automation"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/de/ressourcen/blog/tvac-automatisierung-steuerung</loc>
+    <lastmod>2026-07-23T08:48:22+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/tvac-chamber-automation"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/ressourcen/blog/tvac-automatisierung-steuerung"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/resources/blog/tvac-chamber-automation"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/resources/blog/cubesat-tvac-testing</loc>
+    <lastmod>2026-07-23T08:48:22+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/cubesat-tvac-testing"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/ressourcen/blog/cubesat-tvac-test"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/resources/blog/cubesat-tvac-testing"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/de/ressourcen/blog/cubesat-tvac-test</loc>
+    <lastmod>2026-07-23T08:48:22+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/cubesat-tvac-testing"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/ressourcen/blog/cubesat-tvac-test"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/resources/blog/cubesat-tvac-testing"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/resources/blog/electric-propulsion-vacuum-testing</loc>
+    <lastmod>2026-07-23T08:48:22+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/electric-propulsion-vacuum-testing"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/ressourcen/blog/elektrische-antriebe-vakuumtest"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/resources/blog/electric-propulsion-vacuum-testing"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/de/ressourcen/blog/elektrische-antriebe-vakuumtest</loc>
+    <lastmod>2026-07-23T08:48:22+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/electric-propulsion-vacuum-testing"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/ressourcen/blog/elektrische-antriebe-vakuumtest"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/resources/blog/electric-propulsion-vacuum-testing"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/resources/blog/testing-optics-electronics-vacuum</loc>
+    <lastmod>2026-07-23T08:48:22+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/testing-optics-electronics-vacuum"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/ressourcen/blog/optik-elektronik-vakuumtest"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/resources/blog/testing-optics-electronics-vacuum"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/de/ressourcen/blog/optik-elektronik-vakuumtest</loc>
+    <lastmod>2026-07-23T08:48:22+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/testing-optics-electronics-vacuum"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/ressourcen/blog/optik-elektronik-vakuumtest"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/resources/blog/testing-optics-electronics-vacuum"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/resources/blog/in-house-vs-external-tvac-testing</loc>
+    <lastmod>2026-07-23T08:48:22+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/in-house-vs-external-tvac-testing"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/ressourcen/blog/inhouse-vs-externe-tvac-tests"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/resources/blog/in-house-vs-external-tvac-testing"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/de/ressourcen/blog/inhouse-vs-externe-tvac-tests</loc>
+    <lastmod>2026-07-23T08:48:22+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/in-house-vs-external-tvac-testing"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/ressourcen/blog/inhouse-vs-externe-tvac-tests"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/resources/blog/in-house-vs-external-tvac-testing"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/resources/blog/used-tvac-chamber-vs-new</loc>
+    <lastmod>2026-07-23T08:48:22+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/used-tvac-chamber-vs-new"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/ressourcen/blog/gebrauchte-tvac-kammer-vs-neu"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/resources/blog/used-tvac-chamber-vs-new"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/de/ressourcen/blog/gebrauchte-tvac-kammer-vs-neu</loc>
+    <lastmod>2026-07-23T08:48:22+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/used-tvac-chamber-vs-new"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/ressourcen/blog/gebrauchte-tvac-kammer-vs-neu"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/resources/blog/used-tvac-chamber-vs-new"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/resources/blog/tvac-chamber-lead-time</loc>
+    <lastmod>2026-07-23T08:48:22+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/tvac-chamber-lead-time"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/ressourcen/blog/tvac-kammer-lieferzeit"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/resources/blog/tvac-chamber-lead-time"/>
+  </url>
+  <url>
+    <loc>https://deepvac.space/de/ressourcen/blog/tvac-kammer-lieferzeit</loc>
+    <lastmod>2026-07-23T08:48:22+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deepvac.space/resources/blog/tvac-chamber-lead-time"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://deepvac.space/de/ressourcen/blog/tvac-kammer-lieferzeit"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deepvac.space/resources/blog/tvac-chamber-lead-time"/>
   </url>
   <url>
     <loc>https://deepvac.space/careers</loc>

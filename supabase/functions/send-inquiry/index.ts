@@ -123,11 +123,15 @@ function checkRateLimit(ip: string): { allowed: boolean; reason?: string } {
 
 function sanitize(str: string | undefined, maxLen = 500): string {
   if (!str) return "";
-  return str
-    .replace(/[<>]/g, "")
-    .replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g, "")
-    .trim()
-    .slice(0, maxLen);
+
+  let sanitized = "";
+  for (const char of str) {
+    const code = char.charCodeAt(0);
+    if (code < 32 || code === 127) continue;
+    sanitized += char;
+  }
+
+  return sanitized.replace(/[<>]/g, "").trim().slice(0, maxLen);
 }
 
 function isValidEmail(email: string): boolean {

@@ -1,0 +1,23 @@
+{
+  "auditDate": "2026-07-23",
+  "generatedArticles": 22,
+  "legacyArticles": 5,
+  "wordCounts": {
+    "english": {
+      "before": 27819,
+      "after": 23535,
+      "reductionPercent": 15.4
+    },
+    "german": {
+      "before": 24434,
+      "after": 20141,
+      "reductionPercent": 17.6
+    }
+  },
+  "technicalReferences": {
+    "assignments": 72,
+    "uniqueUrls": 32
+  },
+  "technicalNotes": 11,
+  "emDashCharactersAfterAudit": 0
+}

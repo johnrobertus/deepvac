@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Deepvac Engineering Blog</title>
+    <link>https://deepvac.space/resources/blog</link>
+    <description>Technical articles on thermal vacuum systems, space simulation, qualification testing, and TVAC engineering practice.</description>
+    <language>en</language>
+    <lastBuildDate>Wed, 22 Jul 2026 00:00:00 GMT</lastBuildDate>
+    <atom:link href="https://deepvac.space/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Used TVAC Chamber vs New: Evaluating the Second-Hand Market</title>
+      <link>https://deepvac.space/resources/blog/used-tvac-chamber-vs-new</link>
+      <guid isPermaLink="true">https://deepvac.space/resources/blog/used-tvac-chamber-vs-new</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 GMT</pubDate>
+      <category>decisionSupport</category>
+      <description>A used vacuum chamber can cost a fraction of a new system – or the same, once controls, contamination history and adaptation are priced in. What to check before you buy.</description>
+    </item>
+    <item>
+      <title>Cryo Shrouds and Thermal Plates: How TVAC Chambers Get Cold</title>
+      <link>https://deepvac.space/resources/blog/cryo-shrouds-thermal-plates</link>
+      <guid isPermaLink="true">https://deepvac.space/resources/blog/cryo-shrouds-thermal-plates</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 GMT</pubDate>
+      <category>engineeringGuide</category>
+      <description>Radiative cold sink or conductive interface? How cryo shrouds and thermal plates are built, cooled and controlled – and when your test actually needs which.</description>
+    </item>
+    <item>
+      <title>Viewports and Optical Access in TVAC Chambers</title>
+      <link>https://deepvac.space/resources/blog/tvac-viewports-optical-access</link>
+      <guid isPermaLink="true">https://deepvac.space/resources/blog/tvac-viewports-optical-access</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 GMT</pubDate>
+      <category>engineeringGuide</category>
+      <description>From simple sight glasses to ZnSe windows for thermography and in-chamber IR cameras: how to plan optical access into a TVAC chamber – materials, ports and pitfalls.</description>
+    </item>
+    <item>
+      <title>Contamination Control in Thermal Vacuum Testing</title>
+      <link>https://deepvac.space/resources/blog/contamination-control-tvac</link>
+      <guid isPermaLink="true">https://deepvac.space/resources/blog/contamination-control-tvac</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 GMT</pubDate>
+      <category>engineeringGuide</category>
+      <description>Molecular films and particles can quietly degrade optics, sensors and coatings during a TVAC test. How contamination arises, how QCM and RGA measure it, and how you keep a campaign clean.</description>
+    </item>
+    <item>
+      <title>What Is Thermal Vacuum (TVAC) Testing?</title>
+      <link>https://deepvac.space/resources/blog/what-is-thermal-vacuum-testing</link>
+      <guid isPermaLink="true">https://deepvac.space/resources/blog/what-is-thermal-vacuum-testing</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 GMT</pubDate>
+      <category>basics</category>
+      <description>An engineer's introduction to thermal vacuum testing: which space conditions a TVAC chamber simulates, why hardware fails in vacuum, and where the test sits in qualification.</description>
+    </item>
+    <item>
+      <title>Vacuum Levels Explained: From Rough Vacuum to UHV</title>
+      <link>https://deepvac.space/resources/blog/vacuum-levels-explained</link>
+      <guid isPermaLink="true">https://deepvac.space/resources/blog/vacuum-levels-explained</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 GMT</pubDate>
+      <category>basics</category>
+      <description>The conventional vacuum ranges, how gas behaviour and equipment change with pressure, and why many thermal-vacuum specifications use the high-vacuum range.</description>
+    </item>
+    <item>
+      <title>TVAC Pumping Systems: How to Select the Right Architecture</title>
+      <link>https://deepvac.space/resources/blog/tvac-pumping-systems</link>
+      <guid isPermaLink="true">https://deepvac.space/resources/blog/tvac-pumping-systems</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 GMT</pubDate>
+      <category>engineeringGuide</category>
+      <description>From oil-free backing pumps to turbomolecular pumps, roots boosters and cryo traps: how a TVAC pumping system is structured, sized and monitored – and which drivers actually matter.</description>
+    </item>
+    <item>
+      <title>Testing Optics and Electronics in Vacuum: The Two Traps That Catch Bench-Proven Hardware</title>
+      <link>https://deepvac.space/resources/blog/testing-optics-electronics-vacuum</link>
+      <guid isPermaLink="true">https://deepvac.space/resources/blog/testing-optics-electronics-vacuum</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 GMT</pubDate>
+      <category>applications</category>
+      <description>Electronics that run cool on the bench can overheat in vacuum, and clean-looking optics can grow molecular films. How to plan thermal vacuum tests for sensitive payloads.</description>
+    </item>
+    <item>
+      <title>In-House vs External TVAC Testing: A Decision Framework</title>
+      <link>https://deepvac.space/resources/blog/in-house-vs-external-tvac-testing</link>
+      <guid isPermaLink="true">https://deepvac.space/resources/blog/in-house-vs-external-tvac-testing</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 GMT</pubDate>
+      <category>decisionSupport</category>
+      <description>Own chamber or test service? The answer depends on campaign cadence, iteration speed and hidden costs on both sides. A framework for the build-or-buy decision in environmental testing.</description>
+    </item>
+    <item>
+      <title>TVAC Automation: What a Modern Chamber Control System Does</title>
+      <link>https://deepvac.space/resources/blog/tvac-chamber-automation</link>
+      <guid isPermaLink="true">https://deepvac.space/resources/blog/tvac-chamber-automation</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 GMT</pubDate>
+      <category>engineeringGuide</category>
+      <description>Recipe execution, safety interlocks, data logging, alarming and remote access: why reproducible TVAC testing is above all a controls property.</description>
+    </item>
+    <item>
+      <title>ECSS, SMC-S-016 and NASA GEVS: Thermal Vacuum Test Standards Explained</title>
+      <link>https://deepvac.space/resources/blog/ecss-tvac-standards</link>
+      <guid isPermaLink="true">https://deepvac.space/resources/blog/ecss-tvac-standards</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 GMT</pubDate>
+      <category>basics</category>
+      <description>How ECSS-E-ST-10-03C Rev.1, SMC-S-016 and NASA GEVS frame thermal-vacuum verification, how tailoring works and why project requirements remain binding.</description>
+    </item>
+    <item>
+      <title>TVAC Chamber Lead Time: What Actually Drives Delivery</title>
+      <link>https://deepvac.space/resources/blog/tvac-chamber-lead-time</link>
+      <guid isPermaLink="true">https://deepvac.space/resources/blog/tvac-chamber-lead-time</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 GMT</pubDate>
+      <category>decisionSupport</category>
+      <description>The delivery time of a thermal vacuum chamber is set by engineering, long-lead components and acceptance testing – and partly by you. Where the time goes and how to shorten it.</description>
+    </item>
+    <item>
+      <title>TVAC Chamber Sizing: How to Choose the Right Volume</title>
+      <link>https://deepvac.space/resources/blog/tvac-chamber-sizing</link>
+      <guid isPermaLink="true">https://deepvac.space/resources/blog/tvac-chamber-sizing</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 GMT</pubDate>
+      <category>basics</category>
+      <description>Nominal litres say little: how shroud, thermal plate and fixturing shrink usable volume, which clearances matter, cubic vs cylindrical geometry – and how much growth margin is sensible.</description>
+    </item>
+    <item>
+      <title>Solar Simulation vs Infrared Heating: Imposing Heat Flux in TVAC</title>
+      <link>https://deepvac.space/resources/blog/solar-simulation-vs-infrared</link>
+      <guid isPermaLink="true">https://deepvac.space/resources/blog/solar-simulation-vs-infrared</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 GMT</pubDate>
+      <category>engineeringGuide</category>
+      <description>Solar simulators, IR lamp arrays and heater plates all impose external heat flux in a thermal vacuum chamber – with very different fidelity, cost and complexity.</description>
+    </item>
+    <item>
+      <title>TVAC Facility Requirements: What Your Building Must Provide</title>
+      <link>https://deepvac.space/resources/blog/tvac-facility-requirements</link>
+      <guid isPermaLink="true">https://deepvac.space/resources/blog/tvac-facility-requirements</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 GMT</pubDate>
+      <category>engineeringGuide</category>
+      <description>Floor loads, transport path, power, heat rejection, LN₂ safety, cleanliness and IT: what a facility must provide before a thermal vacuum system arrives – with a practical site checklist.</description>
+    </item>
+    <item>
+      <title>Temperature Measurement in TVAC: Sensors, Mounting and Calibration</title>
+      <link>https://deepvac.space/resources/blog/temperature-measurement-tvac</link>
+      <guid isPermaLink="true">https://deepvac.space/resources/blog/temperature-measurement-tvac</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 GMT</pubDate>
+      <category>engineeringGuide</category>
+      <description>Thermocouple or PT100? How to select, mount and calibrate temperature sensors in vacuum – and deliver traceable data for qualification tests.</description>
+    </item>
+    <item>
+      <title>Electric Propulsion Testing in Vacuum: Why Thruster Facilities Are a Class of Their Own</title>
+      <link>https://deepvac.space/resources/blog/electric-propulsion-vacuum-testing</link>
+      <guid isPermaLink="true">https://deepvac.space/resources/blog/electric-propulsion-vacuum-testing</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 GMT</pubDate>
+      <category>applications</category>
+      <description>A firing Hall or ion thruster turns the vacuum chamber into a continuous gas-load problem. What makes electric propulsion test facilities special – and how to scope one.</description>
+    </item>
+    <item>
+      <title>TVAC Test Types: From Thermal Cycling to Thermal Balance</title>
+      <link>https://deepvac.space/resources/blog/tvac-test-types</link>
+      <guid isPermaLink="true">https://deepvac.space/resources/blog/tvac-test-types</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 GMT</pubDate>
+      <category>basics</category>
+      <description>Thermal vacuum cycling, thermal balance, bake-out, starts and soaks: what each TVAC test type verifies, how a typical profile looks and how qualification differs from acceptance.</description>
+    </item>
+    <item>
+      <title>Space Environment Simulation: Recreating Orbit on the Ground</title>
+      <link>https://deepvac.space/resources/blog/space-environment-simulation</link>
+      <guid isPermaLink="true">https://deepvac.space/resources/blog/space-environment-simulation</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 GMT</pubDate>
+      <category>basics</category>
+      <description>Vacuum, a 3 K cold sink, 1361 W/m² of sunlight: what the thermal space environment does to hardware, how TVAC chambers replicate each element – and what no chamber can do.</description>
+    </item>
+    <item>
+      <title>Helium Leak Testing for TVAC Chambers: Methods, Units, Practice</title>
+      <link>https://deepvac.space/resources/blog/helium-leak-testing-tvac</link>
+      <guid isPermaLink="true">https://deepvac.space/resources/blog/helium-leak-testing-tvac</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 GMT</pubDate>
+      <category>engineeringGuide</category>
+      <description>How helium leak detection works, what leak rates in mbar·l/s actually mean, how virtual leaks differ from real ones – and when a chamber should be tested.</description>
+    </item>
+    <item>
+      <title>Outgassing in Vacuum: TML, CVCM and Bake-Out Explained</title>
+      <link>https://deepvac.space/resources/blog/outgassing-in-vacuum</link>
+      <guid isPermaLink="true">https://deepvac.space/resources/blog/outgassing-in-vacuum</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 GMT</pubDate>
+      <category>basics</category>
+      <description>Why materials release gas in vacuum, how ECSS outgassing screening with TML and CVCM works, which materials cause trouble – and how bake-out, QCM and RGA keep contamination under control.</description>
+    </item>
+    <item>
+      <title>CubeSat TVAC Testing: What Small Satellites Really Need</title>
+      <link>https://deepvac.space/resources/blog/cubesat-tvac-testing</link>
+      <guid isPermaLink="true">https://deepvac.space/resources/blog/cubesat-tvac-testing</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 GMT</pubDate>
+      <category>applications</category>
+      <description>Why thermal vacuum testing pays off even for CubeSats, what a typical campaign looks like, and how to right-size chamber and budget for 1U to 16U.</description>
+    </item>
+    <item>
+      <title>Inside a Thermal Vacuum Test Campaign: From Test Plan to Data Package</title>
+      <link>https://deepvac.space/resources/blog/tvac-test-campaign</link>
+      <guid isPermaLink="true">https://deepvac.space/resources/blog/tvac-test-campaign</guid>
+      <pubDate>Sat, 20 Jun 2026 00:00:00 GMT</pubDate>
+      <category>engineeringGuide</category>
+      <description>The traceable phases of a TVAC campaign, from requirements and setup through execution, anomaly handling and the final data package.</description>
+    </item>
+    <item>
+      <title>What Drives the Cost of a Thermal Vacuum Chamber?</title>
+      <link>https://deepvac.space/resources/blog/tvac-cost-drivers</link>
+      <guid isPermaLink="true">https://deepvac.space/resources/blog/tvac-cost-drivers</guid>
+      <pubDate>Fri, 15 May 2026 00:00:00 GMT</pubDate>
+      <category>decisionSupport</category>
+      <description>The engineering choices that drive TVAC system cost: envelope, thermal concept, working pressure, interfaces, controls, documentation and lifecycle scope.</description>
+    </item>
+    <item>
+      <title>Key Requirements for Aerospace Qualification Testing</title>
+      <link>https://deepvac.space/resources/blog/aerospace-qualification-testing</link>
+      <guid isPermaLink="true">https://deepvac.space/resources/blog/aerospace-qualification-testing</guid>
+      <pubDate>Thu, 10 Jul 2025 00:00:00 GMT</pubDate>
+      <category>engineeringGuide</category>
+      <description>How programme-specific standards, thermal and vacuum boundaries, instrumentation and documentation shape TVAC qualification testing.</description>
+    </item>
+    <item>
+      <title>When Retrofit Makes More Sense Than Replacement</title>
+      <link>https://deepvac.space/resources/blog/retrofit-vs-replacement</link>
+      <guid isPermaLink="true">https://deepvac.space/resources/blog/retrofit-vs-replacement</guid>
+      <pubDate>Tue, 20 May 2025 00:00:00 GMT</pubDate>
+      <category>decisionSupport</category>
+      <description>A condition-based framework for deciding whether to modernise an existing thermal-vacuum system or replace it.</description>
+    </item>
+    <item>
+      <title>Cooling Systems for Thermal Vacuum Chambers</title>
+      <link>https://deepvac.space/resources/blog/cooling-systems</link>
+      <guid isPermaLink="true">https://deepvac.space/resources/blog/cooling-systems</guid>
+      <pubDate>Sat, 15 Mar 2025 00:00:00 GMT</pubDate>
+      <category>engineeringGuide</category>
+      <description>How mechanical refrigeration, nitrogen-based cooling and combined concepts affect TVAC temperature range, infrastructure and operating effort.</description>
+    </item>
+  </channel>
+</rss>

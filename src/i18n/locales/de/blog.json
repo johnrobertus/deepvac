@@ -7,12 +7,12 @@
     "backToBlog": "Zurück zum Blog",
     "seo": {
       "title": "Engineering Blog | Deepvac",
-      "description": "Technische Artikel zu Thermalvakuumsystemen — Kühlarchitekturen, Retrofit-Entscheidungen, Anforderungen an die Raumfahrtqualifikation und Engineering Best Practices."
+      "description": "Technische Orientierung zu TVAC-Grundlagen, Engineering-Entscheidungen, Anwendungen, Qualifikationsprüfungen und Beschaffung."
     },
     "categories": {
-      "basics": "BASICS",
+      "basics": "Grundlagen",
       "engineeringGuide": "Engineering-Leitfaden",
-      "applications": "APPLICATIONS",
+      "applications": "Anwendungen",
       "decisionSupport": "Entscheidungshilfe"
     },
     "labels": {
@@ -21,61 +21,64 @@
       "takeaway": "Fazit",
       "faqTitle": "Häufige Fragen",
       "relatedTitle": "Verwandte Artikel",
-      "relatedSolutions": "Passende Lösungen"
+      "relatedSolutions": "Passende Lösungen",
+      "technicalNote": "Geltungsbereich und Einordnung",
+      "referencesTitle": "Technische Quellen",
+      "referencesNote": "Primärnormen, Unterlagen von Behörden und Raumfahrtagenturen sowie aktuelle Deepvac-Produktseiten, die zur Prüfung der technischen Aussagen verwendet wurden."
     },
     "articles": {
       "coolingSystems": {
         "title": "Kühlsysteme für Thermalvakuumkammern",
-        "description": "Ein Überblick über Kühlarchitekturen in TVAC-Systemen — von mechanischer Kühlung über Flüssigstickstoff-Kreisläufe bis hin zu Hybridansätzen — und die Abwägungen, die bestimmen, welcher Ansatz zu Ihren Testanforderungen passt.",
+        "description": "Wie mechanische Kälte, stickstoffbasierte Kühlung und kombinierte Konzepte Temperaturbereich, Infrastruktur und Betriebsaufwand eines TVAC-Systems beeinflussen.",
         "seoTitle": "Kühlsysteme für Thermalvakuumkammern | Deepvac",
-        "seoDescription": "Engineering-Überblick über TVAC-Kühlarchitekturen — mechanische Kühlung, LN₂-Kreisläufe und Hybridansätze. Abwägungen für Ihre Testanforderungen verstehen.",
-        "intro": "Thermalvakuumkammern erfordern kontrollierte Kühlung, um die kalten Bedingungen des Weltraums zu simulieren. Die Wahl des Kühlsystems beeinflusst unmittelbar den erreichbaren Temperaturbereich, die Abkühlrate, die Temperaturgleichmäßigkeit, die Betriebskosten und die Systemkomplexität. Es gibt keinen universell überlegenen Ansatz — die richtige Lösung hängt von Testanforderungen, Anlagenbedingungen und Lebenszyklus-Betrachtungen ab.",
+        "seoDescription": "Mechanische Kälte, stickstoffbasierte Kühlung und kombinierte TVAC-Konzepte im Vergleich, einschließlich Temperaturbereich, Infrastruktur und Betrieb.",
+        "intro": "Eine Thermalvakuumkammer benötigt eine kontrollierte thermische Randbedingung um den Prüfling. Die gewählte Kühlarchitektur beeinflusst Temperaturbereich, Rampenfähigkeit, Stabilität, Standortinfrastruktur und Betriebsaufwand. Mechanische Kälte, stickstoffbasierte Systeme und kombinierte Konzepte eignen sich für unterschiedliche Anforderungen. Aktuelle Deepvac-Leistungsbereiche sind konfigurationsabhängig; verbindlich sind Systemauslegung und Projektangebot.",
         "sections": {
           "mechanical": {
             "title": "Mechanische Kühlung",
-            "content": "Mechanische Kühlsysteme nutzen kompressorbasierte Kreisläufe (typischerweise Kaskadensysteme für Temperaturen unter −40 °C), um Wärme vom Kammerschroud oder der Auflagefläche abzuführen.",
+            "content": "Mechanische Kälte nutzt kompressorbasierte Kreisläufe und einen Wärmeträgerkreis, um Wärme aus Shroud oder Thermalplatte abzuführen. Aktuelle Deepvac-Referenzkonfigurationen mit mechanischer Kühlung decken ungefähr −90 °C bis +150 °C ab, abhängig von Kammergröße, Last und gewähltem Kältepaket.",
             "advantages": [
-              "Kein Verbrauch von Kryogenen — geringere laufende Betriebskosten",
-              "Dauerbetrieb ohne Versorgungslogistik",
-              "Gute Temperaturregelbarkeit im Bereich −90 °C bis +150 °C",
-              "Geringere Anforderungen an die Anlageninfrastruktur"
+              "Kein Verbrauch von Kryogenen im Normalbetrieb",
+              "Betrieb unabhängig von Dewar-Wechsel oder Verfügbarkeit eines Stickstoff-Bulktanks",
+              "Geregeltes Heizen und Kühlen innerhalb des konfigurierten Arbeitsbereichs",
+              "Potenziell geringere Anforderungen an die kryogene Standortinfrastruktur"
             ],
             "constraints": [
-              "Begrenzte Minimaltemperatur (typischerweise bis ca. −90 °C bei zweistufigen Systemen)",
-              "Langsamere Abkühlraten im Vergleich zu LN₂-Systemen",
-              "Höhere anfängliche Ausrüstungskosten für Kaskadenkonfigurationen",
-              "Kompressorwartung und eventuelle Erneuerung"
+              "Die Minimaltemperatur liegt üblicherweise höher als bei stickstoffbasierten Tiefkaltkonzepten",
+              "Die Rampenfähigkeit hängt von Kälteleistung und thermischer Masse von Kammer, Vorrichtung und Prüfling ab",
+              "Kompressoren, Kältemittelkreise und Wärmeabfuhr benötigen geplante Wartung",
+              "Die abgeführte Wärme muss über Raumluft oder Gebäudekühlwasser aufgenommen werden"
             ]
           },
           "ln2": {
             "title": "Flüssigstickstoff (LN₂) Kreisläufe",
-            "content": "LN₂-basierte Systeme zirkulieren Flüssigstickstoff durch Schroud- oder Platen-Kanäle und erreichen Temperaturen bis etwa −180 °C. Der Stickstoff wird typischerweise aus externen Dewargefäßen oder Großtanks zugeführt.",
+            "content": "Stickstoffbasierte Konzepte kühlen Shroud- oder Thermalplattenkreise direkt oder über einen geregelten Gaskreislauf. Aktuelle Deepvac-Referenzkonfigurationen decken bei direkter LN₂-Kühlung oder geschlossenem GN₂-Kreislauf ungefähr −180 °C bis +150 °C ab; ein gefluteter LN₂-Wärmetauscher kann etwa −190 °C erreichen. Bereich und Regelverhalten bleiben konfigurationsabhängig.",
             "advantages": [
-              "Erreicht sehr tiefe Temperaturen (bis −180 °C)",
-              "Schnelle Abkühlraten",
-              "Relativ einfache Systemarchitektur",
-              "Geringere anfängliche Ausrüstungskosten im Vergleich zu mechanischen Systemen für Tiefkühlanforderungen"
+              "Tiefkaltfähigkeit für Verifikationsfälle mit sehr kalter radiativer oder konduktiver Randbedingung",
+              "Hohe verfügbare Kühlleistung bei passend ausgelegter Versorgung und Strömungsarchitektur",
+              "Skalierbarkeit über Speicher-, Verteil- und Kreisdesign",
+              "Geeignet für lange Kalthaltephasen bei entsprechend geplanter Stickstoffversorgung"
             ],
             "constraints": [
-              "Laufender LN₂-Verbrauch — wiederkehrende Versorgungskosten",
-              "Erfordert Versorgungsinfrastruktur (Dewar-Logistik oder Großtankinstallation)",
-              "Präzision der Temperaturregelung hängt vom Durchflussregelungsdesign ab",
-              "Sicherheitsaspekte bei kryogener Handhabung und Sauerstoffverdrängung"
+              "Erfordert ein dokumentiertes Versorgungs- und Nachfüllkonzept für LN₂ oder GN₂",
+              "Sauerstoffmangelüberwachung, Lüftung und sichere Abblaseführung gehören zur Standortplanung",
+              "Die Regelgüte hängt von Kreisdesign, Ventilautorität, Sensorplatzierung und thermischer Last ab",
+              "Betriebskosten und Logistik hängen von lokaler Stickstoffversorgung und Einsatzprofil ab"
             ]
           },
           "hybrid": {
             "title": "Hybrid- und kombinierte Ansätze",
-            "content": "Einige Kammerdesigns kombinieren mechanische Kühlung für moderate Abkühlung mit LN₂-Unterstützung für Tiefkaltphasen. Dies kann sowohl Betriebskosten als auch Temperaturbereich optimieren, erhöht aber die Systemkomplexität.",
+            "content": "Kombinierte Konzepte nutzen unterschiedliche Kühlmethoden für verschiedene Betriebsbereiche oder Testphasen. Sie können den Kryogenbedarf senken oder den Temperaturbereich erweitern, sind aber nur sinnvoll, wenn zusätzliche Schnittstellen, Regellogik und Wartungsaufwand durch das Prüfprogramm gerechtfertigt sind.",
             "points": [
-              "Mechanische Vorkühlung reduziert den LN₂-Verbrauch während Tiefkaltzyklen",
-              "LN₂-Boost erweitert den Temperaturbereich über mechanische Grenzen hinaus",
-              "Steuerungssystem muss Umschaltung und kombinierten Betrieb handhaben",
-              "Höherer Engineering-Aufwand für Systemintegration und Inbetriebnahme"
+              "Mechanische Vorkühlung kann den Stickstoffbedarf einer anschließenden Tiefkaltphase senken",
+              "Eine Stickstoffstufe kann die untere Temperaturgrenze des mechanischen Systems erweitern",
+              "Die Steuerungsstrategie muss Übergangsbedingungen und sichere Zustände beider Subsysteme festlegen",
+              "Die Wirtschaftlichkeitsbetrachtung muss Inbetriebnahme, Wartung und Betriebslogistik einschließen"
             ]
           },
           "selection": {
             "title": "Auswahlkriterien",
-            "content": "Die Wahl der richtigen Kühlarchitektur erfordert die Bewertung mehrerer voneinander abhängiger Faktoren:",
+            "content": "Wählen Sie die Architektur aus den Verifikationsfällen und Standortbedingungen, nicht aus einer einzelnen Minimaltemperatur im Datenblatt.",
             "factors": [
               "Erforderlicher Temperaturbereich und Minimaltemperatur",
               "Anforderungen an Abkühl- und Erholungszeit",
@@ -86,20 +89,20 @@
             ]
           }
         },
-        "conclusion": "Das Kühlsystem definiert einen Großteil des betrieblichen Charakters einer TVAC-Kammer. Frühzeitige Abstimmung zwischen Testanforderungen und Kühlarchitektur vermeidet kostspielige Umkonstruktionen und stellt sicher, dass das System über seinen gesamten Lebenszyklus zuverlässig arbeitet."
+        "conclusion": "Die Kühlarchitektur ist eine Systementscheidung. Erforderliche Randtemperaturen, thermische Masse, Rampen- und Stabilitätskriterien, jährliche Auslastung, Medien und Sicherheitsmaßnahmen sollten gemeinsam bewertet werden, bevor die Kammerkonfiguration festgelegt wird."
       },
       "retrofitVsReplacement": {
         "title": "Wann Retrofit sinnvoller ist als Neubeschaffung",
-        "description": "Ein strukturierter Bewertungsrahmen für die Entscheidung, ob ein bestehendes Thermalvakuumsystem modernisiert oder durch ein neues ersetzt werden soll — basierend auf technischem Zustand, Betriebsanforderungen und Lebenszykluskosten.",
-        "seoTitle": "TVAC Retrofit vs. Neubeschaffung — Entscheidungsrahmen | Deepvac",
-        "seoDescription": "Strukturierter Entscheidungsrahmen zur Bewertung von TVAC-Retrofit vs. Neubeschaffung — technischer Zustand, Lebenszykluskosten und Betriebsanforderungen.",
-        "intro": "Thermalvakuumsysteme sind langlebige Investitionsgüter. Wenn die Leistung nachlässt, Steuerungen veralten oder sich Testanforderungen ändern, stellt sich die Frage: das bestehende System retrofittieren oder vollständig ersetzen. Beide Wege haben ihre Berechtigung. Die Entscheidung sollte auf einer technischen Bewertung basieren, nicht auf Annahmen.",
+        "description": "Ein zustandsbasierter Rahmen für die Entscheidung, ob ein bestehendes Thermalvakuumsystem modernisiert oder ersetzt werden sollte.",
+        "seoTitle": "TVAC-Retrofit oder Neubeschaffung: Entscheidungsrahmen | Deepvac",
+        "seoDescription": "Ein zustandsbasierter Vergleich von TVAC-Retrofit und Neubeschaffung nach Behälterzustand, Zielperformance, Stillstand, Dokumentation und Lebenszykluskosten.",
+        "intro": "Thermalvakuumsysteme sind langlebige Investitionsgüter. Wenn die Leistung nachlässt, Steuerungen nicht mehr unterstützt werden oder sich Anforderungen ändern, ist zwischen Modernisierung und Ersatz zu entscheiden. Maßgeblich sind gemessener Behälterzustand, klar definierte Zielperformance, Lebenszykluskosten, Stillstandszeit und Dokumentationsbedarf.",
         "sections": {
           "retrofitFavored": {
             "title": "Wann Retrofit typischerweise bevorzugt wird",
             "points": [
               "Der Vakuumbehälter und die Strukturkomponenten sind in gutem Zustand",
-              "Die primäre Einschränkung liegt bei Steuerung, Instrumentierung oder thermischen Subsystemen — nicht bei der Kammer selbst",
+              "Die primäre Einschränkung liegt bei Steuerung, Instrumentierung oder thermischen Subsystemen – nicht bei der Kammer selbst",
               "Der erforderliche Leistungsbereich hat sich nicht grundlegend geändert",
               "Die Ausfallzeit für einen vollständigen Austausch wäre betrieblich nicht akzeptabel",
               "Budgetbeschränkungen favorisieren stufenweise Modernisierung gegenüber Kapitalersatz",
@@ -110,7 +113,7 @@
             "title": "Wann Neubeschaffung typischerweise bevorzugt wird",
             "points": [
               "Der Vakuumbehälter zeigt strukturelle Degradation, Leckpfade oder Materialermüdung jenseits wirtschaftlicher Reparatur",
-              "Testanforderungen haben sich wesentlich geändert — größere Prüflinge, andere Temperaturbereiche, höhere Reinheitsanforderungen",
+              "Testanforderungen haben sich wesentlich geändert – größere Prüflinge, andere Temperaturbereiche, höhere Reinheitsanforderungen",
               "Die bestehende Systemarchitektur verhindert grundsätzlich erforderliche Upgrades",
               "Kumulative Retrofit-Kosten nähern sich den Neubaukosten ohne vergleichbare Leistung zu erreichen",
               "Regulatorische oder Sicherheitsstandards haben sich über die Möglichkeiten der bestehenden Struktur hinaus geändert"
@@ -118,64 +121,64 @@
           },
           "assessment": {
             "title": "Bewertungsansatz",
-            "content": "Eine fundierte Retrofit-vs-Neubeschaffung-Entscheidung erfordert eine strukturierte technische Bewertung:",
+            "content": "Eine belastbare Entscheidung beginnt mit einer Inspektion und einer Gap-Analyse gegen die künftigen Verifikationsfälle.",
             "steps": [
               "Zustandsbewertung von Vakuumbehälter, Dichtungen, Durchführungen und Strukturintegrität",
-              "Bewertung des Subsystemzustands — Pumpen, Thermik, Steuerung, Instrumentierung",
+              "Bewertung des Subsystemzustands – Pumpen, Thermik, Steuerung, Instrumentierung",
               "Gap-Analyse zwischen aktueller Leistungsfähigkeit und erforderlicher Performance",
               "Kostenabschätzung für Retrofit-Umfang vs. Neusystembeschaffung",
               "Ausfallzeit- und Übergangsplanung für beide Szenarien",
-              "Risikobewertung für jeden Pfad — technisch, terminlich und betrieblich"
+              "Risikobewertung für jeden Pfad – technisch, terminlich und betrieblich"
             ]
           },
           "commonMistakes": {
             "title": "Häufige Entscheidungsfehler",
             "points": [
-              "Annahme, Retrofit sei immer günstiger — kaskadierende Umfangsänderungen können den Kostenvorteil aufzehren",
-              "Annahme, Neubeschaffung sei immer besser — ein intakter Behälter mit modernisierten Subsystemen kann Erwartungen übertreffen",
-              "Unterschätzung der Übergangskosten — Installation, Requalifizierung, Verfahrensaktualisierung und Bedienertraining gelten für beide Wege",
-              "Ignorieren der betrieblichen Zeitlinie — Retrofit kann oft stufenweise erfolgen, während Neubeschaffung typischerweise längere Ausfallzeiten erfordert"
+              "Annahme, Retrofit sei immer günstiger – kaskadierende Umfangsänderungen können den Kostenvorteil aufzehren",
+              "Annahme, Neubeschaffung sei immer besser – ein intakter Behälter mit modernisierten Subsystemen kann Erwartungen übertreffen",
+              "Unterschätzung der Übergangskosten – Installation, Requalifizierung, Verfahrensaktualisierung und Bedienertraining gelten für beide Wege",
+              "Ignorieren der betrieblichen Zeitlinie – Retrofit kann oft stufenweise erfolgen, während Neubeschaffung typischerweise längere Ausfallzeiten erfordert"
             ]
           }
         },
-        "conclusion": "Die Retrofit-vs-Neubeschaffung-Entscheidung ist grundsätzlich eine Engineering-Bewertung, keine Beschaffungsentscheidung. Eine gründliche technische Bewertung des bestehenden Systems — und eine klare Definition der erforderlichen zukünftigen Leistungsfähigkeit — führt zu besseren Ergebnissen als die Standardwahl einer der beiden Optionen."
+        "conclusion": "Ein intakter Behälter mit geplantem Subsystem-Retrofit kann noch viele Jahre nutzbar bleiben; eine beschädigte, kontaminierte oder grundsätzlich zu kleine Anlage rechtfertigt weitere Investitionen möglicherweise nicht. Vergleichen Sie beide Wege erst, nachdem Istzustand, Zielperformance, Übergangsaufwand und Restrisiko dokumentiert sind."
       },
       "aerospaceQualification": {
         "title": "Kernanforderungen für die Raumfahrtqualifikationsprüfung",
-        "description": "Ein Überblick über die Umweltprüfanforderungen, die Thermalvakuumsysteme für die Qualifikation von Raumfahrt-Hardware erfüllen müssen — von Normenkonformität bis zur Kammerleistungsfähigkeit.",
-        "seoTitle": "Anforderungen an die Raumfahrtqualifikationsprüfung für TVAC | Deepvac",
-        "seoDescription": "Überblick über Umweltprüfanforderungen für die Raumfahrt-Hardware-Qualifikation in Thermalvakuumkammern — Normen, Temperaturzyklierung und Kammerleistung.",
-        "intro": "Die Raumfahrtqualifikationsprüfung verifiziert, dass Hardware die Weltraumumgebung übersteht und dort funktioniert. Thermalvakuumtests sind ein Kernelement dieser Qualifikation und simulieren die kombinierten Effekte von Vakuum und extremer Temperaturzyklierung. Das Prüfsystem muss spezifische Anforderungen erfüllen, um valide Qualifikationsdaten zu liefern.",
+        "description": "Wie programmspezifische Normen, thermische und vakuumtechnische Randbedingungen, Messtechnik und Dokumentation eine TVAC-Qualifikation prägen.",
+        "seoTitle": "Raumfahrtqualifikation im TVAC | Deepvac",
+        "seoDescription": "Wie programmspezifische Normen, thermische und vakuumtechnische Randbedingungen, Kalibrierung und Dokumentation eine TVAC-Qualifikation prägen.",
+        "intro": "Die Raumfahrtqualifikation verifiziert Hardware gegen programmspezifische Umweltanforderungen. Thermalvakuumtests werden eingesetzt, wenn Vakuum und thermische Randbedingungen Teil der Verifikationslogik sind. Verbindliche Level, Reihenfolge, Margen, Modellphilosophie und Annahmekriterien stammen aus Vertrag und freigegebenem Verifikationsplan.",
         "sections": {
           "standards": {
             "title": "Anwendbare Normen und Tailoring",
-            "content": "Thermalvakuumtests in der Raumfahrt werden typischerweise durch Normen wie ECSS-E-ST-10-03C (europäisch) oder MIL-STD-1540 / SMC-S-016 (US) geregelt. Diese definieren Testlevel, Dauern und Akzeptanzkriterien.",
+            "content": "Europäische Programme können ECSS-E-ST-10-03C Rev.1 anwenden. Für Projekte des NASA Goddard Space Flight Center gilt, sofern vertraglich festgelegt, GSFC-STD-7000B; US-Space-Force-Programme können SMC-S-016 oder andere Vertragsdokumente heranziehen. MIL-STD-1540D ist eine historische Referenz und wurde 2016 zurückgezogen. Verbindlich bleibt das projektspezifische Tailoring.",
             "points": [
-              "Normen definieren Basisanforderungen — spezifische Programme passen Testbedingungen oft an",
-              "Qualifikationslevel sind strenger als Akzeptanzlevel (breiterer Temperaturbereich, mehr Zyklen, längere Haltezeiten)",
-              "Testspezifikationen müssen zwischen Prüfanlage und Programmverantwortlichen abgestimmt werden",
-              "Dokumentations- und Rückverfolgbarkeitsanforderungen sind integraler Bestandteil der Qualifikationsgültigkeit"
+              "Exakte Dokumentrevision und Tailoring in Vertrag oder Verifikationsplan bestätigen",
+              "Temperaturlevel, Zyklenzahlen oder Margen nicht ohne Freigabe zwischen Programmen übertragen",
+              "Modellphilosophie für Qualifikation, Abnahme oder Protoflight ausdrücklich festlegen",
+              "Kalibrierung, Rückverfolgbarkeit, Anomaliebehandlung und Berichtswesen als Verifikationsanforderung behandeln"
             ]
           },
           "thermalRequirements": {
             "title": "Thermische Anforderungen",
-            "content": "Die Kammer muss spezifizierte thermische Bedingungen mit ausreichender Präzision erreichen und halten:",
+            "content": "Die Anlage muss die programmspezifischen thermischen Randbedingungen unter der erwarteten Testlast herstellen.",
             "points": [
-              "Temperaturbereich, der Qualifikationsextreme abdeckt — oft −65 °C bis +125 °C oder breiter je nach Anwendung",
-              "Temperaturgleichmäßigkeit über dem Prüfling — typischerweise ±3 °C bis ±5 °C je nach Prüflingsgröße",
-              "Kontrollierte Übergangsraten zwischen Warm- und Kalt-Haltephasen",
-              "Haltezeit-Stabilität — Halten des Sollwerts innerhalb der Toleranz für spezifizierte Dauern (oft 1–4 Stunden pro Haltephase)",
-              "Anzahl der Thermalzyklen gemäß Qualifikationsspezifikation"
+              "Heiße und kalte Level aus Missionsanalyse und freigegebenen Margen",
+              "Rampen-, Halte- und Stabilisierungskriterien, die Kammer und Prüfling gemeinsam erreichen können",
+              "Spezifizierte Homogenität, Stabilität und Sensorreferenzpunkte für das Verifikationsziel",
+              "Definierte Funktions- oder Überlebenszustände für jede Testphase",
+              "Dokumentierte Regeln für Abweichungen, Holds und Wiederanläufe"
             ]
           },
           "vacuumRequirements": {
             "title": "Vakuumanforderungen",
-            "content": "Die Vakuumumgebung muss repräsentativ für Orbitbedingungen sein und während der gesamten Prüfung aufrechterhalten werden:",
+            "content": "Der erforderliche Arbeitsdruck wird aus zulässigem Restgas-Wärmeübertrag, Entladungsrisiko, Kontaminationskontrolle und Messaufgabe abgeleitet. Er muss mit installiertem Prüfling und Vorrichtung nachgewiesen werden, nicht nur aus dem Wert der leeren Kammer folgen.",
             "points": [
-              "Betriebsdruck typischerweise ≤ 1 × 10⁻⁵ mbar (einige Programme fordern ≤ 10⁻⁶ mbar)",
-              "Abpumpzeit kompatibel mit Testterminbeschränkungen",
-              "Leckrate innerhalb der Spezifikation zur Aufrechterhaltung des Vakuums bei Langzeittests",
-              "Reinheitsanforderungen — besonders für optische oder empfindliche Nutzlasten (molekulare und partikuläre Kontaminationskontrolle)"
+              "Arbeitsdruck und Messmethode für die relevante Testphase festlegen",
+              "Abpump- und Erholungskriterien mit der Kampagnenprozedur abstimmen",
+              "Leck-, Ausgasungs- und Druckanstiegsverhalten mit installiertem Aufbau bewerten",
+              "Molekulare und partikuläre Reinheitsmaßnahmen an die Hardwareempfindlichkeit anpassen"
             ]
           },
           "instrumentation": {
@@ -195,20 +198,20 @@
             "points": [
               "Nutzvolumen ausreichend für Prüfling plus Vorrichtungen und Instrumentierung",
               "Durchführungskapazität für Leistungs-, Signal- und Fluidleitungen zum Prüfling",
-              "Mechanische Schnittstelle für Prüflingsmontage — Tragfähigkeit, Orientierung und Zugänglichkeit",
+              "Mechanische Schnittstelle für Prüflingsmontage – Tragfähigkeit, Orientierung und Zugänglichkeit",
               "Thermische Schroud- oder Platen-Abdeckung geeignet für gleichmäßigen Wärmeaustausch",
               "Optische Ports oder Zugangsklappen falls für Funktionsprüfung während Thermalvakuum-Exposition erforderlich"
             ]
           }
         },
-        "conclusion": "Die Raumfahrtqualifikationsprüfung erfordert ein gut charakterisiertes, ordnungsgemäß instrumentiertes Thermalvakuumsystem. Kammerauswahl und Testplanung sollten früh im Programm beginnen, um sicherzustellen, dass die Anlage valide Qualifikationsdaten innerhalb der Termin- und Budgetvorgaben liefern kann."
+        "conclusion": "Ein Qualifikationsergebnis ist nur so belastbar wie seine Anforderungsrückverfolgbarkeit. Prüfen Sie vor der Buchung Dokumentrevision, Tailoring, kalibrierte Messkette, Kammerfähigkeit unter Last und Berichtspflichten."
       },
       "tvacCostDrivers": {
         "title": "Was kostet eine Thermalvakuumkammer? Die sieben Kostentreiber",
-        "description": "Sieben Engineering-Entscheidungen bestimmen den Großteil des Preises eines TVAC-Systems. Wer sie kennt, spezifiziert, was die Testkampagne wirklich braucht.",
-        "seoTitle": "Thermalvakuumkammer: Kosten & die sieben Preistreiber | Deepvac",
-        "seoDescription": "Was kostet eine Thermalvakuumkammer? Volumen, Thermalkonzept, Vakuumniveau, Schnittstellen, Steuerung, Dokumentation und Services – ein praxisnaher Leitfaden zu den sieben Kostentreibern.",
-        "intro": "Für Thermalvakuumkammern gibt es keinen Listenpreis – und wer einen nennt, ohne Fragen zu stellen, rät. Je nach Anforderungen können zwei Systeme mit gleichem Nennvolumen um ein Mehrfaches im Preis auseinanderliegen. Die gute Nachricht: Der Großteil dieser Spanne geht auf sieben Engineering-Entscheidungen zurück – und jede davon liegt in Ihrer Hand. Wer diese Treiber kennt, spezifiziert, was die Testkampagne tatsächlich braucht, und bezahlt nicht für Fähigkeiten, die sie nicht benötigt.",
+        "description": "Die Engineering-Entscheidungen hinter den TVAC-Kosten: Einhüllende, Thermalkonzept, Arbeitsdruck, Schnittstellen, Steuerung, Dokumentation und Lebenszyklusumfang.",
+        "seoTitle": "TVAC-Kosten: Sieben Engineering-Treiber | Deepvac",
+        "seoDescription": "Wie Einhüllende, Thermalkonzept, Arbeitsdruck, Schnittstellen, Steuerung, Dokumentation und Lebenszyklusumfang die Kosten eines TVAC-Systems bestimmen.",
+        "intro": "Die Kosten eines TVAC-Systems folgen aus erforderlicher Leistung und Lieferumfang. Prüflingseinhüllende, Thermalkonzept, Arbeitsdruck unter Last, Schnittstellen, Steuerung, Dokumentation und Services sind die wesentlichen Entscheidungsfelder. Werden sie aus den Verifikationsfällen abgeleitet, lassen sich Unterdimensionierung und unnötige Reserven vermeiden.",
         "sections": {
           "volume": {
             "title": "1. Kammervolumen und Geometrie",
@@ -221,20 +224,20 @@
           },
           "thermal": {
             "title": "2. Temperaturbereich und Thermalkonzept",
-            "content": "Die Wahl zwischen direkter LN₂-Kühlung, geschlossener GN₂-Umwälzung und mechanischer Kühlung ist eine der größten Einzelentscheidungen – in beide Richtungen. Sie bestimmt die erreichbare Minimaltemperatur, Rampenraten und Homogenität und verteilt die Kosten zwischen Investition und Betrieb: LN₂-basierte Konzepte verbrauchen im Betrieb Flüssigstickstoff, mechanische Kühlung verlagert die Kosten in die Maschine selbst.",
+            "content": "Direkte LN₂-Kühlung, geregelte GN₂-Umwälzung und mechanische Kälte verteilen Kosten unterschiedlich auf Anlage, Standortinfrastruktur und Betrieb. Das gewählte Konzept muss Temperatur-, Rampen-, Stabilitäts- und Einsatzanforderungen mit der erwarteten Prüflingslast erfüllen.",
             "points": [
-              "Fragen Sie, welche Minimaltemperatur Ihre Qualifikationslevel wirklich erfordern – jede zusätzlichen 20 K Marge kosten echtes Geld.",
-              "Hohe Rampenraten und enge Homogenitätsanforderungen treiben Shroud-Auslegung, Strömungsarchitektur und Regelungskomplexität.",
-              "Denken Sie an die Auslastung: Bei häufigen Kampagnen dominiert der LN₂-Verbrauch die Lebenszykluskosten, bei gelegentlicher Nutzung die Investition."
+              "Keine Temperaturmarge hinzufügen, die nicht durch den Verifikationsplan begründet ist",
+              "Rampen- und Homogenitätsanforderungen mit realer thermischer Masse von Vorrichtung und Prüfling bewerten",
+              "Medien, Stickstoffverbrauch, Wärmeabfuhr und Wartung über die erwartete Auslastung vergleichen"
             ]
           },
           "vacuum": {
             "title": "3. Vakuumniveau und Pumparchitektur",
-            "content": "Der Schritt vom 10⁻⁵- in den 10⁻⁶-mbar-Bereich – und von dort Richtung 10⁻⁷ mbar – verändert die Pumparchitektur, die Anforderungen an Werkstoffe und Oberflächenbehandlung sowie die Dichtheitsanforderungen jeder Verbindung und Durchführung. Kontaminationsempfindliche Hardware bringt zusätzlich ausgasungsarme Materialauswahl und Ausheizfähigkeit ins Spiel.",
+            "content": "Die Pumparchitektur folgt aus gefordertem Arbeitsdruck unter erwarteter Gaslast, zulässiger Abpumpzeit und Kontaminationsbudget. Ein niedrigerer Basisdruck der leeren Kammer beweist allein keine bessere Performance in einer beladenen Kampagne.",
             "points": [
-              "Leiten Sie den erforderlichen Enddruck aus Teststandard und Hardware-Empfindlichkeit ab – nicht aus Gewohnheit.",
-              "Reinheitsanforderungen (Ausgasung, Partikel) können die Kosten ebenso beeinflussen wie die Druckangabe selbst.",
-              "Jede Durchführung und jede Dichtung ist Teil des Vakuumbudgets – mehr Schnittstellen bedeuten mehr Engineering."
+              "Arbeitsdruck, Gaslastannahmen und Messbedingungen gemeinsam spezifizieren",
+              "Reinheit, Ausgasung, Permeation und Ausheizanforderungen in das Vakuumbudget aufnehmen",
+              "Jede Durchführung, Dichtung und Leitwertbegrenzung als Teil der Systemrechnung behandeln"
             ]
           },
           "interfaces": {
@@ -248,11 +251,11 @@
           },
           "controls": {
             "title": "5. Steuerungssystem und Datenerfassung",
-            "content": "Die Spanne reicht von handbetätigten Ventilen mit Schreiber bis zum vollautomatisierten SPS-System mit Rezeptursteuerung, Verriegelungen, Datenerfassung und Fernzugriff. Automatisierung kostet zunächst Geld und zahlt es über Reproduzierbarkeit, unbeaufsichtigten Betrieb und Bedienerzeit zurück – gerade bei mehrtägigen Zyklierkampagnen.",
+            "content": "Steuerungen reichen vom überwachten Grundbetrieb bis zur automatisierten Rezepturausführung mit Verriegelungen, Datenerfassung und Fernstatus. Der angemessene Umfang folgt aus Reproduzierbarkeit, Sicherheit, Personalmodell und Berichtspflichten.",
             "points": [
-              "Reproduzierbare, dokumentierte Testdurchführung ist eine Eigenschaft des Steuerungssystems, keine Bedienerqualität.",
-              "Schnittstellen wie OPC UA oder Modbus sind relevant, wenn das System in bestehende Infrastruktur eingebunden werden muss.",
-              "Kanalzahl und Logging-Anforderungen der Datenerfassung sollten aus dem Testplan kommen."
+              "Rezepte, sichere Zustände und Bedienhandlungen aus der Kampagnenprozedur ableiten",
+              "Schnittstellen wie OPC UA oder Modbus nur dort spezifizieren, wo die Integration sie benötigt",
+              "Kanalzahl, Abtastrate und Aufbewahrung aus Test- und Berichtsplan ableiten"
             ]
           },
           "documentation": {
@@ -282,14 +285,14 @@
             ]
           }
         },
-        "conclusion": "Die ehrliche Antwort auf 'Was kostet eine Thermalvakuumkammer?' lautet: Es hängt von sieben Entscheidungen ab, die Sie steuern. Der schnellste Weg zu einer belastbaren Budgetzahl ist eine strukturierte Anforderungsdefinition – unser technischer TVAC-Fragebogen führt genau durch diese Parameter und gibt unserem Engineering-Team, was es für ein fundiertes Budgetangebot braucht."
+        "conclusion": "Ein belastbares Budgetmodell trennt erforderliche Verifikationsfähigkeit von optionaler Zukunftsreserve. Definieren Sie Prüflingseinhüllende, thermische und vakuumtechnische Randbedingungen, Schnittstellen, Steuerung und Dokumentation zuerst; vergleichen Sie Anschaffungs- und Lebenszykluskosten erst bei stabilem Umfang."
       },
       "tvacTestCampaign": {
         "title": "So läuft eine TVAC-Testkampagne ab: vom Testplan zum Datenpaket",
-        "description": "Was zwischen 'wir brauchen einen TVAC-Test' und dem abgenommenen Datenpaket wirklich passiert – die sechs Phasen einer Kampagne und was Sie als Kunde vorbereiten sollten.",
-        "seoTitle": "TVAC-Testkampagne: Ablauf in sechs Phasen | Deepvac",
-        "seoDescription": "Von Anforderungen und Testplan über Abpumpen, Thermalzyklen und Monitoring bis zum finalen Datenpaket – wie eine Thermalvakuum-Testkampagne strukturiert ist und was Kunden vorbereiten sollten.",
-        "intro": "Für Teams, die Hardware zum ersten Mal im Thermalvakuum testen, ist die Kampagne oft eine Blackbox: Hardware rein, Wochen vergehen, ein Bericht kommt raus. Tatsächlich folgt eine gut geführte TVAC-Kampagne einer klaren Struktur – und die meisten Verzögerungen und Überraschungen gehen auf Schritte zurück, die am Anfang übersprungen oder gestaucht wurden. So sieht der Ablauf Phase für Phase aus – und das können Sie auf Ihrer Seite vorbereiten, damit der Zeitplan hält.",
+        "description": "Die rückverfolgbaren Phasen einer TVAC-Kampagne, von Anforderungen und Aufbau bis Durchführung, Anomaliebehandlung und Datenpaket.",
+        "seoTitle": "TVAC-Testkampagne: Vom Plan zum Datenpaket | Deepvac",
+        "seoDescription": "Die rückverfolgbaren Phasen einer Thermalvakuum-Kampagne, von Anforderungen und Aufbau bis Durchführung, Anomaliebehandlung und Datenlieferung.",
+        "intro": "Eine Thermalvakuum-Kampagne ist eine Folge kontrollierter Entscheidungen: Anforderungen und Testplan, Aufbau und Instrumentierung, Abpumpen, thermische Durchführung, Anomaliebehandlung, Rückkehr auf Umgebung und Datenlieferung. Die Vorbereitung an jeder Schnittstelle entscheidet, ob Kammerzeit rückverfolgbare Nachweise erzeugt.",
         "sections": {
           "requirements": {
             "title": "1. Anforderungen und Testplan",
@@ -327,10 +330,10 @@
           },
           "monitoring": {
             "title": "5. Monitoring und Anomaliebehandlung",
-            "content": "Kampagnen laufen rund um die Uhr. Kontinuierliches Monitoring, definierte Alarmschwellen und ein klarer Eskalationspfad entscheiden, ob eine Anomalie eine Stunde kostet oder die Kampagne. Hier zahlen sich automatisierte Steuerungssysteme und Fernzugriff aus.",
+            "content": "Kampagnen können außerhalb der üblichen Arbeitszeiten weiterlaufen. Die Prozedur sollte Alarmschwellen, sichere Zustände, Benachrichtigungswege, Entscheidungsbefugnis und die zur Ereignisrekonstruktion benötigten Aufzeichnungen festlegen.",
             "points": [
-              "Vereinbaren Sie vor Kampagnenstart, wer um 3 Uhr nachts bei einer Grenzwertüberschreitung entscheidet.",
-              "Loggen Sie alles – Anomalien erklären sich oft aus Daten von Stunden vor dem Ereignis."
+              "Entscheidungsbefugnis und Eskalationskontakte vor dem Start des Laufs festlegen",
+              "Prozesswerte, Befehle, Alarme und Bedienhandlungen auf einer gemeinsamen Zeitbasis aufzeichnen"
             ]
           },
           "datapackage": {
@@ -343,7 +346,7 @@
           },
           "prepare": {
             "title": "Was Sie als Kunde vorbereiten sollten",
-            "content": "Die Kundenseite bestimmt das Kampagnentempo stärker, als die meisten Teams erwarten. Die folgenden Punkte sind die üblichen Verzögerungsquellen – alle vermeidbar.",
+            "content": "An der Kammerschnittstelle treffen Kunden- und Anlagenbeiträge zusammen. Die folgenden Punkte sollten vor der Integration vollständig sein, um vermeidbare Holds zu verhindern.",
             "factors": [
               "Eine vollständige Schnittstellenliste: Signale, Versorgungen, mechanische Aufnahmen und thermische Referenzpunkte.",
               "Vakuumtaugliche, auf das vereinbarte Niveau gereinigte Hardware mit dokumentierten Materialien.",
@@ -352,17 +355,8 @@
             ]
           }
         },
-        "conclusion": "Eine TVAC-Kampagne wird in der ersten Phase gewonnen: Ein präziser Testplan, vereinbarte Kriterien und eine vollständige Schnittstellendefinition machen aus Kammerzeit Nachweise statt Überraschungen. Unser technischer TVAC-Fragebogen deckt genau diese Punkte ab – egal, ob der Test auf Ihrer Infrastruktur läuft oder über unsere Prüfdienstleistungen."
+        "conclusion": "Eine Kampagne wird nachvollziehbar, wenn Anforderungen, As-built-Aufbau, kalibrierte Kanäle, Ausführungsprotokolle, Abweichungen und Abschlussbewertung aufeinander rückführbar bleiben. Diese Rückverfolgbarkeit gehört in den Testplan, bevor die Kammertür schließt."
       }
     }
-  },
-  "categories": {
-    "basics": "Grundlagen",
-    "applications": "Anwendungen"
-  },
-  "labels": {
-    "faqTitle": "Häufige Fragen",
-    "relatedTitle": "Verwandte Artikel",
-    "relatedSolutions": "Passende Lösungen"
   }
 }

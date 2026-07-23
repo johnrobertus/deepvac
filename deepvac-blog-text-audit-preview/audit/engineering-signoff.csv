@@ -1,0 +1,10 @@
+item,owner,externalOrInternalBasis,requiredApproval,affectedContent
+Standard Series nominal sizes and availability,Product owner,"Current product page lists 65, 125, 250, 500, 1000 and 2000 L",Confirm range and current commercial availability,All articles citing Standard Series
+Working pressure and loaded performance,Vacuum engineering,Product page lists ≤ 1 × 10⁻⁶ mbar as a shared reference characteristic,"Confirm measurement conditions, gas-load assumptions and per-size applicability","Sizing, pumping, basics, standards"
+Thermal ranges by cooling concept,Thermal engineering,"Product page lists direct LN₂ and GN₂ −180 to +150 °C, mechanical −90 to +150 °C, flooded LN₂ about −190 °C",Confirm per platform and test load,"Cooling, shrouds, CubeSat, basics"
+"Uniformity, stability and ramp capability",Thermal engineering,"Product page lists ±2 K, ±0.5 K and ≥1 K/min as shared characteristics","Confirm definitions, measurement zone and load conditions","Sizing, shrouds, automation"
+Control-system features and export formats,Controls engineering,"Product page lists PLC, 7-inch panel, 0.1 °C resolution and CSV/TXT/XLS export",Confirm current standard scope and option boundaries,"Automation, product-related articles"
+Testing-service scope,Services lead,Current service page is cited,"Confirm campaign, data and reporting services described remain offered","Campaign, in-house vs external, lead time"
+Electric-propulsion facility capability,Engineering management,"External NASA/JPL sources verify facility physics, not Deepvac delivery heritage",Confirm Deepvac commercial and technical scope before publication,Electric propulsion
+Safety requirements by installation country,Project safety owner,OSHA primary sources support oxygen-deficiency and LN₂ hazard framing,Replace or supplement with locally applicable rules for each project,"Facility requirements, cooling"
+Standards applicability and revisions,Programme assurance,External primary records verified on 2026-07-23,Confirm contract-specific revision and tailoring before using article as project guidance,"Standards, qualification, test types"

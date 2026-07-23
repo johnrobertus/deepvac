@@ -1,5 +1,15 @@
 import { useState, useRef, useEffect, useId } from "react";
 import { useTranslation } from "react-i18next";
+
+declare global {
+  interface Window {
+    turnstile?: {
+      render: (el: HTMLElement, opts: { sitekey: string; callback?: () => void; size?: string }) => string;
+      getResponse: (id: string) => string | undefined;
+      reset: (id: string) => void;
+    };
+  }
+}
 import { SectionHeader } from "@/components/SectionHeader";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/Reveal";
@@ -109,8 +119,8 @@ export function ContactSection() {
   useEffect(() => {
     if (!turnstileRef.current) return;
     const interval = setInterval(() => {
-      if ((window as any).turnstile && turnstileRef.current && !turnstileWidgetId.current) {
-        turnstileWidgetId.current = (window as any).turnstile.render(turnstileRef.current, {
+      if (window.turnstile && turnstileRef.current && !turnstileWidgetId.current) {
+        turnstileWidgetId.current = window.turnstile.render(turnstileRef.current, {
           sitekey: TURNSTILE_SITE_KEY, callback: () => {}, size: "invisible",
         });
         clearInterval(interval);
@@ -158,8 +168,8 @@ export function ContactSection() {
     setSending(true);
     try {
       let turnstileToken = "";
-      if ((window as any).turnstile && turnstileWidgetId.current) {
-        turnstileToken = (window as any).turnstile.getResponse(turnstileWidgetId.current) || "";
+      if (window.turnstile && turnstileWidgetId.current) {
+        turnstileToken = window.turnstile.getResponse(turnstileWidgetId.current) || "";
       }
       const { data, error } = await supabase.functions.invoke("send-inquiry", {
         body: {
@@ -189,14 +199,13 @@ export function ContactSection() {
       trackEvent("form_submitted", { page: "home", interests: interests.join(", ") || "none" });
       turnstileWidgetId.current = null;
       toast.success(tc("form.success.toast"));
-    } catch (err: any) {
+    } catch (err: unknown) {
       console.error("Submission error:", err);
-      if (err?.message?.includes("Too many requests")) {
-        toast.error(tc("form.errors.tooManyRequests"));
-      } else {
-        toast.error(tc("form.errors.submissionFailed"));
-      }
-      if ((window as any).turnstile && turnstileWidgetId.current) { (window as any).turnstile.reset(turnstileWidgetId.current); }
+      const message = err instanceof Error && err.message.includes("Too many requests")
+        ? tc("form.errors.tooManyRequests")
+        : tc("form.errors.submissionFailed");
+      toast.error(message);
+      if (window.turnstile && turnstileWidgetId.current) { window.turnstile.reset(turnstileWidgetId.current); }
     } finally { setSending(false); }
   };
 

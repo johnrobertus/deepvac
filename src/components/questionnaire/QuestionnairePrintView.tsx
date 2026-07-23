@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
  */
 interface OtherCheck { checked: boolean; text: string }
 interface PortRow { checked: boolean; size: string; qty: string }
-type AnyForm = Record<string, any>;
+type AnyForm = Record<string, unknown>;
 
 interface Props {
   form: AnyForm;
@@ -16,7 +16,7 @@ interface Props {
 }
 
 /* ---------- helpers ---------- */
-const isEmptyVal = (v: any): boolean => {
+const isEmptyVal = (v: unknown): boolean => {
   if (v == null) return true;
   if (typeof v === "string") return v.trim() === "";
   if (typeof v === "boolean") return v === false;

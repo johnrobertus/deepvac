@@ -17,7 +17,7 @@
   },
   "options": {
     "title": "Optionen für TVAC-Kammern | Deepvac",
-    "description": "Konfigurieren Sie Ihre Thermal-Vakuumkammer: Solarsimulation, Bake-out, ölfreies Pumpen, RGA, Thermografie-Schaugläser und mehr — alle Deepvac-Optionen im Überblick."
+    "description": "Konfigurieren Sie Ihre Thermal-Vakuumkammer: Solarsimulation, Bake-out, ölfreies Pumpen, RGA, Thermografie-Schaugläser und mehr – alle Deepvac-Optionen im Überblick."
   },
   "services": {
     "title": "TVAC-Engineering und Services | Deepvac",
@@ -104,24 +104,24 @@
     "description": "Technische Beiträge zu Thermalvakuumsystemen, Weltraumsimulation, Qualifikationsprüfung, Retrofit-Entscheidungen und TVAC-Engineering-Praxis."
   },
   "blogCoolingSystems": {
-    "title": "TVAC-Kühlsysteme: Mechanisch vs. LN2 | Deepvac",
-    "description": "Engineering-Überblick zu Thermalvakuum-Kühlarchitekturen – mechanische Kühlung, LN2-Kreisläufe und Hybridansätze mit ihren technischen Abwägungen."
+    "title": "Kühlsysteme für Thermalvakuumkammern | Deepvac",
+    "description": "Mechanische Kälte, stickstoffbasierte Kühlung und kombinierte TVAC-Konzepte im Vergleich, einschließlich Temperaturbereich, Infrastruktur und Betrieb."
   },
   "blogRetrofitVsReplacement": {
-    "title": "TVAC-Retrofit oder Neubeschaffung? Leitfaden | Deepvac",
-    "description": "Strukturierter Entscheidungsrahmen zur Bewertung von Thermalvakuumkammer-Retrofit vs. Neubeschaffung – technischer Zustand, Kosten, Betriebspassung."
+    "title": "TVAC-Retrofit oder Neubeschaffung: Entscheidungsrahmen | Deepvac",
+    "description": "Ein zustandsbasierter Vergleich von TVAC-Retrofit und Neubeschaffung nach Behälterzustand, Zielperformance, Stillstand, Dokumentation und Lebenszykluskosten."
   },
   "blogAerospaceQualification": {
     "title": "Raumfahrtqualifikation im TVAC | Deepvac",
-    "description": "Umweltprüfanforderungen für die Raumfahrt-Hardware-Qualifikation in Thermalvakuumkammern – Normen, Temperaturzyklierung und Kammerleistung."
+    "description": "Wie programmspezifische Normen, thermische und vakuumtechnische Randbedingungen, Kalibrierung und Dokumentation eine TVAC-Qualifikation prägen."
   },
   "blogTvacCostDrivers": {
-    "title": "Thermalvakuumkammer: 7 Kostentreiber im Überblick | Deepvac",
-    "description": "Was kostet eine Thermalvakuumkammer? Praxisleitfaden zu den sieben Kostentreibern: Volumen, Thermalkonzept, Vakuum, Schnittstellen, Steuerung, Services."
+    "title": "TVAC-Kosten: Sieben Engineering-Treiber | Deepvac",
+    "description": "Wie Einhüllende, Thermalkonzept, Arbeitsdruck, Schnittstellen, Steuerung, Dokumentation und Lebenszyklusumfang die Kosten eines TVAC-Systems bestimmen."
   },
   "blogTvacTestCampaign": {
-    "title": "TVAC-Testkampagne: Ablauf in sechs Phasen | Deepvac",
-    "description": "Vom Testplan über Abpumpen, Thermalzyklen und Monitoring bis zum finalen Datenpaket – wie eine Thermalvakuum-Testkampagne strukturiert ist."
+    "title": "TVAC-Testkampagne: Vom Plan zum Datenpaket | Deepvac",
+    "description": "Die rückverfolgbaren Phasen einer Thermalvakuum-Kampagne, von Anforderungen und Aufbau bis Durchführung, Anomaliebehandlung und Datenlieferung."
   },
   "blogWhatIsTvacTesting": {
     "title": "Was ist ein Thermalvakuumtest (TVAC)? | Deepvac",
@@ -129,7 +129,7 @@
   },
   "blogVacuumLevelsExplained": {
     "title": "Vakuumbereiche erklärt: Grobvakuum bis UHV | Deepvac",
-    "description": "Grobvakuum, Feinvakuum, Hochvakuum und UHV erklärt: mbar-Bereiche, Pumpentypen, freie Weglänge – und warum Weltraumsimulation 10⁻⁵ bis 10⁻⁶ mbar braucht."
+    "description": "Grobvakuum, Feinvakuum, Hochvakuum und UHV mit Pumpen, Messtechnik und Molekularströmung erklärt, einschließlich der Einordnung typischer TVAC-Spezifikationen."
   },
   "blogOutgassingBasics": {
     "title": "Ausgasung im Vakuum: TML, CVCM & Ausheizen | Deepvac",
@@ -148,8 +148,8 @@
     "description": "TVAC-Kammer richtig dimensionieren: Nennvolumen vs. Nutzvolumen, Faustregeln für Abstände, kubische vs. zylindrische Bauform und sinnvolle Wachstumsreserve."
   },
   "blogEcssStandardsOverview": {
-    "title": "ECSS-Normen für TVAC-Tests | Deepvac",
-    "description": "ECSS-E-ST-10-03C, MIL-STD-1540/SMC-S-016 und NASA GEVS im Vergleich: Was jede Norm für Thermalvakuumtests regelt und was das für Ihre TVAC-Kampagne heißt."
+    "title": "ECSS, SMC-S-016 & NASA GEVS für TVAC | Deepvac",
+    "description": "TVAC-Normen im Überblick: ECSS-E-ST-10-03C Rev.1, SMC-S-016 und GSFC-STD-7000B, einschließlich Tailoring, Verifikationsansätzen und Anlagenfolgen."
   },
   "blogTvacFacilityRequirements": {
     "title": "TVAC-Infrastruktur: Anforderungen | Deepvac",
@@ -193,11 +193,11 @@
   },
   "blogElectricPropulsionTesting": {
     "title": "Elektrische Antriebe im Vakuumtest | Deepvac",
-    "description": "Elektrische Antriebe im Vakuumtest: Saugvermögen für Xenon, Hintergrunddruck-Effekte, Sputter-Schutz und Diagnostik — Auslegung kundenspezifischer Anlagen."
+    "description": "Elektrische Antriebe im Vakuumtest: Saugvermögen für Xenon, Hintergrunddruck-Effekte, Sputter-Schutz und Diagnostik – Auslegung kundenspezifischer Anlagen."
   },
   "blogOpticsElectronicsTesting": {
     "title": "Optik und Elektronik im Vakuumtest | Deepvac",
-    "description": "Elektronik im Vakuum testen: Warum Baugruppen ohne Konvektion überhitzen, wie Kontamination Optiken erreicht — und was QCM, RGA und IR-Kameras sichtbar machen."
+    "description": "Elektronik im Vakuum testen: Warum Baugruppen ohne Konvektion überhitzen, wie Kontamination Optiken erreicht – und was QCM, RGA und IR-Kameras sichtbar machen."
   },
   "blogInHouseVsExternalTesting": {
     "title": "Eigene TVAC-Kammer oder Dienstleister? | Deepvac",
@@ -205,10 +205,10 @@
   },
   "blogUsedVsNewTvac": {
     "title": "Gebrauchte Vakuumkammer kaufen: Checkliste | Deepvac",
-    "description": "Gebrauchte Vakuumkammer kaufen oder neu? Die realen Risiken — Dichtungshistorie, Kontamination, veraltete Steuerung — plus Prüfcheckliste und Retrofit-Weg."
+    "description": "Gebrauchte Vakuumkammer kaufen oder neu? Die realen Risiken – Dichtungshistorie, Kontamination, veraltete Steuerung – plus Prüfcheckliste und Retrofit-Weg."
   },
   "blogTvacLeadTimes": {
     "title": "Lieferzeit Vakuumkammer: Was sie bestimmt | Deepvac",
-    "description": "Lieferzeit Vakuumkammer erklärt: Engineering, Langläufer wie Pumpen und Kältetechnik, Behälterfertigung, Abnahme und Inbetriebnahme — und Ihre Stellhebel."
+    "description": "Lieferzeit Vakuumkammer erklärt: Engineering, Langläufer wie Pumpen und Kältetechnik, Behälterfertigung, Abnahme und Inbetriebnahme – und Ihre Stellhebel."
   }
 }

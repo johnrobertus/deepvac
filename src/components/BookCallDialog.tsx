@@ -33,7 +33,7 @@ function writeConsent(value: boolean) {
     } else {
       localStorage.removeItem(STORAGE_KEY);
     }
-  } catch {}
+  } catch { /* no-op */ }
 }
 
 interface BookCallDialogProps {
