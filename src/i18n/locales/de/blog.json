@@ -10,7 +10,9 @@
       "description": "Technische Artikel zu Thermalvakuumsystemen — Kühlarchitekturen, Retrofit-Entscheidungen, Anforderungen an die Raumfahrtqualifikation und Engineering Best Practices."
     },
     "categories": {
+      "basics": "BASICS",
       "engineeringGuide": "Engineering-Leitfaden",
+      "applications": "APPLICATIONS",
       "decisionSupport": "Entscheidungshilfe"
     },
     "labels": {
