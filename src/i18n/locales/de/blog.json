@@ -350,5 +350,14 @@
         "conclusion": "Eine TVAC-Kampagne wird in der ersten Phase gewonnen: Ein präziser Testplan, vereinbarte Kriterien und eine vollständige Schnittstellendefinition machen aus Kammerzeit Nachweise statt Überraschungen. Unser technischer TVAC-Fragebogen deckt genau diese Punkte ab – egal, ob der Test auf Ihrer Infrastruktur läuft oder über unsere Prüfdienstleistungen."
       }
     }
+  },
+  "categories": {
+    "basics": "Grundlagen",
+    "applications": "Anwendungen"
+  },
+  "labels": {
+    "faqTitle": "Häufige Fragen",
+    "relatedTitle": "Verwandte Artikel",
+    "relatedSolutions": "Passende Lösungen"
   }
 }
