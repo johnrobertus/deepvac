@@ -93,6 +93,7 @@ const App = () => (
                 <Route path="/resources/blog/aerospace-qualification-testing" element={<AerospaceQualification />} />
                 <Route path="/resources/blog/tvac-cost-drivers" element={<TvacCostDrivers />} />
                 <Route path="/resources/blog/tvac-test-campaign" element={<TvacTestCampaign />} />
+                <Route path="/resources/blog/:slug" element={<GeneratedPost />} />
                 <Route path="/careers" element={<Careers />} />
                 <Route path="/references" element={<References />} />
                 <Route path="/contact" element={<Contact />} />
