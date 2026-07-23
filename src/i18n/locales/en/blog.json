@@ -350,5 +350,14 @@
         "conclusion": "A TVAC campaign is won in the first phase: a precise test plan, agreed criteria, and a complete interface definition turn chamber time into evidence instead of surprises. Our technical TVAC questionnaire covers exactly these points — whether the test runs on your infrastructure or through our testing services."
       }
     }
+  },
+  "categories": {
+    "basics": "Fundamentals",
+    "applications": "Applications"
+  },
+  "labels": {
+    "faqTitle": "Frequently Asked Questions",
+    "relatedTitle": "Related Articles",
+    "relatedSolutions": "Related Solutions"
   }
 }
