@@ -49,6 +49,7 @@ const RetrofitVsReplacement = lazy(() => import("./pages/blog/RetrofitVsReplacem
 const AerospaceQualification = lazy(() => import("./pages/blog/AerospaceQualification"));
 const TvacCostDrivers = lazy(() => import("./pages/blog/TvacCostDrivers"));
 const TvacTestCampaign = lazy(() => import("./pages/blog/TvacTestCampaign"));
+const GeneratedPost = lazy(() => import("./pages/blog/GeneratedPost"));
 const TvacQuestionnaire = lazy(() => import("./pages/TvacQuestionnaire"));
 
 const queryClient = new QueryClient();
