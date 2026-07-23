@@ -11,8 +11,8 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { useLanguage } from "@/components/LanguageProvider";
 import { getHreflangs, getCanonical, localizedPath } from "@/lib/routes";
 import tseriesImg from "@/assets/tseries-chamber.webp";
-import cseriesImg from "@/assets/cseries-chamber.webp";
-import customImg from "@/assets/custom-chamber.webp";
+import cseriesImg from "@/assets/cseries-chamber.avif";
+import customImg from "@/assets/custom-chamber.avif";
 import thermalVisionImg from "@/assets/thermal-vision-product.jpg";
 
 const Products = () => {
