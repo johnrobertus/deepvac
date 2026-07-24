@@ -29,7 +29,7 @@ export function HeroSection() {
   const [transitioning, setTransitioning] = useState(false);
   const [videosMounted, setVideosMounted] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
-  const [bookCallOpen, setBookCallOpen] = useState(false);
+  const contactHash = `${contactPath}#project-inquiry-form`;
 
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
   const fadeTimerRef = useRef<number | null>(null);
