@@ -187,7 +187,7 @@
     "cardTitle": "Lieber direkt sprechen?",
     "cardDescription": "Buchen Sie ein technisches Anforderungsgespräch mit unserem Engineering-Team – wir gehen Anwendung, Anforderungen und mögliche Konfigurationen gemeinsam durch.",
     "cardButton": "Technisches Erstgespräch buchen",
-    "heroCta": "Erstgespräch buchen",
+    "heroCta": "TVAC-Projekt starten",
     "dialogEyebrow": "Direktbuchung",
     "dialogTitle": "Technisches Erstgespräch",
     "dialogDescription": "Wählen Sie direkt einen freien Termin im Kalender unseres Engineering-Teams.",
@@ -195,7 +195,8 @@
     "consentDescription": "Zur Terminbuchung wird der Kalender unseres Anbieters Calendly (Calendly LLC, USA) geladen. Dabei werden Daten – u. a. Ihre IP-Adresse – an Calendly übertragen. Details finden Sie in unserer Datenschutzerklärung.",
     "consentAccept": "Akzeptieren & Kalender laden",
     "consentWithdraw": "Einwilligung widerrufen",
-    "loading": "Kalender wird geladen"
+    "loading": "Kalender wird geladen",
+    "openInNewTab": "Terminbuchung in neuem Tab öffnen"
   },
   "a11y": {
     "skipToContent": "Zum Inhalt springen"
