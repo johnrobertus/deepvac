@@ -322,7 +322,7 @@ export function HeroSection() {
         }}
       />
 
-      <BookCallDialog open={bookCallOpen} onOpenChange={setBookCallOpen} />
+
     </section>
   );
 }
