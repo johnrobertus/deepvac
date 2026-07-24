@@ -138,6 +138,19 @@ const Contact = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  // Focus first form input when arriving with #project-inquiry-form hash (from hero CTA)
+  const { hash } = useLocation();
+  useEffect(() => {
+    if (hash !== "#project-inquiry-form" || submitted) return;
+    const t = window.setTimeout(() => {
+      const el = document.getElementById("field-firstName") as HTMLInputElement | null;
+      if (el) {
+        el.focus({ preventScroll: true });
+      }
+    }, 350);
+    return () => window.clearTimeout(t);
+  }, [hash, submitted]);
+
   const projectStageOptions = t("projectStageOptions", { returnObjects: true }) as string[];
   const timelineOptionsNew = t("timelineOptionsNew", { returnObjects: true }) as string[];
   const existingSystemOptions = t("existingSystemOptions", { returnObjects: true }) as string[];
