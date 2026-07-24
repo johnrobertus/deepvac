@@ -15,6 +15,7 @@ import { useLanguage } from "@/components/LanguageProvider";
 import { getHreflangs, getCanonical, localizedPath } from "@/lib/routes";
 import { QuestionnaireCard } from "@/components/questionnaire/QuestionnaireCTA";
 import { BookCallDialog } from "@/components/BookCallDialog";
+import { CalendlyInlineEmbed } from "@/components/CalendlyInlineEmbed";
 import { trackEvent } from "@/lib/analytics";
 
 declare global {
