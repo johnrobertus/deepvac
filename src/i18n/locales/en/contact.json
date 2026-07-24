@@ -87,8 +87,8 @@
     "helper": "Your request will be reviewed by our technical team and routed to the right contact."
   },
   "successNew": {
-    "title": "Thank you. Your request has been received.",
-    "body": "We will review your project context and get back to you with the next suitable step. If your request requires detailed TVAC specifications, we may invite you to complete the technical questionnaire."
+    "title": "Thanks — your inquiry has been sent.",
+    "body": "Next step: book your technical intro call — your requirements are already with our engineers."
   },
   "validationNew": {
     "interestRequired": "Please select at least one area of interest.",
