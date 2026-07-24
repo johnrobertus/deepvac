@@ -87,8 +87,8 @@
     "helper": "Ihre Anfrage wird von unserem Fachteam geprüft und an den richtigen Ansprechpartner weitergeleitet."
   },
   "successNew": {
-    "title": "Vielen Dank. Ihre Anfrage ist eingegangen.",
-    "body": "Wir prüfen Ihren Projektkontext und melden uns mit dem nächsten geeigneten Schritt. Falls Ihre Anfrage detaillierte TVAC-Spezifikationen erfordert, laden wir Sie ggf. zur Bearbeitung des technischen Fragebogens ein."
+    "title": "Danke — Ihre Anfrage wurde übermittelt.",
+    "body": "Nächster Schritt: Buchen Sie Ihren technischen Intro-Call — Ihre Anforderungen liegen unseren Ingenieuren bereits vor."
   },
   "validationNew": {
     "interestRequired": "Bitte wählen Sie mindestens einen Interessenbereich aus.",

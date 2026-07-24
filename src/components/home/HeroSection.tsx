@@ -2,10 +2,10 @@ import { useEffect, useRef, useState, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Reveal } from "@/components/Reveal";
-import { BookCallDialog } from "@/components/BookCallDialog";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/components/LanguageProvider";
 import { localizedPath } from "@/lib/routes";
+import { trackEvent } from "@/lib/analytics";
 import existFundingHeroEn from "@/assets/exist-funding-hero-en.jpg";
 import existFundingHeroDe from "@/assets/exist-funding-hero-de.png";
 
@@ -29,7 +29,7 @@ export function HeroSection() {
   const [transitioning, setTransitioning] = useState(false);
   const [videosMounted, setVideosMounted] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
-  const [bookCallOpen, setBookCallOpen] = useState(false);
+  const contactHash = `${contactPath}#project-inquiry-form`;
 
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
   const fadeTimerRef = useRef<number | null>(null);
@@ -260,24 +260,20 @@ export function HeroSection() {
               <Reveal delay={150}>
                 <div className="hero-cta-row flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
                   <Button
+                    asChild
                     size="default"
-                    onClick={() => setBookCallOpen(true)}
                     className="cta-pulse w-full font-mono text-sm tracking-wide sm:w-auto sm:h-12 sm:px-8 sm:text-base"
                   >
-                    <span className="relative flex h-2 w-2" aria-hidden="true">
-                      <span className="absolute inline-flex h-full w-full animate-[ping_2.5s_cubic-bezier(0,0,0.2,1)_infinite] rounded-full bg-primary-foreground/30" />
-                      <span className="relative inline-flex h-2 w-2 rounded-full bg-primary-foreground/80" />
-                    </span>
-                    {tc("bookCall.heroCta")}
-                  </Button>
-
-                  <Button
-                    asChild
-                    variant="outline"
-                    size="default"
-                    className="w-full border-sand/25 font-mono text-sm tracking-wide text-sand/80 backdrop-blur-sm hover:border-sand/40 hover:text-sand sm:w-auto sm:h-12 sm:px-8 sm:text-base"
-                  >
-                    <Link to={contactPath}>{tc("buttons.discussRequirements")}</Link>
+                    <Link
+                      to={contactHash}
+                      onClick={() => trackEvent("hero_cta_click")}
+                    >
+                      <span className="relative flex h-2 w-2" aria-hidden="true">
+                        <span className="absolute inline-flex h-full w-full animate-[ping_2.5s_cubic-bezier(0,0,0.2,1)_infinite] rounded-full bg-primary-foreground/30" />
+                        <span className="relative inline-flex h-2 w-2 rounded-full bg-primary-foreground/80" />
+                      </span>
+                      {tc("bookCall.heroCta")}
+                    </Link>
                   </Button>
                 </div>
               </Reveal>
@@ -326,7 +322,7 @@ export function HeroSection() {
         }}
       />
 
-      <BookCallDialog open={bookCallOpen} onOpenChange={setBookCallOpen} />
+
     </section>
   );
 }

@@ -187,7 +187,7 @@
     "cardTitle": "Prefer to talk directly?",
     "cardDescription": "Book a technical requirements call with our engineering team — we walk through your application, requirements, and possible configurations together.",
     "cardButton": "Book a technical requirements call",
-    "heroCta": "Book a call",
+    "heroCta": "Start Your TVAC Project",
     "dialogEyebrow": "Direct scheduling",
     "dialogTitle": "Technical intro call",
     "dialogDescription": "Pick an open slot directly in our engineering team's calendar.",
@@ -195,7 +195,8 @@
     "consentDescription": "Booking runs through our scheduling provider Calendly (Calendly LLC, USA). Loading the calendar transfers data — including your IP address — to Calendly. See our privacy policy for details.",
     "consentAccept": "Accept & load calendar",
     "consentWithdraw": "Withdraw consent",
-    "loading": "Loading calendar"
+    "loading": "Loading calendar",
+    "openInNewTab": "Open scheduling in a new tab"
   },
   "a11y": {
     "skipToContent": "Skip to content"
