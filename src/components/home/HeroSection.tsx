@@ -275,6 +275,17 @@ export function HeroSection() {
                       {tc("bookCall.heroCta")}
                     </Link>
                   </Button>
+                  <Button
+                    variant="outline"
+                    size="default"
+                    onClick={() => {
+                      trackEvent("hero_talk_to_sales_click");
+                      setBookCallOpen(true);
+                    }}
+                    className="w-full border-sand/25 font-mono text-sm tracking-wide text-sand/80 backdrop-blur-sm hover:border-sand/40 hover:text-sand sm:w-auto sm:h-12 sm:px-8 sm:text-base"
+                  >
+                    {tc("bookCall.talkToSales")}
+                  </Button>
                 </div>
               </Reveal>
 
