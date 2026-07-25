@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/components/LanguageProvider";
 import { localizedPath } from "@/lib/routes";
 import { trackEvent } from "@/lib/analytics";
+import { BookCallDialog } from "@/components/BookCallDialog";
 import existFundingHeroEn from "@/assets/exist-funding-hero-en.jpg";
 import existFundingHeroDe from "@/assets/exist-funding-hero-de.png";
 
@@ -29,6 +30,7 @@ export function HeroSection() {
   const [transitioning, setTransitioning] = useState(false);
   const [videosMounted, setVideosMounted] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
+  const [bookCallOpen, setBookCallOpen] = useState(false);
   const contactHash = `${contactPath}#project-inquiry-form`;
 
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
@@ -275,6 +277,17 @@ export function HeroSection() {
                       {tc("bookCall.heroCta")}
                     </Link>
                   </Button>
+                  <Button
+                    variant="outline"
+                    size="default"
+                    onClick={() => {
+                      trackEvent("hero_talk_to_sales_click");
+                      setBookCallOpen(true);
+                    }}
+                    className="w-full border-sand/25 font-mono text-sm tracking-wide text-sand/80 backdrop-blur-sm hover:border-sand/40 hover:text-sand sm:w-auto sm:h-12 sm:px-8 sm:text-base"
+                  >
+                    {tc("bookCall.talkToSales")}
+                  </Button>
                 </div>
               </Reveal>
 
@@ -321,8 +334,7 @@ export function HeroSection() {
           background: "linear-gradient(to bottom, hsl(0 0% 0% / 0) 0%, hsl(var(--background)) 100%)",
         }}
       />
-
-
+      <BookCallDialog open={bookCallOpen} onOpenChange={setBookCallOpen} />
     </section>
   );
 }

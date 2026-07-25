@@ -19,7 +19,7 @@
     "maintenanceRepair": "Wartung & Reparatur",
     "subsystemIntegration": "Subsystem-Integration",
     "talkToEngineer": "Ingenieur kontaktieren",
-    "configureTvac": "TVAC-System konfigurieren",
+    "configureTvac": "TVAC zusammenstellen",
     "contact": "Kontakt"
   },
   "footer": {
@@ -188,6 +188,7 @@
     "cardDescription": "Buchen Sie ein technisches Anforderungsgespräch mit unserem Engineering-Team – wir gehen Anwendung, Anforderungen und mögliche Konfigurationen gemeinsam durch.",
     "cardButton": "Technisches Erstgespräch buchen",
     "heroCta": "TVAC-Projekt starten",
+    "talkToSales": "Mit dem Vertrieb sprechen",
     "dialogEyebrow": "Direktbuchung",
     "dialogTitle": "Technisches Erstgespräch",
     "dialogDescription": "Wählen Sie direkt einen freien Termin im Kalender unseres Engineering-Teams.",

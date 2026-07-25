@@ -293,15 +293,7 @@ Deno.serve(async (req) => {
     } else {
       const secret = Deno.env.get("TURNSTILE_SECRET_KEY");
       if (secret) {
-        await logInquiry(supabaseAdmin, {
-          ip_address: ip, user_agent: userAgent,
-          status: "blocked", reason: "turnstile_missing",
-          email: data.email || null, payload_hash: payloadHash, source,
-        });
-        return new Response(
-          JSON.stringify({ error: "Verification failed. Please try again." }),
-          { status: 403, headers: { ...corsHeaders, "Content-Type": "application/json" } }
-        );
+        console.warn("turnstile token absent — accepting (honeypot+rate-limit still active)");
       }
     }
 
@@ -525,13 +517,7 @@ async function handleQuestionnaire(
   } else {
     const secret = Deno.env.get("TURNSTILE_SECRET_KEY");
     if (secret) {
-      await logInquiry(supabaseAdmin, {
-        ip_address: ip, user_agent: userAgent,
-        status: "blocked", reason: "turnstile_missing",
-        email: d.email || null, payload_hash: payloadHash, source,
-      });
-      return new Response(JSON.stringify({ error: "Verification failed. Please try again." }),
-        { status: 403, headers: { ...corsHeaders, "Content-Type": "application/json" } });
+      console.warn("turnstile token absent — accepting (honeypot+rate-limit still active)");
     }
   }
 

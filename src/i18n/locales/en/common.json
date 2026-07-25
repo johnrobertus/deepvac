@@ -19,7 +19,7 @@
     "maintenanceRepair": "Maintenance & Repair",
     "subsystemIntegration": "Subsystem Integration",
     "talkToEngineer": "Talk to an Engineer",
-    "configureTvac": "Configure TVAC System",
+    "configureTvac": "Build Your TVAC",
     "contact": "Contact"
   },
   "footer": {
@@ -188,6 +188,7 @@
     "cardDescription": "Book a technical requirements call with our engineering team — we walk through your application, requirements, and possible configurations together.",
     "cardButton": "Book a technical requirements call",
     "heroCta": "Start Your TVAC Project",
+    "talkToSales": "Talk to Sales",
     "dialogEyebrow": "Direct scheduling",
     "dialogTitle": "Technical intro call",
     "dialogDescription": "Pick an open slot directly in our engineering team's calendar.",

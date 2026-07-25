@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect, useId } from "react";
-import { Link, useLocation, useSearchParams } from "react-router-dom";
+import { useLocation, useSearchParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import { Layout } from "@/components/Layout";
@@ -7,7 +7,7 @@ import { PageShell, PageHero, Section } from "@/components/PageShell";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Phone, Mail, MapPin, Clock, Shield, ArrowRight, CheckCircle, Loader2, ClipboardList, ClipboardCheck, CalendarClock } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Shield, ArrowRight, CheckCircle, Loader2, ClipboardCheck, CalendarClock } from "lucide-react";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { ConsentMap } from "@/components/ConsentMap";
@@ -171,10 +171,14 @@ const Contact = () => {
   useEffect(() => {
     if (!turnstileRef.current) return;
     const interval = setInterval(() => {
-      if (window.turnstile && turnstileRef.current && !turnstileWidgetId.current) {
-        turnstileWidgetId.current = window.turnstile.render(turnstileRef.current, {
-          sitekey: TURNSTILE_SITE_KEY, callback: () => {}, size: "invisible",
-        });
+      try {
+        if (window.turnstile && turnstileRef.current && !turnstileWidgetId.current) {
+          turnstileWidgetId.current = window.turnstile.render(turnstileRef.current, {
+            sitekey: TURNSTILE_SITE_KEY, callback: () => {}, size: "invisible",
+          });
+          clearInterval(interval);
+        }
+      } catch {
         clearInterval(interval);
       }
     }, 200);
@@ -217,11 +221,13 @@ const Contact = () => {
     try {
       ensureTurnstileScript();
       let turnstileToken = "";
-      if (window.turnstile && turnstileWidgetId.current) {
-        turnstileToken = window.turnstile.getResponse(turnstileWidgetId.current) || "";
-      }
+      try {
+        if (window.turnstile && turnstileWidgetId.current) {
+          turnstileToken = window.turnstile.getResponse(turnstileWidgetId.current) || "";
+        }
+      } catch { /* turnstile unavailable */ }
       if (!turnstileToken) {
-        const deadline = Date.now() + 5000;
+        const deadline = Date.now() + 4000;
         while (Date.now() < deadline) {
           await new Promise((r) => setTimeout(r, 200));
           if (window.turnstile && turnstileRef.current && !turnstileWidgetId.current) {
@@ -229,18 +235,15 @@ const Contact = () => {
               turnstileWidgetId.current = window.turnstile.render(turnstileRef.current, {
                 sitekey: TURNSTILE_SITE_KEY, callback: () => {}, size: "invisible",
               });
-            } catch { /* already rendered */ }
+            } catch { /* already rendered or blocked */ }
           }
-          if (window.turnstile && turnstileWidgetId.current) {
-            turnstileToken = window.turnstile.getResponse(turnstileWidgetId.current) || "";
-            if (turnstileToken) break;
-          }
+          try {
+            if (window.turnstile && turnstileWidgetId.current) {
+              turnstileToken = window.turnstile.getResponse(turnstileWidgetId.current) || "";
+              if (turnstileToken) break;
+            }
+          } catch { /* ignore */ }
         }
-      }
-      if (!turnstileToken) {
-        if (window.turnstile && turnstileWidgetId.current) { window.turnstile.reset(turnstileWidgetId.current); }
-        toast.error(tc("form.errors.submissionFailedDirect"));
-        return;
       }
       const { data, error } = await supabase.functions.invoke("send-inquiry", {
         body: {
