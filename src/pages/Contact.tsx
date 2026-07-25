@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect, useId } from "react";
-import { Link, useLocation, useSearchParams } from "react-router-dom";
+import { useLocation, useSearchParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import { Layout } from "@/components/Layout";
