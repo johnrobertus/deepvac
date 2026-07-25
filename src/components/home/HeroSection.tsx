@@ -333,8 +333,7 @@ export function HeroSection() {
           background: "linear-gradient(to bottom, hsl(0 0% 0% / 0) 0%, hsl(var(--background)) 100%)",
         }}
       />
-
-
+      <BookCallDialog open={bookCallOpen} onOpenChange={setBookCallOpen} />
     </section>
   );
 }
