@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect, useId } from "react";
-import { Link, useLocation, useSearchParams } from "react-router-dom";
+import { useLocation, useSearchParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import { Layout } from "@/components/Layout";
@@ -7,7 +7,7 @@ import { PageShell, PageHero, Section } from "@/components/PageShell";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Phone, Mail, MapPin, Clock, Shield, ArrowRight, CheckCircle, Loader2, ClipboardList, ClipboardCheck, CalendarClock } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Shield, ArrowRight, CheckCircle, Loader2, ClipboardCheck, CalendarClock } from "lucide-react";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { ConsentMap } from "@/components/ConsentMap";
@@ -15,6 +15,7 @@ import { useLanguage } from "@/components/LanguageProvider";
 import { getHreflangs, getCanonical, localizedPath } from "@/lib/routes";
 import { QuestionnaireCard } from "@/components/questionnaire/QuestionnaireCTA";
 import { BookCallDialog } from "@/components/BookCallDialog";
+import { CalendlyInlineEmbed } from "@/components/CalendlyInlineEmbed";
 import { trackEvent } from "@/lib/analytics";
 
 declare global {
@@ -137,6 +138,19 @@ const Contact = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  // Focus first form input when arriving with #project-inquiry-form hash (from hero CTA)
+  const { hash } = useLocation();
+  useEffect(() => {
+    if (hash !== "#project-inquiry-form" || submitted) return;
+    const t = window.setTimeout(() => {
+      const el = document.getElementById("field-firstName") as HTMLInputElement | null;
+      if (el) {
+        el.focus({ preventScroll: true });
+      }
+    }, 350);
+    return () => window.clearTimeout(t);
+  }, [hash, submitted]);
+
   const projectStageOptions = t("projectStageOptions", { returnObjects: true }) as string[];
   const timelineOptionsNew = t("timelineOptionsNew", { returnObjects: true }) as string[];
   const existingSystemOptions = t("existingSystemOptions", { returnObjects: true }) as string[];
@@ -157,10 +171,14 @@ const Contact = () => {
   useEffect(() => {
     if (!turnstileRef.current) return;
     const interval = setInterval(() => {
-      if (window.turnstile && turnstileRef.current && !turnstileWidgetId.current) {
-        turnstileWidgetId.current = window.turnstile.render(turnstileRef.current, {
-          sitekey: TURNSTILE_SITE_KEY, callback: () => {}, size: "invisible",
-        });
+      try {
+        if (window.turnstile && turnstileRef.current && !turnstileWidgetId.current) {
+          turnstileWidgetId.current = window.turnstile.render(turnstileRef.current, {
+            sitekey: TURNSTILE_SITE_KEY, callback: () => {}, size: "invisible",
+          });
+          clearInterval(interval);
+        }
+      } catch {
         clearInterval(interval);
       }
     }, 200);
@@ -203,11 +221,13 @@ const Contact = () => {
     try {
       ensureTurnstileScript();
       let turnstileToken = "";
-      if (window.turnstile && turnstileWidgetId.current) {
-        turnstileToken = window.turnstile.getResponse(turnstileWidgetId.current) || "";
-      }
+      try {
+        if (window.turnstile && turnstileWidgetId.current) {
+          turnstileToken = window.turnstile.getResponse(turnstileWidgetId.current) || "";
+        }
+      } catch { /* turnstile unavailable */ }
       if (!turnstileToken) {
-        const deadline = Date.now() + 5000;
+        const deadline = Date.now() + 4000;
         while (Date.now() < deadline) {
           await new Promise((r) => setTimeout(r, 200));
           if (window.turnstile && turnstileRef.current && !turnstileWidgetId.current) {
@@ -215,18 +235,15 @@ const Contact = () => {
               turnstileWidgetId.current = window.turnstile.render(turnstileRef.current, {
                 sitekey: TURNSTILE_SITE_KEY, callback: () => {}, size: "invisible",
               });
-            } catch { /* already rendered */ }
+            } catch { /* already rendered or blocked */ }
           }
-          if (window.turnstile && turnstileWidgetId.current) {
-            turnstileToken = window.turnstile.getResponse(turnstileWidgetId.current) || "";
-            if (turnstileToken) break;
-          }
+          try {
+            if (window.turnstile && turnstileWidgetId.current) {
+              turnstileToken = window.turnstile.getResponse(turnstileWidgetId.current) || "";
+              if (turnstileToken) break;
+            }
+          } catch { /* ignore */ }
         }
-      }
-      if (!turnstileToken) {
-        if (window.turnstile && turnstileWidgetId.current) { window.turnstile.reset(turnstileWidgetId.current); }
-        toast.error(tc("form.errors.submissionFailedDirect"));
-        return;
       }
       const { data, error } = await supabase.functions.invoke("send-inquiry", {
         body: {
@@ -267,24 +284,41 @@ const Contact = () => {
   };
 
   if (submitted) {
+    const successTitleRef = (el: HTMLHeadingElement | null) => {
+      if (el) {
+        el.focus();
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    };
     return (
       <Layout>
         <Helmet><html lang={lang} /><title>{tSeo("contact.title")}</title></Helmet>
         <PageShell>
           <Section>
-            <div className="max-w-xl mx-auto text-center space-y-6 py-20">
-              <CheckCircle className="w-12 h-12 text-blue mx-auto" />
-              <h2 className="text-3xl font-medium text-sand tracking-tight">{t("successNew.title")}</h2>
-              <p className="text-gray text-sm leading-relaxed">{t("successNew.body")}</p>
+            <div className="max-w-3xl mx-auto space-y-8 py-12 sm:py-16">
+              <div className="text-center space-y-4" aria-live="polite">
+                <CheckCircle className="w-12 h-12 text-blue mx-auto" aria-hidden="true" />
+                <h2
+                  ref={successTitleRef}
+                  tabIndex={-1}
+                  className="text-3xl font-medium text-sand tracking-tight focus:outline-none"
+                >
+                  {t("successNew.title")}
+                </h2>
+                <p className="text-gray text-base leading-relaxed max-w-xl mx-auto">
+                  {t("successNew.body")}
+                </p>
+              </div>
+              <CalendlyInlineEmbed
+                prefill={{
+                  firstName: form.firstName,
+                  lastName: form.lastName,
+                  email: form.email,
+                }}
+              />
               <div className="flex flex-col sm:flex-row gap-3 justify-center pt-2">
-                <Button variant="outline" onClick={() => { setSubmitted(false); setForm(initialForm); setInterests([]); setConsent(false); }}>
+                <Button variant="ghost" onClick={() => { setSubmitted(false); setForm(initialForm); setInterests([]); setConsent(false); }}>
                   {tc("buttons.submitAnotherInquiry")}
-                </Button>
-                <Button asChild variant="ghost">
-                  <Link to={localizedPath("/tvac-questionnaire", lang)}>
-                    <ClipboardList className="w-4 h-4 mr-2" />
-                    {t("decisionHelper.questionnaireCta")}
-                  </Link>
                 </Button>
               </div>
             </div>

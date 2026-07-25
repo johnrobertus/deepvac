@@ -165,12 +165,14 @@
       box-shadow: 0 0 0 0 hsl(var(--blue) / 0);
     }
   }
-  .cta-pulse {
-    animation: cta-pulse 2.5s cubic-bezier(0, 0, 0.2, 1) infinite;
-  }
-  .cta-pulse:hover,
-  .cta-pulse:focus-visible {
-    animation: none;
+  @media (prefers-reduced-motion: no-preference) {
+    .cta-pulse {
+      animation: cta-pulse 2.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+    .cta-pulse:hover,
+    .cta-pulse:focus-visible {
+      animation: none;
+    }
   }
 
   /* Themed scrollbars — default OS-white bars break the dark monolith look */

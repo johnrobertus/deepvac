@@ -7,7 +7,8 @@ import { useTranslation } from "react-i18next";
  */
 interface OtherCheck { checked: boolean; text: string }
 interface PortRow { checked: boolean; size: string; qty: string }
-type AnyForm = Record<string, unknown>;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type AnyForm = Record<string, any>;
 
 interface Props {
   form: AnyForm;
