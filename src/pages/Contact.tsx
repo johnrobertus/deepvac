@@ -171,10 +171,14 @@ const Contact = () => {
   useEffect(() => {
     if (!turnstileRef.current) return;
     const interval = setInterval(() => {
-      if (window.turnstile && turnstileRef.current && !turnstileWidgetId.current) {
-        turnstileWidgetId.current = window.turnstile.render(turnstileRef.current, {
-          sitekey: TURNSTILE_SITE_KEY, callback: () => {}, size: "invisible",
-        });
+      try {
+        if (window.turnstile && turnstileRef.current && !turnstileWidgetId.current) {
+          turnstileWidgetId.current = window.turnstile.render(turnstileRef.current, {
+            sitekey: TURNSTILE_SITE_KEY, callback: () => {}, size: "invisible",
+          });
+          clearInterval(interval);
+        }
+      } catch {
         clearInterval(interval);
       }
     }, 200);
