@@ -11,7 +11,7 @@ import { ArrowRight, Maximize, Circle, Thermometer, Gauge, Cpu, Download, Clipbo
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { useLanguage } from "@/components/LanguageProvider";
 import { getHreflangs, getCanonical, localizedPath } from "@/lib/routes";
-import tseriesImg from "@/assets/tseries-chamber.webp";
+import tseriesImg from "@/assets/product-tseries-chamber.avif";
 import cseriesImg from "@/assets/cseries-chamber.avif";
 
 const NBSP = "\u00A0";
