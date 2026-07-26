@@ -1,1 +1,996 @@
-[{"articleKey":"electricPropulsionTesting","enSlug":"electric-propulsion-vacuum-testing","deSlug":"elektrische-antriebe-vakuumtest","category":"applications","datePublished":"2026-07-22","relatedPaths":["/products/custom-tvac","/products/options/roots-booster","/products/options/residual-gas-analysis","/tvac-questionnaire"],"relatedArticles":["pumpingSystemSelection","vacuumLevelsExplained","tvacChamberSizing"],"en":{"title":"Electric Propulsion Testing in Vacuum: Why Thruster Facilities Are a Class of Their Own","description":"A firing Hall or ion thruster turns the vacuum chamber into a continuous gas-load problem. What makes electric propulsion test facilities special – and how to scope one.","seoTitle":"Electric Propulsion Vacuum Testing | Deepvac","seoDescription":"Why electric propulsion vacuum testing needs custom facilities: pumping speed for xenon flow, background pressure effects, sputter protection, diagnostics.","intro":"Firing an electric thruster creates a continuous propellant gas load, so facility pressure is determined by propellant throughput and effective pumping speed during operation, not only by empty-chamber base pressure. Background gas can alter measured thruster performance, while the plume loads chamber surfaces thermally and can sputter material back toward the device. Facility design therefore links vacuum architecture, chamber geometry, protection, diagnostics and campaign duration.","sections":[{"title":"A firing thruster is a continuous gas source","content":"In a classical TVAC campaign, the gas load from desorption and the test setup usually decreases with time. A firing Hall or gridded-ion thruster adds propellant at a controlled rate for the full firing period. At steady state, the first-order relation p ≈ Q/S links pressure p, gas throughput Q and effective pumping speed S. Conductance, gas species and pump capture behaviour must be included before this relation is used for facility sizing.","bullets":["Even a few milligrams per second of xenon represent a gas throughput far above typical outgassing loads.","Chamber pressure during firing is set by flow rate and pumping speed, not by the base pressure of the empty chamber.","Endurance campaigns must sustain this balance continuously, including planned pump regeneration cycles."]},{"title":"Facility effects: background pressure changes the thruster","content":"Electric thrusters are sensitive to their environment. Residual neutral gas is ingested by the discharge and artificially increases thrust and discharge current, shifting the operating point; charge-exchange ions created in the plume distort erosion patterns and probe readings. If the background pressure is too high, the test characterizes the facility as much as the thruster.","content2":"The target pressure during firing must be defined for the specific thruster, flow rate, diagnostics and required uncertainty. Published Hall-thruster campaigns often work in the high-vacuum range and characterise sensitivity to background pressure, but there is no universal firing-pressure value. Gauge readings also require gas-specific calibration or correction."},{"title":"Pumping systems sized from throughput","content":"Facility sizing starts by calculating the effective propellant pumping speed from maximum flow and target background pressure. Large facilities commonly use cryogenic pumping surfaces because they can provide high capture speed for xenon, while the exact architecture depends on propellant, regeneration strategy, available cooling and contamination constraints. Turbomolecular, roots and dry backing stages may support base-vacuum, roughing or diagnostic needs.","bulletsHeading":"Sizing considerations","bullets":["Calculate effective pumping speed at the thruster location, including conductance and gas-specific capture performance.","Define how long the system must sustain maximum flow before cryogenic surfaces require regeneration.","Treat krypton, iodine and other propellants as separate compatibility and pumping cases.","Verify that roughing and backing stages support all operating and regeneration modes, not only initial pump-down."]},{"title":"Erosion, sputtering and chamber protection","content":"The ion beam does not end at the plume boundary: it strikes the beam dump and chamber walls with energies high enough to sputter material. Sputtered atoms migrate back onto the thruster, deposit on insulators and diagnostics, and can distort long-duration wear results – a well-known facility effect in endurance testing. Test chambers therefore use sacrificial liners, typically graphite panels, in the beam target zone, and keep critical instrumentation out of the direct plume.","content2":"The beam also carries most of the thruster power to the far wall as heat. Beam dumps and liners must be designed for this thermal load – water-cooled or radiatively sized – so that surface temperatures and outgassing stay under control during long firings."},{"title":"Feedthroughs and diagnostics","content":"An electric propulsion chamber is dense with interfaces: high-voltage and high-current feedthroughs for discharge and neutralizer, RF feedthroughs for some thruster families, propellant lines with precise flow control, and dozens of signal lines. The diagnostic suite is what distinguishes a thruster test facility from a plain vacuum vessel.","bullets":["Thrust balances resolve millinewton-level forces and need vibration-quiet mounting, decoupled from pumps.","Faraday cups and retarding potential analyzers on motion stages map current density and ion energy across the plume.","A residual gas analysis (RGA) separates the propellant background from outgassing and leak contributions.","Optical access allows plume spectroscopy and visual monitoring of the discharge."]},{"title":"Scoping an EP facility: custom by nature","content":"Electric-propulsion facilities are usually engineered around a defined thruster family rather than selected by chamber volume alone. The starting data are propellant species, maximum mass flow, target pressure and uncertainty, beam power and divergence, firing duration, diagnostics, motion systems and allowable facility effects. From these inputs, chamber dimensions, pumping architecture, liners, thermal management and interfaces can be derived."}],"faq":[{"q":"What vacuum level is needed for electric propulsion testing?","a":"Both empty-chamber base pressure and background pressure during firing must be specified. The firing value is derived from the thruster flow, allowable facility effect and effective gas-specific pumping speed. It should not be replaced by one generic pressure target for all Hall or ion thrusters."},{"q":"Why are Hall thruster test facilities so large?","a":"High pumping speed requires large capture surfaces, and chamber length helps control plume interaction, beam-dump loading and backsputter. The dimensions therefore follow the thruster power, flow, plume geometry and measurement uncertainty rather than a general preference for large vessels."},{"q":"Can a standard TVAC chamber test an ion thruster?","a":"For non-firing thermal vacuum cycling of a propulsion subsystem, yes – that is a classical TVAC task. Firing tests are different: even small thrusters produce a continuous gas load that standard platforms are not sized to pump at representative background pressure. Ion thruster vacuum chambers for firing are therefore typically custom systems sized from propellant flow, sometimes starting from a standard vessel geometry."},{"q":"Which propellants are used in electric propulsion testing?","a":"Xenon remains the reference propellant; krypton is increasingly common for cost reasons, and iodine or alternative gases appear in newer developments. For the facility, the propellant determines pump capture performance, gauge calibration factors and compatibility questions – iodine in particular is corrosive and requires dedicated materials and trapping concepts. Declare the propellant early in facility scoping."}],"conclusion":"Electric-propulsion facility design begins with propellant species, maximum mass flow, target background pressure, plume geometry, beam power and campaign duration. These parameters determine effective pumping speed, chamber geometry, protection measures and diagnostics; base pressure alone is not a sufficient sizing criterion."},"de":{"title":"Elektrische Antriebe im Vakuumtest: Warum Triebwerks-Testanlagen eine Klasse für sich sind","description":"Ein feuerndes Hall- oder Ionentriebwerk macht die Vakuumkammer zum Durchsatzproblem. Was Testanlagen für elektrische Antriebe besonders macht – und wie man sie auslegt.","seoTitle":"Elektrische Antriebe im Vakuumtest | Deepvac","seoDescription":"Elektrische Antriebe im Vakuumtest: Saugvermögen für Xenon, Hintergrunddruck-Effekte, Sputter-Schutz und Diagnostik – Auslegung kundenspezifischer Anlagen.","intro":"Ein feuerndes elektrisches Triebwerk erzeugt eine kontinuierliche Treibstoff-Gaslast. Der Anlagendruck wird deshalb im Betrieb durch Treibstoffdurchsatz und effektives Saugvermögen bestimmt, nicht nur durch den Basisdruck der leeren Kammer. Hintergrundgas kann die gemessene Triebwerksleistung beeinflussen; zugleich belastet der Plume Kammerflächen thermisch und kann Material zum Triebwerk zurücksputtern. Die Anlagenauslegung verbindet daher Vakuumarchitektur, Kammergeometrie, Schutz, Diagnostik und Kampagnendauer.","sections":[{"title":"Ein feuerndes Triebwerk ist eine kontinuierliche Gasquelle","content":"In einer klassischen TVAC-Kampagne nimmt die Gaslast aus Desorption und Testaufbau meist mit der Zeit ab. Ein feuerndes Hall- oder Gitterionentriebwerk speist dagegen während der gesamten Feuerphase Treibstoff mit kontrollierter Rate ein. Im stationären Zustand verknüpft die Näherung p ≈ Q/S den Druck p, den Gasdurchsatz Q und das effektive Saugvermögen S. Leitwert, Gasart und Fangverhalten der Pumpen müssen berücksichtigt werden, bevor die Beziehung zur Anlagenauslegung genutzt wird.","bullets":["Schon wenige Milligramm Xenon pro Sekunde bedeuten einen Gasdurchsatz weit über typischen Ausgasungslasten.","Der Kammerdruck im Feuerbetrieb wird von Massenfluss und Saugvermögen bestimmt, nicht vom Basisdruck der leeren Kammer.","Dauerlaufkampagnen müssen diese Bilanz kontinuierlich halten – inklusive geplanter Regenerationszyklen der Pumpen."]},{"title":"Facility-Effekte: Der Hintergrunddruck verändert das Triebwerk","content":"Elektrische Triebwerke reagieren empfindlich auf ihre Umgebung. Restliches Neutralgas wird von der Entladung angesaugt und erhöht Schub und Entladestrom künstlich; Ladungsaustausch-Ionen im Plume verfälschen Erosionsbilder und Sondenmessungen. Ist der Hintergrunddruck zu hoch, charakterisiert der Test die Anlage ebenso sehr wie das Triebwerk.","content2":"Der Zieldruck im Feuerbetrieb muss für Triebwerk, Massenfluss, Diagnostik und geforderte Unsicherheit festgelegt werden. Veröffentlichte Halltriebwerk-Kampagnen arbeiten häufig im Hochvakuumbereich und charakterisieren die Empfindlichkeit gegenüber dem Hintergrunddruck; einen universellen Feuerdruck gibt es jedoch nicht. Druckmesswerte benötigen zudem gasartspezifische Kalibrierung oder Korrektur."},{"title":"Pumpsysteme: Auslegung über den Durchsatz","content":"Die Anlagenauslegung beginnt mit der Berechnung des effektiven Treibstoff-Saugvermögens aus maximalem Massenfluss und Ziel-Hintergrunddruck. Große Anlagen nutzen häufig kryogene Pumpflächen, weil sie für Xenon ein hohes Fangvermögen bereitstellen können. Die genaue Architektur hängt von Treibstoff, Regenerationsstrategie, verfügbarer Kühlung und Kontaminationsanforderungen ab. Turbomolekular-, Roots- und trockene Vorpumpstufen können Basisvakuum, Abpumpen oder Diagnostik unterstützen.","bulletsHeading":"Auslegungspunkte","bullets":["Effektives Saugvermögen am Triebwerksort einschließlich Leitwert und gasartspezifischem Fangverhalten berechnen.","Festlegen, wie lange das System den maximalen Massenfluss bis zur Regeneration kryogener Flächen halten muss.","Krypton, Iod und andere Treibstoffe als getrennte Kompatibilitäts- und Pumpfälle behandeln.","Nachweisen, dass Vor- und Rückpumpstufen alle Betriebs- und Regenerationsmodi unterstützen, nicht nur das erste Abpumpen."]},{"title":"Erosion, Sputtern und Kammerschutz","content":"Der Ionenstrahl endet nicht an der Plume-Grenze: Er trifft Strahlfänger und Kammerwände mit Energien, die Material zerstäuben. Gesputterte Atome wandern zurück zum Triebwerk, schlagen sich auf Isolatoren und Diagnostik nieder und können Langzeit-Verschleißergebnisse verfälschen – ein bekannter Facility-Effekt in Dauerlauftests. Testkammern erhalten deshalb Opferauskleidungen, typischerweise Graphitpaneele, in der Strahlzone; kritische Instrumentierung bleibt außerhalb des direkten Plumes.","content2":"Der Strahl trägt zudem den Großteil der Triebwerksleistung als Wärme auf die gegenüberliegende Wand. Strahlfänger und Auskleidungen müssen für diese thermische Last ausgelegt sein – wassergekühlt oder radiativ dimensioniert –, damit Oberflächentemperaturen und Ausgasung bei langen Feuerphasen beherrscht bleiben."},{"title":"Durchführungen und Diagnostik","content":"Eine Kammer für elektrische Antriebe ist dicht mit Schnittstellen belegt: Hochspannungs- und Hochstromdurchführungen für Entladung und Neutralisator, HF-Durchführungen für bestimmte Triebwerksfamilien, Treibstoffleitungen mit präziser Flussregelung und Dutzende Signalleitungen. Erst die Diagnostik macht aus einem Vakuumbehälter eine Triebwerkstestanlage.","bullets":["Schubwaagen lösen Kräfte im Millinewton-Bereich auf und brauchen eine schwingungsarme, von Pumpen entkoppelte Aufstellung.","Faraday-Sonden und Gegenfeldanalysatoren auf Verfahreinheiten kartieren Stromdichte und Ionenenergie im Plume.","Eine Restgasanalyse (RGA) trennt den Treibgas-Hintergrund von Ausgasungs- und Leckanteilen.","Optische Zugänge erlauben Plume-Spektroskopie und die visuelle Überwachung der Entladung."]},{"title":"Auslegung einer EP-Anlage: kundenspezifisch aus Prinzip","content":"Anlagen für elektrische Antriebe werden meist um eine definierte Triebwerksfamilie ausgelegt und nicht allein nach Kammervolumen ausgewählt. Ausgangsdaten sind Treibstoffart, maximaler Massenfluss, Zieldruck und Unsicherheit, Strahlleistung und Divergenz, Feuerdauer, Diagnostik, Verfahrsysteme und zulässige Anlageneffekte. Daraus lassen sich Kammerabmessungen, Pumpenarchitektur, Auskleidungen, Thermalmanagement und Schnittstellen ableiten."}],"faq":[{"q":"Welches Vakuum braucht ein Test elektrischer Antriebe?","a":"Sowohl der Basisdruck der leeren Kammer als auch der Hintergrunddruck im Feuerbetrieb müssen spezifiziert werden. Der Feuerdruck wird aus Triebwerksmassenfluss, zulässigem Anlageneffekt und effektivem gasartspezifischem Saugvermögen abgeleitet. Ein universeller Zielwert für alle Hall- oder Ionentriebwerke ist nicht sinnvoll."},{"q":"Warum sind Testanlagen für Halltriebwerke so groß?","a":"Hohes Saugvermögen benötigt große Fangflächen; Kammerlänge hilft, Plume-Wechselwirkung, Strahlfängerlast und Backsputter zu beherrschen. Die Abmessungen folgen daher Triebwerksleistung, Massenfluss, Plume-Geometrie und Messunsicherheit, nicht einer allgemeinen Vorliebe für große Behälter."},{"q":"Kann eine Standard-TVAC-Kammer ein Ionentriebwerk testen?","a":"Für nicht feuernde Thermalzyklen eines Antriebssubsystems ja – das ist eine klassische TVAC-Aufgabe. Feuertests sind etwas anderes: Schon kleine Triebwerke erzeugen eine kontinuierliche Gaslast, für die Standardplattformen nicht ausgelegt sind. Vakuumkammern für feuernde Ionentriebwerke sind daher typischerweise kundenspezifische Systeme, dimensioniert über den Treibstofffluss – teils auf Basis einer Standard-Behältergeometrie."},{"q":"Welche Treibstoffe werden beim Test elektrischer Antriebe verwendet?","a":"Xenon bleibt die Referenz; Krypton wird aus Kostengründen häufiger, Iod und alternative Gase erscheinen in neueren Entwicklungen. Für die Anlage bestimmt der Treibstoff das Fangverhalten der Pumpen, die Kalibrierfaktoren der Druckmessung und Kompatibilitätsfragen – Iod ist korrosiv und verlangt eigene Werkstoff- und Kühlfallenkonzepte. Die Gasart gehört deshalb an den Anfang der Auslegung."}],"conclusion":"Die Auslegung einer Anlage für elektrische Antriebe beginnt mit Treibstoffart, maximalem Massenfluss, Ziel-Hintergrunddruck, Plume-Geometrie, Strahlleistung und Kampagnendauer. Daraus folgen effektives Saugvermögen, Kammergeometrie, Schutzmaßnahmen und Diagnostik; der Basisdruck allein genügt nicht als Auslegungskriterium."},"seoKey":"blogElectricPropulsionTesting","dateModified":"2026-07-23","searchIntent":{"en":{"primaryKeyword":"electric propulsion vacuum testing","primaryQuestion":"Why do firing tests for Hall and ion thrusters require dedicated vacuum facilities?"},"de":{"primaryKeyword":"elektrische Antriebe Vakuumtest","primaryQuestion":"Warum benötigen Feuertests von Hall- und Ionentriebwerken eigene Vakuumanlagen?"}},"references":[{"title":"Electric Propulsion Laboratory facilities and capabilities","publisher":"NASA Jet Propulsion Laboratory","url":"https://www.jpl.nasa.gov/go/epl/capabilities/facilities/"},{"title":"Electric Propulsion and Power Laboratory","publisher":"NASA Glenn Research Center","url":"https://www.nasa.gov/centers-and-facilities/glenn/electric-propulsion-and-power-laboratory/"},{"title":"HERMeS Hall Thruster Facility Effect Characterization","publisher":"NASA Technical Reports Server","url":"https://ntrs.nasa.gov/citations/20170000953"}]},{"articleKey":"temperatureMeasurement","enSlug":"temperature-measurement-tvac","deSlug":"temperaturmessung-tvac","category":"engineeringGuide","datePublished":"2026-07-22","relatedPaths":["/products/options/temperature-sensors","/services/control-systems-design","/products/options/process-connections"],"relatedArticles":["tvacTestCampaign","tvacAutomation","cryoShroudsThermalPlates"],"en":{"title":"Temperature Measurement in TVAC: Sensors, Mounting and Calibration","description":"Thermocouple or PT100? How to select, mount and calibrate temperature sensors in vacuum – and deliver traceable data for qualification tests.","seoTitle":"Temperature Measurement in TVAC Chambers | Deepvac","seoDescription":"Thermocouple or PT100 in vacuum? Sensor selection, mounting, channel planning and calibration for TVAC temperature measurement – with common error sources.","intro":"Temperature measurement in vacuum depends on the complete thermal path between sensor, surface, leads and surrounding radiation. With negligible gas coupling, a sensor with poor contact can report a value influenced by its wires and field of view rather than the intended surface. Sensor selection, mounting, channel planning and calibration must therefore be treated as one measurement system.","sections":[{"title":"Why vacuum changes the measurement","content":"At ambient pressure, surrounding gas provides an additional thermal path between a sensor and its environment. As pressure falls into the molecular-flow regime, that path becomes small and the sensor temperature is governed mainly by conduction through the contact point, conduction along the wires and radiation exchange with surrounding surfaces. Poor contact can therefore produce a plausible but biased reading that reflects the test item, harness and shroud in an unknown proportion.","content2":"The magnitude of the error is installation-specific. Even a calibrated sensor can produce misleading data if the junction is not well coupled, if the leads are not heat-sunk or if radiation from the shroud or heaters dominates. Mounting should be verified before closing the chamber and documented in the as-built configuration."},{"title":"Thermocouples: Type T and Type K","content":"Thermocouples are widely used where many compact channels are required. Type T is commonly selected for low and moderate TVAC temperatures; Type K covers a wider upper-temperature range. The usable range and uncertainty depend on wire type, tolerance class, reference junction, connectors, acquisition hardware and calibration. IEC and NIST data should be used for the selected sensor system rather than one generic accuracy value.","bullets":["Select thermocouple type and tolerance class from the full test range and required uncertainty.","Keep compatible thermocouple materials through connectors and extension leads to the compensated input.","Control reference-junction conditions and include acquisition-channel offsets in the uncertainty budget.","Calibrate representative complete chains when qualification data or model correlation requires traceability."]},{"title":"PT100 and PT1000: precise reference points","content":"Platinum resistance thermometers provide stable reference and control measurements when installed and read correctly. Four-wire measurement removes lead-resistance error and is normally preferred for traceable work. Sensor class, self-heating, wiring, readout current and calibration determine the resulting uncertainty.","bullets":["Use four-wire PT100 connections where lead resistance and traceability matter.","Select PT100 or PT1000 from the readout architecture, range and uncertainty requirement.","Limit excitation current and verify self-heating under the actual vacuum mounting condition.","Use resistance sensors for control or reference points and thermocouples for broader mapping when that mix fits the test plan."]},{"title":"Mounting: contact quality decides everything","content":"In vacuum, the mounting method is the measurement. The junction or element must be bonded or clamped to the surface with real conductive contact, the wires must be heat-sunk along an isothermal path, and the sensing point should be shielded from radiation that does not represent the surface being measured.","bulletsHeading":"Proven mounting practice","bullets":["Use a vacuum-compatible attachment method whose thermal contact, cure state and contamination performance are approved for the project.","Where adhesive is not permitted, use clamps, thermal washers or spring-loaded contacts with defined force.","Heat-sink the first several centimetres of wire on the same surface, so the harness does not conduct heat into the junction.","Cover exposed junctions with aluminium tape or foil against shroud and lamp radiation, without insulating them from the surface.","Strain-relieve harnesses so pump-down movement and thermal cycling do not peel sensors off."]},{"title":"Placement, channel counts and feedthroughs","content":"Sensor placement should follow the thermal model, control concept and safety analysis. Channel count ranges from a few points on a small assembly to hundreds on an instrumented spacecraft; it is not determined by article class alone. Feedthrough and acquisition capacity should be fixed after the channel list and redundancy concept are reviewed.","bullets":["Define the channel list early: sensor type, location, purpose (control, limit, model correlation) and connector pinout.","Reserve spare channels and spare feedthrough pins – sensors fail, and opening the chamber to fix one costs a pump-down.","Duplicate sensors at control and safety-critical points so a single failure does not end the test.","Keep chamber-side and article-side harnessing separable at a defined connector plane to speed up integration."]},{"title":"Calibration, traceability and error sources","content":"Qualification data is only defensible if the measurement chain is traceable: sensors, reference junctions and acquisition channels calibrated against references that link back to national standards, with records of when and how. A system-level calibration – sensor plus harness plus channel – catches offsets that individual component certificates miss.","bulletsHeading":"Common error sources","bullets":["Poor contact: the dominant error in vacuum, often worth several kelvin.","Harness conduction: wires that are not heat-sunk drag the junction toward harness temperature.","Self-heating of resistance sensors from excitation current that cannot dissipate.","Reference-junction and channel offsets from uncalibrated acquisition hardware.","Ground loops and interference from heaters or motor drives corrupting millivolt signals."]}],"faq":[{"q":"Thermocouple or PT100 in a vacuum chamber – which should I use?","a":"Use the sensor types that fit the measurement role. Thermocouples can provide compact, economical mapping channels, while four-wire platinum resistance sensors suit stable control and reference points. The final choice depends on range, uncertainty, mounting, channel count and calibration requirements."},{"q":"Why does my temperature sensor read wrong in vacuum?","a":"Mounting is a frequent cause, but not the only one. Poor contact, lead conduction, radiation, self-heating, reference-junction error and acquisition offsets can all bias the result. Diagnose the full measurement chain before changing the sensor type."},{"q":"How many temperature channels does a TVAC test need?","a":"The channel count comes from the thermal model, control and limit points, redundancy and test objectives. It can range from a small set on a component to hundreds on a spacecraft. Plan feedthrough pins, acquisition channels and spares from the approved channel list."},{"q":"How do I attach a thermocouple to a test item in vacuum?","a":"Bond the junction with low-outgassing, thermally conductive adhesive, or clamp it with defined force using thermal washers where adhesive is prohibited. Heat-sink the first centimetres of wire on the same surface, cover the junction against radiation and strain-relieve the harness. Verify contact quality before closing the chamber – rework afterwards costs a pump-down."}],"conclusion":"Reliable TVAC temperature data depends on the complete measurement chain: sensor type, mounting, wire heat sinking, acquisition channel and traceable calibration. Channel planning should therefore be completed together with the thermal model and test procedure."},"de":{"title":"Temperaturmessung im TVAC: Sensorik, Montage und Kalibrierung","description":"Thermoelement oder PT100? Wie Sie Temperatursensoren im Vakuum richtig auswählen, montieren und kalibrieren – für belastbare Qualifikationsdaten.","seoTitle":"Temperaturmessung im Vakuum: TC vs. PT100 | Deepvac","seoDescription":"Thermoelement oder PT100 im Vakuum? Sensorwahl, Montage, Kanalplanung und Kalibrierung für die Temperaturmessung im TVAC – mit typischen Fehlerquellen.","intro":"Temperaturmessung im Vakuum hängt vom vollständigen Wärmepfad zwischen Sensor, Oberfläche, Leitungen und Strahlungsumgebung ab. Bei vernachlässigbarer Gaskopplung kann ein schlecht angebundener Sensor einen Wert anzeigen, der stärker von Leitungen und Sichtfeld als von der vorgesehenen Fläche beeinflusst wird. Sensorwahl, Montage, Kanalplanung und Kalibrierung müssen deshalb als ein Messsystem behandelt werden.","sections":[{"title":"Warum das Vakuum die Messung verändert","content":"Bei Umgebungsdruck bildet das umgebende Gas einen zusätzlichen Wärmepfad zwischen Sensor und Umgebung. Mit sinkendem Druck und im Bereich der Molekularströmung wird dieser Pfad klein; die Sensortemperatur wird dann vor allem durch Wärmeleitung an der Kontaktstelle, Leitung über die Adern und Strahlungsaustausch mit den umgebenden Flächen bestimmt. Schlechter Kontakt kann deshalb einen plausiblen, aber systematisch verschobenen Messwert erzeugen, der Prüfling, Kabelbaum und Shroud in unbekanntem Anteil abbildet.","content2":"Die Fehlergröße ist installationsspezifisch. Auch ein kalibrierter Sensor kann irreführende Daten liefern, wenn die Messstelle schlecht gekoppelt, die Leitungen nicht thermisch angebunden oder Strahlung von Shroud oder Heizern dominant ist. Die Montage sollte vor dem Schließen geprüft und in der As-built-Konfiguration dokumentiert werden."},{"title":"Thermoelemente: Typ T und Typ K","content":"Thermoelemente werden häufig eingesetzt, wenn viele kompakte Messkanäle benötigt werden. Typ T ist bei niedrigen und moderaten TVAC-Temperaturen verbreitet; Typ K deckt einen größeren Bereich nach oben ab. Nutzbarer Bereich und Unsicherheit hängen von Drahttyp, Toleranzklasse, Vergleichsstelle, Steckverbindern, Erfassungshardware und Kalibrierung ab. Für das gewählte Sensorsystem sollten IEC- und NIST-Daten statt eines pauschalen Genauigkeitswerts verwendet werden.","bullets":["Thermoelementtyp und Toleranzklasse aus vollständigem Prüfbereich und geforderter Unsicherheit auswählen.","Kompatible Thermoelementwerkstoffe über Stecker und Ausgleichsleitungen bis zum kompensierten Eingang beibehalten.","Vergleichsstellenbedingungen kontrollieren und Kanaloffsets in das Unsicherheitsbudget aufnehmen.","Bei rückführbaren Qualifikationsdaten oder Modellkorrelation repräsentative vollständige Messketten kalibrieren."]},{"title":"PT100 und PT1000: präzise Referenzpunkte","content":"Platin-Widerstandsthermometer liefern bei korrekter Installation und Auswertung stabile Referenz- und Regelmessungen. Die Vierleitermessung eliminiert den Leitungswiderstandsfehler und wird für rückführbare Messungen in der Regel bevorzugt. Sensorklasse, Eigenerwärmung, Verkabelung, Messstrom und Kalibrierung bestimmen die resultierende Unsicherheit.","bullets":["PT100 in Vierleitertechnik einsetzen, wenn Leitungswiderstand und Rückführbarkeit relevant sind.","PT100 oder PT1000 aus Messarchitektur, Bereich und Unsicherheitsanforderung auswählen.","Messstrom begrenzen und Eigenerwärmung unter der tatsächlichen Vakuummontage verifizieren.","Widerstandssensoren für Regel- oder Referenzpunkte und Thermoelemente für breitere Kartierung kombinieren, wenn dies zum Prüfplan passt."]},{"title":"Montage: der Kontakt entscheidet","content":"Im Vakuum ist die Montage die Messung. Messstelle oder Element müssen mit echtem leitendem Kontakt auf die Oberfläche geklebt oder geklemmt werden, die Adern müssen entlang eines isothermen Pfads thermisch angebunden sein, und die Messstelle sollte gegen Strahlung abgeschirmt werden, die nicht die zu messende Fläche repräsentiert.","bulletsHeading":"Bewährte Montagepraxis","bullets":["Eine vakuumtaugliche Befestigung verwenden, deren thermischer Kontakt, Aushärtungszustand und Kontaminationsverhalten für das Projekt freigegeben sind.","Wo Kleben nicht zulässig ist: Klemmen, thermische Unterlegscheiben oder federbelastete Kontakte mit definierter Kraft.","Die ersten Zentimeter der Adern auf derselben Fläche thermisch anbinden, damit der Kabelbaum keine Wärme in die Messstelle leitet.","Freiliegende Messstellen mit Aluminiumband oder Folie gegen Shroud- und Lampenstrahlung abdecken, ohne sie von der Fläche zu isolieren.","Kabelbäume zugentlasten, damit Abpumpen und Thermalzyklen die Sensoren nicht ablösen."]},{"title":"Platzierung, Kanalzahlen und Durchführungen","content":"Die Sensorplatzierung sollte Thermalmodell, Regelkonzept und Sicherheitsanalyse folgen. Die Kanalzahl reicht von wenigen Punkten an einer kleinen Baugruppe bis zu Hunderten an einem instrumentierten Raumfahrzeug; sie wird nicht allein durch die Prüflingsklasse bestimmt. Durchführung und Erfassungskapazität sollten nach Prüfung von Kanalliste und Redundanzkonzept festgelegt werden.","bullets":["Kanalliste früh definieren: Sensortyp, Position, Zweck (Regelung, Grenzwert, Modellkorrelation) und Steckerbelegung.","Reservekanäle und freie Durchführungspins einplanen – Sensoren fallen aus, und ein Öffnen der Kammer kostet ein Abpumpen.","Regel- und sicherheitsrelevante Punkte doppelt belegen, damit ein Einzelausfall den Test nicht beendet.","Kammerseitige und prüflingsseitige Verkabelung an einer definierten Steckerebene trennbar halten – das beschleunigt die Integration."]},{"title":"Kalibrierung, Rückführbarkeit und Fehlerquellen","content":"Qualifikationsdaten sind nur belastbar, wenn die Messkette rückführbar ist: Sensoren, Vergleichsstellen und Erfassungskanäle kalibriert gegen Referenzen mit Anbindung an nationale Normale, dokumentiert nach Zeitpunkt und Verfahren. Eine Systemkalibrierung – Sensor plus Kabelbaum plus Kanal – deckt Offsets auf, die einzelne Komponentenzertifikate übersehen.","bulletsHeading":"Typische Fehlerquellen","bullets":["Schlechter Kontakt: der dominante Fehler im Vakuum, oft mehrere Kelvin.","Wärmeleitung im Kabelbaum: nicht angebundene Adern ziehen die Messstelle Richtung Kabeltemperatur.","Eigenerwärmung von Widerstandssensoren durch Messstrom, der nicht abgeführt wird.","Vergleichsstellen- und Kanaloffsets durch unkalibrierte Erfassungshardware.","Masseschleifen und Störeinkopplung von Heizern oder Antrieben in Millivoltsignale."]}],"faq":[{"q":"Thermoelement oder PT100 in der Vakuumkammer – was ist besser?","a":"Verwenden Sie die Sensortypen passend zur Messaufgabe. Thermoelemente ermöglichen kompakte, wirtschaftliche Kartierungskanäle; Platin-Widerstandssensoren in Vierleitertechnik eignen sich für stabile Regel- und Referenzpunkte. Entscheidend sind Bereich, Unsicherheit, Montage, Kanalzahl und Kalibrieranforderung."},{"q":"Warum misst mein Temperatursensor im Vakuum falsch?","a":"Die Montage ist eine häufige, aber nicht die einzige Ursache. Schlechter Kontakt, Leitungswärme, Strahlung, Eigenerwärmung, Vergleichsstellenfehler und Kanaloffsets können den Messwert verschieben. Vor einem Sensortausch sollte die vollständige Messkette diagnostiziert werden."},{"q":"Wie viele Temperaturkanäle braucht ein TVAC-Test?","a":"Die Kanalzahl folgt aus Thermalmodell, Regel- und Grenzwertpunkten, Redundanz und Prüfziel. Sie kann von wenigen Punkten an einem Bauteil bis zu Hunderten an einem Raumfahrzeug reichen. Durchführungspins, Erfassungskanäle und Reserven sollten aus der freigegebenen Kanalliste geplant werden."},{"q":"Wie befestige ich ein Thermoelement im Vakuum am Prüfling?","a":"Die Messstelle mit ausgasungsarmem, wärmeleitfähigem Klebstoff anbinden oder mit definierter Kraft über thermische Unterlegscheiben klemmen, wo Kleben verboten ist. Die ersten Zentimeter der Adern auf derselben Fläche anlegen, die Messstelle gegen Strahlung abdecken und den Kabelbaum zugentlasten. Kontaktqualität vor dem Schließen prüfen – Nacharbeit kostet ein Abpumpen."}],"conclusion":"Belastbare TVAC-Temperaturdaten hängen von der vollständigen Messkette ab: Sensortyp, Montage, thermische Anbindung der Leitungen, Messkanal und rückführbare Kalibrierung. Die Kanalplanung gehört deshalb gemeinsam mit Thermalmodell und Prüfprozedur abgeschlossen."},"seoKey":"blogTemperatureMeasurement","dateModified":"2026-07-23","searchIntent":{"en":{"primaryKeyword":"temperature measurement in TVAC","primaryQuestion":"How should temperature sensors be selected, mounted and calibrated in vacuum?"},"de":{"primaryKeyword":"Temperaturmessung im TVAC","primaryQuestion":"Wie werden Temperatursensoren im Vakuum ausgewählt, montiert und kalibriert?"}},"references":[{"title":"Thermocouple Calibration Services","publisher":"National Institute of Standards and Technology (NIST)","url":"https://www.nist.gov/pml/sensor-science/temperature-humidity/thermocouples-calibrations-services"},{"title":"Thermometry Calibration Services","publisher":"National Institute of Standards and Technology (NIST)","url":"https://www.nist.gov/pml/sensor-science/temperature-humidity/thermometry-calibration-services"},{"title":"IEC 60751:2022: Industrial platinum resistance thermometers and platinum temperature sensors","publisher":"International Electrotechnical Commission (IEC)","url":"https://webstore.iec.ch/en/publication/63753"},{"title":"ECSS-E-ST-10-03C Rev.1: Testing","publisher":"European Cooperation for Space Standardization (ECSS)","url":"https://ecss.nl/standard/ecss-e-st-10-03c-rev-1-testing-31-may-2022/"}]},{"articleKey":"tvacFacilityRequirements","enSlug":"tvac-facility-requirements","deSlug":"tvac-anlagen-infrastruktur","category":"engineeringGuide","datePublished":"2026-07-22","relatedPaths":["/products/standard-series","/services/subsystem-integration","/tvac-questionnaire"],"relatedArticles":["tvacChamberSizing","tvacLeadTimes","coolingSystems"],"en":{"title":"TVAC Facility Requirements: What Your Building Must Provide","description":"Floor loads, transport path, power, heat rejection, LN₂ safety, cleanliness and IT: what a facility must provide before a thermal vacuum system arrives – with a practical site checklist.","seoTitle":"TVAC Facility Requirements: Lab Setup | Deepvac","seoDescription":"TVAC facility requirements explained: floor load, transport path, electrical supply, cooling, LN₂ safety, cleanliness and IT – plus a practical site checklist.","intro":"A TVAC installation needs more than a chamber footprint. Site planning must close the transport path, point loads, electrical supply, heat rejection, process gases, oxygen-deficiency protection, exhaust, room conditions, network access and service space against the supplier's installation data and local regulations. Resolving these interfaces before shipment reduces commissioning risk and prevents building work from becoming the project critical path.","sections":[{"title":"Floor space, load and transport path","content":"The complete installation includes the vessel, pumping equipment, control cabinet, thermal plant, gas-supply equipment and service clearances. The required area depends on configuration and maintenance access; generic footprint multipliers are suitable only for early budgeting. Use the supplier's general arrangement drawing for final planning and verify both distributed and point loads.","content2":"Walk the transport path physically: door widths and heights, corridor turns, ramps, lift capacities. Clarify who provides forklift or crane capacity at delivery. For larger systems it is worth checking early whether the system can arrive as one unit or should be planned for staged delivery and assembly on site."},{"title":"Electrical supply","content":"Electrical design must use the supplier's connection data and the site's applicable electrical rules. Coincident loads from pumps, heaters, refrigeration and auxiliaries should be considered together with start currents, protective devices, emergency-stop integration and the required behaviour during loss of mains. A UPS may support controls and logging, but it does not replace a defined safe-state design."},{"title":"Heat rejection: cooling water and chillers","content":"Every kilowatt you put into pumps, refrigeration and heaters eventually leaves as heat, and the building has to absorb it. Three patterns are common: an air-cooled chiller in the test room (simple, but it adds heat and noise exactly where people work), a chiller in an adjacent plant room with short piping runs, or connection to an existing facility cooling water loop. If facility water is used, confirm temperature, flow, pressure and water quality against the system specification early – marginal cooling water shows up later as drifting condenser temperatures and nuisance alarms."},{"title":"LN₂ supply, GN₂ and compressed air","content":"If the selected thermal concept uses liquid nitrogen, the supply method, storage, transfer line, relief routing and operating procedure must be approved with the gas supplier and site safety organisation. Oxygen-deficiency monitoring and ventilation should be based on a documented worst-case release assessment and local requirements. Dewars and bulk storage create different logistics but the same need for controlled cryogenic handling.","bulletsHeading":"LN₂ safety essentials","bullets":["Assess credible release cases and specify oxygen monitoring, alarm response and ventilation accordingly.","Route normal boil-off and safety-relief discharge to an approved location outside occupied areas.","Define cryogenic personal protection, training, access control and emergency response.","Provide dry, filtered vent gas and instrument air at the pressure, quality and flow stated in the system connection data."]},{"title":"Ambient conditions and cleanliness","content":"The required room cleanliness follows from the hardware contamination budget and operating process. Many campaigns can use a controlled laboratory or grey-room concept, while optical or highly sensitive hardware may require classified conditions. Room class alone is not sufficient: open-chamber handling, garments, cleaning, packaging control and chamber history must be included."},{"title":"Exhaust, network and remote monitoring","content":"Pump exhaust should be routed according to local regulations – even oil-free pumps move chamber contents and purge gas that you may not want released at head height in the lab. On the IT side, plan a network drop at the system: modern controls export data as CSV, TXT or XLS files, support PC-based control and can offer remote monitoring, so a running campaign can be checked without a night shift standing at the panel. Clarify with your IT department early how a machine network may be connected, since firewall discussions have delayed more than one commissioning."},{"title":"Site readiness checklist","content":"Use this list with your facility management well before delivery; every open point here is cheaper to solve in advance than during commissioning.","bullets":["Transport path measured and confirmed, including door widths, lifts and crane or forklift capacity.","Floor load and point loads checked against the system's installation drawing.","Electrical connection sized, fused and positioned per the manufacturer's connection data.","Heat rejection concept fixed: chiller location, facility water parameters, noise assessment.","LN₂ concept approved by the safety officer: storage, oxygen monitoring, ventilation, outdoor venting.","Network access, data storage location and alarm forwarding agreed with IT."]}],"faq":[{"q":"How much floor space does a TVAC system need?","a":"The final requirement comes from the supplier's general arrangement drawing. Include the chamber, pump stand, controls, thermal plant, gas equipment, loading route and service clearances. Early planning allowances are useful, but they are not substitutes for the configuration-specific layout."},{"q":"Is liquid nitrogen dangerous in a laboratory?","a":"Liquid nitrogen can be used safely when release scenarios, oxygen-deficiency monitoring, ventilation, approved discharge routing, personal protection, training and emergency procedures are in place. The design must follow local law and the site's safety assessment."},{"q":"Do I need a cleanroom for TVAC testing?","a":"Often not. A gray room – controlled access, lint-reduced garments, filtered overpressure ventilation and disciplined handling – is sufficient for many test items. A classified cleanroom becomes relevant when your hardware carries strict particulate or molecular cleanliness requirements, typically optics and sensitive sensors. In every case, chamber hygiene and item preparation matter at least as much as the room class on the certificate."},{"q":"Can a TVAC system run unattended overnight?","a":"Automation can support unattended phases, but permission to operate without continuous attendance is a site and programme decision. It requires a documented risk assessment, independent protective functions, defined safe states, alarm escalation and reliable utility supply."}],"conclusion":"Site readiness should be closed against the supplier's installation and connection data before shipment. Transport path, point loads, electrical supply, heat rejection, gas safety, exhaust, network access and service clearances all belong in the acceptance checklist."},"de":{"title":"TVAC-Infrastruktur: Was Ihr Gebäude bereitstellen muss","description":"Bodenlasten, Transportweg, Strom, Wärmeabfuhr, LN₂-Sicherheit, Sauberkeit und IT: Diese Infrastruktur braucht ein Thermalvakuumsystem – mit praktischer Checkliste für Ihren Standort.","seoTitle":"TVAC-Infrastruktur: Anforderungen | Deepvac","seoDescription":"TVAC-Infrastruktur im Überblick: Bodenlast, Transportweg, Stromversorgung, Kühlung, LN₂-Sicherheit, Sauberkeit und IT – plus praxisnahe Standort-Checkliste.","intro":"Eine TVAC-Installation benötigt mehr als die Stellfläche der Kammer. Transportweg, Punktlasten, Stromversorgung, Wärmeabfuhr, Prozessgase, Sauerstoffmangelschutz, Abluft, Raumbedingungen, Netzwerk und Serviceflächen müssen gegen die Aufstelldaten des Lieferanten und lokale Vorschriften abgeschlossen werden. Werden diese Schnittstellen vor dem Versand geklärt, sinkt das Inbetriebnahmerisiko und der Gebäudeausbau wird nicht zum kritischen Pfad.","sections":[{"title":"Stellfläche, Bodenlast und Transportweg","content":"Zur vollständigen Installation gehören Behälter, Pumpentechnik, Schaltschrank, Thermalanlage, Gasversorgung und Servicefreiräume. Der Flächenbedarf hängt von Konfiguration und Wartungszugang ab; pauschale Faktoren eignen sich nur für eine frühe Budgetplanung. Für die finale Planung ist die Aufstellzeichnung des Lieferanten maßgeblich, einschließlich Flächen- und Punktlasten.","content2":"Gehen Sie den Transportweg physisch ab: Türbreiten und -höhen, Kurven in Fluren, Rampen, Aufzugstraglasten. Klären Sie, wer bei der Anlieferung Stapler- oder Krankapazität stellt. Bei größeren Systemen lohnt die frühe Frage, ob die Anlage als Einheit ankommt oder gestaffelte Lieferung und Montage vor Ort eingeplant werden sollte."},{"title":"Stromversorgung","content":"Die Elektroplanung muss auf den Anschlussdaten des Lieferanten und den am Standort geltenden elektrotechnischen Regeln beruhen. Gleichzeitige Lasten von Pumpen, Heizern, Kältetechnik und Nebenaggregaten sind zusammen mit Anlaufströmen, Schutzorganen, Not-Aus-Einbindung und dem Verhalten bei Netzausfall zu betrachten. Eine USV kann Steuerung und Logging stützen, ersetzt aber kein definiertes Safe-State-Konzept."},{"title":"Wärmeabfuhr: Kühlwasser und Kältemaschinen","content":"Jedes Kilowatt, das in Pumpen, Kälteerzeugung und Heizungen fließt, verlässt die Anlage als Wärme – und das Gebäude muss sie aufnehmen. Drei Muster sind üblich: ein luftgekühlter Chiller im Testraum (einfach, bringt aber Wärme und Lärm genau dorthin, wo gearbeitet wird), ein Chiller im Nebenraum mit kurzen Leitungswegen oder der Anschluss an einen vorhandenen Kühlwasserkreis. Bei Gebäudewasser prüfen Sie Temperatur, Durchfluss, Druck und Wasserqualität früh gegen die Systemspezifikation – grenzwertiges Kühlwasser zeigt sich später als driftende Verflüssigertemperaturen und Störmeldungen."},{"title":"LN₂-Versorgung, GN₂ und Druckluft","content":"Verwendet das gewählte Thermalkonzept Flüssigstickstoff, müssen Versorgung, Lagerung, Transferleitung, Abblaseführung und Betriebsprozedur mit Gaselieferant und betrieblicher Sicherheitsorganisation freigegeben werden. Sauerstoffmangelüberwachung und Lüftung sollten auf einer dokumentierten Worst-Case-Freisetzungsanalyse und den lokalen Anforderungen beruhen. Dewars und Bulk-Tank erzeugen unterschiedliche Logistik, verlangen aber gleichermaßen kontrolliertes Kryohandling.","bulletsHeading":"LN₂-Sicherheit im Kern","bullets":["Plausible Freisetzungsfälle bewerten und Sauerstoffüberwachung, Alarmreaktion und Lüftung daraus ableiten.","Normales Abdampfen und Sicherheitsabblaseleitungen an einen freigegebenen Ort außerhalb belegter Bereiche führen.","Persönliche Kryoschutzausrüstung, Schulung, Zugangskontrolle und Notfallreaktion definieren.","Trockenes, gefiltertes Belüftungsgas und Instrumentenluft in Druck, Qualität und Durchfluss gemäß Anschlussdaten bereitstellen."]},{"title":"Raumbedingungen und Sauberkeit","content":"Die erforderliche Raumsauberkeit folgt aus Kontaminationsbudget und Betriebsprozess der Hardware. Viele Kampagnen können in einem kontrollierten Labor oder Grauraum stattfinden; optische oder besonders empfindliche Hardware kann klassifizierte Bedingungen verlangen. Die Raumklasse allein genügt nicht: Arbeiten an der offenen Kammer, Bekleidung, Reinigung, Verpackungskontrolle und Kammerhistorie müssen einbezogen werden."},{"title":"Abluft, Netzwerk und Fernüberwachung","content":"Die Pumpenabluft gehört nach lokalen Vorschriften geführt – auch ölfreie Pumpen fördern Kammerinhalt und Spülgas, das Sie nicht auf Kopfhöhe im Labor freisetzen wollen. Auf der IT-Seite planen Sie einen Netzwerkanschluss an der Anlage: Moderne Steuerungen exportieren Daten als CSV, TXT oder XLS, erlauben PC-Bedienung und optional Fernüberwachung, sodass eine laufende Kampagne ohne Nachtschicht am Panel kontrollierbar ist. Klären Sie früh mit Ihrer IT, wie ein Maschinennetz angebunden werden darf – Firewall-Diskussionen haben schon mehr als eine Inbetriebnahme verzögert."},{"title":"Checkliste Standortbereitschaft","content":"Gehen Sie diese Liste deutlich vor der Lieferung mit Ihrem Facility Management durch; jeder offene Punkt ist vorab günstiger zu lösen als während der Inbetriebnahme.","bullets":["Transportweg vermessen und bestätigt, inklusive Türbreiten, Aufzügen und Kran- oder Staplerkapazität.","Bodenlast und Punktlasten gegen die Aufstellzeichnung des Systems geprüft.","Elektroanschluss nach Herstellerangaben dimensioniert, abgesichert und positioniert.","Wärmeabfuhrkonzept festgelegt: Chiller-Standort, Kühlwasserparameter, Lärmbetrachtung.","LN₂-Konzept von der Sicherheitsfachkraft freigegeben: Lagerung, Sauerstoffüberwachung, Lüftung, Abdampfleitung ins Freie.","Netzwerkzugang, Datenablage und Alarmweiterleitung mit der IT vereinbart."]}],"faq":[{"q":"Wie viel Stellfläche braucht ein TVAC-System?","a":"Die verbindliche Fläche stammt aus der Aufstellzeichnung des Lieferanten. Einzubeziehen sind Kammer, Pumpstand, Steuerung, Thermalanlage, Gasversorgung, Beladeweg und Servicefreiräume. Frühe Planungsreserven sind sinnvoll, ersetzen aber nicht das konfigurationsspezifische Layout."},{"q":"Ist Flüssigstickstoff im Labor gefährlich?","a":"Flüssigstickstoff kann sicher eingesetzt werden, wenn Freisetzungsszenarien, Sauerstoffmangelüberwachung, Lüftung, freigegebene Abblaseführung, persönliche Schutzausrüstung, Schulung und Notfallprozeduren umgesetzt sind. Maßgeblich sind lokale Vorschriften und die Sicherheitsbewertung des Standorts."},{"q":"Brauche ich einen Reinraum für TVAC-Tests?","a":"Häufig nicht. Ein Grauraum – kontrollierter Zugang, fusselarme Kleidung, gefilterte Überdrucklüftung und diszipliniertes Handling – reicht für viele Prüflinge. Ein klassifizierter Reinraum wird relevant, wenn Ihre Hardware strenge partikuläre oder molekulare Reinheitsanforderungen trägt, typischerweise Optiken und empfindliche Sensorik. In jedem Fall zählen Kammerhygiene und Prüflingsvorbereitung mindestens so viel wie die Raumklasse auf dem Zertifikat."},{"q":"Kann ein TVAC-System nachts unbeaufsichtigt laufen?","a":"Automatisierung kann unbeaufsichtigte Phasen unterstützen; die Freigabe dazu ist jedoch eine Standort- und Projektentscheidung. Erforderlich sind dokumentierte Risikobewertung, unabhängige Schutzfunktionen, definierte sichere Zustände, Alarmeskalation und zuverlässige Medienversorgung."}],"conclusion":"Die Standortbereitschaft sollte vor dem Versand gegen die Aufstell- und Anschlussdaten des Lieferanten abgeschlossen sein. Transportweg, Punktlasten, Stromversorgung, Wärmeabfuhr, Gassicherheit, Abluft, Netzwerk und Servicefreiräume gehören in die Abnahmecheckliste."},"seoKey":"blogTvacFacilityRequirements","dateModified":"2026-07-23","searchIntent":{"en":{"primaryKeyword":"TVAC facility requirements","primaryQuestion":"What utilities, safety systems and room conditions must a TVAC facility provide?"},"de":{"primaryKeyword":"TVAC-Infrastruktur Anforderungen","primaryQuestion":"Welche Medien, Sicherheitssysteme und Raumbedingungen muss ein TVAC-Standort bereitstellen?"}},"references":[{"title":"Liquid nitrogen, oxygen-deficiency monitoring and ventilation safety notice","publisher":"U.S. Occupational Safety and Health Administration","url":"https://www.osha.gov/news/newsreleases/denver/20200520"},{"title":"Oxygen-deficient atmospheres and the 19.5 percent threshold","publisher":"U.S. Occupational Safety and Health Administration","url":"https://www.osha.gov/otm/section-2-health-hazards/chapter-3"},{"title":"Deepvac Standard Series: current technical data and configuration notes","publisher":"Deepvac GmbH","url":"https://deepvac.space/products/standard-series"}],"technicalNote":{"en":"Deepvac performance figures in this article describe current reference configurations. Binding values depend on chamber size, selected pumping and thermal concepts, test setup and the project quotation.","de":"Die in diesem Artikel genannten Deepvac-Leistungswerte beschreiben aktuelle Referenzkonfigurationen. Verbindliche Werte hängen von Kammergröße, gewähltem Pump- und Thermalkonzept, Testaufbau und Projektangebot ab."}},{"articleKey":"solarSimulationVsIr","enSlug":"solar-simulation-vs-infrared","deSlug":"solarsimulation-vs-infrarot","category":"engineeringGuide","datePublished":"2026-07-22","relatedPaths":["/products/options/solar-simulator","/products/options/infrared-heaters","/products/custom-tvac"],"relatedArticles":["spaceEnvironmentSimulation","cryoShroudsThermalPlates","aerospaceQualification"],"en":{"title":"Solar Simulation vs Infrared Heating: Imposing Heat Flux in TVAC","description":"Solar simulators, IR lamp arrays and heater plates all impose external heat flux in a thermal vacuum chamber – with very different fidelity, cost and complexity.","seoTitle":"Solar Simulation vs IR Heating in TVAC | Deepvac","seoDescription":"Solar simulator, IR lamp arrays or heater plates? How to impose external heat flux in a TVAC chamber, when spectral fidelity matters and how each is controlled.","intro":"External heat input in a TVAC test can be applied with a solar simulator, an infrared source or a conductive heater. These methods do not reproduce the same boundary condition. A solar simulator addresses irradiance, spectrum and direction; infrared systems can reproduce a calibrated absorbed heat flux without solar spectral fidelity; conductive heaters impose power or interface temperature. The verification objective and thermal model determine which approximation is acceptable.","sections":[{"title":"Why external heat flux must be simulated","content":"At Earth's distance, total solar irradiance is about 1361 W/m², while absorbed power at a spacecraft surface depends on incidence angle, spectral absorptance, attitude, albedo and planetary infrared. A cold shroud provides the radiative sink; separate sources or controlled interfaces provide the heat inputs required for the selected orbital case.","content2":"The guiding question is what the test must prove. Verifying a thermal design and correlating a model requires the correct absorbed power on each surface. Verifying wavelength-dependent behaviour – coatings, optics, solar cells – requires the correct spectrum as well."},{"title":"Solar simulators: spectral fidelity at a price","content":"A solar simulator uses a lamp source and optical system to approximate a specified solar reference spectrum, irradiance, beam geometry and uniformity. It is appropriate when wavelength-dependent response, illumination direction, shadowing or optical performance is part of the requirement. The required class and calibration method must be stated in the test specification.","bulletsHeading":"What that fidelity costs","bullets":["High capital and operating cost: lamps, power supplies, optics and their maintenance dominate the budget.","Limited beam size and uniformity: illuminating large articles uniformly requires large, complex optics.","Chamber integration effort: a suitable window or in-chamber optics, stray-light management and alignment.","One-sided illumination: the beam lights one aspect of the article, as the sun does – other faces still need separate provisions."]},{"title":"IR lamp arrays and infrared heaters","content":"Infrared lamp arrays and radiant heater panels apply a controllable radiative load without reproducing the solar spectrum. The thermal model converts the required absorbed orbital load into source power or incident flux for each zone. This can be a valid verification method when spectral response is not part of the requirement and surface properties and view factors are known with adequate uncertainty.","bullets":["Far lower cost and complexity than solar simulation, and scalable to large or irregular geometries.","Zoned arrays allow different fluxes on different faces, following the orbit-driven thermal cases.","Lamp cages partially block the view to the cold shroud – this blockage must be captured in the thermal model.","Flux conversion depends on assumed surface properties, so uncertainties in α and ε feed directly into the test."]},{"title":"Heater plates and skin heaters","content":"Conductive methods skip radiation entirely: thermal plates control the interface temperature under mounting feet, while film or skin heaters bonded to surfaces – or to enclosing dummy panels – inject defined local power. They are precise, inexpensive and easy to control, but they impose temperatures or powers rather than a radiative environment, so view-factor-driven gradients are not reproduced.","bullets":["Well suited to unit-level tests where the environment is specified as an interface temperature.","Skin heaters replicate absorbed flux locally when attachment and instrumentation are acceptable on the article.","Often combined with a cold shroud so radiative losses stay realistic while inputs are conductive.","Typical limitation: heater mass and wiring add their own thermal paths, which the model must include."]},{"title":"When spectral fidelity actually matters","content":"Spectral fidelity is required when the verification result depends materially on wavelength. If only the net absorbed heat load and temperature response are required, a calibrated infrared or conductive method may be sufficient. That decision belongs in the test rationale and uncertainty analysis.","bulletsHeading":"Cases that justify a solar simulator","bullets":["Optical coatings and thermal-control surfaces whose α/ε ratio drives the design.","Solar arrays, where part of the absorbed energy converts to electrical power and the spectrum affects the balance.","Optical instruments where stray light, glint or aperture heating under sun illumination must be verified.","Materials or mechanisms whose degradation under solar-spectrum exposure is part of the question."]},{"title":"Control, calibration and combined setups","content":"Whatever the source, flux must be measured, not assumed. Radiometers and calorimeters at reference planes establish the delivered flux; lamp arrays are then run closed-loop on flux sensors or on fixture temperatures, with lamp ageing compensated by calibration at defined intervals. Solar simulators additionally need beam uniformity and spectrum verification.","content2":"Combined setups are common when different boundary conditions must be controlled independently, for example a radiative source on one face, controlled interface temperatures and simulated internal dissipation. Each source, sensor and control loop must be represented in the test configuration and data package."}],"faq":[{"q":"What is a solar simulator in a TVAC chamber?","a":"A solar simulator is a light source – typically xenon or metal-halide lamps with collimation optics – that reproduces the intensity and approximate spectrum of sunlight in space, around 1361 W/m² at Earth distance. Inside a TVAC chamber it lets each surface absorb heat according to its real solar absorptance, which matters when coatings, optics or solar arrays are under test."},{"q":"Can IR lamps replace a solar simulator?","a":"Infrared sources can replace a solar simulator when the requirement is a calibrated absorbed heat load and wavelength-dependent effects are not being verified. They are not equivalent for solar cells, optical coatings, stray-light cases or other tests in which spectrum and direction influence the result."},{"q":"How is heat flux calibrated in a thermal vacuum test?","a":"With flux measurement at reference planes: radiometers or calorimeters map the delivered flux before the test, and reference sensors monitor it during the test. Lamp arrays are typically run closed-loop on these sensors or on fixture temperatures, with periodic recalibration to compensate lamp ageing. Solar simulators are additionally checked for beam uniformity and spectral content."},{"q":"What are skin heaters and when are they used?","a":"Skin heaters are thin film heaters bonded directly to a surface – of the test item or of a surrounding dummy panel – to inject a defined local power. They are used when absorbed flux can be translated into electrical power per area, typically at unit level or for internal dissipation, and they are precise and inexpensive but do not reproduce a radiative environment."}],"conclusion":"The heat-input method should follow the verification objective. Spectral simulation is necessary when wavelength-dependent absorption or optical response is being tested; otherwise, calibrated heat-flux equivalence can provide cleaner boundary conditions with less complexity."},"de":{"title":"Solarsimulation vs. Infrarotheizung: Wärmeeintrag im TVAC","description":"Solarsimulatoren, IR-Lampenfelder und Thermalplatten bringen externe Wärmeflüsse in die Thermalvakuumkammer – mit sehr unterschiedlicher Genauigkeit und Komplexität.","seoTitle":"Solarsimulation vs. IR-Heizung im TVAC | Deepvac","seoDescription":"Solarsimulator, IR-Lampenfeld oder Thermalplatte? Wie externer Wärmefluss im TVAC aufgebracht wird, wann spektrale Treue zählt und wie geregelt und kalibriert.","intro":"Externer Wärmeeintrag in einem TVAC-Test kann mit Solarsimulator, Infrarotquelle oder konduktivem Heizer aufgebracht werden. Diese Methoden bilden nicht dieselbe Randbedingung nach. Ein Solarsimulator adressiert Bestrahlungsstärke, Spektrum und Richtung; Infrarotsysteme können einen kalibrierten absorbierten Wärmestrom ohne solare Spektraltreue erzeugen; konduktive Heizer prägen Leistung oder Schnittstellentemperatur auf. Nachweisziel und Thermalmodell bestimmen, welche Näherung zulässig ist.","sections":[{"title":"Warum externer Wärmefluss simuliert werden muss","content":"In Erdentfernung beträgt die Gesamt-Solarstrahlung etwa 1361 W/m². Die absorbierte Leistung an einer Raumfahrzeugoberfläche hängt jedoch von Einfallswinkel, spektraler Absorptivität, Lage, Albedo und planetarem Infrarot ab. Ein kalter Shroud stellt die Strahlungssenke bereit; getrennte Quellen oder geregelte Schnittstellen erzeugen die Wärmeeinträge des ausgewählten Orbitfalls.","content2":"Die Leitfrage lautet: Was muss der Test nachweisen? Wer ein Thermaldesign verifiziert und ein Modell korreliert, braucht die korrekte absorbierte Leistung je Fläche. Wer wellenlängenabhängiges Verhalten prüft – Beschichtungen, Optiken, Solarzellen –, braucht zusätzlich das korrekte Spektrum."},{"title":"Solarsimulatoren: spektrale Treue zum Preis","content":"Ein Solarsimulator nutzt eine Lampenquelle und Optik, um ein festgelegtes solares Referenzspektrum, die Bestrahlungsstärke, Strahlgeometrie und Homogenität anzunähern. Er ist geeignet, wenn wellenlängenabhängige Reaktion, Beleuchtungsrichtung, Abschattung oder optische Leistung Teil der Anforderung sind. Geforderte Klasse und Kalibriermethode müssen in der Prüfspezifikation stehen.","bulletsHeading":"Was diese Treue kostet","bullets":["Hohe Investitions- und Betriebskosten: Lampen, Netzteile, Optiken und deren Wartung dominieren das Budget.","Begrenzte Strahlgröße und Homogenität: große Prüflinge gleichmäßig zu beleuchten erfordert große, komplexe Optiken.","Integrationsaufwand in der Kammer: geeignetes Fenster oder Optik im Vakuum, Streulichtmanagement und Justage.","Einseitige Beleuchtung: Der Strahl trifft eine Seite des Prüflings, wie die Sonne – andere Flächen brauchen weiterhin eigene Lösungen."]},{"title":"IR-Lampenfelder und Infrarotheizer","content":"Infrarot-Lampenfelder und Strahlungsheizer bringen eine regelbare radiative Last auf, ohne das Sonnenspektrum nachzubilden. Das Thermalmodell übersetzt die erforderliche absorbierte Orbitlast in Quellenleistung oder einfallenden Wärmestrom je Zone. Die Methode kann belastbar sein, wenn die spektrale Reaktion nicht Teil der Anforderung ist und Oberflächeneigenschaften sowie Sichtfaktoren mit ausreichender Unsicherheit bekannt sind.","bullets":["Deutlich geringere Kosten und Komplexität als Solarsimulation, skalierbar auf große oder unregelmäßige Geometrien.","Zonierte Felder erlauben unterschiedliche Flüsse auf unterschiedlichen Flächen – entsprechend den orbitgetriebenen Lastfällen.","Lampenkäfige verdecken teilweise den Blick zum kalten Shroud – diese Abschattung muss ins Thermalmodell.","Die Flussumrechnung hängt von angenommenen Oberflächeneigenschaften ab – Unsicherheiten in α und ε gehen direkt in den Test ein."]},{"title":"Thermalplatten und Folienheizer","content":"Konduktive Methoden umgehen die Strahlung: Thermalplatten regeln die Schnittstellentemperatur unter den Montagefüßen, Folien- oder Flächenheizer auf Oberflächen – oder auf umgebenden Dummy-Paneelen – bringen definierte lokale Leistung ein. Sie sind präzise, günstig und gut regelbar, prägen aber Temperaturen oder Leistungen auf statt einer Strahlungsumgebung – sichtfaktorgetriebene Gradienten entstehen so nicht.","bullets":["Gut geeignet für Tests auf Geräteebene, bei denen die Umgebung als Schnittstellentemperatur spezifiziert ist.","Folienheizer bilden absorbierten Fluss lokal nach, wenn Applikation und Instrumentierung am Prüfling zulässig sind.","Häufig kombiniert mit kaltem Shroud, damit die Strahlungsverluste realistisch bleiben, während der Eintrag konduktiv erfolgt.","Typische Einschränkung: Heizermasse und Verkabelung schaffen eigene Wärmepfade, die das Modell abbilden muss."]},{"title":"Wann spektrale Treue wirklich zählt","content":"Spektrale Treue ist erforderlich, wenn das Verifikationsergebnis wesentlich von der Wellenlänge abhängt. Werden nur absorbierte Netto-Wärmelast und Temperaturreaktion benötigt, kann eine kalibrierte infrarote oder konduktive Methode genügen. Diese Entscheidung gehört in Prüfbegründung und Unsicherheitsanalyse.","bulletsHeading":"Fälle, die einen Solarsimulator rechtfertigen","bullets":["Optische Beschichtungen und Thermalkontrollflächen, deren α/ε-Verhältnis das Design bestimmt.","Solargeneratoren, bei denen ein Teil der absorbierten Energie in elektrische Leistung wandelt und das Spektrum die Bilanz beeinflusst.","Optische Instrumente, bei denen Streulicht, Reflexe oder Aperturerwärmung unter Sonnenbeleuchtung nachzuweisen sind.","Materialien oder Mechanismen, deren Degradation unter Sonnenspektrum Teil der Fragestellung ist."]},{"title":"Regelung, Kalibrierung und kombinierte Aufbauten","content":"Unabhängig von der Quelle gilt: Fluss wird gemessen, nicht angenommen. Radiometer und Kalorimeter an Referenzebenen belegen den gelieferten Fluss; Lampenfelder laufen dann im geschlossenen Regelkreis auf Flusssensoren oder Vorrichtungstemperaturen, Lampenalterung wird durch Kalibrierung in definierten Intervallen kompensiert. Solarsimulatoren erfordern zusätzlich Nachweise zu Strahlhomogenität und Spektrum.","content2":"Kombinierte Aufbauten sind sinnvoll, wenn unterschiedliche Randbedingungen unabhängig geregelt werden müssen, etwa eine Strahlungsquelle auf einer Fläche, geregelte Schnittstellentemperaturen und simulierte interne Verlustleistung. Jede Quelle, jeder Sensor und jeder Regelkreis muss in Testkonfiguration und Datenpaket abgebildet sein."}],"faq":[{"q":"Was ist ein Solarsimulator in einer TVAC-Kammer?","a":"Ein Solarsimulator ist eine Lichtquelle – typischerweise Xenon- oder Metallhalogenidlampen mit Kollimationsoptik –, die Intensität und näherungsweise das Spektrum des Sonnenlichts im Weltraum nachbildet, rund 1361 W/m² in Erdentfernung. In der Thermalvakuumkammer absorbiert damit jede Oberfläche gemäß ihrer realen solaren Absorptivität – wichtig bei Beschichtungen, Optiken oder Solargeneratoren im Test."},{"q":"Können IR-Lampen einen Solarsimulator ersetzen?","a":"Infrarotquellen können einen Solarsimulator ersetzen, wenn die Anforderung ein kalibrierter absorbierter Wärmestrom ist und keine wellenlängenabhängigen Effekte verifiziert werden. Für Solarzellen, optische Beschichtungen, Streulichtfälle oder andere Prüfungen mit spektral- und richtungsabhängigem Ergebnis sind sie nicht gleichwertig."},{"q":"Wie wird der Wärmefluss im Thermalvakuumtest kalibriert?","a":"Über Flussmessung an Referenzebenen: Radiometer oder Kalorimeter kartieren den gelieferten Fluss vor dem Test, Referenzsensoren überwachen ihn währenddessen. Lampenfelder laufen typischerweise im geschlossenen Regelkreis auf diese Sensoren oder auf Vorrichtungstemperaturen, mit periodischer Rekalibrierung gegen Lampenalterung. Bei Solarsimulatoren kommen Strahlhomogenität und Spektrum als Prüfpunkte hinzu."},{"q":"Was sind Folienheizer und wann werden sie eingesetzt?","a":"Folienheizer sind dünne Flächenheizer, die direkt auf eine Oberfläche geklebt werden – am Prüfling oder auf einem umgebenden Dummy-Paneel –, um definierte lokale Leistung einzubringen. Sie kommen zum Einsatz, wenn sich absorbierter Fluss in elektrische Leistung je Fläche übersetzen lässt, typischerweise auf Geräteebene oder für interne Verlustleistung; sie sind präzise und günstig, bilden aber keine Strahlungsumgebung nach."}],"conclusion":"Die Methode des Wärmeeintrags sollte dem Nachweisziel folgen. Spektrale Solarsimulation ist erforderlich, wenn wellenlängenabhängige Absorption oder optische Reaktion geprüft werden; in anderen Fällen kann ein kalibrierter, wärmeäquivalenter Eintrag klarere Randbedingungen bei geringerem Aufwand liefern."},"seoKey":"blogSolarSimulationVsIr","dateModified":"2026-07-23","searchIntent":{"en":{"primaryKeyword":"solar simulation vs infrared heating","primaryQuestion":"When does a TVAC test need spectral solar simulation instead of heat-flux equivalence?"},"de":{"primaryKeyword":"Solarsimulation vs Infrarotheizung","primaryQuestion":"Wann braucht ein TVAC-Test spektrale Solarsimulation statt einer wärmeäquivalenten Beheizung?"}},"references":[{"title":"Solar Irradiance Science","publisher":"NASA Goddard Space Flight Center","url":"https://earth.gsfc.nasa.gov/climate/projects/solar-irradiance/science"},{"title":"State of the Art of Small Spacecraft Technology, Thermal Control","publisher":"NASA Small Spacecraft Systems Virtual Institute","url":"https://www.nasa.gov/smallsat-institute/sst-soa/thermal-control/"},{"title":"Space Environment Simulator facility capabilities","publisher":"NASA Goddard Space Flight Center","url":"https://etd.gsfc.nasa.gov/capabilities/facilities-listing/space-environment-simulator/"}]},{"articleKey":"tvacChamberSizing","enSlug":"tvac-chamber-sizing","deSlug":"tvac-kammer-dimensionierung","category":"basics","datePublished":"2026-07-22","relatedPaths":["/products/standard-series","/products/custom-tvac","/tvac-questionnaire"],"relatedArticles":["tvacCostDrivers","tvacFacilityRequirements","whatIsTvacTesting"],"en":{"title":"TVAC Chamber Sizing: How to Choose the Right Volume","description":"Nominal litres say little: how shroud, thermal plate and fixturing shrink usable volume, which clearances matter, cubic vs cylindrical geometry – and how much growth margin is sensible.","seoTitle":"TVAC Chamber Sizing: Choosing the Right Volume | Deepvac","seoDescription":"TVAC chamber sizing explained: nominal vs usable volume, clearance rules of thumb, cubic vs cylindrical geometry and growth margin without oversizing costs.","intro":"TVAC chamber sizing starts with the largest approved test configuration, including fixture, harness, instrumentation, access and radiative clearance. The assembly must pass through the door and fit within the clear dimensions of the selected shroud and thermal plate. Nominal vessel volume is useful for product classification, but it is not the binding test envelope. Growth margin should be defined from a realistic programme forecast rather than an unspecified future maximum.","sections":[{"title":"Nominal volume is not usable volume","content":"Nominal volume describes the empty vessel. The usable envelope is reduced by shroud panels, thermal plate, support structure, ports, fixtures and required clearances. The reduction varies substantially with chamber geometry and options, so a generic percentage should not be used for final selection.","content2":"Request the clear internal width, height and depth, door passage, usable plate area, load rating and port intrusions for the selected configuration. Compare those dimensions with an as-tested CAD envelope, not only the bare flight hardware."},{"title":"Clearance rules of thumb","content":"Clearance supports radiative boundary conditions, installation, harness routing and instrumentation. The required value depends on surface temperatures, view factors, geometry, access tools and the facility's operating method. A fixed hand-width rule can be useful for an early sketch but is not a design criterion.","bulletsHeading":"What clearance provides","bullets":["Radiative environment: verify view factors to the controlled shroud and limit exposure to warm openings or reflective obstructions.","Handling: technicians need room for hands, tools and torque wrenches at the mounting points, and loading must work without scraping past shroud edges.","Harness routing: service loops, connector savers and bend radii between item and feedthroughs consume more depth than drawings suggest.","Instrumentation: thermocouple runs, purge lines and any camera or viewport lines of sight need unobstructed paths."]},{"title":"Door and access geometry: cubic vs cylindrical","content":"Two vessel geometries dominate, and the trade-off is practical rather than aesthetic. Cylindrical chambers – like the C Series – carry the external atmospheric pressure efficiently, which favours large volumes and long test items; the price is a circular cross-section that clips the corners of boxy test envelopes. Cubic chambers – like the T Series – offer a full rectangular cross-section and a door that opens the entire face, which suits box-shaped units, shelf-style fixturing and frequent loading.","content2":"In every case the door aperture, not the volume, defines the largest loadable item. Check the pass-through dimensions with fixture and protruding connectors included – and plan how the item actually travels: trolley, rail system or crane access changes what a given door is worth."},{"title":"Fixturing, thermal plate and harness space","content":"Test items rarely float. They bolt to the thermal plate or sit in a fixture that reproduces the mechanical interface – and that fixture adds height, footprint and thermal mass of its own. The thermal plate needs enough area for the item's conductive interface, and if several units are tested in parallel, for all of them plus sensor routing.","content2":"Harnessing deserves its own line in the sizing exercise: flight connectors with savers, breakout boxes, dozens of thermocouple lines and possibly purge or fluid lines all live between item and feedthrough panel. Teams that size for the item alone routinely discover that the harness – not the hardware – is what actually fills the chamber."},{"title":"Growth margin versus oversizing","content":"Growth margin should cover credible programmes over the intended planning horizon. Oversizing increases vessel, pumping and thermal-system requirements, floor space, utilities and turnaround time. The trade should compare recurring cost for the expected campaign mix with the cost of using an external facility for exceptional oversized items.","content2":"A sensible compromise: size for the realistic envelope of the next several years – not for the largest item imaginable – and add a defined margin. If one exceptional future item dominates the requirement, testing that one campaign externally is often more economical than owning its chamber."},{"title":"Standard size classes as orientation","content":"Current Deepvac Standard Series reference configurations cover nominal sizes of 65, 125, 250, 500, 1000 and 2000 litres in cubic T Series and cylindrical C Series architectures. These classes are an orientation for requirements capture; binding clear dimensions, loads and performance depend on the selected configuration and quotation.","content2":"A custom vessel becomes relevant when geometry, aspect ratio, access, optical bench, port count or load cases cannot be satisfied within a standard platform. The decision should follow a documented fit check rather than a preference for standard or custom."}],"faq":[{"q":"How do I choose the right TVAC chamber size?","a":"Start from the largest realistic test item including its fixture, add harness space and clearance to the shroud on all sides, and verify that the assembly passes through the door aperture. Compare that envelope against usable interior dimensions – not nominal litres. Then add a defined growth margin for the coming years, and resist sizing for a single exceptional item; external testing can cover that case."},{"q":"How much of a chamber's nominal volume is actually usable?","a":"There is no dependable universal fraction. Shroud, plate, support, ports, fixture and clearances reduce the empty-vessel volume by an amount that depends on configuration. Use clear dimensions and door passage from the selected layout."},{"q":"Is a cubic or a cylindrical vacuum chamber better?","a":"Neither is better; they optimise different things. Cylindrical vessels carry atmospheric pressure efficiently, which favours large volumes and long test items. Cubic chambers offer a full rectangular cross-section and a full-face door, which suits boxy units, shelf fixturing and frequent loading. The deciding questions are your test item shapes and your loading process – which is why both geometries exist as standard."},{"q":"Is a bigger vacuum chamber always better?","a":"No. Unused volume can increase pump-down time, thermal-system size, utility demand, floor space and purchase cost. Define a realistic growth case and compare exceptional future items with external test capacity before increasing the permanent chamber class."}],"conclusion":"Chamber size should be selected from the usable test envelope, door passage, fixture, harness, radiative clearance and a defined growth case. Nominal volume is only an orientation value; the binding comparison uses clear dimensions in the selected configuration."},"de":{"title":"TVAC-Kammer dimensionieren: die richtige Größe wählen","description":"Nennliter sagen wenig: wie Shroud, Thermalplatte und Vorrichtungen das Nutzvolumen schrumpfen, welche Abstände zählen, kubisch vs. zylindrisch – und wie viel Wachstumsreserve sinnvoll ist.","seoTitle":"TVAC-Kammer dimensionieren: Größe wählen | Deepvac","seoDescription":"TVAC-Kammer richtig dimensionieren: Nennvolumen vs. Nutzvolumen, Faustregeln für Abstände, kubische vs. zylindrische Bauform und sinnvolle Wachstumsreserve.","intro":"Die Dimensionierung einer TVAC-Kammer beginnt mit der größten freigegebenen Prüfkonfiguration einschließlich Vorrichtung, Verkabelung, Instrumentierung, Zugang und Strahlungsabstand. Die Baugruppe muss durch die Tür passen und innerhalb der lichten Maße von Shroud und Thermalplatte liegen. Das Nennvolumen des Behälters dient der Produktklassifizierung, ist aber nicht der verbindliche Einbauraum. Wachstumsreserve sollte aus einer realistischen Programmplanung und nicht aus einem unbestimmten künftigen Maximum folgen.","sections":[{"title":"Nennvolumen ist nicht Nutzvolumen","content":"Das Nennvolumen beschreibt den leeren Behälter. Der nutzbare Einbauraum wird durch Shroud-Paneele, Thermalplatte, Tragstruktur, Stutzen, Vorrichtungen und erforderliche Abstände reduziert. Die Reduktion variiert deutlich mit Kammergeometrie und Optionen; ein pauschaler Prozentwert eignet sich daher nicht zur finalen Auswahl.","content2":"Für die gewählte Konfiguration sollten lichte Innenbreite, -höhe und -tiefe, Türdurchfahrt, nutzbare Plattenfläche, Tragfähigkeit und Stutzeneingriffe vorliegen. Diese Maße werden mit einer CAD-Einhüllenden des vollständigen Testaufbaus verglichen, nicht nur mit der nackten Flughardware."},{"title":"Faustregeln für Abstände","content":"Abstand unterstützt radiative Randbedingungen, Montage, Kabelführung und Instrumentierung. Der erforderliche Wert hängt von Oberflächentemperaturen, Sichtfaktoren, Geometrie, Werkzeugzugang und Betriebsweise ab. Eine pauschale Handbreite kann für eine erste Skizze hilfreich sein, ist aber kein Auslegungskriterium.","bulletsHeading":"Wofür Abstände sorgen","bullets":["Strahlungsumgebung: Sichtfaktoren zum geregelten Shroud nachweisen und den Blick auf warme Öffnungen oder reflektierende Hindernisse begrenzen.","Handhabung: An den Befestigungspunkten braucht es Platz für Hände, Werkzeug und Drehmomentschlüssel, und das Beladen muss ohne Streifen der Shroud-Kanten funktionieren.","Kabelführung: Serviceschleifen, Connector-Saver und Biegeradien zwischen Prüfling und Durchführungen kosten mehr Bautiefe, als Zeichnungen vermuten lassen.","Instrumentierung: Thermoelementtrassen, Spülleitungen und Sichtachsen für Kameras oder Schaugläser brauchen freie Wege."]},{"title":"Tür- und Zugangsgeometrie: kubisch oder zylindrisch","content":"Zwei Behältergeometrien dominieren, und die Abwägung ist praktisch, nicht ästhetisch. Zylindrische Kammern – wie die C-Serie – tragen den äußeren Atmosphärendruck effizient, was großen Volumina und langen Prüflingen entgegenkommt; der Preis ist ein runder Querschnitt, der die Ecken kastenförmiger Einbauraums beschneidet. Kubische Kammern – wie die T-Serie – bieten den vollen Rechteckquerschnitt und eine Tür über die gesamte Stirnfläche, was kastenförmigen Geräten, regalartigen Vorrichtungen und häufigem Beladen entgegenkommt.","content2":"In jedem Fall definiert die Türöffnung, nicht das Volumen, den größten beladbaren Prüfling. Prüfen Sie die Durchfahrtsmaße inklusive Vorrichtung und überstehender Stecker – und planen Sie den tatsächlichen Weg des Prüflings: Wagen, Schienensystem oder Krananbindung verändern, was eine Tür wert ist."},{"title":"Vorrichtungen, Thermalplatte und Kabelraum","content":"Prüflinge schweben selten. Sie werden auf die Thermalplatte geschraubt oder sitzen in einer Vorrichtung, die die mechanische Schnittstelle nachbildet – und diese Vorrichtung bringt eigene Höhe, Grundfläche und thermische Masse mit. Die Thermalplatte braucht genug Fläche für die konduktive Schnittstelle des Prüflings – und bei parallelen Tests für alle Einheiten samt Sensorführung.","content2":"Die Verkabelung verdient eine eigene Zeile in der Dimensionierung: Flugstecker mit Savern, Breakout-Boxen, Dutzende Thermoelementleitungen und gegebenenfalls Spül- oder Fluidleitungen leben alle zwischen Prüfling und Durchführungsplatte. Teams, die nur für den Prüfling dimensionieren, stellen regelmäßig fest, dass der Kabelbaum – nicht die Hardware – die Kammer füllt."},{"title":"Wachstumsreserve oder Überdimensionierung","content":"Die Wachstumsreserve sollte plausible Programme im vorgesehenen Planungshorizont abdecken. Überdimensionierung erhöht Anforderungen an Behälter, Pump- und Thermalsystem, Stellfläche, Medien und Durchlaufzeit. Die Abwägung sollte laufende Kosten des erwarteten Kampagnenmixes mit den Kosten einer externen Anlage für einzelne übergroße Prüflinge vergleichen.","content2":"Der vernünftige Kompromiss: Dimensionieren Sie für das realistische Envelope der nächsten Jahre – nicht für das größte denkbare Objekt – und legen Sie eine definierte Reserve dazu. Dominiert ein einzelner künftiger Ausnahmefall die Anforderung, ist es oft wirtschaftlicher, diese eine Kampagne extern zu testen, als ihre Kammer zu besitzen."},{"title":"Standard-Größenklassen als Orientierung","content":"Die aktuellen Referenzkonfigurationen der Deepvac Standard-Serie umfassen Nennvolumina von 65, 125, 250, 500, 1000 und 2000 Litern als kubische T-Serie und zylindrische C-Serie. Die Klassen dienen der Anforderungsklärung; verbindliche lichte Maße, Lasten und Leistungswerte hängen von Konfiguration und Angebot ab.","content2":"Ein kundenspezifischer Behälter wird relevant, wenn Geometrie, Seitenverhältnis, Zugang, optische Bank, Stutzenzahl oder Lastfälle innerhalb einer Standardplattform nicht erfüllt werden können. Die Entscheidung sollte aus einem dokumentierten Fit-Check und nicht aus einer grundsätzlichen Vorliebe für Standard oder Sonderanlage folgen."}],"faq":[{"q":"Wie wähle ich die richtige Größe einer TVAC-Kammer?","a":"Beginnen Sie beim größten realistischen Prüfling samt Vorrichtung, addieren Sie Kabelraum und allseitigen Abstand zum Shroud und prüfen Sie die Durchfahrt durch die Türöffnung. Vergleichen Sie dieses Envelope mit den nutzbaren Innenmaßen – nicht mit Nennlitern. Legen Sie dann eine definierte Wachstumsreserve für die nächsten Jahre fest und widerstehen Sie der Versuchung, für einen einzelnen Ausnahmefall zu dimensionieren; den deckt externes Testen ab."},{"q":"Wie viel vom Nennvolumen einer Kammer ist tatsächlich nutzbar?","a":"Es gibt keinen belastbaren universellen Anteil. Shroud, Platte, Tragstruktur, Stutzen, Vorrichtung und Abstände reduzieren das Leerbehältervolumen konfigurationsabhängig. Maßgeblich sind lichte Maße und Türdurchfahrt des gewählten Layouts."},{"q":"Ist eine kubische oder zylindrische Vakuumkammer besser?","a":"Keine ist besser; sie optimieren Verschiedenes. Zylindrische Behälter tragen den Atmosphärendruck effizient, was großen Volumina und langen Prüflingen entgegenkommt. Kubische Kammern bieten vollen Rechteckquerschnitt und eine Tür über die gesamte Stirnfläche – gut für kastenförmige Geräte, Regalvorrichtungen und häufiges Beladen. Entscheidend sind Ihre Prüflingsformen und Ihr Beladeprozess – genau deshalb gibt es beide Geometrien als Standard."},{"q":"Ist eine größere Vakuumkammer immer besser?","a":"Nein. Ungenutztes Volumen kann Abpumpzeit, Größe des Thermalsystems, Medienbedarf, Stellfläche und Anschaffungskosten erhöhen. Vor dem Sprung in eine größere Kammerklasse sollte ein realistisches Wachstumsszenario mit externer Testkapazität für Ausnahmefälle verglichen werden."}],"conclusion":"Die Kammergröße sollte aus nutzbarem Einbauraum, Türdurchfahrt, Vorrichtung, Verkabelung, Strahlungsabständen und einem definierten Wachstumsszenario abgeleitet werden. Das Nennvolumen dient nur zur Orientierung; verbindlich sind die lichten Maße der gewählten Konfiguration."},"seoKey":"blogTvacChamberSizing","dateModified":"2026-07-23","searchIntent":{"en":{"primaryKeyword":"TVAC chamber sizing","primaryQuestion":"How large should a TVAC chamber be for the test item, fixture, harness and growth margin?"},"de":{"primaryKeyword":"TVAC-Kammer dimensionieren","primaryQuestion":"Wie groß muss eine TVAC-Kammer für Prüfling, Vorrichtung, Verkabelung und Reserve sein?"}},"references":[{"title":"State of the Art of Small Spacecraft Technology, Thermal Control","publisher":"NASA Small Spacecraft Systems Virtual Institute","url":"https://www.nasa.gov/smallsat-institute/sst-soa/thermal-control/"},{"title":"Deepvac Standard Series: current technical data and configuration notes","publisher":"Deepvac GmbH","url":"https://deepvac.space/products/standard-series"},{"title":"Deepvac Custom TVAC: project-specific system scope","publisher":"Deepvac GmbH","url":"https://deepvac.space/products/custom-tvac"}],"technicalNote":{"en":"Deepvac performance figures in this article describe current reference configurations. Binding values depend on chamber size, selected pumping and thermal concepts, test setup and the project quotation.","de":"Die in diesem Artikel genannten Deepvac-Leistungswerte beschreiben aktuelle Referenzkonfigurationen. Verbindliche Werte hängen von Kammergröße, gewähltem Pump- und Thermalkonzept, Testaufbau und Projektangebot ab."}}]
+[
+  {
+    "articleKey": "electricPropulsionTesting",
+    "enSlug": "electric-propulsion-vacuum-testing",
+    "deSlug": "elektrische-antriebe-vakuumtest",
+    "category": "applications",
+    "datePublished": "2025-07-30",
+    "relatedPaths": [
+      "/products/custom-tvac",
+      "/products/options/roots-booster",
+      "/products/options/residual-gas-analysis",
+      "/tvac-questionnaire"
+    ],
+    "relatedArticles": [
+      "pumpingSystemSelection",
+      "vacuumLevelsExplained",
+      "tvacChamberSizing"
+    ],
+    "en": {
+      "title": "Electric Propulsion Testing in Vacuum: Why Thruster Facilities Are a Class of Their Own",
+      "description": "A firing Hall or ion thruster turns the vacuum chamber into a continuous gas-load problem. What makes electric propulsion test facilities special – and how to scope one.",
+      "seoTitle": "Electric Propulsion Vacuum Testing | Deepvac",
+      "seoDescription": "Why electric propulsion vacuum testing needs custom facilities: pumping speed for xenon flow, background pressure effects, sputter protection, diagnostics.",
+      "intro": "Firing an electric thruster creates a continuous propellant gas load, so facility pressure is determined by propellant throughput and effective pumping speed during operation, not only by empty-chamber base pressure. Background gas can alter measured thruster performance, while the plume loads chamber surfaces thermally and can sputter material back toward the device. Facility design therefore links vacuum architecture, chamber geometry, protection, diagnostics and campaign duration.",
+      "sections": [
+        {
+          "title": "A firing thruster is a continuous gas source",
+          "content": "In a classical TVAC campaign, the gas load from desorption and the test setup usually decreases with time. A firing Hall or gridded-ion thruster adds propellant at a controlled rate for the full firing period. At steady state, the first-order relation p ≈ Q/S links pressure p, gas throughput Q and effective pumping speed S. Conductance, gas species and pump capture behaviour must be included before this relation is used for facility sizing.",
+          "bullets": [
+            "Even a few milligrams per second of xenon represent a gas throughput far above typical outgassing loads.",
+            "Chamber pressure during firing is set by flow rate and pumping speed, not by the base pressure of the empty chamber.",
+            "Endurance campaigns must sustain this balance continuously, including planned pump regeneration cycles."
+          ]
+        },
+        {
+          "title": "Facility effects: background pressure changes the thruster",
+          "content": "Electric thrusters are sensitive to their environment. Residual neutral gas is ingested by the discharge and artificially increases thrust and discharge current, shifting the operating point; charge-exchange ions created in the plume distort erosion patterns and probe readings. If the background pressure is too high, the test characterizes the facility as much as the thruster.",
+          "content2": "The target pressure during firing must be defined for the specific thruster, flow rate, diagnostics and required uncertainty. Published Hall-thruster campaigns often work in the high-vacuum range and characterise sensitivity to background pressure, but there is no universal firing-pressure value. Gauge readings also require gas-specific calibration or correction."
+        },
+        {
+          "title": "Pumping systems sized from throughput",
+          "content": "Facility sizing starts by calculating the effective propellant pumping speed from maximum flow and target background pressure. Large facilities commonly use cryogenic pumping surfaces because they can provide high capture speed for xenon, while the exact architecture depends on propellant, regeneration strategy, available cooling and contamination constraints. Turbomolecular, roots and dry backing stages may support base-vacuum, roughing or diagnostic needs.",
+          "bulletsHeading": "Sizing considerations",
+          "bullets": [
+            "Calculate effective pumping speed at the thruster location, including conductance and gas-specific capture performance.",
+            "Define how long the system must sustain maximum flow before cryogenic surfaces require regeneration.",
+            "Treat krypton, iodine and other propellants as separate compatibility and pumping cases.",
+            "Verify that roughing and backing stages support all operating and regeneration modes, not only initial pump-down."
+          ]
+        },
+        {
+          "title": "Erosion, sputtering and chamber protection",
+          "content": "The ion beam does not end at the plume boundary: it strikes the beam dump and chamber walls with energies high enough to sputter material. Sputtered atoms migrate back onto the thruster, deposit on insulators and diagnostics, and can distort long-duration wear results – a well-known facility effect in endurance testing. Test chambers therefore use sacrificial liners, typically graphite panels, in the beam target zone, and keep critical instrumentation out of the direct plume.",
+          "content2": "The beam also carries most of the thruster power to the far wall as heat. Beam dumps and liners must be designed for this thermal load – water-cooled or radiatively sized – so that surface temperatures and outgassing stay under control during long firings."
+        },
+        {
+          "title": "Feedthroughs and diagnostics",
+          "content": "An electric propulsion chamber is dense with interfaces: high-voltage and high-current feedthroughs for discharge and neutralizer, RF feedthroughs for some thruster families, propellant lines with precise flow control, and dozens of signal lines. The diagnostic suite is what distinguishes a thruster test facility from a plain vacuum vessel.",
+          "bullets": [
+            "Thrust balances resolve millinewton-level forces and need vibration-quiet mounting, decoupled from pumps.",
+            "Faraday cups and retarding potential analyzers on motion stages map current density and ion energy across the plume.",
+            "A residual gas analysis (RGA) separates the propellant background from outgassing and leak contributions.",
+            "Optical access allows plume spectroscopy and visual monitoring of the discharge."
+          ]
+        },
+        {
+          "title": "Scoping an EP facility: custom by nature",
+          "content": "Electric-propulsion facilities are usually engineered around a defined thruster family rather than selected by chamber volume alone. The starting data are propellant species, maximum mass flow, target pressure and uncertainty, beam power and divergence, firing duration, diagnostics, motion systems and allowable facility effects. From these inputs, chamber dimensions, pumping architecture, liners, thermal management and interfaces can be derived."
+        }
+      ],
+      "faq": [
+        {
+          "q": "What vacuum level is needed for electric propulsion testing?",
+          "a": "Both empty-chamber base pressure and background pressure during firing must be specified. The firing value is derived from the thruster flow, allowable facility effect and effective gas-specific pumping speed. It should not be replaced by one generic pressure target for all Hall or ion thrusters."
+        },
+        {
+          "q": "Why are Hall thruster test facilities so large?",
+          "a": "High pumping speed requires large capture surfaces, and chamber length helps control plume interaction, beam-dump loading and backsputter. The dimensions therefore follow the thruster power, flow, plume geometry and measurement uncertainty rather than a general preference for large vessels."
+        },
+        {
+          "q": "Can a standard TVAC chamber test an ion thruster?",
+          "a": "For non-firing thermal vacuum cycling of a propulsion subsystem, yes – that is a classical TVAC task. Firing tests are different: even small thrusters produce a continuous gas load that standard platforms are not sized to pump at representative background pressure. Ion thruster vacuum chambers for firing are therefore typically custom systems sized from propellant flow, sometimes starting from a standard vessel geometry."
+        },
+        {
+          "q": "Which propellants are used in electric propulsion testing?",
+          "a": "Xenon remains the reference propellant; krypton is increasingly common for cost reasons, and iodine or alternative gases appear in newer developments. For the facility, the propellant determines pump capture performance, gauge calibration factors and compatibility questions – iodine in particular is corrosive and requires dedicated materials and trapping concepts. Declare the propellant early in facility scoping."
+        }
+      ],
+      "conclusion": "Electric-propulsion facility design begins with propellant species, maximum mass flow, target background pressure, plume geometry, beam power and campaign duration. These parameters determine effective pumping speed, chamber geometry, protection measures and diagnostics; base pressure alone is not a sufficient sizing criterion."
+    },
+    "de": {
+      "title": "Elektrische Antriebe im Vakuumtest: Warum Triebwerks-Testanlagen eine Klasse für sich sind",
+      "description": "Ein feuerndes Hall- oder Ionentriebwerk macht die Vakuumkammer zum Durchsatzproblem. Was Testanlagen für elektrische Antriebe besonders macht – und wie man sie auslegt.",
+      "seoTitle": "Elektrische Antriebe im Vakuumtest | Deepvac",
+      "seoDescription": "Elektrische Antriebe im Vakuumtest: Saugvermögen für Xenon, Hintergrunddruck-Effekte, Sputter-Schutz und Diagnostik – Auslegung kundenspezifischer Anlagen.",
+      "intro": "Ein feuerndes elektrisches Triebwerk erzeugt eine kontinuierliche Treibstoff-Gaslast. Der Anlagendruck wird deshalb im Betrieb durch Treibstoffdurchsatz und effektives Saugvermögen bestimmt, nicht nur durch den Basisdruck der leeren Kammer. Hintergrundgas kann die gemessene Triebwerksleistung beeinflussen; zugleich belastet der Plume Kammerflächen thermisch und kann Material zum Triebwerk zurücksputtern. Die Anlagenauslegung verbindet daher Vakuumarchitektur, Kammergeometrie, Schutz, Diagnostik und Kampagnendauer.",
+      "sections": [
+        {
+          "title": "Ein feuerndes Triebwerk ist eine kontinuierliche Gasquelle",
+          "content": "In einer klassischen TVAC-Kampagne nimmt die Gaslast aus Desorption und Testaufbau meist mit der Zeit ab. Ein feuerndes Hall- oder Gitterionentriebwerk speist dagegen während der gesamten Feuerphase Treibstoff mit kontrollierter Rate ein. Im stationären Zustand verknüpft die Näherung p ≈ Q/S den Druck p, den Gasdurchsatz Q und das effektive Saugvermögen S. Leitwert, Gasart und Fangverhalten der Pumpen müssen berücksichtigt werden, bevor die Beziehung zur Anlagenauslegung genutzt wird.",
+          "bullets": [
+            "Schon wenige Milligramm Xenon pro Sekunde bedeuten einen Gasdurchsatz weit über typischen Ausgasungslasten.",
+            "Der Kammerdruck im Feuerbetrieb wird von Massenfluss und Saugvermögen bestimmt, nicht vom Basisdruck der leeren Kammer.",
+            "Dauerlaufkampagnen müssen diese Bilanz kontinuierlich halten – inklusive geplanter Regenerationszyklen der Pumpen."
+          ]
+        },
+        {
+          "title": "Facility-Effekte: Der Hintergrunddruck verändert das Triebwerk",
+          "content": "Elektrische Triebwerke reagieren empfindlich auf ihre Umgebung. Restliches Neutralgas wird von der Entladung angesaugt und erhöht Schub und Entladestrom künstlich; Ladungsaustausch-Ionen im Plume verfälschen Erosionsbilder und Sondenmessungen. Ist der Hintergrunddruck zu hoch, charakterisiert der Test die Anlage ebenso sehr wie das Triebwerk.",
+          "content2": "Der Zieldruck im Feuerbetrieb muss für Triebwerk, Massenfluss, Diagnostik und geforderte Unsicherheit festgelegt werden. Veröffentlichte Halltriebwerk-Kampagnen arbeiten häufig im Hochvakuumbereich und charakterisieren die Empfindlichkeit gegenüber dem Hintergrunddruck; einen universellen Feuerdruck gibt es jedoch nicht. Druckmesswerte benötigen zudem gasartspezifische Kalibrierung oder Korrektur."
+        },
+        {
+          "title": "Pumpsysteme: Auslegung über den Durchsatz",
+          "content": "Die Anlagenauslegung beginnt mit der Berechnung des effektiven Treibstoff-Saugvermögens aus maximalem Massenfluss und Ziel-Hintergrunddruck. Große Anlagen nutzen häufig kryogene Pumpflächen, weil sie für Xenon ein hohes Fangvermögen bereitstellen können. Die genaue Architektur hängt von Treibstoff, Regenerationsstrategie, verfügbarer Kühlung und Kontaminationsanforderungen ab. Turbomolekular-, Roots- und trockene Vorpumpstufen können Basisvakuum, Abpumpen oder Diagnostik unterstützen.",
+          "bulletsHeading": "Auslegungspunkte",
+          "bullets": [
+            "Effektives Saugvermögen am Triebwerksort einschließlich Leitwert und gasartspezifischem Fangverhalten berechnen.",
+            "Festlegen, wie lange das System den maximalen Massenfluss bis zur Regeneration kryogener Flächen halten muss.",
+            "Krypton, Iod und andere Treibstoffe als getrennte Kompatibilitäts- und Pumpfälle behandeln.",
+            "Nachweisen, dass Vor- und Rückpumpstufen alle Betriebs- und Regenerationsmodi unterstützen, nicht nur das erste Abpumpen."
+          ]
+        },
+        {
+          "title": "Erosion, Sputtern und Kammerschutz",
+          "content": "Der Ionenstrahl endet nicht an der Plume-Grenze: Er trifft Strahlfänger und Kammerwände mit Energien, die Material zerstäuben. Gesputterte Atome wandern zurück zum Triebwerk, schlagen sich auf Isolatoren und Diagnostik nieder und können Langzeit-Verschleißergebnisse verfälschen – ein bekannter Facility-Effekt in Dauerlauftests. Testkammern erhalten deshalb Opferauskleidungen, typischerweise Graphitpaneele, in der Strahlzone; kritische Instrumentierung bleibt außerhalb des direkten Plumes.",
+          "content2": "Der Strahl trägt zudem den Großteil der Triebwerksleistung als Wärme auf die gegenüberliegende Wand. Strahlfänger und Auskleidungen müssen für diese thermische Last ausgelegt sein – wassergekühlt oder radiativ dimensioniert –, damit Oberflächentemperaturen und Ausgasung bei langen Feuerphasen beherrscht bleiben."
+        },
+        {
+          "title": "Durchführungen und Diagnostik",
+          "content": "Eine Kammer für elektrische Antriebe ist dicht mit Schnittstellen belegt: Hochspannungs- und Hochstromdurchführungen für Entladung und Neutralisator, HF-Durchführungen für bestimmte Triebwerksfamilien, Treibstoffleitungen mit präziser Flussregelung und Dutzende Signalleitungen. Erst die Diagnostik macht aus einem Vakuumbehälter eine Triebwerkstestanlage.",
+          "bullets": [
+            "Schubwaagen lösen Kräfte im Millinewton-Bereich auf und brauchen eine schwingungsarme, von Pumpen entkoppelte Aufstellung.",
+            "Faraday-Sonden und Gegenfeldanalysatoren auf Verfahreinheiten kartieren Stromdichte und Ionenenergie im Plume.",
+            "Eine Restgasanalyse (RGA) trennt den Treibgas-Hintergrund von Ausgasungs- und Leckanteilen.",
+            "Optische Zugänge erlauben Plume-Spektroskopie und die visuelle Überwachung der Entladung."
+          ]
+        },
+        {
+          "title": "Auslegung einer EP-Anlage: kundenspezifisch aus Prinzip",
+          "content": "Anlagen für elektrische Antriebe werden meist um eine definierte Triebwerksfamilie ausgelegt und nicht allein nach Kammervolumen ausgewählt. Ausgangsdaten sind Treibstoffart, maximaler Massenfluss, Zieldruck und Unsicherheit, Strahlleistung und Divergenz, Feuerdauer, Diagnostik, Verfahrsysteme und zulässige Anlageneffekte. Daraus lassen sich Kammerabmessungen, Pumpenarchitektur, Auskleidungen, Thermalmanagement und Schnittstellen ableiten."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Welches Vakuum braucht ein Test elektrischer Antriebe?",
+          "a": "Sowohl der Basisdruck der leeren Kammer als auch der Hintergrunddruck im Feuerbetrieb müssen spezifiziert werden. Der Feuerdruck wird aus Triebwerksmassenfluss, zulässigem Anlageneffekt und effektivem gasartspezifischem Saugvermögen abgeleitet. Ein universeller Zielwert für alle Hall- oder Ionentriebwerke ist nicht sinnvoll."
+        },
+        {
+          "q": "Warum sind Testanlagen für Halltriebwerke so groß?",
+          "a": "Hohes Saugvermögen benötigt große Fangflächen; Kammerlänge hilft, Plume-Wechselwirkung, Strahlfängerlast und Backsputter zu beherrschen. Die Abmessungen folgen daher Triebwerksleistung, Massenfluss, Plume-Geometrie und Messunsicherheit, nicht einer allgemeinen Vorliebe für große Behälter."
+        },
+        {
+          "q": "Kann eine Standard-TVAC-Kammer ein Ionentriebwerk testen?",
+          "a": "Für nicht feuernde Thermalzyklen eines Antriebssubsystems ja – das ist eine klassische TVAC-Aufgabe. Feuertests sind etwas anderes: Schon kleine Triebwerke erzeugen eine kontinuierliche Gaslast, für die Standardplattformen nicht ausgelegt sind. Vakuumkammern für feuernde Ionentriebwerke sind daher typischerweise kundenspezifische Systeme, dimensioniert über den Treibstofffluss – teils auf Basis einer Standard-Behältergeometrie."
+        },
+        {
+          "q": "Welche Treibstoffe werden beim Test elektrischer Antriebe verwendet?",
+          "a": "Xenon bleibt die Referenz; Krypton wird aus Kostengründen häufiger, Iod und alternative Gase erscheinen in neueren Entwicklungen. Für die Anlage bestimmt der Treibstoff das Fangverhalten der Pumpen, die Kalibrierfaktoren der Druckmessung und Kompatibilitätsfragen – Iod ist korrosiv und verlangt eigene Werkstoff- und Kühlfallenkonzepte. Die Gasart gehört deshalb an den Anfang der Auslegung."
+        }
+      ],
+      "conclusion": "Die Auslegung einer Anlage für elektrische Antriebe beginnt mit Treibstoffart, maximalem Massenfluss, Ziel-Hintergrunddruck, Plume-Geometrie, Strahlleistung und Kampagnendauer. Daraus folgen effektives Saugvermögen, Kammergeometrie, Schutzmaßnahmen und Diagnostik; der Basisdruck allein genügt nicht als Auslegungskriterium."
+    },
+    "seoKey": "blogElectricPropulsionTesting",
+    "dateModified": "2026-07-23",
+    "searchIntent": {
+      "en": {
+        "primaryKeyword": "electric propulsion vacuum testing",
+        "primaryQuestion": "Why do firing tests for Hall and ion thrusters require dedicated vacuum facilities?"
+      },
+      "de": {
+        "primaryKeyword": "elektrische Antriebe Vakuumtest",
+        "primaryQuestion": "Warum benötigen Feuertests von Hall- und Ionentriebwerken eigene Vakuumanlagen?"
+      }
+    },
+    "references": [
+      {
+        "title": "Electric Propulsion Laboratory facilities and capabilities",
+        "publisher": "NASA Jet Propulsion Laboratory",
+        "url": "https://www.jpl.nasa.gov/go/epl/capabilities/facilities/"
+      },
+      {
+        "title": "Electric Propulsion and Power Laboratory",
+        "publisher": "NASA Glenn Research Center",
+        "url": "https://www.nasa.gov/centers-and-facilities/glenn/electric-propulsion-and-power-laboratory/"
+      },
+      {
+        "title": "HERMeS Hall Thruster Facility Effect Characterization",
+        "publisher": "NASA Technical Reports Server",
+        "url": "https://ntrs.nasa.gov/citations/20170000953"
+      }
+    ]
+  },
+  {
+    "articleKey": "temperatureMeasurement",
+    "enSlug": "temperature-measurement-tvac",
+    "deSlug": "temperaturmessung-tvac",
+    "category": "engineeringGuide",
+    "datePublished": "2025-08-19",
+    "relatedPaths": [
+      "/products/options/temperature-sensors",
+      "/services/control-systems-design",
+      "/products/options/process-connections"
+    ],
+    "relatedArticles": [
+      "tvacTestCampaign",
+      "tvacAutomation",
+      "cryoShroudsThermalPlates"
+    ],
+    "en": {
+      "title": "Temperature Measurement in TVAC: Sensors, Mounting and Calibration",
+      "description": "Thermocouple or PT100? How to select, mount and calibrate temperature sensors in vacuum – and deliver traceable data for qualification tests.",
+      "seoTitle": "Temperature Measurement in TVAC Chambers | Deepvac",
+      "seoDescription": "Thermocouple or PT100 in vacuum? Sensor selection, mounting, channel planning and calibration for TVAC temperature measurement – with common error sources.",
+      "intro": "Temperature measurement in vacuum depends on the complete thermal path between sensor, surface, leads and surrounding radiation. With negligible gas coupling, a sensor with poor contact can report a value influenced by its wires and field of view rather than the intended surface. Sensor selection, mounting, channel planning and calibration must therefore be treated as one measurement system.",
+      "sections": [
+        {
+          "title": "Why vacuum changes the measurement",
+          "content": "At ambient pressure, surrounding gas provides an additional thermal path between a sensor and its environment. As pressure falls into the molecular-flow regime, that path becomes small and the sensor temperature is governed mainly by conduction through the contact point, conduction along the wires and radiation exchange with surrounding surfaces. Poor contact can therefore produce a plausible but biased reading that reflects the test item, harness and shroud in an unknown proportion.",
+          "content2": "The magnitude of the error is installation-specific. Even a calibrated sensor can produce misleading data if the junction is not well coupled, if the leads are not heat-sunk or if radiation from the shroud or heaters dominates. Mounting should be verified before closing the chamber and documented in the as-built configuration."
+        },
+        {
+          "title": "Thermocouples: Type T and Type K",
+          "content": "Thermocouples are widely used where many compact channels are required. Type T is commonly selected for low and moderate TVAC temperatures; Type K covers a wider upper-temperature range. The usable range and uncertainty depend on wire type, tolerance class, reference junction, connectors, acquisition hardware and calibration. IEC and NIST data should be used for the selected sensor system rather than one generic accuracy value.",
+          "bullets": [
+            "Select thermocouple type and tolerance class from the full test range and required uncertainty.",
+            "Keep compatible thermocouple materials through connectors and extension leads to the compensated input.",
+            "Control reference-junction conditions and include acquisition-channel offsets in the uncertainty budget.",
+            "Calibrate representative complete chains when qualification data or model correlation requires traceability."
+          ]
+        },
+        {
+          "title": "PT100 and PT1000: precise reference points",
+          "content": "Platinum resistance thermometers provide stable reference and control measurements when installed and read correctly. Four-wire measurement removes lead-resistance error and is normally preferred for traceable work. Sensor class, self-heating, wiring, readout current and calibration determine the resulting uncertainty.",
+          "bullets": [
+            "Use four-wire PT100 connections where lead resistance and traceability matter.",
+            "Select PT100 or PT1000 from the readout architecture, range and uncertainty requirement.",
+            "Limit excitation current and verify self-heating under the actual vacuum mounting condition.",
+            "Use resistance sensors for control or reference points and thermocouples for broader mapping when that mix fits the test plan."
+          ]
+        },
+        {
+          "title": "Mounting: contact quality decides everything",
+          "content": "In vacuum, the mounting method is the measurement. The junction or element must be bonded or clamped to the surface with real conductive contact, the wires must be heat-sunk along an isothermal path, and the sensing point should be shielded from radiation that does not represent the surface being measured.",
+          "bulletsHeading": "Proven mounting practice",
+          "bullets": [
+            "Use a vacuum-compatible attachment method whose thermal contact, cure state and contamination performance are approved for the project.",
+            "Where adhesive is not permitted, use clamps, thermal washers or spring-loaded contacts with defined force.",
+            "Heat-sink the first several centimetres of wire on the same surface, so the harness does not conduct heat into the junction.",
+            "Cover exposed junctions with aluminium tape or foil against shroud and lamp radiation, without insulating them from the surface.",
+            "Strain-relieve harnesses so pump-down movement and thermal cycling do not peel sensors off."
+          ]
+        },
+        {
+          "title": "Placement, channel counts and feedthroughs",
+          "content": "Sensor placement should follow the thermal model, control concept and safety analysis. Channel count ranges from a few points on a small assembly to hundreds on an instrumented spacecraft; it is not determined by article class alone. Feedthrough and acquisition capacity should be fixed after the channel list and redundancy concept are reviewed.",
+          "bullets": [
+            "Define the channel list early: sensor type, location, purpose (control, limit, model correlation) and connector pinout.",
+            "Reserve spare channels and spare feedthrough pins – sensors fail, and opening the chamber to fix one costs a pump-down.",
+            "Duplicate sensors at control and safety-critical points so a single failure does not end the test.",
+            "Keep chamber-side and article-side harnessing separable at a defined connector plane to speed up integration."
+          ]
+        },
+        {
+          "title": "Calibration, traceability and error sources",
+          "content": "Qualification data is only defensible if the measurement chain is traceable: sensors, reference junctions and acquisition channels calibrated against references that link back to national standards, with records of when and how. A system-level calibration – sensor plus harness plus channel – catches offsets that individual component certificates miss.",
+          "bulletsHeading": "Common error sources",
+          "bullets": [
+            "Poor contact: the dominant error in vacuum, often worth several kelvin.",
+            "Harness conduction: wires that are not heat-sunk drag the junction toward harness temperature.",
+            "Self-heating of resistance sensors from excitation current that cannot dissipate.",
+            "Reference-junction and channel offsets from uncalibrated acquisition hardware.",
+            "Ground loops and interference from heaters or motor drives corrupting millivolt signals."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "Thermocouple or PT100 in a vacuum chamber – which should I use?",
+          "a": "Use the sensor types that fit the measurement role. Thermocouples can provide compact, economical mapping channels, while four-wire platinum resistance sensors suit stable control and reference points. The final choice depends on range, uncertainty, mounting, channel count and calibration requirements."
+        },
+        {
+          "q": "Why does my temperature sensor read wrong in vacuum?",
+          "a": "Mounting is a frequent cause, but not the only one. Poor contact, lead conduction, radiation, self-heating, reference-junction error and acquisition offsets can all bias the result. Diagnose the full measurement chain before changing the sensor type."
+        },
+        {
+          "q": "How many temperature channels does a TVAC test need?",
+          "a": "The channel count comes from the thermal model, control and limit points, redundancy and test objectives. It can range from a small set on a component to hundreds on a spacecraft. Plan feedthrough pins, acquisition channels and spares from the approved channel list."
+        },
+        {
+          "q": "How do I attach a thermocouple to a test item in vacuum?",
+          "a": "Bond the junction with low-outgassing, thermally conductive adhesive, or clamp it with defined force using thermal washers where adhesive is prohibited. Heat-sink the first centimetres of wire on the same surface, cover the junction against radiation and strain-relieve the harness. Verify contact quality before closing the chamber – rework afterwards costs a pump-down."
+        }
+      ],
+      "conclusion": "Reliable TVAC temperature data depends on the complete measurement chain: sensor type, mounting, wire heat sinking, acquisition channel and traceable calibration. Channel planning should therefore be completed together with the thermal model and test procedure."
+    },
+    "de": {
+      "title": "Temperaturmessung im TVAC: Sensorik, Montage und Kalibrierung",
+      "description": "Thermoelement oder PT100? Wie Sie Temperatursensoren im Vakuum richtig auswählen, montieren und kalibrieren – für belastbare Qualifikationsdaten.",
+      "seoTitle": "Temperaturmessung im Vakuum: TC vs. PT100 | Deepvac",
+      "seoDescription": "Thermoelement oder PT100 im Vakuum? Sensorwahl, Montage, Kanalplanung und Kalibrierung für die Temperaturmessung im TVAC – mit typischen Fehlerquellen.",
+      "intro": "Temperaturmessung im Vakuum hängt vom vollständigen Wärmepfad zwischen Sensor, Oberfläche, Leitungen und Strahlungsumgebung ab. Bei vernachlässigbarer Gaskopplung kann ein schlecht angebundener Sensor einen Wert anzeigen, der stärker von Leitungen und Sichtfeld als von der vorgesehenen Fläche beeinflusst wird. Sensorwahl, Montage, Kanalplanung und Kalibrierung müssen deshalb als ein Messsystem behandelt werden.",
+      "sections": [
+        {
+          "title": "Warum das Vakuum die Messung verändert",
+          "content": "Bei Umgebungsdruck bildet das umgebende Gas einen zusätzlichen Wärmepfad zwischen Sensor und Umgebung. Mit sinkendem Druck und im Bereich der Molekularströmung wird dieser Pfad klein; die Sensortemperatur wird dann vor allem durch Wärmeleitung an der Kontaktstelle, Leitung über die Adern und Strahlungsaustausch mit den umgebenden Flächen bestimmt. Schlechter Kontakt kann deshalb einen plausiblen, aber systematisch verschobenen Messwert erzeugen, der Prüfling, Kabelbaum und Shroud in unbekanntem Anteil abbildet.",
+          "content2": "Die Fehlergröße ist installationsspezifisch. Auch ein kalibrierter Sensor kann irreführende Daten liefern, wenn die Messstelle schlecht gekoppelt, die Leitungen nicht thermisch angebunden oder Strahlung von Shroud oder Heizern dominant ist. Die Montage sollte vor dem Schließen geprüft und in der As-built-Konfiguration dokumentiert werden."
+        },
+        {
+          "title": "Thermoelemente: Typ T und Typ K",
+          "content": "Thermoelemente werden häufig eingesetzt, wenn viele kompakte Messkanäle benötigt werden. Typ T ist bei niedrigen und moderaten TVAC-Temperaturen verbreitet; Typ K deckt einen größeren Bereich nach oben ab. Nutzbarer Bereich und Unsicherheit hängen von Drahttyp, Toleranzklasse, Vergleichsstelle, Steckverbindern, Erfassungshardware und Kalibrierung ab. Für das gewählte Sensorsystem sollten IEC- und NIST-Daten statt eines pauschalen Genauigkeitswerts verwendet werden.",
+          "bullets": [
+            "Thermoelementtyp und Toleranzklasse aus vollständigem Prüfbereich und geforderter Unsicherheit auswählen.",
+            "Kompatible Thermoelementwerkstoffe über Stecker und Ausgleichsleitungen bis zum kompensierten Eingang beibehalten.",
+            "Vergleichsstellenbedingungen kontrollieren und Kanaloffsets in das Unsicherheitsbudget aufnehmen.",
+            "Bei rückführbaren Qualifikationsdaten oder Modellkorrelation repräsentative vollständige Messketten kalibrieren."
+          ]
+        },
+        {
+          "title": "PT100 und PT1000: präzise Referenzpunkte",
+          "content": "Platin-Widerstandsthermometer liefern bei korrekter Installation und Auswertung stabile Referenz- und Regelmessungen. Die Vierleitermessung eliminiert den Leitungswiderstandsfehler und wird für rückführbare Messungen in der Regel bevorzugt. Sensorklasse, Eigenerwärmung, Verkabelung, Messstrom und Kalibrierung bestimmen die resultierende Unsicherheit.",
+          "bullets": [
+            "PT100 in Vierleitertechnik einsetzen, wenn Leitungswiderstand und Rückführbarkeit relevant sind.",
+            "PT100 oder PT1000 aus Messarchitektur, Bereich und Unsicherheitsanforderung auswählen.",
+            "Messstrom begrenzen und Eigenerwärmung unter der tatsächlichen Vakuummontage verifizieren.",
+            "Widerstandssensoren für Regel- oder Referenzpunkte und Thermoelemente für breitere Kartierung kombinieren, wenn dies zum Prüfplan passt."
+          ]
+        },
+        {
+          "title": "Montage: der Kontakt entscheidet",
+          "content": "Im Vakuum ist die Montage die Messung. Messstelle oder Element müssen mit echtem leitendem Kontakt auf die Oberfläche geklebt oder geklemmt werden, die Adern müssen entlang eines isothermen Pfads thermisch angebunden sein, und die Messstelle sollte gegen Strahlung abgeschirmt werden, die nicht die zu messende Fläche repräsentiert.",
+          "bulletsHeading": "Bewährte Montagepraxis",
+          "bullets": [
+            "Eine vakuumtaugliche Befestigung verwenden, deren thermischer Kontakt, Aushärtungszustand und Kontaminationsverhalten für das Projekt freigegeben sind.",
+            "Wo Kleben nicht zulässig ist: Klemmen, thermische Unterlegscheiben oder federbelastete Kontakte mit definierter Kraft.",
+            "Die ersten Zentimeter der Adern auf derselben Fläche thermisch anbinden, damit der Kabelbaum keine Wärme in die Messstelle leitet.",
+            "Freiliegende Messstellen mit Aluminiumband oder Folie gegen Shroud- und Lampenstrahlung abdecken, ohne sie von der Fläche zu isolieren.",
+            "Kabelbäume zugentlasten, damit Abpumpen und Thermalzyklen die Sensoren nicht ablösen."
+          ]
+        },
+        {
+          "title": "Platzierung, Kanalzahlen und Durchführungen",
+          "content": "Die Sensorplatzierung sollte Thermalmodell, Regelkonzept und Sicherheitsanalyse folgen. Die Kanalzahl reicht von wenigen Punkten an einer kleinen Baugruppe bis zu Hunderten an einem instrumentierten Raumfahrzeug; sie wird nicht allein durch die Prüflingsklasse bestimmt. Durchführung und Erfassungskapazität sollten nach Prüfung von Kanalliste und Redundanzkonzept festgelegt werden.",
+          "bullets": [
+            "Kanalliste früh definieren: Sensortyp, Position, Zweck (Regelung, Grenzwert, Modellkorrelation) und Steckerbelegung.",
+            "Reservekanäle und freie Durchführungspins einplanen – Sensoren fallen aus, und ein Öffnen der Kammer kostet ein Abpumpen.",
+            "Regel- und sicherheitsrelevante Punkte doppelt belegen, damit ein Einzelausfall den Test nicht beendet.",
+            "Kammerseitige und prüflingsseitige Verkabelung an einer definierten Steckerebene trennbar halten – das beschleunigt die Integration."
+          ]
+        },
+        {
+          "title": "Kalibrierung, Rückführbarkeit und Fehlerquellen",
+          "content": "Qualifikationsdaten sind nur belastbar, wenn die Messkette rückführbar ist: Sensoren, Vergleichsstellen und Erfassungskanäle kalibriert gegen Referenzen mit Anbindung an nationale Normale, dokumentiert nach Zeitpunkt und Verfahren. Eine Systemkalibrierung – Sensor plus Kabelbaum plus Kanal – deckt Offsets auf, die einzelne Komponentenzertifikate übersehen.",
+          "bulletsHeading": "Typische Fehlerquellen",
+          "bullets": [
+            "Schlechter Kontakt: der dominante Fehler im Vakuum, oft mehrere Kelvin.",
+            "Wärmeleitung im Kabelbaum: nicht angebundene Adern ziehen die Messstelle Richtung Kabeltemperatur.",
+            "Eigenerwärmung von Widerstandssensoren durch Messstrom, der nicht abgeführt wird.",
+            "Vergleichsstellen- und Kanaloffsets durch unkalibrierte Erfassungshardware.",
+            "Masseschleifen und Störeinkopplung von Heizern oder Antrieben in Millivoltsignale."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "Thermoelement oder PT100 in der Vakuumkammer – was ist besser?",
+          "a": "Verwenden Sie die Sensortypen passend zur Messaufgabe. Thermoelemente ermöglichen kompakte, wirtschaftliche Kartierungskanäle; Platin-Widerstandssensoren in Vierleitertechnik eignen sich für stabile Regel- und Referenzpunkte. Entscheidend sind Bereich, Unsicherheit, Montage, Kanalzahl und Kalibrieranforderung."
+        },
+        {
+          "q": "Warum misst mein Temperatursensor im Vakuum falsch?",
+          "a": "Die Montage ist eine häufige, aber nicht die einzige Ursache. Schlechter Kontakt, Leitungswärme, Strahlung, Eigenerwärmung, Vergleichsstellenfehler und Kanaloffsets können den Messwert verschieben. Vor einem Sensortausch sollte die vollständige Messkette diagnostiziert werden."
+        },
+        {
+          "q": "Wie viele Temperaturkanäle braucht ein TVAC-Test?",
+          "a": "Die Kanalzahl folgt aus Thermalmodell, Regel- und Grenzwertpunkten, Redundanz und Prüfziel. Sie kann von wenigen Punkten an einem Bauteil bis zu Hunderten an einem Raumfahrzeug reichen. Durchführungspins, Erfassungskanäle und Reserven sollten aus der freigegebenen Kanalliste geplant werden."
+        },
+        {
+          "q": "Wie befestige ich ein Thermoelement im Vakuum am Prüfling?",
+          "a": "Die Messstelle mit ausgasungsarmem, wärmeleitfähigem Klebstoff anbinden oder mit definierter Kraft über thermische Unterlegscheiben klemmen, wo Kleben verboten ist. Die ersten Zentimeter der Adern auf derselben Fläche anlegen, die Messstelle gegen Strahlung abdecken und den Kabelbaum zugentlasten. Kontaktqualität vor dem Schließen prüfen – Nacharbeit kostet ein Abpumpen."
+        }
+      ],
+      "conclusion": "Belastbare TVAC-Temperaturdaten hängen von der vollständigen Messkette ab: Sensortyp, Montage, thermische Anbindung der Leitungen, Messkanal und rückführbare Kalibrierung. Die Kanalplanung gehört deshalb gemeinsam mit Thermalmodell und Prüfprozedur abgeschlossen."
+    },
+    "seoKey": "blogTemperatureMeasurement",
+    "dateModified": "2026-07-23",
+    "searchIntent": {
+      "en": {
+        "primaryKeyword": "temperature measurement in TVAC",
+        "primaryQuestion": "How should temperature sensors be selected, mounted and calibrated in vacuum?"
+      },
+      "de": {
+        "primaryKeyword": "Temperaturmessung im TVAC",
+        "primaryQuestion": "Wie werden Temperatursensoren im Vakuum ausgewählt, montiert und kalibriert?"
+      }
+    },
+    "references": [
+      {
+        "title": "Thermocouple Calibration Services",
+        "publisher": "National Institute of Standards and Technology (NIST)",
+        "url": "https://www.nist.gov/pml/sensor-science/temperature-humidity/thermocouples-calibrations-services"
+      },
+      {
+        "title": "Thermometry Calibration Services",
+        "publisher": "National Institute of Standards and Technology (NIST)",
+        "url": "https://www.nist.gov/pml/sensor-science/temperature-humidity/thermometry-calibration-services"
+      },
+      {
+        "title": "IEC 60751:2022: Industrial platinum resistance thermometers and platinum temperature sensors",
+        "publisher": "International Electrotechnical Commission (IEC)",
+        "url": "https://webstore.iec.ch/en/publication/63753"
+      },
+      {
+        "title": "ECSS-E-ST-10-03C Rev.1: Testing",
+        "publisher": "European Cooperation for Space Standardization (ECSS)",
+        "url": "https://ecss.nl/standard/ecss-e-st-10-03c-rev-1-testing-31-may-2022/"
+      }
+    ]
+  },
+  {
+    "articleKey": "tvacFacilityRequirements",
+    "enSlug": "tvac-facility-requirements",
+    "deSlug": "tvac-anlagen-infrastruktur",
+    "category": "engineeringGuide",
+    "datePublished": "2025-09-09",
+    "relatedPaths": [
+      "/products/standard-series",
+      "/services/subsystem-integration",
+      "/tvac-questionnaire"
+    ],
+    "relatedArticles": [
+      "tvacChamberSizing",
+      "tvacLeadTimes",
+      "coolingSystems"
+    ],
+    "en": {
+      "title": "TVAC Facility Requirements: What Your Building Must Provide",
+      "description": "Floor loads, transport path, power, heat rejection, LN₂ safety, cleanliness and IT: what a facility must provide before a thermal vacuum system arrives – with a practical site checklist.",
+      "seoTitle": "TVAC Facility Requirements: Lab Setup | Deepvac",
+      "seoDescription": "TVAC facility requirements explained: floor load, transport path, electrical supply, cooling, LN₂ safety, cleanliness and IT – plus a practical site checklist.",
+      "intro": "A TVAC installation needs more than a chamber footprint. Site planning must close the transport path, point loads, electrical supply, heat rejection, process gases, oxygen-deficiency protection, exhaust, room conditions, network access and service space against the supplier's installation data and local regulations. Resolving these interfaces before shipment reduces commissioning risk and prevents building work from becoming the project critical path.",
+      "sections": [
+        {
+          "title": "Floor space, load and transport path",
+          "content": "The complete installation includes the vessel, pumping equipment, control cabinet, thermal plant, gas-supply equipment and service clearances. The required area depends on configuration and maintenance access; generic footprint multipliers are suitable only for early budgeting. Use the supplier's general arrangement drawing for final planning and verify both distributed and point loads.",
+          "content2": "Walk the transport path physically: door widths and heights, corridor turns, ramps, lift capacities. Clarify who provides forklift or crane capacity at delivery. For larger systems it is worth checking early whether the system can arrive as one unit or should be planned for staged delivery and assembly on site."
+        },
+        {
+          "title": "Electrical supply",
+          "content": "Electrical design must use the supplier's connection data and the site's applicable electrical rules. Coincident loads from pumps, heaters, refrigeration and auxiliaries should be considered together with start currents, protective devices, emergency-stop integration and the required behaviour during loss of mains. A UPS may support controls and logging, but it does not replace a defined safe-state design."
+        },
+        {
+          "title": "Heat rejection: cooling water and chillers",
+          "content": "Every kilowatt you put into pumps, refrigeration and heaters eventually leaves as heat, and the building has to absorb it. Three patterns are common: an air-cooled chiller in the test room (simple, but it adds heat and noise exactly where people work), a chiller in an adjacent plant room with short piping runs, or connection to an existing facility cooling water loop. If facility water is used, confirm temperature, flow, pressure and water quality against the system specification early – marginal cooling water shows up later as drifting condenser temperatures and nuisance alarms."
+        },
+        {
+          "title": "LN₂ supply, GN₂ and compressed air",
+          "content": "If the selected thermal concept uses liquid nitrogen, the supply method, storage, transfer line, relief routing and operating procedure must be approved with the gas supplier and site safety organisation. Oxygen-deficiency monitoring and ventilation should be based on a documented worst-case release assessment and local requirements. Dewars and bulk storage create different logistics but the same need for controlled cryogenic handling.",
+          "bulletsHeading": "LN₂ safety essentials",
+          "bullets": [
+            "Assess credible release cases and specify oxygen monitoring, alarm response and ventilation accordingly.",
+            "Route normal boil-off and safety-relief discharge to an approved location outside occupied areas.",
+            "Define cryogenic personal protection, training, access control and emergency response.",
+            "Provide dry, filtered vent gas and instrument air at the pressure, quality and flow stated in the system connection data."
+          ]
+        },
+        {
+          "title": "Ambient conditions and cleanliness",
+          "content": "The required room cleanliness follows from the hardware contamination budget and operating process. Many campaigns can use a controlled laboratory or grey-room concept, while optical or highly sensitive hardware may require classified conditions. Room class alone is not sufficient: open-chamber handling, garments, cleaning, packaging control and chamber history must be included."
+        },
+        {
+          "title": "Exhaust, network and remote monitoring",
+          "content": "Pump exhaust should be routed according to local regulations – even oil-free pumps move chamber contents and purge gas that you may not want released at head height in the lab. On the IT side, plan a network drop at the system: modern controls export data as CSV, TXT or XLS files, support PC-based control and can offer remote monitoring, so a running campaign can be checked without a night shift standing at the panel. Clarify with your IT department early how a machine network may be connected, since firewall discussions have delayed more than one commissioning."
+        },
+        {
+          "title": "Site readiness checklist",
+          "content": "Use this list with your facility management well before delivery; every open point here is cheaper to solve in advance than during commissioning.",
+          "bullets": [
+            "Transport path measured and confirmed, including door widths, lifts and crane or forklift capacity.",
+            "Floor load and point loads checked against the system's installation drawing.",
+            "Electrical connection sized, fused and positioned per the manufacturer's connection data.",
+            "Heat rejection concept fixed: chiller location, facility water parameters, noise assessment.",
+            "LN₂ concept approved by the safety officer: storage, oxygen monitoring, ventilation, outdoor venting.",
+            "Network access, data storage location and alarm forwarding agreed with IT."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "How much floor space does a TVAC system need?",
+          "a": "The final requirement comes from the supplier's general arrangement drawing. Include the chamber, pump stand, controls, thermal plant, gas equipment, loading route and service clearances. Early planning allowances are useful, but they are not substitutes for the configuration-specific layout."
+        },
+        {
+          "q": "Is liquid nitrogen dangerous in a laboratory?",
+          "a": "Liquid nitrogen can be used safely when release scenarios, oxygen-deficiency monitoring, ventilation, approved discharge routing, personal protection, training and emergency procedures are in place. The design must follow local law and the site's safety assessment."
+        },
+        {
+          "q": "Do I need a cleanroom for TVAC testing?",
+          "a": "Often not. A gray room – controlled access, lint-reduced garments, filtered overpressure ventilation and disciplined handling – is sufficient for many test items. A classified cleanroom becomes relevant when your hardware carries strict particulate or molecular cleanliness requirements, typically optics and sensitive sensors. In every case, chamber hygiene and item preparation matter at least as much as the room class on the certificate."
+        },
+        {
+          "q": "Can a TVAC system run unattended overnight?",
+          "a": "Automation can support unattended phases, but permission to operate without continuous attendance is a site and programme decision. It requires a documented risk assessment, independent protective functions, defined safe states, alarm escalation and reliable utility supply."
+        }
+      ],
+      "conclusion": "Site readiness should be closed against the supplier's installation and connection data before shipment. Transport path, point loads, electrical supply, heat rejection, gas safety, exhaust, network access and service clearances all belong in the acceptance checklist."
+    },
+    "de": {
+      "title": "TVAC-Infrastruktur: Was Ihr Gebäude bereitstellen muss",
+      "description": "Bodenlasten, Transportweg, Strom, Wärmeabfuhr, LN₂-Sicherheit, Sauberkeit und IT: Diese Infrastruktur braucht ein Thermalvakuumsystem – mit praktischer Checkliste für Ihren Standort.",
+      "seoTitle": "TVAC-Infrastruktur: Anforderungen | Deepvac",
+      "seoDescription": "TVAC-Infrastruktur im Überblick: Bodenlast, Transportweg, Stromversorgung, Kühlung, LN₂-Sicherheit, Sauberkeit und IT – plus praxisnahe Standort-Checkliste.",
+      "intro": "Eine TVAC-Installation benötigt mehr als die Stellfläche der Kammer. Transportweg, Punktlasten, Stromversorgung, Wärmeabfuhr, Prozessgase, Sauerstoffmangelschutz, Abluft, Raumbedingungen, Netzwerk und Serviceflächen müssen gegen die Aufstelldaten des Lieferanten und lokale Vorschriften abgeschlossen werden. Werden diese Schnittstellen vor dem Versand geklärt, sinkt das Inbetriebnahmerisiko und der Gebäudeausbau wird nicht zum kritischen Pfad.",
+      "sections": [
+        {
+          "title": "Stellfläche, Bodenlast und Transportweg",
+          "content": "Zur vollständigen Installation gehören Behälter, Pumpentechnik, Schaltschrank, Thermalanlage, Gasversorgung und Servicefreiräume. Der Flächenbedarf hängt von Konfiguration und Wartungszugang ab; pauschale Faktoren eignen sich nur für eine frühe Budgetplanung. Für die finale Planung ist die Aufstellzeichnung des Lieferanten maßgeblich, einschließlich Flächen- und Punktlasten.",
+          "content2": "Gehen Sie den Transportweg physisch ab: Türbreiten und -höhen, Kurven in Fluren, Rampen, Aufzugstraglasten. Klären Sie, wer bei der Anlieferung Stapler- oder Krankapazität stellt. Bei größeren Systemen lohnt die frühe Frage, ob die Anlage als Einheit ankommt oder gestaffelte Lieferung und Montage vor Ort eingeplant werden sollte."
+        },
+        {
+          "title": "Stromversorgung",
+          "content": "Die Elektroplanung muss auf den Anschlussdaten des Lieferanten und den am Standort geltenden elektrotechnischen Regeln beruhen. Gleichzeitige Lasten von Pumpen, Heizern, Kältetechnik und Nebenaggregaten sind zusammen mit Anlaufströmen, Schutzorganen, Not-Aus-Einbindung und dem Verhalten bei Netzausfall zu betrachten. Eine USV kann Steuerung und Logging stützen, ersetzt aber kein definiertes Safe-State-Konzept."
+        },
+        {
+          "title": "Wärmeabfuhr: Kühlwasser und Kältemaschinen",
+          "content": "Jedes Kilowatt, das in Pumpen, Kälteerzeugung und Heizungen fließt, verlässt die Anlage als Wärme – und das Gebäude muss sie aufnehmen. Drei Muster sind üblich: ein luftgekühlter Chiller im Testraum (einfach, bringt aber Wärme und Lärm genau dorthin, wo gearbeitet wird), ein Chiller im Nebenraum mit kurzen Leitungswegen oder der Anschluss an einen vorhandenen Kühlwasserkreis. Bei Gebäudewasser prüfen Sie Temperatur, Durchfluss, Druck und Wasserqualität früh gegen die Systemspezifikation – grenzwertiges Kühlwasser zeigt sich später als driftende Verflüssigertemperaturen und Störmeldungen."
+        },
+        {
+          "title": "LN₂-Versorgung, GN₂ und Druckluft",
+          "content": "Verwendet das gewählte Thermalkonzept Flüssigstickstoff, müssen Versorgung, Lagerung, Transferleitung, Abblaseführung und Betriebsprozedur mit Gaselieferant und betrieblicher Sicherheitsorganisation freigegeben werden. Sauerstoffmangelüberwachung und Lüftung sollten auf einer dokumentierten Worst-Case-Freisetzungsanalyse und den lokalen Anforderungen beruhen. Dewars und Bulk-Tank erzeugen unterschiedliche Logistik, verlangen aber gleichermaßen kontrolliertes Kryohandling.",
+          "bulletsHeading": "LN₂-Sicherheit im Kern",
+          "bullets": [
+            "Plausible Freisetzungsfälle bewerten und Sauerstoffüberwachung, Alarmreaktion und Lüftung daraus ableiten.",
+            "Normales Abdampfen und Sicherheitsabblaseleitungen an einen freigegebenen Ort außerhalb belegter Bereiche führen.",
+            "Persönliche Kryoschutzausrüstung, Schulung, Zugangskontrolle und Notfallreaktion definieren.",
+            "Trockenes, gefiltertes Belüftungsgas und Instrumentenluft in Druck, Qualität und Durchfluss gemäß Anschlussdaten bereitstellen."
+          ]
+        },
+        {
+          "title": "Raumbedingungen und Sauberkeit",
+          "content": "Die erforderliche Raumsauberkeit folgt aus Kontaminationsbudget und Betriebsprozess der Hardware. Viele Kampagnen können in einem kontrollierten Labor oder Grauraum stattfinden; optische oder besonders empfindliche Hardware kann klassifizierte Bedingungen verlangen. Die Raumklasse allein genügt nicht: Arbeiten an der offenen Kammer, Bekleidung, Reinigung, Verpackungskontrolle und Kammerhistorie müssen einbezogen werden."
+        },
+        {
+          "title": "Abluft, Netzwerk und Fernüberwachung",
+          "content": "Die Pumpenabluft gehört nach lokalen Vorschriften geführt – auch ölfreie Pumpen fördern Kammerinhalt und Spülgas, das Sie nicht auf Kopfhöhe im Labor freisetzen wollen. Auf der IT-Seite planen Sie einen Netzwerkanschluss an der Anlage: Moderne Steuerungen exportieren Daten als CSV, TXT oder XLS, erlauben PC-Bedienung und optional Fernüberwachung, sodass eine laufende Kampagne ohne Nachtschicht am Panel kontrollierbar ist. Klären Sie früh mit Ihrer IT, wie ein Maschinennetz angebunden werden darf – Firewall-Diskussionen haben schon mehr als eine Inbetriebnahme verzögert."
+        },
+        {
+          "title": "Checkliste Standortbereitschaft",
+          "content": "Gehen Sie diese Liste deutlich vor der Lieferung mit Ihrem Facility Management durch; jeder offene Punkt ist vorab günstiger zu lösen als während der Inbetriebnahme.",
+          "bullets": [
+            "Transportweg vermessen und bestätigt, inklusive Türbreiten, Aufzügen und Kran- oder Staplerkapazität.",
+            "Bodenlast und Punktlasten gegen die Aufstellzeichnung des Systems geprüft.",
+            "Elektroanschluss nach Herstellerangaben dimensioniert, abgesichert und positioniert.",
+            "Wärmeabfuhrkonzept festgelegt: Chiller-Standort, Kühlwasserparameter, Lärmbetrachtung.",
+            "LN₂-Konzept von der Sicherheitsfachkraft freigegeben: Lagerung, Sauerstoffüberwachung, Lüftung, Abdampfleitung ins Freie.",
+            "Netzwerkzugang, Datenablage und Alarmweiterleitung mit der IT vereinbart."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "Wie viel Stellfläche braucht ein TVAC-System?",
+          "a": "Die verbindliche Fläche stammt aus der Aufstellzeichnung des Lieferanten. Einzubeziehen sind Kammer, Pumpstand, Steuerung, Thermalanlage, Gasversorgung, Beladeweg und Servicefreiräume. Frühe Planungsreserven sind sinnvoll, ersetzen aber nicht das konfigurationsspezifische Layout."
+        },
+        {
+          "q": "Ist Flüssigstickstoff im Labor gefährlich?",
+          "a": "Flüssigstickstoff kann sicher eingesetzt werden, wenn Freisetzungsszenarien, Sauerstoffmangelüberwachung, Lüftung, freigegebene Abblaseführung, persönliche Schutzausrüstung, Schulung und Notfallprozeduren umgesetzt sind. Maßgeblich sind lokale Vorschriften und die Sicherheitsbewertung des Standorts."
+        },
+        {
+          "q": "Brauche ich einen Reinraum für TVAC-Tests?",
+          "a": "Häufig nicht. Ein Grauraum – kontrollierter Zugang, fusselarme Kleidung, gefilterte Überdrucklüftung und diszipliniertes Handling – reicht für viele Prüflinge. Ein klassifizierter Reinraum wird relevant, wenn Ihre Hardware strenge partikuläre oder molekulare Reinheitsanforderungen trägt, typischerweise Optiken und empfindliche Sensorik. In jedem Fall zählen Kammerhygiene und Prüflingsvorbereitung mindestens so viel wie die Raumklasse auf dem Zertifikat."
+        },
+        {
+          "q": "Kann ein TVAC-System nachts unbeaufsichtigt laufen?",
+          "a": "Automatisierung kann unbeaufsichtigte Phasen unterstützen; die Freigabe dazu ist jedoch eine Standort- und Projektentscheidung. Erforderlich sind dokumentierte Risikobewertung, unabhängige Schutzfunktionen, definierte sichere Zustände, Alarmeskalation und zuverlässige Medienversorgung."
+        }
+      ],
+      "conclusion": "Die Standortbereitschaft sollte vor dem Versand gegen die Aufstell- und Anschlussdaten des Lieferanten abgeschlossen sein. Transportweg, Punktlasten, Stromversorgung, Wärmeabfuhr, Gassicherheit, Abluft, Netzwerk und Servicefreiräume gehören in die Abnahmecheckliste."
+    },
+    "seoKey": "blogTvacFacilityRequirements",
+    "dateModified": "2026-07-23",
+    "searchIntent": {
+      "en": {
+        "primaryKeyword": "TVAC facility requirements",
+        "primaryQuestion": "What utilities, safety systems and room conditions must a TVAC facility provide?"
+      },
+      "de": {
+        "primaryKeyword": "TVAC-Infrastruktur Anforderungen",
+        "primaryQuestion": "Welche Medien, Sicherheitssysteme und Raumbedingungen muss ein TVAC-Standort bereitstellen?"
+      }
+    },
+    "references": [
+      {
+        "title": "Liquid nitrogen, oxygen-deficiency monitoring and ventilation safety notice",
+        "publisher": "U.S. Occupational Safety and Health Administration",
+        "url": "https://www.osha.gov/news/newsreleases/denver/20200520"
+      },
+      {
+        "title": "Oxygen-deficient atmospheres and the 19.5 percent threshold",
+        "publisher": "U.S. Occupational Safety and Health Administration",
+        "url": "https://www.osha.gov/otm/section-2-health-hazards/chapter-3"
+      },
+      {
+        "title": "Deepvac Standard Series: current technical data and configuration notes",
+        "publisher": "Deepvac GmbH",
+        "url": "https://deepvac.space/products/standard-series"
+      }
+    ],
+    "technicalNote": {
+      "en": "Deepvac performance figures in this article describe current reference configurations. Binding values depend on chamber size, selected pumping and thermal concepts, test setup and the project quotation.",
+      "de": "Die in diesem Artikel genannten Deepvac-Leistungswerte beschreiben aktuelle Referenzkonfigurationen. Verbindliche Werte hängen von Kammergröße, gewähltem Pump- und Thermalkonzept, Testaufbau und Projektangebot ab."
+    }
+  },
+  {
+    "articleKey": "solarSimulationVsIr",
+    "enSlug": "solar-simulation-vs-infrared",
+    "deSlug": "solarsimulation-vs-infrarot",
+    "category": "engineeringGuide",
+    "datePublished": "2025-09-25",
+    "relatedPaths": [
+      "/products/options/solar-simulator",
+      "/products/options/infrared-heaters",
+      "/products/custom-tvac"
+    ],
+    "relatedArticles": [
+      "spaceEnvironmentSimulation",
+      "cryoShroudsThermalPlates",
+      "aerospaceQualification"
+    ],
+    "en": {
+      "title": "Solar Simulation vs Infrared Heating: Imposing Heat Flux in TVAC",
+      "description": "Solar simulators, IR lamp arrays and heater plates all impose external heat flux in a thermal vacuum chamber – with very different fidelity, cost and complexity.",
+      "seoTitle": "Solar Simulation vs IR Heating in TVAC | Deepvac",
+      "seoDescription": "Solar simulator, IR lamp arrays or heater plates? How to impose external heat flux in a TVAC chamber, when spectral fidelity matters and how each is controlled.",
+      "intro": "External heat input in a TVAC test can be applied with a solar simulator, an infrared source or a conductive heater. These methods do not reproduce the same boundary condition. A solar simulator addresses irradiance, spectrum and direction; infrared systems can reproduce a calibrated absorbed heat flux without solar spectral fidelity; conductive heaters impose power or interface temperature. The verification objective and thermal model determine which approximation is acceptable.",
+      "sections": [
+        {
+          "title": "Why external heat flux must be simulated",
+          "content": "At Earth's distance, total solar irradiance is about 1361 W/m², while absorbed power at a spacecraft surface depends on incidence angle, spectral absorptance, attitude, albedo and planetary infrared. A cold shroud provides the radiative sink; separate sources or controlled interfaces provide the heat inputs required for the selected orbital case.",
+          "content2": "The guiding question is what the test must prove. Verifying a thermal design and correlating a model requires the correct absorbed power on each surface. Verifying wavelength-dependent behaviour – coatings, optics, solar cells – requires the correct spectrum as well."
+        },
+        {
+          "title": "Solar simulators: spectral fidelity at a price",
+          "content": "A solar simulator uses a lamp source and optical system to approximate a specified solar reference spectrum, irradiance, beam geometry and uniformity. It is appropriate when wavelength-dependent response, illumination direction, shadowing or optical performance is part of the requirement. The required class and calibration method must be stated in the test specification.",
+          "bulletsHeading": "What that fidelity costs",
+          "bullets": [
+            "High capital and operating cost: lamps, power supplies, optics and their maintenance dominate the budget.",
+            "Limited beam size and uniformity: illuminating large articles uniformly requires large, complex optics.",
+            "Chamber integration effort: a suitable window or in-chamber optics, stray-light management and alignment.",
+            "One-sided illumination: the beam lights one aspect of the article, as the sun does – other faces still need separate provisions."
+          ]
+        },
+        {
+          "title": "IR lamp arrays and infrared heaters",
+          "content": "Infrared lamp arrays and radiant heater panels apply a controllable radiative load without reproducing the solar spectrum. The thermal model converts the required absorbed orbital load into source power or incident flux for each zone. This can be a valid verification method when spectral response is not part of the requirement and surface properties and view factors are known with adequate uncertainty.",
+          "bullets": [
+            "Far lower cost and complexity than solar simulation, and scalable to large or irregular geometries.",
+            "Zoned arrays allow different fluxes on different faces, following the orbit-driven thermal cases.",
+            "Lamp cages partially block the view to the cold shroud – this blockage must be captured in the thermal model.",
+            "Flux conversion depends on assumed surface properties, so uncertainties in α and ε feed directly into the test."
+          ]
+        },
+        {
+          "title": "Heater plates and skin heaters",
+          "content": "Conductive methods skip radiation entirely: thermal plates control the interface temperature under mounting feet, while film or skin heaters bonded to surfaces – or to enclosing dummy panels – inject defined local power. They are precise, inexpensive and easy to control, but they impose temperatures or powers rather than a radiative environment, so view-factor-driven gradients are not reproduced.",
+          "bullets": [
+            "Well suited to unit-level tests where the environment is specified as an interface temperature.",
+            "Skin heaters replicate absorbed flux locally when attachment and instrumentation are acceptable on the article.",
+            "Often combined with a cold shroud so radiative losses stay realistic while inputs are conductive.",
+            "Typical limitation: heater mass and wiring add their own thermal paths, which the model must include."
+          ]
+        },
+        {
+          "title": "When spectral fidelity actually matters",
+          "content": "Spectral fidelity is required when the verification result depends materially on wavelength. If only the net absorbed heat load and temperature response are required, a calibrated infrared or conductive method may be sufficient. That decision belongs in the test rationale and uncertainty analysis.",
+          "bulletsHeading": "Cases that justify a solar simulator",
+          "bullets": [
+            "Optical coatings and thermal-control surfaces whose α/ε ratio drives the design.",
+            "Solar arrays, where part of the absorbed energy converts to electrical power and the spectrum affects the balance.",
+            "Optical instruments where stray light, glint or aperture heating under sun illumination must be verified.",
+            "Materials or mechanisms whose degradation under solar-spectrum exposure is part of the question."
+          ]
+        },
+        {
+          "title": "Control, calibration and combined setups",
+          "content": "Whatever the source, flux must be measured, not assumed. Radiometers and calorimeters at reference planes establish the delivered flux; lamp arrays are then run closed-loop on flux sensors or on fixture temperatures, with lamp ageing compensated by calibration at defined intervals. Solar simulators additionally need beam uniformity and spectrum verification.",
+          "content2": "Combined setups are common when different boundary conditions must be controlled independently, for example a radiative source on one face, controlled interface temperatures and simulated internal dissipation. Each source, sensor and control loop must be represented in the test configuration and data package."
+        }
+      ],
+      "faq": [
+        {
+          "q": "What is a solar simulator in a TVAC chamber?",
+          "a": "A solar simulator is a light source – typically xenon or metal-halide lamps with collimation optics – that reproduces the intensity and approximate spectrum of sunlight in space, around 1361 W/m² at Earth distance. Inside a TVAC chamber it lets each surface absorb heat according to its real solar absorptance, which matters when coatings, optics or solar arrays are under test."
+        },
+        {
+          "q": "Can IR lamps replace a solar simulator?",
+          "a": "Infrared sources can replace a solar simulator when the requirement is a calibrated absorbed heat load and wavelength-dependent effects are not being verified. They are not equivalent for solar cells, optical coatings, stray-light cases or other tests in which spectrum and direction influence the result."
+        },
+        {
+          "q": "How is heat flux calibrated in a thermal vacuum test?",
+          "a": "With flux measurement at reference planes: radiometers or calorimeters map the delivered flux before the test, and reference sensors monitor it during the test. Lamp arrays are typically run closed-loop on these sensors or on fixture temperatures, with periodic recalibration to compensate lamp ageing. Solar simulators are additionally checked for beam uniformity and spectral content."
+        },
+        {
+          "q": "What are skin heaters and when are they used?",
+          "a": "Skin heaters are thin film heaters bonded directly to a surface – of the test item or of a surrounding dummy panel – to inject a defined local power. They are used when absorbed flux can be translated into electrical power per area, typically at unit level or for internal dissipation, and they are precise and inexpensive but do not reproduce a radiative environment."
+        }
+      ],
+      "conclusion": "The heat-input method should follow the verification objective. Spectral simulation is necessary when wavelength-dependent absorption or optical response is being tested; otherwise, calibrated heat-flux equivalence can provide cleaner boundary conditions with less complexity."
+    },
+    "de": {
+      "title": "Solarsimulation vs. Infrarotheizung: Wärmeeintrag im TVAC",
+      "description": "Solarsimulatoren, IR-Lampenfelder und Thermalplatten bringen externe Wärmeflüsse in die Thermalvakuumkammer – mit sehr unterschiedlicher Genauigkeit und Komplexität.",
+      "seoTitle": "Solarsimulation vs. IR-Heizung im TVAC | Deepvac",
+      "seoDescription": "Solarsimulator, IR-Lampenfeld oder Thermalplatte? Wie externer Wärmefluss im TVAC aufgebracht wird, wann spektrale Treue zählt und wie geregelt und kalibriert.",
+      "intro": "Externer Wärmeeintrag in einem TVAC-Test kann mit Solarsimulator, Infrarotquelle oder konduktivem Heizer aufgebracht werden. Diese Methoden bilden nicht dieselbe Randbedingung nach. Ein Solarsimulator adressiert Bestrahlungsstärke, Spektrum und Richtung; Infrarotsysteme können einen kalibrierten absorbierten Wärmestrom ohne solare Spektraltreue erzeugen; konduktive Heizer prägen Leistung oder Schnittstellentemperatur auf. Nachweisziel und Thermalmodell bestimmen, welche Näherung zulässig ist.",
+      "sections": [
+        {
+          "title": "Warum externer Wärmefluss simuliert werden muss",
+          "content": "In Erdentfernung beträgt die Gesamt-Solarstrahlung etwa 1361 W/m². Die absorbierte Leistung an einer Raumfahrzeugoberfläche hängt jedoch von Einfallswinkel, spektraler Absorptivität, Lage, Albedo und planetarem Infrarot ab. Ein kalter Shroud stellt die Strahlungssenke bereit; getrennte Quellen oder geregelte Schnittstellen erzeugen die Wärmeeinträge des ausgewählten Orbitfalls.",
+          "content2": "Die Leitfrage lautet: Was muss der Test nachweisen? Wer ein Thermaldesign verifiziert und ein Modell korreliert, braucht die korrekte absorbierte Leistung je Fläche. Wer wellenlängenabhängiges Verhalten prüft – Beschichtungen, Optiken, Solarzellen –, braucht zusätzlich das korrekte Spektrum."
+        },
+        {
+          "title": "Solarsimulatoren: spektrale Treue zum Preis",
+          "content": "Ein Solarsimulator nutzt eine Lampenquelle und Optik, um ein festgelegtes solares Referenzspektrum, die Bestrahlungsstärke, Strahlgeometrie und Homogenität anzunähern. Er ist geeignet, wenn wellenlängenabhängige Reaktion, Beleuchtungsrichtung, Abschattung oder optische Leistung Teil der Anforderung sind. Geforderte Klasse und Kalibriermethode müssen in der Prüfspezifikation stehen.",
+          "bulletsHeading": "Was diese Treue kostet",
+          "bullets": [
+            "Hohe Investitions- und Betriebskosten: Lampen, Netzteile, Optiken und deren Wartung dominieren das Budget.",
+            "Begrenzte Strahlgröße und Homogenität: große Prüflinge gleichmäßig zu beleuchten erfordert große, komplexe Optiken.",
+            "Integrationsaufwand in der Kammer: geeignetes Fenster oder Optik im Vakuum, Streulichtmanagement und Justage.",
+            "Einseitige Beleuchtung: Der Strahl trifft eine Seite des Prüflings, wie die Sonne – andere Flächen brauchen weiterhin eigene Lösungen."
+          ]
+        },
+        {
+          "title": "IR-Lampenfelder und Infrarotheizer",
+          "content": "Infrarot-Lampenfelder und Strahlungsheizer bringen eine regelbare radiative Last auf, ohne das Sonnenspektrum nachzubilden. Das Thermalmodell übersetzt die erforderliche absorbierte Orbitlast in Quellenleistung oder einfallenden Wärmestrom je Zone. Die Methode kann belastbar sein, wenn die spektrale Reaktion nicht Teil der Anforderung ist und Oberflächeneigenschaften sowie Sichtfaktoren mit ausreichender Unsicherheit bekannt sind.",
+          "bullets": [
+            "Deutlich geringere Kosten und Komplexität als Solarsimulation, skalierbar auf große oder unregelmäßige Geometrien.",
+            "Zonierte Felder erlauben unterschiedliche Flüsse auf unterschiedlichen Flächen – entsprechend den orbitgetriebenen Lastfällen.",
+            "Lampenkäfige verdecken teilweise den Blick zum kalten Shroud – diese Abschattung muss ins Thermalmodell.",
+            "Die Flussumrechnung hängt von angenommenen Oberflächeneigenschaften ab – Unsicherheiten in α und ε gehen direkt in den Test ein."
+          ]
+        },
+        {
+          "title": "Thermalplatten und Folienheizer",
+          "content": "Konduktive Methoden umgehen die Strahlung: Thermalplatten regeln die Schnittstellentemperatur unter den Montagefüßen, Folien- oder Flächenheizer auf Oberflächen – oder auf umgebenden Dummy-Paneelen – bringen definierte lokale Leistung ein. Sie sind präzise, günstig und gut regelbar, prägen aber Temperaturen oder Leistungen auf statt einer Strahlungsumgebung – sichtfaktorgetriebene Gradienten entstehen so nicht.",
+          "bullets": [
+            "Gut geeignet für Tests auf Geräteebene, bei denen die Umgebung als Schnittstellentemperatur spezifiziert ist.",
+            "Folienheizer bilden absorbierten Fluss lokal nach, wenn Applikation und Instrumentierung am Prüfling zulässig sind.",
+            "Häufig kombiniert mit kaltem Shroud, damit die Strahlungsverluste realistisch bleiben, während der Eintrag konduktiv erfolgt.",
+            "Typische Einschränkung: Heizermasse und Verkabelung schaffen eigene Wärmepfade, die das Modell abbilden muss."
+          ]
+        },
+        {
+          "title": "Wann spektrale Treue wirklich zählt",
+          "content": "Spektrale Treue ist erforderlich, wenn das Verifikationsergebnis wesentlich von der Wellenlänge abhängt. Werden nur absorbierte Netto-Wärmelast und Temperaturreaktion benötigt, kann eine kalibrierte infrarote oder konduktive Methode genügen. Diese Entscheidung gehört in Prüfbegründung und Unsicherheitsanalyse.",
+          "bulletsHeading": "Fälle, die einen Solarsimulator rechtfertigen",
+          "bullets": [
+            "Optische Beschichtungen und Thermalkontrollflächen, deren α/ε-Verhältnis das Design bestimmt.",
+            "Solargeneratoren, bei denen ein Teil der absorbierten Energie in elektrische Leistung wandelt und das Spektrum die Bilanz beeinflusst.",
+            "Optische Instrumente, bei denen Streulicht, Reflexe oder Aperturerwärmung unter Sonnenbeleuchtung nachzuweisen sind.",
+            "Materialien oder Mechanismen, deren Degradation unter Sonnenspektrum Teil der Fragestellung ist."
+          ]
+        },
+        {
+          "title": "Regelung, Kalibrierung und kombinierte Aufbauten",
+          "content": "Unabhängig von der Quelle gilt: Fluss wird gemessen, nicht angenommen. Radiometer und Kalorimeter an Referenzebenen belegen den gelieferten Fluss; Lampenfelder laufen dann im geschlossenen Regelkreis auf Flusssensoren oder Vorrichtungstemperaturen, Lampenalterung wird durch Kalibrierung in definierten Intervallen kompensiert. Solarsimulatoren erfordern zusätzlich Nachweise zu Strahlhomogenität und Spektrum.",
+          "content2": "Kombinierte Aufbauten sind sinnvoll, wenn unterschiedliche Randbedingungen unabhängig geregelt werden müssen, etwa eine Strahlungsquelle auf einer Fläche, geregelte Schnittstellentemperaturen und simulierte interne Verlustleistung. Jede Quelle, jeder Sensor und jeder Regelkreis muss in Testkonfiguration und Datenpaket abgebildet sein."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Was ist ein Solarsimulator in einer TVAC-Kammer?",
+          "a": "Ein Solarsimulator ist eine Lichtquelle – typischerweise Xenon- oder Metallhalogenidlampen mit Kollimationsoptik –, die Intensität und näherungsweise das Spektrum des Sonnenlichts im Weltraum nachbildet, rund 1361 W/m² in Erdentfernung. In der Thermalvakuumkammer absorbiert damit jede Oberfläche gemäß ihrer realen solaren Absorptivität – wichtig bei Beschichtungen, Optiken oder Solargeneratoren im Test."
+        },
+        {
+          "q": "Können IR-Lampen einen Solarsimulator ersetzen?",
+          "a": "Infrarotquellen können einen Solarsimulator ersetzen, wenn die Anforderung ein kalibrierter absorbierter Wärmestrom ist und keine wellenlängenabhängigen Effekte verifiziert werden. Für Solarzellen, optische Beschichtungen, Streulichtfälle oder andere Prüfungen mit spektral- und richtungsabhängigem Ergebnis sind sie nicht gleichwertig."
+        },
+        {
+          "q": "Wie wird der Wärmefluss im Thermalvakuumtest kalibriert?",
+          "a": "Über Flussmessung an Referenzebenen: Radiometer oder Kalorimeter kartieren den gelieferten Fluss vor dem Test, Referenzsensoren überwachen ihn währenddessen. Lampenfelder laufen typischerweise im geschlossenen Regelkreis auf diese Sensoren oder auf Vorrichtungstemperaturen, mit periodischer Rekalibrierung gegen Lampenalterung. Bei Solarsimulatoren kommen Strahlhomogenität und Spektrum als Prüfpunkte hinzu."
+        },
+        {
+          "q": "Was sind Folienheizer und wann werden sie eingesetzt?",
+          "a": "Folienheizer sind dünne Flächenheizer, die direkt auf eine Oberfläche geklebt werden – am Prüfling oder auf einem umgebenden Dummy-Paneel –, um definierte lokale Leistung einzubringen. Sie kommen zum Einsatz, wenn sich absorbierter Fluss in elektrische Leistung je Fläche übersetzen lässt, typischerweise auf Geräteebene oder für interne Verlustleistung; sie sind präzise und günstig, bilden aber keine Strahlungsumgebung nach."
+        }
+      ],
+      "conclusion": "Die Methode des Wärmeeintrags sollte dem Nachweisziel folgen. Spektrale Solarsimulation ist erforderlich, wenn wellenlängenabhängige Absorption oder optische Reaktion geprüft werden; in anderen Fällen kann ein kalibrierter, wärmeäquivalenter Eintrag klarere Randbedingungen bei geringerem Aufwand liefern."
+    },
+    "seoKey": "blogSolarSimulationVsIr",
+    "dateModified": "2026-07-23",
+    "searchIntent": {
+      "en": {
+        "primaryKeyword": "solar simulation vs infrared heating",
+        "primaryQuestion": "When does a TVAC test need spectral solar simulation instead of heat-flux equivalence?"
+      },
+      "de": {
+        "primaryKeyword": "Solarsimulation vs Infrarotheizung",
+        "primaryQuestion": "Wann braucht ein TVAC-Test spektrale Solarsimulation statt einer wärmeäquivalenten Beheizung?"
+      }
+    },
+    "references": [
+      {
+        "title": "Solar Irradiance Science",
+        "publisher": "NASA Goddard Space Flight Center",
+        "url": "https://earth.gsfc.nasa.gov/climate/projects/solar-irradiance/science"
+      },
+      {
+        "title": "State of the Art of Small Spacecraft Technology, Thermal Control",
+        "publisher": "NASA Small Spacecraft Systems Virtual Institute",
+        "url": "https://www.nasa.gov/smallsat-institute/sst-soa/thermal-control/"
+      },
+      {
+        "title": "Space Environment Simulator facility capabilities",
+        "publisher": "NASA Goddard Space Flight Center",
+        "url": "https://etd.gsfc.nasa.gov/capabilities/facilities-listing/space-environment-simulator/"
+      }
+    ]
+  },
+  {
+    "articleKey": "tvacChamberSizing",
+    "enSlug": "tvac-chamber-sizing",
+    "deSlug": "tvac-kammer-dimensionierung",
+    "category": "basics",
+    "datePublished": "2025-10-14",
+    "relatedPaths": [
+      "/products/standard-series",
+      "/products/custom-tvac",
+      "/tvac-questionnaire"
+    ],
+    "relatedArticles": [
+      "tvacCostDrivers",
+      "tvacFacilityRequirements",
+      "whatIsTvacTesting"
+    ],
+    "en": {
+      "title": "TVAC Chamber Sizing: How to Choose the Right Volume",
+      "description": "Nominal litres say little: how shroud, thermal plate and fixturing shrink usable volume, which clearances matter, cubic vs cylindrical geometry – and how much growth margin is sensible.",
+      "seoTitle": "TVAC Chamber Sizing: Choosing the Right Volume | Deepvac",
+      "seoDescription": "TVAC chamber sizing explained: nominal vs usable volume, clearance rules of thumb, cubic vs cylindrical geometry and growth margin without oversizing costs.",
+      "intro": "TVAC chamber sizing starts with the largest approved test configuration, including fixture, harness, instrumentation, access and radiative clearance. The assembly must pass through the door and fit within the clear dimensions of the selected shroud and thermal plate. Nominal vessel volume is useful for product classification, but it is not the binding test envelope. Growth margin should be defined from a realistic programme forecast rather than an unspecified future maximum.",
+      "sections": [
+        {
+          "title": "Nominal volume is not usable volume",
+          "content": "Nominal volume describes the empty vessel. The usable envelope is reduced by shroud panels, thermal plate, support structure, ports, fixtures and required clearances. The reduction varies substantially with chamber geometry and options, so a generic percentage should not be used for final selection.",
+          "content2": "Request the clear internal width, height and depth, door passage, usable plate area, load rating and port intrusions for the selected configuration. Compare those dimensions with an as-tested CAD envelope, not only the bare flight hardware."
+        },
+        {
+          "title": "Clearance rules of thumb",
+          "content": "Clearance supports radiative boundary conditions, installation, harness routing and instrumentation. The required value depends on surface temperatures, view factors, geometry, access tools and the facility's operating method. A fixed hand-width rule can be useful for an early sketch but is not a design criterion.",
+          "bulletsHeading": "What clearance provides",
+          "bullets": [
+            "Radiative environment: verify view factors to the controlled shroud and limit exposure to warm openings or reflective obstructions.",
+            "Handling: technicians need room for hands, tools and torque wrenches at the mounting points, and loading must work without scraping past shroud edges.",
+            "Harness routing: service loops, connector savers and bend radii between item and feedthroughs consume more depth than drawings suggest.",
+            "Instrumentation: thermocouple runs, purge lines and any camera or viewport lines of sight need unobstructed paths."
+          ]
+        },
+        {
+          "title": "Door and access geometry: cubic vs cylindrical",
+          "content": "Two vessel geometries dominate, and the trade-off is practical rather than aesthetic. Cylindrical chambers – like the C Series – carry the external atmospheric pressure efficiently, which favours large volumes and long test items; the price is a circular cross-section that clips the corners of boxy test envelopes. Cubic chambers – like the T Series – offer a full rectangular cross-section and a door that opens the entire face, which suits box-shaped units, shelf-style fixturing and frequent loading.",
+          "content2": "In every case the door aperture, not the volume, defines the largest loadable item. Check the pass-through dimensions with fixture and protruding connectors included – and plan how the item actually travels: trolley, rail system or crane access changes what a given door is worth."
+        },
+        {
+          "title": "Fixturing, thermal plate and harness space",
+          "content": "Test items rarely float. They bolt to the thermal plate or sit in a fixture that reproduces the mechanical interface – and that fixture adds height, footprint and thermal mass of its own. The thermal plate needs enough area for the item's conductive interface, and if several units are tested in parallel, for all of them plus sensor routing.",
+          "content2": "Harnessing deserves its own line in the sizing exercise: flight connectors with savers, breakout boxes, dozens of thermocouple lines and possibly purge or fluid lines all live between item and feedthrough panel. Teams that size for the item alone routinely discover that the harness – not the hardware – is what actually fills the chamber."
+        },
+        {
+          "title": "Growth margin versus oversizing",
+          "content": "Growth margin should cover credible programmes over the intended planning horizon. Oversizing increases vessel, pumping and thermal-system requirements, floor space, utilities and turnaround time. The trade should compare recurring cost for the expected campaign mix with the cost of using an external facility for exceptional oversized items.",
+          "content2": "A sensible compromise: size for the realistic envelope of the next several years – not for the largest item imaginable – and add a defined margin. If one exceptional future item dominates the requirement, testing that one campaign externally is often more economical than owning its chamber."
+        },
+        {
+          "title": "Standard size classes as orientation",
+          "content": "Current Deepvac Standard Series reference configurations cover nominal sizes of 65, 125, 250, 500, 1000 and 2000 litres in cubic T Series and cylindrical C Series architectures. These classes are an orientation for requirements capture; binding clear dimensions, loads and performance depend on the selected configuration and quotation.",
+          "content2": "A custom vessel becomes relevant when geometry, aspect ratio, access, optical bench, port count or load cases cannot be satisfied within a standard platform. The decision should follow a documented fit check rather than a preference for standard or custom."
+        }
+      ],
+      "faq": [
+        {
+          "q": "How do I choose the right TVAC chamber size?",
+          "a": "Start from the largest realistic test item including its fixture, add harness space and clearance to the shroud on all sides, and verify that the assembly passes through the door aperture. Compare that envelope against usable interior dimensions – not nominal litres. Then add a defined growth margin for the coming years, and resist sizing for a single exceptional item; external testing can cover that case."
+        },
+        {
+          "q": "How much of a chamber's nominal volume is actually usable?",
+          "a": "There is no dependable universal fraction. Shroud, plate, support, ports, fixture and clearances reduce the empty-vessel volume by an amount that depends on configuration. Use clear dimensions and door passage from the selected layout."
+        },
+        {
+          "q": "Is a cubic or a cylindrical vacuum chamber better?",
+          "a": "Neither is better; they optimise different things. Cylindrical vessels carry atmospheric pressure efficiently, which favours large volumes and long test items. Cubic chambers offer a full rectangular cross-section and a full-face door, which suits boxy units, shelf fixturing and frequent loading. The deciding questions are your test item shapes and your loading process – which is why both geometries exist as standard."
+        },
+        {
+          "q": "Is a bigger vacuum chamber always better?",
+          "a": "No. Unused volume can increase pump-down time, thermal-system size, utility demand, floor space and purchase cost. Define a realistic growth case and compare exceptional future items with external test capacity before increasing the permanent chamber class."
+        }
+      ],
+      "conclusion": "Chamber size should be selected from the usable test envelope, door passage, fixture, harness, radiative clearance and a defined growth case. Nominal volume is only an orientation value; the binding comparison uses clear dimensions in the selected configuration."
+    },
+    "de": {
+      "title": "TVAC-Kammer dimensionieren: die richtige Größe wählen",
+      "description": "Nennliter sagen wenig: wie Shroud, Thermalplatte und Vorrichtungen das Nutzvolumen schrumpfen, welche Abstände zählen, kubisch vs. zylindrisch – und wie viel Wachstumsreserve sinnvoll ist.",
+      "seoTitle": "TVAC-Kammer dimensionieren: Größe wählen | Deepvac",
+      "seoDescription": "TVAC-Kammer richtig dimensionieren: Nennvolumen vs. Nutzvolumen, Faustregeln für Abstände, kubische vs. zylindrische Bauform und sinnvolle Wachstumsreserve.",
+      "intro": "Die Dimensionierung einer TVAC-Kammer beginnt mit der größten freigegebenen Prüfkonfiguration einschließlich Vorrichtung, Verkabelung, Instrumentierung, Zugang und Strahlungsabstand. Die Baugruppe muss durch die Tür passen und innerhalb der lichten Maße von Shroud und Thermalplatte liegen. Das Nennvolumen des Behälters dient der Produktklassifizierung, ist aber nicht der verbindliche Einbauraum. Wachstumsreserve sollte aus einer realistischen Programmplanung und nicht aus einem unbestimmten künftigen Maximum folgen.",
+      "sections": [
+        {
+          "title": "Nennvolumen ist nicht Nutzvolumen",
+          "content": "Das Nennvolumen beschreibt den leeren Behälter. Der nutzbare Einbauraum wird durch Shroud-Paneele, Thermalplatte, Tragstruktur, Stutzen, Vorrichtungen und erforderliche Abstände reduziert. Die Reduktion variiert deutlich mit Kammergeometrie und Optionen; ein pauschaler Prozentwert eignet sich daher nicht zur finalen Auswahl.",
+          "content2": "Für die gewählte Konfiguration sollten lichte Innenbreite, -höhe und -tiefe, Türdurchfahrt, nutzbare Plattenfläche, Tragfähigkeit und Stutzeneingriffe vorliegen. Diese Maße werden mit einer CAD-Einhüllenden des vollständigen Testaufbaus verglichen, nicht nur mit der nackten Flughardware."
+        },
+        {
+          "title": "Faustregeln für Abstände",
+          "content": "Abstand unterstützt radiative Randbedingungen, Montage, Kabelführung und Instrumentierung. Der erforderliche Wert hängt von Oberflächentemperaturen, Sichtfaktoren, Geometrie, Werkzeugzugang und Betriebsweise ab. Eine pauschale Handbreite kann für eine erste Skizze hilfreich sein, ist aber kein Auslegungskriterium.",
+          "bulletsHeading": "Wofür Abstände sorgen",
+          "bullets": [
+            "Strahlungsumgebung: Sichtfaktoren zum geregelten Shroud nachweisen und den Blick auf warme Öffnungen oder reflektierende Hindernisse begrenzen.",
+            "Handhabung: An den Befestigungspunkten braucht es Platz für Hände, Werkzeug und Drehmomentschlüssel, und das Beladen muss ohne Streifen der Shroud-Kanten funktionieren.",
+            "Kabelführung: Serviceschleifen, Connector-Saver und Biegeradien zwischen Prüfling und Durchführungen kosten mehr Bautiefe, als Zeichnungen vermuten lassen.",
+            "Instrumentierung: Thermoelementtrassen, Spülleitungen und Sichtachsen für Kameras oder Schaugläser brauchen freie Wege."
+          ]
+        },
+        {
+          "title": "Tür- und Zugangsgeometrie: kubisch oder zylindrisch",
+          "content": "Zwei Behältergeometrien dominieren, und die Abwägung ist praktisch, nicht ästhetisch. Zylindrische Kammern – wie die C-Serie – tragen den äußeren Atmosphärendruck effizient, was großen Volumina und langen Prüflingen entgegenkommt; der Preis ist ein runder Querschnitt, der die Ecken kastenförmiger Einbauraums beschneidet. Kubische Kammern – wie die T-Serie – bieten den vollen Rechteckquerschnitt und eine Tür über die gesamte Stirnfläche, was kastenförmigen Geräten, regalartigen Vorrichtungen und häufigem Beladen entgegenkommt.",
+          "content2": "In jedem Fall definiert die Türöffnung, nicht das Volumen, den größten beladbaren Prüfling. Prüfen Sie die Durchfahrtsmaße inklusive Vorrichtung und überstehender Stecker – und planen Sie den tatsächlichen Weg des Prüflings: Wagen, Schienensystem oder Krananbindung verändern, was eine Tür wert ist."
+        },
+        {
+          "title": "Vorrichtungen, Thermalplatte und Kabelraum",
+          "content": "Prüflinge schweben selten. Sie werden auf die Thermalplatte geschraubt oder sitzen in einer Vorrichtung, die die mechanische Schnittstelle nachbildet – und diese Vorrichtung bringt eigene Höhe, Grundfläche und thermische Masse mit. Die Thermalplatte braucht genug Fläche für die konduktive Schnittstelle des Prüflings – und bei parallelen Tests für alle Einheiten samt Sensorführung.",
+          "content2": "Die Verkabelung verdient eine eigene Zeile in der Dimensionierung: Flugstecker mit Savern, Breakout-Boxen, Dutzende Thermoelementleitungen und gegebenenfalls Spül- oder Fluidleitungen leben alle zwischen Prüfling und Durchführungsplatte. Teams, die nur für den Prüfling dimensionieren, stellen regelmäßig fest, dass der Kabelbaum – nicht die Hardware – die Kammer füllt."
+        },
+        {
+          "title": "Wachstumsreserve oder Überdimensionierung",
+          "content": "Die Wachstumsreserve sollte plausible Programme im vorgesehenen Planungshorizont abdecken. Überdimensionierung erhöht Anforderungen an Behälter, Pump- und Thermalsystem, Stellfläche, Medien und Durchlaufzeit. Die Abwägung sollte laufende Kosten des erwarteten Kampagnenmixes mit den Kosten einer externen Anlage für einzelne übergroße Prüflinge vergleichen.",
+          "content2": "Der vernünftige Kompromiss: Dimensionieren Sie für das realistische Envelope der nächsten Jahre – nicht für das größte denkbare Objekt – und legen Sie eine definierte Reserve dazu. Dominiert ein einzelner künftiger Ausnahmefall die Anforderung, ist es oft wirtschaftlicher, diese eine Kampagne extern zu testen, als ihre Kammer zu besitzen."
+        },
+        {
+          "title": "Standard-Größenklassen als Orientierung",
+          "content": "Die aktuellen Referenzkonfigurationen der Deepvac Standard-Serie umfassen Nennvolumina von 65, 125, 250, 500, 1000 und 2000 Litern als kubische T-Serie und zylindrische C-Serie. Die Klassen dienen der Anforderungsklärung; verbindliche lichte Maße, Lasten und Leistungswerte hängen von Konfiguration und Angebot ab.",
+          "content2": "Ein kundenspezifischer Behälter wird relevant, wenn Geometrie, Seitenverhältnis, Zugang, optische Bank, Stutzenzahl oder Lastfälle innerhalb einer Standardplattform nicht erfüllt werden können. Die Entscheidung sollte aus einem dokumentierten Fit-Check und nicht aus einer grundsätzlichen Vorliebe für Standard oder Sonderanlage folgen."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Wie wähle ich die richtige Größe einer TVAC-Kammer?",
+          "a": "Beginnen Sie beim größten realistischen Prüfling samt Vorrichtung, addieren Sie Kabelraum und allseitigen Abstand zum Shroud und prüfen Sie die Durchfahrt durch die Türöffnung. Vergleichen Sie dieses Envelope mit den nutzbaren Innenmaßen – nicht mit Nennlitern. Legen Sie dann eine definierte Wachstumsreserve für die nächsten Jahre fest und widerstehen Sie der Versuchung, für einen einzelnen Ausnahmefall zu dimensionieren; den deckt externes Testen ab."
+        },
+        {
+          "q": "Wie viel vom Nennvolumen einer Kammer ist tatsächlich nutzbar?",
+          "a": "Es gibt keinen belastbaren universellen Anteil. Shroud, Platte, Tragstruktur, Stutzen, Vorrichtung und Abstände reduzieren das Leerbehältervolumen konfigurationsabhängig. Maßgeblich sind lichte Maße und Türdurchfahrt des gewählten Layouts."
+        },
+        {
+          "q": "Ist eine kubische oder zylindrische Vakuumkammer besser?",
+          "a": "Keine ist besser; sie optimieren Verschiedenes. Zylindrische Behälter tragen den Atmosphärendruck effizient, was großen Volumina und langen Prüflingen entgegenkommt. Kubische Kammern bieten vollen Rechteckquerschnitt und eine Tür über die gesamte Stirnfläche – gut für kastenförmige Geräte, Regalvorrichtungen und häufiges Beladen. Entscheidend sind Ihre Prüflingsformen und Ihr Beladeprozess – genau deshalb gibt es beide Geometrien als Standard."
+        },
+        {
+          "q": "Ist eine größere Vakuumkammer immer besser?",
+          "a": "Nein. Ungenutztes Volumen kann Abpumpzeit, Größe des Thermalsystems, Medienbedarf, Stellfläche und Anschaffungskosten erhöhen. Vor dem Sprung in eine größere Kammerklasse sollte ein realistisches Wachstumsszenario mit externer Testkapazität für Ausnahmefälle verglichen werden."
+        }
+      ],
+      "conclusion": "Die Kammergröße sollte aus nutzbarem Einbauraum, Türdurchfahrt, Vorrichtung, Verkabelung, Strahlungsabständen und einem definierten Wachstumsszenario abgeleitet werden. Das Nennvolumen dient nur zur Orientierung; verbindlich sind die lichten Maße der gewählten Konfiguration."
+    },
+    "seoKey": "blogTvacChamberSizing",
+    "dateModified": "2026-07-23",
+    "searchIntent": {
+      "en": {
+        "primaryKeyword": "TVAC chamber sizing",
+        "primaryQuestion": "How large should a TVAC chamber be for the test item, fixture, harness and growth margin?"
+      },
+      "de": {
+        "primaryKeyword": "TVAC-Kammer dimensionieren",
+        "primaryQuestion": "Wie groß muss eine TVAC-Kammer für Prüfling, Vorrichtung, Verkabelung und Reserve sein?"
+      }
+    },
+    "references": [
+      {
+        "title": "State of the Art of Small Spacecraft Technology, Thermal Control",
+        "publisher": "NASA Small Spacecraft Systems Virtual Institute",
+        "url": "https://www.nasa.gov/smallsat-institute/sst-soa/thermal-control/"
+      },
+      {
+        "title": "Deepvac Standard Series: current technical data and configuration notes",
+        "publisher": "Deepvac GmbH",
+        "url": "https://deepvac.space/products/standard-series"
+      },
+      {
+        "title": "Deepvac Custom TVAC: project-specific system scope",
+        "publisher": "Deepvac GmbH",
+        "url": "https://deepvac.space/products/custom-tvac"
+      }
+    ],
+    "technicalNote": {
+      "en": "Deepvac performance figures in this article describe current reference configurations. Binding values depend on chamber size, selected pumping and thermal concepts, test setup and the project quotation.",
+      "de": "Die in diesem Artikel genannten Deepvac-Leistungswerte beschreiben aktuelle Referenzkonfigurationen. Verbindliche Werte hängen von Kammergröße, gewähltem Pump- und Thermalkonzept, Testaufbau und Projektangebot ab."
+    }
+  }
+]

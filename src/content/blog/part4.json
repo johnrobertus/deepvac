@@ -1,1 +1,938 @@
-[{"articleKey":"pumpingSystemSelection","enSlug":"tvac-pumping-systems","deSlug":"vakuumpumpstand-tvac","category":"engineeringGuide","datePublished":"2026-07-22","relatedPaths":["/products/options/oil-free-pumping","/products/options/roots-booster","/products/options/cryogenic-traps","/products/options/residual-gas-analysis"],"relatedArticles":["vacuumLevelsExplained","outgassingBasics","tvacCostDrivers"],"en":{"title":"TVAC Pumping Systems: How to Select the Right Architecture","description":"From oil-free backing pumps to turbomolecular pumps, roots boosters and cryo traps: how a TVAC pumping system is structured, sized and monitored – and which drivers actually matter.","seoTitle":"TVAC Pumping Systems: Selection Guide | Deepvac","seoDescription":"Vacuum pumping system selection for TVAC chambers: oil-free backing pumps, turbo pumps, roots boosters, cryo traps, sizing drivers and RGA monitoring explained.","intro":"A TVAC pumping system is selected from chamber volume, conductance, expected gas load, target working pressure, allowable pump-down time, cleanliness and duty cycle. Many systems combine a dry roughing stage with a turbomolecular high-vacuum stage and optional cryogenic capture surfaces, but the correct architecture is configuration-specific. Effective speed at the chamber and the test-item gas load matter more than the sum of pump nameplate values.","sections":[{"title":"The typical TVAC pumping architecture","content":"A common architecture uses a dry backing pump to evacuate the chamber and support the high-vacuum pump, a valve-isolated turbomolecular stage for molecular-flow operation and, where required, a cooled trap or panel for condensable species. Pressure gauges and control logic must cover each transition safely. Other architectures, including cryopumps or different backing stages, may be preferable for specific gas loads or cleanliness requirements."},{"title":"Why oil-free backing pumps are the default","content":"Dry backing pumps avoid an oil inventory in the pumping train and can reduce the risk of hydrocarbon backstreaming. This is useful for contamination-sensitive hardware, but oil-free architecture does not by itself guarantee a clean chamber. Materials, seals, maintenance, exhaust routing, chamber history and operating procedure still determine contamination performance.","bulletsHeading":"What this buys you","bullets":["No oil backstreaming into the chamber, even during slow roughing or an unplanned standstill.","No oil handling, oil changes or oil-mist exhaust treatment in the lab.","Cleaner residual gas spectra, which makes RGA interpretation and leak diagnosis easier.","The trade-off: dry pumps need periodic service too – scroll tip seals are wear parts – so plan maintenance rather than assuming zero care."]},{"title":"Turbomolecular pumps for high vacuum","content":"A turbomolecular pump operates after the backing pressure and valve sequence meet the manufacturer's conditions. Its effective speed at the vessel is reduced by port and line conductance, screens, valves and gas species. Bearing concept, vibration, magnetic environment, maintenance and fault response should be selected from the test programme, not from pressure range alone."},{"title":"Roots boosters: faster rough-down for large volumes","content":"A roots booster can shorten roughing time or support higher throughput in the appropriate pressure range. Its benefit depends on volume, backing-pump capacity, conductance, cycle frequency and the time value of each pump-down. No single chamber-volume threshold determines whether it is justified."},{"title":"Cryo traps and panels: pumping water","content":"Water desorption from internal surfaces often dominates the gas load after the initial air removal. A sufficiently cold trap or cryopanel can capture water and other condensable species with high local pumping speed, which may improve pressure behaviour and cleanliness. Capture capacity, line of sight, regeneration and release during warm-up must be included in the operating sequence."},{"title":"Sizing drivers, staged logic and monitoring","content":"Pump selection is a system calculation, not a catalogue lookup. Our engineering team sizes pumping systems against a handful of drivers, and the same list works as your specification checklist.","bulletsHeading":"What actually drives sizing","bullets":["Chamber volume sets the rough-down time constant together with backing pump speed.","Internal surface area, materials and chamber history determine the outgassing load the high-vacuum stage must digest.","Target pressure defines the required stage count and pump technologies.","Allowed pump-down time and cycling frequency decide whether boosters and traps pay off.","Test item outgassing – often larger than the empty-chamber load – needs margin, not optimism."],"content2":"Monitoring closes the loop: a Pirani gauge covers rough vacuum, an ionization gauge covers high vacuum, and a residual gas analyzer identifies what the pressure actually consists of – water, solvents or an air leak signature – so you troubleshoot with data instead of guesses."}],"faq":[{"q":"Which vacuum pumps does a TVAC chamber use?","a":"Many TVAC systems combine a dry backing stage with a high-vacuum pump, while boosters, cryogenic surfaces and contamination diagnostics are added when chamber volume, gas load, turnaround time or cleanliness justify them. The correct architecture follows from the required working pressure under load, effective conductance, allowable pump-down time and test-item outgassing, not from one standard pump list."},{"q":"Why are oil-free vacuum pumps important for TVAC testing?","a":"Because oil-sealed pumps can backstream hydrocarbons into the chamber, where they condense on cold surfaces and optics as exactly the molecular contamination films a space test must avoid. Dry scroll and multi-stage roots pumps eliminate this risk class at the source, keep residual gas spectra clean for RGA work, and remove oil logistics from the lab. They still need scheduled maintenance – wear parts like tip seals are real."},{"q":"How long does pumping down to 10⁻⁶ mbar take?","a":"There is no generic time. Roughing may take minutes, while the transition to the required working pressure can take hours or longer depending on volume, conductance, surface area, humidity, cleanliness, test-item outgassing, bake-out and pump configuration. Use a calculated or measured pump-down curve for scheduling."},{"q":"Do I need a roots booster for my chamber?","a":"Evaluate the booster from the required roughing time, chamber conductance, backing-pump curve, operating frequency and any continuous gas load. Compact chambers may not benefit, while larger or frequently cycled systems may. The decision should be supported by a pump-down calculation or test."}],"conclusion":"A pumping train should be sized from gas load, effective conductance, target working pressure and allowable turnaround time. Pump nameplate speed is only one input; test-item outgassing, water load, port geometry and regeneration strategy often determine the real result."},"de":{"title":"Vakuumpumpstand für TVAC: Architektur richtig auslegen","description":"Von ölfreien Vorpumpen über Turbomolekularpumpen bis zu Roots-Boostern und Kryofallen: Wie ein TVAC-Pumpstand aufgebaut, dimensioniert und überwacht wird – und welche Treiber wirklich zählen.","seoTitle":"Vakuumpumpstand für TVAC auslegen | Deepvac","seoDescription":"Vakuumpumpstand für TVAC-Kammern auslegen: ölfreie Vorpumpen, Turbopumpen, Roots-Booster, Kryofallen, Dimensionierung und RGA-Überwachung verständlich erklärt.","intro":"Ein TVAC-Pumpstand wird aus Kammervolumen, Leitwert, erwarteter Gaslast, gefordertem Arbeitsdruck, zulässiger Abpumpzeit, Sauberkeit und Einsatzprofil ausgewählt. Viele Systeme kombinieren eine trockene Vorvakuumstufe mit einer Turbomolekular-Hochvakuumstufe und optionalen kryogenen Fangflächen; die richtige Architektur ist jedoch konfigurationsspezifisch. Effektives Saugvermögen an der Kammer und Gaslast des Prüflings zählen mehr als die Summe der Typenschildwerte.","sections":[{"title":"Die typische Pumpstand-Architektur","content":"Eine verbreitete Architektur nutzt eine trockene Vorpumpe zum Evakuieren der Kammer und zur Unterstützung der Hochvakuumpumpe, eine ventilgetrennte Turbomolekularstufe für den Molekularströmungsbereich und bei Bedarf eine gekühlte Falle oder ein Paneel für kondensierbare Spezies. Druckmesstechnik und Steuerlogik müssen jeden Übergang sicher abdecken. Für besondere Gaslasten oder Sauberkeitsanforderungen können Kryopumpen oder andere Vorpumpstufen geeigneter sein."},{"title":"Warum ölfreie Vorpumpen der Standard sind","content":"Trockene Vorpumpen vermeiden einen Ölvorrat im Pumpstrang und können das Risiko von Kohlenwasserstoff-Rückströmung reduzieren. Das ist für kontaminationsempfindliche Hardware vorteilhaft; eine ölfreie Architektur garantiert jedoch nicht allein eine saubere Kammer. Materialien, Dichtungen, Wartung, Abluftführung, Kammerhistorie und Betriebsprozedur bestimmen weiterhin die Kontaminationsleistung.","bulletsHeading":"Was Ihnen das bringt","bullets":["Kein Öl-Rückströmen in die Kammer, auch bei langsamem Abpumpen oder ungeplantem Stillstand.","Kein Ölhandling, keine Ölwechsel, keine Ölnebel-Abluftbehandlung im Labor.","Sauberere Restgasspektren – das erleichtert RGA-Interpretation und Leckdiagnose.","Der Kompromiss: Auch Trockenläufer brauchen Wartung – Scroll-Dichtungen sind Verschleißteile –, planen Sie also Instandhaltung ein, statt Wartungsfreiheit anzunehmen."]},{"title":"Turbomolekularpumpen für das Hochvakuum","content":"Eine Turbomolekularpumpe wird zugeschaltet, nachdem Vorvakuumdruck und Ventilsequenz die Herstellerbedingungen erfüllen. Ihr effektives Saugvermögen am Behälter wird durch Leitwerte von Stutzen und Leitungen, Gitter, Ventile und Gasart reduziert. Lagerkonzept, Vibration, magnetische Umgebung, Wartung und Fehlerverhalten sollten aus dem Prüfprogramm und nicht nur aus dem Druckbereich ausgewählt werden."},{"title":"Roots-Booster: schnelleres Abpumpen großer Volumina","content":"Ein Roots-Booster kann die Vorvakuumzeit verkürzen oder im geeigneten Druckbereich höheren Durchsatz unterstützen. Sein Nutzen hängt von Volumen, Vorpumpkapazität, Leitwert, Zyklenhäufigkeit und dem Zeitwert jedes Abpumpvorgangs ab. Eine einzelne Kammervolumengrenze entscheidet nicht über seine Wirtschaftlichkeit."},{"title":"Kryofallen und -paneele: Wasser pumpen","content":"Die Wasserdesorption von inneren Oberflächen dominiert nach dem Entfernen der Luft häufig die Gaslast. Eine ausreichend kalte Falle oder ein Kryopaneel kann Wasser und andere kondensierbare Spezies mit hohem lokalem Saugvermögen auffangen und damit Druckverlauf und Sauberkeit verbessern. Fangkapazität, Sichtlinie, Regeneration und Freisetzung beim Aufwärmen gehören in die Betriebssequenz."},{"title":"Dimensionierung, Stufenlogik und Überwachung","content":"Die Pumpenauswahl ist eine Systemrechnung, kein Katalogblick. Unser Engineering-Team legt Pumpstände anhand weniger Treiber aus – dieselbe Liste taugt als Ihre Spezifikations-Checkliste.","bulletsHeading":"Was die Auslegung wirklich treibt","bullets":["Das Kammervolumen bestimmt zusammen mit dem Saugvermögen der Vorpumpe die Zeitkonstante des Vorevakuierens.","Innere Oberfläche, Materialien und Kammerhistorie definieren die Outgassing-Last, die die Hochvakuumstufe verdauen muss.","Der Zieldruck legt Stufenzahl und Pumpentechnologien fest.","Zulässige Abpumpzeit und Zyklushäufigkeit entscheiden, ob sich Booster und Fallen rechnen.","Das Outgassing des Prüflings – oft größer als die Last der leeren Kammer – braucht Marge, keinen Optimismus."],"content2":"Die Überwachung schließt den Kreis: Ein Pirani-Sensor deckt das Grobvakuum ab, ein Ionisationsmanometer das Hochvakuum, und die Restgasanalyse zeigt, woraus der Druck tatsächlich besteht – Wasser, Lösemittel oder die Signatur eines Luftlecks. So diagnostizieren Sie mit Daten statt mit Vermutungen."}],"faq":[{"q":"Welche Vakuumpumpen nutzt eine TVAC-Kammer?","a":"Viele TVAC-Systeme kombinieren eine trockene Vorpumpstufe mit einer Hochvakuumpumpe. Booster, kryogene Fangflächen und Kontaminationsdiagnostik kommen hinzu, wenn Kammervolumen, Gaslast, Durchlaufzeit oder Reinheitsanforderung sie rechtfertigen. Die richtige Architektur folgt aus dem geforderten Arbeitsdruck unter Last, dem effektiven Leitwert, der zulässigen Abpumpzeit und der Ausgasung des Prüflings, nicht aus einer universellen Pumpenliste."},{"q":"Warum sind ölfreie Vakuumpumpen beim TVAC-Test wichtig?","a":"Weil ölgedichtete Pumpen Kohlenwasserstoffe in die Kammer rückströmen lassen können, wo sie auf kalten Flächen und Optiken genau die molekularen Kontaminationsfilme bilden, die ein Raumfahrttest vermeiden muss. Trockene Scroll- und Roots-Pumpen beseitigen diese Risikoklasse an der Quelle, halten Restgasspektren sauber für die RGA-Arbeit und nehmen die Öllogistik aus dem Labor. Gewartet werden müssen sie trotzdem – Verschleißteile wie Scroll-Dichtungen sind real."},{"q":"Wie lange dauert das Abpumpen auf 10⁻⁶ mbar?","a":"Eine universelle Zeit gibt es nicht. Das Vorvakuum kann in Minuten erreicht werden; der Weg zum geforderten Arbeitsdruck kann je nach Volumen, Leitwert, Oberfläche, Feuchte, Sauberkeit, Prüflingsausgasung, Ausheizen und Pumpenkonfiguration Stunden oder länger dauern. Für die Terminplanung ist eine berechnete oder gemessene Abpumpkurve erforderlich."},{"q":"Brauche ich einen Roots-Booster für meine Kammer?","a":"Bewerten Sie den Booster anhand geforderter Vorvakuumzeit, Kammerleitwert, Vorpumpkennlinie, Betriebsfrequenz und kontinuierlicher Gaslast. Kompakte Kammern profitieren möglicherweise nicht, größere oder häufig zyklierte Systeme dagegen schon. Die Entscheidung sollte durch Rechnung oder Versuch gestützt werden."}],"conclusion":"Ein Pumpstand sollte aus Gaslast, effektivem Leitwert, gefordertem Arbeitsdruck und zulässiger Durchlaufzeit ausgelegt werden. Das Saugvermögen auf dem Typenschild ist nur ein Eingangswert; Prüflingsausgasung, Wasserlast, Stutzengeometrie und Regenerationsstrategie bestimmen häufig das reale Ergebnis."},"seoKey":"blogPumpingSystemSelection","dateModified":"2026-07-23","searchIntent":{"en":{"primaryKeyword":"TVAC pumping systems","primaryQuestion":"How should a TVAC pumping train be selected for volume, gas load, pressure and turnaround time?"},"de":{"primaryKeyword":"Vakuumpumpstand für TVAC","primaryQuestion":"Wie wird ein TVAC-Pumpstand für Volumen, Gaslast, Druck und Durchlaufzeit ausgelegt?"}},"references":[{"title":"CERN Accelerator School: Vacuum Technology","publisher":"CERN","url":"https://cds.cern.ch/record/402784"},{"title":"Outgassing properties of vacuum materials for particle accelerators","publisher":"CERN","url":"https://cds.cern.ch/record/2723690"},{"title":"Deepvac Standard Series: current technical data and configuration notes","publisher":"Deepvac GmbH","url":"https://deepvac.space/products/standard-series"}],"technicalNote":{"en":"Deepvac performance figures in this article describe current reference configurations. Binding values depend on chamber size, selected pumping and thermal concepts, test setup and the project quotation.","de":"Die in diesem Artikel genannten Deepvac-Leistungswerte beschreiben aktuelle Referenzkonfigurationen. Verbindliche Werte hängen von Kammergröße, gewähltem Pump- und Thermalkonzept, Testaufbau und Projektangebot ab."}},{"articleKey":"vacuumLevelsExplained","enSlug":"vacuum-levels-explained","deSlug":"vakuumbereiche-erklaert","category":"basics","datePublished":"2026-07-22","relatedPaths":["/products/options/oil-free-pumping","/products/options/roots-booster","/products/standard-series"],"relatedArticles":["pumpingSystemSelection","outgassingBasics","tvacCostDrivers"],"en":{"title":"Vacuum Levels Explained: From Rough Vacuum to UHV","description":"The conventional vacuum ranges, how gas behaviour and equipment change with pressure, and why many thermal-vacuum specifications use the high-vacuum range.","seoTitle":"Vacuum Levels Explained: Rough to UHV | Deepvac","seoDescription":"Rough, medium, high and ultra-high vacuum explained with pump, gauge and molecular-flow context, including why many TVAC specifications use high vacuum.","intro":"Vacuum technology uses broad pressure bands such as rough, medium, high and ultra-high vacuum. Their boundaries are conventional rather than universal, but they mark useful changes in gas transport, suitable pumps, gauges, sealing concepts and surface effects. Thermal-vacuum tests usually operate in the high-vacuum regime so that residual-gas heat transfer is sufficiently small for the verification case. This article explains the ranges, molecular-flow intuition and the practical consequences for chamber specification without treating one pressure value as a universal requirement.","sections":[{"title":"The four vacuum ranges at a glance","content":"The ranges below are a practical orientation in millibar, not universal normative definitions. One millibar equals one hectopascal.","bulletsHeading":"The ranges","bullets":["Rough vacuum, approximately atmospheric pressure down to 1 mbar: continuum flow is still important and mechanical pumps dominate.","Medium vacuum, approximately 1 to 10⁻³ mbar: transition between viscous and molecular behaviour, often used as backing range for high-vacuum pumps.","High vacuum, approximately 10⁻³ to 10⁻⁷ mbar: molecular-flow effects dominate many chamber geometries; turbomolecular and cryogenic pumping are common.","Ultra-high vacuum, below approximately 10⁻⁷ mbar: outgassing, surface preparation, bakeability and seal technology become increasingly demanding."]},{"title":"Mean free path: the intuition behind the numbers","content":"Mean free path is the average distance a molecule travels between collisions. It increases as pressure decreases and must be compared with a characteristic chamber dimension. The resulting Knudsen number, not pressure alone, indicates whether viscous, transition or molecular flow is the useful model.","content2":"In molecular flow, molecules interact more often with surfaces than with each other. Conductance becomes geometry-dependent, pumps capture only molecules that reach their inlet, and contamination transport is strongly influenced by line of sight and surface sticking."},{"title":"Why pressure is not a direct altitude equivalent","content":"Atmospheric and orbital density vary with altitude, solar activity, composition and time, so a chamber pressure should not be presented as one exact flight altitude. Ground facilities also use different gases and wall temperatures from the orbital environment. Pressure is therefore specified from the physical effect and verification requirement, not from a simple altitude label.","content2":"For thermal testing, the relevant question is whether residual-gas heat transfer and gas-related electrical effects are acceptably small for the item and geometry. For contamination testing, molecular transport and partial pressures may be more important than the total pressure alone."},{"title":"Why many TVAC specifications use the 10⁻⁵ to 10⁻⁶ mbar range","content":"Many TVAC facilities are designed to operate in this high-vacuum range because it provides margin for low gas heat transfer and molecular-flow operation in common test geometries. That does not make either value a universal standard requirement. The binding pressure is the one stated in the tailored test specification under the defined test-item gas load.","bulletsHeading":"What the band buys you","bullets":["Thermal boundary: demonstrate that residual-gas heat transfer is negligible within the test uncertainty.","Electrical operation: control power-on and pump-down sequences for hardware that may be sensitive in intermediate-pressure regimes.","Contamination: operate in a regime where partial-pressure and line-of-sight molecular transport can be monitored and modelled.","Gas-load margin: specify working pressure with the actual test setup, not only the empty-chamber base pressure."]},{"title":"What changes with every decade of pressure","content":"Lower pressure changes which physical effects dominate and which components are suitable. The transition is gradual and equipment ranges overlap, so the chamber should be designed as an integrated pumping and measurement system rather than from isolated pressure labels.","bulletsHeading":"What changes as pressure falls","bullets":["Pumps: mechanical backing pumps cover roughing, while high-vacuum stages and sometimes cryogenic surfaces address lower-pressure operation and specific gas species.","Gauges: thermal-conductivity gauges and ionisation-based gauges cover different, overlapping ranges and require gas-dependent interpretation.","Seals and materials: tighter contamination budgets and lower gas loads place increasing demands on permeation, surface finish, cleaning and bake-out.","Dominant gas source: real leaks may dominate a poor system; in a tight, clean system, desorption and diffusion from surfaces often become the limiting loads.","Time: the last part of pump-down is commonly governed by surface gas release and conductance, so a larger nominal pump does not guarantee proportional improvement."]},{"title":"What this means when specifying a TVAC chamber","content":"Current Deepvac Standard Series reference data lists a working pressure of ≤ 1 × 10⁻⁶ mbar. This is a product configuration value, not a universal TVAC requirement. Binding performance depends on chamber size, pumping package, test setup, outgassing load and quotation.","content2":"Ultra-high vacuum can be necessary for specialised surface, beam or contamination work, but it introduces different vessel, seal, cleaning, bake-out, pumping and turnaround requirements. Specify the lowest pressure that the verification case actually needs."}],"faq":[{"q":"What is the difference between high vacuum and ultra-high vacuum?","a":"High vacuum and ultra-high vacuum are engineering regimes with overlapping conventional boundaries. UHV generally requires stricter control of materials, surface preparation, seals, bake-out and measurement than ordinary high-vacuum systems. Thermal-vacuum programmes normally specify the pressure needed for their heat-transfer and contamination objectives; they do not benefit automatically from UHV capability."},{"q":"How good is the vacuum in space?","a":"Orbital density varies by altitude, solar activity, composition and time. In low Earth orbit it is often lower than common TVAC working pressures, but a ground chamber does not need to reproduce one exact orbital total pressure to reproduce the required thermal boundary. The project defines the relevant effect and acceptance criterion."},{"q":"Why do TVAC tests require 10⁻⁵ or 10⁻⁶ mbar?","a":"Many facilities use this range because residual-gas heat transfer can be made small and molecular-flow assumptions become useful for common geometries. The required value is still project-specific and must be verified under the expected test-item gas load."},{"q":"How long does it take to reach 10⁻⁶ mbar?","a":"Pump-down may take hours or longer depending on volume, conductance, surface area, humidity, materials, test-item outgassing, bake-out and pumping architecture. Schedule from a measured or calculated pressure-time curve rather than a generic duration."}],"conclusion":"For thermal-vacuum testing, the required pressure is the level at which residual-gas effects are sufficiently small for the specific geometry and verification objective. The project specification remains binding; pursuing lower pressure than the test requires adds cost, time and cleanliness demands without automatically improving the evidence."},"de":{"title":"Vakuumbereiche erklärt: von Grobvakuum bis UHV","description":"Die konventionellen Vakuumbereiche, wie sich Gasverhalten und Anlagentechnik mit dem Druck ändern und warum viele Thermalvakuum-Spezifikationen den Hochvakuumbereich nutzen.","seoTitle":"Vakuumbereiche erklärt: Grobvakuum bis UHV | Deepvac","seoDescription":"Grobvakuum, Feinvakuum, Hochvakuum und UHV mit Pumpen, Messtechnik und Molekularströmung erklärt, einschließlich der Einordnung typischer TVAC-Spezifikationen.","intro":"Die Vakuumtechnik nutzt breite Druckbereiche wie Grob-, Fein-, Hoch- und Ultrahochvakuum. Ihre Grenzen sind Konventionen und nicht universell, markieren aber nützliche Wechsel bei Gastransport, geeigneten Pumpen, Messverfahren, Dichtungskonzepten und Oberflächeneffekten. Thermalvakuumtests arbeiten üblicherweise im Hochvakuumbereich, damit der Wärmeübertrag durch Restgas für den jeweiligen Verifikationsfall ausreichend klein ist. Dieser Artikel erklärt die Bereiche, die Anschauung der Molekularströmung und die Folgen für die Kammerspezifikation, ohne einen einzelnen Druckwert als allgemeine Forderung darzustellen.","sections":[{"title":"Die vier Vakuumbereiche im Überblick","content":"Die folgenden Bereiche dienen als praktische Orientierung in Millibar und sind keine universellen normativen Definitionen. Ein Millibar entspricht einem Hektopascal.","bulletsHeading":"Die Bereiche","bullets":["Grobvakuum, ungefähr von Atmosphärendruck bis 1 mbar: Kontinuumsströmung bleibt wichtig, mechanische Pumpen dominieren.","Feinvakuum, ungefähr 1 bis 10⁻³ mbar: Übergang zwischen viskosem und molekularem Verhalten, häufig Vorvakuumbereich für Hochvakuumpumpen.","Hochvakuum, ungefähr 10⁻³ bis 10⁻⁷ mbar: In vielen Kammergeometrien dominieren molekulare Strömungseffekte; Turbomolekular- und Kryopumpen sind verbreitet.","Ultrahochvakuum, unter ungefähr 10⁻⁷ mbar: Ausgasung, Oberflächenvorbereitung, Ausheizbarkeit und Dichtungstechnik werden zunehmend anspruchsvoll."]},{"title":"Mittlere freie Weglänge: die Anschauung hinter den Zahlen","content":"Die mittlere freie Weglänge ist die durchschnittliche Strecke eines Moleküls zwischen Kollisionen. Sie wächst mit sinkendem Druck und muss mit einer charakteristischen Kammerabmessung verglichen werden. Die daraus gebildete Knudsen-Zahl, nicht der Druck allein, zeigt, ob viskose, Übergangs- oder Molekularströmung das geeignete Modell ist.","content2":"In der Molekularströmung wechselwirken Moleküle häufiger mit Oberflächen als miteinander. Leitwerte werden geometrieabhängig, Pumpen erfassen nur Moleküle, die ihren Einlass erreichen, und der Kontaminationstransport wird stark von Sichtlinie und Haftwahrscheinlichkeit beeinflusst."},{"title":"Warum Druck keine direkte Höhenentsprechung ist","content":"Atmosphären- und Orbitdichte variieren mit Höhe, Sonnenaktivität, Zusammensetzung und Zeit; ein Kammerdruck sollte deshalb nicht als exakte Flughöhe dargestellt werden. Bodenanlagen verwenden außerdem andere Gaszusammensetzungen und Wandtemperaturen als die Orbitumgebung. Der Druck wird daher aus physikalischem Effekt und Nachweisanforderung spezifiziert, nicht aus einem einfachen Höhenlabel.","content2":"Für Thermaltests ist entscheidend, ob Restgas-Wärmetransport und gasbezogene elektrische Effekte für Prüfling und Geometrie ausreichend klein sind. Bei Kontaminationstests können molekularer Transport und Partialdrücke wichtiger als der Gesamtdruck allein sein."},{"title":"Warum viele TVAC-Spezifikationen im Bereich 10⁻⁵ bis 10⁻⁶ mbar liegen","content":"Viele TVAC-Anlagen werden für diesen Hochvakuumbereich ausgelegt, weil er in gängigen Prüfgeometrien Marge für geringen Gaswärmetransport und Molekularströmung bietet. Daraus entsteht jedoch keine universelle Normanforderung. Verbindlich ist der in der getailorten Prüfspezifikation unter definierter Prüflingsgaslast genannte Druck.","bulletsHeading":"Was das Band leistet","bullets":["Thermische Randbedingung: Nachweisen, dass Restgas-Wärmetransport innerhalb der Prüfunsicherheit vernachlässigbar ist.","Elektrischer Betrieb: Einschalt- und Abpumpsequenzen für Hardware beherrschen, die in mittleren Druckbereichen empfindlich sein kann.","Kontamination: In einem Bereich arbeiten, in dem Partialdrücke und molekularer Sichtlinientransport überwacht und modelliert werden können.","Gaslastmarge: Arbeitsdruck mit tatsächlichem Testaufbau spezifizieren, nicht nur den Basisdruck der leeren Kammer."]},{"title":"Was sich mit jeder Druckdekade ändert","content":"Mit sinkendem Druck ändern sich die dominierenden physikalischen Effekte und die Eignung von Komponenten. Der Übergang ist fließend und die Arbeitsbereiche überlappen. Deshalb sollte die Kammer als integriertes Pump- und Messsystem ausgelegt werden, nicht anhand isolierter Druckbezeichnungen.","bulletsHeading":"Was sich mit sinkendem Druck ändert","bullets":["Pumpen: Mechanische Vorpumpen übernehmen das Vorevakuieren; Hochvakuumstufen und gegebenenfalls kryogene Flächen bedienen niedrigere Drücke und bestimmte Gasspezies.","Messtechnik: Wärmeleitungs- und Ionisationsmessröhren decken unterschiedliche, überlappende Bereiche ab und müssen gasabhängig interpretiert werden.","Dichtungen und Materialien: Engere Kontaminationsbudgets und kleinere Gaslasten erhöhen die Anforderungen an Permeation, Oberflächen, Reinigung und Ausheizen.","Dominierende Gasquelle: In einem schlechten System können reale Lecks bestimmen; in einer dichten, sauberen Anlage begrenzen häufig Desorption und Diffusion aus Oberflächen.","Zeit: Der letzte Teil des Abpumpens wird oft von Oberflächengasfreisetzung und Leitwert bestimmt. Eine größere Nennpumpe verbessert ihn nicht automatisch proportional."]},{"title":"Was das für die Spezifikation einer TVAC-Kammer heißt","content":"Die aktuellen Referenzdaten der Deepvac Standard-Serie nennen einen Arbeitsdruck von ≤ 1 × 10⁻⁶ mbar. Das ist ein Wert einer Produktkonfiguration und keine universelle TVAC-Anforderung. Verbindliche Leistung hängt von Kammergröße, Pumpenkonfiguration, Testaufbau, Ausgasungslast und Angebot ab.","content2":"Ultrahochvakuum kann für spezielle Oberflächen-, Strahl- oder Kontaminationsaufgaben notwendig sein, verlangt aber andere Behälter-, Dichtungs-, Reinigungs-, Ausheiz-, Pump- und Durchlaufkonzepte. Spezifizieren Sie den niedrigsten Druck, den der Verifikationsfall tatsächlich benötigt."}],"faq":[{"q":"Was ist der Unterschied zwischen Hochvakuum und Ultrahochvakuum?","a":"Hochvakuum und Ultrahochvakuum sind technische Bereiche mit konventionellen, teilweise überlappenden Grenzen. UHV verlangt üblicherweise strengere Kontrolle von Materialien, Oberflächen, Dichtungen, Ausheizen und Messtechnik als normale Hochvakuumsysteme. Thermalvakuumprogramme spezifizieren den Druck für ihre Wärmeübertragungs- und Kontaminationsziele; von UHV-Fähigkeit profitieren sie nicht automatisch."},{"q":"Wie gut ist das Vakuum im Weltraum?","a":"Die Orbitdichte variiert mit Höhe, Sonnenaktivität, Zusammensetzung und Zeit. Im niedrigen Erdorbit ist sie häufig geringer als gängige TVAC-Arbeitsdrücke; eine Bodenanlage muss jedoch keinen exakten Orbital-Gesamtdruck treffen, um die geforderte thermische Randbedingung nachzubilden. Das Projekt definiert Effekt und Abnahmekriterium."},{"q":"Warum fordern TVAC-Tests 10⁻⁵ oder 10⁻⁶ mbar?","a":"Viele Anlagen nutzen diesen Bereich, weil Restgas-Wärmetransport klein werden kann und Molekularströmungsannahmen für gängige Geometrien nützlich werden. Der geforderte Wert bleibt projektspezifisch und muss unter der erwarteten Prüflingsgaslast nachgewiesen werden."},{"q":"Wie lange dauert das Abpumpen auf 10⁻⁶ mbar?","a":"Das Abpumpen kann je nach Volumen, Leitwert, Oberfläche, Feuchte, Materialien, Prüflingsausgasung, Ausheizen und Pumpenarchitektur Stunden oder länger dauern. Die Terminplanung sollte auf einer gemessenen oder berechneten Druck-Zeit-Kurve beruhen."}],"conclusion":"Für Thermalvakuumtests ist der Druck erforderlich, bei dem Restgaseffekte für die konkrete Geometrie und das Nachweisziel ausreichend klein sind. Verbindlich bleibt die Projektspezifikation; ein tieferer Druck als benötigt erhöht Aufwand, Zeit und Sauberkeitsanforderungen, ohne den Nachweis automatisch zu verbessern."},"seoKey":"blogVacuumLevelsExplained","dateModified":"2026-07-23","searchIntent":{"en":{"primaryKeyword":"vacuum levels explained","primaryQuestion":"Which vacuum range is needed for thermal-vacuum testing and why?"},"de":{"primaryKeyword":"Vakuumbereiche erklärt","primaryQuestion":"Welcher Vakuumbereich wird für Thermalvakuumtests benötigt und warum?"}},"references":[{"title":"CERN Accelerator School: Vacuum Technology","publisher":"CERN","url":"https://cds.cern.ch/record/402784"},{"title":"Rarefied gas dynamics and its applications to vacuum technology","publisher":"CERN","url":"https://cds.cern.ch/record/1046845"},{"title":"Thermometry Calibration Services","publisher":"National Institute of Standards and Technology (NIST)","url":"https://www.nist.gov/pml/sensor-science/temperature-humidity/thermometry-calibration-services"}],"technicalNote":{"en":"Deepvac performance figures in this article describe current reference configurations. Binding values depend on chamber size, selected pumping and thermal concepts, test setup and the project quotation.","de":"Die in diesem Artikel genannten Deepvac-Leistungswerte beschreiben aktuelle Referenzkonfigurationen. Verbindliche Werte hängen von Kammergröße, gewähltem Pump- und Thermalkonzept, Testaufbau und Projektangebot ab."}},{"articleKey":"whatIsTvacTesting","enSlug":"what-is-thermal-vacuum-testing","deSlug":"was-ist-thermalvakuumtest","category":"basics","datePublished":"2026-07-22","relatedPaths":["/products/standard-series","/services/testing-services","/tvac-questionnaire"],"relatedArticles":["tvacTestTypes","aerospaceQualification","tvacTestCampaign"],"en":{"title":"What Is Thermal Vacuum (TVAC) Testing?","description":"An engineer's introduction to thermal vacuum testing: which space conditions a TVAC chamber simulates, why hardware fails in vacuum, and where the test sits in qualification.","seoTitle":"What Is Thermal Vacuum (TVAC) Testing? | Deepvac","seoDescription":"Thermal vacuum testing exposes space hardware to vacuum and temperature extremes. What TVAC means, how a chamber works and where it fits in qualification.","intro":"Thermal vacuum testing exposes hardware to controlled vacuum and thermal boundary conditions while temperatures, pressures and functional behaviour are recorded. The test reduces gas-mediated heat transfer so conduction through interfaces and radiation to the surroundings dominate the thermal response. It is used to validate thermal analysis, verify operation at defined limits and screen integration or manufacturing weaknesses. The actual pressure, temperature profile and verification approach come from the approved project requirements.","sections":[{"title":"What thermal vacuum testing means","content":"A TVAC test places a test item in a vacuum vessel, establishes the specified pressure and drives controlled thermal boundary conditions while the item is monitored and, where required, operated. The combination matters because thermal cycling in air does not reproduce the same heat-transfer paths, while vacuum exposure at one temperature does not exercise the full thermal design.","content2":"Many programmes use high-vacuum working pressures in the 10⁻⁵ to 10⁻⁶ mbar range, but this is not a universal requirement. The test specification should define the pressure under the expected gas load and the effect that the value is intended to control."},{"title":"Which space conditions the chamber simulates","content":"A TVAC chamber represents selected thermal aspects of the space environment. The exact combination follows from the verification case and may include the conditions below.","bulletsHeading":"The chamber replicates","bullets":["Vacuum: pressure low enough that residual-gas heat transfer and other gas-related effects meet the project criterion.","Radiative sink: a cooled, high-emissivity shroud that provides a controlled cold background.","Temperature boundaries: hot and cold interface or shroud conditions derived from the mission analysis and margin rules.","External heat inputs: infrared sources, conductive heaters or solar simulation where the verification case requires them."]},{"title":"Why hardware fails in vacuum","content":"TVAC testing can reveal problems that are masked or not activated under ambient conditions. The findings depend on the test item and profile; the categories below are common mechanisms to investigate rather than guaranteed outcomes.","bulletsHeading":"Typical failure mechanisms","bullets":["Overheating: without convection, dissipating components depend entirely on radiation and conductive paths, so undersized thermal links show up within minutes.","Outgassing: polymers, adhesives and cable insulation release volatiles that can condense on optics and thermal control surfaces.","Trapped gas: closed volumes and blind holes vent slowly, stress seals during pump-down and can distort thin housings.","Material behaviour at extremes: differential thermal expansion, embrittled plastics and drifting electrical parameters appear only at temperature.","Workmanship defects: cold solder joints, marginal crimps and loose fasteners fail under repeated thermal cycling – exactly what the test is designed to provoke."]},{"title":"What a TVAC chamber consists of","content":"A complete TVAC system combines the vessel, pumping equipment, thermal conditioning, instrumentation, controls and safety functions. The required architecture and performance are project-specific.","bulletsHeading":"The four building blocks","bullets":["Vacuum vessel and access system sized for the as-tested configuration, fixtures and feedthroughs.","Pumping and measurement system sized for the target working pressure and expected gas load.","Thermal shroud, plate or other boundary-control hardware selected from the required heat paths and temperatures.","Control, data acquisition, alarms and protective functions matched to campaign risk and documentation needs."]},{"title":"Who needs thermal vacuum testing","content":"TVAC is used for components, electronics, mechanisms, optical assemblies, payloads and complete spacecraft when vacuum thermal behaviour or contamination performance requires evidence. The need for a campaign and its verification depth follow from mission risk, contractual requirements, heritage and analysis.","content2":"Owning a chamber and using an external facility are alternative operating models. The choice depends on campaign demand, schedule, staffing, facility infrastructure, independence requirements and total cost."},{"title":"Where TVAC sits in the qualification flow","content":"ECSS-E-ST-10-03C Rev.1, GSFC-STD-7000B and SMC-S-016 are examples of verification frameworks that can include thermal-vacuum testing. The approved environmental verification plan defines sequence, model philosophy, levels, durations, margins and documentation. TVAC is not universally placed after vibration and shock; programme logic controls the order.","content2":"Qualification, acceptance and protoflight apply different verification objectives and stress histories. The tailored programme documentation remains the controlling source for cycle count, dwell criteria and functional test scope."}],"faq":[{"q":"What does TVAC stand for?","a":"TVAC stands for thermal vacuum. It describes testing in which hardware is exposed to controlled vacuum and hot or cold thermal boundary conditions while temperatures, pressures and function are monitored. The specific profile depends on the approved verification requirements."},{"q":"What pressure is used in a thermal vacuum test?","a":"Many programmes use high-vacuum values around 10⁻⁵ to 10⁻⁶ mbar, but the binding value is project-specific. It should be stated for the expected test-item gas load and linked to the physical effect or standard requirement being verified."},{"q":"How long does a TVAC test take?","a":"Campaigns can range from hours to weeks. Duration follows from pump-down, bake-out, number of thermal cases or cycles, ramp rates, stabilisation criteria, functional testing and anomaly margin. It should be calculated from the approved procedure."},{"q":"Can hardware be qualified without a TVAC test?","a":"Tailoring may allow analysis, similarity or heritage to replace or reduce testing in specific cases, but the decision must be approved within the verification programme. Thermally new hardware that operates in vacuum generally needs test evidence to validate models and interfaces."}],"conclusion":"TVAC testing combines controlled vacuum, thermal boundary conditions, instrumentation and functional operation to validate analysis and reveal integration weaknesses. The useful test is not the most severe profile, but the one that is traceable to mission requirements and produces interpretable data."},"de":{"title":"Was ist ein Thermalvakuumtest (TVAC)?","description":"Eine technische Einführung in den Thermalvakuumtest: welche Weltraumbedingungen eine TVAC-Kammer simuliert, warum Hardware im Vakuum versagt und wo der Test in der Qualifikation steht.","seoTitle":"Was ist ein Thermalvakuumtest (TVAC)? | Deepvac","seoDescription":"Thermalvakuumtest erklärt: was ein TVAC-Test simuliert, warum Hardware im Vakuum versagt und wie die Prüfung in die Raumfahrtqualifikation passt.","intro":"Ein Thermalvakuumtest setzt Hardware kontrolliertem Vakuum und definierten thermischen Randbedingungen aus, während Temperaturen, Drücke und Funktionsverhalten aufgezeichnet werden. Der Test reduziert gasvermittelten Wärmetransport, sodass Wärmeleitung über Schnittstellen und Strahlung an die Umgebung die thermische Reaktion dominieren. Er dient zur Validierung der Thermalanalyse, zur Funktionsverifikation an festgelegten Grenzen und zur Prüfung von Integrations- oder Fertigungsschwächen. Druck, Temperaturprofil und Verifikationsansatz stammen aus den freigegebenen Projektanforderungen.","sections":[{"title":"Was ein Thermalvakuumtest bedeutet","content":"Bei einem TVAC-Test wird ein Prüfling in einen Vakuumbehälter eingebaut, der spezifizierte Druck hergestellt und geregelte thermische Randbedingungen gefahren, während der Prüfling überwacht und bei Bedarf betrieben wird. Die Kombination ist entscheidend: Thermalzyklen unter Luft bilden andere Wärmepfade ab, und Vakuum bei nur einer Temperatur beansprucht das Thermaldesign nicht vollständig.","content2":"Viele Programme verwenden Hochvakuum-Arbeitsdrücke im Bereich von 10⁻⁵ bis 10⁻⁶ mbar; eine universelle Anforderung ist das nicht. Die Prüfspezifikation sollte den Druck unter erwarteter Gaslast und den damit zu beherrschenden physikalischen Effekt festlegen."},{"title":"Welche Weltraumbedingungen die Kammer simuliert","content":"Eine TVAC-Kammer bildet ausgewählte thermische Aspekte der Weltraumumgebung nach. Die genaue Kombination folgt aus dem Verifikationsfall und kann die folgenden Bedingungen umfassen.","bulletsHeading":"Das bildet die Kammer nach","bullets":["Vakuum: ein ausreichend niedriger Druck, damit Restgas-Wärmetransport und weitere gasbezogene Effekte das Projektkriterium erfüllen.","Strahlungssenke: ein gekühlter, hochemittierender Shroud als kontrollierter kalter Hintergrund.","Temperaturrandbedingungen: heiße und kalte Schnittstellen- oder Shroudbedingungen aus Missionsanalyse und Margenregeln.","Externe Wärmeeinträge: Infrarotquellen, konduktive Heizer oder Solarsimulation, sofern der Verifikationsfall sie verlangt."]},{"title":"Warum Hardware im Vakuum versagt","content":"TVAC-Tests können Probleme sichtbar machen, die unter Umgebungsbedingungen verdeckt oder nicht aktiviert sind. Die Befunde hängen von Prüfling und Profil ab; die folgenden Kategorien sind verbreitete Prüfmechanismen und keine garantierten Ergebnisse.","bulletsHeading":"Typische Fehlermechanismen","bullets":["Überhitzung: Ohne Konvektion hängen Verlustleistungen vollständig an Strahlung und Wärmeleitpfaden; unterdimensionierte thermische Anbindungen zeigen sich binnen Minuten.","Ausgasung: Kunststoffe, Klebstoffe und Kabelisolierungen setzen flüchtige Stoffe frei, die auf Optiken und Thermalflächen kondensieren können.","Eingeschlossenes Gas: Geschlossene Volumina und Sacklöcher entlüften langsam, belasten Dichtungen beim Abpumpen und können dünnwandige Gehäuse verformen.","Materialverhalten an den Grenzen: Unterschiedliche Wärmeausdehnung, versprödende Kunststoffe und driftende elektrische Parameter treten erst bei Temperatur auf.","Fertigungsfehler: Kalte Lötstellen, schwache Crimpungen und lose Verschraubungen versagen unter wiederholten Thermalzyklen – genau das soll der Test provozieren."]},{"title":"Woraus eine Thermalvakuumkammer besteht","content":"Ein vollständiges TVAC-System kombiniert Behälter, Pumptechnik, thermische Konditionierung, Instrumentierung, Steuerung und Sicherheitsfunktionen. Architektur und Leistung sind projektspezifisch.","bulletsHeading":"Die vier Bausteine","bullets":["Vakuumbehälter und Zugangssystem für vollständigen Testaufbau, Vorrichtungen und Durchführungen dimensioniert.","Pump- und Messsystem für geforderten Arbeitsdruck und erwartete Gaslast ausgelegt.","Thermalshroud, Platte oder andere Randbedingungshardware aus Wärmepfaden und Temperaturanforderungen ausgewählt.","Steuerung, Datenerfassung, Alarmierung und Schutzfunktionen an Kampagnenrisiko und Dokumentationsbedarf angepasst."]},{"title":"Wer Thermalvakuumtests braucht","content":"TVAC wird für Komponenten, Elektronik, Mechanismen, optische Baugruppen, Nutzlasten und komplette Raumfahrzeuge eingesetzt, wenn thermisches Verhalten im Vakuum oder Kontaminationsleistung nachgewiesen werden müssen. Notwendigkeit und Verifikationstiefe folgen aus Missionsrisiko, Vertrag, Heritage und Analyse.","content2":"Eine eigene Kammer und eine externe Prüfanlage sind alternative Betriebsmodelle. Die Wahl hängt von Kampagnenbedarf, Termin, Personal, Gebäudeinfrastruktur, Unabhängigkeitsanforderung und Vollkosten ab."},{"title":"Wo der TVAC-Test in der Qualifikation steht","content":"ECSS-E-ST-10-03C Rev.1, GSFC-STD-7000B und SMC-S-016 sind Beispiele für Verifikationsrahmen, die Thermalvakuumtests einschließen können. Der freigegebene Umweltverifikationsplan definiert Reihenfolge, Modellphilosophie, Niveaus, Dauern, Margen und Dokumentation. TVAC findet nicht universell nach Vibration und Schock statt; die Projektlogik bestimmt die Reihenfolge.","content2":"Qualifikation, Abnahme und Protoflight verfolgen unterschiedliche Verifikationsziele und Belastungshistorien. Für Zyklenzahl, Haltekriterien und Funktionsumfang bleibt die getailorte Programmdokumentation verbindlich."}],"faq":[{"q":"Wofür steht TVAC?","a":"TVAC steht für Thermal Vacuum, also Thermalvakuum. Dabei wird Hardware kontrolliertem Vakuum und heißen oder kalten thermischen Randbedingungen ausgesetzt, während Temperaturen, Drücke und Funktion überwacht werden. Das konkrete Profil folgt aus den freigegebenen Verifikationsanforderungen."},{"q":"Welcher Druck herrscht bei einem Thermalvakuumtest?","a":"Viele Programme verwenden Hochvakuumwerte um 10⁻⁵ bis 10⁻⁶ mbar; verbindlich ist jedoch der projektspezifische Wert. Er sollte für die erwartete Prüflingsgaslast angegeben und mit dem zu verifizierenden physikalischen Effekt oder Normkriterium verknüpft werden."},{"q":"Wie lange dauert ein TVAC-Test?","a":"Kampagnen können Stunden bis Wochen dauern. Die Dauer folgt aus Abpumpen, Ausheizen, Zahl der Thermalfälle oder Zyklen, Rampen, Stabilisierungskriterien, Funktionstests und Anomaliereserve. Sie sollte aus der freigegebenen Prozedur berechnet werden."},{"q":"Geht Qualifikation auch ohne TVAC-Test?","a":"Tailoring kann in bestimmten Fällen Analyse, Ähnlichkeit oder Heritage anstelle eines Tests beziehungsweise zur Reduktion des Testumfangs zulassen. Die Entscheidung muss im Verifikationsprogramm freigegeben werden. Thermisch neuartige Hardware im Vakuumbetrieb benötigt im Allgemeinen Testnachweise zur Validierung von Modellen und Schnittstellen."}],"conclusion":"Ein TVAC-Test kombiniert kontrolliertes Vakuum, thermische Randbedingungen, Instrumentierung und Funktionsbetrieb, um Analysen zu validieren und Integrationsschwächen sichtbar zu machen. Aussagekräftig ist nicht das härteste Profil, sondern das auf Missionsanforderungen rückführbare Profil mit auswertbaren Daten."},"seoKey":"blogWhatIsTvacTesting","dateModified":"2026-07-23","searchIntent":{"en":{"primaryKeyword":"what is thermal vacuum testing","primaryQuestion":"What does a TVAC test reproduce and which failure mechanisms can it reveal?"},"de":{"primaryKeyword":"Was ist ein Thermalvakuumtest","primaryQuestion":"Was bildet ein TVAC-Test nach und welche Fehlermechanismen kann er sichtbar machen?"}},"references":[{"title":"ECSS-E-ST-10-03C Rev.1: Testing","publisher":"European Cooperation for Space Standardization (ECSS)","url":"https://ecss.nl/standard/ecss-e-st-10-03c-rev-1-testing-31-may-2022/"},{"title":"GSFC-STD-7000B: General Environmental Verification Standard (GEVS)","publisher":"NASA Goddard Space Flight Center","url":"https://standards.nasa.gov/standard/gsfc/gsfc-std-7000"},{"title":"Space Environment Simulator facility capabilities","publisher":"NASA Goddard Space Flight Center","url":"https://etd.gsfc.nasa.gov/capabilities/facilities-listing/space-environment-simulator/"}],"technicalNote":{"en":"The applicable contract, verification plan and project-specific tailoring remain binding. The standards listed here provide frameworks, not a universal test profile. Deepvac performance figures in this article describe current reference configurations. Binding values depend on chamber size, selected pumping and thermal concepts, test setup and the project quotation.","de":"Verbindlich bleiben Vertrag, Verifikationsplan und projektspezifisches Tailoring. Die genannten Normen liefern Rahmenwerke, kein universelles Testprofil. Die in diesem Artikel genannten Deepvac-Leistungswerte beschreiben aktuelle Referenzkonfigurationen. Verbindliche Werte hängen von Kammergröße, gewähltem Pump- und Thermalkonzept, Testaufbau und Projektangebot ab."}},{"articleKey":"contaminationControl","enSlug":"contamination-control-tvac","deSlug":"kontaminationskontrolle-tvac","category":"engineeringGuide","datePublished":"2026-07-22","relatedPaths":["/products/options/qcm-monitoring","/products/options/residual-gas-analysis","/products/options/bake-out","/products/options/nitrogen-venting"],"relatedArticles":["outgassingBasics","opticsElectronicsTesting","tvacTestCampaign"],"en":{"title":"Contamination Control in Thermal Vacuum Testing","description":"Molecular films and particles can quietly degrade optics, sensors and coatings during a TVAC test. How contamination arises, how QCM and RGA measure it, and how you keep a campaign clean.","seoTitle":"Contamination Control in TVAC Testing | Deepvac","seoDescription":"Contamination control in thermal vacuum testing: molecular vs particulate sources, prevention via bake-out and materials, QCM and RGA monitoring in practice.","intro":"Contamination control in TVAC testing addresses molecular deposition and particles. Vacuum and temperature can release volatile species from the test item, fixtures and chamber history, while cold surfaces can collect them. Particles arise mainly from handling, materials and the room environment. A campaign therefore needs a cleanliness budget, approved materials and processes, controlled chamber configuration and measurements matched to hardware sensitivity.","sections":[{"title":"Molecular versus particulate contamination","content":"Molecular contamination consists of material transported as vapour and deposited as a film. Particulate contamination consists of discrete fibres, dust or debris. TVAC conditions can mobilise molecular species through desorption and diffusion, while particles are usually introduced or released by handling, fixtures, coatings or mechanical activity. The controls and acceptance evidence for the two classes are different."},{"title":"Why optics, sensors and coatings care","content":"Optics, detectors and thermal-control surfaces can be sensitive to deposits far below visual detectability. The resulting effect depends on film composition, thickness, wavelength and function: transmission, scatter, calibration, solar absorptance or infrared emittance may change. Colder surfaces can become preferred collection sites, so their temperature history matters in the contamination model."},{"title":"Where contamination comes from","content":"Almost everything in the chamber contributes; the question is how much, and how volatile it is.","bulletsHeading":"Typical sources","bullets":["The test item itself: potting compounds, adhesives, conformal coatings, cable insulation and lubricants.","Fixtures and support equipment built from uncontrolled materials – a frequently underestimated contributor.","Chamber history: films from earlier campaigns re-evaporate when shrouds and walls warm up.","Pumping systems, if oil-sealed technology runs without safeguards – the reason oil-free pump stands are standard for space hardware.","Handling: fingerprints, packaging residues and lint introduced during integration."]},{"title":"Prevention: materials, cleaning, bake-out, nitrogen","content":"Prevention begins with the project contamination-control plan. Materials are screened or qualified for the intended use, cure states are controlled, hardware and fixtures are cleaned and packaged, and bake-out is applied where compatible. ECSS-Q-ST-70-02C and the NASA outgassing database provide common reference methods; project limits may be stricter than the familiar TML and CVCM screening values."},{"title":"Measurement: QCM, RGA and witness samples","content":"A temperature-controlled QCM measures deposited mass at a defined location and temperature. RGA measures the residual-gas mass spectrum and helps identify water, solvents, hydrocarbons or air-like signatures. Witness samples provide post-test surface evidence. None of these instruments alone proves total hardware cleanliness; placement, sensitivity, background and acceptance criteria must be defined together."},{"title":"Cleanliness across the campaign – and between campaigns","content":"Cleanliness should be controlled through the complete campaign. An empty-chamber baseline, fixture preparation and chamber bake-out may be required before sensitive hardware is installed. During the profile, the relative temperatures of shroud, test item, optics and QCM determine where condensable material can collect. Between campaigns, cleaning records, purge conditions and test history preserve the baseline for the next item."}],"faq":[{"q":"What does a QCM measure in a vacuum chamber?","a":"A QCM measures mass deposited on a resonating quartz crystal at a controlled location and temperature. The result is representative only for the selected crystal conditions and view factors, so placement and acceptance criteria must reflect the hardware contamination budget."},{"q":"What do TML and CVCM mean?","a":"TML is total mass loss during a standardised vacuum exposure; CVCM is the condensable fraction collected on a cooler surface. Frequently used screening values are TML below 1.0 percent and CVCM below 0.10 percent. They support material selection but do not replace project-specific contamination limits."},{"q":"Why is a vacuum chamber vented with nitrogen instead of air?","a":"Dry, filtered nitrogen can reduce humidity and airborne contamination during venting and standby. Its use, purity, filtration, flow and safety controls must be defined for the chamber and hardware; nitrogen venting is not a substitute for cleaning or material control."},{"q":"How do you know a chamber is clean enough for sensitive hardware?","a":"Through evidence, not assumption: an empty-chamber certification run at representative temperatures, with QCM trends and RGA spectra showing no unexpected condensables; witness samples analyzed after the run; and a chamber logbook documenting previous campaigns and cleanings. If the history is unknown or the last test was dirty, a bake-out followed by a repeat certification is the honest path back to a clean baseline."}],"conclusion":"Contamination control requires a defined cleanliness budget, qualified materials and processes, controlled chamber history and measurement during critical phases. QCM, RGA and witness samples answer different questions and should be selected from the sensitivity of the hardware."},"de":{"title":"Kontaminationskontrolle im Thermalvakuumtest","description":"Molekulare Filme und Partikel können Optiken, Sensorik und Beschichtungen im TVAC-Test unbemerkt schädigen. Wie Kontamination entsteht, wie QCM und RGA sie messen – und wie Ihre Kampagne sauber bleibt.","seoTitle":"Kontaminationskontrolle im TVAC-Test | Deepvac","seoDescription":"Kontaminationskontrolle im TVAC-Test: molekulare und partikuläre Quellen, Prävention durch Ausheizen, QCM- und RGA-Monitoring in der Praxis erklärt.","intro":"Kontaminationskontrolle im TVAC-Test behandelt molekulare Abscheidung und Partikel. Vakuum und Temperatur können flüchtige Spezies aus Prüfling, Vorrichtungen und Kammerhistorie freisetzen; kalte Flächen können sie sammeln. Partikel stammen hauptsächlich aus Handling, Materialien und Raumumgebung. Eine Kampagne benötigt deshalb ein Sauberkeitsbudget, freigegebene Materialien und Prozesse, eine kontrollierte Kammerkonfiguration und Messungen passend zur Hardwareempfindlichkeit.","sections":[{"title":"Molekulare und partikuläre Kontamination","content":"Molekulare Kontamination besteht aus als Dampf transportiertem Material, das sich als Film abscheidet. Partikuläre Kontamination besteht aus einzelnen Fasern, Staub oder Abrieb. TVAC-Bedingungen können molekulare Spezies durch Desorption und Diffusion mobilisieren; Partikel werden meist durch Handling, Vorrichtungen, Beschichtungen oder mechanische Aktivität eingebracht oder freigesetzt. Kontrollen und Abnahmenachweise beider Klassen unterscheiden sich."},{"title":"Warum Optiken, Sensorik und Beschichtungen betroffen sind","content":"Optiken, Detektoren und Thermalkontrollflächen können auf Beläge weit unterhalb der Sichtbarkeitsgrenze empfindlich reagieren. Der Effekt hängt von Filmzusammensetzung, Dicke, Wellenlänge und Funktion ab: Transmission, Streulicht, Kalibrierung, solare Absorptivität oder Infrarotemission können sich ändern. Kältere Flächen können bevorzugte Sammelstellen werden; ihre Temperaturhistorie gehört deshalb in das Kontaminationsmodell."},{"title":"Woher Kontamination kommt","content":"Fast alles in der Kammer trägt bei; die Frage ist, wie viel – und wie flüchtig es ist.","bulletsHeading":"Typische Quellen","bullets":["Der Prüfling selbst: Vergussmassen, Klebstoffe, Schutzlacke, Kabelisolierungen und Schmierstoffe.","Vorrichtungen und Hilfsgestelle aus unkontrollierten Materialien – ein häufig unterschätzter Beitrag.","Die Kammerhistorie: Filme aus früheren Kampagnen verdampfen erneut, wenn Shroud und Wände warm werden.","Pumpensysteme, wenn ölgedichtete Technik ohne Schutzmaßnahmen läuft – der Grund, warum ölfreie Pumpstände für Raumfahrthardware Standard sind.","Das Handling: Fingerabdrücke, Verpackungsrückstände und Fusseln aus der Integration."]},{"title":"Prävention: Material, Reinigung, Ausheizen, Stickstoff","content":"Prävention beginnt mit dem projektspezifischen Kontaminationskontrollplan. Materialien werden für den vorgesehenen Einsatz gescreent oder qualifiziert, Aushärtungszustände kontrolliert, Hardware und Vorrichtungen gereinigt und verpackt sowie bei Verträglichkeit ausgeheizt. ECSS-Q-ST-70-02C und die NASA-Ausgasungsdatenbank liefern verbreitete Referenzmethoden; Projektgrenzen können strenger als die bekannten TML- und CVCM-Screeningwerte sein."},{"title":"Messung: QCM, RGA und Zeugenproben","content":"Ein temperaturgeregeltes QCM misst abgeschiedene Masse an einem definierten Ort und bei definierter Temperatur. Die RGA misst das Restgas-Massenspektrum und hilft, Wasser, Lösemittel, Kohlenwasserstoffe oder luftähnliche Signaturen zu erkennen. Zeugenproben liefern einen Oberflächennachweis nach dem Test. Keines dieser Instrumente weist allein die Gesamtsauberkeit der Hardware nach; Position, Empfindlichkeit, Untergrund und Abnahmekriterien müssen gemeinsam festgelegt werden."},{"title":"Sauberkeit in der Kampagne – und zwischen den Kampagnen","content":"Sauberkeit sollte über die vollständige Kampagne gelenkt werden. Vor der Installation empfindlicher Hardware können eine Leerkammer-Baseline, Vorrichtungsvorbereitung und Kammerausheizen erforderlich sein. Während des Profils bestimmen die relativen Temperaturen von Shroud, Prüfling, Optik und QCM, wo kondensierbares Material gesammelt wird. Zwischen Kampagnen sichern Reinigungsnachweise, Spülbedingungen und Testhistorie die Ausgangsbasis für den nächsten Prüfling."}],"faq":[{"q":"Was misst ein QCM in einer Vakuumkammer?","a":"Ein QCM misst die auf einem schwingenden Quarzkristall abgeschiedene Masse an einem kontrollierten Ort und bei definierter Temperatur. Der Messwert ist nur für die gewählten Kristallbedingungen und Sichtfaktoren repräsentativ; Position und Abnahmekriterien müssen zum Kontaminationsbudget der Hardware passen."},{"q":"Was bedeuten TML und CVCM?","a":"TML ist der Gesamtmasseverlust bei einer standardisierten Vakuumauslagerung; CVCM ist der auf einer kühleren Fläche gesammelte kondensierbare Anteil. Häufig verwendete Screeningwerte sind TML unter 1,0 Prozent und CVCM unter 0,10 Prozent. Sie unterstützen die Materialauswahl, ersetzen aber keine projektspezifischen Kontaminationsgrenzen."},{"q":"Warum wird eine Vakuumkammer mit Stickstoff belüftet statt mit Luft?","a":"Trockener, gefilterter Stickstoff kann Feuchte und luftgetragene Kontamination beim Belüften und im Standby reduzieren. Einsatz, Reinheit, Filtration, Durchfluss und Sicherheitskontrollen müssen für Kammer und Hardware definiert werden; Stickstoffbelüftung ersetzt weder Reinigung noch Materialkontrolle."},{"q":"Woher weiß ich, dass eine Kammer sauber genug für empfindliche Hardware ist?","a":"Durch Nachweis statt Annahme: eine Leerkammer-Zertifizierung bei repräsentativen Temperaturen, deren QCM-Trends und RGA-Spektren keine unerwarteten Kondensate zeigen; Zeugenproben, die nach dem Lauf analysiert werden; und ein Kammerlogbuch über frühere Kampagnen und Reinigungen. Ist die Historie unbekannt oder war der letzte Test schmutzig, führt der ehrliche Weg über Ausheizen und eine wiederholte Zertifizierung zurück zur sauberen Basis."}],"conclusion":"Kontaminationskontrolle erfordert ein definiertes Sauberkeitsbudget, qualifizierte Materialien und Prozesse, eine kontrollierte Kammerhistorie sowie Messungen in kritischen Phasen. QCM, RGA und Zeugenproben beantworten unterschiedliche Fragen und sollten aus der Empfindlichkeit der Hardware abgeleitet werden."},"seoKey":"blogContaminationControl","dateModified":"2026-07-23","searchIntent":{"en":{"primaryKeyword":"contamination control TVAC","primaryQuestion":"How are molecular and particulate contamination prevented and monitored during TVAC testing?"},"de":{"primaryKeyword":"Kontaminationskontrolle TVAC","primaryQuestion":"Wie werden molekulare und partikuläre Kontamination im TVAC-Test verhindert und überwacht?"}},"references":[{"title":"ECSS-Q-ST-70-02C: Thermal vacuum outgassing test for the screening of space materials","publisher":"European Cooperation for Space Standardization (ECSS)","url":"https://ecss.nl/standard/ecss-q-st-70-02c-thermal-vacuum-outgassing-test-for-the-screening-of-space-materials/"},{"title":"Outgassing Data for Selecting Spacecraft Materials: Test description","publisher":"NASA","url":"https://outgassing.nasa.gov/Description"},{"title":"Molecular Accumulation during JWST Cryogenic Thermal Vacuum Testing","publisher":"NASA Technical Reports Server","url":"https://ntrs.nasa.gov/citations/20220010052"},{"title":"Contamination Measurements During Thermal Vacuum Tests in a Large Space Chamber","publisher":"NASA Technical Reports Server","url":"https://ntrs.nasa.gov/citations/19840026425"}]},{"articleKey":"viewportsOpticalAccess","enSlug":"tvac-viewports-optical-access","deSlug":"schauglaeser-optischer-zugang","category":"engineeringGuide","datePublished":"2026-07-22","relatedPaths":["/products/options/viewing-window-znse","/products/options/optical-viewports","/products/options/interior-camera","/products/thermal-vision"],"relatedArticles":["opticsElectronicsTesting","temperatureMeasurement","contaminationControl"],"en":{"title":"Viewports and Optical Access in TVAC Chambers","description":"From simple sight glasses to ZnSe windows for thermography and in-chamber IR cameras: how to plan optical access into a TVAC chamber – materials, ports and pitfalls.","seoTitle":"TVAC Viewports & Optical Access | Deepvac","seoDescription":"Vacuum chamber viewports: window materials from fused silica to ZnSe, thermography options, port sizing, contamination pitfalls and spare-port strategy.","intro":"Optical access in a TVAC chamber must be specified from wavelength band, field of view, radiometric or visual accuracy, port geometry, shroud opening and contamination control. Visible inspection, infrared thermography and optical stimulation use different window materials and calibration methods. Because vessel and shroud penetrations are difficult to change after manufacture, the observation concept belongs in the initial interface definition.","sections":[{"title":"Why optical access matters","content":"A closed steel vessel tells you nothing about what is happening inside. Optical access turns the chamber into an observable experiment: visual inspection of mechanisms, deployments and MLI behaviour, thermographic mapping of surface temperatures, illumination for cameras, and optical stimulation or alignment of instruments through dedicated high-quality windows. Because every port is a hole in the vessel, in the shroud and sometimes in the thermal design, optical access is planned at specification time – not discovered as a need during the first campaign."},{"title":"Window materials and their transmission bands","content":"Window selection must use verified transmission data for the required wavelength, thickness, coating, temperature and incidence angle. The ranges below are qualitative orientation; the component manufacturer's current spectral and mechanical data are binding.","bulletsHeading":"Common choices","bullets":["Borosilicate glass: robust visible inspection where ultraviolet or thermal-infrared transmission is not required.","Fused silica: visible, ultraviolet and near-infrared applications, subject to grade and coating.","Sapphire: mechanically robust access from ultraviolet into parts of the infrared, subject to thickness and orientation.","Zinc selenide: commonly used for long-wave infrared thermography, with handling and coating constraints.","Germanium: infrared transmission with little or no visible transparency, useful only when the optical and mechanical design supports it."]},{"title":"Thermography: through a ZnSe window or inside the chamber","content":"An external infrared camera behind a suitable viewport keeps the camera accessible but fixes the viewing geometry and adds window transmission, reflection and temperature to the radiometric model. A pressure-isolated or otherwise vacuum-compatible in-chamber camera can improve viewing angle and coverage, but adds its own thermal management, calibration, cabling and contamination interfaces.","content2":"The choice depends on repeatability of test geometry, required field of view, measurement uncertainty, service access and the temperature environment. Neither architecture is generally superior. A calibration should represent the installed optical path and expected scene temperatures."},{"title":"Port sizing and placement","content":"Think in lines of sight before flange sizes: what must the camera or sensor see, from where, at which angle? Distance and optics then define the required clear aperture, and standard vacuum flange sizes accommodate the window assembly. Placement interacts with the thermal design, because every viewport needs an opening in the shroud, and every opening is a warm spot in the cold background – positions are chosen where the radiative disturbance is acceptable, and unused openings get cold covers. Pairing a camera port with a separate illumination port avoids blinding reflections from the item's own surfaces."},{"title":"Contamination and condensation on windows","content":"Windows sit in a comfortable position contamination-wise: they usually stay near ambient temperature, and molecular films prefer the coldest surface in the chamber – normally the shroud. Risks remain at the transitions: during warm-up and venting, redistributed volatiles can reach the glass, bake-out phases load every surface, and a window facing a strong local source can still fog. On the room side, humid air can condense on a window cooled by radiative coupling to the cold interior. Protective shutters during dirty phases, dry nitrogen purging and careful cleaning – ZnSe and its coatings are soft – keep transmission where the calibration expects it."},{"title":"Reserve ports and future interfaces","content":"Adding a vessel penetration after fabrication can require structural review, welding, cleaning, leak testing, shroud modification and renewed acceptance. Blanked reserve ports can reduce that risk, but only when their size, location, line of sight and surrounding space match plausible future uses. A port schedule should therefore record both current and reserved functions."}],"faq":[{"q":"Which window material do you need for thermal imaging?","a":"Long-wave infrared thermography commonly uses materials such as zinc selenide or germanium because ordinary glass is largely opaque in that band. Select the actual window from verified spectral transmission, thickness, coating, mechanical load and temperature data, then include the installed transmission in the radiometric calibration."},{"q":"Can you watch a test item inside a TVAC chamber live?","a":"Yes. Viewports allow direct visual observation and external cameras; interior cameras extend coverage to angles no port reaches; and infrared systems – through a ZnSe window or as a pressure-rated in-chamber camera – add live thermal maps. Combined with remote monitoring of chamber data, you can follow a campaign in detail without opening the door or standing at the panel."},{"q":"Why can a thermal camera not measure through normal glass?","a":"Ordinary glass strongly attenuates the long-wave infrared used by many thermal cameras, so the camera tends to measure the glass surface rather than the scene behind it. An appropriate infrared-transmitting material and installed-path calibration are required."},{"q":"How many viewports does a TVAC chamber need?","a":"The number follows from the observation and illumination tasks, required view angles and future interface plan. Specify each port by function, wavelength, clear aperture and line of sight. Reserve ports are useful when those parameters support credible future needs."}],"conclusion":"Optical access should be specified from wavelength band, field of view, calibration accuracy, shroud opening and contamination control. Reserve ports are valuable only when their locations and clear apertures support plausible future observation tasks."},"de":{"title":"Schaugläser und optischer Zugang in TVAC-Kammern","description":"Vom einfachen Schauglas über ZnSe-Fenster für Thermografie bis zur IR-Kamera in der Kammer: So planen Sie optischen Zugang in ein TVAC-System – Materialien, Stutzen, Fallstricke.","seoTitle":"Schaugläser für Vakuumkammern | Deepvac","seoDescription":"Schaugläser für Vakuumkammern: Fenstermaterialien von Quarzglas bis ZnSe, Thermografie-Optionen, Stutzengrößen, Kontaminationsfallen und Reserveports.","intro":"Optischer Zugang in einer TVAC-Kammer muss aus Wellenlängenbereich, Sichtfeld, radiometrischer oder visueller Genauigkeit, Stutzengeometrie, Shroud-Öffnung und Kontaminationskontrolle spezifiziert werden. Sichtprüfung, Infrarot-Thermografie und optische Stimulation verwenden unterschiedliche Fenstermaterialien und Kalibriermethoden. Da Behälter- und Shrouddurchbrüche nach der Fertigung nur aufwendig geändert werden können, gehört das Beobachtungskonzept in die erste Schnittstellendefinition.","sections":[{"title":"Warum optischer Zugang zählt","content":"Ein geschlossener Stahlbehälter verrät nichts über das Geschehen im Inneren. Optischer Zugang macht die Kammer zum beobachtbaren Experiment: Sichtprüfung von Mechanismen, Entfaltungen und MLI-Verhalten, thermografische Kartierung von Oberflächentemperaturen, Beleuchtung für Kameras sowie optische Stimulation oder Ausrichtung von Instrumenten durch dedizierte hochwertige Fenster. Weil jeder Stutzen ein Loch im Behälter, im Shroud und manchmal im Thermaldesign ist, wird optischer Zugang in der Spezifikationsphase geplant – nicht erst in der ersten Kampagne als Bedarf entdeckt."},{"title":"Fenstermaterialien und ihre Transmissionsbereiche","content":"Die Fensterauswahl muss auf verifizierten Transmissionsdaten für geforderte Wellenlänge, Dicke, Beschichtung, Temperatur und Einfallswinkel beruhen. Die folgenden Bereiche dienen der qualitativen Orientierung; verbindlich sind die aktuellen spektralen und mechanischen Daten des Komponentenherstellers.","bulletsHeading":"Gängige Optionen","bullets":["Borosilikatglas: robuste Sichtprüfung, wenn weder UV- noch thermische IR-Transmission benötigt wird.","Quarzglas: Anwendungen im Sichtbaren, Ultravioletten und nahen Infrarot, abhängig von Qualität und Beschichtung.","Saphir: mechanisch robuster Zugang vom Ultravioletten in Teile des Infraroten, abhängig von Dicke und Orientierung.","Zinkselenid: häufig für langwellig-infrarote Thermografie verwendet, mit Anforderungen an Handling und Beschichtung.","Germanium: Infrarottransmission bei geringer oder fehlender Sichttransparenz, geeignet nur bei passendem optischem und mechanischem Design."]},{"title":"Thermografie: durch das ZnSe-Fenster oder in der Kammer","content":"Eine externe Infrarotkamera hinter einem geeigneten Fenster bleibt zugänglich, legt aber die Sichtgeometrie fest und ergänzt Fenstertransmission, Reflexion und Temperatur im radiometrischen Modell. Eine druckisolierte oder anderweitig vakuumtaugliche Kamera in der Kammer kann Blickwinkel und Abdeckung verbessern, bringt jedoch eigenes Thermalmanagement, Kalibrierung, Verkabelung und Kontaminationsschnittstellen mit.","content2":"Die Wahl hängt von Wiederholbarkeit der Prüfgeometrie, gefordertem Sichtfeld, Messunsicherheit, Servicezugang und Temperaturumgebung ab. Keine Architektur ist grundsätzlich überlegen. Die Kalibrierung sollte den eingebauten optischen Pfad und die erwarteten Szenentemperaturen abbilden."},{"title":"Stutzengröße und Platzierung","content":"Denken Sie in Sichtlinien, bevor Sie in Flanschgrößen denken: Was muss Kamera oder Sensor sehen, von wo, unter welchem Winkel? Abstand und Optik definieren dann die nötige freie Apertur, und gängige Vakuumflanschgrößen nehmen die Fensterbaugruppe auf. Die Platzierung wechselwirkt mit dem Thermaldesign, denn jedes Schauglas braucht eine Öffnung im Shroud – und jede Öffnung ist ein warmer Fleck im kalten Hintergrund. Positionen werden dort gewählt, wo die radiative Störung akzeptabel ist; ungenutzte Öffnungen erhalten kalte Abdeckungen. Ein eigener Beleuchtungsstutzen neben dem Kamerastutzen vermeidet blendende Reflexe von den Oberflächen des Prüflings."},{"title":"Kontamination und Kondensation auf Fenstern","content":"Fenster sind kontaminationsseitig komfortabel positioniert: Sie bleiben meist nahe Raumtemperatur, und molekulare Filme bevorzugen die kälteste Fläche der Kammer – normalerweise den Shroud. Risiken bleiben an den Übergängen: Beim Aufwärmen und Belüften können umverteilte Flüchtige das Glas erreichen, Ausheizphasen belasten jede Oberfläche, und ein Fenster gegenüber einer starken lokalen Quelle kann trotzdem beschlagen. Raumseitig kann feuchte Luft auf einem Fenster kondensieren, das durch Strahlungskopplung ans kalte Innere auskühlt. Schutzblenden in schmutzigen Phasen, Spülen mit trockenem Stickstoff und vorsichtige Reinigung – ZnSe und seine Beschichtungen sind weich – halten die Transmission dort, wo die Kalibrierung sie erwartet."},{"title":"Reserveports und künftige Schnittstellen","content":"Ein nachträglicher Behälterdurchbruch kann Strukturprüfung, Schweißen, Reinigung, Lecktest, Shroudänderung und erneute Abnahme erfordern. Verschlossene Reserveports können dieses Risiko reduzieren, jedoch nur, wenn Größe, Position, Sichtlinie und Bauraum zu plausiblen künftigen Nutzungen passen. Ein Stutzenplan sollte deshalb aktuelle und reservierte Funktionen dokumentieren."}],"faq":[{"q":"Welches Fenstermaterial braucht man für Wärmebildaufnahmen?","a":"Langwellige Infrarot-Thermografie nutzt häufig Materialien wie Zinkselenid oder Germanium, weil gewöhnliches Glas in diesem Band weitgehend undurchlässig ist. Das konkrete Fenster wird aus verifizierter spektraler Transmission, Dicke, Beschichtung, mechanischer Last und Temperatur ausgewählt; die eingebaute Transmission gehört in die radiometrische Kalibrierung."},{"q":"Kann man einen Prüfling in der TVAC-Kammer live beobachten?","a":"Ja. Schaugläser erlauben direkte Sichtbeobachtung und externe Kameras; Kameras in der Kammer erweitern die Abdeckung auf Winkel, die kein Stutzen erreicht; Infrarotsysteme – durch ein ZnSe-Fenster oder als druckfeste Kamera in der Kammer – ergänzen Wärmekarten in Echtzeit. Zusammen mit der Fernüberwachung der Anlagendaten verfolgen Sie eine Kampagne im Detail, ohne die Tür zu öffnen oder am Panel zu stehen."},{"q":"Warum kann eine Wärmebildkamera nicht durch normales Glas messen?","a":"Gewöhnliches Glas dämpft das von vielen Wärmebildkameras verwendete langwellige Infrarot stark. Die Kamera misst dann eher die Glasoberfläche als die Szene dahinter. Erforderlich sind ein geeignetes IR-transmittierendes Material und eine Kalibrierung des eingebauten optischen Pfads."},{"q":"Wie viele Schaugläser braucht eine TVAC-Kammer?","a":"Die Anzahl folgt aus Beobachtungs- und Beleuchtungsaufgaben, geforderten Blickwinkeln und künftigem Schnittstellenplan. Jeder Stutzen sollte nach Funktion, Wellenlänge, freier Apertur und Sichtlinie spezifiziert werden. Reserveports sind sinnvoll, wenn diese Parameter plausible spätere Bedarfe unterstützen."}],"conclusion":"Optischer Zugang sollte aus Wellenlängenbereich, Sichtfeld, Kalibriergenauigkeit, Shroud-Öffnung und Kontaminationskontrolle abgeleitet werden. Reserveports sind dann sinnvoll, wenn Position und freie Apertur plausible spätere Beobachtungsaufgaben unterstützen."},"seoKey":"blogViewportsOpticalAccess","dateModified":"2026-07-23","searchIntent":{"en":{"primaryKeyword":"TVAC viewports optical access","primaryQuestion":"Which viewport material and camera arrangement suit visual or infrared observation?"},"de":{"primaryKeyword":"Schaugläser optischer Zugang TVAC","primaryQuestion":"Welches Fenstermaterial und welche Kameraanordnung passen zu Sicht- oder Infrarotbeobachtung?"}},"references":[{"title":"Why ordinary glass blocks long-wave infrared imaging","publisher":"Teledyne FLIR","url":"https://www.flir.com/en-eu/discover/home-outdoor/can-thermal-imaging-see-through-walls/"},{"title":"Accounting for optical material transmission in thermal imaging","publisher":"Teledyne FLIR","url":"https://www.flir.com/support-center/instruments2/what-is-the-transmission-rate-of-the-optic-material/"},{"title":"Thermal imaging through a zinc selenide window during vacuum testing","publisher":"NASA Technical Reports Server","url":"https://ntrs.nasa.gov/citations/20130001762"}]}]
+[
+  {
+    "articleKey": "pumpingSystemSelection",
+    "enSlug": "tvac-pumping-systems",
+    "deSlug": "vakuumpumpstand-tvac",
+    "category": "engineeringGuide",
+    "datePublished": "2026-02-17",
+    "relatedPaths": [
+      "/products/options/oil-free-pumping",
+      "/products/options/roots-booster",
+      "/products/options/cryogenic-traps",
+      "/products/options/residual-gas-analysis"
+    ],
+    "relatedArticles": [
+      "vacuumLevelsExplained",
+      "outgassingBasics",
+      "tvacCostDrivers"
+    ],
+    "en": {
+      "title": "TVAC Pumping Systems: How to Select the Right Architecture",
+      "description": "From oil-free backing pumps to turbomolecular pumps, roots boosters and cryo traps: how a TVAC pumping system is structured, sized and monitored – and which drivers actually matter.",
+      "seoTitle": "TVAC Pumping Systems: Selection Guide | Deepvac",
+      "seoDescription": "Vacuum pumping system selection for TVAC chambers: oil-free backing pumps, turbo pumps, roots boosters, cryo traps, sizing drivers and RGA monitoring explained.",
+      "intro": "A TVAC pumping system is selected from chamber volume, conductance, expected gas load, target working pressure, allowable pump-down time, cleanliness and duty cycle. Many systems combine a dry roughing stage with a turbomolecular high-vacuum stage and optional cryogenic capture surfaces, but the correct architecture is configuration-specific. Effective speed at the chamber and the test-item gas load matter more than the sum of pump nameplate values.",
+      "sections": [
+        {
+          "title": "The typical TVAC pumping architecture",
+          "content": "A common architecture uses a dry backing pump to evacuate the chamber and support the high-vacuum pump, a valve-isolated turbomolecular stage for molecular-flow operation and, where required, a cooled trap or panel for condensable species. Pressure gauges and control logic must cover each transition safely. Other architectures, including cryopumps or different backing stages, may be preferable for specific gas loads or cleanliness requirements."
+        },
+        {
+          "title": "Why oil-free backing pumps are the default",
+          "content": "Dry backing pumps avoid an oil inventory in the pumping train and can reduce the risk of hydrocarbon backstreaming. This is useful for contamination-sensitive hardware, but oil-free architecture does not by itself guarantee a clean chamber. Materials, seals, maintenance, exhaust routing, chamber history and operating procedure still determine contamination performance.",
+          "bulletsHeading": "What this buys you",
+          "bullets": [
+            "No oil backstreaming into the chamber, even during slow roughing or an unplanned standstill.",
+            "No oil handling, oil changes or oil-mist exhaust treatment in the lab.",
+            "Cleaner residual gas spectra, which makes RGA interpretation and leak diagnosis easier.",
+            "The trade-off: dry pumps need periodic service too – scroll tip seals are wear parts – so plan maintenance rather than assuming zero care."
+          ]
+        },
+        {
+          "title": "Turbomolecular pumps for high vacuum",
+          "content": "A turbomolecular pump operates after the backing pressure and valve sequence meet the manufacturer's conditions. Its effective speed at the vessel is reduced by port and line conductance, screens, valves and gas species. Bearing concept, vibration, magnetic environment, maintenance and fault response should be selected from the test programme, not from pressure range alone."
+        },
+        {
+          "title": "Roots boosters: faster rough-down for large volumes",
+          "content": "A roots booster can shorten roughing time or support higher throughput in the appropriate pressure range. Its benefit depends on volume, backing-pump capacity, conductance, cycle frequency and the time value of each pump-down. No single chamber-volume threshold determines whether it is justified."
+        },
+        {
+          "title": "Cryo traps and panels: pumping water",
+          "content": "Water desorption from internal surfaces often dominates the gas load after the initial air removal. A sufficiently cold trap or cryopanel can capture water and other condensable species with high local pumping speed, which may improve pressure behaviour and cleanliness. Capture capacity, line of sight, regeneration and release during warm-up must be included in the operating sequence."
+        },
+        {
+          "title": "Sizing drivers, staged logic and monitoring",
+          "content": "Pump selection is a system calculation, not a catalogue lookup. Our engineering team sizes pumping systems against a handful of drivers, and the same list works as your specification checklist.",
+          "bulletsHeading": "What actually drives sizing",
+          "bullets": [
+            "Chamber volume sets the rough-down time constant together with backing pump speed.",
+            "Internal surface area, materials and chamber history determine the outgassing load the high-vacuum stage must digest.",
+            "Target pressure defines the required stage count and pump technologies.",
+            "Allowed pump-down time and cycling frequency decide whether boosters and traps pay off.",
+            "Test item outgassing – often larger than the empty-chamber load – needs margin, not optimism."
+          ],
+          "content2": "Monitoring closes the loop: a Pirani gauge covers rough vacuum, an ionization gauge covers high vacuum, and a residual gas analyzer identifies what the pressure actually consists of – water, solvents or an air leak signature – so you troubleshoot with data instead of guesses."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Which vacuum pumps does a TVAC chamber use?",
+          "a": "Many TVAC systems combine a dry backing stage with a high-vacuum pump, while boosters, cryogenic surfaces and contamination diagnostics are added when chamber volume, gas load, turnaround time or cleanliness justify them. The correct architecture follows from the required working pressure under load, effective conductance, allowable pump-down time and test-item outgassing, not from one standard pump list."
+        },
+        {
+          "q": "Why are oil-free vacuum pumps important for TVAC testing?",
+          "a": "Because oil-sealed pumps can backstream hydrocarbons into the chamber, where they condense on cold surfaces and optics as exactly the molecular contamination films a space test must avoid. Dry scroll and multi-stage roots pumps eliminate this risk class at the source, keep residual gas spectra clean for RGA work, and remove oil logistics from the lab. They still need scheduled maintenance – wear parts like tip seals are real."
+        },
+        {
+          "q": "How long does pumping down to 10⁻⁶ mbar take?",
+          "a": "There is no generic time. Roughing may take minutes, while the transition to the required working pressure can take hours or longer depending on volume, conductance, surface area, humidity, cleanliness, test-item outgassing, bake-out and pump configuration. Use a calculated or measured pump-down curve for scheduling."
+        },
+        {
+          "q": "Do I need a roots booster for my chamber?",
+          "a": "Evaluate the booster from the required roughing time, chamber conductance, backing-pump curve, operating frequency and any continuous gas load. Compact chambers may not benefit, while larger or frequently cycled systems may. The decision should be supported by a pump-down calculation or test."
+        }
+      ],
+      "conclusion": "A pumping train should be sized from gas load, effective conductance, target working pressure and allowable turnaround time. Pump nameplate speed is only one input; test-item outgassing, water load, port geometry and regeneration strategy often determine the real result."
+    },
+    "de": {
+      "title": "Vakuumpumpstand für TVAC: Architektur richtig auslegen",
+      "description": "Von ölfreien Vorpumpen über Turbomolekularpumpen bis zu Roots-Boostern und Kryofallen: Wie ein TVAC-Pumpstand aufgebaut, dimensioniert und überwacht wird – und welche Treiber wirklich zählen.",
+      "seoTitle": "Vakuumpumpstand für TVAC auslegen | Deepvac",
+      "seoDescription": "Vakuumpumpstand für TVAC-Kammern auslegen: ölfreie Vorpumpen, Turbopumpen, Roots-Booster, Kryofallen, Dimensionierung und RGA-Überwachung verständlich erklärt.",
+      "intro": "Ein TVAC-Pumpstand wird aus Kammervolumen, Leitwert, erwarteter Gaslast, gefordertem Arbeitsdruck, zulässiger Abpumpzeit, Sauberkeit und Einsatzprofil ausgewählt. Viele Systeme kombinieren eine trockene Vorvakuumstufe mit einer Turbomolekular-Hochvakuumstufe und optionalen kryogenen Fangflächen; die richtige Architektur ist jedoch konfigurationsspezifisch. Effektives Saugvermögen an der Kammer und Gaslast des Prüflings zählen mehr als die Summe der Typenschildwerte.",
+      "sections": [
+        {
+          "title": "Die typische Pumpstand-Architektur",
+          "content": "Eine verbreitete Architektur nutzt eine trockene Vorpumpe zum Evakuieren der Kammer und zur Unterstützung der Hochvakuumpumpe, eine ventilgetrennte Turbomolekularstufe für den Molekularströmungsbereich und bei Bedarf eine gekühlte Falle oder ein Paneel für kondensierbare Spezies. Druckmesstechnik und Steuerlogik müssen jeden Übergang sicher abdecken. Für besondere Gaslasten oder Sauberkeitsanforderungen können Kryopumpen oder andere Vorpumpstufen geeigneter sein."
+        },
+        {
+          "title": "Warum ölfreie Vorpumpen der Standard sind",
+          "content": "Trockene Vorpumpen vermeiden einen Ölvorrat im Pumpstrang und können das Risiko von Kohlenwasserstoff-Rückströmung reduzieren. Das ist für kontaminationsempfindliche Hardware vorteilhaft; eine ölfreie Architektur garantiert jedoch nicht allein eine saubere Kammer. Materialien, Dichtungen, Wartung, Abluftführung, Kammerhistorie und Betriebsprozedur bestimmen weiterhin die Kontaminationsleistung.",
+          "bulletsHeading": "Was Ihnen das bringt",
+          "bullets": [
+            "Kein Öl-Rückströmen in die Kammer, auch bei langsamem Abpumpen oder ungeplantem Stillstand.",
+            "Kein Ölhandling, keine Ölwechsel, keine Ölnebel-Abluftbehandlung im Labor.",
+            "Sauberere Restgasspektren – das erleichtert RGA-Interpretation und Leckdiagnose.",
+            "Der Kompromiss: Auch Trockenläufer brauchen Wartung – Scroll-Dichtungen sind Verschleißteile –, planen Sie also Instandhaltung ein, statt Wartungsfreiheit anzunehmen."
+          ]
+        },
+        {
+          "title": "Turbomolekularpumpen für das Hochvakuum",
+          "content": "Eine Turbomolekularpumpe wird zugeschaltet, nachdem Vorvakuumdruck und Ventilsequenz die Herstellerbedingungen erfüllen. Ihr effektives Saugvermögen am Behälter wird durch Leitwerte von Stutzen und Leitungen, Gitter, Ventile und Gasart reduziert. Lagerkonzept, Vibration, magnetische Umgebung, Wartung und Fehlerverhalten sollten aus dem Prüfprogramm und nicht nur aus dem Druckbereich ausgewählt werden."
+        },
+        {
+          "title": "Roots-Booster: schnelleres Abpumpen großer Volumina",
+          "content": "Ein Roots-Booster kann die Vorvakuumzeit verkürzen oder im geeigneten Druckbereich höheren Durchsatz unterstützen. Sein Nutzen hängt von Volumen, Vorpumpkapazität, Leitwert, Zyklenhäufigkeit und dem Zeitwert jedes Abpumpvorgangs ab. Eine einzelne Kammervolumengrenze entscheidet nicht über seine Wirtschaftlichkeit."
+        },
+        {
+          "title": "Kryofallen und -paneele: Wasser pumpen",
+          "content": "Die Wasserdesorption von inneren Oberflächen dominiert nach dem Entfernen der Luft häufig die Gaslast. Eine ausreichend kalte Falle oder ein Kryopaneel kann Wasser und andere kondensierbare Spezies mit hohem lokalem Saugvermögen auffangen und damit Druckverlauf und Sauberkeit verbessern. Fangkapazität, Sichtlinie, Regeneration und Freisetzung beim Aufwärmen gehören in die Betriebssequenz."
+        },
+        {
+          "title": "Dimensionierung, Stufenlogik und Überwachung",
+          "content": "Die Pumpenauswahl ist eine Systemrechnung, kein Katalogblick. Unser Engineering-Team legt Pumpstände anhand weniger Treiber aus – dieselbe Liste taugt als Ihre Spezifikations-Checkliste.",
+          "bulletsHeading": "Was die Auslegung wirklich treibt",
+          "bullets": [
+            "Das Kammervolumen bestimmt zusammen mit dem Saugvermögen der Vorpumpe die Zeitkonstante des Vorevakuierens.",
+            "Innere Oberfläche, Materialien und Kammerhistorie definieren die Outgassing-Last, die die Hochvakuumstufe verdauen muss.",
+            "Der Zieldruck legt Stufenzahl und Pumpentechnologien fest.",
+            "Zulässige Abpumpzeit und Zyklushäufigkeit entscheiden, ob sich Booster und Fallen rechnen.",
+            "Das Outgassing des Prüflings – oft größer als die Last der leeren Kammer – braucht Marge, keinen Optimismus."
+          ],
+          "content2": "Die Überwachung schließt den Kreis: Ein Pirani-Sensor deckt das Grobvakuum ab, ein Ionisationsmanometer das Hochvakuum, und die Restgasanalyse zeigt, woraus der Druck tatsächlich besteht – Wasser, Lösemittel oder die Signatur eines Luftlecks. So diagnostizieren Sie mit Daten statt mit Vermutungen."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Welche Vakuumpumpen nutzt eine TVAC-Kammer?",
+          "a": "Viele TVAC-Systeme kombinieren eine trockene Vorpumpstufe mit einer Hochvakuumpumpe. Booster, kryogene Fangflächen und Kontaminationsdiagnostik kommen hinzu, wenn Kammervolumen, Gaslast, Durchlaufzeit oder Reinheitsanforderung sie rechtfertigen. Die richtige Architektur folgt aus dem geforderten Arbeitsdruck unter Last, dem effektiven Leitwert, der zulässigen Abpumpzeit und der Ausgasung des Prüflings, nicht aus einer universellen Pumpenliste."
+        },
+        {
+          "q": "Warum sind ölfreie Vakuumpumpen beim TVAC-Test wichtig?",
+          "a": "Weil ölgedichtete Pumpen Kohlenwasserstoffe in die Kammer rückströmen lassen können, wo sie auf kalten Flächen und Optiken genau die molekularen Kontaminationsfilme bilden, die ein Raumfahrttest vermeiden muss. Trockene Scroll- und Roots-Pumpen beseitigen diese Risikoklasse an der Quelle, halten Restgasspektren sauber für die RGA-Arbeit und nehmen die Öllogistik aus dem Labor. Gewartet werden müssen sie trotzdem – Verschleißteile wie Scroll-Dichtungen sind real."
+        },
+        {
+          "q": "Wie lange dauert das Abpumpen auf 10⁻⁶ mbar?",
+          "a": "Eine universelle Zeit gibt es nicht. Das Vorvakuum kann in Minuten erreicht werden; der Weg zum geforderten Arbeitsdruck kann je nach Volumen, Leitwert, Oberfläche, Feuchte, Sauberkeit, Prüflingsausgasung, Ausheizen und Pumpenkonfiguration Stunden oder länger dauern. Für die Terminplanung ist eine berechnete oder gemessene Abpumpkurve erforderlich."
+        },
+        {
+          "q": "Brauche ich einen Roots-Booster für meine Kammer?",
+          "a": "Bewerten Sie den Booster anhand geforderter Vorvakuumzeit, Kammerleitwert, Vorpumpkennlinie, Betriebsfrequenz und kontinuierlicher Gaslast. Kompakte Kammern profitieren möglicherweise nicht, größere oder häufig zyklierte Systeme dagegen schon. Die Entscheidung sollte durch Rechnung oder Versuch gestützt werden."
+        }
+      ],
+      "conclusion": "Ein Pumpstand sollte aus Gaslast, effektivem Leitwert, gefordertem Arbeitsdruck und zulässiger Durchlaufzeit ausgelegt werden. Das Saugvermögen auf dem Typenschild ist nur ein Eingangswert; Prüflingsausgasung, Wasserlast, Stutzengeometrie und Regenerationsstrategie bestimmen häufig das reale Ergebnis."
+    },
+    "seoKey": "blogPumpingSystemSelection",
+    "dateModified": "2026-07-23",
+    "searchIntent": {
+      "en": {
+        "primaryKeyword": "TVAC pumping systems",
+        "primaryQuestion": "How should a TVAC pumping train be selected for volume, gas load, pressure and turnaround time?"
+      },
+      "de": {
+        "primaryKeyword": "Vakuumpumpstand für TVAC",
+        "primaryQuestion": "Wie wird ein TVAC-Pumpstand für Volumen, Gaslast, Druck und Durchlaufzeit ausgelegt?"
+      }
+    },
+    "references": [
+      {
+        "title": "CERN Accelerator School: Vacuum Technology",
+        "publisher": "CERN",
+        "url": "https://cds.cern.ch/record/402784"
+      },
+      {
+        "title": "Outgassing properties of vacuum materials for particle accelerators",
+        "publisher": "CERN",
+        "url": "https://cds.cern.ch/record/2723690"
+      },
+      {
+        "title": "Deepvac Standard Series: current technical data and configuration notes",
+        "publisher": "Deepvac GmbH",
+        "url": "https://deepvac.space/products/standard-series"
+      }
+    ],
+    "technicalNote": {
+      "en": "Deepvac performance figures in this article describe current reference configurations. Binding values depend on chamber size, selected pumping and thermal concepts, test setup and the project quotation.",
+      "de": "Die in diesem Artikel genannten Deepvac-Leistungswerte beschreiben aktuelle Referenzkonfigurationen. Verbindliche Werte hängen von Kammergröße, gewähltem Pump- und Thermalkonzept, Testaufbau und Projektangebot ab."
+    }
+  },
+  {
+    "articleKey": "vacuumLevelsExplained",
+    "enSlug": "vacuum-levels-explained",
+    "deSlug": "vakuumbereiche-erklaert",
+    "category": "basics",
+    "datePublished": "2026-03-05",
+    "relatedPaths": [
+      "/products/options/oil-free-pumping",
+      "/products/options/roots-booster",
+      "/products/standard-series"
+    ],
+    "relatedArticles": [
+      "pumpingSystemSelection",
+      "outgassingBasics",
+      "tvacCostDrivers"
+    ],
+    "en": {
+      "title": "Vacuum Levels Explained: From Rough Vacuum to UHV",
+      "description": "The conventional vacuum ranges, how gas behaviour and equipment change with pressure, and why many thermal-vacuum specifications use the high-vacuum range.",
+      "seoTitle": "Vacuum Levels Explained: Rough to UHV | Deepvac",
+      "seoDescription": "Rough, medium, high and ultra-high vacuum explained with pump, gauge and molecular-flow context, including why many TVAC specifications use high vacuum.",
+      "intro": "Vacuum technology uses broad pressure bands such as rough, medium, high and ultra-high vacuum. Their boundaries are conventional rather than universal, but they mark useful changes in gas transport, suitable pumps, gauges, sealing concepts and surface effects. Thermal-vacuum tests usually operate in the high-vacuum regime so that residual-gas heat transfer is sufficiently small for the verification case. This article explains the ranges, molecular-flow intuition and the practical consequences for chamber specification without treating one pressure value as a universal requirement.",
+      "sections": [
+        {
+          "title": "The four vacuum ranges at a glance",
+          "content": "The ranges below are a practical orientation in millibar, not universal normative definitions. One millibar equals one hectopascal.",
+          "bulletsHeading": "The ranges",
+          "bullets": [
+            "Rough vacuum, approximately atmospheric pressure down to 1 mbar: continuum flow is still important and mechanical pumps dominate.",
+            "Medium vacuum, approximately 1 to 10⁻³ mbar: transition between viscous and molecular behaviour, often used as backing range for high-vacuum pumps.",
+            "High vacuum, approximately 10⁻³ to 10⁻⁷ mbar: molecular-flow effects dominate many chamber geometries; turbomolecular and cryogenic pumping are common.",
+            "Ultra-high vacuum, below approximately 10⁻⁷ mbar: outgassing, surface preparation, bakeability and seal technology become increasingly demanding."
+          ]
+        },
+        {
+          "title": "Mean free path: the intuition behind the numbers",
+          "content": "Mean free path is the average distance a molecule travels between collisions. It increases as pressure decreases and must be compared with a characteristic chamber dimension. The resulting Knudsen number, not pressure alone, indicates whether viscous, transition or molecular flow is the useful model.",
+          "content2": "In molecular flow, molecules interact more often with surfaces than with each other. Conductance becomes geometry-dependent, pumps capture only molecules that reach their inlet, and contamination transport is strongly influenced by line of sight and surface sticking."
+        },
+        {
+          "title": "Why pressure is not a direct altitude equivalent",
+          "content": "Atmospheric and orbital density vary with altitude, solar activity, composition and time, so a chamber pressure should not be presented as one exact flight altitude. Ground facilities also use different gases and wall temperatures from the orbital environment. Pressure is therefore specified from the physical effect and verification requirement, not from a simple altitude label.",
+          "content2": "For thermal testing, the relevant question is whether residual-gas heat transfer and gas-related electrical effects are acceptably small for the item and geometry. For contamination testing, molecular transport and partial pressures may be more important than the total pressure alone."
+        },
+        {
+          "title": "Why many TVAC specifications use the 10⁻⁵ to 10⁻⁶ mbar range",
+          "content": "Many TVAC facilities are designed to operate in this high-vacuum range because it provides margin for low gas heat transfer and molecular-flow operation in common test geometries. That does not make either value a universal standard requirement. The binding pressure is the one stated in the tailored test specification under the defined test-item gas load.",
+          "bulletsHeading": "What the band buys you",
+          "bullets": [
+            "Thermal boundary: demonstrate that residual-gas heat transfer is negligible within the test uncertainty.",
+            "Electrical operation: control power-on and pump-down sequences for hardware that may be sensitive in intermediate-pressure regimes.",
+            "Contamination: operate in a regime where partial-pressure and line-of-sight molecular transport can be monitored and modelled.",
+            "Gas-load margin: specify working pressure with the actual test setup, not only the empty-chamber base pressure."
+          ]
+        },
+        {
+          "title": "What changes with every decade of pressure",
+          "content": "Lower pressure changes which physical effects dominate and which components are suitable. The transition is gradual and equipment ranges overlap, so the chamber should be designed as an integrated pumping and measurement system rather than from isolated pressure labels.",
+          "bulletsHeading": "What changes as pressure falls",
+          "bullets": [
+            "Pumps: mechanical backing pumps cover roughing, while high-vacuum stages and sometimes cryogenic surfaces address lower-pressure operation and specific gas species.",
+            "Gauges: thermal-conductivity gauges and ionisation-based gauges cover different, overlapping ranges and require gas-dependent interpretation.",
+            "Seals and materials: tighter contamination budgets and lower gas loads place increasing demands on permeation, surface finish, cleaning and bake-out.",
+            "Dominant gas source: real leaks may dominate a poor system; in a tight, clean system, desorption and diffusion from surfaces often become the limiting loads.",
+            "Time: the last part of pump-down is commonly governed by surface gas release and conductance, so a larger nominal pump does not guarantee proportional improvement."
+          ]
+        },
+        {
+          "title": "What this means when specifying a TVAC chamber",
+          "content": "Current Deepvac Standard Series reference data lists a working pressure of ≤ 1 × 10⁻⁶ mbar. This is a product configuration value, not a universal TVAC requirement. Binding performance depends on chamber size, pumping package, test setup, outgassing load and quotation.",
+          "content2": "Ultra-high vacuum can be necessary for specialised surface, beam or contamination work, but it introduces different vessel, seal, cleaning, bake-out, pumping and turnaround requirements. Specify the lowest pressure that the verification case actually needs."
+        }
+      ],
+      "faq": [
+        {
+          "q": "What is the difference between high vacuum and ultra-high vacuum?",
+          "a": "High vacuum and ultra-high vacuum are engineering regimes with overlapping conventional boundaries. UHV generally requires stricter control of materials, surface preparation, seals, bake-out and measurement than ordinary high-vacuum systems. Thermal-vacuum programmes normally specify the pressure needed for their heat-transfer and contamination objectives; they do not benefit automatically from UHV capability."
+        },
+        {
+          "q": "How good is the vacuum in space?",
+          "a": "Orbital density varies by altitude, solar activity, composition and time. In low Earth orbit it is often lower than common TVAC working pressures, but a ground chamber does not need to reproduce one exact orbital total pressure to reproduce the required thermal boundary. The project defines the relevant effect and acceptance criterion."
+        },
+        {
+          "q": "Why do TVAC tests require 10⁻⁵ or 10⁻⁶ mbar?",
+          "a": "Many facilities use this range because residual-gas heat transfer can be made small and molecular-flow assumptions become useful for common geometries. The required value is still project-specific and must be verified under the expected test-item gas load."
+        },
+        {
+          "q": "How long does it take to reach 10⁻⁶ mbar?",
+          "a": "Pump-down may take hours or longer depending on volume, conductance, surface area, humidity, materials, test-item outgassing, bake-out and pumping architecture. Schedule from a measured or calculated pressure-time curve rather than a generic duration."
+        }
+      ],
+      "conclusion": "For thermal-vacuum testing, the required pressure is the level at which residual-gas effects are sufficiently small for the specific geometry and verification objective. The project specification remains binding; pursuing lower pressure than the test requires adds cost, time and cleanliness demands without automatically improving the evidence."
+    },
+    "de": {
+      "title": "Vakuumbereiche erklärt: von Grobvakuum bis UHV",
+      "description": "Die konventionellen Vakuumbereiche, wie sich Gasverhalten und Anlagentechnik mit dem Druck ändern und warum viele Thermalvakuum-Spezifikationen den Hochvakuumbereich nutzen.",
+      "seoTitle": "Vakuumbereiche erklärt: Grobvakuum bis UHV | Deepvac",
+      "seoDescription": "Grobvakuum, Feinvakuum, Hochvakuum und UHV mit Pumpen, Messtechnik und Molekularströmung erklärt, einschließlich der Einordnung typischer TVAC-Spezifikationen.",
+      "intro": "Die Vakuumtechnik nutzt breite Druckbereiche wie Grob-, Fein-, Hoch- und Ultrahochvakuum. Ihre Grenzen sind Konventionen und nicht universell, markieren aber nützliche Wechsel bei Gastransport, geeigneten Pumpen, Messverfahren, Dichtungskonzepten und Oberflächeneffekten. Thermalvakuumtests arbeiten üblicherweise im Hochvakuumbereich, damit der Wärmeübertrag durch Restgas für den jeweiligen Verifikationsfall ausreichend klein ist. Dieser Artikel erklärt die Bereiche, die Anschauung der Molekularströmung und die Folgen für die Kammerspezifikation, ohne einen einzelnen Druckwert als allgemeine Forderung darzustellen.",
+      "sections": [
+        {
+          "title": "Die vier Vakuumbereiche im Überblick",
+          "content": "Die folgenden Bereiche dienen als praktische Orientierung in Millibar und sind keine universellen normativen Definitionen. Ein Millibar entspricht einem Hektopascal.",
+          "bulletsHeading": "Die Bereiche",
+          "bullets": [
+            "Grobvakuum, ungefähr von Atmosphärendruck bis 1 mbar: Kontinuumsströmung bleibt wichtig, mechanische Pumpen dominieren.",
+            "Feinvakuum, ungefähr 1 bis 10⁻³ mbar: Übergang zwischen viskosem und molekularem Verhalten, häufig Vorvakuumbereich für Hochvakuumpumpen.",
+            "Hochvakuum, ungefähr 10⁻³ bis 10⁻⁷ mbar: In vielen Kammergeometrien dominieren molekulare Strömungseffekte; Turbomolekular- und Kryopumpen sind verbreitet.",
+            "Ultrahochvakuum, unter ungefähr 10⁻⁷ mbar: Ausgasung, Oberflächenvorbereitung, Ausheizbarkeit und Dichtungstechnik werden zunehmend anspruchsvoll."
+          ]
+        },
+        {
+          "title": "Mittlere freie Weglänge: die Anschauung hinter den Zahlen",
+          "content": "Die mittlere freie Weglänge ist die durchschnittliche Strecke eines Moleküls zwischen Kollisionen. Sie wächst mit sinkendem Druck und muss mit einer charakteristischen Kammerabmessung verglichen werden. Die daraus gebildete Knudsen-Zahl, nicht der Druck allein, zeigt, ob viskose, Übergangs- oder Molekularströmung das geeignete Modell ist.",
+          "content2": "In der Molekularströmung wechselwirken Moleküle häufiger mit Oberflächen als miteinander. Leitwerte werden geometrieabhängig, Pumpen erfassen nur Moleküle, die ihren Einlass erreichen, und der Kontaminationstransport wird stark von Sichtlinie und Haftwahrscheinlichkeit beeinflusst."
+        },
+        {
+          "title": "Warum Druck keine direkte Höhenentsprechung ist",
+          "content": "Atmosphären- und Orbitdichte variieren mit Höhe, Sonnenaktivität, Zusammensetzung und Zeit; ein Kammerdruck sollte deshalb nicht als exakte Flughöhe dargestellt werden. Bodenanlagen verwenden außerdem andere Gaszusammensetzungen und Wandtemperaturen als die Orbitumgebung. Der Druck wird daher aus physikalischem Effekt und Nachweisanforderung spezifiziert, nicht aus einem einfachen Höhenlabel.",
+          "content2": "Für Thermaltests ist entscheidend, ob Restgas-Wärmetransport und gasbezogene elektrische Effekte für Prüfling und Geometrie ausreichend klein sind. Bei Kontaminationstests können molekularer Transport und Partialdrücke wichtiger als der Gesamtdruck allein sein."
+        },
+        {
+          "title": "Warum viele TVAC-Spezifikationen im Bereich 10⁻⁵ bis 10⁻⁶ mbar liegen",
+          "content": "Viele TVAC-Anlagen werden für diesen Hochvakuumbereich ausgelegt, weil er in gängigen Prüfgeometrien Marge für geringen Gaswärmetransport und Molekularströmung bietet. Daraus entsteht jedoch keine universelle Normanforderung. Verbindlich ist der in der getailorten Prüfspezifikation unter definierter Prüflingsgaslast genannte Druck.",
+          "bulletsHeading": "Was das Band leistet",
+          "bullets": [
+            "Thermische Randbedingung: Nachweisen, dass Restgas-Wärmetransport innerhalb der Prüfunsicherheit vernachlässigbar ist.",
+            "Elektrischer Betrieb: Einschalt- und Abpumpsequenzen für Hardware beherrschen, die in mittleren Druckbereichen empfindlich sein kann.",
+            "Kontamination: In einem Bereich arbeiten, in dem Partialdrücke und molekularer Sichtlinientransport überwacht und modelliert werden können.",
+            "Gaslastmarge: Arbeitsdruck mit tatsächlichem Testaufbau spezifizieren, nicht nur den Basisdruck der leeren Kammer."
+          ]
+        },
+        {
+          "title": "Was sich mit jeder Druckdekade ändert",
+          "content": "Mit sinkendem Druck ändern sich die dominierenden physikalischen Effekte und die Eignung von Komponenten. Der Übergang ist fließend und die Arbeitsbereiche überlappen. Deshalb sollte die Kammer als integriertes Pump- und Messsystem ausgelegt werden, nicht anhand isolierter Druckbezeichnungen.",
+          "bulletsHeading": "Was sich mit sinkendem Druck ändert",
+          "bullets": [
+            "Pumpen: Mechanische Vorpumpen übernehmen das Vorevakuieren; Hochvakuumstufen und gegebenenfalls kryogene Flächen bedienen niedrigere Drücke und bestimmte Gasspezies.",
+            "Messtechnik: Wärmeleitungs- und Ionisationsmessröhren decken unterschiedliche, überlappende Bereiche ab und müssen gasabhängig interpretiert werden.",
+            "Dichtungen und Materialien: Engere Kontaminationsbudgets und kleinere Gaslasten erhöhen die Anforderungen an Permeation, Oberflächen, Reinigung und Ausheizen.",
+            "Dominierende Gasquelle: In einem schlechten System können reale Lecks bestimmen; in einer dichten, sauberen Anlage begrenzen häufig Desorption und Diffusion aus Oberflächen.",
+            "Zeit: Der letzte Teil des Abpumpens wird oft von Oberflächengasfreisetzung und Leitwert bestimmt. Eine größere Nennpumpe verbessert ihn nicht automatisch proportional."
+          ]
+        },
+        {
+          "title": "Was das für die Spezifikation einer TVAC-Kammer heißt",
+          "content": "Die aktuellen Referenzdaten der Deepvac Standard-Serie nennen einen Arbeitsdruck von ≤ 1 × 10⁻⁶ mbar. Das ist ein Wert einer Produktkonfiguration und keine universelle TVAC-Anforderung. Verbindliche Leistung hängt von Kammergröße, Pumpenkonfiguration, Testaufbau, Ausgasungslast und Angebot ab.",
+          "content2": "Ultrahochvakuum kann für spezielle Oberflächen-, Strahl- oder Kontaminationsaufgaben notwendig sein, verlangt aber andere Behälter-, Dichtungs-, Reinigungs-, Ausheiz-, Pump- und Durchlaufkonzepte. Spezifizieren Sie den niedrigsten Druck, den der Verifikationsfall tatsächlich benötigt."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Was ist der Unterschied zwischen Hochvakuum und Ultrahochvakuum?",
+          "a": "Hochvakuum und Ultrahochvakuum sind technische Bereiche mit konventionellen, teilweise überlappenden Grenzen. UHV verlangt üblicherweise strengere Kontrolle von Materialien, Oberflächen, Dichtungen, Ausheizen und Messtechnik als normale Hochvakuumsysteme. Thermalvakuumprogramme spezifizieren den Druck für ihre Wärmeübertragungs- und Kontaminationsziele; von UHV-Fähigkeit profitieren sie nicht automatisch."
+        },
+        {
+          "q": "Wie gut ist das Vakuum im Weltraum?",
+          "a": "Die Orbitdichte variiert mit Höhe, Sonnenaktivität, Zusammensetzung und Zeit. Im niedrigen Erdorbit ist sie häufig geringer als gängige TVAC-Arbeitsdrücke; eine Bodenanlage muss jedoch keinen exakten Orbital-Gesamtdruck treffen, um die geforderte thermische Randbedingung nachzubilden. Das Projekt definiert Effekt und Abnahmekriterium."
+        },
+        {
+          "q": "Warum fordern TVAC-Tests 10⁻⁵ oder 10⁻⁶ mbar?",
+          "a": "Viele Anlagen nutzen diesen Bereich, weil Restgas-Wärmetransport klein werden kann und Molekularströmungsannahmen für gängige Geometrien nützlich werden. Der geforderte Wert bleibt projektspezifisch und muss unter der erwarteten Prüflingsgaslast nachgewiesen werden."
+        },
+        {
+          "q": "Wie lange dauert das Abpumpen auf 10⁻⁶ mbar?",
+          "a": "Das Abpumpen kann je nach Volumen, Leitwert, Oberfläche, Feuchte, Materialien, Prüflingsausgasung, Ausheizen und Pumpenarchitektur Stunden oder länger dauern. Die Terminplanung sollte auf einer gemessenen oder berechneten Druck-Zeit-Kurve beruhen."
+        }
+      ],
+      "conclusion": "Für Thermalvakuumtests ist der Druck erforderlich, bei dem Restgaseffekte für die konkrete Geometrie und das Nachweisziel ausreichend klein sind. Verbindlich bleibt die Projektspezifikation; ein tieferer Druck als benötigt erhöht Aufwand, Zeit und Sauberkeitsanforderungen, ohne den Nachweis automatisch zu verbessern."
+    },
+    "seoKey": "blogVacuumLevelsExplained",
+    "dateModified": "2026-07-23",
+    "searchIntent": {
+      "en": {
+        "primaryKeyword": "vacuum levels explained",
+        "primaryQuestion": "Which vacuum range is needed for thermal-vacuum testing and why?"
+      },
+      "de": {
+        "primaryKeyword": "Vakuumbereiche erklärt",
+        "primaryQuestion": "Welcher Vakuumbereich wird für Thermalvakuumtests benötigt und warum?"
+      }
+    },
+    "references": [
+      {
+        "title": "CERN Accelerator School: Vacuum Technology",
+        "publisher": "CERN",
+        "url": "https://cds.cern.ch/record/402784"
+      },
+      {
+        "title": "Rarefied gas dynamics and its applications to vacuum technology",
+        "publisher": "CERN",
+        "url": "https://cds.cern.ch/record/1046845"
+      },
+      {
+        "title": "Thermometry Calibration Services",
+        "publisher": "National Institute of Standards and Technology (NIST)",
+        "url": "https://www.nist.gov/pml/sensor-science/temperature-humidity/thermometry-calibration-services"
+      }
+    ],
+    "technicalNote": {
+      "en": "Deepvac performance figures in this article describe current reference configurations. Binding values depend on chamber size, selected pumping and thermal concepts, test setup and the project quotation.",
+      "de": "Die in diesem Artikel genannten Deepvac-Leistungswerte beschreiben aktuelle Referenzkonfigurationen. Verbindliche Werte hängen von Kammergröße, gewähltem Pump- und Thermalkonzept, Testaufbau und Projektangebot ab."
+    }
+  },
+  {
+    "articleKey": "whatIsTvacTesting",
+    "enSlug": "what-is-thermal-vacuum-testing",
+    "deSlug": "was-ist-thermalvakuumtest",
+    "category": "basics",
+    "datePublished": "2026-03-24",
+    "relatedPaths": [
+      "/products/standard-series",
+      "/services/testing-services",
+      "/tvac-questionnaire"
+    ],
+    "relatedArticles": [
+      "tvacTestTypes",
+      "aerospaceQualification",
+      "tvacTestCampaign"
+    ],
+    "en": {
+      "title": "What Is Thermal Vacuum (TVAC) Testing?",
+      "description": "An engineer's introduction to thermal vacuum testing: which space conditions a TVAC chamber simulates, why hardware fails in vacuum, and where the test sits in qualification.",
+      "seoTitle": "What Is Thermal Vacuum (TVAC) Testing? | Deepvac",
+      "seoDescription": "Thermal vacuum testing exposes space hardware to vacuum and temperature extremes. What TVAC means, how a chamber works and where it fits in qualification.",
+      "intro": "Thermal vacuum testing exposes hardware to controlled vacuum and thermal boundary conditions while temperatures, pressures and functional behaviour are recorded. The test reduces gas-mediated heat transfer so conduction through interfaces and radiation to the surroundings dominate the thermal response. It is used to validate thermal analysis, verify operation at defined limits and screen integration or manufacturing weaknesses. The actual pressure, temperature profile and verification approach come from the approved project requirements.",
+      "sections": [
+        {
+          "title": "What thermal vacuum testing means",
+          "content": "A TVAC test places a test item in a vacuum vessel, establishes the specified pressure and drives controlled thermal boundary conditions while the item is monitored and, where required, operated. The combination matters because thermal cycling in air does not reproduce the same heat-transfer paths, while vacuum exposure at one temperature does not exercise the full thermal design.",
+          "content2": "Many programmes use high-vacuum working pressures in the 10⁻⁵ to 10⁻⁶ mbar range, but this is not a universal requirement. The test specification should define the pressure under the expected gas load and the effect that the value is intended to control."
+        },
+        {
+          "title": "Which space conditions the chamber simulates",
+          "content": "A TVAC chamber represents selected thermal aspects of the space environment. The exact combination follows from the verification case and may include the conditions below.",
+          "bulletsHeading": "The chamber replicates",
+          "bullets": [
+            "Vacuum: pressure low enough that residual-gas heat transfer and other gas-related effects meet the project criterion.",
+            "Radiative sink: a cooled, high-emissivity shroud that provides a controlled cold background.",
+            "Temperature boundaries: hot and cold interface or shroud conditions derived from the mission analysis and margin rules.",
+            "External heat inputs: infrared sources, conductive heaters or solar simulation where the verification case requires them."
+          ]
+        },
+        {
+          "title": "Why hardware fails in vacuum",
+          "content": "TVAC testing can reveal problems that are masked or not activated under ambient conditions. The findings depend on the test item and profile; the categories below are common mechanisms to investigate rather than guaranteed outcomes.",
+          "bulletsHeading": "Typical failure mechanisms",
+          "bullets": [
+            "Overheating: without convection, dissipating components depend entirely on radiation and conductive paths, so undersized thermal links show up within minutes.",
+            "Outgassing: polymers, adhesives and cable insulation release volatiles that can condense on optics and thermal control surfaces.",
+            "Trapped gas: closed volumes and blind holes vent slowly, stress seals during pump-down and can distort thin housings.",
+            "Material behaviour at extremes: differential thermal expansion, embrittled plastics and drifting electrical parameters appear only at temperature.",
+            "Workmanship defects: cold solder joints, marginal crimps and loose fasteners fail under repeated thermal cycling – exactly what the test is designed to provoke."
+          ]
+        },
+        {
+          "title": "What a TVAC chamber consists of",
+          "content": "A complete TVAC system combines the vessel, pumping equipment, thermal conditioning, instrumentation, controls and safety functions. The required architecture and performance are project-specific.",
+          "bulletsHeading": "The four building blocks",
+          "bullets": [
+            "Vacuum vessel and access system sized for the as-tested configuration, fixtures and feedthroughs.",
+            "Pumping and measurement system sized for the target working pressure and expected gas load.",
+            "Thermal shroud, plate or other boundary-control hardware selected from the required heat paths and temperatures.",
+            "Control, data acquisition, alarms and protective functions matched to campaign risk and documentation needs."
+          ]
+        },
+        {
+          "title": "Who needs thermal vacuum testing",
+          "content": "TVAC is used for components, electronics, mechanisms, optical assemblies, payloads and complete spacecraft when vacuum thermal behaviour or contamination performance requires evidence. The need for a campaign and its verification depth follow from mission risk, contractual requirements, heritage and analysis.",
+          "content2": "Owning a chamber and using an external facility are alternative operating models. The choice depends on campaign demand, schedule, staffing, facility infrastructure, independence requirements and total cost."
+        },
+        {
+          "title": "Where TVAC sits in the qualification flow",
+          "content": "ECSS-E-ST-10-03C Rev.1, GSFC-STD-7000B and SMC-S-016 are examples of verification frameworks that can include thermal-vacuum testing. The approved environmental verification plan defines sequence, model philosophy, levels, durations, margins and documentation. TVAC is not universally placed after vibration and shock; programme logic controls the order.",
+          "content2": "Qualification, acceptance and protoflight apply different verification objectives and stress histories. The tailored programme documentation remains the controlling source for cycle count, dwell criteria and functional test scope."
+        }
+      ],
+      "faq": [
+        {
+          "q": "What does TVAC stand for?",
+          "a": "TVAC stands for thermal vacuum. It describes testing in which hardware is exposed to controlled vacuum and hot or cold thermal boundary conditions while temperatures, pressures and function are monitored. The specific profile depends on the approved verification requirements."
+        },
+        {
+          "q": "What pressure is used in a thermal vacuum test?",
+          "a": "Many programmes use high-vacuum values around 10⁻⁵ to 10⁻⁶ mbar, but the binding value is project-specific. It should be stated for the expected test-item gas load and linked to the physical effect or standard requirement being verified."
+        },
+        {
+          "q": "How long does a TVAC test take?",
+          "a": "Campaigns can range from hours to weeks. Duration follows from pump-down, bake-out, number of thermal cases or cycles, ramp rates, stabilisation criteria, functional testing and anomaly margin. It should be calculated from the approved procedure."
+        },
+        {
+          "q": "Can hardware be qualified without a TVAC test?",
+          "a": "Tailoring may allow analysis, similarity or heritage to replace or reduce testing in specific cases, but the decision must be approved within the verification programme. Thermally new hardware that operates in vacuum generally needs test evidence to validate models and interfaces."
+        }
+      ],
+      "conclusion": "TVAC testing combines controlled vacuum, thermal boundary conditions, instrumentation and functional operation to validate analysis and reveal integration weaknesses. The useful test is not the most severe profile, but the one that is traceable to mission requirements and produces interpretable data."
+    },
+    "de": {
+      "title": "Was ist ein Thermalvakuumtest (TVAC)?",
+      "description": "Eine technische Einführung in den Thermalvakuumtest: welche Weltraumbedingungen eine TVAC-Kammer simuliert, warum Hardware im Vakuum versagt und wo der Test in der Qualifikation steht.",
+      "seoTitle": "Was ist ein Thermalvakuumtest (TVAC)? | Deepvac",
+      "seoDescription": "Thermalvakuumtest erklärt: was ein TVAC-Test simuliert, warum Hardware im Vakuum versagt und wie die Prüfung in die Raumfahrtqualifikation passt.",
+      "intro": "Ein Thermalvakuumtest setzt Hardware kontrolliertem Vakuum und definierten thermischen Randbedingungen aus, während Temperaturen, Drücke und Funktionsverhalten aufgezeichnet werden. Der Test reduziert gasvermittelten Wärmetransport, sodass Wärmeleitung über Schnittstellen und Strahlung an die Umgebung die thermische Reaktion dominieren. Er dient zur Validierung der Thermalanalyse, zur Funktionsverifikation an festgelegten Grenzen und zur Prüfung von Integrations- oder Fertigungsschwächen. Druck, Temperaturprofil und Verifikationsansatz stammen aus den freigegebenen Projektanforderungen.",
+      "sections": [
+        {
+          "title": "Was ein Thermalvakuumtest bedeutet",
+          "content": "Bei einem TVAC-Test wird ein Prüfling in einen Vakuumbehälter eingebaut, der spezifizierte Druck hergestellt und geregelte thermische Randbedingungen gefahren, während der Prüfling überwacht und bei Bedarf betrieben wird. Die Kombination ist entscheidend: Thermalzyklen unter Luft bilden andere Wärmepfade ab, und Vakuum bei nur einer Temperatur beansprucht das Thermaldesign nicht vollständig.",
+          "content2": "Viele Programme verwenden Hochvakuum-Arbeitsdrücke im Bereich von 10⁻⁵ bis 10⁻⁶ mbar; eine universelle Anforderung ist das nicht. Die Prüfspezifikation sollte den Druck unter erwarteter Gaslast und den damit zu beherrschenden physikalischen Effekt festlegen."
+        },
+        {
+          "title": "Welche Weltraumbedingungen die Kammer simuliert",
+          "content": "Eine TVAC-Kammer bildet ausgewählte thermische Aspekte der Weltraumumgebung nach. Die genaue Kombination folgt aus dem Verifikationsfall und kann die folgenden Bedingungen umfassen.",
+          "bulletsHeading": "Das bildet die Kammer nach",
+          "bullets": [
+            "Vakuum: ein ausreichend niedriger Druck, damit Restgas-Wärmetransport und weitere gasbezogene Effekte das Projektkriterium erfüllen.",
+            "Strahlungssenke: ein gekühlter, hochemittierender Shroud als kontrollierter kalter Hintergrund.",
+            "Temperaturrandbedingungen: heiße und kalte Schnittstellen- oder Shroudbedingungen aus Missionsanalyse und Margenregeln.",
+            "Externe Wärmeeinträge: Infrarotquellen, konduktive Heizer oder Solarsimulation, sofern der Verifikationsfall sie verlangt."
+          ]
+        },
+        {
+          "title": "Warum Hardware im Vakuum versagt",
+          "content": "TVAC-Tests können Probleme sichtbar machen, die unter Umgebungsbedingungen verdeckt oder nicht aktiviert sind. Die Befunde hängen von Prüfling und Profil ab; die folgenden Kategorien sind verbreitete Prüfmechanismen und keine garantierten Ergebnisse.",
+          "bulletsHeading": "Typische Fehlermechanismen",
+          "bullets": [
+            "Überhitzung: Ohne Konvektion hängen Verlustleistungen vollständig an Strahlung und Wärmeleitpfaden; unterdimensionierte thermische Anbindungen zeigen sich binnen Minuten.",
+            "Ausgasung: Kunststoffe, Klebstoffe und Kabelisolierungen setzen flüchtige Stoffe frei, die auf Optiken und Thermalflächen kondensieren können.",
+            "Eingeschlossenes Gas: Geschlossene Volumina und Sacklöcher entlüften langsam, belasten Dichtungen beim Abpumpen und können dünnwandige Gehäuse verformen.",
+            "Materialverhalten an den Grenzen: Unterschiedliche Wärmeausdehnung, versprödende Kunststoffe und driftende elektrische Parameter treten erst bei Temperatur auf.",
+            "Fertigungsfehler: Kalte Lötstellen, schwache Crimpungen und lose Verschraubungen versagen unter wiederholten Thermalzyklen – genau das soll der Test provozieren."
+          ]
+        },
+        {
+          "title": "Woraus eine Thermalvakuumkammer besteht",
+          "content": "Ein vollständiges TVAC-System kombiniert Behälter, Pumptechnik, thermische Konditionierung, Instrumentierung, Steuerung und Sicherheitsfunktionen. Architektur und Leistung sind projektspezifisch.",
+          "bulletsHeading": "Die vier Bausteine",
+          "bullets": [
+            "Vakuumbehälter und Zugangssystem für vollständigen Testaufbau, Vorrichtungen und Durchführungen dimensioniert.",
+            "Pump- und Messsystem für geforderten Arbeitsdruck und erwartete Gaslast ausgelegt.",
+            "Thermalshroud, Platte oder andere Randbedingungshardware aus Wärmepfaden und Temperaturanforderungen ausgewählt.",
+            "Steuerung, Datenerfassung, Alarmierung und Schutzfunktionen an Kampagnenrisiko und Dokumentationsbedarf angepasst."
+          ]
+        },
+        {
+          "title": "Wer Thermalvakuumtests braucht",
+          "content": "TVAC wird für Komponenten, Elektronik, Mechanismen, optische Baugruppen, Nutzlasten und komplette Raumfahrzeuge eingesetzt, wenn thermisches Verhalten im Vakuum oder Kontaminationsleistung nachgewiesen werden müssen. Notwendigkeit und Verifikationstiefe folgen aus Missionsrisiko, Vertrag, Heritage und Analyse.",
+          "content2": "Eine eigene Kammer und eine externe Prüfanlage sind alternative Betriebsmodelle. Die Wahl hängt von Kampagnenbedarf, Termin, Personal, Gebäudeinfrastruktur, Unabhängigkeitsanforderung und Vollkosten ab."
+        },
+        {
+          "title": "Wo der TVAC-Test in der Qualifikation steht",
+          "content": "ECSS-E-ST-10-03C Rev.1, GSFC-STD-7000B und SMC-S-016 sind Beispiele für Verifikationsrahmen, die Thermalvakuumtests einschließen können. Der freigegebene Umweltverifikationsplan definiert Reihenfolge, Modellphilosophie, Niveaus, Dauern, Margen und Dokumentation. TVAC findet nicht universell nach Vibration und Schock statt; die Projektlogik bestimmt die Reihenfolge.",
+          "content2": "Qualifikation, Abnahme und Protoflight verfolgen unterschiedliche Verifikationsziele und Belastungshistorien. Für Zyklenzahl, Haltekriterien und Funktionsumfang bleibt die getailorte Programmdokumentation verbindlich."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Wofür steht TVAC?",
+          "a": "TVAC steht für Thermal Vacuum, also Thermalvakuum. Dabei wird Hardware kontrolliertem Vakuum und heißen oder kalten thermischen Randbedingungen ausgesetzt, während Temperaturen, Drücke und Funktion überwacht werden. Das konkrete Profil folgt aus den freigegebenen Verifikationsanforderungen."
+        },
+        {
+          "q": "Welcher Druck herrscht bei einem Thermalvakuumtest?",
+          "a": "Viele Programme verwenden Hochvakuumwerte um 10⁻⁵ bis 10⁻⁶ mbar; verbindlich ist jedoch der projektspezifische Wert. Er sollte für die erwartete Prüflingsgaslast angegeben und mit dem zu verifizierenden physikalischen Effekt oder Normkriterium verknüpft werden."
+        },
+        {
+          "q": "Wie lange dauert ein TVAC-Test?",
+          "a": "Kampagnen können Stunden bis Wochen dauern. Die Dauer folgt aus Abpumpen, Ausheizen, Zahl der Thermalfälle oder Zyklen, Rampen, Stabilisierungskriterien, Funktionstests und Anomaliereserve. Sie sollte aus der freigegebenen Prozedur berechnet werden."
+        },
+        {
+          "q": "Geht Qualifikation auch ohne TVAC-Test?",
+          "a": "Tailoring kann in bestimmten Fällen Analyse, Ähnlichkeit oder Heritage anstelle eines Tests beziehungsweise zur Reduktion des Testumfangs zulassen. Die Entscheidung muss im Verifikationsprogramm freigegeben werden. Thermisch neuartige Hardware im Vakuumbetrieb benötigt im Allgemeinen Testnachweise zur Validierung von Modellen und Schnittstellen."
+        }
+      ],
+      "conclusion": "Ein TVAC-Test kombiniert kontrolliertes Vakuum, thermische Randbedingungen, Instrumentierung und Funktionsbetrieb, um Analysen zu validieren und Integrationsschwächen sichtbar zu machen. Aussagekräftig ist nicht das härteste Profil, sondern das auf Missionsanforderungen rückführbare Profil mit auswertbaren Daten."
+    },
+    "seoKey": "blogWhatIsTvacTesting",
+    "dateModified": "2026-07-23",
+    "searchIntent": {
+      "en": {
+        "primaryKeyword": "what is thermal vacuum testing",
+        "primaryQuestion": "What does a TVAC test reproduce and which failure mechanisms can it reveal?"
+      },
+      "de": {
+        "primaryKeyword": "Was ist ein Thermalvakuumtest",
+        "primaryQuestion": "Was bildet ein TVAC-Test nach und welche Fehlermechanismen kann er sichtbar machen?"
+      }
+    },
+    "references": [
+      {
+        "title": "ECSS-E-ST-10-03C Rev.1: Testing",
+        "publisher": "European Cooperation for Space Standardization (ECSS)",
+        "url": "https://ecss.nl/standard/ecss-e-st-10-03c-rev-1-testing-31-may-2022/"
+      },
+      {
+        "title": "GSFC-STD-7000B: General Environmental Verification Standard (GEVS)",
+        "publisher": "NASA Goddard Space Flight Center",
+        "url": "https://standards.nasa.gov/standard/gsfc/gsfc-std-7000"
+      },
+      {
+        "title": "Space Environment Simulator facility capabilities",
+        "publisher": "NASA Goddard Space Flight Center",
+        "url": "https://etd.gsfc.nasa.gov/capabilities/facilities-listing/space-environment-simulator/"
+      }
+    ],
+    "technicalNote": {
+      "en": "The applicable contract, verification plan and project-specific tailoring remain binding. The standards listed here provide frameworks, not a universal test profile. Deepvac performance figures in this article describe current reference configurations. Binding values depend on chamber size, selected pumping and thermal concepts, test setup and the project quotation.",
+      "de": "Verbindlich bleiben Vertrag, Verifikationsplan und projektspezifisches Tailoring. Die genannten Normen liefern Rahmenwerke, kein universelles Testprofil. Die in diesem Artikel genannten Deepvac-Leistungswerte beschreiben aktuelle Referenzkonfigurationen. Verbindliche Werte hängen von Kammergröße, gewähltem Pump- und Thermalkonzept, Testaufbau und Projektangebot ab."
+    }
+  },
+  {
+    "articleKey": "contaminationControl",
+    "enSlug": "contamination-control-tvac",
+    "deSlug": "kontaminationskontrolle-tvac",
+    "category": "engineeringGuide",
+    "datePublished": "2026-04-09",
+    "relatedPaths": [
+      "/products/options/qcm-monitoring",
+      "/products/options/residual-gas-analysis",
+      "/products/options/bake-out",
+      "/products/options/nitrogen-venting"
+    ],
+    "relatedArticles": [
+      "outgassingBasics",
+      "opticsElectronicsTesting",
+      "tvacTestCampaign"
+    ],
+    "en": {
+      "title": "Contamination Control in Thermal Vacuum Testing",
+      "description": "Molecular films and particles can quietly degrade optics, sensors and coatings during a TVAC test. How contamination arises, how QCM and RGA measure it, and how you keep a campaign clean.",
+      "seoTitle": "Contamination Control in TVAC Testing | Deepvac",
+      "seoDescription": "Contamination control in thermal vacuum testing: molecular vs particulate sources, prevention via bake-out and materials, QCM and RGA monitoring in practice.",
+      "intro": "Contamination control in TVAC testing addresses molecular deposition and particles. Vacuum and temperature can release volatile species from the test item, fixtures and chamber history, while cold surfaces can collect them. Particles arise mainly from handling, materials and the room environment. A campaign therefore needs a cleanliness budget, approved materials and processes, controlled chamber configuration and measurements matched to hardware sensitivity.",
+      "sections": [
+        {
+          "title": "Molecular versus particulate contamination",
+          "content": "Molecular contamination consists of material transported as vapour and deposited as a film. Particulate contamination consists of discrete fibres, dust or debris. TVAC conditions can mobilise molecular species through desorption and diffusion, while particles are usually introduced or released by handling, fixtures, coatings or mechanical activity. The controls and acceptance evidence for the two classes are different."
+        },
+        {
+          "title": "Why optics, sensors and coatings care",
+          "content": "Optics, detectors and thermal-control surfaces can be sensitive to deposits far below visual detectability. The resulting effect depends on film composition, thickness, wavelength and function: transmission, scatter, calibration, solar absorptance or infrared emittance may change. Colder surfaces can become preferred collection sites, so their temperature history matters in the contamination model."
+        },
+        {
+          "title": "Where contamination comes from",
+          "content": "Almost everything in the chamber contributes; the question is how much, and how volatile it is.",
+          "bulletsHeading": "Typical sources",
+          "bullets": [
+            "The test item itself: potting compounds, adhesives, conformal coatings, cable insulation and lubricants.",
+            "Fixtures and support equipment built from uncontrolled materials – a frequently underestimated contributor.",
+            "Chamber history: films from earlier campaigns re-evaporate when shrouds and walls warm up.",
+            "Pumping systems, if oil-sealed technology runs without safeguards – the reason oil-free pump stands are standard for space hardware.",
+            "Handling: fingerprints, packaging residues and lint introduced during integration."
+          ]
+        },
+        {
+          "title": "Prevention: materials, cleaning, bake-out, nitrogen",
+          "content": "Prevention begins with the project contamination-control plan. Materials are screened or qualified for the intended use, cure states are controlled, hardware and fixtures are cleaned and packaged, and bake-out is applied where compatible. ECSS-Q-ST-70-02C and the NASA outgassing database provide common reference methods; project limits may be stricter than the familiar TML and CVCM screening values."
+        },
+        {
+          "title": "Measurement: QCM, RGA and witness samples",
+          "content": "A temperature-controlled QCM measures deposited mass at a defined location and temperature. RGA measures the residual-gas mass spectrum and helps identify water, solvents, hydrocarbons or air-like signatures. Witness samples provide post-test surface evidence. None of these instruments alone proves total hardware cleanliness; placement, sensitivity, background and acceptance criteria must be defined together."
+        },
+        {
+          "title": "Cleanliness across the campaign – and between campaigns",
+          "content": "Cleanliness should be controlled through the complete campaign. An empty-chamber baseline, fixture preparation and chamber bake-out may be required before sensitive hardware is installed. During the profile, the relative temperatures of shroud, test item, optics and QCM determine where condensable material can collect. Between campaigns, cleaning records, purge conditions and test history preserve the baseline for the next item."
+        }
+      ],
+      "faq": [
+        {
+          "q": "What does a QCM measure in a vacuum chamber?",
+          "a": "A QCM measures mass deposited on a resonating quartz crystal at a controlled location and temperature. The result is representative only for the selected crystal conditions and view factors, so placement and acceptance criteria must reflect the hardware contamination budget."
+        },
+        {
+          "q": "What do TML and CVCM mean?",
+          "a": "TML is total mass loss during a standardised vacuum exposure; CVCM is the condensable fraction collected on a cooler surface. Frequently used screening values are TML below 1.0 percent and CVCM below 0.10 percent. They support material selection but do not replace project-specific contamination limits."
+        },
+        {
+          "q": "Why is a vacuum chamber vented with nitrogen instead of air?",
+          "a": "Dry, filtered nitrogen can reduce humidity and airborne contamination during venting and standby. Its use, purity, filtration, flow and safety controls must be defined for the chamber and hardware; nitrogen venting is not a substitute for cleaning or material control."
+        },
+        {
+          "q": "How do you know a chamber is clean enough for sensitive hardware?",
+          "a": "Through evidence, not assumption: an empty-chamber certification run at representative temperatures, with QCM trends and RGA spectra showing no unexpected condensables; witness samples analyzed after the run; and a chamber logbook documenting previous campaigns and cleanings. If the history is unknown or the last test was dirty, a bake-out followed by a repeat certification is the honest path back to a clean baseline."
+        }
+      ],
+      "conclusion": "Contamination control requires a defined cleanliness budget, qualified materials and processes, controlled chamber history and measurement during critical phases. QCM, RGA and witness samples answer different questions and should be selected from the sensitivity of the hardware."
+    },
+    "de": {
+      "title": "Kontaminationskontrolle im Thermalvakuumtest",
+      "description": "Molekulare Filme und Partikel können Optiken, Sensorik und Beschichtungen im TVAC-Test unbemerkt schädigen. Wie Kontamination entsteht, wie QCM und RGA sie messen – und wie Ihre Kampagne sauber bleibt.",
+      "seoTitle": "Kontaminationskontrolle im TVAC-Test | Deepvac",
+      "seoDescription": "Kontaminationskontrolle im TVAC-Test: molekulare und partikuläre Quellen, Prävention durch Ausheizen, QCM- und RGA-Monitoring in der Praxis erklärt.",
+      "intro": "Kontaminationskontrolle im TVAC-Test behandelt molekulare Abscheidung und Partikel. Vakuum und Temperatur können flüchtige Spezies aus Prüfling, Vorrichtungen und Kammerhistorie freisetzen; kalte Flächen können sie sammeln. Partikel stammen hauptsächlich aus Handling, Materialien und Raumumgebung. Eine Kampagne benötigt deshalb ein Sauberkeitsbudget, freigegebene Materialien und Prozesse, eine kontrollierte Kammerkonfiguration und Messungen passend zur Hardwareempfindlichkeit.",
+      "sections": [
+        {
+          "title": "Molekulare und partikuläre Kontamination",
+          "content": "Molekulare Kontamination besteht aus als Dampf transportiertem Material, das sich als Film abscheidet. Partikuläre Kontamination besteht aus einzelnen Fasern, Staub oder Abrieb. TVAC-Bedingungen können molekulare Spezies durch Desorption und Diffusion mobilisieren; Partikel werden meist durch Handling, Vorrichtungen, Beschichtungen oder mechanische Aktivität eingebracht oder freigesetzt. Kontrollen und Abnahmenachweise beider Klassen unterscheiden sich."
+        },
+        {
+          "title": "Warum Optiken, Sensorik und Beschichtungen betroffen sind",
+          "content": "Optiken, Detektoren und Thermalkontrollflächen können auf Beläge weit unterhalb der Sichtbarkeitsgrenze empfindlich reagieren. Der Effekt hängt von Filmzusammensetzung, Dicke, Wellenlänge und Funktion ab: Transmission, Streulicht, Kalibrierung, solare Absorptivität oder Infrarotemission können sich ändern. Kältere Flächen können bevorzugte Sammelstellen werden; ihre Temperaturhistorie gehört deshalb in das Kontaminationsmodell."
+        },
+        {
+          "title": "Woher Kontamination kommt",
+          "content": "Fast alles in der Kammer trägt bei; die Frage ist, wie viel – und wie flüchtig es ist.",
+          "bulletsHeading": "Typische Quellen",
+          "bullets": [
+            "Der Prüfling selbst: Vergussmassen, Klebstoffe, Schutzlacke, Kabelisolierungen und Schmierstoffe.",
+            "Vorrichtungen und Hilfsgestelle aus unkontrollierten Materialien – ein häufig unterschätzter Beitrag.",
+            "Die Kammerhistorie: Filme aus früheren Kampagnen verdampfen erneut, wenn Shroud und Wände warm werden.",
+            "Pumpensysteme, wenn ölgedichtete Technik ohne Schutzmaßnahmen läuft – der Grund, warum ölfreie Pumpstände für Raumfahrthardware Standard sind.",
+            "Das Handling: Fingerabdrücke, Verpackungsrückstände und Fusseln aus der Integration."
+          ]
+        },
+        {
+          "title": "Prävention: Material, Reinigung, Ausheizen, Stickstoff",
+          "content": "Prävention beginnt mit dem projektspezifischen Kontaminationskontrollplan. Materialien werden für den vorgesehenen Einsatz gescreent oder qualifiziert, Aushärtungszustände kontrolliert, Hardware und Vorrichtungen gereinigt und verpackt sowie bei Verträglichkeit ausgeheizt. ECSS-Q-ST-70-02C und die NASA-Ausgasungsdatenbank liefern verbreitete Referenzmethoden; Projektgrenzen können strenger als die bekannten TML- und CVCM-Screeningwerte sein."
+        },
+        {
+          "title": "Messung: QCM, RGA und Zeugenproben",
+          "content": "Ein temperaturgeregeltes QCM misst abgeschiedene Masse an einem definierten Ort und bei definierter Temperatur. Die RGA misst das Restgas-Massenspektrum und hilft, Wasser, Lösemittel, Kohlenwasserstoffe oder luftähnliche Signaturen zu erkennen. Zeugenproben liefern einen Oberflächennachweis nach dem Test. Keines dieser Instrumente weist allein die Gesamtsauberkeit der Hardware nach; Position, Empfindlichkeit, Untergrund und Abnahmekriterien müssen gemeinsam festgelegt werden."
+        },
+        {
+          "title": "Sauberkeit in der Kampagne – und zwischen den Kampagnen",
+          "content": "Sauberkeit sollte über die vollständige Kampagne gelenkt werden. Vor der Installation empfindlicher Hardware können eine Leerkammer-Baseline, Vorrichtungsvorbereitung und Kammerausheizen erforderlich sein. Während des Profils bestimmen die relativen Temperaturen von Shroud, Prüfling, Optik und QCM, wo kondensierbares Material gesammelt wird. Zwischen Kampagnen sichern Reinigungsnachweise, Spülbedingungen und Testhistorie die Ausgangsbasis für den nächsten Prüfling."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Was misst ein QCM in einer Vakuumkammer?",
+          "a": "Ein QCM misst die auf einem schwingenden Quarzkristall abgeschiedene Masse an einem kontrollierten Ort und bei definierter Temperatur. Der Messwert ist nur für die gewählten Kristallbedingungen und Sichtfaktoren repräsentativ; Position und Abnahmekriterien müssen zum Kontaminationsbudget der Hardware passen."
+        },
+        {
+          "q": "Was bedeuten TML und CVCM?",
+          "a": "TML ist der Gesamtmasseverlust bei einer standardisierten Vakuumauslagerung; CVCM ist der auf einer kühleren Fläche gesammelte kondensierbare Anteil. Häufig verwendete Screeningwerte sind TML unter 1,0 Prozent und CVCM unter 0,10 Prozent. Sie unterstützen die Materialauswahl, ersetzen aber keine projektspezifischen Kontaminationsgrenzen."
+        },
+        {
+          "q": "Warum wird eine Vakuumkammer mit Stickstoff belüftet statt mit Luft?",
+          "a": "Trockener, gefilterter Stickstoff kann Feuchte und luftgetragene Kontamination beim Belüften und im Standby reduzieren. Einsatz, Reinheit, Filtration, Durchfluss und Sicherheitskontrollen müssen für Kammer und Hardware definiert werden; Stickstoffbelüftung ersetzt weder Reinigung noch Materialkontrolle."
+        },
+        {
+          "q": "Woher weiß ich, dass eine Kammer sauber genug für empfindliche Hardware ist?",
+          "a": "Durch Nachweis statt Annahme: eine Leerkammer-Zertifizierung bei repräsentativen Temperaturen, deren QCM-Trends und RGA-Spektren keine unerwarteten Kondensate zeigen; Zeugenproben, die nach dem Lauf analysiert werden; und ein Kammerlogbuch über frühere Kampagnen und Reinigungen. Ist die Historie unbekannt oder war der letzte Test schmutzig, führt der ehrliche Weg über Ausheizen und eine wiederholte Zertifizierung zurück zur sauberen Basis."
+        }
+      ],
+      "conclusion": "Kontaminationskontrolle erfordert ein definiertes Sauberkeitsbudget, qualifizierte Materialien und Prozesse, eine kontrollierte Kammerhistorie sowie Messungen in kritischen Phasen. QCM, RGA und Zeugenproben beantworten unterschiedliche Fragen und sollten aus der Empfindlichkeit der Hardware abgeleitet werden."
+    },
+    "seoKey": "blogContaminationControl",
+    "dateModified": "2026-07-23",
+    "searchIntent": {
+      "en": {
+        "primaryKeyword": "contamination control TVAC",
+        "primaryQuestion": "How are molecular and particulate contamination prevented and monitored during TVAC testing?"
+      },
+      "de": {
+        "primaryKeyword": "Kontaminationskontrolle TVAC",
+        "primaryQuestion": "Wie werden molekulare und partikuläre Kontamination im TVAC-Test verhindert und überwacht?"
+      }
+    },
+    "references": [
+      {
+        "title": "ECSS-Q-ST-70-02C: Thermal vacuum outgassing test for the screening of space materials",
+        "publisher": "European Cooperation for Space Standardization (ECSS)",
+        "url": "https://ecss.nl/standard/ecss-q-st-70-02c-thermal-vacuum-outgassing-test-for-the-screening-of-space-materials/"
+      },
+      {
+        "title": "Outgassing Data for Selecting Spacecraft Materials: Test description",
+        "publisher": "NASA",
+        "url": "https://outgassing.nasa.gov/Description"
+      },
+      {
+        "title": "Molecular Accumulation during JWST Cryogenic Thermal Vacuum Testing",
+        "publisher": "NASA Technical Reports Server",
+        "url": "https://ntrs.nasa.gov/citations/20220010052"
+      },
+      {
+        "title": "Contamination Measurements During Thermal Vacuum Tests in a Large Space Chamber",
+        "publisher": "NASA Technical Reports Server",
+        "url": "https://ntrs.nasa.gov/citations/19840026425"
+      }
+    ]
+  },
+  {
+    "articleKey": "viewportsOpticalAccess",
+    "enSlug": "tvac-viewports-optical-access",
+    "deSlug": "schauglaeser-optischer-zugang",
+    "category": "engineeringGuide",
+    "datePublished": "2026-04-28",
+    "relatedPaths": [
+      "/products/options/viewing-window-znse",
+      "/products/options/optical-viewports",
+      "/products/options/interior-camera",
+      "/products/thermal-vision"
+    ],
+    "relatedArticles": [
+      "opticsElectronicsTesting",
+      "temperatureMeasurement",
+      "contaminationControl"
+    ],
+    "en": {
+      "title": "Viewports and Optical Access in TVAC Chambers",
+      "description": "From simple sight glasses to ZnSe windows for thermography and in-chamber IR cameras: how to plan optical access into a TVAC chamber – materials, ports and pitfalls.",
+      "seoTitle": "TVAC Viewports & Optical Access | Deepvac",
+      "seoDescription": "Vacuum chamber viewports: window materials from fused silica to ZnSe, thermography options, port sizing, contamination pitfalls and spare-port strategy.",
+      "intro": "Optical access in a TVAC chamber must be specified from wavelength band, field of view, radiometric or visual accuracy, port geometry, shroud opening and contamination control. Visible inspection, infrared thermography and optical stimulation use different window materials and calibration methods. Because vessel and shroud penetrations are difficult to change after manufacture, the observation concept belongs in the initial interface definition.",
+      "sections": [
+        {
+          "title": "Why optical access matters",
+          "content": "A closed steel vessel tells you nothing about what is happening inside. Optical access turns the chamber into an observable experiment: visual inspection of mechanisms, deployments and MLI behaviour, thermographic mapping of surface temperatures, illumination for cameras, and optical stimulation or alignment of instruments through dedicated high-quality windows. Because every port is a hole in the vessel, in the shroud and sometimes in the thermal design, optical access is planned at specification time – not discovered as a need during the first campaign."
+        },
+        {
+          "title": "Window materials and their transmission bands",
+          "content": "Window selection must use verified transmission data for the required wavelength, thickness, coating, temperature and incidence angle. The ranges below are qualitative orientation; the component manufacturer's current spectral and mechanical data are binding.",
+          "bulletsHeading": "Common choices",
+          "bullets": [
+            "Borosilicate glass: robust visible inspection where ultraviolet or thermal-infrared transmission is not required.",
+            "Fused silica: visible, ultraviolet and near-infrared applications, subject to grade and coating.",
+            "Sapphire: mechanically robust access from ultraviolet into parts of the infrared, subject to thickness and orientation.",
+            "Zinc selenide: commonly used for long-wave infrared thermography, with handling and coating constraints.",
+            "Germanium: infrared transmission with little or no visible transparency, useful only when the optical and mechanical design supports it."
+          ]
+        },
+        {
+          "title": "Thermography: through a ZnSe window or inside the chamber",
+          "content": "An external infrared camera behind a suitable viewport keeps the camera accessible but fixes the viewing geometry and adds window transmission, reflection and temperature to the radiometric model. A pressure-isolated or otherwise vacuum-compatible in-chamber camera can improve viewing angle and coverage, but adds its own thermal management, calibration, cabling and contamination interfaces.",
+          "content2": "The choice depends on repeatability of test geometry, required field of view, measurement uncertainty, service access and the temperature environment. Neither architecture is generally superior. A calibration should represent the installed optical path and expected scene temperatures."
+        },
+        {
+          "title": "Port sizing and placement",
+          "content": "Think in lines of sight before flange sizes: what must the camera or sensor see, from where, at which angle? Distance and optics then define the required clear aperture, and standard vacuum flange sizes accommodate the window assembly. Placement interacts with the thermal design, because every viewport needs an opening in the shroud, and every opening is a warm spot in the cold background – positions are chosen where the radiative disturbance is acceptable, and unused openings get cold covers. Pairing a camera port with a separate illumination port avoids blinding reflections from the item's own surfaces."
+        },
+        {
+          "title": "Contamination and condensation on windows",
+          "content": "Windows sit in a comfortable position contamination-wise: they usually stay near ambient temperature, and molecular films prefer the coldest surface in the chamber – normally the shroud. Risks remain at the transitions: during warm-up and venting, redistributed volatiles can reach the glass, bake-out phases load every surface, and a window facing a strong local source can still fog. On the room side, humid air can condense on a window cooled by radiative coupling to the cold interior. Protective shutters during dirty phases, dry nitrogen purging and careful cleaning – ZnSe and its coatings are soft – keep transmission where the calibration expects it."
+        },
+        {
+          "title": "Reserve ports and future interfaces",
+          "content": "Adding a vessel penetration after fabrication can require structural review, welding, cleaning, leak testing, shroud modification and renewed acceptance. Blanked reserve ports can reduce that risk, but only when their size, location, line of sight and surrounding space match plausible future uses. A port schedule should therefore record both current and reserved functions."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Which window material do you need for thermal imaging?",
+          "a": "Long-wave infrared thermography commonly uses materials such as zinc selenide or germanium because ordinary glass is largely opaque in that band. Select the actual window from verified spectral transmission, thickness, coating, mechanical load and temperature data, then include the installed transmission in the radiometric calibration."
+        },
+        {
+          "q": "Can you watch a test item inside a TVAC chamber live?",
+          "a": "Yes. Viewports allow direct visual observation and external cameras; interior cameras extend coverage to angles no port reaches; and infrared systems – through a ZnSe window or as a pressure-rated in-chamber camera – add live thermal maps. Combined with remote monitoring of chamber data, you can follow a campaign in detail without opening the door or standing at the panel."
+        },
+        {
+          "q": "Why can a thermal camera not measure through normal glass?",
+          "a": "Ordinary glass strongly attenuates the long-wave infrared used by many thermal cameras, so the camera tends to measure the glass surface rather than the scene behind it. An appropriate infrared-transmitting material and installed-path calibration are required."
+        },
+        {
+          "q": "How many viewports does a TVAC chamber need?",
+          "a": "The number follows from the observation and illumination tasks, required view angles and future interface plan. Specify each port by function, wavelength, clear aperture and line of sight. Reserve ports are useful when those parameters support credible future needs."
+        }
+      ],
+      "conclusion": "Optical access should be specified from wavelength band, field of view, calibration accuracy, shroud opening and contamination control. Reserve ports are valuable only when their locations and clear apertures support plausible future observation tasks."
+    },
+    "de": {
+      "title": "Schaugläser und optischer Zugang in TVAC-Kammern",
+      "description": "Vom einfachen Schauglas über ZnSe-Fenster für Thermografie bis zur IR-Kamera in der Kammer: So planen Sie optischen Zugang in ein TVAC-System – Materialien, Stutzen, Fallstricke.",
+      "seoTitle": "Schaugläser für Vakuumkammern | Deepvac",
+      "seoDescription": "Schaugläser für Vakuumkammern: Fenstermaterialien von Quarzglas bis ZnSe, Thermografie-Optionen, Stutzengrößen, Kontaminationsfallen und Reserveports.",
+      "intro": "Optischer Zugang in einer TVAC-Kammer muss aus Wellenlängenbereich, Sichtfeld, radiometrischer oder visueller Genauigkeit, Stutzengeometrie, Shroud-Öffnung und Kontaminationskontrolle spezifiziert werden. Sichtprüfung, Infrarot-Thermografie und optische Stimulation verwenden unterschiedliche Fenstermaterialien und Kalibriermethoden. Da Behälter- und Shrouddurchbrüche nach der Fertigung nur aufwendig geändert werden können, gehört das Beobachtungskonzept in die erste Schnittstellendefinition.",
+      "sections": [
+        {
+          "title": "Warum optischer Zugang zählt",
+          "content": "Ein geschlossener Stahlbehälter verrät nichts über das Geschehen im Inneren. Optischer Zugang macht die Kammer zum beobachtbaren Experiment: Sichtprüfung von Mechanismen, Entfaltungen und MLI-Verhalten, thermografische Kartierung von Oberflächentemperaturen, Beleuchtung für Kameras sowie optische Stimulation oder Ausrichtung von Instrumenten durch dedizierte hochwertige Fenster. Weil jeder Stutzen ein Loch im Behälter, im Shroud und manchmal im Thermaldesign ist, wird optischer Zugang in der Spezifikationsphase geplant – nicht erst in der ersten Kampagne als Bedarf entdeckt."
+        },
+        {
+          "title": "Fenstermaterialien und ihre Transmissionsbereiche",
+          "content": "Die Fensterauswahl muss auf verifizierten Transmissionsdaten für geforderte Wellenlänge, Dicke, Beschichtung, Temperatur und Einfallswinkel beruhen. Die folgenden Bereiche dienen der qualitativen Orientierung; verbindlich sind die aktuellen spektralen und mechanischen Daten des Komponentenherstellers.",
+          "bulletsHeading": "Gängige Optionen",
+          "bullets": [
+            "Borosilikatglas: robuste Sichtprüfung, wenn weder UV- noch thermische IR-Transmission benötigt wird.",
+            "Quarzglas: Anwendungen im Sichtbaren, Ultravioletten und nahen Infrarot, abhängig von Qualität und Beschichtung.",
+            "Saphir: mechanisch robuster Zugang vom Ultravioletten in Teile des Infraroten, abhängig von Dicke und Orientierung.",
+            "Zinkselenid: häufig für langwellig-infrarote Thermografie verwendet, mit Anforderungen an Handling und Beschichtung.",
+            "Germanium: Infrarottransmission bei geringer oder fehlender Sichttransparenz, geeignet nur bei passendem optischem und mechanischem Design."
+          ]
+        },
+        {
+          "title": "Thermografie: durch das ZnSe-Fenster oder in der Kammer",
+          "content": "Eine externe Infrarotkamera hinter einem geeigneten Fenster bleibt zugänglich, legt aber die Sichtgeometrie fest und ergänzt Fenstertransmission, Reflexion und Temperatur im radiometrischen Modell. Eine druckisolierte oder anderweitig vakuumtaugliche Kamera in der Kammer kann Blickwinkel und Abdeckung verbessern, bringt jedoch eigenes Thermalmanagement, Kalibrierung, Verkabelung und Kontaminationsschnittstellen mit.",
+          "content2": "Die Wahl hängt von Wiederholbarkeit der Prüfgeometrie, gefordertem Sichtfeld, Messunsicherheit, Servicezugang und Temperaturumgebung ab. Keine Architektur ist grundsätzlich überlegen. Die Kalibrierung sollte den eingebauten optischen Pfad und die erwarteten Szenentemperaturen abbilden."
+        },
+        {
+          "title": "Stutzengröße und Platzierung",
+          "content": "Denken Sie in Sichtlinien, bevor Sie in Flanschgrößen denken: Was muss Kamera oder Sensor sehen, von wo, unter welchem Winkel? Abstand und Optik definieren dann die nötige freie Apertur, und gängige Vakuumflanschgrößen nehmen die Fensterbaugruppe auf. Die Platzierung wechselwirkt mit dem Thermaldesign, denn jedes Schauglas braucht eine Öffnung im Shroud – und jede Öffnung ist ein warmer Fleck im kalten Hintergrund. Positionen werden dort gewählt, wo die radiative Störung akzeptabel ist; ungenutzte Öffnungen erhalten kalte Abdeckungen. Ein eigener Beleuchtungsstutzen neben dem Kamerastutzen vermeidet blendende Reflexe von den Oberflächen des Prüflings."
+        },
+        {
+          "title": "Kontamination und Kondensation auf Fenstern",
+          "content": "Fenster sind kontaminationsseitig komfortabel positioniert: Sie bleiben meist nahe Raumtemperatur, und molekulare Filme bevorzugen die kälteste Fläche der Kammer – normalerweise den Shroud. Risiken bleiben an den Übergängen: Beim Aufwärmen und Belüften können umverteilte Flüchtige das Glas erreichen, Ausheizphasen belasten jede Oberfläche, und ein Fenster gegenüber einer starken lokalen Quelle kann trotzdem beschlagen. Raumseitig kann feuchte Luft auf einem Fenster kondensieren, das durch Strahlungskopplung ans kalte Innere auskühlt. Schutzblenden in schmutzigen Phasen, Spülen mit trockenem Stickstoff und vorsichtige Reinigung – ZnSe und seine Beschichtungen sind weich – halten die Transmission dort, wo die Kalibrierung sie erwartet."
+        },
+        {
+          "title": "Reserveports und künftige Schnittstellen",
+          "content": "Ein nachträglicher Behälterdurchbruch kann Strukturprüfung, Schweißen, Reinigung, Lecktest, Shroudänderung und erneute Abnahme erfordern. Verschlossene Reserveports können dieses Risiko reduzieren, jedoch nur, wenn Größe, Position, Sichtlinie und Bauraum zu plausiblen künftigen Nutzungen passen. Ein Stutzenplan sollte deshalb aktuelle und reservierte Funktionen dokumentieren."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Welches Fenstermaterial braucht man für Wärmebildaufnahmen?",
+          "a": "Langwellige Infrarot-Thermografie nutzt häufig Materialien wie Zinkselenid oder Germanium, weil gewöhnliches Glas in diesem Band weitgehend undurchlässig ist. Das konkrete Fenster wird aus verifizierter spektraler Transmission, Dicke, Beschichtung, mechanischer Last und Temperatur ausgewählt; die eingebaute Transmission gehört in die radiometrische Kalibrierung."
+        },
+        {
+          "q": "Kann man einen Prüfling in der TVAC-Kammer live beobachten?",
+          "a": "Ja. Schaugläser erlauben direkte Sichtbeobachtung und externe Kameras; Kameras in der Kammer erweitern die Abdeckung auf Winkel, die kein Stutzen erreicht; Infrarotsysteme – durch ein ZnSe-Fenster oder als druckfeste Kamera in der Kammer – ergänzen Wärmekarten in Echtzeit. Zusammen mit der Fernüberwachung der Anlagendaten verfolgen Sie eine Kampagne im Detail, ohne die Tür zu öffnen oder am Panel zu stehen."
+        },
+        {
+          "q": "Warum kann eine Wärmebildkamera nicht durch normales Glas messen?",
+          "a": "Gewöhnliches Glas dämpft das von vielen Wärmebildkameras verwendete langwellige Infrarot stark. Die Kamera misst dann eher die Glasoberfläche als die Szene dahinter. Erforderlich sind ein geeignetes IR-transmittierendes Material und eine Kalibrierung des eingebauten optischen Pfads."
+        },
+        {
+          "q": "Wie viele Schaugläser braucht eine TVAC-Kammer?",
+          "a": "Die Anzahl folgt aus Beobachtungs- und Beleuchtungsaufgaben, geforderten Blickwinkeln und künftigem Schnittstellenplan. Jeder Stutzen sollte nach Funktion, Wellenlänge, freier Apertur und Sichtlinie spezifiziert werden. Reserveports sind sinnvoll, wenn diese Parameter plausible spätere Bedarfe unterstützen."
+        }
+      ],
+      "conclusion": "Optischer Zugang sollte aus Wellenlängenbereich, Sichtfeld, Kalibriergenauigkeit, Shroud-Öffnung und Kontaminationskontrolle abgeleitet werden. Reserveports sind dann sinnvoll, wenn Position und freie Apertur plausible spätere Beobachtungsaufgaben unterstützen."
+    },
+    "seoKey": "blogViewportsOpticalAccess",
+    "dateModified": "2026-07-23",
+    "searchIntent": {
+      "en": {
+        "primaryKeyword": "TVAC viewports optical access",
+        "primaryQuestion": "Which viewport material and camera arrangement suit visual or infrared observation?"
+      },
+      "de": {
+        "primaryKeyword": "Schaugläser optischer Zugang TVAC",
+        "primaryQuestion": "Welches Fenstermaterial und welche Kameraanordnung passen zu Sicht- oder Infrarotbeobachtung?"
+      }
+    },
+    "references": [
+      {
+        "title": "Why ordinary glass blocks long-wave infrared imaging",
+        "publisher": "Teledyne FLIR",
+        "url": "https://www.flir.com/en-eu/discover/home-outdoor/can-thermal-imaging-see-through-walls/"
+      },
+      {
+        "title": "Accounting for optical material transmission in thermal imaging",
+        "publisher": "Teledyne FLIR",
+        "url": "https://www.flir.com/support-center/instruments2/what-is-the-transmission-rate-of-the-optic-material/"
+      },
+      {
+        "title": "Thermal imaging through a zinc selenide window during vacuum testing",
+        "publisher": "NASA Technical Reports Server",
+        "url": "https://ntrs.nasa.gov/citations/20130001762"
+      }
+    ]
+  }
+]
