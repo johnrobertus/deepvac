@@ -12,7 +12,9 @@ import {
   solutionLabel,
   type BlogSection,
 } from "@/lib/blogContent";
-import { ArrowLeft, ArrowRight, ExternalLink } from "lucide-react";
+import * as AccordionPrimitive from "@radix-ui/react-accordion";
+import { ArrowLeft, ArrowRight, ChevronDown, ExternalLink } from "lucide-react";
+
 
 const BASE = "https://deepvac.space";
 
