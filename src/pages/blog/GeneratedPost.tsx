@@ -246,16 +246,36 @@ const GeneratedPost = () => {
                 <h2 className="text-xl md:text-2xl font-medium text-sand">
                   {t("blog.labels.faqTitle")}
                 </h2>
-                <div className="space-y-6">
+                <AccordionPrimitive.Root
+                  type="multiple"
+                  className="border-t border-gray/15"
+                >
                   {content.faq.map((faq, index) => (
-                    <div key={index} className="space-y-2">
-                      <h3 className="text-base font-medium text-sand">
-                        {faq.q}
-                      </h3>
-                      <p className="text-sand/80">{faq.a}</p>
-                    </div>
+                    <AccordionPrimitive.Item
+                      key={index}
+                      value={`faq-${index}`}
+                      className="border-b border-gray/15"
+                    >
+                      <AccordionPrimitive.Header className="flex">
+                        <AccordionPrimitive.Trigger className="group flex flex-1 items-start justify-between gap-4 py-5 text-left text-base font-medium text-sand transition-colors hover:text-sand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background">
+                          <h3 className="text-base font-medium text-sand">
+                            {faq.q}
+                          </h3>
+                          <ChevronDown className="mt-0.5 h-4 w-4 shrink-0 text-blue transition-transform duration-300 group-data-[state=open]:rotate-180" />
+                        </AccordionPrimitive.Trigger>
+                      </AccordionPrimitive.Header>
+                      <AccordionPrimitive.Content
+                        forceMount
+                        className="grid overflow-hidden transition-[grid-template-rows] duration-300 ease-out data-[state=closed]:grid-rows-[0fr] data-[state=open]:grid-rows-[1fr]"
+                      >
+                        <div className="overflow-hidden">
+                          <p className="pb-5 text-sand/80">{faq.a}</p>
+                        </div>
+                      </AccordionPrimitive.Content>
+                    </AccordionPrimitive.Item>
                   ))}
-                </div>
+                </AccordionPrimitive.Root>
+
               </div>
             )}
 
