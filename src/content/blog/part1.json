@@ -1,1 +1,992 @@
-[{"articleKey":"cubesatTesting","enSlug":"cubesat-tvac-testing","deSlug":"cubesat-tvac-test","category":"applications","datePublished":"2026-07-22","relatedPaths":["/products/standard-series","/services/testing-services","/tvac-questionnaire"],"relatedArticles":["whatIsTvacTesting","inHouseVsExternalTesting","aerospaceQualification"],"en":{"title":"CubeSat TVAC Testing: What Small Satellites Really Need","description":"Why thermal vacuum testing pays off even for CubeSats, what a typical campaign looks like, and how to right-size chamber and budget for 1U to 16U.","seoTitle":"CubeSat Thermal Vacuum (TVAC) Testing | Deepvac","seoDescription":"CubeSat thermal vacuum testing: why the TVAC screen matters for smallsats, what a campaign includes, chamber sizing for 1U–16U and budget-friendly options.","intro":"CubeSats benefit from thermal vacuum testing because the combined vacuum and temperature environment can reveal thermal-interface, integration and functional problems that are not visible during ambient testing. The required evidence is defined by the mission, launch integrator and tailored verification plan rather than by the CubeSat form factor alone. A compact spacecraft can often be tested in a compact chamber, but the profile, functional checks, battery limits and deployed configuration still require project-specific planning. This article outlines those decisions for platforms from 1U to 16U.","sections":[{"title":"Why TVAC matters even for a CubeSat","content":"Thermal vacuum testing should not be treated as a formality. It exercises the spacecraft at representative thermal boundaries without convective cooling and can expose weak thermal interfaces, intermittent electrical connections, mechanism margin and software behaviour at temperature. The value comes from operating the spacecraft and recording pass, fail and anomaly criteria at the hot and cold plateaus.","content2":"Launch-service and mission-assurance documentation may require environmental-test and bake-out evidence. The applicable launch interface control document and verification matrix should therefore be reviewed before the campaign is frozen."},{"title":"Qualification standards, scaled to NewSpace risk","content":"Common reference frameworks include ECSS-E-ST-10-03C Rev.1, NASA GEVS (GSFC-STD-7000B) and, for relevant U.S. national-security space programmes, SMC-S-016 (2014). The programme-specific verification plan tails these frameworks to mission risk, model philosophy and launch requirements. It defines the actual levels, dwell criteria, cycle count and functional test scope.","bulletsHeading":"Typical tailoring for small missions","bullets":["Protoflight may be selected when the programme accepts testing flight hardware at elevated verification levels without a dedicated qualification model.","Temperature limits are derived from predicted flight temperatures, uncertainty and the margin rules in the tailored verification plan.","Cycle count is a programme decision; it should be sufficient for the intended workmanship screen without consuming unnecessary hardware life.","Functional checks at the hot and cold plateaus remain central because survival alone does not demonstrate mission performance."]},{"title":"What a typical CubeSat campaign looks like","content":"A well-prepared CubeSat campaign can often be executed within several days to about a week of chamber occupancy, but the duration depends on pump-down, bake-out requirements, stabilization criteria, cycle count and the functional test script. The schedule should be calculated from the agreed profile rather than assumed from spacecraft size.","bulletsHeading":"Typical sequence","bullets":["Ambient reference test: a full functional run as the baseline before pump-down.","Bake-out under vacuum at elevated temperature to drive out volatiles, optionally monitored with QCM or RGA.","Thermal cycling between hot and cold plateaus, with dwell times long enough to stabilize the interior.","Functional checks at the plateaus, including cold start and hot start of onboard computer and radios.","Nitrogen venting and a closing ambient functional test to confirm nothing has changed."],"content2":"Battery operation needs a dedicated rule set. Cell and battery manufacturer documentation defines the permitted charge and discharge temperatures; low-temperature charging is commonly restricted. The campaign must implement these limits through operating procedures, dedicated sensors and independent protective actions where required."},{"title":"Right-sizing the chamber: 65 to 250 litres","content":"Chamber selection starts from the deployed test envelope, fixture, harness and required radiative clearance. Current Deepvac Standard Series sizes include the 65 to 250 litre classes often considered for small spacecraft, but suitability is determined by the clear internal dimensions and door passage of the selected configuration, not by nominal volume alone.","bulletsHeading":"Sizing checkpoints","bullets":["Stowed versus deployed: an unfolded antenna or panel often drives chamber volume more than the bus itself.","Fixturing counts: mounting frame, thermal plate or suspension, harness and connector savers all take space.","Typical CubeSat profiles fit within mechanical refrigeration (−90 °C to +150 °C); LN₂-based options reach −180 °C when a payload demands it.","Temperature uniformity of ± 2 K and programmable ramp rates matter more for repeatable plateaus than raw volume."]},{"title":"Keeping the budget in check","content":"Cost control depends on a clear verification scope and realistic utilisation forecast. External test services can be efficient for occasional campaigns; in-house capability can improve iteration speed when test demand is sustained. The comparison should include preparation, operators, maintenance, logistics, queue time and the cost of schedule delay.","bulletsHeading":"Budget levers","bullets":["Run protoflight instead of building a separate qualification model when the risk class allows it.","Book a testing service instead of buying a chamber if you test a few satellites per year – ownership pays off with steady utilization.","Prepare functional scripts and pass/fail criteria before pump-down; improvised plateau time is the most expensive time of a campaign.","Use automation and remote monitoring so cycles run overnight without a full crew on site."],"content2":"Both routes stay open as you grow: a campaign executed as a testing service covers the first missions, and a compact Standard Series chamber brings the screen in-house once utilization justifies it."},{"title":"Recurring findings to investigate","content":"A finding in the chamber is a fault that did not reach orbit – and across CubeSat campaigns the same categories dominate.","bullets":["Connectors and harness: intermittent contacts and crimp faults that only open at temperature extremes.","Deployables: burn-wire and spring mechanisms losing release margin at cold, especially after stowage under preload.","Batteries: heater sizing and insulation that were never verified in vacuum, and charge inhibits at cold.","Thermal straps and bolted joints: contact conductance far below bench estimates once no air bridges the gaps.","Software and FDIR: resets, oscillator drift and sensor offsets at the corners of the temperature envelope."]}],"faq":[{"q":"Do CubeSats really need thermal vacuum testing?","a":"CubeSat programmes commonly use thermal vacuum testing to verify thermal behaviour and function under combined vacuum and temperature conditions. Whether it is mandatory, and which profile applies, depends on the mission, launch integrator, contract and tailored verification plan."},{"q":"How long does a CubeSat TVAC test take?","a":"Several days to about a week is a useful planning range for some compact campaigns, but it is not a standard duration. Pump-down, bake-out, stabilization, cycle count and functional test scope determine the actual chamber occupancy."},{"q":"What chamber size do I need for CubeSat TVAC testing?","a":"Nominal volumes in the 65 to 250 litre class can suit many 1U to 16U test setups, but the deployed envelope, fixture, harness, radiative clearance and door opening must be checked against the selected chamber's clear dimensions."},{"q":"How many thermal cycles does a CubeSat need?","a":"The applicable verification plan sets the cycle count. Qualification, acceptance and protoflight approaches use different levels and durations, and mission-specific tailoring can change the baseline. Functional checks and stabilization criteria should be preserved even when cycle count is reduced."}],"conclusion":"A CubeSat TVAC campaign should be tailored to the mission, launch-integration requirements and the spacecraft thermal model. The most valuable results come from repeatable hot and cold functional checks, documented configuration control and clear pass, fail and abort criteria."},"de":{"title":"CubeSat-TVAC-Test: Was kleine Satelliten wirklich brauchen","description":"Warum sich Thermalvakuumtests auch für CubeSats lohnen, wie eine typische Kampagne abläuft und wie Sie Kammer und Budget für 1U bis 16U richtig dimensionieren.","seoTitle":"CubeSat-TVAC-Test: Ablauf & Kammergröße | Deepvac","seoDescription":"CubeSat-TVAC-Test: warum Thermalvakuumtests für CubeSats zählen, typischer Ablauf, Kammergrößen für 1U–16U und budgetschonende Ansätze für NewSpace-Teams.","intro":"Auch CubeSats profitieren vom Thermalvakuumtest, weil die Kombination aus Vakuum und Temperatur thermische Schnittstellen-, Integrations- und Funktionsprobleme sichtbar machen kann, die unter Umgebungsbedingungen unentdeckt bleiben. Welche Nachweise erforderlich sind, bestimmen Mission, Startintegrator und getailorter Verifikationsplan, nicht allein der CubeSat-Formfaktor. Ein kompakter Satellit passt häufig in eine kompakte Kammer; Profil, Funktionstests, Batteriegrenzen und entfaltete Konfiguration müssen dennoch projektspezifisch geplant werden. Dieser Artikel ordnet die Entscheidungen für Plattformen von 1U bis 16U.","sections":[{"title":"Warum TVAC auch für CubeSats zählt","content":"Der Thermalvakuumtest sollte nicht als Formalität behandelt werden. Er betreibt den Satelliten an repräsentativen thermischen Randbedingungen ohne konvektive Kühlung und kann schwache Thermalschnittstellen, intermittierende elektrische Verbindungen, geringe Mechanismenreserven sowie temperaturabhängiges Softwareverhalten sichtbar machen. Aussagekräftig wird der Test durch Funktionstests und dokumentierte Erfolgs-, Fehler- und Anomaliekriterien an den heißen und kalten Haltephasen.","content2":"Startdienst- und Mission-Assurance-Dokumente können Nachweise zu Umwelttests und Ausheizen verlangen. Deshalb sollten das anwendbare Interface Control Document und die Verifikationsmatrix geprüft werden, bevor die Kampagne festgeschrieben wird."},{"title":"Qualifikationsstandards, skaliert auf NewSpace-Risiko","content":"Gängige Referenzrahmen sind ECSS-E-ST-10-03C Rev.1, NASA GEVS (GSFC-STD-7000B) und für einschlägige US-Programme der nationalen Sicherheitsraumfahrt SMC-S-016 (2014). Der projektspezifische Verifikationsplan tailort diese Rahmenwerke auf Missionsrisiko, Modellphilosophie und Startanforderungen. Er definiert die tatsächlichen Niveaus, Haltekriterien, Zyklenzahl und den Umfang der Funktionstests.","bulletsHeading":"Typisches Tailoring für kleine Missionen","bullets":["Protoflight kann gewählt werden, wenn das Programm die Prüfung von Flughardware auf erhöhten Verifikationsniveaus ohne eigenes Qualifikationsmodell akzeptiert.","Temperaturgrenzen werden aus vorhergesagten Flugtemperaturen, Unsicherheit und den Margenregeln des getailorten Verifikationsplans abgeleitet.","Die Zyklenzahl ist eine Projektentscheidung; sie sollte für die beabsichtigte Prüfung der Fertigungsqualität ausreichen, ohne unnötig Lebensdauer zu verbrauchen.","Funktionstests an den heißen und kalten Haltephasen bleiben zentral, weil reines Überleben keine Missionsleistung nachweist."]},{"title":"So läuft eine typische CubeSat-Kampagne","content":"Eine gut vorbereitete CubeSat-Kampagne lässt sich häufig innerhalb mehrerer Tage bis etwa einer Woche Kammerbelegung durchführen. Die Dauer hängt jedoch von Abpumpen, Ausheizanforderung, Stabilisierungskriterien, Zyklenzahl und Funktionsskript ab. Der Terminplan sollte aus dem vereinbarten Profil berechnet und nicht aus der Satellitengröße abgeleitet werden.","bulletsHeading":"Typischer Ablauf","bullets":["Referenztest unter Umgebungsbedingungen: vollständiger Funktionslauf als Baseline vor dem Abpumpen.","Ausheizen unter Vakuum bei erhöhter Temperatur, um flüchtige Bestandteile auszutreiben – optional überwacht per Schwingquarz-Monitoring (QCM) oder Restgasanalyse (RGA).","Thermalzyklen zwischen heißer und kalter Haltephase, mit Haltezeiten, die das Innere stabilisieren.","Funktionstests an den Haltephasen, inklusive Kalt- und Heißstart von Bordrechner und Funkstrecken.","Belüften mit Stickstoff und ein abschließender Funktionstest unter Umgebungsbedingungen als Gegenprobe."],"content2":"Der Batteriebetrieb benötigt ein eigenes Regelwerk. Die Dokumentation von Zell- und Batteriehersteller legt die zulässigen Lade- und Entladetemperaturen fest; Laden bei niedriger Temperatur ist häufig eingeschränkt. Die Kampagne muss diese Grenzen über Betriebsprozeduren, eigene Sensoren und bei Bedarf unabhängige Schutzfunktionen umsetzen."},{"title":"Kammergröße: 65 bis 250 Liter richtig gewählt","content":"Die Kammerauswahl beginnt bei entfalteter Prüflingseinhüllender, Vorrichtung, Verkabelung und erforderlichem Strahlungsabstand. Die aktuelle Deepvac Standard-Serie umfasst Größenklassen von 65 bis 250 Litern, die für kleine Raumfahrzeuge häufig betrachtet werden. Entscheidend sind jedoch die lichten Innenmaße und die Türdurchfahrt der gewählten Konfiguration, nicht das Nennvolumen allein.","bulletsHeading":"Checkpunkte für die Dimensionierung","bullets":["Gestaut oder entfaltet: Eine ausgeklappte Antenne oder ein Panel bestimmt das Kammervolumen oft stärker als der Bus selbst.","Vorrichtungen zählen mit: Montagerahmen, Thermalplatte oder Abhängung, Kabelbaum und Steckerschoner brauchen Platz.","Typische CubeSat-Profile liegen innerhalb der mechanischen Kälteerzeugung (−90 °C bis +150 °C); LN₂-basierte Optionen reichen bis −180 °C, wenn eine Nutzlast es verlangt.","Temperaturhomogenität von ± 2 K und programmierbare Rampenraten zählen für reproduzierbare Haltephasen mehr als reines Volumen."]},{"title":"Das Budget im Griff behalten","content":"Die Kosten werden vor allem durch einen klaren Verifikationsumfang und eine realistische Auslastungsplanung beherrscht. Externe Prüfdienstleistungen können bei gelegentlichen Kampagnen effizient sein; eine eigene Anlage kann bei dauerhaftem Testbedarf die Iterationszeit verkürzen. In den Vergleich gehören Vorbereitung, Bedienpersonal, Wartung, Logistik, Wartezeit und die Kosten von Terminverzug.","bulletsHeading":"Budget-Hebel","bullets":["Protoflight statt separatem Qualifikationsmodell, wenn die Risikoklasse es zulässt.","Testdienstleistung statt Kammerkauf, wenn Sie wenige Satelliten pro Jahr testen – Eigenbetrieb lohnt sich erst bei stetiger Auslastung.","Funktionsskripte und Pass/Fail-Kriterien vor dem Abpumpen festlegen – improvisierte Haltephasen sind die teuerste Zeit der Kampagne.","Automatisierung und Fernüberwachung nutzen, damit Zyklen über Nacht ohne volle Besetzung laufen."],"content2":"Beide Wege bleiben offen, wenn Sie wachsen: Eine als Testdienstleistung durchgeführte Kampagne trägt die ersten Missionen, und eine kompakte Standard-Serie-Kammer holt den Screen ins Haus, sobald die Auslastung es rechtfertigt."},{"title":"Wiederkehrende Prüffelder","content":"Ein Befund in der Kammer ist ein Fehler, der nicht in den Orbit gelangt ist – und über CubeSat-Kampagnen hinweg dominieren dieselben Kategorien.","bullets":["Steckverbinder und Kabelbaum: intermittierende Kontakte und Crimpfehler, die erst an den Temperaturextremen öffnen.","Entfaltmechanismen: Burn-Wire- und Federmechanismen, die in der Kälte Auslösemarge verlieren, besonders nach Stauung unter Vorspannung.","Batterien: Heizer- und Isolationsauslegung, die nie im Vakuum verifiziert wurde, und Ladesperren in der Kälte.","Thermal Straps und Schraubverbindungen: Kontaktleitwerte deutlich unter Tischwerten, sobald keine Luft mehr die Spalte überbrückt.","Software und FDIR: Resets, Oszillatordrift und Sensoroffsets an den Rändern des Temperaturbereichs."]}],"faq":[{"q":"Brauchen CubeSats wirklich einen Thermalvakuumtest?","a":"CubeSat-Programme nutzen Thermalvakuumtests häufig, um thermisches Verhalten und Funktion unter kombiniertem Vakuum und Temperaturbedingungen zu verifizieren. Ob der Test verpflichtend ist und welches Profil gilt, bestimmen Mission, Startintegrator, Vertrag und getailorter Verifikationsplan."},{"q":"Wie lange dauert ein CubeSat-TVAC-Test?","a":"Mehrere Tage bis etwa eine Woche sind für manche kompakte Kampagnen eine brauchbare Planungsgröße, aber keine Standarddauer. Abpumpen, Ausheizen, Stabilisierung, Zyklenzahl und Umfang der Funktionstests bestimmen die tatsächliche Kammerbelegung."},{"q":"Welche Kammergröße braucht ein CubeSat-TVAC-Test?","a":"Nennvolumina in der Größenklasse 65 bis 250 Liter können für viele Aufbauten von 1U bis 16U passen. Entfaltete Einhüllende, Vorrichtung, Verkabelung, Strahlungsabstand und Türöffnung müssen jedoch gegen die lichten Maße der gewählten Kammer geprüft werden."},{"q":"Wie viele Thermalzyklen braucht ein CubeSat?","a":"Der anwendbare Verifikationsplan legt die Zyklenzahl fest. Qualifikation, Abnahme und Protoflight verwenden unterschiedliche Niveaus und Dauern; projektspezifisches Tailoring kann die Ausgangsbasis verändern. Funktionstests und Stabilisierungskriterien sollten auch bei reduzierter Zyklenzahl erhalten bleiben."}],"conclusion":"Eine CubeSat-TVAC-Kampagne sollte auf Mission, Anforderungen der Startintegration und Thermalmodell zugeschnitten sein. Besonders aussagekräftig sind wiederholbare Funktionstests an heißen und kalten Haltephasen, eine dokumentierte Konfiguration sowie klare Erfolgs- und Abbruchkriterien."},"seoKey":"blogCubesatTesting","dateModified":"2026-07-23","searchIntent":{"en":{"primaryKeyword":"CubeSat thermal vacuum testing","primaryQuestion":"What must a CubeSat TVAC campaign demonstrate before launch integration?"},"de":{"primaryKeyword":"CubeSat-TVAC-Test","primaryQuestion":"Welche Nachweise muss eine CubeSat-TVAC-Kampagne vor der Startintegration liefern?"}},"references":[{"title":"Small Spacecraft Body of Knowledge and CubeSat 101","publisher":"NASA Small Spacecraft Systems Virtual Institute","url":"https://www.nasa.gov/smallsat-institute/small-spacecraft-body-of-knowledge/"},{"title":"State of the Art of Small Spacecraft Technology, Thermal Control","publisher":"NASA Small Spacecraft Systems Virtual Institute","url":"https://www.nasa.gov/smallsat-institute/sst-soa/thermal-control/"},{"title":"ECSS-E-ST-10-03C Rev.1: Testing","publisher":"European Cooperation for Space Standardization (ECSS)","url":"https://ecss.nl/standard/ecss-e-st-10-03c-rev-1-testing-31-may-2022/"},{"title":"GSFC-STD-7000B: General Environmental Verification Standard (GEVS)","publisher":"NASA Goddard Space Flight Center","url":"https://standards.nasa.gov/standard/gsfc/gsfc-std-7000"}],"technicalNote":{"en":"The applicable contract, verification plan and project-specific tailoring remain binding. The standards listed here provide frameworks, not a universal test profile. Deepvac performance figures in this article describe current reference configurations. Binding values depend on chamber size, selected pumping and thermal concepts, test setup and the project quotation.","de":"Verbindlich bleiben Vertrag, Verifikationsplan und projektspezifisches Tailoring. Die genannten Normen liefern Rahmenwerke, kein universelles Testprofil. Die in diesem Artikel genannten Deepvac-Leistungswerte beschreiben aktuelle Referenzkonfigurationen. Verbindliche Werte hängen von Kammergröße, gewähltem Pump- und Thermalkonzept, Testaufbau und Projektangebot ab."}},{"articleKey":"outgassingBasics","enSlug":"outgassing-in-vacuum","deSlug":"ausgasung-im-vakuum","category":"basics","datePublished":"2026-07-22","relatedPaths":["/products/options/bake-out","/products/options/qcm-monitoring","/products/options/residual-gas-analysis"],"relatedArticles":["contaminationControl","vacuumLevelsExplained","tvacTestCampaign"],"en":{"title":"Outgassing in Vacuum: TML, CVCM and Bake-Out Explained","description":"Why materials release gas in vacuum, how ECSS outgassing screening with TML and CVCM works, which materials cause trouble – and how bake-out, QCM and RGA keep contamination under control.","seoTitle":"Outgassing in Vacuum: TML, CVCM, Bake-Out | Deepvac","seoDescription":"Outgassing in vacuum explained: desorption physics, ECSS TML and CVCM screening limits, typical problem materials, bake-out practice and QCM/RGA monitoring.","intro":"Outgassing is the release of adsorbed or dissolved gases and volatile compounds after pressure is reduced. In a thermal vacuum chamber it contributes to the gas load and can transport condensable material to colder surfaces. Material screening, controlled curing and cleaning, bake-out, quartz crystal microbalance measurements and residual-gas analysis address different parts of the problem. ECSS-Q-ST-70-02C and the NASA outgassing database provide established screening methods and reference data; the project contamination-control plan remains binding.","sections":[{"title":"The physics: desorption, diffusion, permeation","content":"Three mechanisms feed gas into a vacuum chamber. Desorption releases the molecular layers – above all water – that every surface adsorbs in air; it dominates the first hours of pumping. Diffusion moves dissolved volatiles such as residual solvents, plasticisers and absorbed moisture from the bulk of polymers to the surface, where they evaporate; because the supply sits deep in the material, this source decays only slowly over days. Permeation lets gas migrate through elastomer seals from the outside – small, but permanent.","content2":"All three mechanisms are temperature dependent, but the increase is material-specific and should not be reduced to one universal rule. Bake-out uses this dependence deliberately by raising the hardware temperature within qualified limits while the released species are pumped away or captured."},{"title":"Why outgassing matters in a TVAC test","content":"Under high vacuum the chamber operates in molecular flow: outgassed molecules travel in straight lines until they hit a surface, and they preferentially stay where it is cold. Two consequences follow – a pressure problem and a contamination problem.","bulletsHeading":"The consequences","bullets":["Pressure load: outgassing is a continuous gas source the pumps must remove; a strongly outgassing test item can hold the chamber orders of magnitude above its clean base pressure.","Condensation on cold surfaces: volatiles migrate to the coldest spots – in a TVAC test often exactly the optics, detectors and radiator samples you care about.","Changed surface properties: even thin condensed films shift absorptivity and emissivity, quietly skewing thermal balance results.","Limited reversibility: some deposits do not simply evaporate again on venting; cleaning contaminated optics afterwards ranges from expensive to impossible."]},{"title":"Material screening: TML and CVCM per ECSS-Q-ST-70-02C","content":"Material screening reduces the risk before integration. In the widely used vacuum outgassing test, samples are exposed at elevated temperature under vacuum and condensable material is collected on a cooler surface. The NASA reference method uses 125 °C for 24 hours with a 25 °C collector; the applicable ECSS procedure and project requirements should be checked for the campaign.","content2":"Common screening criteria are TML below 1.0 percent and CVCM below 0.10 percent. These values are screening thresholds, not a universal cleanliness guarantee. Optical or otherwise contamination-sensitive programmes may impose lower project limits, additional witness measurements or restrictions on particular material families."},{"title":"Typical offenders in real test items","content":"Most contamination findings trace back to a familiar cast of materials – and to the places nobody looked.","bulletsHeading":"Watch out for","bullets":["Plastics and 3D-printed parts: absorbed moisture plus residual monomers and plasticisers, often with large porous surfaces.","Adhesives and potting compounds: under-cured resins outgas dramatically more than fully cured ones – curing discipline is contamination control.","Cable insulation and heat-shrink sleeves: unremarkable per centimetre, but harnesses add up to square metres of polymer surface.","Tapes, foams, labels and packaging remnants: the classic forgotten items that dominate an otherwise clean setup.","Lubricants and greases: only vacuum-rated products belong in the chamber; standard greases creep and migrate."]},{"title":"Mitigation: selection, cleanliness, bake-out","content":"The order of countermeasures matches the order of leverage. First, select screened, low-outgassing materials where you can. Second, keep hardware clean: fingerprints and machining residues outgas too, so degreasing, lint-free wipes and gloves are part of vacuum practice, not lab theatre. Third, bake out: holding hardware warm under vacuum drives volatiles out under controlled conditions – before they can settle on flight optics or falsify a test.","content2":"Bake-out temperature and duration are limited by the qualified hardware configuration. Campaigns may use temperatures from moderate levels to around 125 °C, but no generic range replaces a material and component review. Completion should be tied to agreed measurements, such as pressure behaviour, RGA composition or QCM deposition rate, rather than elapsed time alone."},{"title":"Monitoring: QCM and RGA","content":"A quartz crystal microbalance (QCM) measures deposition directly: a cooled quartz crystal sits where contamination would land, and its resonant frequency drops in proportion to the mass condensing on it. That turns an invisible film into a live rate you can log, trend and write acceptance criteria against – a widely used instrument for bake-out completion and witness monitoring during critical tests.","content2":"A residual gas analyser (RGA) answers the complementary question: which gas is it? Its mass spectrum separates water from solvents, hydrocarbons and air, so you can tell ordinary drying from a real contamination source or a leak. Together, QCM and RGA turn a vague pressure reading into a diagnosis – which is why both are common options on TVAC chambers."}],"faq":[{"q":"What is outgassing in a vacuum chamber?","a":"Outgassing is the release of gas and volatile molecules from materials once pressure is removed: water desorbs from every surface, solvents and plasticisers diffuse out of polymers, and gas permeates through seals. It slows pump-down, limits the achievable pressure and can condense as contaminating films on cold surfaces such as optics and thermal control coatings."},{"q":"What do TML and CVCM mean?","a":"TML is the total mass loss measured in a standardised vacuum exposure; CVCM is the fraction collected as condensable material on a cooler surface. Frequently used screening limits are TML below 1.0 percent and CVCM below 0.10 percent, but the project may require stricter limits or additional contamination evidence."},{"q":"What is a bake-out and when do I need one?","a":"A bake-out holds hardware at an approved elevated temperature under vacuum so volatile material is removed before a sensitive integration or test phase. The temperature, duration and completion criterion must follow component limits and the contamination control plan; they are not universal values."},{"q":"How is outgassing measured during a test?","a":"Three instruments cover it: the pressure trend gives a coarse overall picture, a QCM measures the actual deposition rate on a cooled crystal at a representative position, and an RGA identifies the species – separating harmless residual water from solvents, hydrocarbons or a genuine leak. Bake-out completion is typically defined as a QCM rate falling below an agreed threshold."}],"conclusion":"Outgassing can be managed when material screening, cleaning, cure status, bake-out and measurement are treated as one contamination-control process. TML and CVCM support material selection, while QCM and RGA provide campaign-specific evidence."},"de":{"title":"Ausgasung im Vakuum: TML, CVCM und Ausheizen erklärt","description":"Warum Materialien im Vakuum Gas abgeben, wie das ECSS-Screening mit TML und CVCM funktioniert, welche Materialien Probleme machen – und wie Ausheizen, QCM und RGA die Kontamination im Griff halten.","seoTitle":"Ausgasung im Vakuum: TML, CVCM & Ausheizen | Deepvac","seoDescription":"Ausgasung im Vakuum erklärt: Physik der Desorption, ECSS-Grenzwerte TML und CVCM, typische Problemmaterialien, Ausheiz-Praxis und QCM/RGA-Monitoring.","intro":"Ausgasung bezeichnet die Freisetzung adsorbierter oder gelöster Gase und flüchtiger Verbindungen nach einer Druckabsenkung. In einer Thermalvakuumkammer trägt sie zur Gaslast bei und kann kondensierbares Material auf kältere Flächen transportieren. Materialscreening, kontrollierte Aushärtung und Reinigung, Ausheizen, Schwingquarzmessung und Restgasanalyse behandeln unterschiedliche Teile des Problems. ECSS-Q-ST-70-02C und die NASA-Ausgasungsdatenbank liefern etablierte Screeningverfahren und Referenzdaten; verbindlich bleibt der projektspezifische Kontaminationskontrollplan.","sections":[{"title":"Die Physik: Desorption, Diffusion, Permeation","content":"Drei Mechanismen speisen Gas in eine Vakuumkammer ein. Desorption setzt die Molekülschichten frei – allen voran Wasser –, die jede Oberfläche an Luft adsorbiert; sie dominiert die ersten Stunden des Abpumpens. Diffusion transportiert gelöste flüchtige Stoffe wie Lösemittelreste, Weichmacher und aufgenommene Feuchte aus dem Inneren von Polymeren an die Oberfläche, wo sie verdampfen; weil der Vorrat tief im Material sitzt, klingt diese Quelle über Tage nur langsam ab. Permeation lässt Gas von außen durch Elastomerdichtungen wandern – wenig, aber dauerhaft.","content2":"Alle drei Mechanismen sind temperaturabhängig, die Zunahme ist jedoch materialspezifisch und lässt sich nicht durch eine universelle Faustregel beschreiben. Das Ausheizen nutzt diese Abhängigkeit gezielt, indem die Hardware innerhalb qualifizierter Grenzen erwärmt und die freigesetzten Spezies abgepumpt oder aufgefangen werden."},{"title":"Warum Ausgasung im TVAC-Test zählt","content":"Im Hochvakuum herrscht Molekularströmung: Ausgegaste Moleküle fliegen geradlinig bis zur nächsten Oberfläche – und bleiben bevorzugt dort haften, wo es kalt ist. Daraus folgen ein Druckproblem und ein Kontaminationsproblem.","bulletsHeading":"Die Konsequenzen","bullets":["Drucklast: Ausgasung ist eine kontinuierliche Gasquelle, gegen die der Pumpstand arbeiten muss; ein stark ausgasender Prüfling kann die Kammer um Größenordnungen über ihrem sauberen Basisdruck halten.","Kondensation auf kalten Flächen: Flüchtige Stoffe wandern zu den kältesten Stellen – im TVAC-Test oft genau die Optiken, Detektoren und Radiatorproben, um die es geht.","Veränderte Oberflächeneigenschaften: Schon dünne kondensierte Filme verschieben Absorptions- und Emissionsgrad und verfälschen so unbemerkt Thermal-Balance-Ergebnisse.","Begrenzte Reversibilität: Manche Beläge verdampfen beim Belüften nicht einfach wieder; kontaminierte Optiken nachträglich zu reinigen ist teuer bis unmöglich."]},{"title":"Materialscreening: TML und CVCM nach ECSS-Q-ST-70-02C","content":"Materialscreening reduziert das Risiko vor der Integration. Beim verbreiteten Vakuum-Ausgasungstest werden Proben unter Vakuum bei erhöhter Temperatur ausgelagert und kondensierbare Stoffe auf einer kühleren Fläche gesammelt. Das NASA-Referenzverfahren verwendet 125 °C über 24 Stunden mit einem Kollektor bei 25 °C; für die Kampagne sind das anwendbare ECSS-Verfahren und die Projektanforderungen zu prüfen.","content2":"Verbreitete Screeningkriterien sind TML unter 1,0 Prozent und CVCM unter 0,10 Prozent. Diese Werte sind Screeninggrenzen, keine universelle Sauberkeitsgarantie. Optische oder anderweitig kontaminationsempfindliche Programme können niedrigere Projektgrenzen, zusätzliche Zeugenmessungen oder Einschränkungen für bestimmte Materialgruppen verlangen."},{"title":"Typische Problemkandidaten im Prüfling","content":"Die meisten Kontaminationsbefunde führen auf eine vertraute Riege von Materialien zurück – und auf die Stellen, an die niemand gedacht hat.","bulletsHeading":"Darauf sollten Sie achten","bullets":["Kunststoffe und 3D-gedruckte Teile: aufgenommene Feuchte plus Restmonomere und Weichmacher, oft mit großer poröser Oberfläche.","Klebstoffe und Vergussmassen: Unvollständig ausgehärtete Harze gasen drastisch stärker aus als vollständig vernetzte – Aushärtedisziplin ist Kontaminationskontrolle.","Kabelisolierungen und Schrumpfschläuche: pro Zentimeter unauffällig, doch Kabelbäume summieren sich zu Quadratmetern Polymeroberfläche.","Klebebänder, Schäume, Etiketten und Verpackungsreste: die klassischen vergessenen Teile, die einen sonst sauberen Aufbau dominieren.","Schmierstoffe und Fette: In die Kammer gehören nur vakuumtaugliche Produkte; Standardfette kriechen und wandern."]},{"title":"Gegenmaßnahmen: Auswahl, Sauberkeit, Ausheizen","content":"Die Reihenfolge der Gegenmaßnahmen entspricht ihrer Hebelwirkung. Erstens: Wo möglich, gescreente, ausgasungsarme Materialien wählen. Zweitens: Hardware sauber halten – auch Fingerabdrücke und Bearbeitungsrückstände gasen aus; Entfetten, fusselfreie Tücher und Handschuhe sind Vakuumpraxis, kein Labortheater. Drittens: Ausheizen – die Hardware wird warm unter Vakuum gehalten, damit flüchtige Stoffe unter kontrollierten Bedingungen entweichen, bevor sie sich auf Flugoptiken niederschlagen oder einen Test verfälschen.","content2":"Temperatur und Dauer des Ausheizens werden durch die qualifizierte Hardwarekonfiguration begrenzt. Kampagnen können von moderaten Temperaturen bis etwa 125 °C reichen; eine allgemeine Spanne ersetzt jedoch keine Werkstoff- und Komponentenprüfung. Der Abschluss sollte an vereinbarte Messgrößen wie Druckverlauf, RGA-Zusammensetzung oder QCM-Abscheiderate gekoppelt werden, nicht nur an die Zeit."},{"title":"Überwachung: QCM und RGA","content":"Ein Schwingquarz-Monitor (QCM) misst Abscheidung direkt: Ein gekühlter Quarz sitzt dort, wo Kontamination landen würde, und seine Resonanzfrequenz sinkt proportional zur kondensierenden Masse. Das macht aus einem unsichtbaren Film eine live mitgeschriebene Rate, gegen die sich Abnahmekriterien formulieren lassen – ein verbreitetes Instrument für den Ausheiz-Abschluss und für Witness-Monitoring in kritischen Tests.","content2":"Die Restgasanalyse (RGA) beantwortet die komplementäre Frage: Welches Gas ist es? Ihr Massenspektrum trennt Wasser von Lösemitteln, Kohlenwasserstoffen und Luft – so unterscheiden Sie gewöhnliches Trocknen von einer echten Kontaminationsquelle oder einem Leck. Zusammen machen QCM und RGA aus einer vagen Druckanzeige eine Diagnose – deshalb gehören beide zu den gängigen Optionen an TVAC-Kammern."}],"faq":[{"q":"Was ist Ausgasung in einer Vakuumkammer?","a":"Ausgasung ist die Abgabe von Gasen und flüchtigen Stoffen aus Materialien, sobald der Druck fehlt: Wasser desorbiert von jeder Oberfläche, Lösemittel und Weichmacher diffundieren aus Polymeren, Gas permeiert durch Dichtungen. Sie verlängert das Abpumpen, begrenzt den erreichbaren Druck und kann als kontaminierender Film auf kalten Flächen wie Optiken und Thermalbeschichtungen kondensieren."},{"q":"Was bedeuten TML und CVCM?","a":"TML ist der Gesamtmasseverlust bei einer standardisierten Vakuumauslagerung; CVCM ist der auf einer kühleren Fläche gesammelte kondensierbare Anteil. Häufig verwendete Screeninggrenzen sind TML unter 1,0 Prozent und CVCM unter 0,10 Prozent. Das Projekt kann strengere Grenzen oder zusätzliche Kontaminationsnachweise verlangen."},{"q":"Was ist ein Bake-out und wann brauche ich ihn?","a":"Beim Ausheizen wird Hardware unter Vakuum auf einer freigegebenen erhöhten Temperatur gehalten, damit flüchtiges Material vor einer empfindlichen Integrations- oder Prüfphase entfernt wird. Temperatur, Dauer und Abschlusskriterium folgen Komponentenlimits und Kontaminationskontrollplan; universelle Werte gibt es nicht."},{"q":"Wie misst man Ausgasung während eines Tests?","a":"Drei Instrumente decken es ab: Der Druckverlauf liefert das grobe Gesamtbild, ein QCM misst die tatsächliche Abscheiderate auf einem gekühlten Quarz an repräsentativer Position, und die RGA identifiziert die Spezies – sie trennt harmloses Restwasser von Lösemitteln, Kohlenwasserstoffen oder einem echten Leck. Der Ausheiz-Abschluss wird typischerweise als QCM-Rate unterhalb einer vereinbarten Schwelle definiert."}],"conclusion":"Ausgasung bleibt beherrschbar, wenn Materialscreening, Reinigung, Aushärtungszustand, Ausheizen und Messung als gemeinsamer Kontaminationsprozess geplant werden. TML und CVCM unterstützen die Materialauswahl, QCM und RGA liefern den Nachweis in der konkreten Kampagne."},"seoKey":"blogOutgassingBasics","dateModified":"2026-07-23","searchIntent":{"en":{"primaryKeyword":"outgassing in vacuum","primaryQuestion":"How are TML, CVCM, bake-out, QCM and RGA used to control outgassing?"},"de":{"primaryKeyword":"Ausgasung im Vakuum","primaryQuestion":"Wie werden TML, CVCM, Ausheizen, QCM und RGA zur Ausgasungskontrolle eingesetzt?"}},"references":[{"title":"ECSS-Q-ST-70-02C: Thermal vacuum outgassing test for the screening of space materials","publisher":"European Cooperation for Space Standardization (ECSS)","url":"https://ecss.nl/standard/ecss-q-st-70-02c-thermal-vacuum-outgassing-test-for-the-screening-of-space-materials/"},{"title":"Outgassing Data for Selecting Spacecraft Materials: Test description","publisher":"NASA","url":"https://outgassing.nasa.gov/Description"},{"title":"Outgassing properties of vacuum materials for particle accelerators","publisher":"CERN","url":"https://cds.cern.ch/record/2723690"}]},{"articleKey":"leakDetectionBasics","enSlug":"helium-leak-testing-tvac","deSlug":"helium-lecktest-tvac","category":"engineeringGuide","datePublished":"2026-07-22","relatedPaths":["/products/options/helium-leak-test","/services/maintenance-repair","/products/options/process-connections"],"relatedArticles":["vacuumLevelsExplained","pumpingSystemSelection","usedVsNewTvac"],"en":{"title":"Helium Leak Testing for TVAC Chambers: Methods, Units, Practice","description":"How helium leak detection works, what leak rates in mbar·l/s actually mean, how virtual leaks differ from real ones – and when a chamber should be tested.","seoTitle":"Helium Leak Testing of Vacuum Chambers | Deepvac","seoDescription":"How helium leak detection works: vacuum vs sniffer method, what leak rates in mbar·l/s mean in practice, virtual leaks, and when to test a TVAC chamber.","intro":"Helium tracer-gas testing is widely used to locate and quantify leaks in vacuum systems. A mass-spectrometer leak detector responds selectively to helium and reports a gas flow or throughput, provided the detector is calibrated and the test method is defined. ISO 20485 describes tracer-gas techniques and ISO 20486 addresses reference-leak calibration. This article explains vacuum, sniffer and integral methods, the meaning of leak-rate units, virtual leaks and practical test planning.","sections":[{"title":"Leak-tightness is a system property","content":"A chamber reaches equilibrium when effective pumping speed balances the total gas load from outgassing, permeation and real leaks. Excess leakage limits the achievable pressure and admits air and moisture that can condense on cold surfaces and interfere with contamination-sensitive tests. Any stated working pressure therefore assumes a compatible total gas load and verified integrity of the vessel, seals, feedthroughs and connected circuits.","content2":"There is also a safety dimension: LN₂ and GN₂ circuits are pressure-bearing systems inside or around the chamber. A leaking cryogenic line releases nitrogen into the chamber or the room – enrichment in an enclosed space is an asphyxiation hazard, which is why cryogenic circuits are leak-tested in their own right."},{"title":"How helium mass spectrometer leak detection works","content":"Helium is suitable as a tracer because it is inert, does not readily condense at normal leak-test conditions and has a low background concentration in air. A mass-spectrometer leak detector ionises the incoming gas, separates mass 4 and compares the signal with a calibrated reference. The usable detection limit and response time depend on the detector, test volume, pumping path, background and selected method.","bullets":["Calibrate the detector with a reference leak whose value and uncertainty are traceable for the intended range.","Allow the measured volume and pumping path to determine response and clearing time before moving to the next joint.","Record background, test pressure, tracer application and detector settings together with the reported leak rate.","Use a method-specific acceptance value derived from the total allowable gas load and system safety requirements."]},{"title":"Vacuum (spray) method vs sniffer method","content":"In the vacuum method, the chamber is evacuated with the detector connected to the pumping line, and helium is sprayed from outside onto welds, flanges and feedthroughs one by one. It is the most sensitive approach and localizes leaks precisely; enclosing the whole chamber or single joints in a helium-filled envelope turns it into an integral test with a single overall number.","content2":"The sniffer method reverses the direction: a positively pressurised circuit is filled with tracer gas and sampled externally. It is appropriate for operating circuits such as nitrogen or cooling-water lines, but its achievable sensitivity depends strongly on ambient helium background, probe handling and gas distribution. It should not be assigned one universal detection limit.","bullets":["Vacuum method: high sensitivity and localised testing of the chamber shell, flanges and feedthroughs.","Sniffer method: testing of positively pressurised circuits under controlled tracer concentration and ventilation.","Integral enclosure method: one overall result for a component or chamber, with less localisation information.","Use helium sparingly and control room background so previous applications do not mask later measurements."]},{"title":"What leak rates in mbar·l/s actually mean","content":"A leak rate in mbar·l/s is a pressure-volume throughput referenced to stated conditions. The numerical value must be interpreted together with gas species, temperature, test pressure and calibration convention. Conversion to molar flow can avoid ambiguity when results from different laboratories or unit systems are compared.","content2":"Acceptance is system-specific. The allowable integral leak rate follows from the target pressure, installed effective pumping speed, contamination budget, hold-time requirement and any separate limits for pressurised or cryogenic circuits. A generic joint-level number should not replace that gas-load calculation."},{"title":"Virtual leaks vs real leaks","content":"Not every leak-like symptom is a path to atmosphere. Virtual leaks are trapped volumes inside the vacuum – blind tapped holes under screws, double weld seams, unvented O-ring grooves – that release gas slowly and mimic a real leak in the pressure curve. A helium spray test shows nothing, because there is no path from outside.","bulletsHeading":"Telling them apart","bullets":["Rate-of-rise signature: real leaks produce a linear pressure rise, trapped volumes and outgassing flatten over time.","Residual gas analysis: an air-like nitrogen–oxygen signature points to a real leak, dominant water vapour to outgassing.","Helium response: a real leak answers to spray within the response time; a virtual leak stays silent.","Prevention is design: vented screws, relief bores, continuous inside welds and vented seal grooves avoid trapped volumes."]},{"title":"When to test – and designing for testability","content":"Leak testing is not a one-off acceptance step but a lifecycle instrument. It belongs after manufacturing and first assembly, after every intervention that opens seals or exchanges feedthroughs, at periodic maintenance intervals, and after transport or relocation, where settling and handling loads work on flanges. A recorded baseline for each joint makes later comparisons meaningful.","content2":"Testability is a design property: accessible flange positions, a dedicated test port for the detector, helium access to double-seal interspaces and enough clearance to bag individual joints all decide whether a leak check takes an hour or a day. Deepvac offers helium leak testing as a factory option and as part of maintenance and repair service."}],"faq":[{"q":"What is an acceptable leak rate for a vacuum chamber?","a":"There is no universal acceptable value. The limit should be derived from target pressure, effective pumping speed, permitted gas load, hold time, cleanliness requirements and the applicable test method. Pressurised nitrogen, water or cryogenic circuits need separate safety-related acceptance criteria."},{"q":"How does helium leak testing work?","a":"A mass spectrometer tuned to helium (mass 4) is connected to the evacuated chamber, and helium is sprayed onto welds, flanges and feedthroughs from outside. Wherever a real leak path exists, helium enters and is reported quantitatively as a leak rate in mbar·l/s after the method-specific response time. For pressurized circuits the direction reverses: the circuit is filled with helium and a sniffer probe samples the outside."},{"q":"What is a virtual leak?","a":"A virtual leak is a trapped volume inside the vacuum – a blind tapped hole, a double weld seam, an unvented seal groove – that releases gas slowly and imitates a real leak in the pressure curve. Helium spray shows nothing because no path to atmosphere exists. Rate-of-rise behaviour and residual gas analysis distinguish the two; vented screws and relief bores prevent the problem by design."},{"q":"How often should a TVAC chamber be leak-checked?","a":"At defined events rather than a fixed calendar alone: after initial assembly, after any seal change or feedthrough work, after transport or relocation, and as part of periodic maintenance – often annually for chambers in regular campaign use. Keeping a documented baseline per joint turns each later check into a quick comparison instead of a full investigation."}],"conclusion":"Leak testing is most useful when acceptance limits, calibration, response time and test method are defined for the specific system. Helium testing finds real paths to atmosphere; rate-of-rise analysis and residual-gas data help separate those paths from outgassing and trapped volumes."},"de":{"title":"Helium-Lecktest an TVAC-Kammern: Methoden, Einheiten, Praxis","description":"Wie Helium-Lecksuche funktioniert, was Leckraten in mbar·l/s praktisch bedeuten, wie sich virtuelle von echten Lecks unterscheiden – und wann geprüft werden sollte.","seoTitle":"Helium-Lecktest an Vakuumkammern | Deepvac","seoDescription":"So funktioniert der Helium-Lecktest: Vakuum- vs. Schnüffelmethode, was Leckraten in mbar·l/s praktisch bedeuten, virtuelle Lecks – und wann geprüft wird.","intro":"Die Helium-Prüfgasmethode wird häufig eingesetzt, um Lecks in Vakuumsystemen zu lokalisieren und zu quantifizieren. Ein Massenspektrometer-Lecksuchgerät reagiert selektiv auf Helium und gibt einen Gasfluss beziehungsweise Durchsatz aus, sofern das Gerät kalibriert und die Prüfmethode definiert ist. ISO 20485 beschreibt Prüfgasverfahren, ISO 20486 die Kalibrierung von Referenzlecks. Dieser Artikel behandelt Vakuum-, Schnüffel- und Integralmethoden, Leckrateneinheiten, virtuelle Lecks und die Prüfplanung.","sections":[{"title":"Dichtheit ist eine Systemeigenschaft","content":"Eine Kammer erreicht ihren Gleichgewichtsdruck, wenn das effektive Saugvermögen die gesamte Gaslast aus Ausgasung, Permeation und realen Lecks ausgleicht. Zu hohe Leckage begrenzt den erreichbaren Druck und trägt Luft sowie Feuchte ein, die an kalten Flächen kondensieren und kontaminationsempfindliche Tests stören können. Jede Angabe zum Arbeitsdruck setzt deshalb eine kompatible Gesamtgaslast sowie die nachgewiesene Dichtheit von Behälter, Dichtungen, Durchführungen und angeschlossenen Kreisen voraus.","content2":"Hinzu kommt die Sicherheitsdimension: LN₂- und GN₂-Kreise sind druckführende Systeme in oder an der Kammer. Eine undichte Kryoleitung setzt Stickstoff in Kammer oder Raum frei – Anreicherung in geschlossenen Räumen ist ein Erstickungsrisiko, weshalb Kryokreise eigenständig auf Dichtheit geprüft werden."},{"title":"So funktioniert die Helium-Lecksuche mit Massenspektrometer","content":"Helium eignet sich als Prüfgas, weil es inert ist, unter üblichen Lecktestbedingungen kaum kondensiert und in Luft nur in geringer Konzentration vorkommt. Ein Massenspektrometer-Lecksuchgerät ionisiert das einströmende Gas, trennt Masse 4 und vergleicht das Signal mit einer kalibrierten Referenz. Nachweisgrenze und Ansprechzeit hängen von Gerät, Prüfvolumen, Pumpweg, Untergrund und Methode ab.","bullets":["Das Lecksuchgerät mit einem Referenzleck kalibrieren, dessen Wert und Unsicherheit für den vorgesehenen Bereich rückführbar sind.","Ansprech- und Ausspülzeit aus Prüfvolumen und Pumpweg ableiten, bevor zur nächsten Verbindung gewechselt wird.","Untergrund, Prüfdruck, Heliumaufgabe und Geräteeinstellungen zusammen mit der gemessenen Leckrate dokumentieren.","Einen methodenspezifischen Abnahmewert aus zulässiger Gesamtgaslast und Sicherheitsanforderungen ableiten."]},{"title":"Vakuummethode (Sprühen) vs. Schnüffelmethode","content":"Bei der Vakuummethode ist die Kammer evakuiert, das Lecksuchgerät hängt an der Pumpleitung, und Helium wird von außen gezielt auf Schweißnähte, Flansche und Durchführungen gesprüht. Das ist der empfindlichste Ansatz und lokalisiert Lecks präzise; wird die ganze Kammer oder eine einzelne Verbindung mit einer heliumgefüllten Hülle umschlossen, entsteht daraus ein Integraltest mit einem Gesamtwert.","content2":"Die Schnüffelmethode kehrt die Richtung um: Ein druckführender Kreis wird mit Prüfgas beaufschlagt und außen abgetastet. Sie eignet sich für Betriebskreise wie Stickstoff- oder Kühlwasserleitungen, ihre erreichbare Empfindlichkeit hängt jedoch stark von Heliumuntergrund, Sondenführung und Gasverteilung ab. Eine universelle Nachweisgrenze ist nicht sinnvoll.","bullets":["Vakuummethode: hohe Empfindlichkeit und lokale Prüfung von Kammerhülle, Flanschen und Durchführungen.","Schnüffelmethode: Prüfung druckführender Kreise bei kontrollierter Prüfgaskonzentration und Lüftung.","Integrale Hüllenmethode: ein Gesamtwert für Bauteil oder Kammer, mit geringerer Information zur Leckposition.","Helium sparsam einsetzen und den Raumuntergrund kontrollieren, damit frühere Aufgaben spätere Messungen nicht überdecken."]},{"title":"Was Leckraten in mbar·l/s praktisch bedeuten","content":"Eine Leckrate in mbar·l/s ist ein Druck-Volumen-Durchsatz unter angegebenen Bezugsbedingungen. Der Zahlenwert muss zusammen mit Gasart, Temperatur, Prüfdruck und Kalibrierkonvention interpretiert werden. Für Vergleiche zwischen Laboren oder Einheitensystemen kann die Umrechnung in einen molaren Fluss Mehrdeutigkeiten vermeiden.","content2":"Die Abnahmegrenze ist systemspezifisch. Die zulässige integrale Leckrate folgt aus Zieldruck, effektivem Saugvermögen, Kontaminationsbudget, Haltezeit und getrennten Grenzen für druckführende oder kryogene Kreise. Eine pauschale Zahl je Verbindung ersetzt diese Gaslastrechnung nicht."},{"title":"Virtuelle Lecks vs. echte Lecks","content":"Nicht jedes leckartige Symptom ist ein Pfad zur Atmosphäre. Virtuelle Lecks sind eingeschlossene Volumina im Vakuum – Sacklochgewinde unter Schrauben, doppelte Schweißnähte, nicht entlüftete O-Ring-Nuten –, die Gas langsam abgeben und in der Druckkurve ein echtes Leck imitieren. Ein Helium-Sprühtest zeigt nichts, weil kein Weg von außen existiert.","bulletsHeading":"So unterscheiden Sie beide","bullets":["Druckanstiegssignatur: Echte Lecks erzeugen einen linearen Anstieg, eingeschlossene Volumina und Ausgasung flachen mit der Zeit ab.","Restgasanalyse: Eine luftartige Stickstoff–Sauerstoff-Signatur deutet auf ein echtes Leck, dominierender Wasserdampf auf Ausgasung.","Heliumantwort: Ein echtes Leck reagiert innerhalb der Ansprechzeit auf das Sprühen – ein virtuelles bleibt stumm.","Vorbeugen heißt konstruieren: entlüftete Schrauben, Entlastungsbohrungen, durchgehende Innennähte und entlüftete Dichtnuten vermeiden eingeschlossene Volumina."]},{"title":"Wann geprüft wird – und wie man prüfgerecht konstruiert","content":"Der Lecktest ist kein einmaliger Abnahmeschritt, sondern ein Instrument über den Lebenszyklus. Er gehört hinter Fertigung und Erstmontage, hinter jeden Eingriff, der Dichtungen öffnet oder Durchführungen tauscht, in periodische Wartungsintervalle sowie hinter Transport oder Umzug, wo Setz- und Handhabungslasten an den Flanschen arbeiten. Eine dokumentierte Baseline je Verbindung macht spätere Vergleiche aussagekräftig.","content2":"Prüfbarkeit ist eine Konstruktionseigenschaft: zugängliche Flanschpositionen, ein eigener Testport für das Lecksuchgerät, Heliumzugang zu Zwischenräumen von Doppeldichtungen und genug Freiraum, um einzelne Verbindungen einzuhausen, entscheiden, ob eine Leckprüfung eine Stunde dauert oder einen Tag. Deepvac bietet den Helium-Lecktest als Werksoption und als Teil von Wartung und Instandsetzung an."}],"faq":[{"q":"Welche Leckrate ist für eine Vakuumkammer akzeptabel?","a":"Es gibt keinen universellen Abnahmewert. Die Grenze sollte aus Zieldruck, effektivem Saugvermögen, zulässiger Gaslast, Haltezeit, Sauberkeitsanforderung und Prüfmethode abgeleitet werden. Druckführende Stickstoff-, Wasser- oder Kryokreise benötigen eigene sicherheitsbezogene Abnahmekriterien."},{"q":"Wie funktioniert ein Helium-Lecktest?","a":"Ein auf Helium (Masse 4) abgestimmtes Massenspektrometer wird an die evakuierte Kammer angeschlossen, und Helium wird von außen auf Schweißnähte, Flansche und Durchführungen gesprüht. Wo ein echter Leckpfad existiert, tritt Helium ein und wird nach der methodenspezifischen Ansprechzeit quantitativ als Leckrate in mbar·l/s angezeigt. Bei druckführenden Kreisen kehrt sich die Richtung um: Der Kreis wird mit Helium befüllt, eine Schnüffelsonde tastet die Außenseite ab."},{"q":"Was ist ein virtuelles Leck?","a":"Ein virtuelles Leck ist ein eingeschlossenes Volumen im Vakuum – ein Sacklochgewinde, eine doppelte Schweißnaht, eine nicht entlüftete Dichtnut –, das Gas langsam abgibt und in der Druckkurve ein echtes Leck imitiert. Heliumsprühen zeigt nichts, weil kein Pfad zur Atmosphäre existiert. Druckanstiegsverhalten und Restgasanalyse unterscheiden beide; entlüftete Schrauben und Entlastungsbohrungen vermeiden das Problem konstruktiv."},{"q":"Wie oft sollte eine TVAC-Kammer auf Lecks geprüft werden?","a":"An definierten Ereignissen statt allein nach Kalender: nach der Erstmontage, nach jedem Dichtungswechsel oder Arbeiten an Durchführungen, nach Transport oder Umzug und im Rahmen der periodischen Wartung – bei Kammern im regelmäßigen Kampagnenbetrieb oft jährlich. Eine dokumentierte Baseline je Verbindung macht aus jeder späteren Prüfung einen schnellen Vergleich statt einer aufwendigen Suche."}],"conclusion":"Ein Lecktest ist besonders aussagekräftig, wenn Grenzwert, Kalibrierung, Ansprechzeit und Prüfmethode für das konkrete System festgelegt sind. Helium zeigt reale Pfade zur Atmosphäre; Druckanstieg und Restgasdaten helfen, diese von Ausgasung und eingeschlossenen Volumina zu unterscheiden."},"seoKey":"blogLeakDetectionBasics","dateModified":"2026-07-23","searchIntent":{"en":{"primaryKeyword":"helium leak testing vacuum chamber","primaryQuestion":"How is a TVAC chamber leak-tested and how should leak rates be interpreted?"},"de":{"primaryKeyword":"Helium-Lecktest Vakuumkammer","primaryQuestion":"Wie wird eine TVAC-Kammer auf Lecks geprüft und wie sind Leckraten zu bewerten?"}},"references":[{"title":"ISO 20485:2017: Non-destructive testing, Leak testing, Tracer gas method","publisher":"International Organization for Standardization (ISO)","url":"https://www.iso.org/standard/68190.html"},{"title":"ISO 20486:2017: Calibration of reference leaks for gases","publisher":"International Organization for Standardization (ISO)","url":"https://www.iso.org/standard/68191.html"},{"title":"Leak Artifacts and Vacuum Leak Primary Standard","publisher":"National Institute of Standards and Technology (NIST)","url":"https://www.nist.gov/laboratories/tools-instruments/leak-artifacts"},{"title":"CERN Accelerator School: Vacuum Technology","publisher":"CERN","url":"https://cds.cern.ch/record/402784"}]},{"articleKey":"spaceEnvironmentSimulation","enSlug":"space-environment-simulation","deSlug":"weltraumumgebung-simulieren","category":"basics","datePublished":"2026-07-22","relatedPaths":["/products/options/solar-simulator","/products/options/infrared-heaters","/products/custom-tvac"],"relatedArticles":["solarSimulationVsIr","cryoShroudsThermalPlates","whatIsTvacTesting"],"en":{"title":"Space Environment Simulation: Recreating Orbit on the Ground","description":"Vacuum, a 3 K cold sink, 1361 W/m² of sunlight: what the thermal space environment does to hardware, how TVAC chambers replicate each element – and what no chamber can do.","seoTitle":"Space Environment Simulation in TVAC Chambers | Deepvac","seoDescription":"How space simulation chambers recreate vacuum, the 3 K cold sink, solar flux and eclipses – and which parts of the space environment stay out of reach.","intro":"Spacecraft thermal design is driven by vacuum, radiative exchange with a very cold background, direct and reflected solar radiation, planetary infrared emission and changing orbital attitude. At Earth's distance, measured total solar irradiance is about 1361 W/m² and varies over time. A space-environment chamber reproduces selected thermal boundary conditions on the ground; the test plan must state which orbital cases are simulated directly and which are covered by analysis and margin.","sections":[{"title":"The thermal space environment in numbers","content":"The relevant values depend on orbit, attitude, season, solar activity, surface properties and mission phase. The figures below are orientation values for thermal analysis, not a universal chamber profile.","bulletsHeading":"What orbit delivers","bullets":["Vacuum: low-Earth-orbit density varies with altitude and solar activity; for thermal testing the key question is when residual-gas heat transfer becomes negligible for the test geometry.","Deep-space background: approximately 3 K, represented thermally by a much warmer but sufficiently cold, high-emissivity shroud.","Solar irradiance: approximately 1361 W/m² at Earth's distance, with measurable temporal variation.","Albedo and planetary infrared: orbit- and attitude-dependent inputs for Earth-facing surfaces.","Eclipse and attitude changes: time-dependent boundary conditions whose duration and frequency come from the mission orbit analysis."]},{"title":"What this environment does to hardware","content":"Without convective cooling, surface temperatures follow the balance of absorbed radiation, emitted radiation, internal dissipation and conductive interfaces. Large hot-to-cold gradients can occur across one structure, while the time response depends on thermal mass and conductance. The chamber profile should reproduce bounding thermal cases or model-correlation cases, not an assumed generic orbit.","content2":"Internally, dissipating electronics depend entirely on conductive paths and radiators. A thermal design verified only under air – where convection quietly helped – can therefore fail in orbit at nominally identical power levels."},{"title":"The cold sink: LN₂-cooled shrouds","content":"The chamber's radiative sink is a cooled, high-emissivity shroud around the test item. LN₂-cooled systems commonly operate near 77 to 93 K depending on circuit and load. Although this is warmer than deep space, the radiative return from a 93 K surface is about one percent of that from a 293 K surface before emissivity and view-factor effects are included. Coverage, uniformity and warm openings therefore matter at least as much as the minimum temperature.","content2":"What matters more than the last few kelvin is coverage: every warm gap – door frame, port, harness opening – is a window that locally distorts the radiative balance. Uniform, high-emissivity, well-covering shrouds are therefore the backbone of credible space simulation."},{"title":"Heat inputs: solar simulators, IR and heater plates","content":"Sun and planet are replicated by adding energy, and there is a hierarchy of fidelity and effort.","bulletsHeading":"The common methods","bullets":["Solar simulators: lamp-based systems that approximate the solar spectrum, intensity and direction – the most realistic option and the most complex, used where spectral response and shadowing genuinely matter.","Infrared heaters and lamp arrays: reproduce the absorbed heat flux rather than the solar spectrum – far simpler, and accurate enough whenever the surface absorptivity is known.","Heater plates and skin heaters: inject defined power directly into structures – the precise choice for thermal balance testing, where known boundary conditions beat visual realism.","Temperature-controlled shroud zones: warm sections of the enclosure emulate planetary infrared or the temperatures of neighbouring structures."]},{"title":"What a chamber cannot replicate","content":"A TVAC chamber reproduces selected thermal and vacuum conditions, not the complete space environment. Gravity remains present, so fluids, heat pipes and deployment mechanisms may need orientation controls or off-loading. Ionising radiation, ultraviolet exposure, atomic oxygen and impact environments require separate facilities or analysis. Combined environments are used only where the verification strategy and facility capability justify them.","content2":"Engineers close these gaps deliberately: thermal models validated by balance testing extrapolate to flight attitudes that gravity distorts on the ground; radiation and materials effects are covered by dedicated tests and heritage data; and the margins of the applicable standard absorb the residual uncertainty. The chamber does not need to be space – it needs to make the thermal case airtight."},{"title":"Choosing the simulation depth you need","content":"Simulation depth should follow the verification logic. Unit-level tests often use controlled shroud and interface temperatures; infrared sources, skin heaters or solar simulators are added when external flux, direction or spectrum affects the requirement. The selected method should have calibrated boundary conditions and uncertainties that can be represented in the thermal model.","content2":"The practical approach is to specify the environment your verification logic requires, not the most spectacular one: sink temperature, heat inputs, their uniformity and control accuracy. Standard chambers cover the shroud-and-plate cases; custom systems integrate solar simulation, IR arrays or multi-zone thermal environments where the mission demands them."}],"faq":[{"q":"What is a space simulation chamber?","a":"A space-environment chamber is a vacuum facility with controlled radiative and conductive thermal boundaries. Depending on the verification objective it may include a cooled shroud, thermal plate, infrared sources or a solar simulator. It reproduces selected thermal conditions of orbit, not microgravity, radiation or every space-environment effect."},{"q":"How do chambers simulate the cold of space?","a":"With a high-emissivity shroud cooled well below the test-item temperature, commonly by a nitrogen-based thermal system. The required shroud temperature, coverage and uniformity are derived from the thermal model and the verification case. Radiative coverage and calibrated boundary conditions usually matter more than pursuing the lowest possible temperature."},{"q":"What solar flux is used in space simulation?","a":"A common reference near Earth is total solar irradiance of about 1361 W/m². The applied value for a test case depends on mission geometry, Earth–Sun distance, solar activity, margin policy and whether the facility reproduces spectrum or only absorbed heat flux. Hot and cold bounding cases should come from the programme thermal analysis."},{"q":"Can a vacuum chamber simulate microgravity or radiation?","a":"No. Gravity cannot be switched off in a chamber, so fluid behaviour and deployments are handled with orientation choices, offloading rigs and analysis. Ionising radiation, UV and atomic oxygen require dedicated facilities and are covered by separate tests and materials data. The TVAC chamber's job is the thermal environment; the rest of the space environment is verified elsewhere."}],"conclusion":"A TVAC chamber reproduces the thermal boundary conditions that matter most for verification: vacuum, a controlled radiative sink and defined heat inputs. Gravity, radiation and other environmental effects require separate analysis or testing, so the verification plan must state which uncertainties are covered by test and which by model or margin."},"de":{"title":"Weltraumumgebung simulieren: Orbit-Bedingungen am Boden","description":"Vakuum, 3 K Kältesenke, 1361 W/m² Sonnenlicht: was die thermische Weltraumumgebung mit Hardware macht, wie TVAC-Kammern jedes Element nachbilden – und was keine Kammer kann.","seoTitle":"Weltraumsimulation: Kammern und Methoden | Deepvac","seoDescription":"Wie Weltraumsimulationskammern Vakuum, 3 K Kältesenke, Solarfluss und Eklipsen nachbilden – und welche Teile der Weltraumumgebung keine Kammer ersetzt.","intro":"Das Thermaldesign eines Raumfahrzeugs wird durch Vakuum, Strahlungsaustausch mit einem sehr kalten Hintergrund, direkte und reflektierte Solarstrahlung, planetare Infrarotemission und wechselnde Fluglagen bestimmt. In Erdentfernung liegt die gemessene Gesamt-Solarstrahlung bei etwa 1361 W/m² und verändert sich mit der Zeit. Eine Weltraumsimulationskammer bildet ausgewählte thermische Randbedingungen am Boden nach; der Testplan muss festlegen, welche Orbitfälle direkt simuliert und welche über Analyse und Marge abgedeckt werden.","sections":[{"title":"Die thermische Weltraumumgebung in Zahlen","content":"Die relevanten Werte hängen von Orbit, Lage, Jahreszeit, Sonnenaktivität, Oberflächeneigenschaften und Missionsphase ab. Die folgenden Angaben dienen der thermischen Einordnung und stellen kein universelles Kammerprofil dar.","bulletsHeading":"Was der Orbit liefert","bullets":["Vakuum: Die Dichte im niedrigen Erdorbit variiert mit Höhe und Sonnenaktivität; für den Thermaltest ist entscheidend, wann Restgas-Wärmetransport für die Prüfgeometrie vernachlässigbar wird.","Tiefraumhintergrund: etwa 3 K, thermisch dargestellt durch einen deutlich wärmeren, aber ausreichend kalten und hochemittierenden Shroud.","Solarstrahlung: etwa 1361 W/m² in Erdentfernung, mit messbarer zeitlicher Variation.","Albedo und planetares Infrarot: orbit- und lageabhängige Einträge auf erdzugewandte Flächen.","Eklipsen und Lageänderungen: zeitabhängige Randbedingungen, deren Dauer und Häufigkeit aus der Missions-Orbitanalyse stammen."]},{"title":"Was diese Umgebung mit Hardware macht","content":"Ohne konvektive Kühlung folgen Oberflächentemperaturen dem Gleichgewicht aus absorbierter und emittierter Strahlung, interner Verlustleistung und konduktiven Schnittstellen. Über einer Struktur können große Heiß-Kalt-Gradienten entstehen; die zeitliche Reaktion hängt von thermischer Masse und Leitwerten ab. Das Kammerprofil sollte begrenzende Thermal- oder Modellkorrelationsfälle nachbilden, keinen angenommenen Standardorbit.","content2":"Im Inneren hängen dissipierende Elektroniken vollständig an Wärmeleitpfaden und Radiatoren. Ein Thermaldesign, das nur unter Luft verifiziert wurde – wo Konvektion still mithalf –, kann im Orbit deshalb bei nominell gleicher Leistung versagen."},{"title":"Die Kältesenke: LN₂-gekühlte Shrouds","content":"Die Strahlungssenke der Kammer ist ein gekühlter, hochemittierender Shroud um den Prüfling. LN₂-gekühlte Systeme arbeiten je nach Kreis und Last häufig im Bereich von etwa 77 bis 93 K. Obwohl das wärmer als der tiefe Weltraum ist, beträgt die Strahlungsrückgabe einer 93-K-Fläche vor Berücksichtigung von Emissionsgrad und Sichtfaktoren nur etwa ein Prozent der einer 293-K-Fläche. Abdeckung, Homogenität und warme Öffnungen sind daher mindestens ebenso wichtig wie die Minimaltemperatur.","content2":"Wichtiger als die letzten Kelvin ist die Abdeckung: Jede warme Lücke – Türrahmen, Port, Kabelöffnung – ist ein Fenster, das die Strahlungsbilanz lokal verzerrt. Homogene, hochemissive, gut abdeckende Shrouds sind deshalb das Rückgrat glaubwürdiger Weltraumsimulation."},{"title":"Wärmeeinträge: Solarsimulatoren, IR und Heizplatten","content":"Sonne und Planet werden durch Energiezufuhr nachgebildet – mit einer Hierarchie aus Realitätstreue und Aufwand.","bulletsHeading":"Die gängigen Methoden","bullets":["Solarsimulatoren: lampenbasierte Systeme, die Sonnenspektrum, Intensität und Richtung annähern – die realistischste Option und die aufwendigste, eingesetzt, wo spektrale Empfindlichkeit und Abschattung wirklich zählen.","Infrarotstrahler und Lampenfelder: reproduzieren den absorbierten Wärmestrom statt des Sonnenspektrums – deutlich einfacher und ausreichend genau, wann immer der Absorptionsgrad der Oberflächen bekannt ist.","Heizplatten und Folienheizer: speisen definierte Leistung direkt in Strukturen ein – die präzise Wahl für Thermal-Balance-Tests, wo bekannte Randbedingungen visuelle Realitätstreue schlagen.","Temperierte Shroud-Zonen: warme Abschnitte der Umhüllung bilden planetares Infrarot oder die Temperaturen benachbarter Strukturen nach."]},{"title":"Was eine Kammer nicht abbilden kann","content":"Eine TVAC-Kammer bildet ausgewählte Thermal- und Vakuumbedingungen nach, nicht die vollständige Weltraumumgebung. Die Gravitation bleibt erhalten; Fluide, Heatpipes und Entfaltmechanismen können deshalb definierte Orientierungen oder Entlastung benötigen. Ionisierende Strahlung, UV-Exposition, atomarer Sauerstoff und Impaktumgebungen erfordern andere Anlagen oder Analysen. Kombinierte Umgebungen werden nur eingesetzt, wenn Verifikationsstrategie und Anlagenfähigkeit dies rechtfertigen.","content2":"Ingenieure schließen diese Lücken bewusst: Im Balance-Test validierte Thermalmodelle extrapolieren auf Fluglagen, die die Schwerkraft am Boden verzerrt; Strahlungs- und Materialeffekte decken dedizierte Tests und Heritage-Daten ab; die Margen des anzuwendenden Standards fangen die Restunsicherheit auf. Die Kammer muss nicht der Weltraum sein – sie muss den thermischen Nachweis wasserdicht machen."},{"title":"Die richtige Simulationstiefe wählen","content":"Die Simulationstiefe sollte der Verifikationslogik folgen. Tests auf Geräteebene verwenden häufig geregelte Shroud- und Schnittstellentemperaturen; Infrarotquellen, Flächenheizer oder Solarsimulatoren kommen hinzu, wenn äußerer Wärmestrom, Richtung oder Spektrum die Anforderung beeinflussen. Die gewählte Methode benötigt kalibrierte Randbedingungen und Unsicherheiten, die im Thermalmodell abgebildet werden können.","content2":"Der praktische Weg: Spezifizieren Sie die Umgebung, die Ihre Verifikationslogik verlangt, nicht die spektakulärste – Senkentemperatur, Wärmeeinträge, deren Homogenität und Regelgüte. Standardkammern decken die Fälle mit Shroud und Platte ab; kundenspezifische Systeme integrieren Solarsimulation, IR-Felder oder Mehrzonen-Thermalumgebungen, wo die Mission sie fordert."}],"faq":[{"q":"Was ist eine Weltraumsimulationskammer?","a":"Eine Weltraumsimulationskammer ist eine Vakuumanlage mit geregelten radiativen und konduktiven thermischen Randbedingungen. Je nach Nachweisziel kann sie einen gekühlten Shroud, eine Thermalplatte, Infrarotquellen oder einen Solarsimulator enthalten. Sie bildet ausgewählte thermische Orbitbedingungen nach, nicht Mikrogravitation, Strahlung oder jeden Weltraumeffekt."},{"q":"Wie simulieren Kammern die Kälte des Weltraums?","a":"Mit einem hochemittierenden Shroud, der deutlich unter die Prüflingstemperatur gekühlt wird, häufig durch ein stickstoffbasiertes Thermalsystem. Erforderliche Shroud-Temperatur, Abdeckung und Homogenität werden aus Thermalmodell und Verifikationsfall abgeleitet. Strahlungsabdeckung und kalibrierte Randbedingungen sind meist wichtiger als die tiefstmögliche Temperatur."},{"q":"Welcher Solarfluss wird in der Weltraumsimulation verwendet?","a":"Als Referenz nahe der Erde wird häufig eine totale solare Einstrahlung von etwa 1361 W/m² verwendet. Der konkrete Testwert hängt von Missionsgeometrie, Erde-Sonne-Abstand, Sonnenaktivität, Margenregeln und davon ab, ob die Anlage das Spektrum oder nur den absorbierten Wärmestrom nachbildet. Heiße und kalte Grenzfälle müssen aus der Thermalanalyse des Programms stammen."},{"q":"Kann eine Vakuumkammer Mikrogravitation oder Strahlung simulieren?","a":"Nein. Die Schwerkraft lässt sich in einer Kammer nicht abschalten; Fluidverhalten und Entfaltungen werden über Orientierungswahl, Entlastungsvorrichtungen und Analyse behandelt. Ionisierende Strahlung, UV und atomarer Sauerstoff erfordern eigene Anlagen und werden durch separate Tests und Materialdaten abgedeckt. Aufgabe der TVAC-Kammer ist die thermische Umgebung; der Rest wird anderswo verifiziert."}],"conclusion":"Eine TVAC-Kammer bildet die für die thermische Verifikation wichtigsten Randbedingungen nach: Vakuum, eine kontrollierte Strahlungssenke und definierte Wärmeeinträge. Gravitation, Strahlung und weitere Umwelteinflüsse erfordern eigene Analysen oder Prüfungen; der Verifikationsplan muss diese Aufteilung eindeutig festlegen."},"seoKey":"blogSpaceEnvironmentSimulation","dateModified":"2026-07-23","searchIntent":{"en":{"primaryKeyword":"space environment simulation chamber","primaryQuestion":"Which parts of the orbital thermal environment can a TVAC chamber reproduce?"},"de":{"primaryKeyword":"Weltraumsimulationskammer","primaryQuestion":"Welche Teile der thermischen Orbitumgebung kann eine TVAC-Kammer nachbilden?"}},"references":[{"title":"Solar Irradiance Science","publisher":"NASA Goddard Space Flight Center","url":"https://earth.gsfc.nasa.gov/climate/projects/solar-irradiance/science"},{"title":"Space Environment Simulator facility capabilities","publisher":"NASA Goddard Space Flight Center","url":"https://etd.gsfc.nasa.gov/capabilities/facilities-listing/space-environment-simulator/"},{"title":"State of the Art of Small Spacecraft Technology, Thermal Control","publisher":"NASA Small Spacecraft Systems Virtual Institute","url":"https://www.nasa.gov/smallsat-institute/sst-soa/thermal-control/"}]},{"articleKey":"tvacTestTypes","enSlug":"tvac-test-types","deSlug":"tvac-testarten","category":"basics","datePublished":"2026-07-22","relatedPaths":["/services/testing-services","/products/standard-series","/tvac-questionnaire"],"relatedArticles":["whatIsTvacTesting","aerospaceQualification","tvacTestCampaign"],"en":{"title":"TVAC Test Types: From Thermal Cycling to Thermal Balance","description":"Thermal vacuum cycling, thermal balance, bake-out, starts and soaks: what each TVAC test type verifies, how a typical profile looks and how qualification differs from acceptance.","seoTitle":"TVAC Test Types: Cycling, Balance, Bake-Out | Deepvac","seoDescription":"TVAC test types compared: thermal vacuum cycling, thermal balance, bake-out, starts and soaks – goals, typical profiles and qualification vs acceptance.","intro":"Thermal vacuum campaigns combine several test types with different purposes. Thermal cycling evaluates function and build robustness over repeated transitions; thermal balance provides steady-state data for model correlation; bake-out reduces and measures volatile release; starts and extended dwells verify operation or survival at defined limits. The applicable contract and tailored verification plan determine which elements are required and how they are sequenced.","sections":[{"title":"The main TVAC test types at a glance","content":"Five test types cover almost everything that happens in a thermal vacuum chamber. They differ less in equipment than in intent – in which question the test is supposed to answer.","bulletsHeading":"The five types","bullets":["Thermal vacuum cycling: repeated transitions between hot and cold extremes to provoke workmanship defects and demonstrate function across the whole range.","Thermal balance: defined steady-state cases whose measured temperatures validate and correlate the thermal model.","Bake-out and outgassing certification: controlled heating under vacuum until contamination rates fall below an agreed threshold.","Cold start and hot start: demonstrating that hardware switches on at the temperature extremes, not just that it survives them.","Soaks and functional testing at extremes: extended dwells with full performance verification at the hot and cold plateaus."]},{"title":"Thermal vacuum cycling: provoking weakness","content":"Thermal vacuum cycling repeatedly drives the test item between defined hot and cold levels, with dwell phases and functional checks set by the verification plan. Repetition can expose intermittent workmanship and integration faults such as marginal crimps, connector movement, bond degradation or solder-joint defects. Ramp rate is a controlled test parameter: it should come from the programme requirements and remain achievable for the combined chamber, fixture and test-item thermal mass. A faster ramp is not automatically more representative.","content2":"Cycle count, temperature levels, dwell criteria and operating state come from the programme requirements. ECSS-E-ST-10-03C Rev.1, GSFC-STD-7000B and SMC-S-016 provide different frameworks and all allow project tailoring. No single cycle count is valid for every unit, model philosophy or mission."},{"title":"Thermal balance: validating the thermal model","content":"Thermal balance answers a different question: not whether the hardware survives, but whether the thermal model tells the truth. The test establishes a small number of well-defined steady-state cases – typically a hot case and a cold case, sometimes a transient – with known boundary conditions: shroud temperature, applied heater powers, interface temperatures. The unit then stabilises until temperature drift falls below a small criterion, often a fraction of a kelvin per hour, and the measured temperature map is compared with the model prediction.","content2":"Model parameters are adjusted only within a documented correlation process and with physically defensible explanations. Stable, well-measured boundary conditions reduce uncertainty, but no generic chamber stability or uniformity value guarantees successful correlation for every test item."},{"title":"Bake-out and outgassing certification","content":"The bake-out is the test type that removes something instead of proving something: hardware is held warm under vacuum so volatiles leave before they can condense on flight optics or falsify later measurements. Temperature sits above the maximum operating level but below material limits, and completion is defined by measurement – typically a QCM deposition rate or a pressure trend falling below an agreed threshold. For contamination-critical programmes the same run doubles as outgassing certification, documenting that the unit meets its cleanliness requirement."},{"title":"Starts, soaks and functional testing at extremes","content":"Three smaller test types round out the family. A cold start demonstrates that a unit switches on at its cold limit – the hardest moment for electronics, lubricants and mechanisms; a hot start does the same at the upper end. Soaks hold the unit at an extreme for an extended period to reveal slow effects such as creep, parameter drift and moisture-driven behaviour. And functional testing at extremes verifies actual performance: full test blocks at the hot and cold plateaus, reduced functional checks during intermediate cycles, continuous housekeeping monitoring throughout."},{"title":"The profile: ramps, dwells and levels","content":"On paper, almost every campaign is the same drawing: pump-down, an initial hot phase that doubles as a mild bake-out, then a sawtooth of ramps and dwells between the hot and cold levels, and a controlled return to ambient with a dry-gas venting step. Dwells begin when the reference sensor stabilises within a defined band – not when the shroud arrives; that distinction dominates real campaign duration.","content2":"Test levels and margins are defined by the selected verification approach and project documentation. Qualification, acceptance and protoflight differ in intent, model use, stress and duration, but their exact relationship is not a universal 10 K rule. The tailored verification matrix is the controlling source."}],"faq":[{"q":"What is the difference between thermal cycling and thermal balance?","a":"Thermal vacuum cycling stresses hardware by repeatedly driving it between hot and cold extremes; its outputs are pass/fail evidence and exposed workmanship defects. Thermal balance is a measurement test: the unit stabilises in a few precisely defined steady-state cases, and the measured temperatures are used to validate and correlate the thermal model. Campaigns frequently combine both in a single pump-down."},{"q":"How many cycles does a TVAC test include?","a":"The applicable verification matrix sets the cycle count. Qualification, acceptance and protoflight campaigns use different levels and durations, and each programme may tailor the baseline. A universal number would be misleading."},{"q":"What is a protoflight test?","a":"Protoflight uses flight hardware to satisfy a combined verification objective when no dedicated qualification model is available. The actual levels, durations and allowed life consumption are project decisions documented in the tailored verification plan."},{"q":"Is hardware operated during a TVAC test?","a":"Usually yes. Housekeeping data is monitored continuously, reduced functional checks run during intermediate cycles, and full performance tests execute at the hot and cold plateaus. Non-operating phases exist too – survival levels are tested unpowered – and cold or hot starts specifically verify switch-on at the extremes. The functional test plan is as much part of the campaign as the temperature profile."}],"conclusion":"Cycling, thermal balance, bake-out, starts and soaks answer different verification questions. A defensible campaign links each profile segment to a requirement, a measurement and an acceptance criterion before chamber operation begins."},"de":{"title":"TVAC-Testarten: von Thermalzyklen bis Thermal Balance","description":"Thermalzyklen, Thermal Balance, Ausheizen, Starts und Soaks: was jede TVAC-Testart nachweist, wie ein typisches Profil aussieht und wie sich Qualifikation und Abnahme unterscheiden.","seoTitle":"TVAC-Testarten: Zyklen, Balance, Ausheizen | Deepvac","seoDescription":"TVAC-Testarten im Vergleich: Thermalzyklen, Thermal Balance, Ausheizen, Starts und Soaks – Ziele, typische Profile und Qualifikation vs. Abnahme.","intro":"Thermalvakuum-Kampagnen kombinieren mehrere Testarten mit unterschiedlichen Zielen. Thermalzyklen bewerten Funktion und Fertigungsrobustheit über wiederholte Übergänge; Thermal Balance liefert stationäre Daten für die Modellkorrelation; Ausheizen reduziert und misst flüchtige Freisetzungen; Starts und verlängerte Haltephasen verifizieren Betrieb oder Überleben an definierten Grenzen. Vertrag und getailorter Verifikationsplan bestimmen, welche Elemente erforderlich sind und wie sie sequenziert werden.","sections":[{"title":"Die wichtigsten TVAC-Testarten im Überblick","content":"Fünf Testarten decken nahezu alles ab, was in einer Thermalvakuumkammer stattfindet. Sie unterscheiden sich weniger in der Ausrüstung als in der Absicht – also darin, welche Frage der Test beantworten soll.","bulletsHeading":"Die fünf Testarten","bullets":["Thermalzyklen: wiederholte Übergänge zwischen heißen und kalten Extremwerten, um Fertigungsfehler zu provozieren und Funktion über den gesamten Bereich nachzuweisen.","Thermal Balance: definierte stationäre Fälle, deren gemessene Temperaturen das Thermalmodell validieren und korrelieren.","Ausheizen und Ausgasungsnachweis: kontrolliertes Heizen unter Vakuum, bis die Kontaminationsraten unter eine vereinbarte Schwelle fallen.","Kaltstart und Heißstart: der Nachweis, dass Hardware an den Temperaturgrenzen einschaltet – nicht nur, dass sie sie übersteht.","Soaks und Funktionstests an den Extremen: verlängerte Haltephasen mit vollständiger Leistungsverifikation auf den heißen und kalten Plateaus."]},{"title":"Thermalzyklen: Schwachstellen provozieren","content":"Beim Thermalzyklustest wird der Prüfling wiederholt zwischen definierten heißen und kalten Niveaus gefahren, mit Haltephasen und Funktionsprüfungen gemäß Verifikationsplan. Die Wiederholung kann intermittierende Fertigungs- und Integrationsfehler aufdecken, etwa schwache Crimpungen, Steckverbinderbewegungen, nachlassende Klebungen oder Lötstellenfehler. Die Rampenrate ist ein geregelter Testparameter: Sie muss aus den Programmanforderungen abgeleitet und für die gemeinsame thermische Masse aus Kammer, Vorrichtung und Prüfling erreichbar sein. Eine schnellere Rampe ist nicht automatisch repräsentativer.","content2":"Zyklenzahl, Temperaturniveaus, Haltekriterien und Betriebszustand stammen aus den Projektanforderungen. ECSS-E-ST-10-03C Rev.1, GSFC-STD-7000B und SMC-S-016 liefern unterschiedliche Rahmenwerke und erlauben projektspezifisches Tailoring. Eine universelle Zyklenzahl für alle Geräte, Modellphilosophien oder Missionen gibt es nicht."},{"title":"Thermal Balance: das Thermalmodell validieren","content":"Thermal Balance beantwortet eine andere Frage: nicht, ob die Hardware übersteht, sondern ob das Thermalmodell die Wahrheit sagt. Der Test stellt wenige, präzise definierte stationäre Fälle her – typischerweise einen Heiß- und einen Kaltfall, mitunter einen transienten – mit bekannten Randbedingungen: Shroud-Temperatur, eingespeiste Heizleistungen, Schnittstellentemperaturen. Der Prüfling stabilisiert sich, bis die Temperaturdrift unter ein kleines Kriterium fällt, oft Bruchteile eines Kelvin pro Stunde; dann wird die gemessene Temperaturverteilung mit der Modellvorhersage verglichen.","content2":"Modellparameter werden nur innerhalb eines dokumentierten Korrelationsprozesses und mit physikalisch belastbarer Begründung angepasst. Stabile, gut gemessene Randbedingungen reduzieren Unsicherheit; ein pauschaler Wert für Kammerstabilität oder Homogenität garantiert jedoch keine erfolgreiche Korrelation für jeden Prüfling."},{"title":"Ausheizen und Ausgasungsnachweis","content":"Das Ausheizen ist die Testart, die etwas entfernt, statt etwas nachzuweisen: Hardware wird warm unter Vakuum gehalten, damit flüchtige Stoffe entweichen, bevor sie auf Flugoptiken kondensieren oder spätere Messungen verfälschen. Die Temperatur liegt über dem maximalen Betriebsniveau, aber unter den Materialgrenzen; das Ende definiert eine Messgröße – typischerweise eine QCM-Abscheiderate oder ein Druckverlauf unterhalb einer vereinbarten Schwelle. Für kontaminationskritische Programme dient derselbe Lauf zugleich als Ausgasungsnachweis, der die Sauberkeitsanforderung des Prüflings dokumentiert."},{"title":"Starts, Soaks und Funktionstests an den Extremen","content":"Drei kleinere Testarten vervollständigen die Familie. Der Kaltstart zeigt, dass ein Gerät an seiner Kältegrenze einschaltet – der härteste Moment für Elektronik, Schmierstoffe und Mechanismen; der Heißstart tut dasselbe am oberen Ende. Soaks halten den Prüfling für längere Zeit an einem Extrem und decken langsame Effekte wie Kriechen, Parameterdrift und feuchtebedingtes Verhalten auf. Funktionstests an den Extremen verifizieren schließlich die tatsächliche Leistung: vollständige Testblöcke auf den heißen und kalten Plateaus, reduzierte Funktionsprüfungen in den Zwischenzyklen, durchgehendes Housekeeping-Monitoring."},{"title":"Das Profil: Rampen, Haltephasen und Level","content":"Auf dem Papier ähnelt fast jede Kampagne derselben Zeichnung: Abpumpen, eine erste Heißphase, die zugleich als mildes Ausheizen wirkt, dann ein Sägezahn aus Rampen und Haltephasen zwischen Heiß- und Kaltniveau, zuletzt die kontrollierte Rückkehr auf Umgebung mit Belüften über trockenes Gas. Haltephasen beginnen, wenn der Referenzsensor innerhalb eines definierten Bandes stabil ist – nicht, wenn der Shroud ankommt; dieser Unterschied dominiert die reale Kampagnendauer.","content2":"Prüfniveaus und Margen werden durch den gewählten Verifikationsansatz und die Projektdokumentation festgelegt. Qualifikation, Abnahme und Protoflight unterscheiden sich in Ziel, Modellverwendung, Belastung und Dauer; ihr Verhältnis folgt jedoch keiner universellen 10-K-Regel. Verbindlich ist die getailorte Verifikationsmatrix."}],"faq":[{"q":"Was ist der Unterschied zwischen Thermalzyklen und Thermal Balance?","a":"Thermalzyklen belasten Hardware, indem sie sie wiederholt zwischen heißen und kalten Extremen fahren; das Ergebnis sind Bestanden-Nachweise und aufgedeckte Fertigungsfehler. Thermal Balance ist ein Messtest: Der Prüfling stabilisiert sich in wenigen präzise definierten stationären Fällen, und die gemessenen Temperaturen validieren und korrelieren das Thermalmodell. Kampagnen kombinieren beides häufig in einem Abpumpvorgang."},{"q":"Wie viele Zyklen umfasst ein TVAC-Test?","a":"Die anwendbare Verifikationsmatrix legt die Zyklenzahl fest. Qualifikations-, Abnahme- und Protoflight-Kampagnen verwenden unterschiedliche Niveaus und Dauern; jedes Programm kann die Ausgangsbasis tailoren. Eine Universalzahl wäre irreführend."},{"q":"Was ist ein Protoflight-Test?","a":"Protoflight nutzt Flughardware für ein kombiniertes Verifikationsziel, wenn kein eigenes Qualifikationsmodell verfügbar ist. Die tatsächlichen Niveaus, Dauern und der zulässige Lebensdauerverbrauch sind Projektentscheidungen im getailorten Verifikationsplan."},{"q":"Wird Hardware während eines TVAC-Tests betrieben?","a":"Meist ja. Housekeeping-Daten laufen durchgehend mit, reduzierte Funktionsprüfungen finden in den Zwischenzyklen statt, vollständige Leistungstests auf den heißen und kalten Plateaus. Es gibt auch unbetriebene Phasen – Überlebensniveaus werden stromlos getestet –, und Kalt- oder Heißstarts verifizieren gezielt das Einschalten an den Extremen. Der Funktionstestplan gehört ebenso zur Kampagne wie das Temperaturprofil."}],"conclusion":"Thermalzyklen, Thermal Balance, Ausheizen, Starts und Haltephasen beantworten unterschiedliche Verifikationsfragen. Eine belastbare Kampagne ordnet jedem Profilabschnitt vor dem Kammerbetrieb eine Anforderung, eine Messung und ein Abnahmekriterium zu."},"seoKey":"blogTvacTestTypes","dateModified":"2026-07-23","searchIntent":{"en":{"primaryKeyword":"TVAC test types","primaryQuestion":"Which TVAC test type answers which verification question?"},"de":{"primaryKeyword":"TVAC-Testarten","primaryQuestion":"Welche TVAC-Testart beantwortet welche Verifikationsfrage?"}},"references":[{"title":"ECSS-E-ST-10-03C Rev.1: Testing","publisher":"European Cooperation for Space Standardization (ECSS)","url":"https://ecss.nl/standard/ecss-e-st-10-03c-rev-1-testing-31-may-2022/"},{"title":"GSFC-STD-7000B: General Environmental Verification Standard (GEVS)","publisher":"NASA Goddard Space Flight Center","url":"https://standards.nasa.gov/standard/gsfc/gsfc-std-7000"},{"title":"SMC-S-016 (2014): Test Requirements for Launch, Upper-Stage and Space Vehicles","publisher":"U.S. Space and Missile Systems Center / NTIS","url":"https://ntrl.ntis.gov/NTRL/dashboard/searchResults/titleDetail/ADA619375.xhtml"}],"technicalNote":{"en":"The applicable contract, verification plan and project-specific tailoring remain binding. The standards listed here provide frameworks, not a universal test profile.","de":"Verbindlich bleiben Vertrag, Verifikationsplan und projektspezifisches Tailoring. Die genannten Normen liefern Rahmenwerke, kein universelles Testprofil."}}]
+[
+  {
+    "articleKey": "cubesatTesting",
+    "enSlug": "cubesat-tvac-testing",
+    "deSlug": "cubesat-tvac-test",
+    "category": "applications",
+    "datePublished": "2025-02-11",
+    "relatedPaths": [
+      "/products/standard-series",
+      "/services/testing-services",
+      "/tvac-questionnaire"
+    ],
+    "relatedArticles": [
+      "whatIsTvacTesting",
+      "inHouseVsExternalTesting",
+      "aerospaceQualification"
+    ],
+    "en": {
+      "title": "CubeSat TVAC Testing: What Small Satellites Really Need",
+      "description": "Why thermal vacuum testing pays off even for CubeSats, what a typical campaign looks like, and how to right-size chamber and budget for 1U to 16U.",
+      "seoTitle": "CubeSat Thermal Vacuum (TVAC) Testing | Deepvac",
+      "seoDescription": "CubeSat thermal vacuum testing: why the TVAC screen matters for smallsats, what a campaign includes, chamber sizing for 1U–16U and budget-friendly options.",
+      "intro": "CubeSats benefit from thermal vacuum testing because the combined vacuum and temperature environment can reveal thermal-interface, integration and functional problems that are not visible during ambient testing. The required evidence is defined by the mission, launch integrator and tailored verification plan rather than by the CubeSat form factor alone. A compact spacecraft can often be tested in a compact chamber, but the profile, functional checks, battery limits and deployed configuration still require project-specific planning. This article outlines those decisions for platforms from 1U to 16U.",
+      "sections": [
+        {
+          "title": "Why TVAC matters even for a CubeSat",
+          "content": "Thermal vacuum testing should not be treated as a formality. It exercises the spacecraft at representative thermal boundaries without convective cooling and can expose weak thermal interfaces, intermittent electrical connections, mechanism margin and software behaviour at temperature. The value comes from operating the spacecraft and recording pass, fail and anomaly criteria at the hot and cold plateaus.",
+          "content2": "Launch-service and mission-assurance documentation may require environmental-test and bake-out evidence. The applicable launch interface control document and verification matrix should therefore be reviewed before the campaign is frozen."
+        },
+        {
+          "title": "Qualification standards, scaled to NewSpace risk",
+          "content": "Common reference frameworks include ECSS-E-ST-10-03C Rev.1, NASA GEVS (GSFC-STD-7000B) and, for relevant U.S. national-security space programmes, SMC-S-016 (2014). The programme-specific verification plan tails these frameworks to mission risk, model philosophy and launch requirements. It defines the actual levels, dwell criteria, cycle count and functional test scope.",
+          "bulletsHeading": "Typical tailoring for small missions",
+          "bullets": [
+            "Protoflight may be selected when the programme accepts testing flight hardware at elevated verification levels without a dedicated qualification model.",
+            "Temperature limits are derived from predicted flight temperatures, uncertainty and the margin rules in the tailored verification plan.",
+            "Cycle count is a programme decision; it should be sufficient for the intended workmanship screen without consuming unnecessary hardware life.",
+            "Functional checks at the hot and cold plateaus remain central because survival alone does not demonstrate mission performance."
+          ]
+        },
+        {
+          "title": "What a typical CubeSat campaign looks like",
+          "content": "A well-prepared CubeSat campaign can often be executed within several days to about a week of chamber occupancy, but the duration depends on pump-down, bake-out requirements, stabilization criteria, cycle count and the functional test script. The schedule should be calculated from the agreed profile rather than assumed from spacecraft size.",
+          "bulletsHeading": "Typical sequence",
+          "bullets": [
+            "Ambient reference test: a full functional run as the baseline before pump-down.",
+            "Bake-out under vacuum at elevated temperature to drive out volatiles, optionally monitored with QCM or RGA.",
+            "Thermal cycling between hot and cold plateaus, with dwell times long enough to stabilize the interior.",
+            "Functional checks at the plateaus, including cold start and hot start of onboard computer and radios.",
+            "Nitrogen venting and a closing ambient functional test to confirm nothing has changed."
+          ],
+          "content2": "Battery operation needs a dedicated rule set. Cell and battery manufacturer documentation defines the permitted charge and discharge temperatures; low-temperature charging is commonly restricted. The campaign must implement these limits through operating procedures, dedicated sensors and independent protective actions where required."
+        },
+        {
+          "title": "Right-sizing the chamber: 65 to 250 litres",
+          "content": "Chamber selection starts from the deployed test envelope, fixture, harness and required radiative clearance. Current Deepvac Standard Series sizes include the 65 to 250 litre classes often considered for small spacecraft, but suitability is determined by the clear internal dimensions and door passage of the selected configuration, not by nominal volume alone.",
+          "bulletsHeading": "Sizing checkpoints",
+          "bullets": [
+            "Stowed versus deployed: an unfolded antenna or panel often drives chamber volume more than the bus itself.",
+            "Fixturing counts: mounting frame, thermal plate or suspension, harness and connector savers all take space.",
+            "Typical CubeSat profiles fit within mechanical refrigeration (−90 °C to +150 °C); LN₂-based options reach −180 °C when a payload demands it.",
+            "Temperature uniformity of ± 2 K and programmable ramp rates matter more for repeatable plateaus than raw volume."
+          ]
+        },
+        {
+          "title": "Keeping the budget in check",
+          "content": "Cost control depends on a clear verification scope and realistic utilisation forecast. External test services can be efficient for occasional campaigns; in-house capability can improve iteration speed when test demand is sustained. The comparison should include preparation, operators, maintenance, logistics, queue time and the cost of schedule delay.",
+          "bulletsHeading": "Budget levers",
+          "bullets": [
+            "Run protoflight instead of building a separate qualification model when the risk class allows it.",
+            "Book a testing service instead of buying a chamber if you test a few satellites per year – ownership pays off with steady utilization.",
+            "Prepare functional scripts and pass/fail criteria before pump-down; improvised plateau time is the most expensive time of a campaign.",
+            "Use automation and remote monitoring so cycles run overnight without a full crew on site."
+          ],
+          "content2": "Both routes stay open as you grow: a campaign executed as a testing service covers the first missions, and a compact Standard Series chamber brings the screen in-house once utilization justifies it."
+        },
+        {
+          "title": "Recurring findings to investigate",
+          "content": "A finding in the chamber is a fault that did not reach orbit – and across CubeSat campaigns the same categories dominate.",
+          "bullets": [
+            "Connectors and harness: intermittent contacts and crimp faults that only open at temperature extremes.",
+            "Deployables: burn-wire and spring mechanisms losing release margin at cold, especially after stowage under preload.",
+            "Batteries: heater sizing and insulation that were never verified in vacuum, and charge inhibits at cold.",
+            "Thermal straps and bolted joints: contact conductance far below bench estimates once no air bridges the gaps.",
+            "Software and FDIR: resets, oscillator drift and sensor offsets at the corners of the temperature envelope."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "Do CubeSats really need thermal vacuum testing?",
+          "a": "CubeSat programmes commonly use thermal vacuum testing to verify thermal behaviour and function under combined vacuum and temperature conditions. Whether it is mandatory, and which profile applies, depends on the mission, launch integrator, contract and tailored verification plan."
+        },
+        {
+          "q": "How long does a CubeSat TVAC test take?",
+          "a": "Several days to about a week is a useful planning range for some compact campaigns, but it is not a standard duration. Pump-down, bake-out, stabilization, cycle count and functional test scope determine the actual chamber occupancy."
+        },
+        {
+          "q": "What chamber size do I need for CubeSat TVAC testing?",
+          "a": "Nominal volumes in the 65 to 250 litre class can suit many 1U to 16U test setups, but the deployed envelope, fixture, harness, radiative clearance and door opening must be checked against the selected chamber's clear dimensions."
+        },
+        {
+          "q": "How many thermal cycles does a CubeSat need?",
+          "a": "The applicable verification plan sets the cycle count. Qualification, acceptance and protoflight approaches use different levels and durations, and mission-specific tailoring can change the baseline. Functional checks and stabilization criteria should be preserved even when cycle count is reduced."
+        }
+      ],
+      "conclusion": "A CubeSat TVAC campaign should be tailored to the mission, launch-integration requirements and the spacecraft thermal model. The most valuable results come from repeatable hot and cold functional checks, documented configuration control and clear pass, fail and abort criteria."
+    },
+    "de": {
+      "title": "CubeSat-TVAC-Test: Was kleine Satelliten wirklich brauchen",
+      "description": "Warum sich Thermalvakuumtests auch für CubeSats lohnen, wie eine typische Kampagne abläuft und wie Sie Kammer und Budget für 1U bis 16U richtig dimensionieren.",
+      "seoTitle": "CubeSat-TVAC-Test: Ablauf & Kammergröße | Deepvac",
+      "seoDescription": "CubeSat-TVAC-Test: warum Thermalvakuumtests für CubeSats zählen, typischer Ablauf, Kammergrößen für 1U–16U und budgetschonende Ansätze für NewSpace-Teams.",
+      "intro": "Auch CubeSats profitieren vom Thermalvakuumtest, weil die Kombination aus Vakuum und Temperatur thermische Schnittstellen-, Integrations- und Funktionsprobleme sichtbar machen kann, die unter Umgebungsbedingungen unentdeckt bleiben. Welche Nachweise erforderlich sind, bestimmen Mission, Startintegrator und getailorter Verifikationsplan, nicht allein der CubeSat-Formfaktor. Ein kompakter Satellit passt häufig in eine kompakte Kammer; Profil, Funktionstests, Batteriegrenzen und entfaltete Konfiguration müssen dennoch projektspezifisch geplant werden. Dieser Artikel ordnet die Entscheidungen für Plattformen von 1U bis 16U.",
+      "sections": [
+        {
+          "title": "Warum TVAC auch für CubeSats zählt",
+          "content": "Der Thermalvakuumtest sollte nicht als Formalität behandelt werden. Er betreibt den Satelliten an repräsentativen thermischen Randbedingungen ohne konvektive Kühlung und kann schwache Thermalschnittstellen, intermittierende elektrische Verbindungen, geringe Mechanismenreserven sowie temperaturabhängiges Softwareverhalten sichtbar machen. Aussagekräftig wird der Test durch Funktionstests und dokumentierte Erfolgs-, Fehler- und Anomaliekriterien an den heißen und kalten Haltephasen.",
+          "content2": "Startdienst- und Mission-Assurance-Dokumente können Nachweise zu Umwelttests und Ausheizen verlangen. Deshalb sollten das anwendbare Interface Control Document und die Verifikationsmatrix geprüft werden, bevor die Kampagne festgeschrieben wird."
+        },
+        {
+          "title": "Qualifikationsstandards, skaliert auf NewSpace-Risiko",
+          "content": "Gängige Referenzrahmen sind ECSS-E-ST-10-03C Rev.1, NASA GEVS (GSFC-STD-7000B) und für einschlägige US-Programme der nationalen Sicherheitsraumfahrt SMC-S-016 (2014). Der projektspezifische Verifikationsplan tailort diese Rahmenwerke auf Missionsrisiko, Modellphilosophie und Startanforderungen. Er definiert die tatsächlichen Niveaus, Haltekriterien, Zyklenzahl und den Umfang der Funktionstests.",
+          "bulletsHeading": "Typisches Tailoring für kleine Missionen",
+          "bullets": [
+            "Protoflight kann gewählt werden, wenn das Programm die Prüfung von Flughardware auf erhöhten Verifikationsniveaus ohne eigenes Qualifikationsmodell akzeptiert.",
+            "Temperaturgrenzen werden aus vorhergesagten Flugtemperaturen, Unsicherheit und den Margenregeln des getailorten Verifikationsplans abgeleitet.",
+            "Die Zyklenzahl ist eine Projektentscheidung; sie sollte für die beabsichtigte Prüfung der Fertigungsqualität ausreichen, ohne unnötig Lebensdauer zu verbrauchen.",
+            "Funktionstests an den heißen und kalten Haltephasen bleiben zentral, weil reines Überleben keine Missionsleistung nachweist."
+          ]
+        },
+        {
+          "title": "So läuft eine typische CubeSat-Kampagne",
+          "content": "Eine gut vorbereitete CubeSat-Kampagne lässt sich häufig innerhalb mehrerer Tage bis etwa einer Woche Kammerbelegung durchführen. Die Dauer hängt jedoch von Abpumpen, Ausheizanforderung, Stabilisierungskriterien, Zyklenzahl und Funktionsskript ab. Der Terminplan sollte aus dem vereinbarten Profil berechnet und nicht aus der Satellitengröße abgeleitet werden.",
+          "bulletsHeading": "Typischer Ablauf",
+          "bullets": [
+            "Referenztest unter Umgebungsbedingungen: vollständiger Funktionslauf als Baseline vor dem Abpumpen.",
+            "Ausheizen unter Vakuum bei erhöhter Temperatur, um flüchtige Bestandteile auszutreiben – optional überwacht per Schwingquarz-Monitoring (QCM) oder Restgasanalyse (RGA).",
+            "Thermalzyklen zwischen heißer und kalter Haltephase, mit Haltezeiten, die das Innere stabilisieren.",
+            "Funktionstests an den Haltephasen, inklusive Kalt- und Heißstart von Bordrechner und Funkstrecken.",
+            "Belüften mit Stickstoff und ein abschließender Funktionstest unter Umgebungsbedingungen als Gegenprobe."
+          ],
+          "content2": "Der Batteriebetrieb benötigt ein eigenes Regelwerk. Die Dokumentation von Zell- und Batteriehersteller legt die zulässigen Lade- und Entladetemperaturen fest; Laden bei niedriger Temperatur ist häufig eingeschränkt. Die Kampagne muss diese Grenzen über Betriebsprozeduren, eigene Sensoren und bei Bedarf unabhängige Schutzfunktionen umsetzen."
+        },
+        {
+          "title": "Kammergröße: 65 bis 250 Liter richtig gewählt",
+          "content": "Die Kammerauswahl beginnt bei entfalteter Prüflingseinhüllender, Vorrichtung, Verkabelung und erforderlichem Strahlungsabstand. Die aktuelle Deepvac Standard-Serie umfasst Größenklassen von 65 bis 250 Litern, die für kleine Raumfahrzeuge häufig betrachtet werden. Entscheidend sind jedoch die lichten Innenmaße und die Türdurchfahrt der gewählten Konfiguration, nicht das Nennvolumen allein.",
+          "bulletsHeading": "Checkpunkte für die Dimensionierung",
+          "bullets": [
+            "Gestaut oder entfaltet: Eine ausgeklappte Antenne oder ein Panel bestimmt das Kammervolumen oft stärker als der Bus selbst.",
+            "Vorrichtungen zählen mit: Montagerahmen, Thermalplatte oder Abhängung, Kabelbaum und Steckerschoner brauchen Platz.",
+            "Typische CubeSat-Profile liegen innerhalb der mechanischen Kälteerzeugung (−90 °C bis +150 °C); LN₂-basierte Optionen reichen bis −180 °C, wenn eine Nutzlast es verlangt.",
+            "Temperaturhomogenität von ± 2 K und programmierbare Rampenraten zählen für reproduzierbare Haltephasen mehr als reines Volumen."
+          ]
+        },
+        {
+          "title": "Das Budget im Griff behalten",
+          "content": "Die Kosten werden vor allem durch einen klaren Verifikationsumfang und eine realistische Auslastungsplanung beherrscht. Externe Prüfdienstleistungen können bei gelegentlichen Kampagnen effizient sein; eine eigene Anlage kann bei dauerhaftem Testbedarf die Iterationszeit verkürzen. In den Vergleich gehören Vorbereitung, Bedienpersonal, Wartung, Logistik, Wartezeit und die Kosten von Terminverzug.",
+          "bulletsHeading": "Budget-Hebel",
+          "bullets": [
+            "Protoflight statt separatem Qualifikationsmodell, wenn die Risikoklasse es zulässt.",
+            "Testdienstleistung statt Kammerkauf, wenn Sie wenige Satelliten pro Jahr testen – Eigenbetrieb lohnt sich erst bei stetiger Auslastung.",
+            "Funktionsskripte und Pass/Fail-Kriterien vor dem Abpumpen festlegen – improvisierte Haltephasen sind die teuerste Zeit der Kampagne.",
+            "Automatisierung und Fernüberwachung nutzen, damit Zyklen über Nacht ohne volle Besetzung laufen."
+          ],
+          "content2": "Beide Wege bleiben offen, wenn Sie wachsen: Eine als Testdienstleistung durchgeführte Kampagne trägt die ersten Missionen, und eine kompakte Standard-Serie-Kammer holt den Screen ins Haus, sobald die Auslastung es rechtfertigt."
+        },
+        {
+          "title": "Wiederkehrende Prüffelder",
+          "content": "Ein Befund in der Kammer ist ein Fehler, der nicht in den Orbit gelangt ist – und über CubeSat-Kampagnen hinweg dominieren dieselben Kategorien.",
+          "bullets": [
+            "Steckverbinder und Kabelbaum: intermittierende Kontakte und Crimpfehler, die erst an den Temperaturextremen öffnen.",
+            "Entfaltmechanismen: Burn-Wire- und Federmechanismen, die in der Kälte Auslösemarge verlieren, besonders nach Stauung unter Vorspannung.",
+            "Batterien: Heizer- und Isolationsauslegung, die nie im Vakuum verifiziert wurde, und Ladesperren in der Kälte.",
+            "Thermal Straps und Schraubverbindungen: Kontaktleitwerte deutlich unter Tischwerten, sobald keine Luft mehr die Spalte überbrückt.",
+            "Software und FDIR: Resets, Oszillatordrift und Sensoroffsets an den Rändern des Temperaturbereichs."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "Brauchen CubeSats wirklich einen Thermalvakuumtest?",
+          "a": "CubeSat-Programme nutzen Thermalvakuumtests häufig, um thermisches Verhalten und Funktion unter kombiniertem Vakuum und Temperaturbedingungen zu verifizieren. Ob der Test verpflichtend ist und welches Profil gilt, bestimmen Mission, Startintegrator, Vertrag und getailorter Verifikationsplan."
+        },
+        {
+          "q": "Wie lange dauert ein CubeSat-TVAC-Test?",
+          "a": "Mehrere Tage bis etwa eine Woche sind für manche kompakte Kampagnen eine brauchbare Planungsgröße, aber keine Standarddauer. Abpumpen, Ausheizen, Stabilisierung, Zyklenzahl und Umfang der Funktionstests bestimmen die tatsächliche Kammerbelegung."
+        },
+        {
+          "q": "Welche Kammergröße braucht ein CubeSat-TVAC-Test?",
+          "a": "Nennvolumina in der Größenklasse 65 bis 250 Liter können für viele Aufbauten von 1U bis 16U passen. Entfaltete Einhüllende, Vorrichtung, Verkabelung, Strahlungsabstand und Türöffnung müssen jedoch gegen die lichten Maße der gewählten Kammer geprüft werden."
+        },
+        {
+          "q": "Wie viele Thermalzyklen braucht ein CubeSat?",
+          "a": "Der anwendbare Verifikationsplan legt die Zyklenzahl fest. Qualifikation, Abnahme und Protoflight verwenden unterschiedliche Niveaus und Dauern; projektspezifisches Tailoring kann die Ausgangsbasis verändern. Funktionstests und Stabilisierungskriterien sollten auch bei reduzierter Zyklenzahl erhalten bleiben."
+        }
+      ],
+      "conclusion": "Eine CubeSat-TVAC-Kampagne sollte auf Mission, Anforderungen der Startintegration und Thermalmodell zugeschnitten sein. Besonders aussagekräftig sind wiederholbare Funktionstests an heißen und kalten Haltephasen, eine dokumentierte Konfiguration sowie klare Erfolgs- und Abbruchkriterien."
+    },
+    "seoKey": "blogCubesatTesting",
+    "dateModified": "2026-07-23",
+    "searchIntent": {
+      "en": {
+        "primaryKeyword": "CubeSat thermal vacuum testing",
+        "primaryQuestion": "What must a CubeSat TVAC campaign demonstrate before launch integration?"
+      },
+      "de": {
+        "primaryKeyword": "CubeSat-TVAC-Test",
+        "primaryQuestion": "Welche Nachweise muss eine CubeSat-TVAC-Kampagne vor der Startintegration liefern?"
+      }
+    },
+    "references": [
+      {
+        "title": "Small Spacecraft Body of Knowledge and CubeSat 101",
+        "publisher": "NASA Small Spacecraft Systems Virtual Institute",
+        "url": "https://www.nasa.gov/smallsat-institute/small-spacecraft-body-of-knowledge/"
+      },
+      {
+        "title": "State of the Art of Small Spacecraft Technology, Thermal Control",
+        "publisher": "NASA Small Spacecraft Systems Virtual Institute",
+        "url": "https://www.nasa.gov/smallsat-institute/sst-soa/thermal-control/"
+      },
+      {
+        "title": "ECSS-E-ST-10-03C Rev.1: Testing",
+        "publisher": "European Cooperation for Space Standardization (ECSS)",
+        "url": "https://ecss.nl/standard/ecss-e-st-10-03c-rev-1-testing-31-may-2022/"
+      },
+      {
+        "title": "GSFC-STD-7000B: General Environmental Verification Standard (GEVS)",
+        "publisher": "NASA Goddard Space Flight Center",
+        "url": "https://standards.nasa.gov/standard/gsfc/gsfc-std-7000"
+      }
+    ],
+    "technicalNote": {
+      "en": "The applicable contract, verification plan and project-specific tailoring remain binding. The standards listed here provide frameworks, not a universal test profile. Deepvac performance figures in this article describe current reference configurations. Binding values depend on chamber size, selected pumping and thermal concepts, test setup and the project quotation.",
+      "de": "Verbindlich bleiben Vertrag, Verifikationsplan und projektspezifisches Tailoring. Die genannten Normen liefern Rahmenwerke, kein universelles Testprofil. Die in diesem Artikel genannten Deepvac-Leistungswerte beschreiben aktuelle Referenzkonfigurationen. Verbindliche Werte hängen von Kammergröße, gewähltem Pump- und Thermalkonzept, Testaufbau und Projektangebot ab."
+    }
+  },
+  {
+    "articleKey": "outgassingBasics",
+    "enSlug": "outgassing-in-vacuum",
+    "deSlug": "ausgasung-im-vakuum",
+    "category": "basics",
+    "datePublished": "2025-03-27",
+    "relatedPaths": [
+      "/products/options/bake-out",
+      "/products/options/qcm-monitoring",
+      "/products/options/residual-gas-analysis"
+    ],
+    "relatedArticles": [
+      "contaminationControl",
+      "vacuumLevelsExplained",
+      "tvacTestCampaign"
+    ],
+    "en": {
+      "title": "Outgassing in Vacuum: TML, CVCM and Bake-Out Explained",
+      "description": "Why materials release gas in vacuum, how ECSS outgassing screening with TML and CVCM works, which materials cause trouble – and how bake-out, QCM and RGA keep contamination under control.",
+      "seoTitle": "Outgassing in Vacuum: TML, CVCM, Bake-Out | Deepvac",
+      "seoDescription": "Outgassing in vacuum explained: desorption physics, ECSS TML and CVCM screening limits, typical problem materials, bake-out practice and QCM/RGA monitoring.",
+      "intro": "Outgassing is the release of adsorbed or dissolved gases and volatile compounds after pressure is reduced. In a thermal vacuum chamber it contributes to the gas load and can transport condensable material to colder surfaces. Material screening, controlled curing and cleaning, bake-out, quartz crystal microbalance measurements and residual-gas analysis address different parts of the problem. ECSS-Q-ST-70-02C and the NASA outgassing database provide established screening methods and reference data; the project contamination-control plan remains binding.",
+      "sections": [
+        {
+          "title": "The physics: desorption, diffusion, permeation",
+          "content": "Three mechanisms feed gas into a vacuum chamber. Desorption releases the molecular layers – above all water – that every surface adsorbs in air; it dominates the first hours of pumping. Diffusion moves dissolved volatiles such as residual solvents, plasticisers and absorbed moisture from the bulk of polymers to the surface, where they evaporate; because the supply sits deep in the material, this source decays only slowly over days. Permeation lets gas migrate through elastomer seals from the outside – small, but permanent.",
+          "content2": "All three mechanisms are temperature dependent, but the increase is material-specific and should not be reduced to one universal rule. Bake-out uses this dependence deliberately by raising the hardware temperature within qualified limits while the released species are pumped away or captured."
+        },
+        {
+          "title": "Why outgassing matters in a TVAC test",
+          "content": "Under high vacuum the chamber operates in molecular flow: outgassed molecules travel in straight lines until they hit a surface, and they preferentially stay where it is cold. Two consequences follow – a pressure problem and a contamination problem.",
+          "bulletsHeading": "The consequences",
+          "bullets": [
+            "Pressure load: outgassing is a continuous gas source the pumps must remove; a strongly outgassing test item can hold the chamber orders of magnitude above its clean base pressure.",
+            "Condensation on cold surfaces: volatiles migrate to the coldest spots – in a TVAC test often exactly the optics, detectors and radiator samples you care about.",
+            "Changed surface properties: even thin condensed films shift absorptivity and emissivity, quietly skewing thermal balance results.",
+            "Limited reversibility: some deposits do not simply evaporate again on venting; cleaning contaminated optics afterwards ranges from expensive to impossible."
+          ]
+        },
+        {
+          "title": "Material screening: TML and CVCM per ECSS-Q-ST-70-02C",
+          "content": "Material screening reduces the risk before integration. In the widely used vacuum outgassing test, samples are exposed at elevated temperature under vacuum and condensable material is collected on a cooler surface. The NASA reference method uses 125 °C for 24 hours with a 25 °C collector; the applicable ECSS procedure and project requirements should be checked for the campaign.",
+          "content2": "Common screening criteria are TML below 1.0 percent and CVCM below 0.10 percent. These values are screening thresholds, not a universal cleanliness guarantee. Optical or otherwise contamination-sensitive programmes may impose lower project limits, additional witness measurements or restrictions on particular material families."
+        },
+        {
+          "title": "Typical offenders in real test items",
+          "content": "Most contamination findings trace back to a familiar cast of materials – and to the places nobody looked.",
+          "bulletsHeading": "Watch out for",
+          "bullets": [
+            "Plastics and 3D-printed parts: absorbed moisture plus residual monomers and plasticisers, often with large porous surfaces.",
+            "Adhesives and potting compounds: under-cured resins outgas dramatically more than fully cured ones – curing discipline is contamination control.",
+            "Cable insulation and heat-shrink sleeves: unremarkable per centimetre, but harnesses add up to square metres of polymer surface.",
+            "Tapes, foams, labels and packaging remnants: the classic forgotten items that dominate an otherwise clean setup.",
+            "Lubricants and greases: only vacuum-rated products belong in the chamber; standard greases creep and migrate."
+          ]
+        },
+        {
+          "title": "Mitigation: selection, cleanliness, bake-out",
+          "content": "The order of countermeasures matches the order of leverage. First, select screened, low-outgassing materials where you can. Second, keep hardware clean: fingerprints and machining residues outgas too, so degreasing, lint-free wipes and gloves are part of vacuum practice, not lab theatre. Third, bake out: holding hardware warm under vacuum drives volatiles out under controlled conditions – before they can settle on flight optics or falsify a test.",
+          "content2": "Bake-out temperature and duration are limited by the qualified hardware configuration. Campaigns may use temperatures from moderate levels to around 125 °C, but no generic range replaces a material and component review. Completion should be tied to agreed measurements, such as pressure behaviour, RGA composition or QCM deposition rate, rather than elapsed time alone."
+        },
+        {
+          "title": "Monitoring: QCM and RGA",
+          "content": "A quartz crystal microbalance (QCM) measures deposition directly: a cooled quartz crystal sits where contamination would land, and its resonant frequency drops in proportion to the mass condensing on it. That turns an invisible film into a live rate you can log, trend and write acceptance criteria against – a widely used instrument for bake-out completion and witness monitoring during critical tests.",
+          "content2": "A residual gas analyser (RGA) answers the complementary question: which gas is it? Its mass spectrum separates water from solvents, hydrocarbons and air, so you can tell ordinary drying from a real contamination source or a leak. Together, QCM and RGA turn a vague pressure reading into a diagnosis – which is why both are common options on TVAC chambers."
+        }
+      ],
+      "faq": [
+        {
+          "q": "What is outgassing in a vacuum chamber?",
+          "a": "Outgassing is the release of gas and volatile molecules from materials once pressure is removed: water desorbs from every surface, solvents and plasticisers diffuse out of polymers, and gas permeates through seals. It slows pump-down, limits the achievable pressure and can condense as contaminating films on cold surfaces such as optics and thermal control coatings."
+        },
+        {
+          "q": "What do TML and CVCM mean?",
+          "a": "TML is the total mass loss measured in a standardised vacuum exposure; CVCM is the fraction collected as condensable material on a cooler surface. Frequently used screening limits are TML below 1.0 percent and CVCM below 0.10 percent, but the project may require stricter limits or additional contamination evidence."
+        },
+        {
+          "q": "What is a bake-out and when do I need one?",
+          "a": "A bake-out holds hardware at an approved elevated temperature under vacuum so volatile material is removed before a sensitive integration or test phase. The temperature, duration and completion criterion must follow component limits and the contamination control plan; they are not universal values."
+        },
+        {
+          "q": "How is outgassing measured during a test?",
+          "a": "Three instruments cover it: the pressure trend gives a coarse overall picture, a QCM measures the actual deposition rate on a cooled crystal at a representative position, and an RGA identifies the species – separating harmless residual water from solvents, hydrocarbons or a genuine leak. Bake-out completion is typically defined as a QCM rate falling below an agreed threshold."
+        }
+      ],
+      "conclusion": "Outgassing can be managed when material screening, cleaning, cure status, bake-out and measurement are treated as one contamination-control process. TML and CVCM support material selection, while QCM and RGA provide campaign-specific evidence."
+    },
+    "de": {
+      "title": "Ausgasung im Vakuum: TML, CVCM und Ausheizen erklärt",
+      "description": "Warum Materialien im Vakuum Gas abgeben, wie das ECSS-Screening mit TML und CVCM funktioniert, welche Materialien Probleme machen – und wie Ausheizen, QCM und RGA die Kontamination im Griff halten.",
+      "seoTitle": "Ausgasung im Vakuum: TML, CVCM & Ausheizen | Deepvac",
+      "seoDescription": "Ausgasung im Vakuum erklärt: Physik der Desorption, ECSS-Grenzwerte TML und CVCM, typische Problemmaterialien, Ausheiz-Praxis und QCM/RGA-Monitoring.",
+      "intro": "Ausgasung bezeichnet die Freisetzung adsorbierter oder gelöster Gase und flüchtiger Verbindungen nach einer Druckabsenkung. In einer Thermalvakuumkammer trägt sie zur Gaslast bei und kann kondensierbares Material auf kältere Flächen transportieren. Materialscreening, kontrollierte Aushärtung und Reinigung, Ausheizen, Schwingquarzmessung und Restgasanalyse behandeln unterschiedliche Teile des Problems. ECSS-Q-ST-70-02C und die NASA-Ausgasungsdatenbank liefern etablierte Screeningverfahren und Referenzdaten; verbindlich bleibt der projektspezifische Kontaminationskontrollplan.",
+      "sections": [
+        {
+          "title": "Die Physik: Desorption, Diffusion, Permeation",
+          "content": "Drei Mechanismen speisen Gas in eine Vakuumkammer ein. Desorption setzt die Molekülschichten frei – allen voran Wasser –, die jede Oberfläche an Luft adsorbiert; sie dominiert die ersten Stunden des Abpumpens. Diffusion transportiert gelöste flüchtige Stoffe wie Lösemittelreste, Weichmacher und aufgenommene Feuchte aus dem Inneren von Polymeren an die Oberfläche, wo sie verdampfen; weil der Vorrat tief im Material sitzt, klingt diese Quelle über Tage nur langsam ab. Permeation lässt Gas von außen durch Elastomerdichtungen wandern – wenig, aber dauerhaft.",
+          "content2": "Alle drei Mechanismen sind temperaturabhängig, die Zunahme ist jedoch materialspezifisch und lässt sich nicht durch eine universelle Faustregel beschreiben. Das Ausheizen nutzt diese Abhängigkeit gezielt, indem die Hardware innerhalb qualifizierter Grenzen erwärmt und die freigesetzten Spezies abgepumpt oder aufgefangen werden."
+        },
+        {
+          "title": "Warum Ausgasung im TVAC-Test zählt",
+          "content": "Im Hochvakuum herrscht Molekularströmung: Ausgegaste Moleküle fliegen geradlinig bis zur nächsten Oberfläche – und bleiben bevorzugt dort haften, wo es kalt ist. Daraus folgen ein Druckproblem und ein Kontaminationsproblem.",
+          "bulletsHeading": "Die Konsequenzen",
+          "bullets": [
+            "Drucklast: Ausgasung ist eine kontinuierliche Gasquelle, gegen die der Pumpstand arbeiten muss; ein stark ausgasender Prüfling kann die Kammer um Größenordnungen über ihrem sauberen Basisdruck halten.",
+            "Kondensation auf kalten Flächen: Flüchtige Stoffe wandern zu den kältesten Stellen – im TVAC-Test oft genau die Optiken, Detektoren und Radiatorproben, um die es geht.",
+            "Veränderte Oberflächeneigenschaften: Schon dünne kondensierte Filme verschieben Absorptions- und Emissionsgrad und verfälschen so unbemerkt Thermal-Balance-Ergebnisse.",
+            "Begrenzte Reversibilität: Manche Beläge verdampfen beim Belüften nicht einfach wieder; kontaminierte Optiken nachträglich zu reinigen ist teuer bis unmöglich."
+          ]
+        },
+        {
+          "title": "Materialscreening: TML und CVCM nach ECSS-Q-ST-70-02C",
+          "content": "Materialscreening reduziert das Risiko vor der Integration. Beim verbreiteten Vakuum-Ausgasungstest werden Proben unter Vakuum bei erhöhter Temperatur ausgelagert und kondensierbare Stoffe auf einer kühleren Fläche gesammelt. Das NASA-Referenzverfahren verwendet 125 °C über 24 Stunden mit einem Kollektor bei 25 °C; für die Kampagne sind das anwendbare ECSS-Verfahren und die Projektanforderungen zu prüfen.",
+          "content2": "Verbreitete Screeningkriterien sind TML unter 1,0 Prozent und CVCM unter 0,10 Prozent. Diese Werte sind Screeninggrenzen, keine universelle Sauberkeitsgarantie. Optische oder anderweitig kontaminationsempfindliche Programme können niedrigere Projektgrenzen, zusätzliche Zeugenmessungen oder Einschränkungen für bestimmte Materialgruppen verlangen."
+        },
+        {
+          "title": "Typische Problemkandidaten im Prüfling",
+          "content": "Die meisten Kontaminationsbefunde führen auf eine vertraute Riege von Materialien zurück – und auf die Stellen, an die niemand gedacht hat.",
+          "bulletsHeading": "Darauf sollten Sie achten",
+          "bullets": [
+            "Kunststoffe und 3D-gedruckte Teile: aufgenommene Feuchte plus Restmonomere und Weichmacher, oft mit großer poröser Oberfläche.",
+            "Klebstoffe und Vergussmassen: Unvollständig ausgehärtete Harze gasen drastisch stärker aus als vollständig vernetzte – Aushärtedisziplin ist Kontaminationskontrolle.",
+            "Kabelisolierungen und Schrumpfschläuche: pro Zentimeter unauffällig, doch Kabelbäume summieren sich zu Quadratmetern Polymeroberfläche.",
+            "Klebebänder, Schäume, Etiketten und Verpackungsreste: die klassischen vergessenen Teile, die einen sonst sauberen Aufbau dominieren.",
+            "Schmierstoffe und Fette: In die Kammer gehören nur vakuumtaugliche Produkte; Standardfette kriechen und wandern."
+          ]
+        },
+        {
+          "title": "Gegenmaßnahmen: Auswahl, Sauberkeit, Ausheizen",
+          "content": "Die Reihenfolge der Gegenmaßnahmen entspricht ihrer Hebelwirkung. Erstens: Wo möglich, gescreente, ausgasungsarme Materialien wählen. Zweitens: Hardware sauber halten – auch Fingerabdrücke und Bearbeitungsrückstände gasen aus; Entfetten, fusselfreie Tücher und Handschuhe sind Vakuumpraxis, kein Labortheater. Drittens: Ausheizen – die Hardware wird warm unter Vakuum gehalten, damit flüchtige Stoffe unter kontrollierten Bedingungen entweichen, bevor sie sich auf Flugoptiken niederschlagen oder einen Test verfälschen.",
+          "content2": "Temperatur und Dauer des Ausheizens werden durch die qualifizierte Hardwarekonfiguration begrenzt. Kampagnen können von moderaten Temperaturen bis etwa 125 °C reichen; eine allgemeine Spanne ersetzt jedoch keine Werkstoff- und Komponentenprüfung. Der Abschluss sollte an vereinbarte Messgrößen wie Druckverlauf, RGA-Zusammensetzung oder QCM-Abscheiderate gekoppelt werden, nicht nur an die Zeit."
+        },
+        {
+          "title": "Überwachung: QCM und RGA",
+          "content": "Ein Schwingquarz-Monitor (QCM) misst Abscheidung direkt: Ein gekühlter Quarz sitzt dort, wo Kontamination landen würde, und seine Resonanzfrequenz sinkt proportional zur kondensierenden Masse. Das macht aus einem unsichtbaren Film eine live mitgeschriebene Rate, gegen die sich Abnahmekriterien formulieren lassen – ein verbreitetes Instrument für den Ausheiz-Abschluss und für Witness-Monitoring in kritischen Tests.",
+          "content2": "Die Restgasanalyse (RGA) beantwortet die komplementäre Frage: Welches Gas ist es? Ihr Massenspektrum trennt Wasser von Lösemitteln, Kohlenwasserstoffen und Luft – so unterscheiden Sie gewöhnliches Trocknen von einer echten Kontaminationsquelle oder einem Leck. Zusammen machen QCM und RGA aus einer vagen Druckanzeige eine Diagnose – deshalb gehören beide zu den gängigen Optionen an TVAC-Kammern."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Was ist Ausgasung in einer Vakuumkammer?",
+          "a": "Ausgasung ist die Abgabe von Gasen und flüchtigen Stoffen aus Materialien, sobald der Druck fehlt: Wasser desorbiert von jeder Oberfläche, Lösemittel und Weichmacher diffundieren aus Polymeren, Gas permeiert durch Dichtungen. Sie verlängert das Abpumpen, begrenzt den erreichbaren Druck und kann als kontaminierender Film auf kalten Flächen wie Optiken und Thermalbeschichtungen kondensieren."
+        },
+        {
+          "q": "Was bedeuten TML und CVCM?",
+          "a": "TML ist der Gesamtmasseverlust bei einer standardisierten Vakuumauslagerung; CVCM ist der auf einer kühleren Fläche gesammelte kondensierbare Anteil. Häufig verwendete Screeninggrenzen sind TML unter 1,0 Prozent und CVCM unter 0,10 Prozent. Das Projekt kann strengere Grenzen oder zusätzliche Kontaminationsnachweise verlangen."
+        },
+        {
+          "q": "Was ist ein Bake-out und wann brauche ich ihn?",
+          "a": "Beim Ausheizen wird Hardware unter Vakuum auf einer freigegebenen erhöhten Temperatur gehalten, damit flüchtiges Material vor einer empfindlichen Integrations- oder Prüfphase entfernt wird. Temperatur, Dauer und Abschlusskriterium folgen Komponentenlimits und Kontaminationskontrollplan; universelle Werte gibt es nicht."
+        },
+        {
+          "q": "Wie misst man Ausgasung während eines Tests?",
+          "a": "Drei Instrumente decken es ab: Der Druckverlauf liefert das grobe Gesamtbild, ein QCM misst die tatsächliche Abscheiderate auf einem gekühlten Quarz an repräsentativer Position, und die RGA identifiziert die Spezies – sie trennt harmloses Restwasser von Lösemitteln, Kohlenwasserstoffen oder einem echten Leck. Der Ausheiz-Abschluss wird typischerweise als QCM-Rate unterhalb einer vereinbarten Schwelle definiert."
+        }
+      ],
+      "conclusion": "Ausgasung bleibt beherrschbar, wenn Materialscreening, Reinigung, Aushärtungszustand, Ausheizen und Messung als gemeinsamer Kontaminationsprozess geplant werden. TML und CVCM unterstützen die Materialauswahl, QCM und RGA liefern den Nachweis in der konkreten Kampagne."
+    },
+    "seoKey": "blogOutgassingBasics",
+    "dateModified": "2026-07-23",
+    "searchIntent": {
+      "en": {
+        "primaryKeyword": "outgassing in vacuum",
+        "primaryQuestion": "How are TML, CVCM, bake-out, QCM and RGA used to control outgassing?"
+      },
+      "de": {
+        "primaryKeyword": "Ausgasung im Vakuum",
+        "primaryQuestion": "Wie werden TML, CVCM, Ausheizen, QCM und RGA zur Ausgasungskontrolle eingesetzt?"
+      }
+    },
+    "references": [
+      {
+        "title": "ECSS-Q-ST-70-02C: Thermal vacuum outgassing test for the screening of space materials",
+        "publisher": "European Cooperation for Space Standardization (ECSS)",
+        "url": "https://ecss.nl/standard/ecss-q-st-70-02c-thermal-vacuum-outgassing-test-for-the-screening-of-space-materials/"
+      },
+      {
+        "title": "Outgassing Data for Selecting Spacecraft Materials: Test description",
+        "publisher": "NASA",
+        "url": "https://outgassing.nasa.gov/Description"
+      },
+      {
+        "title": "Outgassing properties of vacuum materials for particle accelerators",
+        "publisher": "CERN",
+        "url": "https://cds.cern.ch/record/2723690"
+      }
+    ]
+  },
+  {
+    "articleKey": "leakDetectionBasics",
+    "enSlug": "helium-leak-testing-tvac",
+    "deSlug": "helium-lecktest-tvac",
+    "category": "engineeringGuide",
+    "datePublished": "2025-04-16",
+    "relatedPaths": [
+      "/products/options/helium-leak-test",
+      "/services/maintenance-repair",
+      "/products/options/process-connections"
+    ],
+    "relatedArticles": [
+      "vacuumLevelsExplained",
+      "pumpingSystemSelection",
+      "usedVsNewTvac"
+    ],
+    "en": {
+      "title": "Helium Leak Testing for TVAC Chambers: Methods, Units, Practice",
+      "description": "How helium leak detection works, what leak rates in mbar·l/s actually mean, how virtual leaks differ from real ones – and when a chamber should be tested.",
+      "seoTitle": "Helium Leak Testing of Vacuum Chambers | Deepvac",
+      "seoDescription": "How helium leak detection works: vacuum vs sniffer method, what leak rates in mbar·l/s mean in practice, virtual leaks, and when to test a TVAC chamber.",
+      "intro": "Helium tracer-gas testing is widely used to locate and quantify leaks in vacuum systems. A mass-spectrometer leak detector responds selectively to helium and reports a gas flow or throughput, provided the detector is calibrated and the test method is defined. ISO 20485 describes tracer-gas techniques and ISO 20486 addresses reference-leak calibration. This article explains vacuum, sniffer and integral methods, the meaning of leak-rate units, virtual leaks and practical test planning.",
+      "sections": [
+        {
+          "title": "Leak-tightness is a system property",
+          "content": "A chamber reaches equilibrium when effective pumping speed balances the total gas load from outgassing, permeation and real leaks. Excess leakage limits the achievable pressure and admits air and moisture that can condense on cold surfaces and interfere with contamination-sensitive tests. Any stated working pressure therefore assumes a compatible total gas load and verified integrity of the vessel, seals, feedthroughs and connected circuits.",
+          "content2": "There is also a safety dimension: LN₂ and GN₂ circuits are pressure-bearing systems inside or around the chamber. A leaking cryogenic line releases nitrogen into the chamber or the room – enrichment in an enclosed space is an asphyxiation hazard, which is why cryogenic circuits are leak-tested in their own right."
+        },
+        {
+          "title": "How helium mass spectrometer leak detection works",
+          "content": "Helium is suitable as a tracer because it is inert, does not readily condense at normal leak-test conditions and has a low background concentration in air. A mass-spectrometer leak detector ionises the incoming gas, separates mass 4 and compares the signal with a calibrated reference. The usable detection limit and response time depend on the detector, test volume, pumping path, background and selected method.",
+          "bullets": [
+            "Calibrate the detector with a reference leak whose value and uncertainty are traceable for the intended range.",
+            "Allow the measured volume and pumping path to determine response and clearing time before moving to the next joint.",
+            "Record background, test pressure, tracer application and detector settings together with the reported leak rate.",
+            "Use a method-specific acceptance value derived from the total allowable gas load and system safety requirements."
+          ]
+        },
+        {
+          "title": "Vacuum (spray) method vs sniffer method",
+          "content": "In the vacuum method, the chamber is evacuated with the detector connected to the pumping line, and helium is sprayed from outside onto welds, flanges and feedthroughs one by one. It is the most sensitive approach and localizes leaks precisely; enclosing the whole chamber or single joints in a helium-filled envelope turns it into an integral test with a single overall number.",
+          "content2": "The sniffer method reverses the direction: a positively pressurised circuit is filled with tracer gas and sampled externally. It is appropriate for operating circuits such as nitrogen or cooling-water lines, but its achievable sensitivity depends strongly on ambient helium background, probe handling and gas distribution. It should not be assigned one universal detection limit.",
+          "bullets": [
+            "Vacuum method: high sensitivity and localised testing of the chamber shell, flanges and feedthroughs.",
+            "Sniffer method: testing of positively pressurised circuits under controlled tracer concentration and ventilation.",
+            "Integral enclosure method: one overall result for a component or chamber, with less localisation information.",
+            "Use helium sparingly and control room background so previous applications do not mask later measurements."
+          ]
+        },
+        {
+          "title": "What leak rates in mbar·l/s actually mean",
+          "content": "A leak rate in mbar·l/s is a pressure-volume throughput referenced to stated conditions. The numerical value must be interpreted together with gas species, temperature, test pressure and calibration convention. Conversion to molar flow can avoid ambiguity when results from different laboratories or unit systems are compared.",
+          "content2": "Acceptance is system-specific. The allowable integral leak rate follows from the target pressure, installed effective pumping speed, contamination budget, hold-time requirement and any separate limits for pressurised or cryogenic circuits. A generic joint-level number should not replace that gas-load calculation."
+        },
+        {
+          "title": "Virtual leaks vs real leaks",
+          "content": "Not every leak-like symptom is a path to atmosphere. Virtual leaks are trapped volumes inside the vacuum – blind tapped holes under screws, double weld seams, unvented O-ring grooves – that release gas slowly and mimic a real leak in the pressure curve. A helium spray test shows nothing, because there is no path from outside.",
+          "bulletsHeading": "Telling them apart",
+          "bullets": [
+            "Rate-of-rise signature: real leaks produce a linear pressure rise, trapped volumes and outgassing flatten over time.",
+            "Residual gas analysis: an air-like nitrogen–oxygen signature points to a real leak, dominant water vapour to outgassing.",
+            "Helium response: a real leak answers to spray within the response time; a virtual leak stays silent.",
+            "Prevention is design: vented screws, relief bores, continuous inside welds and vented seal grooves avoid trapped volumes."
+          ]
+        },
+        {
+          "title": "When to test – and designing for testability",
+          "content": "Leak testing is not a one-off acceptance step but a lifecycle instrument. It belongs after manufacturing and first assembly, after every intervention that opens seals or exchanges feedthroughs, at periodic maintenance intervals, and after transport or relocation, where settling and handling loads work on flanges. A recorded baseline for each joint makes later comparisons meaningful.",
+          "content2": "Testability is a design property: accessible flange positions, a dedicated test port for the detector, helium access to double-seal interspaces and enough clearance to bag individual joints all decide whether a leak check takes an hour or a day. Deepvac offers helium leak testing as a factory option and as part of maintenance and repair service."
+        }
+      ],
+      "faq": [
+        {
+          "q": "What is an acceptable leak rate for a vacuum chamber?",
+          "a": "There is no universal acceptable value. The limit should be derived from target pressure, effective pumping speed, permitted gas load, hold time, cleanliness requirements and the applicable test method. Pressurised nitrogen, water or cryogenic circuits need separate safety-related acceptance criteria."
+        },
+        {
+          "q": "How does helium leak testing work?",
+          "a": "A mass spectrometer tuned to helium (mass 4) is connected to the evacuated chamber, and helium is sprayed onto welds, flanges and feedthroughs from outside. Wherever a real leak path exists, helium enters and is reported quantitatively as a leak rate in mbar·l/s after the method-specific response time. For pressurized circuits the direction reverses: the circuit is filled with helium and a sniffer probe samples the outside."
+        },
+        {
+          "q": "What is a virtual leak?",
+          "a": "A virtual leak is a trapped volume inside the vacuum – a blind tapped hole, a double weld seam, an unvented seal groove – that releases gas slowly and imitates a real leak in the pressure curve. Helium spray shows nothing because no path to atmosphere exists. Rate-of-rise behaviour and residual gas analysis distinguish the two; vented screws and relief bores prevent the problem by design."
+        },
+        {
+          "q": "How often should a TVAC chamber be leak-checked?",
+          "a": "At defined events rather than a fixed calendar alone: after initial assembly, after any seal change or feedthrough work, after transport or relocation, and as part of periodic maintenance – often annually for chambers in regular campaign use. Keeping a documented baseline per joint turns each later check into a quick comparison instead of a full investigation."
+        }
+      ],
+      "conclusion": "Leak testing is most useful when acceptance limits, calibration, response time and test method are defined for the specific system. Helium testing finds real paths to atmosphere; rate-of-rise analysis and residual-gas data help separate those paths from outgassing and trapped volumes."
+    },
+    "de": {
+      "title": "Helium-Lecktest an TVAC-Kammern: Methoden, Einheiten, Praxis",
+      "description": "Wie Helium-Lecksuche funktioniert, was Leckraten in mbar·l/s praktisch bedeuten, wie sich virtuelle von echten Lecks unterscheiden – und wann geprüft werden sollte.",
+      "seoTitle": "Helium-Lecktest an Vakuumkammern | Deepvac",
+      "seoDescription": "So funktioniert der Helium-Lecktest: Vakuum- vs. Schnüffelmethode, was Leckraten in mbar·l/s praktisch bedeuten, virtuelle Lecks – und wann geprüft wird.",
+      "intro": "Die Helium-Prüfgasmethode wird häufig eingesetzt, um Lecks in Vakuumsystemen zu lokalisieren und zu quantifizieren. Ein Massenspektrometer-Lecksuchgerät reagiert selektiv auf Helium und gibt einen Gasfluss beziehungsweise Durchsatz aus, sofern das Gerät kalibriert und die Prüfmethode definiert ist. ISO 20485 beschreibt Prüfgasverfahren, ISO 20486 die Kalibrierung von Referenzlecks. Dieser Artikel behandelt Vakuum-, Schnüffel- und Integralmethoden, Leckrateneinheiten, virtuelle Lecks und die Prüfplanung.",
+      "sections": [
+        {
+          "title": "Dichtheit ist eine Systemeigenschaft",
+          "content": "Eine Kammer erreicht ihren Gleichgewichtsdruck, wenn das effektive Saugvermögen die gesamte Gaslast aus Ausgasung, Permeation und realen Lecks ausgleicht. Zu hohe Leckage begrenzt den erreichbaren Druck und trägt Luft sowie Feuchte ein, die an kalten Flächen kondensieren und kontaminationsempfindliche Tests stören können. Jede Angabe zum Arbeitsdruck setzt deshalb eine kompatible Gesamtgaslast sowie die nachgewiesene Dichtheit von Behälter, Dichtungen, Durchführungen und angeschlossenen Kreisen voraus.",
+          "content2": "Hinzu kommt die Sicherheitsdimension: LN₂- und GN₂-Kreise sind druckführende Systeme in oder an der Kammer. Eine undichte Kryoleitung setzt Stickstoff in Kammer oder Raum frei – Anreicherung in geschlossenen Räumen ist ein Erstickungsrisiko, weshalb Kryokreise eigenständig auf Dichtheit geprüft werden."
+        },
+        {
+          "title": "So funktioniert die Helium-Lecksuche mit Massenspektrometer",
+          "content": "Helium eignet sich als Prüfgas, weil es inert ist, unter üblichen Lecktestbedingungen kaum kondensiert und in Luft nur in geringer Konzentration vorkommt. Ein Massenspektrometer-Lecksuchgerät ionisiert das einströmende Gas, trennt Masse 4 und vergleicht das Signal mit einer kalibrierten Referenz. Nachweisgrenze und Ansprechzeit hängen von Gerät, Prüfvolumen, Pumpweg, Untergrund und Methode ab.",
+          "bullets": [
+            "Das Lecksuchgerät mit einem Referenzleck kalibrieren, dessen Wert und Unsicherheit für den vorgesehenen Bereich rückführbar sind.",
+            "Ansprech- und Ausspülzeit aus Prüfvolumen und Pumpweg ableiten, bevor zur nächsten Verbindung gewechselt wird.",
+            "Untergrund, Prüfdruck, Heliumaufgabe und Geräteeinstellungen zusammen mit der gemessenen Leckrate dokumentieren.",
+            "Einen methodenspezifischen Abnahmewert aus zulässiger Gesamtgaslast und Sicherheitsanforderungen ableiten."
+          ]
+        },
+        {
+          "title": "Vakuummethode (Sprühen) vs. Schnüffelmethode",
+          "content": "Bei der Vakuummethode ist die Kammer evakuiert, das Lecksuchgerät hängt an der Pumpleitung, und Helium wird von außen gezielt auf Schweißnähte, Flansche und Durchführungen gesprüht. Das ist der empfindlichste Ansatz und lokalisiert Lecks präzise; wird die ganze Kammer oder eine einzelne Verbindung mit einer heliumgefüllten Hülle umschlossen, entsteht daraus ein Integraltest mit einem Gesamtwert.",
+          "content2": "Die Schnüffelmethode kehrt die Richtung um: Ein druckführender Kreis wird mit Prüfgas beaufschlagt und außen abgetastet. Sie eignet sich für Betriebskreise wie Stickstoff- oder Kühlwasserleitungen, ihre erreichbare Empfindlichkeit hängt jedoch stark von Heliumuntergrund, Sondenführung und Gasverteilung ab. Eine universelle Nachweisgrenze ist nicht sinnvoll.",
+          "bullets": [
+            "Vakuummethode: hohe Empfindlichkeit und lokale Prüfung von Kammerhülle, Flanschen und Durchführungen.",
+            "Schnüffelmethode: Prüfung druckführender Kreise bei kontrollierter Prüfgaskonzentration und Lüftung.",
+            "Integrale Hüllenmethode: ein Gesamtwert für Bauteil oder Kammer, mit geringerer Information zur Leckposition.",
+            "Helium sparsam einsetzen und den Raumuntergrund kontrollieren, damit frühere Aufgaben spätere Messungen nicht überdecken."
+          ]
+        },
+        {
+          "title": "Was Leckraten in mbar·l/s praktisch bedeuten",
+          "content": "Eine Leckrate in mbar·l/s ist ein Druck-Volumen-Durchsatz unter angegebenen Bezugsbedingungen. Der Zahlenwert muss zusammen mit Gasart, Temperatur, Prüfdruck und Kalibrierkonvention interpretiert werden. Für Vergleiche zwischen Laboren oder Einheitensystemen kann die Umrechnung in einen molaren Fluss Mehrdeutigkeiten vermeiden.",
+          "content2": "Die Abnahmegrenze ist systemspezifisch. Die zulässige integrale Leckrate folgt aus Zieldruck, effektivem Saugvermögen, Kontaminationsbudget, Haltezeit und getrennten Grenzen für druckführende oder kryogene Kreise. Eine pauschale Zahl je Verbindung ersetzt diese Gaslastrechnung nicht."
+        },
+        {
+          "title": "Virtuelle Lecks vs. echte Lecks",
+          "content": "Nicht jedes leckartige Symptom ist ein Pfad zur Atmosphäre. Virtuelle Lecks sind eingeschlossene Volumina im Vakuum – Sacklochgewinde unter Schrauben, doppelte Schweißnähte, nicht entlüftete O-Ring-Nuten –, die Gas langsam abgeben und in der Druckkurve ein echtes Leck imitieren. Ein Helium-Sprühtest zeigt nichts, weil kein Weg von außen existiert.",
+          "bulletsHeading": "So unterscheiden Sie beide",
+          "bullets": [
+            "Druckanstiegssignatur: Echte Lecks erzeugen einen linearen Anstieg, eingeschlossene Volumina und Ausgasung flachen mit der Zeit ab.",
+            "Restgasanalyse: Eine luftartige Stickstoff–Sauerstoff-Signatur deutet auf ein echtes Leck, dominierender Wasserdampf auf Ausgasung.",
+            "Heliumantwort: Ein echtes Leck reagiert innerhalb der Ansprechzeit auf das Sprühen – ein virtuelles bleibt stumm.",
+            "Vorbeugen heißt konstruieren: entlüftete Schrauben, Entlastungsbohrungen, durchgehende Innennähte und entlüftete Dichtnuten vermeiden eingeschlossene Volumina."
+          ]
+        },
+        {
+          "title": "Wann geprüft wird – und wie man prüfgerecht konstruiert",
+          "content": "Der Lecktest ist kein einmaliger Abnahmeschritt, sondern ein Instrument über den Lebenszyklus. Er gehört hinter Fertigung und Erstmontage, hinter jeden Eingriff, der Dichtungen öffnet oder Durchführungen tauscht, in periodische Wartungsintervalle sowie hinter Transport oder Umzug, wo Setz- und Handhabungslasten an den Flanschen arbeiten. Eine dokumentierte Baseline je Verbindung macht spätere Vergleiche aussagekräftig.",
+          "content2": "Prüfbarkeit ist eine Konstruktionseigenschaft: zugängliche Flanschpositionen, ein eigener Testport für das Lecksuchgerät, Heliumzugang zu Zwischenräumen von Doppeldichtungen und genug Freiraum, um einzelne Verbindungen einzuhausen, entscheiden, ob eine Leckprüfung eine Stunde dauert oder einen Tag. Deepvac bietet den Helium-Lecktest als Werksoption und als Teil von Wartung und Instandsetzung an."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Welche Leckrate ist für eine Vakuumkammer akzeptabel?",
+          "a": "Es gibt keinen universellen Abnahmewert. Die Grenze sollte aus Zieldruck, effektivem Saugvermögen, zulässiger Gaslast, Haltezeit, Sauberkeitsanforderung und Prüfmethode abgeleitet werden. Druckführende Stickstoff-, Wasser- oder Kryokreise benötigen eigene sicherheitsbezogene Abnahmekriterien."
+        },
+        {
+          "q": "Wie funktioniert ein Helium-Lecktest?",
+          "a": "Ein auf Helium (Masse 4) abgestimmtes Massenspektrometer wird an die evakuierte Kammer angeschlossen, und Helium wird von außen auf Schweißnähte, Flansche und Durchführungen gesprüht. Wo ein echter Leckpfad existiert, tritt Helium ein und wird nach der methodenspezifischen Ansprechzeit quantitativ als Leckrate in mbar·l/s angezeigt. Bei druckführenden Kreisen kehrt sich die Richtung um: Der Kreis wird mit Helium befüllt, eine Schnüffelsonde tastet die Außenseite ab."
+        },
+        {
+          "q": "Was ist ein virtuelles Leck?",
+          "a": "Ein virtuelles Leck ist ein eingeschlossenes Volumen im Vakuum – ein Sacklochgewinde, eine doppelte Schweißnaht, eine nicht entlüftete Dichtnut –, das Gas langsam abgibt und in der Druckkurve ein echtes Leck imitiert. Heliumsprühen zeigt nichts, weil kein Pfad zur Atmosphäre existiert. Druckanstiegsverhalten und Restgasanalyse unterscheiden beide; entlüftete Schrauben und Entlastungsbohrungen vermeiden das Problem konstruktiv."
+        },
+        {
+          "q": "Wie oft sollte eine TVAC-Kammer auf Lecks geprüft werden?",
+          "a": "An definierten Ereignissen statt allein nach Kalender: nach der Erstmontage, nach jedem Dichtungswechsel oder Arbeiten an Durchführungen, nach Transport oder Umzug und im Rahmen der periodischen Wartung – bei Kammern im regelmäßigen Kampagnenbetrieb oft jährlich. Eine dokumentierte Baseline je Verbindung macht aus jeder späteren Prüfung einen schnellen Vergleich statt einer aufwendigen Suche."
+        }
+      ],
+      "conclusion": "Ein Lecktest ist besonders aussagekräftig, wenn Grenzwert, Kalibrierung, Ansprechzeit und Prüfmethode für das konkrete System festgelegt sind. Helium zeigt reale Pfade zur Atmosphäre; Druckanstieg und Restgasdaten helfen, diese von Ausgasung und eingeschlossenen Volumina zu unterscheiden."
+    },
+    "seoKey": "blogLeakDetectionBasics",
+    "dateModified": "2026-07-23",
+    "searchIntent": {
+      "en": {
+        "primaryKeyword": "helium leak testing vacuum chamber",
+        "primaryQuestion": "How is a TVAC chamber leak-tested and how should leak rates be interpreted?"
+      },
+      "de": {
+        "primaryKeyword": "Helium-Lecktest Vakuumkammer",
+        "primaryQuestion": "Wie wird eine TVAC-Kammer auf Lecks geprüft und wie sind Leckraten zu bewerten?"
+      }
+    },
+    "references": [
+      {
+        "title": "ISO 20485:2017: Non-destructive testing, Leak testing, Tracer gas method",
+        "publisher": "International Organization for Standardization (ISO)",
+        "url": "https://www.iso.org/standard/68190.html"
+      },
+      {
+        "title": "ISO 20486:2017: Calibration of reference leaks for gases",
+        "publisher": "International Organization for Standardization (ISO)",
+        "url": "https://www.iso.org/standard/68191.html"
+      },
+      {
+        "title": "Leak Artifacts and Vacuum Leak Primary Standard",
+        "publisher": "National Institute of Standards and Technology (NIST)",
+        "url": "https://www.nist.gov/laboratories/tools-instruments/leak-artifacts"
+      },
+      {
+        "title": "CERN Accelerator School: Vacuum Technology",
+        "publisher": "CERN",
+        "url": "https://cds.cern.ch/record/402784"
+      }
+    ]
+  },
+  {
+    "articleKey": "spaceEnvironmentSimulation",
+    "enSlug": "space-environment-simulation",
+    "deSlug": "weltraumumgebung-simulieren",
+    "category": "basics",
+    "datePublished": "2025-05-08",
+    "relatedPaths": [
+      "/products/options/solar-simulator",
+      "/products/options/infrared-heaters",
+      "/products/custom-tvac"
+    ],
+    "relatedArticles": [
+      "solarSimulationVsIr",
+      "cryoShroudsThermalPlates",
+      "whatIsTvacTesting"
+    ],
+    "en": {
+      "title": "Space Environment Simulation: Recreating Orbit on the Ground",
+      "description": "Vacuum, a 3 K cold sink, 1361 W/m² of sunlight: what the thermal space environment does to hardware, how TVAC chambers replicate each element – and what no chamber can do.",
+      "seoTitle": "Space Environment Simulation in TVAC Chambers | Deepvac",
+      "seoDescription": "How space simulation chambers recreate vacuum, the 3 K cold sink, solar flux and eclipses – and which parts of the space environment stay out of reach.",
+      "intro": "Spacecraft thermal design is driven by vacuum, radiative exchange with a very cold background, direct and reflected solar radiation, planetary infrared emission and changing orbital attitude. At Earth's distance, measured total solar irradiance is about 1361 W/m² and varies over time. A space-environment chamber reproduces selected thermal boundary conditions on the ground; the test plan must state which orbital cases are simulated directly and which are covered by analysis and margin.",
+      "sections": [
+        {
+          "title": "The thermal space environment in numbers",
+          "content": "The relevant values depend on orbit, attitude, season, solar activity, surface properties and mission phase. The figures below are orientation values for thermal analysis, not a universal chamber profile.",
+          "bulletsHeading": "What orbit delivers",
+          "bullets": [
+            "Vacuum: low-Earth-orbit density varies with altitude and solar activity; for thermal testing the key question is when residual-gas heat transfer becomes negligible for the test geometry.",
+            "Deep-space background: approximately 3 K, represented thermally by a much warmer but sufficiently cold, high-emissivity shroud.",
+            "Solar irradiance: approximately 1361 W/m² at Earth's distance, with measurable temporal variation.",
+            "Albedo and planetary infrared: orbit- and attitude-dependent inputs for Earth-facing surfaces.",
+            "Eclipse and attitude changes: time-dependent boundary conditions whose duration and frequency come from the mission orbit analysis."
+          ]
+        },
+        {
+          "title": "What this environment does to hardware",
+          "content": "Without convective cooling, surface temperatures follow the balance of absorbed radiation, emitted radiation, internal dissipation and conductive interfaces. Large hot-to-cold gradients can occur across one structure, while the time response depends on thermal mass and conductance. The chamber profile should reproduce bounding thermal cases or model-correlation cases, not an assumed generic orbit.",
+          "content2": "Internally, dissipating electronics depend entirely on conductive paths and radiators. A thermal design verified only under air – where convection quietly helped – can therefore fail in orbit at nominally identical power levels."
+        },
+        {
+          "title": "The cold sink: LN₂-cooled shrouds",
+          "content": "The chamber's radiative sink is a cooled, high-emissivity shroud around the test item. LN₂-cooled systems commonly operate near 77 to 93 K depending on circuit and load. Although this is warmer than deep space, the radiative return from a 93 K surface is about one percent of that from a 293 K surface before emissivity and view-factor effects are included. Coverage, uniformity and warm openings therefore matter at least as much as the minimum temperature.",
+          "content2": "What matters more than the last few kelvin is coverage: every warm gap – door frame, port, harness opening – is a window that locally distorts the radiative balance. Uniform, high-emissivity, well-covering shrouds are therefore the backbone of credible space simulation."
+        },
+        {
+          "title": "Heat inputs: solar simulators, IR and heater plates",
+          "content": "Sun and planet are replicated by adding energy, and there is a hierarchy of fidelity and effort.",
+          "bulletsHeading": "The common methods",
+          "bullets": [
+            "Solar simulators: lamp-based systems that approximate the solar spectrum, intensity and direction – the most realistic option and the most complex, used where spectral response and shadowing genuinely matter.",
+            "Infrared heaters and lamp arrays: reproduce the absorbed heat flux rather than the solar spectrum – far simpler, and accurate enough whenever the surface absorptivity is known.",
+            "Heater plates and skin heaters: inject defined power directly into structures – the precise choice for thermal balance testing, where known boundary conditions beat visual realism.",
+            "Temperature-controlled shroud zones: warm sections of the enclosure emulate planetary infrared or the temperatures of neighbouring structures."
+          ]
+        },
+        {
+          "title": "What a chamber cannot replicate",
+          "content": "A TVAC chamber reproduces selected thermal and vacuum conditions, not the complete space environment. Gravity remains present, so fluids, heat pipes and deployment mechanisms may need orientation controls or off-loading. Ionising radiation, ultraviolet exposure, atomic oxygen and impact environments require separate facilities or analysis. Combined environments are used only where the verification strategy and facility capability justify them.",
+          "content2": "Engineers close these gaps deliberately: thermal models validated by balance testing extrapolate to flight attitudes that gravity distorts on the ground; radiation and materials effects are covered by dedicated tests and heritage data; and the margins of the applicable standard absorb the residual uncertainty. The chamber does not need to be space – it needs to make the thermal case airtight."
+        },
+        {
+          "title": "Choosing the simulation depth you need",
+          "content": "Simulation depth should follow the verification logic. Unit-level tests often use controlled shroud and interface temperatures; infrared sources, skin heaters or solar simulators are added when external flux, direction or spectrum affects the requirement. The selected method should have calibrated boundary conditions and uncertainties that can be represented in the thermal model.",
+          "content2": "The practical approach is to specify the environment your verification logic requires, not the most spectacular one: sink temperature, heat inputs, their uniformity and control accuracy. Standard chambers cover the shroud-and-plate cases; custom systems integrate solar simulation, IR arrays or multi-zone thermal environments where the mission demands them."
+        }
+      ],
+      "faq": [
+        {
+          "q": "What is a space simulation chamber?",
+          "a": "A space-environment chamber is a vacuum facility with controlled radiative and conductive thermal boundaries. Depending on the verification objective it may include a cooled shroud, thermal plate, infrared sources or a solar simulator. It reproduces selected thermal conditions of orbit, not microgravity, radiation or every space-environment effect."
+        },
+        {
+          "q": "How do chambers simulate the cold of space?",
+          "a": "With a high-emissivity shroud cooled well below the test-item temperature, commonly by a nitrogen-based thermal system. The required shroud temperature, coverage and uniformity are derived from the thermal model and the verification case. Radiative coverage and calibrated boundary conditions usually matter more than pursuing the lowest possible temperature."
+        },
+        {
+          "q": "What solar flux is used in space simulation?",
+          "a": "A common reference near Earth is total solar irradiance of about 1361 W/m². The applied value for a test case depends on mission geometry, Earth–Sun distance, solar activity, margin policy and whether the facility reproduces spectrum or only absorbed heat flux. Hot and cold bounding cases should come from the programme thermal analysis."
+        },
+        {
+          "q": "Can a vacuum chamber simulate microgravity or radiation?",
+          "a": "No. Gravity cannot be switched off in a chamber, so fluid behaviour and deployments are handled with orientation choices, offloading rigs and analysis. Ionising radiation, UV and atomic oxygen require dedicated facilities and are covered by separate tests and materials data. The TVAC chamber's job is the thermal environment; the rest of the space environment is verified elsewhere."
+        }
+      ],
+      "conclusion": "A TVAC chamber reproduces the thermal boundary conditions that matter most for verification: vacuum, a controlled radiative sink and defined heat inputs. Gravity, radiation and other environmental effects require separate analysis or testing, so the verification plan must state which uncertainties are covered by test and which by model or margin."
+    },
+    "de": {
+      "title": "Weltraumumgebung simulieren: Orbit-Bedingungen am Boden",
+      "description": "Vakuum, 3 K Kältesenke, 1361 W/m² Sonnenlicht: was die thermische Weltraumumgebung mit Hardware macht, wie TVAC-Kammern jedes Element nachbilden – und was keine Kammer kann.",
+      "seoTitle": "Weltraumsimulation: Kammern und Methoden | Deepvac",
+      "seoDescription": "Wie Weltraumsimulationskammern Vakuum, 3 K Kältesenke, Solarfluss und Eklipsen nachbilden – und welche Teile der Weltraumumgebung keine Kammer ersetzt.",
+      "intro": "Das Thermaldesign eines Raumfahrzeugs wird durch Vakuum, Strahlungsaustausch mit einem sehr kalten Hintergrund, direkte und reflektierte Solarstrahlung, planetare Infrarotemission und wechselnde Fluglagen bestimmt. In Erdentfernung liegt die gemessene Gesamt-Solarstrahlung bei etwa 1361 W/m² und verändert sich mit der Zeit. Eine Weltraumsimulationskammer bildet ausgewählte thermische Randbedingungen am Boden nach; der Testplan muss festlegen, welche Orbitfälle direkt simuliert und welche über Analyse und Marge abgedeckt werden.",
+      "sections": [
+        {
+          "title": "Die thermische Weltraumumgebung in Zahlen",
+          "content": "Die relevanten Werte hängen von Orbit, Lage, Jahreszeit, Sonnenaktivität, Oberflächeneigenschaften und Missionsphase ab. Die folgenden Angaben dienen der thermischen Einordnung und stellen kein universelles Kammerprofil dar.",
+          "bulletsHeading": "Was der Orbit liefert",
+          "bullets": [
+            "Vakuum: Die Dichte im niedrigen Erdorbit variiert mit Höhe und Sonnenaktivität; für den Thermaltest ist entscheidend, wann Restgas-Wärmetransport für die Prüfgeometrie vernachlässigbar wird.",
+            "Tiefraumhintergrund: etwa 3 K, thermisch dargestellt durch einen deutlich wärmeren, aber ausreichend kalten und hochemittierenden Shroud.",
+            "Solarstrahlung: etwa 1361 W/m² in Erdentfernung, mit messbarer zeitlicher Variation.",
+            "Albedo und planetares Infrarot: orbit- und lageabhängige Einträge auf erdzugewandte Flächen.",
+            "Eklipsen und Lageänderungen: zeitabhängige Randbedingungen, deren Dauer und Häufigkeit aus der Missions-Orbitanalyse stammen."
+          ]
+        },
+        {
+          "title": "Was diese Umgebung mit Hardware macht",
+          "content": "Ohne konvektive Kühlung folgen Oberflächentemperaturen dem Gleichgewicht aus absorbierter und emittierter Strahlung, interner Verlustleistung und konduktiven Schnittstellen. Über einer Struktur können große Heiß-Kalt-Gradienten entstehen; die zeitliche Reaktion hängt von thermischer Masse und Leitwerten ab. Das Kammerprofil sollte begrenzende Thermal- oder Modellkorrelationsfälle nachbilden, keinen angenommenen Standardorbit.",
+          "content2": "Im Inneren hängen dissipierende Elektroniken vollständig an Wärmeleitpfaden und Radiatoren. Ein Thermaldesign, das nur unter Luft verifiziert wurde – wo Konvektion still mithalf –, kann im Orbit deshalb bei nominell gleicher Leistung versagen."
+        },
+        {
+          "title": "Die Kältesenke: LN₂-gekühlte Shrouds",
+          "content": "Die Strahlungssenke der Kammer ist ein gekühlter, hochemittierender Shroud um den Prüfling. LN₂-gekühlte Systeme arbeiten je nach Kreis und Last häufig im Bereich von etwa 77 bis 93 K. Obwohl das wärmer als der tiefe Weltraum ist, beträgt die Strahlungsrückgabe einer 93-K-Fläche vor Berücksichtigung von Emissionsgrad und Sichtfaktoren nur etwa ein Prozent der einer 293-K-Fläche. Abdeckung, Homogenität und warme Öffnungen sind daher mindestens ebenso wichtig wie die Minimaltemperatur.",
+          "content2": "Wichtiger als die letzten Kelvin ist die Abdeckung: Jede warme Lücke – Türrahmen, Port, Kabelöffnung – ist ein Fenster, das die Strahlungsbilanz lokal verzerrt. Homogene, hochemissive, gut abdeckende Shrouds sind deshalb das Rückgrat glaubwürdiger Weltraumsimulation."
+        },
+        {
+          "title": "Wärmeeinträge: Solarsimulatoren, IR und Heizplatten",
+          "content": "Sonne und Planet werden durch Energiezufuhr nachgebildet – mit einer Hierarchie aus Realitätstreue und Aufwand.",
+          "bulletsHeading": "Die gängigen Methoden",
+          "bullets": [
+            "Solarsimulatoren: lampenbasierte Systeme, die Sonnenspektrum, Intensität und Richtung annähern – die realistischste Option und die aufwendigste, eingesetzt, wo spektrale Empfindlichkeit und Abschattung wirklich zählen.",
+            "Infrarotstrahler und Lampenfelder: reproduzieren den absorbierten Wärmestrom statt des Sonnenspektrums – deutlich einfacher und ausreichend genau, wann immer der Absorptionsgrad der Oberflächen bekannt ist.",
+            "Heizplatten und Folienheizer: speisen definierte Leistung direkt in Strukturen ein – die präzise Wahl für Thermal-Balance-Tests, wo bekannte Randbedingungen visuelle Realitätstreue schlagen.",
+            "Temperierte Shroud-Zonen: warme Abschnitte der Umhüllung bilden planetares Infrarot oder die Temperaturen benachbarter Strukturen nach."
+          ]
+        },
+        {
+          "title": "Was eine Kammer nicht abbilden kann",
+          "content": "Eine TVAC-Kammer bildet ausgewählte Thermal- und Vakuumbedingungen nach, nicht die vollständige Weltraumumgebung. Die Gravitation bleibt erhalten; Fluide, Heatpipes und Entfaltmechanismen können deshalb definierte Orientierungen oder Entlastung benötigen. Ionisierende Strahlung, UV-Exposition, atomarer Sauerstoff und Impaktumgebungen erfordern andere Anlagen oder Analysen. Kombinierte Umgebungen werden nur eingesetzt, wenn Verifikationsstrategie und Anlagenfähigkeit dies rechtfertigen.",
+          "content2": "Ingenieure schließen diese Lücken bewusst: Im Balance-Test validierte Thermalmodelle extrapolieren auf Fluglagen, die die Schwerkraft am Boden verzerrt; Strahlungs- und Materialeffekte decken dedizierte Tests und Heritage-Daten ab; die Margen des anzuwendenden Standards fangen die Restunsicherheit auf. Die Kammer muss nicht der Weltraum sein – sie muss den thermischen Nachweis wasserdicht machen."
+        },
+        {
+          "title": "Die richtige Simulationstiefe wählen",
+          "content": "Die Simulationstiefe sollte der Verifikationslogik folgen. Tests auf Geräteebene verwenden häufig geregelte Shroud- und Schnittstellentemperaturen; Infrarotquellen, Flächenheizer oder Solarsimulatoren kommen hinzu, wenn äußerer Wärmestrom, Richtung oder Spektrum die Anforderung beeinflussen. Die gewählte Methode benötigt kalibrierte Randbedingungen und Unsicherheiten, die im Thermalmodell abgebildet werden können.",
+          "content2": "Der praktische Weg: Spezifizieren Sie die Umgebung, die Ihre Verifikationslogik verlangt, nicht die spektakulärste – Senkentemperatur, Wärmeeinträge, deren Homogenität und Regelgüte. Standardkammern decken die Fälle mit Shroud und Platte ab; kundenspezifische Systeme integrieren Solarsimulation, IR-Felder oder Mehrzonen-Thermalumgebungen, wo die Mission sie fordert."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Was ist eine Weltraumsimulationskammer?",
+          "a": "Eine Weltraumsimulationskammer ist eine Vakuumanlage mit geregelten radiativen und konduktiven thermischen Randbedingungen. Je nach Nachweisziel kann sie einen gekühlten Shroud, eine Thermalplatte, Infrarotquellen oder einen Solarsimulator enthalten. Sie bildet ausgewählte thermische Orbitbedingungen nach, nicht Mikrogravitation, Strahlung oder jeden Weltraumeffekt."
+        },
+        {
+          "q": "Wie simulieren Kammern die Kälte des Weltraums?",
+          "a": "Mit einem hochemittierenden Shroud, der deutlich unter die Prüflingstemperatur gekühlt wird, häufig durch ein stickstoffbasiertes Thermalsystem. Erforderliche Shroud-Temperatur, Abdeckung und Homogenität werden aus Thermalmodell und Verifikationsfall abgeleitet. Strahlungsabdeckung und kalibrierte Randbedingungen sind meist wichtiger als die tiefstmögliche Temperatur."
+        },
+        {
+          "q": "Welcher Solarfluss wird in der Weltraumsimulation verwendet?",
+          "a": "Als Referenz nahe der Erde wird häufig eine totale solare Einstrahlung von etwa 1361 W/m² verwendet. Der konkrete Testwert hängt von Missionsgeometrie, Erde-Sonne-Abstand, Sonnenaktivität, Margenregeln und davon ab, ob die Anlage das Spektrum oder nur den absorbierten Wärmestrom nachbildet. Heiße und kalte Grenzfälle müssen aus der Thermalanalyse des Programms stammen."
+        },
+        {
+          "q": "Kann eine Vakuumkammer Mikrogravitation oder Strahlung simulieren?",
+          "a": "Nein. Die Schwerkraft lässt sich in einer Kammer nicht abschalten; Fluidverhalten und Entfaltungen werden über Orientierungswahl, Entlastungsvorrichtungen und Analyse behandelt. Ionisierende Strahlung, UV und atomarer Sauerstoff erfordern eigene Anlagen und werden durch separate Tests und Materialdaten abgedeckt. Aufgabe der TVAC-Kammer ist die thermische Umgebung; der Rest wird anderswo verifiziert."
+        }
+      ],
+      "conclusion": "Eine TVAC-Kammer bildet die für die thermische Verifikation wichtigsten Randbedingungen nach: Vakuum, eine kontrollierte Strahlungssenke und definierte Wärmeeinträge. Gravitation, Strahlung und weitere Umwelteinflüsse erfordern eigene Analysen oder Prüfungen; der Verifikationsplan muss diese Aufteilung eindeutig festlegen."
+    },
+    "seoKey": "blogSpaceEnvironmentSimulation",
+    "dateModified": "2026-07-23",
+    "searchIntent": {
+      "en": {
+        "primaryKeyword": "space environment simulation chamber",
+        "primaryQuestion": "Which parts of the orbital thermal environment can a TVAC chamber reproduce?"
+      },
+      "de": {
+        "primaryKeyword": "Weltraumsimulationskammer",
+        "primaryQuestion": "Welche Teile der thermischen Orbitumgebung kann eine TVAC-Kammer nachbilden?"
+      }
+    },
+    "references": [
+      {
+        "title": "Solar Irradiance Science",
+        "publisher": "NASA Goddard Space Flight Center",
+        "url": "https://earth.gsfc.nasa.gov/climate/projects/solar-irradiance/science"
+      },
+      {
+        "title": "Space Environment Simulator facility capabilities",
+        "publisher": "NASA Goddard Space Flight Center",
+        "url": "https://etd.gsfc.nasa.gov/capabilities/facilities-listing/space-environment-simulator/"
+      },
+      {
+        "title": "State of the Art of Small Spacecraft Technology, Thermal Control",
+        "publisher": "NASA Small Spacecraft Systems Virtual Institute",
+        "url": "https://www.nasa.gov/smallsat-institute/sst-soa/thermal-control/"
+      }
+    ]
+  },
+  {
+    "articleKey": "tvacTestTypes",
+    "enSlug": "tvac-test-types",
+    "deSlug": "tvac-testarten",
+    "category": "basics",
+    "datePublished": "2025-06-24",
+    "relatedPaths": [
+      "/services/testing-services",
+      "/products/standard-series",
+      "/tvac-questionnaire"
+    ],
+    "relatedArticles": [
+      "whatIsTvacTesting",
+      "aerospaceQualification",
+      "tvacTestCampaign"
+    ],
+    "en": {
+      "title": "TVAC Test Types: From Thermal Cycling to Thermal Balance",
+      "description": "Thermal vacuum cycling, thermal balance, bake-out, starts and soaks: what each TVAC test type verifies, how a typical profile looks and how qualification differs from acceptance.",
+      "seoTitle": "TVAC Test Types: Cycling, Balance, Bake-Out | Deepvac",
+      "seoDescription": "TVAC test types compared: thermal vacuum cycling, thermal balance, bake-out, starts and soaks – goals, typical profiles and qualification vs acceptance.",
+      "intro": "Thermal vacuum campaigns combine several test types with different purposes. Thermal cycling evaluates function and build robustness over repeated transitions; thermal balance provides steady-state data for model correlation; bake-out reduces and measures volatile release; starts and extended dwells verify operation or survival at defined limits. The applicable contract and tailored verification plan determine which elements are required and how they are sequenced.",
+      "sections": [
+        {
+          "title": "The main TVAC test types at a glance",
+          "content": "Five test types cover almost everything that happens in a thermal vacuum chamber. They differ less in equipment than in intent – in which question the test is supposed to answer.",
+          "bulletsHeading": "The five types",
+          "bullets": [
+            "Thermal vacuum cycling: repeated transitions between hot and cold extremes to provoke workmanship defects and demonstrate function across the whole range.",
+            "Thermal balance: defined steady-state cases whose measured temperatures validate and correlate the thermal model.",
+            "Bake-out and outgassing certification: controlled heating under vacuum until contamination rates fall below an agreed threshold.",
+            "Cold start and hot start: demonstrating that hardware switches on at the temperature extremes, not just that it survives them.",
+            "Soaks and functional testing at extremes: extended dwells with full performance verification at the hot and cold plateaus."
+          ]
+        },
+        {
+          "title": "Thermal vacuum cycling: provoking weakness",
+          "content": "Thermal vacuum cycling repeatedly drives the test item between defined hot and cold levels, with dwell phases and functional checks set by the verification plan. Repetition can expose intermittent workmanship and integration faults such as marginal crimps, connector movement, bond degradation or solder-joint defects. Ramp rate is a controlled test parameter: it should come from the programme requirements and remain achievable for the combined chamber, fixture and test-item thermal mass. A faster ramp is not automatically more representative.",
+          "content2": "Cycle count, temperature levels, dwell criteria and operating state come from the programme requirements. ECSS-E-ST-10-03C Rev.1, GSFC-STD-7000B and SMC-S-016 provide different frameworks and all allow project tailoring. No single cycle count is valid for every unit, model philosophy or mission."
+        },
+        {
+          "title": "Thermal balance: validating the thermal model",
+          "content": "Thermal balance answers a different question: not whether the hardware survives, but whether the thermal model tells the truth. The test establishes a small number of well-defined steady-state cases – typically a hot case and a cold case, sometimes a transient – with known boundary conditions: shroud temperature, applied heater powers, interface temperatures. The unit then stabilises until temperature drift falls below a small criterion, often a fraction of a kelvin per hour, and the measured temperature map is compared with the model prediction.",
+          "content2": "Model parameters are adjusted only within a documented correlation process and with physically defensible explanations. Stable, well-measured boundary conditions reduce uncertainty, but no generic chamber stability or uniformity value guarantees successful correlation for every test item."
+        },
+        {
+          "title": "Bake-out and outgassing certification",
+          "content": "The bake-out is the test type that removes something instead of proving something: hardware is held warm under vacuum so volatiles leave before they can condense on flight optics or falsify later measurements. Temperature sits above the maximum operating level but below material limits, and completion is defined by measurement – typically a QCM deposition rate or a pressure trend falling below an agreed threshold. For contamination-critical programmes the same run doubles as outgassing certification, documenting that the unit meets its cleanliness requirement."
+        },
+        {
+          "title": "Starts, soaks and functional testing at extremes",
+          "content": "Three smaller test types round out the family. A cold start demonstrates that a unit switches on at its cold limit – the hardest moment for electronics, lubricants and mechanisms; a hot start does the same at the upper end. Soaks hold the unit at an extreme for an extended period to reveal slow effects such as creep, parameter drift and moisture-driven behaviour. And functional testing at extremes verifies actual performance: full test blocks at the hot and cold plateaus, reduced functional checks during intermediate cycles, continuous housekeeping monitoring throughout."
+        },
+        {
+          "title": "The profile: ramps, dwells and levels",
+          "content": "On paper, almost every campaign is the same drawing: pump-down, an initial hot phase that doubles as a mild bake-out, then a sawtooth of ramps and dwells between the hot and cold levels, and a controlled return to ambient with a dry-gas venting step. Dwells begin when the reference sensor stabilises within a defined band – not when the shroud arrives; that distinction dominates real campaign duration.",
+          "content2": "Test levels and margins are defined by the selected verification approach and project documentation. Qualification, acceptance and protoflight differ in intent, model use, stress and duration, but their exact relationship is not a universal 10 K rule. The tailored verification matrix is the controlling source."
+        }
+      ],
+      "faq": [
+        {
+          "q": "What is the difference between thermal cycling and thermal balance?",
+          "a": "Thermal vacuum cycling stresses hardware by repeatedly driving it between hot and cold extremes; its outputs are pass/fail evidence and exposed workmanship defects. Thermal balance is a measurement test: the unit stabilises in a few precisely defined steady-state cases, and the measured temperatures are used to validate and correlate the thermal model. Campaigns frequently combine both in a single pump-down."
+        },
+        {
+          "q": "How many cycles does a TVAC test include?",
+          "a": "The applicable verification matrix sets the cycle count. Qualification, acceptance and protoflight campaigns use different levels and durations, and each programme may tailor the baseline. A universal number would be misleading."
+        },
+        {
+          "q": "What is a protoflight test?",
+          "a": "Protoflight uses flight hardware to satisfy a combined verification objective when no dedicated qualification model is available. The actual levels, durations and allowed life consumption are project decisions documented in the tailored verification plan."
+        },
+        {
+          "q": "Is hardware operated during a TVAC test?",
+          "a": "Usually yes. Housekeeping data is monitored continuously, reduced functional checks run during intermediate cycles, and full performance tests execute at the hot and cold plateaus. Non-operating phases exist too – survival levels are tested unpowered – and cold or hot starts specifically verify switch-on at the extremes. The functional test plan is as much part of the campaign as the temperature profile."
+        }
+      ],
+      "conclusion": "Cycling, thermal balance, bake-out, starts and soaks answer different verification questions. A defensible campaign links each profile segment to a requirement, a measurement and an acceptance criterion before chamber operation begins."
+    },
+    "de": {
+      "title": "TVAC-Testarten: von Thermalzyklen bis Thermal Balance",
+      "description": "Thermalzyklen, Thermal Balance, Ausheizen, Starts und Soaks: was jede TVAC-Testart nachweist, wie ein typisches Profil aussieht und wie sich Qualifikation und Abnahme unterscheiden.",
+      "seoTitle": "TVAC-Testarten: Zyklen, Balance, Ausheizen | Deepvac",
+      "seoDescription": "TVAC-Testarten im Vergleich: Thermalzyklen, Thermal Balance, Ausheizen, Starts und Soaks – Ziele, typische Profile und Qualifikation vs. Abnahme.",
+      "intro": "Thermalvakuum-Kampagnen kombinieren mehrere Testarten mit unterschiedlichen Zielen. Thermalzyklen bewerten Funktion und Fertigungsrobustheit über wiederholte Übergänge; Thermal Balance liefert stationäre Daten für die Modellkorrelation; Ausheizen reduziert und misst flüchtige Freisetzungen; Starts und verlängerte Haltephasen verifizieren Betrieb oder Überleben an definierten Grenzen. Vertrag und getailorter Verifikationsplan bestimmen, welche Elemente erforderlich sind und wie sie sequenziert werden.",
+      "sections": [
+        {
+          "title": "Die wichtigsten TVAC-Testarten im Überblick",
+          "content": "Fünf Testarten decken nahezu alles ab, was in einer Thermalvakuumkammer stattfindet. Sie unterscheiden sich weniger in der Ausrüstung als in der Absicht – also darin, welche Frage der Test beantworten soll.",
+          "bulletsHeading": "Die fünf Testarten",
+          "bullets": [
+            "Thermalzyklen: wiederholte Übergänge zwischen heißen und kalten Extremwerten, um Fertigungsfehler zu provozieren und Funktion über den gesamten Bereich nachzuweisen.",
+            "Thermal Balance: definierte stationäre Fälle, deren gemessene Temperaturen das Thermalmodell validieren und korrelieren.",
+            "Ausheizen und Ausgasungsnachweis: kontrolliertes Heizen unter Vakuum, bis die Kontaminationsraten unter eine vereinbarte Schwelle fallen.",
+            "Kaltstart und Heißstart: der Nachweis, dass Hardware an den Temperaturgrenzen einschaltet – nicht nur, dass sie sie übersteht.",
+            "Soaks und Funktionstests an den Extremen: verlängerte Haltephasen mit vollständiger Leistungsverifikation auf den heißen und kalten Plateaus."
+          ]
+        },
+        {
+          "title": "Thermalzyklen: Schwachstellen provozieren",
+          "content": "Beim Thermalzyklustest wird der Prüfling wiederholt zwischen definierten heißen und kalten Niveaus gefahren, mit Haltephasen und Funktionsprüfungen gemäß Verifikationsplan. Die Wiederholung kann intermittierende Fertigungs- und Integrationsfehler aufdecken, etwa schwache Crimpungen, Steckverbinderbewegungen, nachlassende Klebungen oder Lötstellenfehler. Die Rampenrate ist ein geregelter Testparameter: Sie muss aus den Programmanforderungen abgeleitet und für die gemeinsame thermische Masse aus Kammer, Vorrichtung und Prüfling erreichbar sein. Eine schnellere Rampe ist nicht automatisch repräsentativer.",
+          "content2": "Zyklenzahl, Temperaturniveaus, Haltekriterien und Betriebszustand stammen aus den Projektanforderungen. ECSS-E-ST-10-03C Rev.1, GSFC-STD-7000B und SMC-S-016 liefern unterschiedliche Rahmenwerke und erlauben projektspezifisches Tailoring. Eine universelle Zyklenzahl für alle Geräte, Modellphilosophien oder Missionen gibt es nicht."
+        },
+        {
+          "title": "Thermal Balance: das Thermalmodell validieren",
+          "content": "Thermal Balance beantwortet eine andere Frage: nicht, ob die Hardware übersteht, sondern ob das Thermalmodell die Wahrheit sagt. Der Test stellt wenige, präzise definierte stationäre Fälle her – typischerweise einen Heiß- und einen Kaltfall, mitunter einen transienten – mit bekannten Randbedingungen: Shroud-Temperatur, eingespeiste Heizleistungen, Schnittstellentemperaturen. Der Prüfling stabilisiert sich, bis die Temperaturdrift unter ein kleines Kriterium fällt, oft Bruchteile eines Kelvin pro Stunde; dann wird die gemessene Temperaturverteilung mit der Modellvorhersage verglichen.",
+          "content2": "Modellparameter werden nur innerhalb eines dokumentierten Korrelationsprozesses und mit physikalisch belastbarer Begründung angepasst. Stabile, gut gemessene Randbedingungen reduzieren Unsicherheit; ein pauschaler Wert für Kammerstabilität oder Homogenität garantiert jedoch keine erfolgreiche Korrelation für jeden Prüfling."
+        },
+        {
+          "title": "Ausheizen und Ausgasungsnachweis",
+          "content": "Das Ausheizen ist die Testart, die etwas entfernt, statt etwas nachzuweisen: Hardware wird warm unter Vakuum gehalten, damit flüchtige Stoffe entweichen, bevor sie auf Flugoptiken kondensieren oder spätere Messungen verfälschen. Die Temperatur liegt über dem maximalen Betriebsniveau, aber unter den Materialgrenzen; das Ende definiert eine Messgröße – typischerweise eine QCM-Abscheiderate oder ein Druckverlauf unterhalb einer vereinbarten Schwelle. Für kontaminationskritische Programme dient derselbe Lauf zugleich als Ausgasungsnachweis, der die Sauberkeitsanforderung des Prüflings dokumentiert."
+        },
+        {
+          "title": "Starts, Soaks und Funktionstests an den Extremen",
+          "content": "Drei kleinere Testarten vervollständigen die Familie. Der Kaltstart zeigt, dass ein Gerät an seiner Kältegrenze einschaltet – der härteste Moment für Elektronik, Schmierstoffe und Mechanismen; der Heißstart tut dasselbe am oberen Ende. Soaks halten den Prüfling für längere Zeit an einem Extrem und decken langsame Effekte wie Kriechen, Parameterdrift und feuchtebedingtes Verhalten auf. Funktionstests an den Extremen verifizieren schließlich die tatsächliche Leistung: vollständige Testblöcke auf den heißen und kalten Plateaus, reduzierte Funktionsprüfungen in den Zwischenzyklen, durchgehendes Housekeeping-Monitoring."
+        },
+        {
+          "title": "Das Profil: Rampen, Haltephasen und Level",
+          "content": "Auf dem Papier ähnelt fast jede Kampagne derselben Zeichnung: Abpumpen, eine erste Heißphase, die zugleich als mildes Ausheizen wirkt, dann ein Sägezahn aus Rampen und Haltephasen zwischen Heiß- und Kaltniveau, zuletzt die kontrollierte Rückkehr auf Umgebung mit Belüften über trockenes Gas. Haltephasen beginnen, wenn der Referenzsensor innerhalb eines definierten Bandes stabil ist – nicht, wenn der Shroud ankommt; dieser Unterschied dominiert die reale Kampagnendauer.",
+          "content2": "Prüfniveaus und Margen werden durch den gewählten Verifikationsansatz und die Projektdokumentation festgelegt. Qualifikation, Abnahme und Protoflight unterscheiden sich in Ziel, Modellverwendung, Belastung und Dauer; ihr Verhältnis folgt jedoch keiner universellen 10-K-Regel. Verbindlich ist die getailorte Verifikationsmatrix."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Was ist der Unterschied zwischen Thermalzyklen und Thermal Balance?",
+          "a": "Thermalzyklen belasten Hardware, indem sie sie wiederholt zwischen heißen und kalten Extremen fahren; das Ergebnis sind Bestanden-Nachweise und aufgedeckte Fertigungsfehler. Thermal Balance ist ein Messtest: Der Prüfling stabilisiert sich in wenigen präzise definierten stationären Fällen, und die gemessenen Temperaturen validieren und korrelieren das Thermalmodell. Kampagnen kombinieren beides häufig in einem Abpumpvorgang."
+        },
+        {
+          "q": "Wie viele Zyklen umfasst ein TVAC-Test?",
+          "a": "Die anwendbare Verifikationsmatrix legt die Zyklenzahl fest. Qualifikations-, Abnahme- und Protoflight-Kampagnen verwenden unterschiedliche Niveaus und Dauern; jedes Programm kann die Ausgangsbasis tailoren. Eine Universalzahl wäre irreführend."
+        },
+        {
+          "q": "Was ist ein Protoflight-Test?",
+          "a": "Protoflight nutzt Flughardware für ein kombiniertes Verifikationsziel, wenn kein eigenes Qualifikationsmodell verfügbar ist. Die tatsächlichen Niveaus, Dauern und der zulässige Lebensdauerverbrauch sind Projektentscheidungen im getailorten Verifikationsplan."
+        },
+        {
+          "q": "Wird Hardware während eines TVAC-Tests betrieben?",
+          "a": "Meist ja. Housekeeping-Daten laufen durchgehend mit, reduzierte Funktionsprüfungen finden in den Zwischenzyklen statt, vollständige Leistungstests auf den heißen und kalten Plateaus. Es gibt auch unbetriebene Phasen – Überlebensniveaus werden stromlos getestet –, und Kalt- oder Heißstarts verifizieren gezielt das Einschalten an den Extremen. Der Funktionstestplan gehört ebenso zur Kampagne wie das Temperaturprofil."
+        }
+      ],
+      "conclusion": "Thermalzyklen, Thermal Balance, Ausheizen, Starts und Haltephasen beantworten unterschiedliche Verifikationsfragen. Eine belastbare Kampagne ordnet jedem Profilabschnitt vor dem Kammerbetrieb eine Anforderung, eine Messung und ein Abnahmekriterium zu."
+    },
+    "seoKey": "blogTvacTestTypes",
+    "dateModified": "2026-07-23",
+    "searchIntent": {
+      "en": {
+        "primaryKeyword": "TVAC test types",
+        "primaryQuestion": "Which TVAC test type answers which verification question?"
+      },
+      "de": {
+        "primaryKeyword": "TVAC-Testarten",
+        "primaryQuestion": "Welche TVAC-Testart beantwortet welche Verifikationsfrage?"
+      }
+    },
+    "references": [
+      {
+        "title": "ECSS-E-ST-10-03C Rev.1: Testing",
+        "publisher": "European Cooperation for Space Standardization (ECSS)",
+        "url": "https://ecss.nl/standard/ecss-e-st-10-03c-rev-1-testing-31-may-2022/"
+      },
+      {
+        "title": "GSFC-STD-7000B: General Environmental Verification Standard (GEVS)",
+        "publisher": "NASA Goddard Space Flight Center",
+        "url": "https://standards.nasa.gov/standard/gsfc/gsfc-std-7000"
+      },
+      {
+        "title": "SMC-S-016 (2014): Test Requirements for Launch, Upper-Stage and Space Vehicles",
+        "publisher": "U.S. Space and Missile Systems Center / NTIS",
+        "url": "https://ntrl.ntis.gov/NTRL/dashboard/searchResults/titleDetail/ADA619375.xhtml"
+      }
+    ],
+    "technicalNote": {
+      "en": "The applicable contract, verification plan and project-specific tailoring remain binding. The standards listed here provide frameworks, not a universal test profile.",
+      "de": "Verbindlich bleiben Vertrag, Verifikationsplan und projektspezifisches Tailoring. Die genannten Normen liefern Rahmenwerke, kein universelles Testprofil."
+    }
+  }
+]
