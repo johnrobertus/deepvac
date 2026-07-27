@@ -112,6 +112,8 @@ async function runChecks(): Promise<CheckResult[]> {
       consent: true,
     },
   };
+  // Small gap so both checks don't land on the same cold worker.
+  await new Promise((r) => setTimeout(r, 2000));
   const questionnaire = await callSendInquiry(qPayload);
 
   return [
