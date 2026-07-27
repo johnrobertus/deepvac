@@ -28,7 +28,7 @@ type CheckResult = {
   body: string;
 };
 
-async function callSendInquiry(payload: unknown): Promise<{ status: number; body: string }> {
+async function postOnce(payload: unknown): Promise<{ status: number; body: string }> {
   try {
     const res = await fetch(`${SUPABASE_URL}/functions/v1/send-inquiry`, {
       method: "POST",
@@ -45,6 +45,24 @@ async function callSendInquiry(payload: unknown): Promise<{ status: number; body
     return { status: 0, body: err instanceof Error ? err.message : String(err) };
   }
 }
+
+// Transient edge-runtime hiccups (503 SUPABASE_EDGE_RUNTIME_SERVICE_DEGRADED, cold
+// boots, network errors) must not be reported as a form outage — retry first.
+function isTransient(status: number): boolean {
+  return status === 0 || status === 429 || status >= 500;
+}
+
+async function callSendInquiry(payload: unknown): Promise<{ status: number; body: string }> {
+  const maxAttempts = 3;
+  let result = await postOnce(payload);
+  for (let attempt = 2; attempt <= maxAttempts && isTransient(result.status); attempt++) {
+    console.warn(`transient response (HTTP ${result.status}) — retry ${attempt}/${maxAttempts}`);
+    await new Promise((r) => setTimeout(r, 3000 * (attempt - 1)));
+    result = await postOnce(payload);
+  }
+  return result;
+}
+
 
 function stamp() {
   return new Date().toISOString().replace(/[:.]/g, "-");
@@ -94,6 +112,8 @@ async function runChecks(): Promise<CheckResult[]> {
       consent: true,
     },
   };
+  // Small gap so both checks don't land on the same cold worker.
+  await new Promise((r) => setTimeout(r, 2000));
   const questionnaire = await callSendInquiry(qPayload);
 
   return [
