@@ -19,7 +19,7 @@ import { useLanguage } from "@/components/LanguageProvider";
 import { localizedPath } from "@/lib/routes";
 import thermalPlateAsset from "@/assets/services-thermal-plate-reference.png.asset.json";
 import vacuumPumpImage from "@/assets/services-vacuum-pump-cutaway.svg";
-import chamberImage from "@/assets/tseries-chamber.webp";
+import chamberImage from "@/assets/tseries-chamber-cutout.png";
 
 const thermalPlateImage = thermalPlateAsset.url;
 
