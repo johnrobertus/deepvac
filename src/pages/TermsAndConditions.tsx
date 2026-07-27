@@ -77,7 +77,7 @@ export default function TermsAndConditions() {
             <SimpleSection n="6" t={t} keys={["c1","c2","c3","c4"]} />
             <SimpleSection n="7" t={t} keys={["c1","c2","c3"]} />
             <SimpleSection n="8" t={t} keys={["c1","c2","c3","c4"]} />
-            <SimpleSection n="9" t={t} keys={["c1","c2","c3","c4","c5","c6"]} />
+            <SimpleSection n="9" t={t} keys={["c1","c2","c3","c4","c5","c6","c7"]} />
 
             <LS n="10" title={t("terms.sections.10.title")}>
               <p>{t("terms.sections.10.c1")}</p>
@@ -115,7 +115,7 @@ export default function TermsAndConditions() {
 
             <SimpleSection n="13" t={t} keys={["c1","c2","c3","c4","c5"]} />
             <SimpleSection n="14" t={t} keys={["c1","c2","c3","c4","c5","c6"]} />
-            <SimpleSection n="15" t={t} keys={["c1","c2","c3","c4","c5","c6","c7","c8","c9","c10","c11","c12","c13","c14"]} />
+            <SimpleSection n="15" t={t} keys={["c1","c2","c3","c4","c5","c6","c7","c8","c9","c10","c11","c12","c13","c14","c15","c16"]} />
             <SimpleSection n="16" t={t} keys={["c1","c2","c3","c4","c5","c6","c7","c8"]} />
             <SimpleSection n="17" t={t} keys={["c1","c2","c3","c4","c5","c6","c7","c8"]} />
             <SimpleSection n="18" t={t} keys={["c1","c2","c3","c4","c5","c6","c7","c8","c9","c10"]} />
@@ -123,7 +123,7 @@ export default function TermsAndConditions() {
             {/* Part E */}
             <PartHeader label={t("terms.partE")} />
 
-            <SimpleSection n="19" t={t} keys={["c1","c2","c3","c4"]} />
+            <SimpleSection n="19" t={t} keys={["c1","c2","c3","c4","c5"]} />
             <SimpleSection n="20" t={t} keys={["c1","c2","c3","c4","c5","c6"]} />
             <SimpleSection n="21" t={t} keys={["c1","c2","c3","c4","c5","c6","c7","c8","c9"]} />
 
