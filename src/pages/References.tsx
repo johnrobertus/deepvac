@@ -56,6 +56,55 @@ const References = () => {
 
         <Section>
           <SectionHeader
+            eyebrow={t("featured.eyebrow")}
+            title={t("featured.title")}
+            className="mb-10"
+          />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div className="order-1 md:order-2 bento-card rounded-lg overflow-hidden">
+              <img
+                src="/images/t500-garbsen-1.webp"
+                alt={t("featured.imageAlt")}
+                width={1350}
+                height={1800}
+                className="w-full h-auto block"
+              />
+            </div>
+            <div className="order-2 md:order-1 space-y-6">
+              <p className="text-body">{t("featured.body")}</p>
+              <a
+                href={LINKEDIN_POST_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block text-sm text-blue underline underline-offset-4 hover:text-sand transition-colors"
+              >
+                {t("featured.linkedin")}
+              </a>
+              <ul className="space-y-3">
+                {specs.map((spec) => (
+                  <li key={spec} className="bento-card rounded-lg p-4 flex items-center gap-3">
+                    <span className="w-1.5 h-1.5 rounded-full bg-blue flex-shrink-0" />
+                    <span className="text-sm text-sand font-medium">{spec}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+          <div className="mt-8 bento-card rounded-lg overflow-hidden">
+            <img
+              src="/images/t500-garbsen-2.webp"
+              alt={t("featured.bannerAlt")}
+              width={1350}
+              height={1800}
+              loading="lazy"
+              className="w-full max-h-[480px] object-cover block"
+            />
+          </div>
+        </Section>
+
+        <Section>
+          <SectionHeader
+
             eyebrow={t("industries.eyebrow")}
             title={t("industries.title")}
             description={t("industries.description")}
