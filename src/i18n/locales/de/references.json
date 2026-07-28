@@ -1,7 +1,22 @@
 {
-  "eyebrow": "Referenzen",
-  "title": "Referenzen & Projekterfahrung",
-  "description": "Anwendungsbereiche und Projektformate im Thermalvakuum-Engineering von Deepvac.",
+  "eyebrow": "Projekte",
+  "title": "Was wir bauen.",
+  "description": "Schlüsselfertige Thermalvakuum-Kammern — im eigenen Haus entwickelt, gefertigt und in Betrieb genommen.",
+  "featured": {
+    "eyebrow": "Im Fokus",
+    "title": "T500 — vollständig im eigenen Haus entwickelt, gebaut und getestet.",
+    "body": "Entwickelt, gefertigt und in Betrieb genommen an unserem Standort in Garbsen.",
+    "specs": [
+      "Prüfvolumen: 125 l (500 × 500 × 500 mm)",
+      "Kammer: Edelstahl",
+      "Enddruck: < 1×10⁻⁷ mbar",
+      "Thermalsystem: LN₂-gekühlt, bis −190 °C",
+      "Steuerung: Eigenentwicklung (PLC/HMI)"
+    ],
+    "linkedin": "Zur Ankündigung auf LinkedIn ↗",
+    "imageAlt": "Thermalvakuum-Kammer T500 am Deepvac-Standort in Garbsen",
+    "bannerAlt": "Thermalvakuum-Kammer T500 — Detailansicht am Deepvac-Standort in Garbsen"
+  },
   "industries": {
     "eyebrow": "Branchen",
     "title": "Anwendungsbereiche",
@@ -39,8 +54,8 @@
     ]
   },
   "cta": {
-    "title": "Besprechen Sie Ihre Projektanforderungen",
-    "description": "Ob Sie Kammerplattformen evaluieren, ein kundenspezifisches System planen oder Service- und Retrofit-Optionen prüfen – wir sind bereit, Ihre Anforderungen zu besprechen."
+    "title": "Unter Vakuum erleben.",
+    "description": "Die T500 läuft derzeit an unserem Standort in Garbsen. Buchen Sie einen Termin — oder besuchen Sie uns vor Ort."
   },
   "origin": {
     "eyebrow": "Herkunft & Förderung",

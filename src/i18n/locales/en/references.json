@@ -1,7 +1,22 @@
 {
-  "eyebrow": "Track Record",
-  "title": "References & Project Experience",
-  "description": "Application areas and engagement formats across Deepvac's thermal vacuum engineering scope.",
+  "eyebrow": "Projects",
+  "title": "What we build.",
+  "description": "Turnkey thermal vacuum chambers — engineered, manufactured and commissioned in-house.",
+  "featured": {
+    "eyebrow": "Featured build",
+    "title": "T500 — designed, built and tested fully in-house.",
+    "body": "Engineered, manufactured and commissioned at our facility in Garbsen.",
+    "specs": [
+      "Test volume: 125 l (500 × 500 × 500 mm)",
+      "Chamber: stainless steel",
+      "Ultimate pressure: < 1×10⁻⁷ mbar",
+      "Thermal system: LN₂-cooled, down to −190 °C",
+      "Control: proprietary in-house control system (PLC/HMI)"
+    ],
+    "linkedin": "Read the announcement on LinkedIn ↗",
+    "imageAlt": "T500 thermal vacuum chamber at the Deepvac facility in Garbsen",
+    "bannerAlt": "T500 thermal vacuum chamber — detail view at the Deepvac facility in Garbsen"
+  },
   "industries": {
     "eyebrow": "Industries",
     "title": "Application Areas",
@@ -39,8 +54,8 @@
     ]
   },
   "cta": {
-    "title": "Discuss Your Project Requirements",
-    "description": "Whether you're evaluating chamber platforms, planning a custom system, or exploring service and retrofit options — we're ready to discuss your requirements."
+    "title": "See it under vacuum.",
+    "description": "The T500 is currently running at our facility in Garbsen. Book a call — or come by for a site visit."
   },
   "origin": {
     "eyebrow": "Origin & Backing",
