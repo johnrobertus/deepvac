@@ -34,6 +34,10 @@ const References = () => {
   }>;
 
   const types = t("projectScope.types", { returnObjects: true }) as string[];
+  const specs = t("featured.specs", { returnObjects: true }) as string[];
+  const [bookCallOpen, setBookCallOpen] = useState(false);
+
+
 
   return (
     <Layout>
