@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import { useLocation } from "react-router-dom";
@@ -6,13 +7,17 @@ import { Layout } from "@/components/Layout";
 import { PageShell, PageHero, Section, CTABand } from "@/components/PageShell";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Button } from "@/components/ui/button";
+import { BookCallDialog } from "@/components/BookCallDialog";
 import { Satellite, FlaskConical, Factory, Microscope } from "lucide-react";
 import { useLanguage } from "@/components/LanguageProvider";
 import { getHreflangs, getCanonical, localizedPath } from "@/lib/routes";
 import existFundingEn from "@/assets/exist-funding-en.jpg";
 import existFundingDe from "@/assets/exist-funding-de.png";
 
+const LINKEDIN_POST_URL = "https://www.linkedin.com/in/john-robertus/"; // TODO: replace with the exact LinkedIn post URL
+
 const areaIcons = [Satellite, FlaskConical, Factory, Microscope];
+
 
 const References = () => {
   const { t } = useTranslation("references");
