@@ -4,18 +4,19 @@
   "description": "Turnkey thermal vacuum chambers — engineered, manufactured and commissioned in-house.",
   "featured": {
     "eyebrow": "Featured build",
-    "title": "T500 — designed, built and tested fully in-house.",
+    "title": "T125 — designed, built and tested fully in-house.",
     "body": "Engineered, manufactured and commissioned at our facility in Garbsen.",
     "specs": [
       "Test volume: 125 l (500 × 500 × 500 mm)",
       "Chamber: stainless steel",
+      "Operating pressure: < 1×10⁻⁶ mbar",
       "Ultimate pressure: < 1×10⁻⁷ mbar",
       "Thermal system: LN₂-cooled, down to −190 °C",
       "Control: proprietary in-house control system (PLC/HMI)"
     ],
     "linkedin": "Read the announcement on LinkedIn ↗",
-    "imageAlt": "T500 thermal vacuum chamber at the Deepvac facility in Garbsen",
-    "bannerAlt": "T500 thermal vacuum chamber — detail view at the Deepvac facility in Garbsen"
+    "imageAlt": "T125 thermal vacuum chamber at the Deepvac facility in Garbsen",
+    "bannerAlt": "T125 thermal vacuum chamber — detail view at the Deepvac facility in Garbsen"
   },
   "industries": {
     "eyebrow": "Industries",
@@ -55,7 +56,7 @@
   },
   "cta": {
     "title": "See it under vacuum.",
-    "description": "The T500 is currently running at our facility in Garbsen. Book a call — or come by for a site visit."
+    "description": "The T125 is currently running at our facility in Garbsen. Book a call — or come by for a site visit."
   },
   "origin": {
     "eyebrow": "Origin & Backing",

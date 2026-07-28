@@ -14,7 +14,7 @@ import { getHreflangs, getCanonical, localizedPath } from "@/lib/routes";
 import existFundingEn from "@/assets/exist-funding-en.jpg";
 import existFundingDe from "@/assets/exist-funding-de.png";
 
-const LINKEDIN_POST_URL = "https://www.linkedin.com/in/john-robertus/"; // TODO: replace with the exact LinkedIn post URL
+const LINKEDIN_POST_URL = "https://www.linkedin.com/posts/john-robertus_newspace-spacetech-tvac-share-7484955524850089984-8sjE/";
 
 const areaIcons = [Satellite, FlaskConical, Factory, Microscope];
 
@@ -63,7 +63,7 @@ const References = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div className="order-1 md:order-2 bento-card rounded-lg overflow-hidden">
               <img
-                src="/images/t500-garbsen-1.webp"
+                src="/images/t125-garbsen-1.webp"
                 alt={t("featured.imageAlt")}
                 width={1350}
                 height={1800}
@@ -92,7 +92,7 @@ const References = () => {
           </div>
           <div className="mt-8 bento-card rounded-lg overflow-hidden">
             <img
-              src="/images/t500-garbsen-2.webp"
+              src="/images/t125-garbsen-2.webp"
               alt={t("featured.bannerAlt")}
               width={1350}
               height={1800}
