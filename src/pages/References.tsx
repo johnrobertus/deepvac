@@ -170,13 +170,13 @@ const References = () => {
 
 
         <CTABand title={t("cta.title")} description={t("cta.description")}>
-          <Button asChild>
-            <Link to={localizedPath("/contact", lang)}>{tc("buttons.requestConsultation")}</Link>
-          </Button>
+          <Button onClick={() => setBookCallOpen(true)}>{tc("bookCall.linkLabel")}</Button>
           <Button asChild variant="outline">
             <Link to={localizedPath("/products", lang)}>{tc("buttons.exploreProducts")}</Link>
           </Button>
         </CTABand>
+        <BookCallDialog open={bookCallOpen} onOpenChange={setBookCallOpen} />
+
       </PageShell>
     </Layout>
   );
