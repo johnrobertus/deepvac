@@ -1,0 +1,119 @@
+name: verify-wave2-structured-data
+
+on:
+  push:
+    branches:
+      - preview
+
+permissions:
+  contents: read
+  statuses: write
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm install --legacy-peer-deps
+
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Build once
+        run: npm run build
+
+      - name: Validate Wave 2 JSON-LD
+        id: jsonld
+        shell: bash
+        run: |
+          node <<'NODE'
+          const fs = require('node:fs');
+          const path = require('node:path');
+
+          function readSchemas(relativePath) {
+            const file = path.join('dist', relativePath, 'index.html');
+            const html = fs.readFileSync(file, 'utf8');
+            const pattern = /<script\b[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi;
+            const schemas = [];
+
+            for (const match of html.matchAll(pattern)) {
+              const parsed = JSON.parse(match[1].trim());
+              schemas.push(...(Array.isArray(parsed) ? parsed : [parsed]));
+            }
+
+            return { file, schemas };
+          }
+
+          function countType(result, type) {
+            return result.schemas.filter((schema) => schema?.['@type'] === type).length;
+          }
+
+          function requireType(relativePath, type, minimum = 1) {
+            const result = readSchemas(relativePath);
+            const count = countType(result, type);
+            if (count < minimum) {
+              throw new Error(`${result.file}: expected at least ${minimum} ${type} schema(s), found ${count}`);
+            }
+            return count;
+          }
+
+          const checks = [
+            ['products/standard-series', 'BreadcrumbList', 1],
+            ['products/standard-series', 'Product', 2],
+            ['de/produkte/standard-serie', 'BreadcrumbList', 1],
+            ['de/produkte/standard-serie', 'Product', 2],
+            ['products/thermal-vision', 'BreadcrumbList', 1],
+            ['products/thermal-vision', 'Product', 1],
+            ['products/options/solar-simulator', 'BreadcrumbList', 1],
+            ['services/control-systems-design', 'BreadcrumbList', 1],
+            ['resources/blog/cooling-systems', 'BreadcrumbList', 1],
+            ['resources/blog/cooling-systems', 'BlogPosting', 1],
+            ['de/ressourcen/blog/kuehlsysteme', 'BlogPosting', 1],
+            ['resources/blog/what-is-thermal-vacuum-testing', 'BreadcrumbList', 1],
+            ['resources/blog/what-is-thermal-vacuum-testing', 'BlogPosting', 1],
+            ['de/ressourcen/blog/was-ist-thermalvakuumtest', 'BlogPosting', 1],
+          ];
+
+          let verified = 0;
+          for (const [relativePath, type, minimum] of checks) {
+            verified += requireType(relativePath, type, minimum);
+          }
+
+          fs.appendFileSync(process.env.GITHUB_OUTPUT, `verified=${verified}\n`);
+          console.log(`Verified ${verified} required BreadcrumbList, BlogPosting and Product JSON-LD entities.`);
+          NODE
+
+      - name: Publish success status
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERIFIED: ${{ steps.jsonld.outputs.verified }}
+        run: |
+          curl -fsS -X POST \
+            -H "Authorization: Bearer ${GH_TOKEN}" \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "https://api.github.com/repos/${GITHUB_REPOSITORY}/statuses/${GITHUB_SHA}" \
+            -d "{\"state\":\"success\",\"context\":\"wave2-structured-data\",\"description\":\"Build passed; ${VERIFIED} required JSON-LD entities verified\"}"
+
+      - name: Publish failure status
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          curl -fsS -X POST \
+            -H "Authorization: Bearer ${GH_TOKEN}" \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "https://api.github.com/repos/${GITHUB_REPOSITORY}/statuses/${GITHUB_SHA}" \
+            -d '{"state":"failure","context":"wave2-structured-data","description":"Build or Wave 2 JSON-LD verification failed"}'
