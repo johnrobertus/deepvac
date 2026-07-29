@@ -1119,7 +1119,7 @@ export default function TvacQuestionnaire() {
         <Helmet>
           <html lang={lang} />
           <title>{tSeo("questionnaire.title")}</title>
-          <meta name="robots" content="noindex,follow" />
+          <meta name="robots" content="noindex, follow" />
         </Helmet>
         <PageShell>
           <Section>
@@ -1154,7 +1154,7 @@ export default function TvacQuestionnaire() {
         <html lang={lang} />
         <title>{tSeo("questionnaire.title")}</title>
         <meta name="description" content={tSeo("questionnaire.description")} />
-        <meta name="robots" content="noindex,follow" />
+        <meta name="robots" content="noindex, follow" />
         <link rel="canonical" href={canonical} />
         {hreflangs.map((h) => (<link key={h.lang} rel="alternate" hrefLang={h.lang} href={h.href} />))}
       </Helmet>

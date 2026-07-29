@@ -1,7 +1,7 @@
 {
   "home": {
-    "title": "Deepvac: TVAC-Systeme für Raumfahrtqualifikation",
-    "description": "Modulare und kundenspezifische Thermalvakuumsysteme für Qualifikation, Weltraumsimulation, Retrofit und Engineering aus Deutschland."
+    "title": "Thermalvakuumkammern & TVAC-Systeme | Deepvac",
+    "description": "Deepvac entwickelt und fertigt Thermalvakuumkammern und TVAC-Systeme in Deutschland – Standard-Serie, Custom-Anlagen, Retrofit und Steuerungstechnik."
   },
   "products": {
     "title": "Thermalvakuumkammer-Systeme | Deepvac",
@@ -17,7 +17,7 @@
   },
   "options": {
     "title": "Optionen für TVAC-Kammern | Deepvac",
-    "description": "Konfigurieren Sie Ihre Thermal-Vakuumkammer: Solarsimulation, Bake-out, ölfreies Pumpen, RGA, Thermografie-Schaugläser und mehr – alle Deepvac-Optionen im Überblick."
+    "description": "Konfigurieren Sie Ihre Thermalvakuumkammer: Solarsimulation, Bake-out, ölfreies Pumpen, RGA, Schaugläser für Thermografie – alle Optionen im Überblick."
   },
   "services": {
     "title": "TVAC-Engineering und Services | Deepvac",
@@ -64,8 +64,8 @@
     "description": "Werden Sie Teil von Deepvac und bauen Sie Thermalvakuumsysteme für die Raumfahrtqualifikation. Engineering-Positionen in Garbsen, Deutschland."
   },
   "references": {
-    "title": "Projekte | Deepvac",
-    "description": "Schlüsselfertige Thermalvakuum-Kammern, entwickelt und gefertigt in Garbsen. Im Fokus: T125 — 125 l, < 1×10⁻⁷ mbar, LN₂ bis −190 °C."
+    "title": "Projekte & Referenzen: T125 TVAC-Kammer | Deepvac",
+    "description": "Schlüsselfertige Thermalvakuum-Kammern, entwickelt und gefertigt in Garbsen. Im Fokus: T125 – 125 l, < 1×10⁻⁷ mbar, LN₂ bis −190 °C."
   },
   "contact": {
     "title": "TVAC-Projekt anfragen | Deepvac Kontakt",
@@ -92,7 +92,7 @@
     "description": "Quellenangaben und Nachweise für auf der Deepvac-Website verwendete Medien."
   },
   "thermalVision": {
-    "title": "Deepvac Thermal Vision – Thermalkamera für TVAC | Deepvac",
+    "title": "Thermal Vision – Thermalkamera für TVAC-Kammern | Deepvac",
     "description": "Kalibrierte Infrarot-Bildgebung unter Hochvakuum-Bedingungen. Thermalkamera-Integration für neue und bestehende Thermalvakuumsysteme."
   },
   "questionnaire": {
@@ -133,7 +133,7 @@
   },
   "blogOutgassingBasics": {
     "title": "Ausgasung im Vakuum: TML, CVCM & Ausheizen | Deepvac",
-    "description": "Ausgasung im Vakuum erklärt: Physik der Desorption, ECSS-Grenzwerte TML und CVCM, typische Problemmaterialien, Ausheiz-Praxis und QCM/RGA-Monitoring."
+    "description": "Ausgasung im Vakuum erklärt: Desorption, ECSS-Grenzwerte TML und CVCM, typische Problemmaterialien, Ausheiz-Praxis und QCM-/RGA-Monitoring."
   },
   "blogTvacTestTypes": {
     "title": "TVAC-Testarten: Zyklen, Balance, Ausheizen | Deepvac",
@@ -153,7 +153,7 @@
   },
   "blogTvacFacilityRequirements": {
     "title": "TVAC-Infrastruktur: Anforderungen | Deepvac",
-    "description": "TVAC-Infrastruktur im Überblick: Bodenlast, Transportweg, Stromversorgung, Kühlung, LN₂-Sicherheit, Sauberkeit und IT – plus praxisnahe Standort-Checkliste."
+    "description": "TVAC-Infrastruktur im Überblick: Bodenlast, Transportweg, Strom, Kühlung, LN₂-Sicherheit, Sauberkeit und IT – mit praxisnaher Standort-Checkliste."
   },
   "blogPumpingSystemSelection": {
     "title": "Vakuumpumpstand für TVAC auslegen | Deepvac",
