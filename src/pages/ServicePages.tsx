@@ -10,6 +10,7 @@ import { PlaceholderImage } from "@/components/PlaceholderImage";
 import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/components/LanguageProvider";
 import { getHreflangs, getCanonical, localizedPath } from "@/lib/routes";
+import { buildBreadcrumbJsonLd } from "@/lib/jsonld";
 import mechanicalDesignHero from "@/assets/mechanical-design-hero.webp";
 import controlSystemsHero from "@/assets/control-systems-hero.webp";
 import retrofitHero from "@/assets/retrofit-hero.webp";
@@ -45,6 +46,13 @@ function ServicePageTemplate({ seoKey, nsKey, heroImage, children }: ServicePage
   };
   const contactHref = `${localizedPath("/contact", lang)}${interestByNs[nsKey] ? `?interest=${interestByNs[nsKey]}` : ""}`;
   const crossLinks = t(`${nsKey}.crossLinks`, { returnObjects: true }) as Array<{ label: string; href: string; description: string }>;
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd(
+    [
+      { name: lang === "de" ? "Leistungen" : "Services", enPath: "/services" },
+      { name: t(`${nsKey}.title`) as string, url: canonical },
+    ],
+    lang,
+  );
 
   return (
     <Layout>
@@ -56,6 +64,7 @@ function ServicePageTemplate({ seoKey, nsKey, heroImage, children }: ServicePage
         {hreflangs.map((h) => (
           <link key={h.lang} rel="alternate" hrefLang={h.lang} href={h.href} />
         ))}
+        <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
       </Helmet>
       <PageShell>
         <PageHero eyebrow={t(`${nsKey}.eyebrow`)} title={t(`${nsKey}.title`)} description={t(`${nsKey}.description`)}>
