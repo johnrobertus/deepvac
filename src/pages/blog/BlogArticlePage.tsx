@@ -6,6 +6,7 @@ import { PageShell, Section, CTABand } from "@/components/PageShell";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/components/LanguageProvider";
 import { getHreflangs, getCanonical, localizedPath } from "@/lib/routes";
+import { buildBreadcrumbJsonLd, SITE_URL } from "@/lib/jsonld";
 import { blogArticles } from "@/lib/blog";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { type ReactNode } from "react";
@@ -52,6 +53,7 @@ export function BlogArticlePage({
     inLanguage: lang,
     url: canonical,
     mainEntityOfPage: canonical,
+    image: `${SITE_URL}/og-image.png`,
     ...(datePublished ? { datePublished } : {}),
     ...(dateModified ? { dateModified } : {}),
     ...(intent?.primaryKeyword ? { keywords: intent.primaryKeyword } : {}),
@@ -69,18 +71,26 @@ export function BlogArticlePage({
     author: {
       "@type": "Organization",
       name: "Deepvac GmbH",
-      url: "https://deepvac.space",
+      url: SITE_URL,
     },
     publisher: {
       "@type": "Organization",
       name: "Deepvac GmbH",
-      url: "https://deepvac.space",
+      url: SITE_URL,
       logo: {
         "@type": "ImageObject",
-        url: "https://deepvac.space/logo.png",
+        url: `${SITE_URL}/logo.png`,
       },
     },
   };
+
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd(
+    [
+      { name: "Blog", enPath: "/resources/blog" },
+      { name: headline as string, enPath: `/resources/blog/${slug}` },
+    ],
+    lang,
+  );
 
   return (
     <Layout>
@@ -101,6 +111,7 @@ export function BlogArticlePage({
           />
         ))}
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
       </Helmet>
 
       <PageShell>
