@@ -22,6 +22,7 @@ import { SectionHeader } from "@/components/SectionHeader";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/components/LanguageProvider";
 import { getHreflangs, getCanonical, localizedPath } from "@/lib/routes";
+import { buildBreadcrumbJsonLd } from "@/lib/jsonld";
 import testingHero from "@/assets/testing-hero.webp";
 
 type ScopeItem = {
@@ -68,6 +69,13 @@ export const TestingServices = () => {
     href: string;
     description: string;
   }>;
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd(
+    [
+      { name: lang === "de" ? "Leistungen" : "Services", enPath: "/services" },
+      { name: t("testing.title") as string, enPath: "/services/testing-services" },
+    ],
+    lang,
+  );
 
   return (
     <Layout>
@@ -79,6 +87,7 @@ export const TestingServices = () => {
         {hreflangs.map((h) => (
           <link key={h.lang} rel="alternate" hrefLang={h.lang} href={h.href} />
         ))}
+        <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
       </Helmet>
 
       <PageShell>
