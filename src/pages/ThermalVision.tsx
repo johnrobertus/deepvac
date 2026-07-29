@@ -46,6 +46,16 @@ const ThermalVision = () => {
       { "@type": "ListItem", position: 3, name: t("thermalVision.title") as string, item: canonical },
     ],
   };
+  const productJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: "Deepvac Thermal Vision",
+    description: t("thermalVision.heroDescription") as string,
+    brand: { "@type": "Brand", name: "Deepvac GmbH" },
+    manufacturer: { "@type": "Organization", name: "Deepvac GmbH" },
+    image: new URL(thermalProductImg, "https://deepvac.space").href,
+    url: canonical,
+  };
 
   return (
     <Layout>
@@ -58,6 +68,7 @@ const ThermalVision = () => {
           <link key={h.lang} rel="alternate" hrefLang={h.lang} href={h.href} />
         ))}
         <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(productJsonLd)}</script>
       </Helmet>
 
       <PageShell>
