@@ -10,6 +10,7 @@ import { ArrowRight, Thermometer, Gauge, Settings, RefreshCw, Wrench, Box, Clipb
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { useLanguage } from "@/components/LanguageProvider";
 import { getHreflangs, getCanonical, localizedPath } from "@/lib/routes";
+import { buildBreadcrumbJsonLd } from "@/lib/jsonld";
 
 const serviceIcons = [
   <Thermometer className="w-6 h-6" />,
@@ -43,6 +44,11 @@ const Services = () => {
   }>;
   const faqItems = t("overview.faq.items", { returnObjects: true }) as Array<{ q: string; a: string }>;
 
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd(
+    [{ name: t("overview.title") as string, enPath: "/services" }],
+    lang,
+  );
+
   return (
     <Layout>
       <Helmet>
@@ -53,6 +59,7 @@ const Services = () => {
         {hreflangs.map((h) => (
           <link key={h.lang} rel="alternate" hrefLang={h.lang} href={h.href} />
         ))}
+        <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
       </Helmet>
       <PageShell>
         <PageHero

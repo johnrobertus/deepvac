@@ -10,6 +10,7 @@ import { ArrowRight, Box, Cog, Camera, ClipboardList, Clock } from "lucide-react
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { useLanguage } from "@/components/LanguageProvider";
 import { getHreflangs, getCanonical, localizedPath } from "@/lib/routes";
+import { buildBreadcrumbJsonLd } from "@/lib/jsonld";
 import tseriesImg from "@/assets/product-tseries-chamber-glow.jpg";
 import cseriesImg from "@/assets/cseries-chamber.avif";
 import customImg from "@/assets/custom-chamber.avif";
@@ -70,6 +71,11 @@ const Products = () => {
     })),
   };
 
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd(
+    [{ name: t("overview.title") as string, enPath: "/products" }],
+    lang,
+  );
+
   return (
     <Layout>
       <Helmet>
@@ -81,6 +87,7 @@ const Products = () => {
           <link key={h.lang} rel="alternate" hrefLang={h.lang} href={h.href} />
         ))}
         <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
       </Helmet>
       <PageShell>
         <PageHero
