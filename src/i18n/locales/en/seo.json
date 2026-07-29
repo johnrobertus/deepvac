@@ -17,7 +17,7 @@
   },
   "options": {
     "title": "TVAC Chamber Options | Deepvac",
-    "description": "Configure your thermal vacuum chamber: solar simulation, bake-out, oil-free pumping, RGA, thermography viewports and more – all Deepvac chamber options at a glance."
+    "description": "Configure your thermal vacuum chamber with solar simulation, bake-out, oil-free pumping, RGA, thermography viewports and other TVAC options."
   },
   "services": {
     "title": "TVAC Engineering and Services | Deepvac",
@@ -65,7 +65,7 @@
   },
   "references": {
     "title": "Projects & References: T125 TVAC Chamber | Deepvac",
-    "description": "Turnkey thermal vacuum chambers, engineered and built in-house in Garbsen, Germany. Featured build: T125 — 125 l, < 1×10⁻⁷ mbar, LN₂ to −190 °C."
+    "description": "T125 TVAC chamber built in Garbsen: 125 l, operating pressure < 1×10⁻⁶ mbar, ultimate pressure < 1×10⁻⁷ mbar and LN₂ cooling to −190 °C."
   },
   "contact": {
     "title": "Request a TVAC Project | Contact Deepvac",

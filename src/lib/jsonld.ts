@@ -27,10 +27,13 @@ export function buildBreadcrumbJsonLd(crumbs: CrumbInput[], lang: Lang) {
     { name: lang === "de" ? "Startseite" : "Home", enPath: "/" },
     ...crumbs,
   ];
+  const pageUrl = absolute(all[all.length - 1], lang);
 
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
+    "@id": `${pageUrl}#breadcrumb`,
+    inLanguage: lang,
     itemListElement: all.map((crumb, index) => ({
       "@type": "ListItem",
       position: index + 1,
