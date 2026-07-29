@@ -71,10 +71,12 @@ export function CTABand({
   title,
   description,
   children,
+  hideInlinePrompt = false,
 }: {
   title: string;
   description?: string;
   children?: ReactNode;
+  hideInlinePrompt?: boolean;
 }) {
   const { t } = useTranslation("common");
   const [bookCallOpen, setBookCallOpen] = useState(false);
@@ -86,6 +88,7 @@ export function CTABand({
           <p className="text-section-lead mx-auto">{description}</p>
         )}
         {children && <div className="pt-4 flex flex-col sm:flex-row flex-wrap justify-center gap-4">{children}</div>}
+        {!hideInlinePrompt && (
         <p className="text-[15px] text-gray pt-2">
           {t("bookCall.inlinePrompt")}{" "}
           <button
@@ -97,6 +100,7 @@ export function CTABand({
             <CalendarClock className="w-3.5 h-3.5" aria-hidden="true" />
           </button>
         </p>
+        )}
         <BookCallDialog open={bookCallOpen} onOpenChange={setBookCallOpen} />
       </div>
     </section>
