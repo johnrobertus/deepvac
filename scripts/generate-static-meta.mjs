@@ -91,6 +91,7 @@ export function computeMeta(route, lang, seoEn, seoDe) {
     ogLocaleAlt: lang === "de" ? "en_US" : "de_DE",
     enUrl,
     deUrl,
+    robots: route.sitemap === null ? "noindex, follow" : null,
   };
 }
 
@@ -108,7 +109,7 @@ function buildStaticFallbackBody(meta) {
 export function rewriteHead(template, meta) {
   const {
     title, description, canonical, ogUrl, lang, altLang, altHref, xDefaultHref,
-    ogLocale, ogLocaleAlt,
+    ogLocale, ogLocaleAlt, robots,
   } = meta;
   let html = template;
 
@@ -165,6 +166,14 @@ export function rewriteHead(template, meta) {
     /<meta\s+name="twitter:description"\s+content="[^"]*"\s*\/?>/,
     `<meta name="twitter:description" content="${escapeAttr(description)}" />`,
   );
+
+  // robots (noindex for routes excluded from the sitemap)
+  if (robots) {
+    html = html.replace(
+      /<meta\s+name="robots"\s+content="[^"]*"\s*\/?>/,
+      `<meta name="robots" content="${escapeAttr(robots)}" />`,
+    );
+  }
 
   // hreflang alternates — inject just before </head>
   const hreflangs = [

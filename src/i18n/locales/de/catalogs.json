@@ -1,8 +1,8 @@
 {
   "eyebrow": "Technische Dokumentation",
   "title": "Kataloge & Ressourcen",
-  "description": "Produktbroschüren, technische Übersichten und Engineering-Dokumentation zum Download. Weitere Datenblätter und Spezifikationen werden veröffentlicht, sobald sie verfügbar sind.",
-  "featuredBrochure": "Ausgewählte Broschüre",
+  "description": "Produktbroschüren, technische Übersichten und Engineering-Dokumentation zum Download. Weitere Datenblätter und Spezifikationen folgen laufend.",
+  "featuredBrochure": "Im Fokus",
   "documentLibrary": {
     "eyebrow": "Dokumentenbibliothek",
     "title": "Alle Ressourcen",
@@ -16,14 +16,14 @@
     "service": "Service",
     "overview": "Übersicht"
   },
-  "comingSoon": "Demnächst verfügbar",
-  "availableSoon": "Bald verfügbar",
+  "comingSoon": "In Kürze verfügbar",
+  "availableSoon": "In Kürze verfügbar",
   "moreDocumentation": {
     "title": "Weitere Dokumentation in Kürze",
-    "description": "Zusätzliche technische Spezifikationen, Datenblätter und plattformspezifische Dokumentation werden veröffentlicht, sobald sie verfügbar sind."
+    "description": "Zusätzliche technische Spezifikationen, Datenblätter und plattformspezifische Dokumentation folgen laufend."
   },
   "cta": {
-    "title": "Technische Spezifikationen benötigt?",
+    "title": "Sie benötigen konkrete Spezifikationen?",
     "description": "Wenn Sie spezifische technische Daten für eine Projektevaluierung oder einen Beschaffungsprozess benötigen, kontaktieren Sie unser Engineering-Team direkt."
   },
   "placeholderDocs": {

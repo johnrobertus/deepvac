@@ -2,7 +2,7 @@
   "hero": {
     "eyebrow": "ENGINEERED & BUILT IN GERMANY",
     "title": "Modular & custom thermal vacuum systems for aerospace qualification.",
-    "description": "Deepvac engineers and builds modular TVAC platforms, custom chamber systems, and in-house control technology — for satellite manufacturers, aerospace suppliers, and research institutions building, qualifying, or upgrading test infrastructure.",
+    "description": "Deepvac designs and manufactures modular TVAC platforms, custom chamber systems, and in-house control technology — for satellite manufacturers, aerospace suppliers, and research institutions building, qualifying, or upgrading test infrastructure.",
     "cues": [
       "CONTROL & AUTOMATION",
       "RETROFIT & SERVICE",
@@ -40,7 +40,7 @@
     "tSeries": {
       "title": "T Series TVAC",
       "subtitle": "Cubic Thermal Vacuum Chambers",
-      "description": "Cubic thermal vacuum chambers for qualification, validation, and environmental simulation of aerospace hardware. Its cubic geometry provides a flat base plate and maximized usable floor area — ideal for fixtures, optical benches, and fast integration of planar-mounted hardware.",
+      "description": "Cubic thermal vacuum chambers for qualification, validation, and environmental simulation of aerospace hardware. The cubic geometry provides a flat base plate and maximized usable floor area — ideal for fixtures, optical benches, and fast integration of planar-mounted hardware.",
       "overlays": [
         "Cubic Geometry",
         "Standard Series",
@@ -70,7 +70,7 @@
     "cSeries": {
       "title": "C Series TVAC",
       "subtitle": "Cylindrical Thermal Vacuum Chambers",
-      "description": "Cylindrical thermal vacuum chambers for qualification, validation, and environmental simulation of aerospace hardware. Its cylindrical geometry provides an inherently pressure-stable vessel with efficient, homogeneous shroud coverage — ideal for larger volumes and radiative thermal balance testing.",
+      "description": "Cylindrical thermal vacuum chambers for qualification, validation, and environmental simulation of aerospace hardware. The cylindrical geometry provides an inherently pressure-stable vessel with efficient, homogeneous shroud coverage — ideal for larger volumes and radiative thermal balance testing.",
       "overlays": [
         "Cylindrical Geometry",
         "Standard Series",
