@@ -8,6 +8,7 @@ import { useLanguage } from "@/components/LanguageProvider";
 import { getHreflangs, getCanonical, localizedPath } from "@/lib/routes";
 import { buildBreadcrumbJsonLd, SITE_URL } from "@/lib/jsonld";
 import { blogArticles } from "@/lib/blog";
+import { solutionLabel } from "@/lib/blogContent";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { type ReactNode } from "react";
 
@@ -44,6 +45,25 @@ export function BlogArticlePage({
   const seoTitle = tSeo(`${seoKey}.title`);
   const seoDescription = tSeo(`${seoKey}.description`);
   const headline = t(titleKey);
+
+  const relatedPaths = references
+    .map((reference) => {
+      try {
+        const url = new URL(reference.url);
+        return url.origin === SITE_URL ? url.pathname : null;
+      } catch {
+        return null;
+      }
+    })
+    .filter((path): path is string => Boolean(path));
+
+  const externalReferences = references.filter((reference) => {
+    try {
+      return new URL(reference.url).origin !== SITE_URL;
+    } catch {
+      return true;
+    }
+  });
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -146,7 +166,7 @@ export function BlogArticlePage({
 
             {children}
 
-            {references.length > 0 && (
+            {externalReferences.length > 0 && (
               <div className="border-t border-gray/15 pt-8 space-y-4">
                 <h2 className="text-xl md:text-2xl font-medium text-sand">
                   {t("blog.labels.referencesTitle")}
@@ -155,7 +175,7 @@ export function BlogArticlePage({
                   {t("blog.labels.referencesNote")}
                 </p>
                 <ol className="space-y-3">
-                  {references.map((reference) => (
+                  {externalReferences.map((reference) => (
                     <li key={reference.url}>
                       <a
                         href={reference.url}
@@ -176,6 +196,25 @@ export function BlogArticlePage({
                     </li>
                   ))}
                 </ol>
+              </div>
+            )}
+
+            {relatedPaths.length > 0 && (
+              <div className="border-t border-gray/15 pt-8 space-y-3">
+                <h2 className="mono-label text-blue">
+                  {t("blog.labels.relatedSolutions")}
+                </h2>
+                <div className="flex flex-wrap gap-2">
+                  {relatedPaths.map((path) => (
+                    <Link
+                      key={path}
+                      to={localizedPath(path, lang)}
+                      className="inline-flex items-center rounded-full border border-gray/25 px-3.5 py-1.5 text-sm text-sand/85 hover:border-blue/50 hover:text-sand transition-colors"
+                    >
+                      {solutionLabel(path, lang)}
+                    </Link>
+                  ))}
+                </div>
               </div>
             )}
           </article>
