@@ -1,7 +1,7 @@
 {
   "home": {
-    "title": "Deepvac: TVAC Systems for Space Qualification",
-    "description": "Modular and custom thermal vacuum systems for qualification, space simulation, retrofit, and engineering, developed and built in Germany."
+    "title": "Thermal Vacuum Chambers & TVAC Systems | Deepvac",
+    "description": "Deepvac designs and manufactures thermal vacuum chambers and TVAC systems in Germany – standard platforms, custom builds, retrofit, and lifecycle support."
   },
   "products": {
     "title": "Thermal Vacuum Chamber Systems | Deepvac",
@@ -64,7 +64,7 @@
     "description": "Join Deepvac and build thermal vacuum systems for aerospace qualification. Engineering positions in Garbsen, Germany."
   },
   "references": {
-    "title": "Projects | Deepvac",
+    "title": "Projects & References: T125 TVAC Chamber | Deepvac",
     "description": "Turnkey thermal vacuum chambers, engineered and built in-house in Garbsen, Germany. Featured build: T125 — 125 l, < 1×10⁻⁷ mbar, LN₂ to −190 °C."
   },
   "contact": {
@@ -92,7 +92,7 @@
     "description": "Source references and attribution for media used on the Deepvac website."
   },
   "thermalVision": {
-    "title": "Deepvac Thermal Vision – Thermal Camera for TVAC | Deepvac",
+    "title": "Thermal Vision – Thermal Camera for TVAC Chambers | Deepvac",
     "description": "Calibrated infrared imaging under high-vacuum conditions. Thermal camera integration for new and existing thermal vacuum chamber systems."
   },
   "questionnaire": {
@@ -133,7 +133,7 @@
   },
   "blogOutgassingBasics": {
     "title": "Outgassing in Vacuum: TML, CVCM, Bake-Out | Deepvac",
-    "description": "Outgassing in vacuum explained: desorption physics, ECSS TML and CVCM screening limits, typical problem materials, bake-out practice and QCM/RGA monitoring."
+    "description": "Outgassing in vacuum explained: desorption physics, ECSS TML and CVCM limits, problem materials, bake-out practice and QCM/RGA monitoring."
   },
   "blogTvacTestTypes": {
     "title": "TVAC Test Types: Cycling, Balance, Bake-Out | Deepvac",
@@ -157,7 +157,7 @@
   },
   "blogPumpingSystemSelection": {
     "title": "TVAC Pumping Systems: Selection Guide | Deepvac",
-    "description": "Vacuum pumping system selection for TVAC chambers: oil-free backing pumps, turbo pumps, roots boosters, cryo traps, sizing drivers and RGA monitoring explained."
+    "description": "Vacuum pumping system selection for TVAC chambers: oil-free backing pumps, turbo pumps, roots boosters, cryo traps, sizing and RGA monitoring."
   },
   "blogCryoShroudsThermalPlates": {
     "title": "Cryo Shrouds & Thermal Plates in TVAC | Deepvac",
@@ -185,7 +185,7 @@
   },
   "blogTvacAutomation": {
     "title": "TVAC Automation: PLC Control and Recipes | Deepvac",
-    "description": "What a modern TVAC control system does: recipe execution, safety interlocks, data logging, alarming and remote monitoring – plus controls retrofit for old."
+    "description": "What a modern TVAC control system does: recipe execution, safety interlocks, data logging, alarms, remote monitoring – and retrofit for legacy chambers."
   },
   "blogCubesatTesting": {
     "title": "CubeSat Thermal Vacuum (TVAC) Testing | Deepvac",

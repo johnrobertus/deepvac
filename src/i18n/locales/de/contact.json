@@ -1,7 +1,7 @@
 {
   "eyebrow": "Kontakt",
-  "title": "Besprechen Sie Ihre Thermalvakuum-Anforderungen",
-  "description": "Ob Sie eine Kammerplattform, eine kundenspezifische TVAC-Konfiguration oder Engineering-Unterstützung für Modernisierung und Integration benötigen – unser Team steht bereit, Ihr Projekt zu besprechen.",
+  "title": "Sprechen wir über Ihr TVAC-Projekt",
+  "description": "Ob Kammerplattform, kundenspezifische TVAC-Konfiguration oder Engineering-Unterstützung für Modernisierung und Integration – wir besprechen Ihr Projekt gern mit Ihnen.",
   "formTitle": "Projektanfrage",
   "formDescription": "Senden Sie uns einen kurzen Überblick – wir leiten Ihre Anfrage direkt an den passenden Spezialisten weiter.",
   "prepareCard": {
@@ -10,7 +10,7 @@
     "items": [
       "Kammergröße und Nutzvolumen",
       "Temperaturbereich und thermisches Profil",
-      "Payload, Masse und Schnittstellen",
+      "Nutzlast, Masse und Schnittstellen",
       "Anwendung oder Teststandard",
       "Zeitrahmen und Projektphase"
     ]
@@ -43,17 +43,17 @@
   },
   "interests": {
     "products": [
-      "Standard TVAC-Serie",
+      "Standard-Serie",
       "Custom TVAC System",
       "Thermal Vision"
     ],
     "services": [
-      "Testleistungen",
+      "Prüfdienstleistungen",
       "Steuerungstechnik",
       "Mechanische Konstruktion",
       "Retrofit & Modernisierung",
       "Wartung & Reparatur",
-      "Subsystemintegration"
+      "Subsystem-Integration"
     ],
     "other": [
       "Noch nicht sicher",
@@ -88,7 +88,7 @@
   },
   "successNew": {
     "title": "Danke — Ihre Anfrage wurde übermittelt.",
-    "body": "Nächster Schritt: Buchen Sie Ihren technischen Intro-Call — Ihre Anforderungen liegen unseren Ingenieuren bereits vor."
+    "body": "Nächster Schritt: Buchen Sie Ihr technisches Erstgespräch – Ihre Anforderungen liegen unseren Ingenieuren bereits vor."
   },
   "validationNew": {
     "interestRequired": "Bitte wählen Sie mindestens einen Interessenbereich aus.",
@@ -137,7 +137,7 @@
       },
       {
         "q": "Wie ist die typische Antwortzeit?",
-        "a": "Deepvac strebt an, auf technische Anfragen innerhalb von zwei Werktagen zu antworten. Komplexe Konfigurationsanfragen können zusätzliche Zeit für eine erste technische Bewertung erfordern."
+        "a": "In der Regel antworten wir innerhalb von zwei Werktagen. Komplexe Konfigurationsanfragen können für eine erste technische Bewertung etwas mehr Zeit benötigen."
       },
       {
         "q": "Kann Deepvac Projekte außerhalb Deutschlands unterstützen?",

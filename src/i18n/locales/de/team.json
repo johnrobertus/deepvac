@@ -1,14 +1,14 @@
 {
   "eyebrow": "Unser Team",
-  "title": "Ingenieurgeführt von Anfang an",
-  "description": "Deepvac wird von Ingenieuren aufgebaut, die ihre Karriere der Entwicklung, Fertigung und Inbetriebnahme von Thermalvakuum-Testsystemen gewidmet haben.",
+  "title": "Von Ingenieuren gegründet und geführt",
+  "description": "Deepvac wird von Ingenieuren aufgebaut, die Thermalvakuum-Testsysteme entwickeln, fertigen und in Betrieb nehmen – aus Überzeugung.",
   "origin": "Deepvac ist als Ausgründungsprojekt an der Leibniz Universität Hannover entstanden und entwickelt auf dem Campus Maschinenbau in Garbsen.",
   "story": {
     "eyebrow": "Unsere Geschichte",
     "title": "Gegründet auf komplementärer Expertise",
     "paragraphs": [
       "Deepvac wurde mit einer klaren Überzeugung gegründet: dass Thermalvakuumsysteme ein Maß an Engineering-Integration erfordern, das die meisten Anlagenbauer nicht liefern. Zu oft werden Kammern isoliert von ihren Steuerungssystemen konstruiert, thermische Subsysteme nachträglich aufgebaut und die Instrumentierung dem Endanwender überlassen.",
-      "Das Gründerteam bringt mehr als 15 Jahre kombinierte Erfahrung in der Entwicklung und Fertigung von Testkammersystemen mit. Durch die Kombination von Elektrotechnik, Mechatronik, Kältetechnik-Expertise und Kammerentwicklungs-Know-how deckt Deepvac den gesamten Systemumfang aus einer Engineering-Quelle ab.",
+      "Das Gründerteam bringt zusammen mehr als 15 Jahre Erfahrung in der Entwicklung und Fertigung von Testkammersystemen mit. Durch die Kombination von Elektrotechnik, Mechatronik, Kältetechnik-Expertise und Kammerentwicklungs-Know-how deckt Deepvac den gesamten Systemumfang aus einem Engineering-Team ab.",
       "Dieser integrierte Ansatz ermöglicht Kammerplattformen, die auf Reproduzierbarkeit, Wartungsfreundlichkeit und langfristigen Betriebswert ausgelegt sind – nicht nur auf die Erstinbetriebnahme."
     ],
     "competenciesTitle": "Kombinierte Kompetenzen",
@@ -33,14 +33,22 @@
     {
       "name": "John Robertus",
       "role": "CEO | Mitgründer",
-      "description": "Elektroingenieur spezialisiert auf KI-Integration für mechatronische Systeme. John bringt tiefgreifende Expertise in Steuerungsarchitektur-Design, intelligenter Automatisierung und systemebenen Integration für komplexe Testumgebungen mit.",
-      "focus": ["Steuerungssysteme & Automatisierung", "KI-gesteuerte Mechatronik", "Systemarchitektur"]
+      "description": "Elektroingenieur, spezialisiert auf KI-Integration für mechatronische Systeme. John bringt fundierte Expertise in Steuerungsarchitektur, intelligenter Automatisierung und Integration auf Systemebene mit.",
+      "focus": [
+        "Steuerungssysteme & Automatisierung",
+        "KI-gesteuerte Mechatronik",
+        "Systemarchitektur"
+      ]
     },
     {
       "name": "Anton Opalikhin",
       "role": "CTO | Mitgründer",
       "description": "Maschinenbauingenieur spezialisiert auf Kältetechnik und Testkammerentwicklung. Anton leitet die Konstruktion und das Engineering von Thermalvakuumkammer-Plattformen, thermischen Subsystemen und mechanischer Integration.",
-      "focus": ["Kammerentwicklung", "Kältetechnik", "Mechanische Konstruktion"]
+      "focus": [
+        "Kammerentwicklung",
+        "Kältetechnik",
+        "Mechanische Konstruktion"
+      ]
     }
   ],
   "philosophy": {
@@ -49,12 +57,12 @@
     "description": "Unser Ansatz zur Thermalvakuumsystem-Auslegung wird von drei Prinzipien geprägt.",
     "items": [
       {
-        "title": "Systemebenen-Denken",
+        "title": "Denken in Systemen",
         "description": "Jede Kammer ist ein System, nicht nur ein Behälter. Wir konstruieren thermische, Vakuum-, Steuerungs- und mechanische Subsysteme als integriertes Ganzes."
       },
       {
         "title": "Ingenieurgeführte Entscheidungen",
-        "description": "Technische Stringenz treibt unsere Architekturentscheidungen. Wir priorisieren Reproduzierbarkeit, Wartungsfreundlichkeit und langfristigen Betriebswert vor kurzfristiger Optimierung."
+        "description": "Architekturentscheidungen treffen wir nach technischen Kriterien. Reproduzierbarkeit, Wartungsfreundlichkeit und langfristiger Nutzen gehen vor kurzfristige Optimierung."
       },
       {
         "title": "Kollaborative Entwicklung",
@@ -66,14 +74,26 @@
     "eyebrow": "Partnerschaft",
     "title": "Warum mit Deepvac arbeiten",
     "items": [
-      { "title": "Eine Engineering-Quelle", "text": "Thermische, Vakuum-, Steuerungs- und mechanische Subsysteme von einem Team mit gemeinsamem Systemverständnis ausgelegt." },
-      { "title": "Voller Lifecycle-Support", "text": "Vom ersten Konzept über Inbetriebnahme, Betrieb, Wartung bis zur Modernisierung." },
-      { "title": "Anwendungsspezifische Auslegung", "text": "Jedes System wird um die Testanforderungen des Kunden konfiguriert – nicht um ein festes Katalogprodukt." },
-      { "title": "Hands-On Engineering-Kultur", "text": "Unsere Gründer sind praktizierende Ingenieure, die direkt in technische Entscheidungen und Kundenprojekte eingebunden bleiben." }
+      {
+        "title": "Ein Team für das Gesamtsystem",
+        "text": "Thermische, Vakuum-, Steuerungs- und mechanische Subsysteme von einem Team mit gemeinsamem Systemverständnis ausgelegt."
+      },
+      {
+        "title": "Voller Lifecycle-Support",
+        "text": "Vom ersten Konzept über Inbetriebnahme, Betrieb, Wartung bis zur Modernisierung."
+      },
+      {
+        "title": "Anwendungsspezifische Auslegung",
+        "text": "Jedes System wird um die Testanforderungen des Kunden konfiguriert – nicht um ein festes Katalogprodukt."
+      },
+      {
+        "title": "Gelebte Engineering-Kultur",
+        "text": "Unsere Gründer sind praktizierende Ingenieure, die direkt in technische Entscheidungen und Kundenprojekte eingebunden bleiben."
+      }
     ]
   },
   "cta": {
     "title": "Interesse an einer Zusammenarbeit?",
-    "description": "Ob Sie ein Thermalvakuumsystem, Engineering-Unterstützung oder eine technische Beratung benötigen – wir möchten mehr über Ihr Projekt erfahren."
+    "description": "Ob Thermalvakuumsystem, Engineering-Unterstützung oder technische Beratung – wir möchten mehr über Ihr Projekt erfahren."
   }
 }
