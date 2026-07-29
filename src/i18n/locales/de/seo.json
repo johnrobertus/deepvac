@@ -37,7 +37,7 @@
   },
   "retrofitModernization": {
     "title": "TVAC Retrofit & Modernisierung | Deepvac",
-    "description": "Technische Upgrades für bestehende Thermalvakuumsysteme zur Verbesserung von Zuverlässigkeit, Sicherheit, Regelgenauigkeit und Lebensdauerwert."
+    "description": "Technische Upgrades für bestehende Thermalvakuumsysteme zur Verbesserung von Zuverlässigkeit, Sicherheit, Regelgenauigkeit und Werterhalt."
   },
   "maintenanceRepair": {
     "title": "TVAC Wartung & Reparatur | Deepvac",
@@ -45,7 +45,7 @@
   },
   "subsystemIntegration": {
     "title": "Subsystem-Integration für TVAC | Deepvac",
-    "description": "Integration von thermischen, Vakuum-, Instrumentierungs- und Steuerungssubsystemen zu kohärenten Testumgebungen."
+    "description": "Integration von thermischen, Vakuum-, Instrumentierungs- und Steuerungssubsystemen zu integrierten Testumgebungen."
   },
   "team": {
     "title": "Unser Team | Deepvac",
@@ -65,7 +65,7 @@
   },
   "references": {
     "title": "Projekte & Referenzen: T125 TVAC-Kammer | Deepvac",
-    "description": "Schlüsselfertige Thermalvakuum-Kammern, entwickelt und gefertigt in Garbsen. Im Fokus: T125 – 125 l, < 1×10⁻⁷ mbar, LN₂ bis −190 °C."
+    "description": "T125 TVAC-Kammer aus Garbsen: 125 l, Arbeitsdruck < 1×10⁻⁶ mbar, Enddruck < 1×10⁻⁷ mbar und LN₂-Kühlung bis −190 °C."
   },
   "contact": {
     "title": "TVAC-Projekt anfragen | Deepvac Kontakt",
