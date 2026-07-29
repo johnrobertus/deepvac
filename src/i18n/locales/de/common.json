@@ -121,7 +121,7 @@
       "phone": "+49 ...",
       "project": "z. B. Satellitenqualifikationskammer, Custom-TVAC-System, Retrofit-Projekt",
       "message": "Beschreiben Sie Ihre Anforderungen...",
-      "messageDetailed": "Beschreiben Sie Ihre Testanforderungen, Kammerspezifikationen oder Integrationsbedürfnisse..."
+      "messageDetailed": "Beschreiben Sie Ihre Testanforderungen, Kammerspezifikationen oder Integrationsanforderungen..."
     },
     "validation": {
       "firstNameRequired": "Vorname ist erforderlich.",

@@ -19,7 +19,7 @@
     "resetConfirmCancel": "Abbrechen",
     "resetConfirmAction": "Zurücksetzen",
     "savePdf": "Kopie als PDF speichern",
-    "savePdfHint": "Optional — öffnet den Druckdialog Ihres Browsers. Mit dem Absenden wird Ihr vollständiger Fragebogen bereits an Deepvac übermittelt.",
+    "savePdfHint": "Optional – öffnet den Druckdialog Ihres Browsers. Mit dem Absenden wird Ihr vollständiger Fragebogen bereits an Deepvac übermittelt.",
     "consentRequired": "Bitte akzeptieren Sie die Datenschutzerklärung, um abzusenden.",
     "missingRequired": "Bitte vervollständigen Sie die Pflichtfelder in Schritt 1.",
     "submitHelp": "Mit dem Absenden geht Ihr vollständiger Fragebogen direkt an Deepvac. Sie müssen keine PDF oder E-Mail manuell senden."
@@ -40,12 +40,12 @@
   },
   "print": {
     "documentTitle": "Deepvac TVAC-Fragebogen",
-    "subtitle": "Thermisches Vakuumsystem — Technische Anfrage",
+    "subtitle": "Thermisches Vakuumsystem – Technische Anfrage",
     "generated": "Erstellt",
     "footer": "Deepvac · info@deepvac.space",
     "yes": "Ja",
     "no": "Nein",
-    "notSpecified": "—"
+    "notSpecified": "–"
   },
   "stepTitles": {
     "s1": "Kontakt",
@@ -302,7 +302,6 @@
       "Vereinigte Staaten",
       "Vereinigtes Königreich",
       "Vietnam",
-      "Weißrussland",
       "Zentralafrikanische Republik",
       "Zypern",
       "Sonstiges / Nicht aufgeführt"
@@ -438,8 +437,8 @@
     ],
     "ramp": "Temperatur-Rampenrate (K/min)",
     "rampOptions": [
-      "0.1",
-      "0.5",
+      "0,1",
+      "0,5",
       "1",
       "2",
       "3",
@@ -450,7 +449,7 @@
     ],
     "uniformity": "Temperatur-Homogenität (±K)",
     "uniformityOptions": [
-      "±0.5",
+      "±0,5",
       "±1",
       "±2",
       "±3",
@@ -470,7 +469,7 @@
     "plateCooling": "Kühl-/Heizart",
     "plateCoolingOptions": [
       "Mechanische Kälte-/Wärmeerzeugung über Chiller oder System",
-      "LN2-/GN2-Kühlung + Widerstandsheizungen",
+      "LN₂-/GN₂-Kühlung + Widerstandsheizungen",
       "Kombiniert / Hybrid"
     ],
     "shroud": "Thermal-Shroud",
@@ -482,7 +481,7 @@
     ],
     "shroudCooling": "Kühl-/Heizart",
     "shroudCoolingOptions": [
-      "LN2-/GN2-gekühlter Shroud",
+      "LN₂-/GN₂-gekühlter Shroud",
       "Widerstandsheizungen",
       "Strahlungsheizungen",
       "Mechanische Kühlung / Heizung über Chiller oder System"
@@ -610,7 +609,7 @@
     "powerMaxPh": "Max. Leistungsaufnahme (kW)",
     "utilities": "Verfügbare Medien",
     "utilitiesOptions": [
-      "LN2-Versorgung vor Ort",
+      "LN₂-Versorgung vor Ort",
       "Druckluft",
       "Kühlwasser",
       "Industrielle Abluft",

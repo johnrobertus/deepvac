@@ -2,7 +2,7 @@
   "hero": {
     "eyebrow": "ENTWICKELT & GEFERTIGT IN DEUTSCHLAND",
     "title": "Modulare & kundenspezifische Thermalvakuumsysteme für die Raumfahrtqualifikation.",
-    "description": "Deepvac entwickelt und fertigt modulare TVAC-Plattformen, kundenspezifische Kammersysteme und Steuerungstechnik aus eigener Entwicklung — für Satellitenhersteller, Raumfahrtzulieferer und Forschungseinrichtungen, die Testinfrastruktur aufbauen, qualifizieren oder modernisieren.",
+    "description": "Deepvac entwickelt und fertigt modulare TVAC-Plattformen, kundenspezifische Kammersysteme und Steuerungstechnik aus eigener Entwicklung – für Satellitenhersteller, Raumfahrtzulieferer und Forschungseinrichtungen, die Testinfrastruktur aufbauen, qualifizieren oder modernisieren.",
     "cues": [
       "STEUERUNG & AUTOMATISIERUNG",
       "RETROFIT & SERVICE",
@@ -14,22 +14,22 @@
       {
         "value": "Intelligenz serienmäßig",
         "label": "KI & Analytik",
-        "detail": "Testanalytik, Anomalie-Erkennung & Predictive Maintenance — inkl. Thermal Vision"
+        "detail": "Testanalytik, Anomalie-Erkennung & Predictive Maintenance – inkl. Thermal Vision"
       },
       {
         "value": "Jede Kammer, jeder Hersteller",
         "label": "Retrofit & Upgrades",
-        "detail": "Modernisierung von Bestands- & Fremdanlagen — von Steuerung bis Vakuumtechnik"
+        "detail": "Modernisierung von Bestands- & Fremdanlagen – von Steuerung bis Vakuumtechnik"
       },
       {
         "value": "Ein Team, ein Ansprechpartner",
         "label": "Gesamter Lebenszyklus",
-        "detail": "Wer Ihr System entwickelt, betreut es — vom Konzept bis in den Betrieb"
+        "detail": "Wer Ihr System entwickelt, betreut es – vom Konzept bis in den Betrieb"
       },
       {
         "value": "Steuerung aus eigenem Haus",
         "label": "Steuerung & Daten",
-        "detail": "Eigene SPS, HMI & Datenerfassung — OPC UA, Modbus, Fernzugriff nativ"
+        "detail": "Eigene SPS, HMI & Datenerfassung – OPC UA, Modbus, Fernzugriff nativ"
       }
     ]
   },
@@ -40,7 +40,7 @@
     "tSeries": {
       "title": "T-Serie TVAC",
       "subtitle": "Kubische Thermalvakuumkammern",
-      "description": "Kubische Thermalvakuumkammern für die Qualifikation, Validierung und Umweltsimulation von Raumfahrthardware. Die kubische Geometrie bietet eine ebene Grundplatte und maximale nutzbare Stellfläche — ideal für Vorrichtungen, optische Bänke und die schnelle Integration planar montierter Hardware.",
+      "description": "Kubische Thermalvakuumkammern für die Qualifikation, Validierung und Umweltsimulation von Raumfahrthardware. Die kubische Geometrie bietet eine ebene Grundplatte und maximale nutzbare Stellfläche – ideal für Vorrichtungen, optische Bänke und die schnelle Integration planar montierter Hardware.",
       "overlays": [
         "Kubische Geometrie",
         "Standard-Serie",
@@ -70,7 +70,7 @@
     "cSeries": {
       "title": "C-Serie TVAC",
       "subtitle": "Zylindrische Thermalvakuumkammern",
-      "description": "Zylindrische Thermalvakuumkammern für die Qualifikation, Validierung und Umweltsimulation von Raumfahrthardware. Die zylindrische Geometrie bietet einen inhärent druckstabilen Behälter mit effizienter, homogener Shroud-Abdeckung — ideal für größere Volumina und radiative Thermal-Balance-Tests.",
+      "description": "Zylindrische Thermalvakuumkammern für die Qualifikation, Validierung und Umweltsimulation von Raumfahrthardware. Die zylindrische Geometrie bietet einen inhärent druckstabilen Behälter mit effizienter, homogener Shroud-Abdeckung – ideal für größere Volumina und radiative Thermal-Balance-Tests.",
       "overlays": [
         "Zylindrische Geometrie",
         "Standard-Serie",
@@ -162,7 +162,7 @@
   "services": {
     "eyebrow": "Technologie & Leistungen",
     "title": "Technologie & Leistungen über den gesamten TVAC-Lebenszyklus",
-    "description": "Jedes Deepvac-System vereint Kammerplattform, Thermalsystem und Vakuumtechnik in einer integrierten Architektur. Darauf aufbauend entwickelt Deepvac neue Kammersysteme, modernisiert Bestandsanlagen und hält Testinfrastruktur im Betrieb — von der Subsystem-Integration bis zum langfristigen Lifecycle-Support.",
+    "description": "Jedes Deepvac-System vereint Kammerplattform, Thermalsystem und Vakuumtechnik in einer integrierten Architektur. Darauf aufbauend entwickelt Deepvac neue Kammersysteme, modernisiert Bestandsanlagen und hält Testinfrastruktur im Betrieb – von der Subsystem-Integration bis zum langfristigen Lifecycle-Support.",
     "tech": [
       {
         "label": "Kerntechnologie",
@@ -184,7 +184,7 @@
       {
         "label": "Kampagnenunterstützung",
         "title": "Prüfdienstleistungen",
-        "description": "Engineering- und Betriebsunterstützung für Qualifikations-, Validierungs- und Entwicklungskampagnen — von Aufbau und Vorbereitung bis zur stabilen, reproduzierbaren Durchführung."
+        "description": "Engineering- und Betriebsunterstützung für Qualifikations-, Validierungs- und Entwicklungskampagnen – von Aufbau und Vorbereitung bis zur stabilen, reproduzierbaren Durchführung."
       },
       {
         "label": "Steuerungsarchitektur",
@@ -216,7 +216,7 @@
   "whyDeepvac": {
     "eyebrow": "Warum Deepvac",
     "title": "Kammer, Steuerung und Service aus einer Hand",
-    "description": "Deepvac ist Systemanbieter: Kammerhardware, Thermalsystem, Vakuumtechnik und Steuerung stammen aus einer Entwicklung — mit einem verantwortlichen Engineering-Team von der Spezifikation bis zum laufenden Betrieb.",
+    "description": "Deepvac ist Systemanbieter: Kammerhardware, Thermalsystem, Vakuumtechnik und Steuerung stammen aus einer Entwicklung – mit einem verantwortlichen Engineering-Team von der Spezifikation bis zum laufenden Betrieb.",
     "items": [
       {
         "title": "Modulare Plattformen & Custom-Systeme",
@@ -228,7 +228,7 @@
       },
       {
         "title": "Steuerungstechnik aus eigener Entwicklung",
-        "description": "Die Steuerungs- und Automatisierungsarchitektur wird bei Deepvac selbst entwickelt — vollständig dokumentiert, anpassbar an Ihre Prüfabläufe und über den gesamten Systemlebenszyklus erweiterbar. Keine zugekaufte Blackbox."
+        "description": "Die Steuerungs- und Automatisierungsarchitektur wird bei Deepvac selbst entwickelt – vollständig dokumentiert, anpassbar an Ihre Prüfabläufe und über den gesamten Systemlebenszyklus erweiterbar. Keine zugekaufte Blackbox."
       },
       {
         "title": "Ausgelegt für Qualifikationsprüfungen",
