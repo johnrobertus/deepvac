@@ -90,16 +90,6 @@ const References = () => {
               </ul>
             </div>
           </div>
-          <div className="mt-8 bento-card rounded-lg overflow-hidden">
-            <img
-              src="/images/t125-garbsen-2.webp"
-              alt={t("featured.bannerAlt")}
-              width={1350}
-              height={1800}
-              loading="lazy"
-              className="w-full max-h-[480px] object-cover block"
-            />
-          </div>
         </Section>
 
         <Section>
