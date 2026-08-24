@@ -9,6 +9,9 @@ import { trackEvent } from "@/lib/analytics";
 import { BookCallDialog } from "@/components/BookCallDialog";
 import existFundingHeroEn from "@/assets/exist-funding-hero-en.jpg";
 import existFundingHeroDe from "@/assets/exist-funding-hero-de.png";
+import deepvacLogo from "@/assets/deepvac-logo.png";
+import itvLogo from "@/assets/itv-logo.png";
+import luhLogo from "@/assets/luh-logo-light.svg";
 
 const slides = [
   { video: "/videos/hero-slide-1.mp4", poster: "/videos/hero-slide-1-poster.jpg" },
