@@ -9,6 +9,9 @@ import { trackEvent } from "@/lib/analytics";
 import { BookCallDialog } from "@/components/BookCallDialog";
 import existFundingHeroEn from "@/assets/exist-funding-hero-en.jpg";
 import existFundingHeroDe from "@/assets/exist-funding-hero-de.png";
+import deepvacLogo from "@/assets/deepvac-logo.png";
+import itvLogo from "@/assets/itv-logo.png";
+import luhLogo from "@/assets/luh-logo-light.svg";
 
 const slides = [
   { video: "/videos/hero-slide-1.mp4", poster: "/videos/hero-slide-1-poster.jpg" },
@@ -303,6 +306,54 @@ export function HeroSection() {
                         {cue}
                       </span>
                     ))}
+                </div>
+              </Reveal>
+
+              <Reveal delay={300}>
+                <div className="mt-2.5 flex flex-col gap-3.5 border-t border-sand/15 pt-5">
+                  <span className="font-mono text-[10.5px] uppercase tracking-[0.18em] text-gray">
+                    {t("hero.spinoffLabel")}
+                  </span>
+                  <div className="flex flex-wrap items-center gap-x-5 gap-y-3 sm:gap-x-6">
+                    <img
+                      src={deepvacLogo}
+                      alt="Deepvac"
+                      className="h-5 w-auto sm:h-[26px]"
+                    />
+                    <span className="font-mono text-[15px] text-gray" aria-hidden="true">
+                      ×
+                    </span>
+                    <a
+                      href="https://www.itv.uni-hannover.de/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Institut für Technische Verbrennung, Leibniz Universität Hannover"
+                      className="opacity-[0.88] transition-opacity duration-200 hover:opacity-100"
+                    >
+                      <img
+                        src={itvLogo}
+                        alt="Institut für Technische Verbrennung"
+                        className="h-9 w-auto sm:h-[46px]"
+                        style={{ filter: "brightness(0) invert(1)" }}
+                      />
+                    </a>
+                    <span className="font-mono text-[15px] text-gray" aria-hidden="true">
+                      +
+                    </span>
+                    <a
+                      href="https://www.uni-hannover.de/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Leibniz Universität Hannover"
+                      className="opacity-[0.88] transition-opacity duration-200 hover:opacity-100"
+                    >
+                      <img
+                        src={luhLogo}
+                        alt="Leibniz Universität Hannover"
+                        className="h-8 w-auto sm:h-10"
+                      />
+                    </a>
+                  </div>
                 </div>
               </Reveal>
             </div>
