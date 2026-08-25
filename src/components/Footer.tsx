@@ -7,6 +7,8 @@ import { localizedPath } from "@/lib/routes";
 import { PrivacySettingsDialog } from "@/components/PrivacySettingsDialog";
 import { Button } from "@/components/ui/button";
 import deepvacLogo from "@/assets/deepvac-logo.png";
+import itvLogo from "@/assets/itv-logo.png";
+import luhLogo from "@/assets/luh-logo-light.svg";
 
 export function Footer() {
   const { t } = useTranslation("common");
