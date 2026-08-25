@@ -112,6 +112,42 @@ export function Footer() {
                 <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </a>
             </div>
+
+            <div className="space-y-3 border-t border-gray/15 pt-4">
+              <span className="mono-label text-[10.5px] uppercase tracking-[0.18em] text-gray">
+                {t("footer.spinoffLabel")}
+              </span>
+              <div className="flex flex-wrap items-center gap-x-5 gap-y-3">
+                <a
+                  href="https://www.itv.uni-hannover.de/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Institut für Technische Verbrennung, Leibniz Universität Hannover"
+                  className="opacity-88 transition-opacity duration-200 hover:opacity-100"
+                >
+                  <img
+                    src={itvLogo}
+                    alt="Institut für Technische Verbrennung"
+                    className="h-8 w-auto sm:h-10"
+                    style={{ filter: "brightness(0) invert(1)" }}
+                  />
+                </a>
+                <span className="hidden h-6 w-px bg-white/18 sm:block" aria-hidden="true" />
+                <a
+                  href="https://www.uni-hannover.de/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Leibniz Universität Hannover"
+                  className="opacity-88 transition-opacity duration-200 hover:opacity-100"
+                >
+                  <img
+                    src={luhLogo}
+                    alt="Leibniz Universität Hannover"
+                    className="h-7 w-auto sm:h-9"
+                  />
+                </a>
+              </div>
+            </div>
           </div>
 
           {Object.entries(footerNav).map(([section, links]) => (
