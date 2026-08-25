@@ -37,7 +37,8 @@
     "ctaEyebrow": "Ready for mission success?",
     "ctaTitle": "Let's evaluate your testing environment.",
     "ctaDescription": "Submit your chamber, qualification, or retrofit requirements through the technical questionnaire. Our engineering team will review the specification and respond within two business days.",
-    "ctaSecondary": "Open Technical Questionnaire"
+    "ctaSecondary": "Open Technical Questionnaire",
+    "spinoffLabel": "A spin-off of"
   },
   "cta": {
     "questionnaire": {
