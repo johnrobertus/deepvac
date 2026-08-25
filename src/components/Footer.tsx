@@ -135,12 +135,12 @@ export function Footer() {
         aria-label={t("footer.spinoffLabel")}
         className="border-y border-gray/15 bg-gradient-to-b from-surface to-background/30"
       >
-        <div className="container-wide py-8 md:py-10">
-          <div className="flex flex-col items-center gap-4 text-center sm:flex-row sm:justify-center sm:gap-6">
-            <span className="mono-label text-[10.5px] uppercase tracking-[0.18em] text-gray">
+        <div className="container-wide py-10 md:py-14">
+          <div className="flex flex-col items-center gap-5 text-center sm:flex-row sm:justify-center sm:gap-8">
+            <span className="mono-label text-xs uppercase tracking-[0.18em] text-gray">
               {t("footer.spinoffLabel")}
             </span>
-            <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
+            <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
               <a
                 href="https://www.itv.uni-hannover.de/"
                 target="_blank"
@@ -151,11 +151,11 @@ export function Footer() {
                 <img
                   src={itvLogo}
                   alt="Institut für Technische Verbrennung"
-                  className="h-10 w-auto sm:h-12"
+                  className="h-14 w-auto sm:h-[72px]"
                   style={{ filter: "brightness(0) invert(1)" }}
                 />
               </a>
-              <span className="hidden h-8 w-px bg-white/18 sm:block" aria-hidden="true" />
+              <span className="hidden h-12 w-px bg-white/18 sm:block" aria-hidden="true" />
               <a
                 href="https://www.uni-hannover.de/"
                 target="_blank"
@@ -166,7 +166,7 @@ export function Footer() {
                 <img
                   src={luhLogo}
                   alt="Leibniz Universität Hannover"
-                  className="h-9 w-auto sm:h-11"
+                  className="h-12 w-auto sm:h-[66px]"
                 />
               </a>
             </div>
