@@ -131,6 +131,54 @@ export function Footer() {
         </div>
       </div>
 
+      <section
+        aria-label={t("footer.spinoffLabel")}
+        className="border-y border-gray/15 bg-gradient-to-b from-surface to-background/30"
+      >
+        <div className="container-wide py-8 md:py-10">
+          <div className="flex flex-col items-start gap-5 md:flex-row md:items-center md:justify-between">
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-5">
+              <span className="mono-label text-[10.5px] uppercase tracking-[0.18em] text-gray">
+                {t("footer.spinoffLabel")}
+              </span>
+              <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
+                <a
+                  href="https://www.itv.uni-hannover.de/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Institut für Technische Verbrennung, Leibniz Universität Hannover"
+                  className="opacity-88 transition-opacity duration-200 hover:opacity-100"
+                >
+                  <img
+                    src={itvLogo}
+                    alt="Institut für Technische Verbrennung"
+                    className="h-10 w-auto sm:h-12"
+                    style={{ filter: "brightness(0) invert(1)" }}
+                  />
+                </a>
+                <span className="hidden h-8 w-px bg-white/18 sm:block" aria-hidden="true" />
+                <a
+                  href="https://www.uni-hannover.de/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Leibniz Universität Hannover"
+                  className="opacity-88 transition-opacity duration-200 hover:opacity-100"
+                >
+                  <img
+                    src={luhLogo}
+                    alt="Leibniz Universität Hannover"
+                    className="h-9 w-auto sm:h-11"
+                  />
+                </a>
+              </div>
+            </div>
+            <p className="max-w-md text-[15px] leading-relaxed text-gray">
+              {t("footer.description")}
+            </p>
+          </div>
+        </div>
+      </section>
+
       <div className="border-t border-gray/15 py-5">
         <div className="container-wide flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <p className="font-mono text-[13px] text-gray">{t("footer.copyright", { year: new Date().getFullYear() })}</p>
