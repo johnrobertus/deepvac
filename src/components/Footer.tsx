@@ -112,42 +112,6 @@ export function Footer() {
                 <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </a>
             </div>
-
-            <div className="space-y-3 border-t border-gray/15 pt-4">
-              <span className="mono-label text-[10.5px] uppercase tracking-[0.18em] text-gray">
-                {t("footer.spinoffLabel")}
-              </span>
-              <div className="flex flex-wrap items-center gap-x-5 gap-y-3">
-                <a
-                  href="https://www.itv.uni-hannover.de/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Institut für Technische Verbrennung, Leibniz Universität Hannover"
-                  className="opacity-88 transition-opacity duration-200 hover:opacity-100"
-                >
-                  <img
-                    src={itvLogo}
-                    alt="Institut für Technische Verbrennung"
-                    className="h-8 w-auto sm:h-10"
-                    style={{ filter: "brightness(0) invert(1)" }}
-                  />
-                </a>
-                <span className="hidden h-6 w-px bg-white/18 sm:block" aria-hidden="true" />
-                <a
-                  href="https://www.uni-hannover.de/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Leibniz Universität Hannover"
-                  className="opacity-88 transition-opacity duration-200 hover:opacity-100"
-                >
-                  <img
-                    src={luhLogo}
-                    alt="Leibniz Universität Hannover"
-                    className="h-7 w-auto sm:h-9"
-                  />
-                </a>
-              </div>
-            </div>
           </div>
 
           {Object.entries(footerNav).map(([section, links]) => (
@@ -166,6 +130,49 @@ export function Footer() {
           ))}
         </div>
       </div>
+
+      <section
+        aria-label={t("footer.spinoffLabel")}
+        className="border-y border-gray/15 bg-gradient-to-b from-surface to-background/30"
+      >
+        <div className="container-wide py-8 md:py-10">
+          <div className="flex flex-col items-center gap-4 text-center sm:flex-row sm:justify-center sm:gap-6">
+            <span className="mono-label text-[10.5px] uppercase tracking-[0.18em] text-gray">
+              {t("footer.spinoffLabel")}
+            </span>
+            <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
+              <a
+                href="https://www.itv.uni-hannover.de/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Institut für Technische Verbrennung, Leibniz Universität Hannover"
+                className="opacity-88 transition-opacity duration-200 hover:opacity-100"
+              >
+                <img
+                  src={itvLogo}
+                  alt="Institut für Technische Verbrennung"
+                  className="h-10 w-auto sm:h-12"
+                  style={{ filter: "brightness(0) invert(1)" }}
+                />
+              </a>
+              <span className="hidden h-8 w-px bg-white/18 sm:block" aria-hidden="true" />
+              <a
+                href="https://www.uni-hannover.de/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Leibniz Universität Hannover"
+                className="opacity-88 transition-opacity duration-200 hover:opacity-100"
+              >
+                <img
+                  src={luhLogo}
+                  alt="Leibniz Universität Hannover"
+                  className="h-9 w-auto sm:h-11"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <div className="border-t border-gray/15 py-5">
         <div className="container-wide flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
