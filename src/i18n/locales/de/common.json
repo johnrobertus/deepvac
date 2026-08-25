@@ -37,7 +37,8 @@
     "ctaEyebrow": "Bereit für Ihre nächste Testkampagne?",
     "ctaTitle": "Sprechen wir über Ihre Testanforderungen.",
     "ctaDescription": "Übermitteln Sie Ihre Anforderungen an Kammer, Qualifikation oder Retrofit über den technischen Fragebogen. Unser Engineering-Team prüft die Spezifikation und meldet sich innerhalb von zwei Werktagen.",
-    "ctaSecondary": "Technischen Fragebogen öffnen"
+    "ctaSecondary": "Technischen Fragebogen öffnen",
+    "spinoffLabel": "Ein Spin-off von"
   },
   "cta": {
     "questionnaire": {
