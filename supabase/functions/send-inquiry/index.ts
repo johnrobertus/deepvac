@@ -441,7 +441,16 @@ Deno.serve(async (req) => {
       );
     }
 
+    // Acknowledgement to submitter (never breaks the main flow)
+    await sendAcknowledgement({
+      email, language, kind: "inquiry", source,
+      firstName, lastName, company, country,
+      interests: interests.join(", "),
+      projectStage, timeline, message,
+    });
+
     // Log success
+
     await logInquiry(supabaseAdmin, {
       ip_address: ip, user_agent: userAgent,
       status: "success", reason: null,
@@ -606,8 +615,18 @@ async function handleQuestionnaire(
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } });
   }
 
+  // Acknowledgement to submitter (never breaks the main flow)
+  await sendAcknowledgement({
+    email, language, kind: "questionnaire", source,
+    firstName, lastName, company,
+    application: sanitize(d.application, 100),
+    delivery: sanitize(d.delivery, 50),
+    phase: sanitize(d.phase, 60),
+  });
+
   await logInquiry(supabaseAdmin, {
     ip_address: ip, user_agent: userAgent,
+
     status: "success", reason: null,
     email, payload_hash: payloadHash, source,
   });
@@ -1046,4 +1065,180 @@ function escapeHtml(str: string): string {
 
 function row(label: string, value: string): string {
   return `<tr><td style="padding:6px 12px;font-weight:bold;border:1px solid #eee;">${label}</td><td style="padding:6px 12px;border:1px solid #eee;">${escapeHtml(value)}</td></tr>`;
+}
+
+// ============================================================
+// SUBMITTER ACKNOWLEDGEMENT EMAIL (additive, never breaks main flow)
+// ============================================================
+interface AckParams {
+  email: string;
+  language: "en" | "de";
+  kind: "inquiry" | "questionnaire";
+  source: string;
+  firstName: string;
+  lastName: string;
+  company?: string;
+  country?: string;
+  interests?: string;
+  projectStage?: string;
+  timeline?: string;
+  message?: string;
+  application?: string;
+  delivery?: string;
+  phase?: string;
+}
+
+function ackRow(label: string, value: string): string {
+  if (!value) return "";
+  return `<tr>
+    <td style="padding:6px 12px;font-weight:600;border:1px solid #eee;width:38%;vertical-align:top;color:#22282E;">${escapeHtml(label)}</td>
+    <td style="padding:6px 12px;border:1px solid #eee;color:#22282E;">${escapeHtml(value).replace(/\n/g, "<br/>")}</td>
+  </tr>`;
+}
+
+async function sendAcknowledgement(params: AckParams): Promise<void> {
+  try {
+    const src = (params.source || "").toLowerCase();
+    const to = (params.email || "").trim();
+    if (src.startsWith("healthcheck")) return;
+    if (to.toLowerCase() === "monitoring@deepvac.space") return;
+    if (!to) return;
+
+    const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY");
+    if (!RESEND_API_KEY) return;
+
+    const de = params.language === "de";
+    const isQ = params.kind === "questionnaire";
+    const name = `${params.firstName} ${params.lastName}`.trim();
+
+    let msg = params.message || "";
+    if (msg.length > 1500) msg = msg.slice(0, 1500) + "…";
+
+    const subject = isQ
+      ? (de ? "Deepvac: Ihr TVAC-Fragebogen ist bei uns eingegangen"
+            : "Deepvac: we have received your TVAC questionnaire")
+      : (de ? "Deepvac: Ihre Anfrage ist bei uns eingegangen"
+            : "Deepvac: we have received your inquiry");
+
+    const greeting = de ? `Guten Tag ${name},` : `Dear ${name},`;
+
+    const paragraphs: string[] = de
+      ? (isQ
+        ? [
+            "vielen Dank, dass Sie unseren technischen TVAC-Fragebogen ausgefüllt haben. Er ist bei uns eingegangen und wird sorgfältig geprüft.",
+            "Der Fragebogen gibt uns ein detailliertes Bild Ihrer Anforderungen und erlaubt uns ein fundiertes Angebot. In der Regel melden wir uns innerhalb von 5 Werktagen bei Ihnen, entweder mit einem Angebot oder mit einem Zwischenstand zur Bearbeitung. Sollten wir vorab Details klären müssen, kommen wir mit konkreten Rückfragen auf Sie zu.",
+            "Falls Ihre Anfrage dringend ist oder Sie noch Angaben ergänzen möchten, antworten Sie einfach auf diese E-Mail oder rufen Sie uns an unter +49 157 830 270 99.",
+          ]
+        : [
+            "vielen Dank für Ihre Anfrage. Sie ist bei uns eingegangen und wird sorgfältig geprüft.",
+            "Da wir jedes Thermal-Vakuum-Projekt individuell anhand der technischen Anforderungen bewerten, nehmen wir uns für die Antwort etwas Zeit. In der Regel melden wir uns innerhalb von 5 Werktagen bei Ihnen, entweder mit einem Angebot oder mit einem Zwischenstand zur Bearbeitung.",
+            "Falls Ihre Anfrage dringend ist oder Sie noch Angaben ergänzen möchten, antworten Sie einfach auf diese E-Mail oder rufen Sie uns an unter +49 157 830 270 99.",
+          ])
+      : (isQ
+        ? [
+            "Thank you for completing our technical TVAC questionnaire. It has reached us and we will review it carefully.",
+            "The questionnaire gives us a detailed picture of your requirements, which lets us prepare a well-founded proposal. You can usually expect to hear from us within 5 business days, either with a quotation or with an update on the status of your request. Where we need to clarify details first, we will contact you with specific questions.",
+            "If your inquiry is urgent or you would like to add anything, simply reply to this email or call us at +49 157 830 270 99.",
+          ]
+        : [
+            "Thank you for your inquiry. It has reached us and we will review it carefully.",
+            "Every thermal vacuum project is assessed individually against its technical requirements, so we take a little time before we respond. You can usually expect to hear from us within 5 business days, either with a quotation or with an update on the status of your request.",
+            "If your inquiry is urgent or you would like to add anything, simply reply to this email or call us at +49 157 830 270 99.",
+          ]);
+
+    const summaryHeading = isQ
+      ? (de ? "Zusammenfassung" : "Summary")
+      : (de ? "Zusammenfassung Ihrer Anfrage" : "Summary of your inquiry");
+
+    const pairs: Array<[string, string]> = isQ
+      ? [
+          [de ? "Unternehmen" : "Company", params.company || ""],
+          [de ? "Anwendungsfeld" : "Application field", params.application || ""],
+          [de ? "Gewünschte Lieferzeit" : "Requested delivery", params.delivery || ""],
+          [de ? "Projektphase" : "Project phase", params.phase || ""],
+        ]
+      : [
+          [de ? "Unternehmen" : "Company", params.company || ""],
+          [de ? "Land" : "Country", params.country || ""],
+          [de ? "Interessensbereiche" : "Areas of interest", params.interests || ""],
+          [de ? "Projektphase" : "Project stage", params.projectStage || ""],
+          [de ? "Zeitrahmen" : "Timeline", params.timeline || ""],
+          [de ? "Nachricht" : "Message", msg],
+        ];
+
+    const rows = pairs.map(([l, v]) => ackRow(l, v)).filter(Boolean).join("");
+    const summaryHtml = rows
+      ? `<h2 style="font-size:15px;margin:24px 0 8px;color:#22282E;">${escapeHtml(summaryHeading)}</h2>
+         <table style="border-collapse:collapse;width:100%;font-size:13px;">${rows}</table>`
+      : "";
+
+    const signature = de
+      ? ["Mit freundlichen Grüßen", "John Robertus", "Geschäftsführer, Deepvac GmbH"]
+      : ["Best regards", "John Robertus", "CEO, Deepvac GmbH"];
+
+    const footerLines = de
+      ? [
+          "Deepvac GmbH · An der Universität 1 · 30823 Garbsen",
+          "+49 157 830 270 99 · info@deepvac.space · deepvac.space",
+          "Geschäftsführer: John Robertus · Sitz: Hannover · Amtsgericht Hannover, HRB 230263",
+        ]
+      : [
+          "Deepvac GmbH · An der Universität 1 · 30823 Garbsen · Germany",
+          "+49 157 830 270 99 · info@deepvac.space · deepvac.space",
+          "Managing Director: John Robertus · Registered office: Hannover · Amtsgericht Hannover, HRB 230263",
+        ];
+
+    const notice = de
+      ? "Diese Bestätigung wurde automatisch versendet. Antworten erreichen uns unter info@deepvac.space."
+      : "This confirmation was sent automatically. Replies reach us at info@deepvac.space.";
+
+    const html = `<div style="font-family:Arial,sans-serif;color:#22282E;max-width:640px;line-height:1.5;font-size:14px;">
+  <p>${escapeHtml(greeting)}</p>
+  ${paragraphs.map((p) => `<p>${escapeHtml(p)}</p>`).join("\n  ")}
+  ${summaryHtml}
+  <p style="margin-top:24px;">${signature.map((s) => escapeHtml(s)).join("<br/>")}</p>
+  <hr style="border:none;border-top:1px solid #e5e8eb;margin:24px 0 12px;"/>
+  <p style="color:#66727D;font-size:12px;line-height:1.5;">${footerLines.map((s) => escapeHtml(s)).join("<br/>")}</p>
+  <p style="color:#888;font-size:11px;">${escapeHtml(notice)}</p>
+</div>`;
+
+    const textParts = [
+      greeting,
+      "",
+      ...paragraphs.flatMap((p) => [p, ""]),
+    ];
+    const textPairs = pairs.filter(([, v]) => v);
+    if (textPairs.length) {
+      textParts.push(summaryHeading, ...textPairs.map(([l, v]) => `${l}: ${v}`), "");
+    }
+    textParts.push(...signature, "", ...footerLines, "", notice);
+    const text = textParts.join("\n");
+
+    const ackRes = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${RESEND_API_KEY}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        from: "Deepvac GmbH <info@deepvac.space>",
+        to: [to],
+        reply_to: "info@deepvac.space",
+        subject,
+        html,
+        text,
+        headers: {
+          "Auto-Submitted": "auto-replied",
+          "X-Auto-Response-Suppress": "All",
+        },
+      }),
+    });
+
+    if (!ackRes.ok) {
+      const body = await ackRes.text();
+      console.error("Acknowledgement email failed:", ackRes.status, body);
+    }
+  } catch (err) {
+    console.error("Acknowledgement email failed:", err);
+  }
 }
