@@ -441,7 +441,16 @@ Deno.serve(async (req) => {
       );
     }
 
+    // Acknowledgement to submitter (never breaks the main flow)
+    await sendAcknowledgement({
+      email, language, kind: "inquiry", source,
+      firstName, lastName, company, country,
+      interests: interests.join(", "),
+      projectStage, timeline, message,
+    });
+
     // Log success
+
     await logInquiry(supabaseAdmin, {
       ip_address: ip, user_agent: userAgent,
       status: "success", reason: null,
