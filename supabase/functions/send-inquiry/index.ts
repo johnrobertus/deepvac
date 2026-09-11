@@ -615,7 +615,17 @@ async function handleQuestionnaire(
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } });
   }
 
+  // Acknowledgement to submitter (never breaks the main flow)
+  await sendAcknowledgement({
+    email, language, kind: "questionnaire", source,
+    firstName, lastName, company,
+    application: sanitize(d.application, 100),
+    delivery: sanitize(d.delivery, 50),
+    phase: sanitize(d.phase, 60),
+  });
+
   await logInquiry(supabaseAdmin, {
+
     ip_address: ip, user_agent: userAgent,
     status: "success", reason: null,
     email, payload_hash: payloadHash, source,
