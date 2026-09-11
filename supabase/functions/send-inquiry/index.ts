@@ -625,8 +625,8 @@ async function handleQuestionnaire(
   });
 
   await logInquiry(supabaseAdmin, {
-
     ip_address: ip, user_agent: userAgent,
+
     status: "success", reason: null,
     email, payload_hash: payloadHash, source,
   });
