@@ -210,5 +210,9 @@
   "blogTvacLeadTimes": {
     "title": "TVAC Chamber Lead Time: What Drives It | Deepvac",
     "description": "Vacuum chamber lead time explained: engineering, long-lead pumps and chillers, vessel fabrication, acceptance and commissioning – and what customers control."
+  },
+  "blogTvacMaintenance": {
+    "title": "TVAC Chamber Maintenance: Preventive Guide | Deepvac",
+    "description": "Preventive maintenance for thermal vacuum chambers: seals, pumps, LN₂ system, gauge and sensor calibration, controls obsolescence, typical intervals and records."
   }
 }

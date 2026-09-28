@@ -210,5 +210,9 @@
   "blogTvacLeadTimes": {
     "title": "Lieferzeit Vakuumkammer: Was sie bestimmt | Deepvac",
     "description": "Lieferzeit Vakuumkammer erklärt: Engineering, Langläufer wie Pumpen und Kältetechnik, Behälterfertigung, Abnahme und Inbetriebnahme – und Ihre Stellhebel."
+  },
+  "blogTvacMaintenance": {
+    "title": "TVAC-Kammer Wartung: Leitfaden | Deepvac",
+    "description": "Vorbeugende Wartung von Thermalvakuumkammern: Dichtungen, Pumpen, LN₂-System, Kalibrierung von Messgeräten, Obsoleszenz der Steuerung, typische Intervalle und Nachweise."
   }
 }
