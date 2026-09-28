@@ -968,6 +968,19 @@
     }
   },
   {
+    "en": "/resources/blog/tvac-chamber-maintenance",
+    "de": "/de/ressourcen/blog/tvac-kammer-wartung",
+    "seoKey": "blogTvacMaintenance",
+    "sitemap": {
+      "group": "resources",
+      "priority": 0.55,
+      "changefreq": "monthly",
+      "sources": [
+        "src/content/blog"
+      ]
+    }
+  },
+  {
     "en": "/careers",
     "de": "/de/karriere",
     "seoKey": "careers",
