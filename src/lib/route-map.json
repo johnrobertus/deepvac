@@ -981,6 +981,17 @@
     }
   },
   {
+    "en": "/resources/blog/tvac-chamber-specification",
+    "de": "/de/ressourcen/blog/tvac-kammer-lastenheft",
+    "seoKey": "blogTvacChamberSpecification",
+    "sitemap": {
+      "group": "resources",
+      "priority": 0.55,
+      "changefreq": "monthly",
+      "sources": ["src/content/blog"]
+    }
+  },
+  {
     "en": "/careers",
     "de": "/de/karriere",
     "seoKey": "careers",
