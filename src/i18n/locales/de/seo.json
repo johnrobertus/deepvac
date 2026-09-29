@@ -214,5 +214,9 @@
   "blogTvacMaintenance": {
     "title": "TVAC-Kammer Wartung: Leitfaden | Deepvac",
     "description": "Vorbeugende Wartung von Thermalvakuumkammern: Dichtungen, Pumpen, LN₂-System, Kalibrierung von Messgeräten, Obsoleszenz der Steuerung, typische Intervalle und Nachweise."
+  },
+  "blogTvacChamberSpecification": {
+    "title": "TVAC-Kammer-Lastenheft richtig schreiben | Deepvac",
+    "description": "Thermalvakuumkammer so spezifizieren, dass Angebote vergleichbar werden: Vakuum-, Thermal-, Schnittstellen- und Verifikationsanforderungen und was wegbleiben kann."
   }
 }

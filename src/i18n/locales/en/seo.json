@@ -214,5 +214,9 @@
   "blogTvacMaintenance": {
     "title": "TVAC Chamber Maintenance: Preventive Guide | Deepvac",
     "description": "Preventive maintenance for thermal vacuum chambers: seals, pumps, LN₂ system, gauge and sensor calibration, controls obsolescence, typical intervals and records."
+  },
+  "blogTvacChamberSpecification": {
+    "title": "Writing a TVAC Chamber Specification | Deepvac",
+    "description": "How to specify a thermal vacuum chamber so that quotes are comparable: pressure, thermal, interface and verification requirements, and what to leave out."
   }
 }
