@@ -127,7 +127,7 @@ const Careers = () => {
         <Section>
           <SectionHeader eyebrow={t("opportunities.eyebrow")} title={t("opportunities.title")} description={t("opportunities.description")} className="mb-10" />
           <a
-            href="mailto:careers@deepvac.space?subject=General%20Application"
+            href="mailto:info@deepvac.space?subject=General%20Application"
             className="bento-card rounded-lg p-6 flex flex-col lg:flex-row lg:items-start gap-6 lg:gap-10 cursor-pointer group block"
           >
             <div className="flex-1 space-y-4">
@@ -210,7 +210,7 @@ const Careers = () => {
         <CTABand title={t("cta.title")} description={t("cta.description")}>
           <div className="flex flex-col sm:flex-row gap-3">
             <Button asChild>
-              <a href="mailto:careers@deepvac.space?subject=Careers%20at%20Deepvac">{tc("buttons.emailUs")}</a>
+              <a href="mailto:info@deepvac.space?subject=Careers%20at%20Deepvac">{tc("buttons.emailUs")}</a>
             </Button>
             <Button asChild variant="outline">
               <Link to={localizedPath("/contact", lang)}>{tc("buttons.contactPage")}</Link>
