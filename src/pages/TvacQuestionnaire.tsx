@@ -644,16 +644,16 @@ export default function TvacQuestionnaire() {
           <div className="space-y-6">
             <FieldGroup cols={2}>
               <div className="space-y-2">
-                <MonoLabel>{t("s2.shape")}</MonoLabel>
-                <select className={baseSelect} value={form.chamberShape} onChange={(e) => set("chamberShape")(e.target.value as FormState["chamberShape"])}>
+                <MonoLabel htmlFor="q-chamber-shape">{t("s2.shape")}</MonoLabel>
+                <select id="q-chamber-shape" className={baseSelect} value={form.chamberShape} onChange={(e) => set("chamberShape")(e.target.value as FormState["chamberShape"])}>
                   <option value="">{t("common.selectShape")}</option>
                   <option value="cubic">{shapeOpts.cubic}</option>
                   <option value="cylindrical">{shapeOpts.cylindrical}</option>
                 </select>
               </div>
               <div className="space-y-2">
-                <MonoLabel>{t("s2.chamberMaterial")}</MonoLabel>
-                <select className={baseSelect} value={form.chamberMaterial} onChange={(e) => set("chamberMaterial")(e.target.value)}>
+                <MonoLabel htmlFor="q-chamber-material">{t("s2.chamberMaterial")}</MonoLabel>
+                <select id="q-chamber-material" className={baseSelect} value={form.chamberMaterial} onChange={(e) => set("chamberMaterial")(e.target.value)}>
                   <option value="">{t("common.selectMaterial")}</option>
                   {matOpts.map((m) => <option key={m} value={m}>{m}</option>)}
                 </select>
@@ -661,8 +661,9 @@ export default function TvacQuestionnaire() {
             </FieldGroup>
 
             <div className="space-y-2">
-              <MonoLabel>{t("s2.internalVolume")}</MonoLabel>
+              <MonoLabel htmlFor="q-internal-volume">{t("s2.internalVolume")}</MonoLabel>
               <input
+                id="q-internal-volume"
                 className={baseInput}
                 placeholder={t("s2.internalVolumePh")}
                 inputMode="decimal"
@@ -673,27 +674,27 @@ export default function TvacQuestionnaire() {
 
             {form.chamberShape === "cylindrical" ? (
               <div className="space-y-2">
-                <MonoLabel>{t("s2.internalDimensionsCyl")}</MonoLabel>
+                <MonoLabel as="span" id="q-internal-dims-label">{t("s2.internalDimensionsCyl")}</MonoLabel>
                 <FieldGroup cols={2}>
-                  <div className="space-y-2"><MonoLabel>{t("common.length")}</MonoLabel><input className={baseInput} placeholder="L" inputMode="decimal" value={form.internalL} onChange={(e) => set("internalL")(e.target.value)} /></div>
-                  <div className="space-y-2"><MonoLabel>{t("common.diameter")}</MonoLabel><input className={baseInput} placeholder="D" inputMode="decimal" value={form.internalW} onChange={(e) => { set("internalW")(e.target.value); set("internalH")(""); }} /></div>
+                  <div className="space-y-2"><MonoLabel htmlFor="q-internal-l">{t("common.length")}</MonoLabel><input id="q-internal-l" className={baseInput} placeholder="L" inputMode="decimal" value={form.internalL} onChange={(e) => set("internalL")(e.target.value)} /></div>
+                  <div className="space-y-2"><MonoLabel htmlFor="q-internal-d">{t("common.diameter")}</MonoLabel><input id="q-internal-d" className={baseInput} placeholder="D" inputMode="decimal" value={form.internalW} onChange={(e) => { set("internalW")(e.target.value); set("internalH")(""); }} /></div>
                 </FieldGroup>
               </div>
             ) : (
               <div className="space-y-2">
-                <MonoLabel>{t("s2.internalDimensions")}</MonoLabel>
+                <MonoLabel as="span" id="q-internal-dims-label">{t("s2.internalDimensions")}</MonoLabel>
                 <FieldGroup cols={3}>
-                  <div className="space-y-2"><MonoLabel>{t("common.width")}</MonoLabel><input className={baseInput} placeholder="W" inputMode="decimal" value={form.internalW} onChange={(e) => set("internalW")(e.target.value)} /></div>
-                  <div className="space-y-2"><MonoLabel>{t("common.height")}</MonoLabel><input className={baseInput} placeholder="H" inputMode="decimal" value={form.internalH} onChange={(e) => set("internalH")(e.target.value)} /></div>
-                  <div className="space-y-2"><MonoLabel>{t("common.length")}</MonoLabel><input className={baseInput} placeholder="L" inputMode="decimal" value={form.internalL} onChange={(e) => set("internalL")(e.target.value)} /></div>
+                  <div className="space-y-2"><MonoLabel htmlFor="q-internal-w">{t("common.width")}</MonoLabel><input id="q-internal-w" className={baseInput} placeholder="W" inputMode="decimal" value={form.internalW} onChange={(e) => set("internalW")(e.target.value)} /></div>
+                  <div className="space-y-2"><MonoLabel htmlFor="q-internal-h">{t("common.height")}</MonoLabel><input id="q-internal-h" className={baseInput} placeholder="H" inputMode="decimal" value={form.internalH} onChange={(e) => set("internalH")(e.target.value)} /></div>
+                  <div className="space-y-2"><MonoLabel htmlFor="q-internal-l">{t("common.length")}</MonoLabel><input id="q-internal-l" className={baseInput} placeholder="L" inputMode="decimal" value={form.internalL} onChange={(e) => set("internalL")(e.target.value)} /></div>
                 </FieldGroup>
               </div>
             )}
 
             <FieldGroup cols={2}>
               <div className="space-y-3">
-                <MonoLabel>{t("s2.doorType")}</MonoLabel>
-                <div className="flex flex-col gap-2">
+                <MonoLabel as="span" id="q-door-type-label">{t("s2.doorType")}</MonoLabel>
+                <div role="group" aria-labelledby="q-door-type-label" className="flex flex-col gap-2">
                   {doorOpts.map((d, i) => (
                     <CheckItem key={d} label={d} checked={form.doorTypes[i]} onChange={() => toggleAt("doorTypes", i)} />
                   ))}
