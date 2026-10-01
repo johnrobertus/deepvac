@@ -25,6 +25,7 @@ import { getHreflangs, getCanonical, localizedPath } from "@/lib/routes";
 import { cn } from "@/lib/utils";
 import { QuestionnairePrintView } from "@/components/questionnaire/QuestionnairePrintView";
 import { trackEvent } from "@/lib/analytics";
+import { ensureTurnstileScript } from "@/lib/turnstile";
 
 declare global {
   interface Window {
@@ -324,21 +325,16 @@ export default function TvacQuestionnaire() {
   const turnstileRef = useRef<HTMLDivElement>(null);
   const turnstileWidgetId = useRef<string | null>(null);
   const stepHeadingRef = useRef<HTMLDivElement>(null);
+  const [turnstileRequested, setTurnstileRequested] = useState(false);
 
-  // Load Turnstile script
-  useEffect(() => {
-    if (!document.getElementById("cf-turnstile-script")) {
-      const script = document.createElement("script");
-      script.id = "cf-turnstile-script";
-      script.src = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
-      script.async = true; script.defer = true;
-      document.head.appendChild(script);
-    }
-  }, []);
+  const requestTurnstile = () => {
+    ensureTurnstileScript();
+    setTurnstileRequested(true);
+  };
 
   // Mount invisible Turnstile widget once container exists (re-mount if user resets after success)
   useEffect(() => {
-    if (submitted) return;
+    if (submitted || !turnstileRequested) return;
     if (!turnstileRef.current) return;
     const interval = setInterval(() => {
       const w = window.turnstile;
@@ -350,7 +346,7 @@ export default function TvacQuestionnaire() {
       }
     }, 200);
     return () => clearInterval(interval);
-  }, [submitted]);
+  }, [submitted, turnstileRequested]);
 
   // A11y: move focus to step heading on step change
   useEffect(() => {
@@ -448,6 +444,7 @@ export default function TvacQuestionnaire() {
     setSending(true);
     setSubmissionError(null);
     try {
+      requestTurnstile();
       let turnstileToken = "";
       const w = window.turnstile;
       if (w && turnstileWidgetId.current) {
@@ -1251,7 +1248,10 @@ export default function TvacQuestionnaire() {
             </div>
           )}
 
-          <form onSubmit={handleSubmit} onKeyDown={handleKeyDown} className="space-y-8">
+          <form onSubmit={handleSubmit} onKeyDown={handleKeyDown} onFocusCapture={(event) => {
+            // The wizard focuses its heading on mount and step changes; that is not visitor interaction.
+            if (event.target !== stepHeadingRef.current) requestTurnstile();
+          }} className="space-y-8">
             {/* Focus target on step change */}
             <div ref={stepHeadingRef} tabIndex={-1} className="outline-none focus-visible:ring-2 focus-visible:ring-blue/40 rounded-sm">
               <div className="border border-gray/25 rounded-sm p-5 sm:p-7 md:p-10 bg-surface/40 shadow-card">
