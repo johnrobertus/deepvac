@@ -93,7 +93,7 @@ const Products = () => {
       <PageShell>
         <PageHero
           eyebrow={t("overview.eyebrow")}
-          title={t("overview.title")}
+          title={tc("nav.products")}
           description={t("overview.description")}
         >
           <div className="flex flex-col sm:flex-row flex-wrap gap-3 pt-4">

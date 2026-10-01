@@ -143,7 +143,7 @@ export function StructuredData() {
 
     schemas.push(
       buildCollectionPage(
-        tProducts("overview.title") as string,
+        tCommon("nav.products") as string,
         tSeo("products.description") as string,
         canonical,
         lang,
@@ -153,7 +153,7 @@ export function StructuredData() {
         "@context": "https://schema.org",
         "@type": "ItemList",
         "@id": itemListId,
-        name: tProducts("overview.title") as string,
+        name: tCommon("nav.products") as string,
         itemListElement: productItems.map((item, index) => ({
           "@type": "ListItem",
           position: index + 1,
@@ -171,7 +171,7 @@ export function StructuredData() {
   if (matches("/services", "/de/leistungen")) {
     schemas.push(
       buildCollectionPage(
-        tServices("overview.title") as string,
+        tCommon("nav.services") as string,
         tSeo("services.description") as string,
         canonical,
         lang,
