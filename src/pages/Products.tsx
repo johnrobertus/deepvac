@@ -73,7 +73,7 @@ const Products = () => {
   };
 
   const breadcrumbJsonLd = buildBreadcrumbJsonLd(
-    [{ name: t("overview.title") as string, enPath: "/products" }],
+    [{ name: tc("nav.products") as string, enPath: "/products" }],
     lang,
   );
 
