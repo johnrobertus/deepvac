@@ -125,7 +125,14 @@ export default function PrivacyPolicy() {
               </ul>
               <p>{t("privacy.sections.contactFormNote")}</p>
               <p>{t("privacy.sections.contactFormProcessor")}</p>
+              <p>{t("privacy.sections.contactFormEmail")}</p>
               <p>{t("privacy.sections.contactFormRetention")}</p>
+            </LegalSection>
+
+            <LegalSection title={t("privacy.sections.abuseProtection")}>
+              <p>{t("privacy.sections.abuseProtectionText")}</p>
+              <p>{t("privacy.sections.abuseProtectionLegal")}</p>
+              <p>{t("privacy.sections.abuseProtectionRetention")}</p>
             </LegalSection>
 
             <LegalSection title={t("privacy.sections.provisionOfData")}>
@@ -149,6 +156,13 @@ export default function PrivacyPolicy() {
               <p>{t("privacy.sections.cookiesText3")}</p>
               <p>{t("privacy.sections.cookiesText4")}</p>
               <p>{t("privacy.sections.cookiesLegal")}</p>
+            </LegalSection>
+
+            <LegalSection title={t("privacy.sections.analytics")}>
+              <p>{t("privacy.sections.analyticsText")}</p>
+              <p>{t("privacy.sections.analyticsText2")}</p>
+              <p>{t("privacy.sections.analyticsLegal")}</p>
+              <p>{t("privacy.sections.analyticsMoreInfo")}</p>
             </LegalSection>
 
             <LegalSection title={t("privacy.sections.googleMaps")}>

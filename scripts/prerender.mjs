@@ -208,7 +208,8 @@ function setHtmlLang(html, lang) {
 function stripTurnstileScripts(html) {
   return html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, (tag) =>
     /\bid\s*=\s*["']cf-turnstile-script["']/i.test(tag) ||
-    /\bsrc\s*=\s*["']https?:\/\/challenges\.cloudflare\.com(?:\/|["'])/i.test(tag)
+    /\bsrc\s*=\s*["']https?:\/\/challenges\.cloudflare\.com(?:\/|["'])/i.test(tag) ||
+    /\bsrc\s*=\s*["']https?:\/\/plausible\.io(?:\/|["'])/i.test(tag)
       ? "" : tag,
   );
 }
