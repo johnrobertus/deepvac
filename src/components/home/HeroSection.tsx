@@ -312,8 +312,8 @@ export function HeroSection() {
               </Reveal>
 
               <Reveal delay={300}>
-                <div className="mt-2.5 flex flex-nowrap items-center gap-x-2.5 border-t border-sand/15 pt-5.5 sm:gap-x-7">
-                  <span className="shrink-0 whitespace-nowrap font-mono text-[9px] uppercase tracking-[0.14em] text-gray sm:text-[10.5px] sm:tracking-[0.18em]">
+<div className="mt-2.5 flex w-full flex-nowrap items-center justify-between gap-x-3 border-t border-sand/15 pt-5.5 sm:gap-x-7 sm:justify-start">
+                   <span className="shrink-0 whitespace-nowrap font-mono text-[9px] uppercase tracking-[0.14em] text-gray sm:text-[10.5px] sm:tracking-[0.18em]">
                     {t("hero.spinoffLabel")}
                   </span>
                   <a
