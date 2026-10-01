@@ -6,6 +6,7 @@ import App from "./App.tsx";
 import "./index.css";
 import i18n, { loadLanguage } from "./i18n";
 import { getLangFromPath } from "./lib/routes";
+import { initPlausible } from "./lib/plausible";
 
 const lang = getLangFromPath(window.location.pathname);
 loadLanguage(lang)
@@ -14,4 +15,5 @@ loadLanguage(lang)
   .finally(() => {
     const root = document.getElementById("root");
     if (root) createRoot(root).render(<App />);
+    initPlausible();
   });
