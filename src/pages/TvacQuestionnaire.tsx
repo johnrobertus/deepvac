@@ -226,13 +226,14 @@ const initialForm: FormState = {
 };
 
 /* ---------- Small UI primitives ---------- */
-function MonoLabel({ children, required }: { children: React.ReactNode; required?: boolean }) {
+function MonoLabel({ children, required, htmlFor, id, as = "label" }: { children: React.ReactNode; required?: boolean; htmlFor?: string; id?: string; as?: "label" | "span" }) {
+  const Tag = as;
   return (
-    <label className="block mono-label">
+    <Tag className="block mono-label" htmlFor={as === "label" ? htmlFor : undefined} id={id}>
       {children}
       {required && <span className="text-blue ml-1 text-sm align-middle" aria-hidden="true">*</span>}
       {required && <span className="sr-only"> (required)</span>}
-    </label>
+    </Tag>
   );
 }
 
@@ -253,8 +254,8 @@ function CheckItem({
 }
 
 function OtherInput({
-  value, onCheck, onText, placeholder,
-}: { value: OtherCheck; onCheck: (v: boolean) => void; onText: (v: string) => void; placeholder: string }) {
+  value, onCheck, onText, placeholder, ariaLabel,
+}: { value: OtherCheck; onCheck: (v: boolean) => void; onText: (v: string) => void; placeholder: string; ariaLabel?: string }) {
   const { t } = useTranslation("questionnaire");
   return (
     <div className="flex items-center gap-2 flex-wrap">
@@ -265,6 +266,7 @@ function OtherInput({
         onChange={(e) => onText(e.target.value)}
         className={cn(baseInput, "flex-1 min-w-[180px] py-2 text-sm")}
         placeholder={placeholder}
+        aria-label={ariaLabel}
       />
     </div>
   );
