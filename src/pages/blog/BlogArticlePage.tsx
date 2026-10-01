@@ -9,6 +9,7 @@ import { getHreflangs, getCanonical, localizedPath } from "@/lib/routes";
 import { buildBreadcrumbJsonLd, SITE_URL } from "@/lib/jsonld";
 import { blogArticles } from "@/lib/blog";
 import { solutionLabel } from "@/lib/blogContent";
+import { categoryEnPath } from "@/lib/blogCategories";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { type ReactNode } from "react";
 
@@ -144,9 +145,12 @@ export function BlogArticlePage({
               <ArrowLeft className="w-4 h-4" />
               {t("blog.backToBlog")}
             </Link>
-            <span className="mono-label text-blue block">
+            <Link
+              to={localizedPath(categoryEnPath(categoryKey.replace("blog.categories.", "")) ?? "/resources/blog", lang)}
+              className="mono-label text-blue block hover:text-sand transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            >
               {t(categoryKey)}
-            </span>
+            </Link>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight text-sand">
               {headline}
             </h1>

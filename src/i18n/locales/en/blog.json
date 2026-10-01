@@ -353,6 +353,24 @@
         },
         "conclusion": "A campaign becomes auditable when requirements, as-built setup, calibrated channels, execution records, deviations and final assessment remain traceable to one another. That traceability should be designed into the test plan before the chamber door closes."
       }
+    },
+    "categoryPages": {
+      "basics": {
+        "title": "Thermal Vacuum Testing Fundamentals",
+        "intro": "Fundamentals of thermal vacuum testing: what a TVAC test simulates, vacuum levels, outgassing, test types, chamber sizing and qualification standards."
+      },
+      "engineeringGuide": {
+        "title": "TVAC Engineering Guide",
+        "intro": "Engineering articles on TVAC systems: pumping, cooling, cryo shrouds, temperature measurement, leak testing, contamination control and automation."
+      },
+      "applications": {
+        "title": "Thermal Vacuum Testing Applications",
+        "intro": "Thermal vacuum testing in practice: what CubeSats, optics, electronics and electric propulsion hardware need from a TVAC chamber and test campaign."
+      },
+      "decisionSupport": {
+        "title": "Decision Support for TVAC Projects",
+        "intro": "Decision support for TVAC projects: cost drivers, lead time, in-house versus external testing, used versus new chambers and retrofit versus replacement."
+      }
     }
   }
 }

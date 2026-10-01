@@ -161,6 +161,7 @@ function CreditCard({
 
 export default function MediaCredits() {
   const { t } = useTranslation("common");
+  const { t: tSeo } = useTranslation("seo");
   const { lang } = useLanguage();
   const { pathname } = useLocation();
   const hreflangs = getHreflangs(pathname);
@@ -170,8 +171,8 @@ export default function MediaCredits() {
     <Layout>
       <Helmet>
         <html lang={lang} />
-        <title>{t("mediaCredits.seoTitle")}</title>
-        <meta name="description" content={t("mediaCredits.seoDescription")} />
+        <title>{tSeo("mediaCredits.title")}</title>
+        <meta name="description" content={tSeo("mediaCredits.description")} />
         <link rel="canonical" href={canonical} />
         {hreflangs.map((h) => (
           <link key={h.lang} rel="alternate" hrefLang={h.lang} href={h.href} />

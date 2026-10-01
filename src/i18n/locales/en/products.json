@@ -615,7 +615,8 @@
         "benefits": [
           "Simulation of solar heating",
           "Extended test scenarios"
-        ]
+        ],
+        "metaDescription": "A solar simulator introduces a calibrated radiant flux into the chamber to replicate solar illumination in orbit, including sun-facing operating cases."
       },
       {
         "slug": "infrared-heaters",
@@ -626,7 +627,8 @@
         "benefits": [
           "Faster temperature rises",
           "Simulation of radiant heating"
-        ]
+        ],
+        "metaDescription": "IR heater arrays apply an additional radiant heat load directly onto the test specimen, enabling faster temperature ramps and radiative heating cases."
       },
       {
         "slug": "temperature-control-zones",
@@ -637,7 +639,8 @@
         "benefits": [
           "Better temperature uniformity",
           "More complex temperature profiles"
-        ]
+        ],
+        "metaDescription": "Independently controlled thermal zones regulate single areas of shroud or thermal plate, improving uniformity and enabling complex temperature profiles."
       },
       {
         "slug": "temperature-sensors",
@@ -647,7 +650,8 @@
         "description": "Additional sensor channels increase the number of measurement points on specimen and shroud. Denser instrumentation improves temperature mapping and thermal model correlation.",
         "benefits": [
           "Improved temperature mapping"
-        ]
+        ],
+        "metaDescription": "Additional sensor channels increase the measurement points on specimen and shroud, improving temperature mapping and thermal model correlation."
       },
       {
         "slug": "bake-out",
@@ -658,7 +662,8 @@
         "benefits": [
           "Reduced pump-down time",
           "Improved vacuum purity"
-        ]
+        ],
+        "metaDescription": "Integrated wall heating accelerates outgassing of adsorbed water and contaminants from inner surfaces, shortening pump-down and improving vacuum quality."
       },
       {
         "slug": "cryogenic-traps",
@@ -669,7 +674,8 @@
         "benefits": [
           "Improved vacuum purity",
           "Higher pressure stability"
-        ]
+        ],
+        "metaDescription": "Cryogenic traps condense water vapour and other condensable gases on cooled surfaces, improving vacuum purity and pressure stability in long campaigns."
       },
       {
         "slug": "roots-booster",
@@ -679,7 +685,8 @@
         "description": "A Roots booster added to the pumping train increases the effective pumping speed in the medium vacuum range. The result is a significantly reduced pump-down time.",
         "benefits": [
           "Reduced pump-down time"
-        ]
+        ],
+        "metaDescription": "A Roots booster added to the pumping train increases the effective pumping speed in the medium vacuum range and significantly reduces pump-down time."
       },
       {
         "slug": "oil-free-pumping",
@@ -689,7 +696,8 @@
         "description": "The pumping system is equipped exclusively with dry pumps. This minimises the risk of hydrocarbon contamination of chamber and test specimen.",
         "benefits": [
           "Minimised hydrocarbon contamination"
-        ]
+        ],
+        "metaDescription": "A pumping system equipped exclusively with dry pumps, minimising the risk of hydrocarbon contamination of the thermal vacuum chamber and the test specimen."
       },
       {
         "slug": "nitrogen-venting",
@@ -700,7 +708,8 @@
         "benefits": [
           "Reduced contamination risk",
           "Faster specimen changes"
-        ]
+        ],
+        "metaDescription": "Automated venting and purge cycles with dry nitrogen repressurise the chamber in a controlled way, reduce contamination and speed up specimen changes."
       },
       {
         "slug": "residual-gas-analysis",
@@ -710,7 +719,8 @@
         "description": "A residual gas analyser monitors the composition of the residual gas in the chamber. This adds diagnostic depth to your tests — from leak signatures to outgassing behaviour.",
         "benefits": [
           "Greater significance of test results"
-        ]
+        ],
+        "metaDescription": "A residual gas analyser monitors the residual gas composition in the chamber and adds diagnostic depth to your tests, from leak signatures to outgassing."
       },
       {
         "slug": "qcm-monitoring",
@@ -720,7 +730,8 @@
         "description": "Quartz crystal microbalances monitor condensation and molecular contamination during the test. This enables a quantitative assessment of contamination levels.",
         "benefits": [
           "Quantitative assessment of contamination"
-        ]
+        ],
+        "metaDescription": "Quartz crystal microbalances monitor condensation and molecular contamination during the test, enabling a quantitative assessment of contamination levels."
       },
       {
         "slug": "helium-leak-test",
@@ -730,7 +741,8 @@
         "description": "Dedicated connections prepare the chamber for helium leak testing. This accelerates acceptance testing and recurring tightness verification.",
         "benefits": [
           "Accelerated acceptance testing"
-        ]
+        ],
+        "metaDescription": "Dedicated connections prepare the thermal vacuum chamber for helium leak testing, accelerating acceptance testing and recurring tightness verification."
       },
       {
         "slug": "viewing-window-znse",
@@ -743,7 +755,8 @@
         "benefits": [
           "Visual inspection without venting",
           "Thermography reveals hotspots and defects"
-        ]
+        ],
+        "metaDescription": "A vacuum-rated viewport allows direct observation of the specimen during the test. An optional ZnSe window passes infrared radiation for thermography."
       },
       {
         "slug": "optical-viewports",
@@ -753,7 +766,8 @@
         "description": "Additional viewports and optical feedthroughs enable visual inspection and optical measurements. Advanced diagnostics — without opening the chamber.",
         "benefits": [
           "Advanced diagnostics without opening the chamber"
-        ]
+        ],
+        "metaDescription": "Additional viewports and optical feedthroughs enable visual inspection and optical measurements, for advanced diagnostics without opening the chamber."
       },
       {
         "slug": "interior-camera",
@@ -763,7 +777,8 @@
         "description": "A vacuum-compatible camera provides continuous video monitoring of the test specimen. This increases operational reliability and documentation quality.",
         "benefits": [
           "Increased operational reliability"
-        ]
+        ],
+        "metaDescription": "A vacuum-compatible camera provides continuous video monitoring of the test specimen, increasing operational reliability and documentation quality."
       },
       {
         "slug": "remote-monitoring",
@@ -774,7 +789,8 @@
         "benefits": [
           "Full traceability",
           "Simplified evaluation"
-        ]
+        ],
+        "metaDescription": "Network-based remote access and extended data logging with export functions, for full traceability and simplified evaluation of your test data."
       },
       {
         "slug": "process-connections",
@@ -784,7 +800,8 @@
         "description": "Additional vacuum feedthroughs for power, signals and sensors simplify the integration of your test setup. Configured to your harness and interface requirements.",
         "benefits": [
           "Simplified integration"
-        ]
+        ],
+        "metaDescription": "Additional vacuum feedthroughs for power, signals and sensors simplify test setup integration, configured to your harness and interface requirements."
       },
       {
         "slug": "vibration-isolation",
@@ -794,7 +811,8 @@
         "description": "Mechanical decoupling of the pumping system reduces vibration transfer to the chamber. Sensitive specimens remain undisturbed during the test.",
         "benefits": [
           "Reduced vibrations at the test specimen"
-        ]
+        ],
+        "metaDescription": "Mechanical decoupling of the pumping system reduces vibration transfer to the chamber, so sensitive specimens remain undisturbed during the test."
       },
       {
         "slug": "water-cooling",
@@ -805,7 +823,8 @@
         "benefits": [
           "Reduced heat emission",
           "Lower noise level"
-        ]
+        ],
+        "metaDescription": "Water cooling instead of air cooling dissipates the heat of the thermal vacuum system, reducing heat emission into the lab and lowering the noise level."
       }
     ],
     "crossSell": {
