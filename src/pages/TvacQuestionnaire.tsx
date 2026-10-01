@@ -548,49 +548,49 @@ export default function TvacQuestionnaire() {
         <StepNote />
         <FieldGroup cols={2}>
           <div className="space-y-2">
-            <MonoLabel required>{t("s1.company")}</MonoLabel>
-            <input className={cn(baseInput, errors.company && errorBorder)} placeholder={t("s1.companyPh")} value={form.company} onChange={(e) => set("company")(e.target.value)} />
+            <MonoLabel required htmlFor="q-company">{t("s1.company")}</MonoLabel>
+            <input id="q-company" className={cn(baseInput, errors.company && errorBorder)} placeholder={t("s1.companyPh")} value={form.company} onChange={(e) => set("company")(e.target.value)} />
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="space-y-2">
-              <MonoLabel required>{t("s1.firstName")}</MonoLabel>
-              <input className={cn(baseInput, errors.firstName && errorBorder)} placeholder={t("s1.firstNamePh")} value={form.firstName} onChange={(e) => set("firstName")(e.target.value)} />
+              <MonoLabel required htmlFor="q-first-name">{t("s1.firstName")}</MonoLabel>
+              <input id="q-first-name" className={cn(baseInput, errors.firstName && errorBorder)} placeholder={t("s1.firstNamePh")} value={form.firstName} onChange={(e) => set("firstName")(e.target.value)} />
             </div>
             <div className="space-y-2">
-              <MonoLabel required>{t("s1.lastName")}</MonoLabel>
-              <input className={cn(baseInput, errors.lastName && errorBorder)} placeholder={t("s1.lastNamePh")} value={form.lastName} onChange={(e) => set("lastName")(e.target.value)} />
+              <MonoLabel required htmlFor="q-last-name">{t("s1.lastName")}</MonoLabel>
+              <input id="q-last-name" className={cn(baseInput, errors.lastName && errorBorder)} placeholder={t("s1.lastNamePh")} value={form.lastName} onChange={(e) => set("lastName")(e.target.value)} />
             </div>
           </div>
         </FieldGroup>
         <FieldGroup cols={2}>
           <div className="space-y-2">
-            <MonoLabel required>{t("s1.email")}</MonoLabel>
-            <input type="email" className={cn(baseInput, errors.email && errorBorder)} placeholder={t("s1.emailPh")} value={form.email} onChange={(e) => set("email")(e.target.value)} />
+            <MonoLabel required htmlFor="q-email">{t("s1.email")}</MonoLabel>
+            <input id="q-email" type="email" className={cn(baseInput, errors.email && errorBorder)} placeholder={t("s1.emailPh")} value={form.email} onChange={(e) => set("email")(e.target.value)} />
           </div>
           <div className="space-y-2">
-            <MonoLabel>{t("s1.phone")}</MonoLabel>
-            <input type="tel" className={baseInput} placeholder={t("s1.phonePh")} value={form.phone} onChange={(e) => set("phone")(e.target.value)} />
+            <MonoLabel htmlFor="q-phone">{t("s1.phone")}</MonoLabel>
+            <input id="q-phone" type="tel" className={baseInput} placeholder={t("s1.phonePh")} value={form.phone} onChange={(e) => set("phone")(e.target.value)} />
           </div>
         </FieldGroup>
         <FieldGroup cols={2}>
           <div className="space-y-2">
-            <MonoLabel>{t("s1.country")}</MonoLabel>
-            <select className={baseSelect} value={form.country} onChange={(e) => set("country")(e.target.value)}>
+            <MonoLabel htmlFor="q-country">{t("s1.country")}</MonoLabel>
+            <select id="q-country" className={baseSelect} value={form.country} onChange={(e) => set("country")(e.target.value)}>
               <option value="">{t("common.selectCountry")}</option>
               {countries.map((c) => <option key={c} value={c}>{c}</option>)}
             </select>
             {isOtherValue(form.country) && (
-              <input className={baseInput} placeholder={t("common.specify")} value={form.countrySpecify} onChange={(e) => set("countrySpecify")(e.target.value)} />
+              <input className={baseInput} placeholder={t("common.specify")} value={form.countrySpecify} onChange={(e) => set("countrySpecify")(e.target.value)} aria-label={`${t("s1.country")} — ${t("common.specify")}`} />
             )}
           </div>
           <div className="space-y-2">
-            <MonoLabel>{t("s1.application")}</MonoLabel>
-            <select className={baseSelect} value={form.application} onChange={(e) => set("application")(e.target.value)}>
+            <MonoLabel htmlFor="q-application">{t("s1.application")}</MonoLabel>
+            <select id="q-application" className={baseSelect} value={form.application} onChange={(e) => set("application")(e.target.value)}>
               <option value="">{t("common.selectOption")}</option>
               {apps.map((c) => <option key={c} value={c}>{c}</option>)}
             </select>
             {isOtherValue(form.application) && (
-              <input className={baseInput} placeholder={t("common.specify")} value={form.applicationSpecify} onChange={(e) => set("applicationSpecify")(e.target.value)} />
+              <input className={baseInput} placeholder={t("common.specify")} value={form.applicationSpecify} onChange={(e) => set("applicationSpecify")(e.target.value)} aria-label={`${t("s1.application")} — ${t("common.specify")}`} />
             )}
           </div>
         </FieldGroup>
