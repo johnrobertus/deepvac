@@ -166,8 +166,8 @@ function BrochureCard({ doc }: { doc: Brochure }) {
         <p className="text-card-meta flex-1">{doc.description}</p>
         {hasFile ? (
           <Button asChild variant="tertiary" className="text-xs self-start">
-            <a href={doc.id === "standard-series-2026" ? "/brochures/deepvac-standard-series-catalogue-2026.pdf" : doc.pdfUrl} download={doc.id === "standard-series-2026" ? true : undefined} target={doc.id === "standard-series-2026" ? undefined : "_blank"} rel={doc.id === "standard-series-2026" ? undefined : "noopener noreferrer"} onClick={doc.id === "standard-series-2026" ? () => trackEvent("brochure_download", { page: "catalogs" }) : undefined}>
-              <Download className="w-3 h-3 mr-1.5" />{tc(doc.id === "standard-series-2026" ? "buttons.downloadBrochure" : "buttons.downloadPdf")}
+            <a href={doc.pdfUrl} target="_blank" rel="noopener noreferrer">
+              <Download className="w-3 h-3 mr-1.5" />{tc("buttons.downloadPdf")}
             </a>
           </Button>
         ) : (
