@@ -5,10 +5,6 @@
     "description": "Technical guidance, decision support, and engineering considerations for thermal vacuum systems.",
     "readArticle": "Read Article",
     "backToBlog": "Back to Blog",
-    "seo": {
-      "title": "Engineering Blog | Deepvac",
-      "description": "Technical guidance on TVAC fundamentals, engineering choices, applications, qualification testing and procurement decisions."
-    },
     "categories": {
       "basics": "Fundamentals",
       "engineeringGuide": "Engineering Guide",

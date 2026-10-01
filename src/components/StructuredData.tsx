@@ -201,7 +201,7 @@ export function StructuredData() {
     schemas.push(
       buildCollectionPage(
         tBlog("blog.title") as string,
-        tBlog("blog.seo.description") as string,
+        tSeo("blog.description") as string,
         canonical,
         lang,
       ),
