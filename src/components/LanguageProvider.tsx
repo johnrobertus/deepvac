@@ -27,7 +27,9 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   const lang = useMemo(() => getLangFromPath(pathname), [pathname]);
   const legalPage = isLegalPath(pathname);
-  const [readyPath, setReadyPath] = useState(() => i18n.language === lang && (!legalPage || i18n.hasResourceBundle(lang, "legal")) ? pathname : "");
+  const [, bumpRender] = useReducer((c: number) => c + 1, 0);
+
+  const ready = i18n.language === lang && i18n.hasResourceBundle(lang, "common") && (!legalPage || i18n.hasResourceBundle(lang, "legal"));
 
   useEffect(() => {
     let active = true;
@@ -37,12 +39,12 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
         if (i18n.language !== lang) await i18n.changeLanguage(lang);
         if (active) {
           document.documentElement.lang = lang;
-          setReadyPath(pathname);
+          bumpRender();
         }
       })
       .catch((error: unknown) => {
         console.error("Translation loading failed:", error);
-        if (active) setReadyPath(pathname);
+        if (active) bumpRender();
       });
     return () => { active = false; };
   }, [lang, legalPage, pathname, i18n]);
