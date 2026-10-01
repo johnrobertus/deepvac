@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
+import { createContext, useContext, useEffect, useMemo, useReducer, type ReactNode } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { getLangFromPath, getAlternatePath, type Lang } from "@/lib/routes";
@@ -64,7 +64,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   return (
     <LanguageContext.Provider value={value}>
-      {readyPath === pathname && i18n.language === lang ? children : null}
+      {ready ? children : null}
     </LanguageContext.Provider>
   );
 }
