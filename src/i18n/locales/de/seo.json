@@ -29,7 +29,7 @@
   },
   "controlSystems": {
     "title": "Steuerungstechnik für TVAC | Deepvac",
-    "description": "Auslegung von Kammersteuerungsarchitekturen, Automatisierungslogik, Instrumentierungsintegration und zuverlässigen Betriebskonzepten für Thermalvakuumumgebungen."
+    "description": "Auslegung von Steuerungsarchitekturen, Automatisierungslogik, Instrumentierung und zuverlässigen Betriebskonzepten für Thermalvakuumanlagen."
   },
   "mechanicalDesign": {
     "title": "Mechanische Konstruktion für TVAC-Systeme | Deepvac",
@@ -41,11 +41,11 @@
   },
   "maintenanceRepair": {
     "title": "TVAC Wartung & Reparatur | Deepvac",
-    "description": "Diagnostik, vorbeugende Wartung, Reparatur und technischer Support für Thermalvakuumkammersysteme."
+    "description": "Diagnostik, vorbeugende Wartung, Reparatur und technischer Support für Thermalvakuumkammern, für langfristige Verfügbarkeit und kürzere Ausfallzeiten."
   },
   "subsystemIntegration": {
     "title": "Subsystem-Integration für TVAC | Deepvac",
-    "description": "Integration von thermischen, Vakuum-, Instrumentierungs- und Steuerungssubsystemen zu integrierten Testumgebungen."
+    "description": "Integration von Thermal-, Vakuum-, Instrumentierungs- und Steuerungssubsystemen zu durchgängigen TVAC-Testumgebungen nach Ihren Anforderungen."
   },
   "team": {
     "title": "Unser Team | Deepvac",
@@ -53,11 +53,11 @@
   },
   "catalogs": {
     "title": "Kataloge & Ressourcen | Deepvac",
-    "description": "Produktbroschüren, technische Übersichten und Engineering-Dokumentation für Deepvac Thermalvakuumsysteme zum Download."
+    "description": "Broschüren, technische Übersichten und Engineering-Dokumentation zu Deepvac Thermalvakuumsystemen zum Download, inklusive Katalog der Standard-Serie."
   },
   "resources": {
     "title": "Ressourcen | Deepvac",
-    "description": "Technische Dokumentation, Produktkataloge und Engineering-Wissen für Thermalvakuumsysteme."
+    "description": "Technische Dokumentation, Produktkataloge und Fachartikel zu Thermalvakuumsystemen, TVAC-Tests und Weltraumsimulation an einem Ort."
   },
   "careers": {
     "title": "Karriere bei Deepvac | Engineering-Stellen",
@@ -65,7 +65,7 @@
   },
   "references": {
     "title": "Projekte & Referenzen: T125 TVAC-Kammer | Deepvac",
-    "description": "T125 TVAC-Kammer aus Garbsen: 125 l, Arbeitsdruck < 1×10⁻⁶ mbar, Enddruck < 1×10⁻⁷ mbar und LN₂-Kühlung bis −190 °C."
+    "description": "Referenzprojekt T125: TVAC-Kammer aus Garbsen mit 125 l, Arbeitsdruck < 1×10⁻⁶ mbar, Enddruck < 1×10⁻⁷ mbar und LN₂-Kühlung bis −190 °C."
   },
   "contact": {
     "title": "TVAC-Projekt anfragen | Deepvac Kontakt",
@@ -73,15 +73,15 @@
   },
   "imprint": {
     "title": "Impressum | Deepvac GmbH",
-    "description": "Rechtliche Informationen und Unternehmensangaben der Deepvac GmbH, Garbsen, Deutschland."
+    "description": "Impressum der Deepvac GmbH, Garbsen: Unternehmensangaben, Registereintrag beim Amtsgericht Hannover, USt-IdNr., Geschäftsführung und Kontaktdaten."
   },
   "privacyPolicy": {
     "title": "Datenschutzerklärung | Deepvac GmbH",
-    "description": "Datenschutzerklärung und Datenschutzinformationen der Deepvac GmbH."
+    "description": "Datenschutzerklärung der Deepvac GmbH: welche personenbezogenen Daten diese Website verarbeitet, zu welchen Zwecken, mit welchen Anbietern und Ihre Rechte."
   },
   "termsAndConditions": {
     "title": "Allgemeine Geschäftsbedingungen | Deepvac GmbH",
-    "description": "Allgemeine Geschäftsbedingungen der Deepvac GmbH für Lieferungen und Engineering-Leistungen."
+    "description": "Die Allgemeinen Geschäftsbedingungen der Deepvac GmbH, Garbsen, für unsere Lieferungen und Engineering-Leistungen im Bereich Thermalvakuumsysteme."
   },
   "notFound": {
     "title": "Seite nicht gefunden | Deepvac",
@@ -89,7 +89,7 @@
   },
   "mediaCredits": {
     "title": "Medienquellen | Deepvac",
-    "description": "Quellenangaben und Nachweise für auf der Deepvac-Website verwendete Medien."
+    "description": "Quellenangaben und Nachweise für die Bilder, Illustrationen und sonstigen Medien, die auf den Seiten der Deepvac-Website verwendet werden."
   },
   "thermalVision": {
     "title": "Thermal Vision – Thermalkamera für TVAC-Kammern | Deepvac",
@@ -97,7 +97,7 @@
   },
   "questionnaire": {
     "title": "Technischer TVAC-Fragebogen | Deepvac",
-    "description": "Übermitteln Sie detaillierte technische Anforderungen für ein kundenspezifisches Thermalvakuum- oder Weltraumsimulationssystem. Unbekannte Angaben können leer bleiben."
+    "description": "Technische Anforderungen für ein kundenspezifisches Thermalvakuum- oder Weltraumsimulationssystem übermitteln. Unbekannte Angaben können leer bleiben."
   },
   "blog": {
     "title": "Engineering-Blog | Deepvac",
@@ -109,7 +109,7 @@
   },
   "blogRetrofitVsReplacement": {
     "title": "TVAC-Retrofit oder Neubeschaffung: Entscheidungsrahmen | Deepvac",
-    "description": "Ein zustandsbasierter Vergleich von TVAC-Retrofit und Neubeschaffung nach Behälterzustand, Zielperformance, Stillstand, Dokumentation und Lebenszykluskosten."
+    "description": "Zustandsbasierter Vergleich von TVAC-Retrofit und Neubeschaffung nach Behälterzustand, Zielperformance, Stillstand, Dokumentation und Lebenszykluskosten."
   },
   "blogAerospaceQualification": {
     "title": "Raumfahrtqualifikation im TVAC | Deepvac",
@@ -129,7 +129,7 @@
   },
   "blogVacuumLevelsExplained": {
     "title": "Vakuumbereiche erklärt: Grobvakuum bis UHV | Deepvac",
-    "description": "Grobvakuum, Feinvakuum, Hochvakuum und UHV mit Pumpen, Messtechnik und Molekularströmung erklärt, einschließlich der Einordnung typischer TVAC-Spezifikationen."
+    "description": "Grobvakuum, Feinvakuum, Hochvakuum und UHV mit Pumpen, Messtechnik und Molekularströmung erklärt, inklusive Einordnung typischer TVAC-Spezifikationen."
   },
   "blogOutgassingBasics": {
     "title": "Ausgasung im Vakuum: TML, CVCM & Ausheizen | Deepvac",
@@ -145,7 +145,7 @@
   },
   "blogTvacChamberSizing": {
     "title": "TVAC-Kammer dimensionieren: Größe wählen | Deepvac",
-    "description": "TVAC-Kammer richtig dimensionieren: Nennvolumen vs. Nutzvolumen, Faustregeln für Abstände, kubische vs. zylindrische Bauform und sinnvolle Wachstumsreserve."
+    "description": "TVAC-Kammer dimensionieren: Nennvolumen vs. Nutzvolumen, Faustregeln für Abstände, kubische vs. zylindrische Bauform und sinnvolle Wachstumsreserve."
   },
   "blogEcssStandardsOverview": {
     "title": "ECSS, SMC-S-016 & NASA GEVS für TVAC | Deepvac",
@@ -157,11 +157,11 @@
   },
   "blogPumpingSystemSelection": {
     "title": "Vakuumpumpstand für TVAC auslegen | Deepvac",
-    "description": "Vakuumpumpstand für TVAC-Kammern auslegen: ölfreie Vorpumpen, Turbopumpen, Roots-Booster, Kryofallen, Dimensionierung und RGA-Überwachung verständlich erklärt."
+    "description": "Vakuumpumpstand für TVAC-Kammern auslegen: ölfreie Vorpumpen, Turbopumpen, Roots-Booster, Kryofallen, Dimensionierung und RGA-Überwachung erklärt."
   },
   "blogCryoShroudsThermalPlates": {
     "title": "Kryo-Shrouds & Thermalplatten | Deepvac",
-    "description": "Kryo-Shroud und Thermalplatte erklärt: Aufbau, Kühlkonzepte mit LN₂ und GN₂, Homogenität, Sichtfaktoren – und wann ein TVAC-Test überhaupt einen Shroud braucht."
+    "description": "Kryo-Shroud und Thermalplatte erklärt: Aufbau, Kühlung mit LN₂ und GN₂, Homogenität, Sichtfaktoren und wann ein TVAC-Test überhaupt einen Shroud braucht."
   },
   "blogContaminationControl": {
     "title": "Kontaminationskontrolle im TVAC-Test | Deepvac",
@@ -177,7 +177,7 @@
   },
   "blogSolarSimulationVsIr": {
     "title": "Solarsimulation vs. IR-Heizung im TVAC | Deepvac",
-    "description": "Solarsimulator, IR-Lampenfeld oder Thermalplatte? Wie externer Wärmefluss im TVAC aufgebracht wird, wann spektrale Treue zählt und wie geregelt und kalibriert."
+    "description": "Solarsimulator, IR-Lampen oder Thermalplatte? Wie Wärmefluss im TVAC aufgebracht wird, wann spektrale Treue zählt und wie geregelt und kalibriert wird."
   },
   "blogLeakDetectionBasics": {
     "title": "Helium-Lecktest an Vakuumkammern | Deepvac",
@@ -185,7 +185,7 @@
   },
   "blogTvacAutomation": {
     "title": "TVAC-Steuerung: SPS, Rezepte, Logging | Deepvac",
-    "description": "Was eine moderne TVAC-Steuerung leistet: Rezeptursteuerung, Sicherheitsverriegelungen, Datenlogging, Alarmierung, Fernüberwachung – und Retrofit alter Kammern."
+    "description": "Was eine moderne TVAC-Steuerung leistet: Rezepte, Sicherheitsverriegelungen, Datenlogging, Alarmierung, Fernüberwachung und Retrofit alter Kammern."
   },
   "blogCubesatTesting": {
     "title": "CubeSat-TVAC-Test: Ablauf & Kammergröße | Deepvac",
@@ -197,7 +197,7 @@
   },
   "blogOpticsElectronicsTesting": {
     "title": "Optik und Elektronik im Vakuumtest | Deepvac",
-    "description": "Elektronik im Vakuum testen: Warum Baugruppen ohne Konvektion überhitzen, wie Kontamination Optiken erreicht – und was QCM, RGA und IR-Kameras sichtbar machen."
+    "description": "Elektronik im Vakuum testen: warum Baugruppen ohne Konvektion überhitzen, wie Kontamination Optiken erreicht und was QCM, RGA und IR-Kameras zeigen."
   },
   "blogInHouseVsExternalTesting": {
     "title": "Eigene TVAC-Kammer oder Dienstleister? | Deepvac",
@@ -213,11 +213,11 @@
   },
   "blogTvacMaintenance": {
     "title": "TVAC-Kammer Wartung: Leitfaden | Deepvac",
-    "description": "Vorbeugende Wartung von Thermalvakuumkammern: Dichtungen, Pumpen, LN₂-System, Kalibrierung von Messgeräten, Obsoleszenz der Steuerung, typische Intervalle und Nachweise."
+    "description": "Vorbeugende Wartung von TVAC-Kammern: Dichtungen, Pumpen, LN₂-System, Kalibrierung der Messtechnik, Obsoleszenz der Steuerung, Intervalle und Nachweise."
   },
   "blogTvacChamberSpecification": {
     "title": "TVAC-Kammer-Lastenheft richtig schreiben | Deepvac",
-    "description": "Thermalvakuumkammer so spezifizieren, dass Angebote vergleichbar werden: Vakuum-, Thermal-, Schnittstellen- und Verifikationsanforderungen und was wegbleiben kann."
+    "description": "TVAC-Kammer so spezifizieren, dass Angebote vergleichbar werden: Vakuum-, Thermal-, Schnittstellen- und Verifikationsanforderungen und was wegbleiben kann."
   },
   "blogTvacChamberAcceptanceTesting": {
     "title": "TVAC-Kammer: FAT und SAT richtig abnehmen | Deepvac",

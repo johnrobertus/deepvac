@@ -20,7 +20,7 @@
       "title": "TVAC Chamber Lead Time: What Actually Drives Delivery",
       "description": "The delivery time of a thermal vacuum chamber is set by engineering, long-lead components and acceptance testing – and partly by you. Where the time goes and how to shorten it.",
       "seoTitle": "TVAC Chamber Lead Time: What Drives It | Deepvac",
-      "seoDescription": "Vacuum chamber lead time explained: engineering, long-lead pumps and chillers, vessel fabrication, acceptance and commissioning – and what customers control.",
+      "seoDescription": "TVAC chamber lead time explained: engineering, long-lead pumps and chillers, vessel fabrication, acceptance, commissioning and what customers control.",
       "intro": "TVAC delivery time is the result of a project schedule rather than a single manufacturing duration. Requirements definition, engineering, long-lead procurement, vessel fabrication, subsystem integration, factory acceptance, transport and site commissioning have dependencies that vary by configuration and market conditions. A credible quotation should identify these phases, the critical path and the customer decisions needed to protect it.",
       "sections": [
         {
@@ -472,7 +472,7 @@
       "title": "TVAC-Automatisierung: Was eine moderne Kammersteuerung leistet",
       "description": "Rezeptursteuerung, Sicherheitsverriegelungen, Datenlogging, Alarmierung und Fernzugriff: Warum reproduzierbare TVAC-Tests vor allem eine Frage der Steuerung sind.",
       "seoTitle": "TVAC-Steuerung: SPS, Rezepte, Logging | Deepvac",
-      "seoDescription": "Was eine moderne TVAC-Steuerung leistet: Rezeptursteuerung, Sicherheitsverriegelungen, Datenlogging, Alarmierung, Fernüberwachung – und Retrofit alter Kammern.",
+      "seoDescription": "Was eine moderne TVAC-Steuerung leistet: Rezepte, Sicherheitsverriegelungen, Datenlogging, Alarmierung, Fernüberwachung und Retrofit alter Kammern.",
       "intro": "Eine TVAC-Steuerung koordiniert Abpumpen, thermische Konditionierung, Datenerfassung, Alarmierung und Schutzfunktionen. Rezeptursteuerung kann Rampen, Haltephasen und Zyklen automatisieren; unbeaufsichtigter Betrieb ist jedoch nur zulässig, wenn Risikobewertung, unabhängige Grenzwerte, sichere Zustände, Alarmeskalation und Betriebsregeln dies tragen. Die Steuerungsarchitektur sollte jede Sollwert- und Schutzaktion im Testprotokoll nachvollziehbar machen.",
       "sections": [
         {
@@ -798,7 +798,7 @@
       "title": "Testing Optics and Electronics in Vacuum: The Two Traps That Catch Bench-Proven Hardware",
       "description": "Electronics that run cool on the bench can overheat in vacuum, and clean-looking optics can grow molecular films. How to plan thermal vacuum tests for sensitive payloads.",
       "seoTitle": "Testing Optics & Electronics in Vacuum | Deepvac",
-      "seoDescription": "Testing electronics in vacuum: why boards overheat without convection, how contamination reaches optics, and which monitoring – QCM, RGA, IR imaging – helps.",
+      "seoDescription": "Testing electronics in vacuum: why boards overheat without convection, how contamination reaches optics and how QCM, RGA and IR imaging help.",
       "intro": "Optical and electronic payloads require two coupled controls in vacuum testing: thermal verification without convective cooling and molecular contamination control around cold, sensitive surfaces. A successful campaign defines conductive and radiative boundary conditions, monitors critical temperatures, controls materials and chamber history, and sequences hot and cold phases to protect detectors, mirrors and filters.",
       "sections": [
         {
@@ -869,7 +869,7 @@
       "title": "Optik und Elektronik im Vakuumtest: Zwei Fallen, in die laborerprobte Hardware tappt",
       "description": "Elektronik, die auf dem Labortisch kühl bleibt, kann im Vakuum überhitzen; saubere Optiken wachsen molekulare Beläge. So planen Sie Thermalvakuumtests für empfindliche Nutzlasten.",
       "seoTitle": "Optik und Elektronik im Vakuumtest | Deepvac",
-      "seoDescription": "Elektronik im Vakuum testen: Warum Baugruppen ohne Konvektion überhitzen, wie Kontamination Optiken erreicht – und was QCM, RGA und IR-Kameras sichtbar machen.",
+      "seoDescription": "Elektronik im Vakuum testen: warum Baugruppen ohne Konvektion überhitzen, wie Kontamination Optiken erreicht und was QCM, RGA und IR-Kameras zeigen.",
       "intro": "Optische und elektronische Nutzlasten benötigen im Vakuumtest zwei gekoppelte Kontrollen: thermische Verifikation ohne konvektive Kühlung und molekulare Kontaminationskontrolle an kalten, empfindlichen Flächen. Eine belastbare Kampagne definiert konduktive und radiative Randbedingungen, überwacht kritische Temperaturen, beherrscht Materialien und Kammerhistorie und sequenziert Heiß- und Kaltphasen zum Schutz von Detektoren, Spiegeln und Filtern.",
       "sections": [
         {

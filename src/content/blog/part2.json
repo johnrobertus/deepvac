@@ -435,7 +435,7 @@
       "title": "TVAC Facility Requirements: What Your Building Must Provide",
       "description": "Floor loads, transport path, power, heat rejection, LN₂ safety, cleanliness and IT: what a facility must provide before a thermal vacuum system arrives – with a practical site checklist.",
       "seoTitle": "TVAC Facility Requirements: Lab Setup | Deepvac",
-      "seoDescription": "TVAC facility requirements explained: floor load, transport path, electrical supply, cooling, LN₂ safety, cleanliness and IT – plus a practical site checklist.",
+      "seoDescription": "TVAC facility requirements explained: floor load, transport path, power supply, cooling, LN₂ safety, cleanliness and IT, plus a practical site checklist.",
       "intro": "A TVAC installation needs more than a chamber footprint. Site planning must close the transport path, point loads, electrical supply, heat rejection, process gases, oxygen-deficiency protection, exhaust, room conditions, network access and service space against the supplier's installation data and local regulations. Resolving these interfaces before shipment reduces commissioning risk and prevents building work from becoming the project critical path.",
       "sections": [
         {
@@ -629,7 +629,7 @@
       "title": "Solar Simulation vs Infrared Heating: Imposing Heat Flux in TVAC",
       "description": "Solar simulators, IR lamp arrays and heater plates all impose external heat flux in a thermal vacuum chamber – with very different fidelity, cost and complexity.",
       "seoTitle": "Solar Simulation vs IR Heating in TVAC | Deepvac",
-      "seoDescription": "Solar simulator, IR lamp arrays or heater plates? How to impose external heat flux in a TVAC chamber, when spectral fidelity matters and how each is controlled.",
+      "seoDescription": "Solar simulator, IR lamps or heater plates? How to impose external heat flux in a TVAC chamber, when spectral fidelity matters and how each is controlled.",
       "intro": "External heat input in a TVAC test can be applied with a solar simulator, an infrared source or a conductive heater. These methods do not reproduce the same boundary condition. A solar simulator addresses irradiance, spectrum and direction; infrared systems can reproduce a calibrated absorbed heat flux without solar spectral fidelity; conductive heaters impose power or interface temperature. The verification objective and thermal model determine which approximation is acceptable.",
       "sections": [
         {
@@ -709,7 +709,7 @@
       "title": "Solarsimulation vs. Infrarotheizung: Wärmeeintrag im TVAC",
       "description": "Solarsimulatoren, IR-Lampenfelder und Thermalplatten bringen externe Wärmeflüsse in die Thermalvakuumkammer – mit sehr unterschiedlicher Genauigkeit und Komplexität.",
       "seoTitle": "Solarsimulation vs. IR-Heizung im TVAC | Deepvac",
-      "seoDescription": "Solarsimulator, IR-Lampenfeld oder Thermalplatte? Wie externer Wärmefluss im TVAC aufgebracht wird, wann spektrale Treue zählt und wie geregelt und kalibriert.",
+      "seoDescription": "Solarsimulator, IR-Lampen oder Thermalplatte? Wie Wärmefluss im TVAC aufgebracht wird, wann spektrale Treue zählt und wie geregelt und kalibriert wird.",
       "intro": "Externer Wärmeeintrag in einem TVAC-Test kann mit Solarsimulator, Infrarotquelle oder konduktivem Heizer aufgebracht werden. Diese Methoden bilden nicht dieselbe Randbedingung nach. Ein Solarsimulator adressiert Bestrahlungsstärke, Spektrum und Richtung; Infrarotsysteme können einen kalibrierten absorbierten Wärmestrom ohne solare Spektraltreue erzeugen; konduktive Heizer prägen Leistung oder Schnittstellentemperatur auf. Nachweisziel und Thermalmodell bestimmen, welche Näherung zulässig ist.",
       "sections": [
         {
@@ -835,7 +835,7 @@
       "title": "TVAC Chamber Sizing: How to Choose the Right Volume",
       "description": "Nominal litres say little: how shroud, thermal plate and fixturing shrink usable volume, which clearances matter, cubic vs cylindrical geometry – and how much growth margin is sensible.",
       "seoTitle": "TVAC Chamber Sizing: Choosing the Right Volume | Deepvac",
-      "seoDescription": "TVAC chamber sizing explained: nominal vs usable volume, clearance rules of thumb, cubic vs cylindrical geometry and growth margin without oversizing costs.",
+      "seoDescription": "TVAC chamber sizing explained: nominal vs usable volume, clearance rules of thumb, cubic vs cylindrical geometry and growth margin without oversizing.",
       "intro": "TVAC chamber sizing starts with the largest approved test configuration, including fixture, harness, instrumentation, access and radiative clearance. The assembly must pass through the door and fit within the clear dimensions of the selected shroud and thermal plate. Nominal vessel volume is useful for product classification, but it is not the binding test envelope. Growth margin should be defined from a realistic programme forecast rather than an unspecified future maximum.",
       "sections": [
         {
@@ -899,7 +899,7 @@
       "title": "TVAC-Kammer dimensionieren: die richtige Größe wählen",
       "description": "Nennliter sagen wenig: wie Shroud, Thermalplatte und Vorrichtungen das Nutzvolumen schrumpfen, welche Abstände zählen, kubisch vs. zylindrisch – und wie viel Wachstumsreserve sinnvoll ist.",
       "seoTitle": "TVAC-Kammer dimensionieren: Größe wählen | Deepvac",
-      "seoDescription": "TVAC-Kammer richtig dimensionieren: Nennvolumen vs. Nutzvolumen, Faustregeln für Abstände, kubische vs. zylindrische Bauform und sinnvolle Wachstumsreserve.",
+      "seoDescription": "TVAC-Kammer dimensionieren: Nennvolumen vs. Nutzvolumen, Faustregeln für Abstände, kubische vs. zylindrische Bauform und sinnvolle Wachstumsreserve.",
       "intro": "Die Dimensionierung einer TVAC-Kammer beginnt mit der größten freigegebenen Prüfkonfiguration einschließlich Vorrichtung, Verkabelung, Instrumentierung, Zugang und Strahlungsabstand. Die Baugruppe muss durch die Tür passen und innerhalb der lichten Maße von Shroud und Thermalplatte liegen. Das Nennvolumen des Behälters dient der Produktklassifizierung, ist aber nicht der verbindliche Einbauraum. Wachstumsreserve sollte aus einer realistischen Programmplanung und nicht aus einem unbestimmten künftigen Maximum folgen.",
       "sections": [
         {

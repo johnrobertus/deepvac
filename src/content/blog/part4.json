@@ -88,7 +88,7 @@
       "title": "Vakuumpumpstand für TVAC: Architektur richtig auslegen",
       "description": "Von ölfreien Vorpumpen über Turbomolekularpumpen bis zu Roots-Boostern und Kryofallen: Wie ein TVAC-Pumpstand aufgebaut, dimensioniert und überwacht wird – und welche Treiber wirklich zählen.",
       "seoTitle": "Vakuumpumpstand für TVAC auslegen | Deepvac",
-      "seoDescription": "Vakuumpumpstand für TVAC-Kammern auslegen: ölfreie Vorpumpen, Turbopumpen, Roots-Booster, Kryofallen, Dimensionierung und RGA-Überwachung verständlich erklärt.",
+      "seoDescription": "Vakuumpumpstand für TVAC-Kammern auslegen: ölfreie Vorpumpen, Turbopumpen, Roots-Booster, Kryofallen, Dimensionierung und RGA-Überwachung erklärt.",
       "intro": "Ein TVAC-Pumpstand wird aus Kammervolumen, Leitwert, erwarteter Gaslast, gefordertem Arbeitsdruck, zulässiger Abpumpzeit, Sauberkeit und Einsatzprofil ausgewählt. Viele Systeme kombinieren eine trockene Vorvakuumstufe mit einer Turbomolekular-Hochvakuumstufe und optionalen kryogenen Fangflächen; die richtige Architektur ist jedoch konfigurationsspezifisch. Effektives Saugvermögen an der Kammer und Gaslast des Prüflings zählen mehr als die Summe der Typenschildwerte.",
       "sections": [
         {
@@ -283,7 +283,7 @@
       "title": "Vakuumbereiche erklärt: von Grobvakuum bis UHV",
       "description": "Die konventionellen Vakuumbereiche, wie sich Gasverhalten und Anlagentechnik mit dem Druck ändern und warum viele Thermalvakuum-Spezifikationen den Hochvakuumbereich nutzen.",
       "seoTitle": "Vakuumbereiche erklärt: Grobvakuum bis UHV | Deepvac",
-      "seoDescription": "Grobvakuum, Feinvakuum, Hochvakuum und UHV mit Pumpen, Messtechnik und Molekularströmung erklärt, einschließlich der Einordnung typischer TVAC-Spezifikationen.",
+      "seoDescription": "Grobvakuum, Feinvakuum, Hochvakuum und UHV mit Pumpen, Messtechnik und Molekularströmung erklärt, inklusive Einordnung typischer TVAC-Spezifikationen.",
       "intro": "Die Vakuumtechnik nutzt breite Druckbereiche wie Grob-, Fein-, Hoch- und Ultrahochvakuum. Ihre Grenzen sind Konventionen und nicht universell, markieren aber nützliche Wechsel bei Gastransport, geeigneten Pumpen, Messverfahren, Dichtungskonzepten und Oberflächeneffekten. Thermalvakuumtests arbeiten üblicherweise im Hochvakuumbereich, damit der Wärmeübertrag durch Restgas für den jeweiligen Verifikationsfall ausreichend klein ist. Dieser Artikel erklärt die Bereiche, die Anschauung der Molekularströmung und die Folgen für die Kammerspezifikation, ohne einen einzelnen Druckwert als allgemeine Forderung darzustellen.",
       "sections": [
         {
@@ -615,7 +615,7 @@
       "title": "Contamination Control in Thermal Vacuum Testing",
       "description": "Molecular films and particles can quietly degrade optics, sensors and coatings during a TVAC test. How contamination arises, how QCM and RGA measure it, and how you keep a campaign clean.",
       "seoTitle": "Contamination Control in TVAC Testing | Deepvac",
-      "seoDescription": "Contamination control in thermal vacuum testing: molecular vs particulate sources, prevention via bake-out and materials, QCM and RGA monitoring in practice.",
+      "seoDescription": "Contamination control in TVAC testing: molecular vs particulate sources, prevention via bake-out and materials, QCM and RGA monitoring in practice.",
       "intro": "Contamination control in TVAC testing addresses molecular deposition and particles. Vacuum and temperature can release volatile species from the test item, fixtures and chamber history, while cold surfaces can collect them. Particles arise mainly from handling, materials and the room environment. A campaign therefore needs a cleanliness budget, approved materials and processes, controlled chamber configuration and measurements matched to hardware sensitivity.",
       "sections": [
         {

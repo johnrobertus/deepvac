@@ -57,7 +57,7 @@
       "title": "TVAC Chamber Maintenance: Preventive Servicing, Calibration and Obsolescence",
       "description": "Thermal vacuum chambers degrade quietly before they fail loudly. Which seals, pumps, cryogenic and control components need attention, at what intervals, and how to keep the records that make qualification data defensible.",
       "seoTitle": "TVAC Chamber Maintenance: Preventive Guide | Deepvac",
-      "seoDescription": "Preventive maintenance for thermal vacuum chambers: seals, pumps, LN₂ system, gauge and sensor calibration, controls obsolescence, typical intervals and records.",
+      "seoDescription": "Preventive maintenance for TVAC chambers: seals, pumps, LN₂ system, gauge and sensor calibration, controls obsolescence, typical intervals and records.",
       "intro": "A thermal vacuum chamber rarely fails without warning. Base pressure creeps upward over months, the shroud takes a little longer to reach set-point, a gauge drifts by a few percent, a controller vendor announces end of support. Each of these signals is cheap to act on early and expensive to ignore. Preventive maintenance turns them into a plan: inspection intervals, consumable replacement by operating hours, calibration with traceable evidence and an obsolescence strategy for pumps and controls. This article outlines the maintenance items that matter on most TVAC systems, typical intervals and the records that keep a qualification test defensible.",
       "sections": [
         {
@@ -185,7 +185,7 @@
       "title": "Wartung von TVAC-Kammern: Vorbeugende Instandhaltung, Kalibrierung und Obsoleszenz",
       "description": "Thermalvakuumkammern altern leise, bevor sie laut ausfallen. Welche Dichtungen, Pumpen, Kryo- und Steuerungskomponenten Aufmerksamkeit brauchen, in welchen Intervallen, und welche Nachweise Qualifikationsdaten belastbar halten.",
       "seoTitle": "TVAC-Kammer Wartung: Leitfaden | Deepvac",
-      "seoDescription": "Vorbeugende Wartung von Thermalvakuumkammern: Dichtungen, Pumpen, LN₂-System, Kalibrierung von Messgeräten, Obsoleszenz der Steuerung, typische Intervalle und Nachweise.",
+      "seoDescription": "Vorbeugende Wartung von TVAC-Kammern: Dichtungen, Pumpen, LN₂-System, Kalibrierung der Messtechnik, Obsoleszenz der Steuerung, Intervalle und Nachweise.",
       "intro": "Eine Thermalvakuumkammer fällt selten ohne Vorwarnung aus. Der Enddruck steigt über Monate langsam an, der Shroud braucht etwas länger bis zum Sollwert, ein Messgerät driftet um wenige Prozent, ein Steuerungshersteller kündigt das Ende des Supports an. Jedes dieser Signale ist früh billig zu beheben und spät teuer zu ignorieren. Vorbeugende Wartung macht daraus einen Plan: Inspektionsintervalle, Verschleißteilwechsel nach Betriebsstunden, Kalibrierung mit rückführbaren Nachweisen und eine Obsoleszenzstrategie für Pumpen und Steuerung. Dieser Artikel beschreibt die Wartungspunkte, die bei den meisten TVAC-Anlagen zählen, typische Intervalle und die Aufzeichnungen, die einen Qualifikationstest belastbar halten.",
       "sections": [
         {
