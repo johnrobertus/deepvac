@@ -1,5 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import { Layout } from "@/components/Layout";
@@ -10,14 +9,9 @@ import { useLanguage } from "@/components/LanguageProvider";
 import { localizedPath } from "@/lib/routes";
 
 const NotFound = () => {
-  const location = useLocation();
   const { t } = useTranslation(["errors", "common"]);
   const { t: tSeo } = useTranslation("seo");
   const { lang } = useLanguage();
-
-  useEffect(() => {
-    console.error("404 Error: User attempted to access non-existent route:", location.pathname);
-  }, [location.pathname]);
 
   return (
     <Layout>
