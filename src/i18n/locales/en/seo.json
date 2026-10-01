@@ -222,5 +222,21 @@
   "blogTvacChamberAcceptanceTesting": {
     "title": "TVAC Chamber FAT and SAT Checklist | Deepvac",
     "description": "FAT and SAT for thermal vacuum chambers: pump-down, leak rate, thermal range and stability, interlocks and cleanliness evidence to witness before you sign."
+  },
+  "blogCategoryBasics": {
+    "title": "Thermal Vacuum Testing Fundamentals | Deepvac",
+    "description": "Fundamentals of thermal vacuum testing: what a TVAC test simulates, vacuum levels, outgassing, test types, chamber sizing and qualification standards."
+  },
+  "blogCategoryEngineeringGuide": {
+    "title": "TVAC Engineering Guide | Deepvac",
+    "description": "Engineering articles on TVAC systems: pumping, cooling, cryo shrouds, temperature measurement, leak testing, contamination control and automation."
+  },
+  "blogCategoryApplications": {
+    "title": "Thermal Vacuum Testing Applications | Deepvac",
+    "description": "Thermal vacuum testing in practice: what CubeSats, optics, electronics and electric propulsion hardware need from a TVAC chamber and test campaign."
+  },
+  "blogCategoryDecisionSupport": {
+    "title": "Decision Support for TVAC Projects | Deepvac",
+    "description": "Decision support for TVAC projects: cost drivers, lead time, in-house versus external testing, used versus new chambers and retrofit versus replacement."
   }
 }

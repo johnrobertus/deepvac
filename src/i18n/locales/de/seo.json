@@ -222,5 +222,21 @@
   "blogTvacChamberAcceptanceTesting": {
     "title": "TVAC-Kammer: FAT und SAT richtig abnehmen | Deepvac",
     "description": "FAT und SAT für Thermalvakuumkammern: Abpumpzeit, Leckrate, Temperaturbereich und Stabilität, Verriegelungen und Sauberkeit vor der Unterschrift prüfen."
+  },
+  "blogCategoryBasics": {
+    "title": "Grundlagen des Thermalvakuumtests | Deepvac",
+    "description": "Grundlagen des Thermalvakuumtests: was ein TVAC-Test simuliert, Vakuumbereiche, Ausgasung, Testarten, Kammerdimensionierung und Qualifikationsnormen."
+  },
+  "blogCategoryEngineeringGuide": {
+    "title": "TVAC-Engineering-Leitfaden | Deepvac",
+    "description": "Fachartikel zu TVAC-Systemen: Pumpstände, Kühlung, Kryo-Shrouds, Temperaturmessung, Lecktest, Kontaminationskontrolle und Automatisierung."
+  },
+  "blogCategoryApplications": {
+    "title": "Anwendungen des Thermalvakuumtests | Deepvac",
+    "description": "Thermalvakuumtests in der Praxis: was CubeSats, Optik, Elektronik und elektrische Antriebe von einer TVAC-Kammer und Testkampagne benötigen."
+  },
+  "blogCategoryDecisionSupport": {
+    "title": "Entscheidungshilfen für TVAC-Projekte | Deepvac",
+    "description": "Entscheidungshilfen für TVAC-Projekte: Kostentreiber, Lieferzeit, eigene Anlage oder externe Prüfung, gebraucht oder neu, Retrofit oder Neubeschaffung."
   }
 }
