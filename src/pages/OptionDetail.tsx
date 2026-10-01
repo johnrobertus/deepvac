@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/components/LanguageProvider";
 import { OptionDescription } from "@/components/options/OptionDescription";
 import { OptionIcon } from "@/components/options/OptionIcon";
-import { plainOptionDescription, type OptionItem } from "@/lib/optionCatalog";
+import { optionMetaDescription, plainOptionDescription, type OptionItem } from "@/lib/optionCatalog";
 import {
   getCanonical,
   getHreflangs,
@@ -34,6 +34,7 @@ const OptionDetail = () => {
   const canonical = getCanonical(pathname, lang);
   const hreflangs = getHreflangs(pathname);
   const description = plainOptionDescription(item);
+  const metaDescription = optionMetaDescription(item);
   const pageTitle = t("options.detailSeoTitle", { name: item.name }) as string;
   const homeUrl = lang === "de" ? "https://deepvac.space/de" : "https://deepvac.space/";
   const productsUrl = `https://deepvac.space${localizedPath("/products", lang)}`;
@@ -68,7 +69,7 @@ const OptionDetail = () => {
       <Helmet>
         <html lang={lang} />
         <title>{pageTitle}</title>
-        <meta name="description" content={description} />
+        <meta name="description" content={metaDescription} />
         <link rel="canonical" href={canonical} />
         {hreflangs.map((h) => (
           <link key={h.lang} rel="alternate" hrefLang={h.lang} href={h.href} />
@@ -80,6 +81,14 @@ const OptionDetail = () => {
       <PageShell>
         <PageHero
           eyebrow={`${t("options.details.eyebrow")} / ${categories[item.category]}`}
+          breadcrumbs={{
+            separator: "/",
+            items: [
+              { label: t("options.details.eyebrow") as string, href: optionsPath },
+              { label: categories[item.category] },
+            ],
+            lastIsCurrent: false,
+          }}
           title={item.name}
           description={item.purpose}
         >

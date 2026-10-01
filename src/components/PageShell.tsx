@@ -14,6 +14,8 @@ export interface BreadcrumbTrail {
   items: BreadcrumbItem[];
   /** Visible separator, kept identical to the eyebrow text it replaces. */
   separator: string;
+  /** Whether the last item is the current page (aria-current). Defaults to true. */
+  lastIsCurrent?: boolean;
 }
 
 /**
@@ -64,7 +66,7 @@ export function PageHero({ eyebrow, title, description, children, className, bre
                 return (
                   <li key={`${item.label}-${i}`} className="inline-flex items-center gap-x-[0.5ch]">
                     {isLast || !item.href ? (
-                      <span aria-current={isLast ? "page" : undefined}>{item.label}</span>
+                      <span aria-current={isLast && breadcrumbs.lastIsCurrent !== false ? "page" : undefined}>{item.label}</span>
                     ) : (
                       <Link
                         to={item.href}
