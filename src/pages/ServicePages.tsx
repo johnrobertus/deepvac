@@ -142,9 +142,6 @@ function ServicePageTemplate({ seoKey, nsKey, heroImage, children }: ServicePage
           <Button asChild size="lg" className="font-mono text-xs tracking-wide">
             <Link to={contactHref}>{tc("bookCall.heroCta")}</Link>
           </Button>
-          <Button asChild variant="outline" size="lg" className="font-mono text-xs tracking-wide">
-            <Link to={contactHref}>{tc("bookCall.heroCta")}</Link>
-          </Button>
         </CTABand>
       </PageShell>
     </Layout>

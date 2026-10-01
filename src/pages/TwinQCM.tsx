@@ -105,9 +105,6 @@ const TwinQCM = () => {
                 <Button asChild size="lg" className="font-mono text-xs tracking-wide">
                   <Link to={localizedPath("/contact", lang)}>{t("bookCall.heroCta")}</Link>
                 </Button>
-                <Button asChild variant="outline" size="lg" className="font-mono text-xs tracking-wide">
-                  <Link to={localizedPath("/contact", lang)}>{t("bookCall.heroCta")}</Link>
-                </Button>
               </div>
             </div>
             <div className="w-full overflow-hidden">
@@ -309,9 +306,6 @@ const TwinQCM = () => {
         description="From compact thermoelectric configurations to cryogenic QTGA setups, Deepvac integrates NDK Twin-QCM technology into new chambers, retrofit projects, and contamination-sensitive test environments."
       >
         <Button asChild size="lg" className="font-mono text-xs tracking-wide">
-          <Link to={localizedPath("/contact", lang)}>{t("bookCall.heroCta")}</Link>
-        </Button>
-        <Button asChild variant="outline" size="lg" className="font-mono text-xs tracking-wide">
           <Link to={localizedPath("/contact", lang)}>{t("bookCall.heroCta")}</Link>
         </Button>
       </CTABand>
