@@ -6,6 +6,7 @@ import { PageShell, Section, CTABand } from "@/components/PageShell";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/components/LanguageProvider";
 import { localizedPath } from "@/lib/routes";
+import { categoryEnPath } from "@/lib/blogCategories";
 import {
   findPostBySlug,
   resolveRelatedArticle,
@@ -177,9 +178,12 @@ const GeneratedPost = () => {
             </Link>
 
             <div className="flex flex-wrap items-center gap-3">
-              <span className="mono-label text-blue block">
+              <Link
+                to={localizedPath(categoryEnPath(post.category) ?? "/resources/blog", lang)}
+                className="mono-label text-blue block hover:text-sand transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              >
                 {t(`blog.categories.${post.category}`)}
-              </span>
+              </Link>
               <span className="text-gray/60" aria-hidden="true">
                 ·
               </span>

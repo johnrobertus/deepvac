@@ -51,6 +51,7 @@ const RetrofitVsReplacement = lazy(() => import("./pages/blog/RetrofitVsReplacem
 const AerospaceQualification = lazy(() => import("./pages/blog/AerospaceQualification"));
 const TvacCostDrivers = lazy(() => import("./pages/blog/TvacCostDrivers"));
 const TvacTestCampaign = lazy(() => import("./pages/blog/TvacTestCampaign"));
+const BlogCategory = lazy(() => import("./pages/BlogCategory"));
 const GeneratedPost = lazy(() => import("./pages/blog/GeneratedPost"));
 const TvacQuestionnaire = lazy(() => import("./pages/TvacQuestionnaire"));
 
@@ -95,6 +96,7 @@ const App = () => (
                 <Route path="/resources/blog/aerospace-qualification-testing" element={<AerospaceQualification />} />
                 <Route path="/resources/blog/tvac-cost-drivers" element={<TvacCostDrivers />} />
                 <Route path="/resources/blog/tvac-test-campaign" element={<TvacTestCampaign />} />
+                <Route path="/resources/blog/category/:category" element={<BlogCategory />} />
                 <Route path="/resources/blog/:slug" element={<GeneratedPost />} />
                 <Route path="/careers" element={<Careers />} />
                 <Route path="/references" element={<References />} />
@@ -129,6 +131,7 @@ const App = () => (
                 <Route path="/de/ressourcen/blog/raumfahrtqualifikation" element={<AerospaceQualification />} />
                 <Route path="/de/ressourcen/blog/tvac-kostentreiber" element={<TvacCostDrivers />} />
                 <Route path="/de/ressourcen/blog/tvac-testkampagne" element={<TvacTestCampaign />} />
+                <Route path="/de/ressourcen/blog/kategorie/:category" element={<BlogCategory />} />
                 <Route path="/de/ressourcen/blog/:slug" element={<GeneratedPost />} />
                 <Route path="/de/karriere" element={<Careers />} />
                 <Route path="/de/referenzen" element={<References />} />
