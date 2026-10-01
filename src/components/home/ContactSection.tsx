@@ -19,6 +19,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { ConsentMap } from "@/components/ConsentMap";
 import { useLanguage } from "@/components/LanguageProvider";
 import { trackEvent } from "@/lib/analytics";
+import { ensureTurnstileScript } from "@/lib/turnstile";
 
 const TURNSTILE_SITE_KEY = "0x4AAAAAACu_Uqbd5b8IkXxU";
 
@@ -98,6 +99,12 @@ export function ContactSection() {
   const [validationErrors, setValidationErrors] = useState<Partial<Record<keyof FormData, string>>>({});
   const turnstileRef = useRef<HTMLDivElement>(null);
   const turnstileWidgetId = useRef<string | null>(null);
+  const [turnstileRequested, setTurnstileRequested] = useState(false);
+
+  const requestTurnstile = () => {
+    ensureTurnstileScript();
+    setTurnstileRequested(true);
+  };
 
   const productInterests = t("interests.products", { returnObjects: true }) as string[];
   const serviceInterests = t("interests.services", { returnObjects: true }) as string[];
@@ -107,17 +114,7 @@ export function ContactSection() {
   const existingSystemOptions = t("existingSystemOptions", { returnObjects: true }) as string[];
 
   useEffect(() => {
-    if (!document.getElementById("cf-turnstile-script")) {
-      const script = document.createElement("script");
-      script.id = "cf-turnstile-script";
-      script.src = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
-      script.async = true; script.defer = true;
-      document.head.appendChild(script);
-    }
-  }, []);
-
-  useEffect(() => {
-    if (!turnstileRef.current) return;
+    if (!turnstileRequested || !turnstileRef.current) return;
     const interval = setInterval(() => {
       if (window.turnstile && turnstileRef.current && !turnstileWidgetId.current) {
         turnstileWidgetId.current = window.turnstile.render(turnstileRef.current, {
@@ -127,7 +124,7 @@ export function ContactSection() {
       }
     }, 200);
     return () => clearInterval(interval);
-  }, [submitted]);
+  }, [submitted, turnstileRequested]);
 
   const set = (field: keyof FormData) => (val: string) => {
     setForm((prev) => ({ ...prev, [field]: val }));
@@ -163,6 +160,7 @@ export function ContactSection() {
 
     setSending(true);
     try {
+      requestTurnstile();
       let turnstileToken = "";
       if (window.turnstile && turnstileWidgetId.current) {
         turnstileToken = window.turnstile.getResponse(turnstileWidgetId.current) || "";
@@ -260,7 +258,7 @@ export function ContactSection() {
               </aside>
 
 
-              <form className="space-y-7" onSubmit={handleSubmit}>
+              <form className="space-y-7" onSubmit={handleSubmit} onFocusCapture={requestTurnstile}>
                 {/* Section 1 — Contact details */}
                 <div className="space-y-5">
                   <span className="mono-label text-blue">{t("sections.contact")}</span>

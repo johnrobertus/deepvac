@@ -204,6 +204,15 @@ function setHtmlLang(html, lang) {
   return html.replace(/<html\s+lang="[^"]*"/i, `<html lang="${escapeAttr(lang)}"`);
 }
 
+/** Keep third-party Turnstile scripts out of every static HTML file. */
+function stripTurnstileScripts(html) {
+  return html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, (tag) =>
+    /\bid\s*=\s*["']cf-turnstile-script["']/i.test(tag) ||
+    /\bsrc\s*=\s*["']https?:\/\/challenges\.cloudflare\.com(?:\/|["'])/i.test(tag)
+      ? "" : tag,
+  );
+}
+
 // ---------- main ----------
 async function loadPlaywright() {
   try {
@@ -242,6 +251,7 @@ async function prerenderOne(page, route, lang, seoEn, seoDe) {
   let html = await page.content();
   html = setHtmlLang(html, lang);
   html = normalizeHead(html, meta);
+  html = stripTurnstileScripts(html);
 
   const outFile = routeOutputPath(routePath);
   fs.mkdirSync(path.dirname(outFile), { recursive: true });
@@ -259,7 +269,7 @@ async function prerenderNotFound(page, lang, seo) {
     { timeout: NAV_TIMEOUT_MS },
   );
   await page.waitForTimeout(SETTLE_MS);
-  const html = cleanNotFoundHead(setHtmlLang(await page.content(), lang), seo.notFound);
+  const html = stripTurnstileScripts(cleanNotFoundHead(setHtmlLang(await page.content(), lang), seo.notFound));
   const outFile = path.join(DIST, ...(lang === "de" ? ["de"] : []), "404.html");
   fs.mkdirSync(path.dirname(outFile), { recursive: true });
   fs.writeFileSync(outFile, html);
