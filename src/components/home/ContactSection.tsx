@@ -281,7 +281,7 @@ export function ContactSection() {
                 {/* Section 2 — Area of interest */}
                 <div className="border-t border-gray/20 pt-6 space-y-4">
                   <div className="space-y-1.5">
-                    <span className="mono-label text-blue">{t("sections.interestTitle")}<span className="text-blue ml-1">*</span></span>
+                    <span className="mono-label text-blue">{t("sections.interestTitle")}</span>
                     <p className="text-[15px] text-sand/85">{t("sections.interestHelper")}</p>
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-5">
@@ -304,7 +304,6 @@ export function ContactSection() {
                       ))}
                     </div>
                   </div>
-                  {validationErrors.interests && <p className="text-[13px] text-red-400">{validationErrors.interests}</p>}
                 </div>
 
                 {/* Section 3 — Project context */}
