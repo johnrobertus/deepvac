@@ -11,7 +11,7 @@ import { ServicesSection } from "@/components/home/ServicesSection";
 import { WhyDeepvacSection } from "@/components/home/WhyDeepvacSection";
 import { TeamSection } from "@/components/home/TeamSection";
 import { CataloguesSection } from "@/components/home/CataloguesSection";
-import { ContactSection } from "@/components/home/ContactSection";
+import { LazyContactSection } from "@/components/home/LazyContactSection";
 import { useLanguage } from "@/components/LanguageProvider";
 import { getCanonical, getHreflangs, localizedPath } from "@/lib/routes";
 
@@ -93,7 +93,7 @@ const Index = () => {
         <div className="section-divider" />
         <TeamSection />
         <CataloguesSection />
-        <ContactSection />
+        <LazyContactSection />
       </PageShell>
     </Layout>
   );

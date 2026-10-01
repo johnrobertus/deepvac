@@ -202,10 +202,6 @@
     @apply mx-auto w-full max-w-[1560px] px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 3xl:px-24;
   }
 
-  .container-narrow {
-    @apply mx-auto w-full max-w-3xl px-4 sm:px-6 lg:px-8;
-  }
-
   .hero-container {
     @apply mx-auto w-full max-w-[1240px] px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-12;
   }
@@ -352,14 +348,6 @@
   }
 
   /* Subtle icon-button lift */
-  .icon-hover {
-    transition: color 200ms var(--ease-industrial), transform 250ms var(--ease-premium);
-  }
-  .icon-hover:hover {
-    color: hsl(var(--blue));
-    transform: translateY(-1px);
-  }
-
   .glass-overlay {
     background: hsl(var(--surface) / 0.8);
     backdrop-filter: blur(16px) saturate(1.2);
@@ -392,6 +380,10 @@
   .reveal.visible {
     opacity: 1;
     transform: translateY(0);
+  }
+
+  .reveal.reveal-instant {
+    transition: none;
   }
 
   @media print {

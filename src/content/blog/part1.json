@@ -256,7 +256,7 @@
       "title": "Outgassing in Vacuum: TML, CVCM and Bake-Out Explained",
       "description": "Why materials release gas in vacuum, how ECSS outgassing screening with TML and CVCM works, which materials cause trouble – and how bake-out, QCM and RGA keep contamination under control.",
       "seoTitle": "Outgassing in Vacuum: TML, CVCM, Bake-Out | Deepvac",
-      "seoDescription": "Outgassing in vacuum explained: desorption physics, ECSS TML and CVCM screening limits, typical problem materials, bake-out practice and QCM/RGA monitoring.",
+      "seoDescription": "Outgassing in vacuum explained: desorption physics, ECSS TML and CVCM limits, problem materials, bake-out practice and QCM/RGA monitoring.",
       "intro": "Outgassing is the release of adsorbed or dissolved gases and volatile compounds after pressure is reduced. In a thermal vacuum chamber it contributes to the gas load and can transport condensable material to colder surfaces. Material screening, controlled curing and cleaning, bake-out, quartz crystal microbalance measurements and residual-gas analysis address different parts of the problem. ECSS-Q-ST-70-02C and the NASA outgassing database provide established screening methods and reference data; the project contamination-control plan remains binding.",
       "sections": [
         {

@@ -1,5 +1,6 @@
-import { useEffect, useRef, ReactNode } from "react";
+import { useEffect, useLayoutEffect, useRef, ReactNode } from "react";
 import { cn } from "@/lib/utils";
+import { isInitialLoad } from "@/lib/revealState";
 
 interface RevealProps {
   children: ReactNode;
@@ -9,10 +10,22 @@ interface RevealProps {
 
 export function Reveal({ children, className, delay = 0 }: RevealProps) {
   const ref = useRef<HTMLDivElement>(null);
+  const shownInstantly = useRef(false);
+
+  useLayoutEffect(() => {
+    const el = ref.current;
+    if (!el || !isInitialLoad()) return;
+    const r = el.getBoundingClientRect();
+    const inView = r.bottom > 0 && r.top < window.innerHeight && r.right > 0 && r.left < window.innerWidth;
+    if (!inView) return;
+    shownInstantly.current = true;
+    el.classList.add("visible", "reveal-instant");
+    requestAnimationFrame(() => requestAnimationFrame(() => el.classList.remove("reveal-instant")));
+  }, []);
 
   useEffect(() => {
     const el = ref.current;
-    if (!el) return;
+    if (!el || shownInstantly.current) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {

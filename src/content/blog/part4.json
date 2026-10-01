@@ -20,7 +20,7 @@
       "title": "TVAC Pumping Systems: How to Select the Right Architecture",
       "description": "From oil-free backing pumps to turbomolecular pumps, roots boosters and cryo traps: how a TVAC pumping system is structured, sized and monitored – and which drivers actually matter.",
       "seoTitle": "TVAC Pumping Systems: Selection Guide | Deepvac",
-      "seoDescription": "Vacuum pumping system selection for TVAC chambers: oil-free backing pumps, turbo pumps, roots boosters, cryo traps, sizing drivers and RGA monitoring explained.",
+      "seoDescription": "Vacuum pumping system selection for TVAC chambers: oil-free backing pumps, turbo pumps, roots boosters, cryo traps, sizing and RGA monitoring.",
       "intro": "A TVAC pumping system is selected from chamber volume, conductance, expected gas load, target working pressure, allowable pump-down time, cleanliness and duty cycle. Many systems combine a dry roughing stage with a turbomolecular high-vacuum stage and optional cryogenic capture surfaces, but the correct architecture is configuration-specific. Effective speed at the chamber and the test-item gas load matter more than the sum of pump nameplate values.",
       "sections": [
         {
