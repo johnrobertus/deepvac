@@ -615,7 +615,8 @@
         "benefits": [
           "Simulation solarer Wärmeeinträge",
           "Erweiterte Testszenarien"
-        ]
+        ],
+        "metaDescription": "Ein Solarsimulator bringt einen kalibrierten Strahlungsfluss in die Kammer ein und bildet die solare Einstrahlung im Orbit nach."
       },
       {
         "slug": "infrared-heaters",
@@ -626,7 +627,8 @@
         "benefits": [
           "Schnellere Temperaturanstiege",
           "Simulation radiativer Erwärmung"
-        ]
+        ],
+        "metaDescription": "IR-Strahler bringen eine zusätzliche Strahlungswärmelast direkt auf den Prüfling und ermöglichen schnellere Temperaturrampen und radiative Erwärmungsfälle."
       },
       {
         "slug": "temperature-control-zones",
@@ -637,7 +639,8 @@
         "benefits": [
           "Bessere Temperatur-Uniformität",
           "Komplexere Temperaturprofile"
-        ]
+        ],
+        "metaDescription": "Unabhängig geregelte Temperaturzonen regeln einzelne Bereiche von Shroud oder Thermalplatte separat, für mehr Uniformität und komplexere Temperaturprofile."
       },
       {
         "slug": "temperature-sensors",
@@ -647,7 +650,8 @@
         "description": "Zusätzliche Sensorkanäle erhöhen die Anzahl der Messstellen an Prüfling und Shroud. Eine dichtere Instrumentierung verbessert das Temperatur-Mapping und die Korrelation thermischer Modelle.",
         "benefits": [
           "Verbessertes Temperatur-Mapping"
-        ]
+        ],
+        "metaDescription": "Zusätzliche Sensorkanäle erhöhen die Messstellen an Prüfling und Shroud und verbessern Temperatur-Mapping und die Korrelation thermischer Modelle."
       },
       {
         "slug": "bake-out",
@@ -658,7 +662,8 @@
         "benefits": [
           "Verkürzte Abpumpzeit",
           "Verbesserte Vakuumreinheit"
-        ]
+        ],
+        "metaDescription": "Eine integrierte Wandheizung beschleunigt das Ausgasen von Wasser und Kontaminationen, verkürzt die Abpumpzeit und verbessert die Vakuumqualität."
       },
       {
         "slug": "cryogenic-traps",
@@ -669,7 +674,8 @@
         "benefits": [
           "Verbesserte Vakuumreinheit",
           "Höhere Druckstabilität"
-        ]
+        ],
+        "metaDescription": "Kryofallen kondensieren Wasserdampf und andere kondensierbare Gase an gekühlten Flächen und verbessern Vakuumreinheit und Druckstabilität bei langen Tests."
       },
       {
         "slug": "roots-booster",
@@ -679,7 +685,8 @@
         "description": "Ein Roots-Booster im Pumpstand erhöht das effektive Saugvermögen im Feinvakuumbereich. Das Ergebnis ist eine deutlich verkürzte Abpumpzeit.",
         "benefits": [
           "Verkürzte Abpumpzeit"
-        ]
+        ],
+        "metaDescription": "Ein Roots-Booster im Pumpstand erhöht das effektive Saugvermögen im Feinvakuumbereich und verkürzt die Abpumpzeit der Thermalvakuumkammer deutlich."
       },
       {
         "slug": "oil-free-pumping",
@@ -689,7 +696,8 @@
         "description": "Der Pumpstand wird ausschließlich mit trockenen Pumpen ausgeführt. Das minimiert das Risiko einer Kohlenwasserstoff-Kontamination von Kammer und Prüfling.",
         "benefits": [
           "Minimierte Kohlenwasserstoff-Kontamination"
-        ]
+        ],
+        "metaDescription": "Ein Pumpstand ausschließlich mit trockenen Pumpen minimiert das Risiko einer Kohlenwasserstoff-Kontamination von Thermalvakuumkammer und Prüfling."
       },
       {
         "slug": "nitrogen-venting",
@@ -700,7 +708,8 @@
         "benefits": [
           "Reduziertes Kontaminationsrisiko",
           "Schnellere Probenwechsel"
-        ]
+        ],
+        "metaDescription": "Automatisierte Belüftungs- und Spülzyklen mit trockenem Stickstoff fluten die Kammer kontrolliert und beschleunigen Probenwechsel."
       },
       {
         "slug": "residual-gas-analysis",
@@ -710,7 +719,8 @@
         "description": "Ein Restgasanalysator überwacht die Zusammensetzung des Restgases in der Kammer. Das erhöht die Aussagekraft Ihrer Tests – von Lecksignaturen bis zum Ausgasverhalten.",
         "benefits": [
           "Höhere Aussagekraft der Tests"
-        ]
+        ],
+        "metaDescription": "Ein Restgasanalysator überwacht die Zusammensetzung des Restgases in der Kammer und zeigt Lecksignaturen und Ausgasverhalten Ihrer Tests."
       },
       {
         "slug": "qcm-monitoring",
@@ -720,7 +730,8 @@
         "description": "Quarzkristall-Mikrowaagen überwachen Kondensation und molekulare Kontamination während des Tests. Das ermöglicht eine quantitative Bewertung der Kontamination.",
         "benefits": [
           "Quantitative Bewertung der Kontamination"
-        ]
+        ],
+        "metaDescription": "Quarzkristall-Mikrowaagen überwachen Kondensation und molekulare Kontamination während des Tests und ermöglichen deren quantitative Bewertung."
       },
       {
         "slug": "helium-leak-test",
@@ -730,7 +741,8 @@
         "description": "Dedizierte Anschlüsse bereiten die Kammer für die Helium-Lecksuche vor. Das beschleunigt Abnahmeprüfungen und wiederkehrende Dichtheitsnachweise.",
         "benefits": [
           "Beschleunigte Abnahme"
-        ]
+        ],
+        "metaDescription": "Dedizierte Anschlüsse bereiten die Kammer für die Helium-Lecksuche vor und beschleunigen Abnahmeprüfungen und wiederkehrende Dichtheitsnachweise."
       },
       {
         "slug": "viewing-window-znse",
@@ -743,7 +755,8 @@
         "benefits": [
           "Sichtprüfung ohne Belüften",
           "Thermografie zeigt Hotspots und Defekte"
-        ]
+        ],
+        "metaDescription": "Ein vakuumtaugliches Schauglas ermöglicht die Beobachtung des Prüflings während des Tests. Ein optionales ZnSe-Fenster macht die Kammerwand IR-durchlässig."
       },
       {
         "slug": "optical-viewports",
@@ -753,7 +766,8 @@
         "description": "Zusätzliche Schaugläser und optische Durchführungen ermöglichen Sichtprüfung und optische Messungen. Erweiterte Diagnostik – ohne die Kammer zu öffnen.",
         "benefits": [
           "Erweiterte Diagnostik ohne Öffnen der Kammer"
-        ]
+        ],
+        "metaDescription": "Zusätzliche Schaugläser und optische Durchführungen ermöglichen Sichtprüfung und optische Messungen und damit erweiterte Diagnostik ohne Öffnen der Kammer."
       },
       {
         "slug": "interior-camera",
@@ -763,7 +777,8 @@
         "description": "Eine vakuumtaugliche Kamera liefert eine kontinuierliche Videoüberwachung des Prüflings. Das erhöht Betriebssicherheit und Dokumentationsqualität.",
         "benefits": [
           "Erhöhte Betriebssicherheit"
-        ]
+        ],
+        "metaDescription": "Eine vakuumtaugliche Innenraumkamera liefert eine kontinuierliche Videoüberwachung des Prüflings und erhöht Betriebssicherheit und Dokumentationsqualität."
       },
       {
         "slug": "remote-monitoring",
@@ -774,7 +789,8 @@
         "benefits": [
           "Volle Rückverfolgbarkeit",
           "Vereinfachte Auswertung"
-        ]
+        ],
+        "metaDescription": "Netzwerkbasierter Fernzugriff und erweiterte Datenaufzeichnung mit Exportfunktionen, für volle Rückverfolgbarkeit und einfache Auswertung Ihrer Testdaten."
       },
       {
         "slug": "process-connections",
@@ -784,7 +800,8 @@
         "description": "Zusätzliche Vakuumdurchführungen für Strom, Signale und Sensorik vereinfachen die Integration Ihres Testaufbaus. Ausgelegt nach Ihren Harness- und Schnittstellenanforderungen.",
         "benefits": [
           "Vereinfachte Integration"
-        ]
+        ],
+        "metaDescription": "Zusätzliche Vakuumdurchführungen für Strom, Signale und Sensorik vereinfachen die Integration Ihres Testaufbaus nach Ihren Schnittstellenanforderungen."
       },
       {
         "slug": "vibration-isolation",
@@ -794,7 +811,8 @@
         "description": "Die mechanische Entkopplung des Pumpstands reduziert die Schwingungsübertragung auf die Kammer. Empfindliche Prüflinge bleiben während des Tests ungestört.",
         "benefits": [
           "Reduzierte Vibrationen am Prüfling"
-        ]
+        ],
+        "metaDescription": "Die mechanische Entkopplung des Pumpstands reduziert die Schwingungsübertragung auf die Kammer, empfindliche Prüflinge bleiben im Test ungestört."
       },
       {
         "slug": "water-cooling",
@@ -805,7 +823,8 @@
         "benefits": [
           "Geringere Wärmeabgabe",
           "Niedrigerer Geräuschpegel"
-        ]
+        ],
+        "metaDescription": "Wärmeabfuhr über Wasserkühlung statt Luftkühlung reduziert den Wärmeeintrag des Thermalvakuumsystems in den Raum und senkt den Geräuschpegel spürbar."
       }
     ],
     "crossSell": {
