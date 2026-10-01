@@ -701,8 +701,8 @@ export default function TvacQuestionnaire() {
                 </div>
               </div>
               <div className="space-y-3">
-                <MonoLabel>{t("s2.ports")}</MonoLabel>
-                <div className="space-y-3">
+                <MonoLabel as="span" id="q-ports-label">{t("s2.ports")}</MonoLabel>
+                <div role="group" aria-labelledby="q-ports-label" className="space-y-3">
                   {portRows.map((row, i) => (
                     <div key={row.label} className="grid grid-cols-1 sm:grid-cols-[1.1fr_1.3fr_0.7fr] gap-2 items-center">
                       <CheckItem
@@ -710,8 +710,8 @@ export default function TvacQuestionnaire() {
                         checked={form.ports[i].checked}
                         onChange={(v) => setForm((p) => { const n = [...p.ports]; n[i] = { ...n[i], checked: v }; return { ...p, ports: n }; })}
                       />
-                      <input className={cn(baseInput, "py-2")} placeholder={row.ph} value={form.ports[i].size} onChange={(e) => setForm((p) => { const n = [...p.ports]; n[i] = { ...n[i], size: e.target.value }; return { ...p, ports: n }; })} />
-                      <input className={cn(baseInput, "py-2")} type="number" placeholder={t("common.qty")} value={form.ports[i].qty} onChange={(e) => setForm((p) => { const n = [...p.ports]; n[i] = { ...n[i], qty: e.target.value }; return { ...p, ports: n }; })} />
+                      <input className={cn(baseInput, "py-2")} placeholder={row.ph} value={form.ports[i].size} onChange={(e) => setForm((p) => { const n = [...p.ports]; n[i] = { ...n[i], size: e.target.value }; return { ...p, ports: n }; })} aria-label={`${row.label} — ${row.ph}`} />
+                      <input className={cn(baseInput, "py-2")} type="number" placeholder={t("common.qty")} value={form.ports[i].qty} onChange={(e) => setForm((p) => { const n = [...p.ports]; n[i] = { ...n[i], qty: e.target.value }; return { ...p, ports: n }; })} aria-label={`${row.label} — ${t("common.quantity")}`} />
                     </div>
                   ))}
                 </div>
@@ -720,23 +720,23 @@ export default function TvacQuestionnaire() {
 
             <FieldGroup cols={3}>
               <div className="space-y-2">
-                <MonoLabel>{t("s2.viewportsQty")}</MonoLabel>
-                <select className={baseSelect} value={form.viewportsQty} onChange={(e) => set("viewportsQty")(e.target.value)}>
+                <MonoLabel htmlFor="q-viewports-qty">{t("s2.viewportsQty")}</MonoLabel>
+                <select id="q-viewports-qty" className={baseSelect} value={form.viewportsQty} onChange={(e) => set("viewportsQty")(e.target.value)}>
                   <option value="">{t("common.selectQuantity")}</option>
                   {vqOpts.map((q) => <option key={q} value={q}>{q}</option>)}
                 </select>
               </div>
               <div className="space-y-2">
-                <MonoLabel>{t("s2.viewportsSize")}</MonoLabel>
-                <input className={baseInput} placeholder={t("s2.viewportsSizePh")} value={form.viewportsSize} onChange={(e) => set("viewportsSize")(e.target.value)} />
+                <MonoLabel htmlFor="q-viewports-size">{t("s2.viewportsSize")}</MonoLabel>
+                <input id="q-viewports-size" className={baseInput} placeholder={t("s2.viewportsSizePh")} value={form.viewportsSize} onChange={(e) => set("viewportsSize")(e.target.value)} />
               </div>
               <div className="space-y-3">
-                <MonoLabel>{t("s2.viewportsMaterial")}</MonoLabel>
-                <div className="flex flex-col gap-2">
+                <MonoLabel as="span" id="q-viewports-material-label">{t("s2.viewportsMaterial")}</MonoLabel>
+                <div role="group" aria-labelledby="q-viewports-material-label" className="flex flex-col gap-2">
                   {vmOpts.map((m, i) => (
                     <CheckItem key={m} label={m} checked={form.viewportsMaterial[i]} onChange={() => toggleAt("viewportsMaterial", i)} />
                   ))}
-                  <OtherInput value={form.viewportsMaterialOther} {...setOther("viewportsMaterialOther")} placeholder={t("common.specify")} />
+                  <OtherInput value={form.viewportsMaterialOther} {...setOther("viewportsMaterialOther")} placeholder={t("common.specify")} ariaLabel={`${t("s2.viewportsMaterial")} — ${t("common.specify")}`} />
                 </div>
               </div>
             </FieldGroup>
