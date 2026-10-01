@@ -226,13 +226,14 @@ const initialForm: FormState = {
 };
 
 /* ---------- Small UI primitives ---------- */
-function MonoLabel({ children, required }: { children: React.ReactNode; required?: boolean }) {
+function MonoLabel({ children, required, htmlFor, id, as = "label" }: { children: React.ReactNode; required?: boolean; htmlFor?: string; id?: string; as?: "label" | "span" }) {
+  const Tag = as;
   return (
-    <label className="block mono-label">
+    <Tag className="block mono-label" htmlFor={as === "label" ? htmlFor : undefined} id={id}>
       {children}
       {required && <span className="text-blue ml-1 text-sm align-middle" aria-hidden="true">*</span>}
       {required && <span className="sr-only"> (required)</span>}
-    </label>
+    </Tag>
   );
 }
 
@@ -253,8 +254,8 @@ function CheckItem({
 }
 
 function OtherInput({
-  value, onCheck, onText, placeholder,
-}: { value: OtherCheck; onCheck: (v: boolean) => void; onText: (v: string) => void; placeholder: string }) {
+  value, onCheck, onText, placeholder, ariaLabel,
+}: { value: OtherCheck; onCheck: (v: boolean) => void; onText: (v: string) => void; placeholder: string; ariaLabel?: string }) {
   const { t } = useTranslation("questionnaire");
   return (
     <div className="flex items-center gap-2 flex-wrap">
@@ -265,6 +266,7 @@ function OtherInput({
         onChange={(e) => onText(e.target.value)}
         className={cn(baseInput, "flex-1 min-w-[180px] py-2 text-sm")}
         placeholder={placeholder}
+        aria-label={ariaLabel}
       />
     </div>
   );
@@ -546,49 +548,49 @@ export default function TvacQuestionnaire() {
         <StepNote />
         <FieldGroup cols={2}>
           <div className="space-y-2">
-            <MonoLabel required>{t("s1.company")}</MonoLabel>
-            <input className={cn(baseInput, errors.company && errorBorder)} placeholder={t("s1.companyPh")} value={form.company} onChange={(e) => set("company")(e.target.value)} />
+            <MonoLabel required htmlFor="q-company">{t("s1.company")}</MonoLabel>
+            <input id="q-company" className={cn(baseInput, errors.company && errorBorder)} placeholder={t("s1.companyPh")} value={form.company} onChange={(e) => set("company")(e.target.value)} />
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="space-y-2">
-              <MonoLabel required>{t("s1.firstName")}</MonoLabel>
-              <input className={cn(baseInput, errors.firstName && errorBorder)} placeholder={t("s1.firstNamePh")} value={form.firstName} onChange={(e) => set("firstName")(e.target.value)} />
+              <MonoLabel required htmlFor="q-first-name">{t("s1.firstName")}</MonoLabel>
+              <input id="q-first-name" className={cn(baseInput, errors.firstName && errorBorder)} placeholder={t("s1.firstNamePh")} value={form.firstName} onChange={(e) => set("firstName")(e.target.value)} />
             </div>
             <div className="space-y-2">
-              <MonoLabel required>{t("s1.lastName")}</MonoLabel>
-              <input className={cn(baseInput, errors.lastName && errorBorder)} placeholder={t("s1.lastNamePh")} value={form.lastName} onChange={(e) => set("lastName")(e.target.value)} />
+              <MonoLabel required htmlFor="q-last-name">{t("s1.lastName")}</MonoLabel>
+              <input id="q-last-name" className={cn(baseInput, errors.lastName && errorBorder)} placeholder={t("s1.lastNamePh")} value={form.lastName} onChange={(e) => set("lastName")(e.target.value)} />
             </div>
           </div>
         </FieldGroup>
         <FieldGroup cols={2}>
           <div className="space-y-2">
-            <MonoLabel required>{t("s1.email")}</MonoLabel>
-            <input type="email" className={cn(baseInput, errors.email && errorBorder)} placeholder={t("s1.emailPh")} value={form.email} onChange={(e) => set("email")(e.target.value)} />
+            <MonoLabel required htmlFor="q-email">{t("s1.email")}</MonoLabel>
+            <input id="q-email" type="email" className={cn(baseInput, errors.email && errorBorder)} placeholder={t("s1.emailPh")} value={form.email} onChange={(e) => set("email")(e.target.value)} />
           </div>
           <div className="space-y-2">
-            <MonoLabel>{t("s1.phone")}</MonoLabel>
-            <input type="tel" className={baseInput} placeholder={t("s1.phonePh")} value={form.phone} onChange={(e) => set("phone")(e.target.value)} />
+            <MonoLabel htmlFor="q-phone">{t("s1.phone")}</MonoLabel>
+            <input id="q-phone" type="tel" className={baseInput} placeholder={t("s1.phonePh")} value={form.phone} onChange={(e) => set("phone")(e.target.value)} />
           </div>
         </FieldGroup>
         <FieldGroup cols={2}>
           <div className="space-y-2">
-            <MonoLabel>{t("s1.country")}</MonoLabel>
-            <select className={baseSelect} value={form.country} onChange={(e) => set("country")(e.target.value)}>
+            <MonoLabel htmlFor="q-country">{t("s1.country")}</MonoLabel>
+            <select id="q-country" className={baseSelect} value={form.country} onChange={(e) => set("country")(e.target.value)}>
               <option value="">{t("common.selectCountry")}</option>
               {countries.map((c) => <option key={c} value={c}>{c}</option>)}
             </select>
             {isOtherValue(form.country) && (
-              <input className={baseInput} placeholder={t("common.specify")} value={form.countrySpecify} onChange={(e) => set("countrySpecify")(e.target.value)} />
+              <input className={baseInput} placeholder={t("common.specify")} value={form.countrySpecify} onChange={(e) => set("countrySpecify")(e.target.value)} aria-label={`${t("s1.country")} — ${t("common.specify")}`} />
             )}
           </div>
           <div className="space-y-2">
-            <MonoLabel>{t("s1.application")}</MonoLabel>
-            <select className={baseSelect} value={form.application} onChange={(e) => set("application")(e.target.value)}>
+            <MonoLabel htmlFor="q-application">{t("s1.application")}</MonoLabel>
+            <select id="q-application" className={baseSelect} value={form.application} onChange={(e) => set("application")(e.target.value)}>
               <option value="">{t("common.selectOption")}</option>
               {apps.map((c) => <option key={c} value={c}>{c}</option>)}
             </select>
             {isOtherValue(form.application) && (
-              <input className={baseInput} placeholder={t("common.specify")} value={form.applicationSpecify} onChange={(e) => set("applicationSpecify")(e.target.value)} />
+              <input className={baseInput} placeholder={t("common.specify")} value={form.applicationSpecify} onChange={(e) => set("applicationSpecify")(e.target.value)} aria-label={`${t("s1.application")} — ${t("common.specify")}`} />
             )}
           </div>
         </FieldGroup>
@@ -613,25 +615,25 @@ export default function TvacQuestionnaire() {
           <StepNote />
           <div className="space-y-6">
             <div className="space-y-2 max-w-md">
-              <MonoLabel>{t("s2.weight")}</MonoLabel>
-              <input inputMode="decimal" className={baseInput} placeholder={t("s2.weightPh")} value={form.dutWeight} onChange={(e) => set("dutWeight")(e.target.value)} />
+              <MonoLabel htmlFor="q-dut-weight">{t("s2.weight")}</MonoLabel>
+              <input id="q-dut-weight" inputMode="decimal" className={baseInput} placeholder={t("s2.weightPh")} value={form.dutWeight} onChange={(e) => set("dutWeight")(e.target.value)} />
             </div>
             <div className="space-y-3">
-              <MonoLabel>{t("s2.dutType")}</MonoLabel>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+              <MonoLabel as="span" id="q-dut-type-label">{t("s2.dutType")}</MonoLabel>
+              <div role="group" aria-labelledby="q-dut-type-label" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
                 {dutOpts.map((o, i) => (
                   <CheckItem key={o} label={o} checked={form.dutTypes[i]} onChange={() => toggleAt("dutTypes", i)} />
                 ))}
-                <OtherInput value={form.dutTypeOther} {...setOther("dutTypeOther")} placeholder={t("common.specify")} />
+                <OtherInput value={form.dutTypeOther} {...setOther("dutTypeOther")} placeholder={t("common.specify")} ariaLabel={`${t("s2.dutType")} — ${t("common.specify")}`} />
               </div>
             </div>
             <div className="space-y-3">
-              <MonoLabel>{t("s2.housing")}</MonoLabel>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+              <MonoLabel as="span" id="q-housing-label">{t("s2.housing")}</MonoLabel>
+              <div role="group" aria-labelledby="q-housing-label" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
                 {housingOpts.map((o, i) => (
                   <CheckItem key={o} label={o} checked={form.housing[i]} onChange={() => toggleAt("housing", i)} />
                 ))}
-                <OtherInput value={form.housingOther} {...setOther("housingOther")} placeholder={t("common.specify")} />
+                <OtherInput value={form.housingOther} {...setOther("housingOther")} placeholder={t("common.specify")} ariaLabel={`${t("s2.housing")} — ${t("common.specify")}`} />
               </div>
             </div>
           </div>
@@ -642,16 +644,16 @@ export default function TvacQuestionnaire() {
           <div className="space-y-6">
             <FieldGroup cols={2}>
               <div className="space-y-2">
-                <MonoLabel>{t("s2.shape")}</MonoLabel>
-                <select className={baseSelect} value={form.chamberShape} onChange={(e) => set("chamberShape")(e.target.value as FormState["chamberShape"])}>
+                <MonoLabel htmlFor="q-chamber-shape">{t("s2.shape")}</MonoLabel>
+                <select id="q-chamber-shape" className={baseSelect} value={form.chamberShape} onChange={(e) => set("chamberShape")(e.target.value as FormState["chamberShape"])}>
                   <option value="">{t("common.selectShape")}</option>
                   <option value="cubic">{shapeOpts.cubic}</option>
                   <option value="cylindrical">{shapeOpts.cylindrical}</option>
                 </select>
               </div>
               <div className="space-y-2">
-                <MonoLabel>{t("s2.chamberMaterial")}</MonoLabel>
-                <select className={baseSelect} value={form.chamberMaterial} onChange={(e) => set("chamberMaterial")(e.target.value)}>
+                <MonoLabel htmlFor="q-chamber-material">{t("s2.chamberMaterial")}</MonoLabel>
+                <select id="q-chamber-material" className={baseSelect} value={form.chamberMaterial} onChange={(e) => set("chamberMaterial")(e.target.value)}>
                   <option value="">{t("common.selectMaterial")}</option>
                   {matOpts.map((m) => <option key={m} value={m}>{m}</option>)}
                 </select>
@@ -659,8 +661,9 @@ export default function TvacQuestionnaire() {
             </FieldGroup>
 
             <div className="space-y-2">
-              <MonoLabel>{t("s2.internalVolume")}</MonoLabel>
+              <MonoLabel htmlFor="q-internal-volume">{t("s2.internalVolume")}</MonoLabel>
               <input
+                id="q-internal-volume"
                 className={baseInput}
                 placeholder={t("s2.internalVolumePh")}
                 inputMode="decimal"
@@ -671,35 +674,35 @@ export default function TvacQuestionnaire() {
 
             {form.chamberShape === "cylindrical" ? (
               <div className="space-y-2">
-                <MonoLabel>{t("s2.internalDimensionsCyl")}</MonoLabel>
+                <MonoLabel as="span" id="q-internal-dims-label">{t("s2.internalDimensionsCyl")}</MonoLabel>
                 <FieldGroup cols={2}>
-                  <div className="space-y-2"><MonoLabel>{t("common.length")}</MonoLabel><input className={baseInput} placeholder="L" inputMode="decimal" value={form.internalL} onChange={(e) => set("internalL")(e.target.value)} /></div>
-                  <div className="space-y-2"><MonoLabel>{t("common.diameter")}</MonoLabel><input className={baseInput} placeholder="D" inputMode="decimal" value={form.internalW} onChange={(e) => { set("internalW")(e.target.value); set("internalH")(""); }} /></div>
+                  <div className="space-y-2"><MonoLabel htmlFor="q-internal-l">{t("common.length")}</MonoLabel><input id="q-internal-l" className={baseInput} placeholder="L" inputMode="decimal" value={form.internalL} onChange={(e) => set("internalL")(e.target.value)} /></div>
+                  <div className="space-y-2"><MonoLabel htmlFor="q-internal-d">{t("common.diameter")}</MonoLabel><input id="q-internal-d" className={baseInput} placeholder="D" inputMode="decimal" value={form.internalW} onChange={(e) => { set("internalW")(e.target.value); set("internalH")(""); }} /></div>
                 </FieldGroup>
               </div>
             ) : (
               <div className="space-y-2">
-                <MonoLabel>{t("s2.internalDimensions")}</MonoLabel>
+                <MonoLabel as="span" id="q-internal-dims-label">{t("s2.internalDimensions")}</MonoLabel>
                 <FieldGroup cols={3}>
-                  <div className="space-y-2"><MonoLabel>{t("common.width")}</MonoLabel><input className={baseInput} placeholder="W" inputMode="decimal" value={form.internalW} onChange={(e) => set("internalW")(e.target.value)} /></div>
-                  <div className="space-y-2"><MonoLabel>{t("common.height")}</MonoLabel><input className={baseInput} placeholder="H" inputMode="decimal" value={form.internalH} onChange={(e) => set("internalH")(e.target.value)} /></div>
-                  <div className="space-y-2"><MonoLabel>{t("common.length")}</MonoLabel><input className={baseInput} placeholder="L" inputMode="decimal" value={form.internalL} onChange={(e) => set("internalL")(e.target.value)} /></div>
+                  <div className="space-y-2"><MonoLabel htmlFor="q-internal-w">{t("common.width")}</MonoLabel><input id="q-internal-w" className={baseInput} placeholder="W" inputMode="decimal" value={form.internalW} onChange={(e) => set("internalW")(e.target.value)} /></div>
+                  <div className="space-y-2"><MonoLabel htmlFor="q-internal-h">{t("common.height")}</MonoLabel><input id="q-internal-h" className={baseInput} placeholder="H" inputMode="decimal" value={form.internalH} onChange={(e) => set("internalH")(e.target.value)} /></div>
+                  <div className="space-y-2"><MonoLabel htmlFor="q-internal-l">{t("common.length")}</MonoLabel><input id="q-internal-l" className={baseInput} placeholder="L" inputMode="decimal" value={form.internalL} onChange={(e) => set("internalL")(e.target.value)} /></div>
                 </FieldGroup>
               </div>
             )}
 
             <FieldGroup cols={2}>
               <div className="space-y-3">
-                <MonoLabel>{t("s2.doorType")}</MonoLabel>
-                <div className="flex flex-col gap-2">
+                <MonoLabel as="span" id="q-door-type-label">{t("s2.doorType")}</MonoLabel>
+                <div role="group" aria-labelledby="q-door-type-label" className="flex flex-col gap-2">
                   {doorOpts.map((d, i) => (
                     <CheckItem key={d} label={d} checked={form.doorTypes[i]} onChange={() => toggleAt("doorTypes", i)} />
                   ))}
                 </div>
               </div>
               <div className="space-y-3">
-                <MonoLabel>{t("s2.ports")}</MonoLabel>
-                <div className="space-y-3">
+                <MonoLabel as="span" id="q-ports-label">{t("s2.ports")}</MonoLabel>
+                <div role="group" aria-labelledby="q-ports-label" className="space-y-3">
                   {portRows.map((row, i) => (
                     <div key={row.label} className="grid grid-cols-1 sm:grid-cols-[1.1fr_1.3fr_0.7fr] gap-2 items-center">
                       <CheckItem
@@ -707,8 +710,8 @@ export default function TvacQuestionnaire() {
                         checked={form.ports[i].checked}
                         onChange={(v) => setForm((p) => { const n = [...p.ports]; n[i] = { ...n[i], checked: v }; return { ...p, ports: n }; })}
                       />
-                      <input className={cn(baseInput, "py-2")} placeholder={row.ph} value={form.ports[i].size} onChange={(e) => setForm((p) => { const n = [...p.ports]; n[i] = { ...n[i], size: e.target.value }; return { ...p, ports: n }; })} />
-                      <input className={cn(baseInput, "py-2")} type="number" placeholder={t("common.qty")} value={form.ports[i].qty} onChange={(e) => setForm((p) => { const n = [...p.ports]; n[i] = { ...n[i], qty: e.target.value }; return { ...p, ports: n }; })} />
+                      <input className={cn(baseInput, "py-2")} placeholder={row.ph} value={form.ports[i].size} onChange={(e) => setForm((p) => { const n = [...p.ports]; n[i] = { ...n[i], size: e.target.value }; return { ...p, ports: n }; })} aria-label={`${row.label} — ${row.ph}`} />
+                      <input className={cn(baseInput, "py-2")} type="number" placeholder={t("common.qty")} value={form.ports[i].qty} onChange={(e) => setForm((p) => { const n = [...p.ports]; n[i] = { ...n[i], qty: e.target.value }; return { ...p, ports: n }; })} aria-label={`${row.label} — ${t("common.quantity")}`} />
                     </div>
                   ))}
                 </div>
@@ -717,23 +720,23 @@ export default function TvacQuestionnaire() {
 
             <FieldGroup cols={3}>
               <div className="space-y-2">
-                <MonoLabel>{t("s2.viewportsQty")}</MonoLabel>
-                <select className={baseSelect} value={form.viewportsQty} onChange={(e) => set("viewportsQty")(e.target.value)}>
+                <MonoLabel htmlFor="q-viewports-qty">{t("s2.viewportsQty")}</MonoLabel>
+                <select id="q-viewports-qty" className={baseSelect} value={form.viewportsQty} onChange={(e) => set("viewportsQty")(e.target.value)}>
                   <option value="">{t("common.selectQuantity")}</option>
                   {vqOpts.map((q) => <option key={q} value={q}>{q}</option>)}
                 </select>
               </div>
               <div className="space-y-2">
-                <MonoLabel>{t("s2.viewportsSize")}</MonoLabel>
-                <input className={baseInput} placeholder={t("s2.viewportsSizePh")} value={form.viewportsSize} onChange={(e) => set("viewportsSize")(e.target.value)} />
+                <MonoLabel htmlFor="q-viewports-size">{t("s2.viewportsSize")}</MonoLabel>
+                <input id="q-viewports-size" className={baseInput} placeholder={t("s2.viewportsSizePh")} value={form.viewportsSize} onChange={(e) => set("viewportsSize")(e.target.value)} />
               </div>
               <div className="space-y-3">
-                <MonoLabel>{t("s2.viewportsMaterial")}</MonoLabel>
-                <div className="flex flex-col gap-2">
+                <MonoLabel as="span" id="q-viewports-material-label">{t("s2.viewportsMaterial")}</MonoLabel>
+                <div role="group" aria-labelledby="q-viewports-material-label" className="flex flex-col gap-2">
                   {vmOpts.map((m, i) => (
                     <CheckItem key={m} label={m} checked={form.viewportsMaterial[i]} onChange={() => toggleAt("viewportsMaterial", i)} />
                   ))}
-                  <OtherInput value={form.viewportsMaterialOther} {...setOther("viewportsMaterialOther")} placeholder={t("common.specify")} />
+                  <OtherInput value={form.viewportsMaterialOther} {...setOther("viewportsMaterialOther")} placeholder={t("common.specify")} ariaLabel={`${t("s2.viewportsMaterial")} — ${t("common.specify")}`} />
                 </div>
               </div>
             </FieldGroup>
@@ -762,11 +765,11 @@ export default function TvacQuestionnaire() {
         <StepNote />
 
         <FieldGroup cols={3}>
-          <div className="space-y-2"><MonoLabel>{t("s3.heat")}</MonoLabel><input inputMode="decimal" className={baseInput} placeholder={t("s3.heatPh")} value={form.heatDissipation} onChange={(e) => set("heatDissipation")(e.target.value)} /></div>
-          <div className="space-y-2"><MonoLabel>{t("s3.dutCount")}</MonoLabel><input type="number" min={1} className={baseInput} placeholder={t("s3.dutCountPh")} value={form.dutCount} onChange={(e) => set("dutCount")(e.target.value)} /></div>
+          <div className="space-y-2"><MonoLabel htmlFor="q-heat">{t("s3.heat")}</MonoLabel><input id="q-heat" inputMode="decimal" className={baseInput} placeholder={t("s3.heatPh")} value={form.heatDissipation} onChange={(e) => set("heatDissipation")(e.target.value)} /></div>
+          <div className="space-y-2"><MonoLabel htmlFor="q-dut-count">{t("s3.dutCount")}</MonoLabel><input id="q-dut-count" type="number" min={1} className={baseInput} placeholder={t("s3.dutCountPh")} value={form.dutCount} onChange={(e) => set("dutCount")(e.target.value)} /></div>
           <div className="space-y-2">
-            <MonoLabel>{t("s3.vacuum")}</MonoLabel>
-            <select className={baseSelect} value={form.vacuumLevel} onChange={(e) => set("vacuumLevel")(e.target.value)}>
+            <MonoLabel htmlFor="q-vacuum">{t("s3.vacuum")}</MonoLabel>
+            <select id="q-vacuum" className={baseSelect} value={form.vacuumLevel} onChange={(e) => set("vacuumLevel")(e.target.value)}>
               <option value="">{t("common.selectVacuum")}</option>
               {vacOpts.map((o) => <option key={o} value={o}>{o}</option>)}
             </select>
@@ -775,15 +778,15 @@ export default function TvacQuestionnaire() {
 
         <FieldGroup cols={2}>
           <div className="space-y-3">
-            <MonoLabel>{t("s3.highVacPump")}</MonoLabel>
-            <div className="flex flex-col gap-2">
+            <MonoLabel as="span" id="q-high-vac-label">{t("s3.highVacPump")}</MonoLabel>
+            <div role="group" aria-labelledby="q-high-vac-label" className="flex flex-col gap-2">
               {hvOpts.map((o, i) => <CheckItem key={o} label={o} checked={form.highVac[i]} onChange={() => toggleAt("highVac", i)} />)}
               {hvNested.map((o, i) => <CheckItem key={o} label={o} checked={form.highVacNested[i]} onChange={() => toggleAt("highVacNested", i)} nested />)}
             </div>
           </div>
           <div className="space-y-3">
-            <MonoLabel>{t("s3.foreVacPump")}</MonoLabel>
-            <div className="flex flex-col gap-2">
+            <MonoLabel as="span" id="q-fore-vac-label">{t("s3.foreVacPump")}</MonoLabel>
+            <div role="group" aria-labelledby="q-fore-vac-label" className="flex flex-col gap-2">
               {fvOpts.map((o, i) => <CheckItem key={o} label={o} checked={form.foreVac[i]} onChange={() => toggleAt("foreVac", i)} />)}
             </div>
           </div>
@@ -791,52 +794,52 @@ export default function TvacQuestionnaire() {
 
         <FieldGroup cols={3}>
           <div className="space-y-3">
-            <MonoLabel>{t("s3.gauges")}</MonoLabel>
-            <div className="flex flex-col gap-2">{gOpts.map((o, i) => <CheckItem key={o} label={o} checked={form.gauges[i]} onChange={() => toggleAt("gauges", i)} />)}</div>
+            <MonoLabel as="span" id="q-gauges-label">{t("s3.gauges")}</MonoLabel>
+            <div role="group" aria-labelledby="q-gauges-label" className="flex flex-col gap-2">{gOpts.map((o, i) => <CheckItem key={o} label={o} checked={form.gauges[i]} onChange={() => toggleAt("gauges", i)} />)}</div>
           </div>
           <div className="space-y-2">
-            <MonoLabel>{t("s3.ramp")}</MonoLabel>
-            <select className={baseSelect} value={form.rampRate} onChange={(e) => set("rampRate")(e.target.value)}>
+            <MonoLabel htmlFor="q-ramp-rate">{t("s3.ramp")}</MonoLabel>
+            <select id="q-ramp-rate" className={baseSelect} value={form.rampRate} onChange={(e) => set("rampRate")(e.target.value)}>
               <option value="">{t("common.selectRate")}</option>{rampOpts.map((o) => <option key={o} value={o}>{o}</option>)}
             </select>
             {isOtherValue(form.rampRate) && (
-              <input className={baseInput} placeholder={t("common.specify")} value={form.rampRateSpecify} onChange={(e) => set("rampRateSpecify")(e.target.value)} />
+              <input className={baseInput} placeholder={t("common.specify")} value={form.rampRateSpecify} onChange={(e) => set("rampRateSpecify")(e.target.value)} aria-label={`${t("s3.ramp")} — ${t("common.specify")}`} />
             )}
           </div>
           <div className="space-y-2">
-            <MonoLabel>{t("s3.uniformity")}</MonoLabel>
-            <select className={baseSelect} value={form.uniformity} onChange={(e) => set("uniformity")(e.target.value)}>
+            <MonoLabel htmlFor="q-uniformity">{t("s3.uniformity")}</MonoLabel>
+            <select id="q-uniformity" className={baseSelect} value={form.uniformity} onChange={(e) => set("uniformity")(e.target.value)}>
               <option value="">{t("common.selectValue")}</option>{uniOpts.map((o) => <option key={o} value={o}>{o}</option>)}
             </select>
             {isOtherValue(form.uniformity) && (
-              <input className={baseInput} placeholder={t("common.specify")} value={form.uniformitySpecify} onChange={(e) => set("uniformitySpecify")(e.target.value)} />
+              <input className={baseInput} placeholder={t("common.specify")} value={form.uniformitySpecify} onChange={(e) => set("uniformitySpecify")(e.target.value)} aria-label={`${t("s3.uniformity")} — ${t("common.specify")}`} />
             )}
           </div>
         </FieldGroup>
 
         <div className="space-y-2">
-          <MonoLabel>{t("s3.tempRange")}</MonoLabel>
+          <MonoLabel as="span" id="q-temp-range-label">{t("s3.tempRange")}</MonoLabel>
           <FieldGroup cols={2}>
-            <div className="space-y-1"><label className="text-[13px] text-gray/85">{t("common.min")}</label><input className={baseInput} placeholder={t("s3.tempMinPh")} value={form.tempMin} onChange={(e) => set("tempMin")(e.target.value)} /></div>
-            <div className="space-y-1"><label className="text-[13px] text-gray/85">{t("common.max")}</label><input className={baseInput} placeholder={t("s3.tempMaxPh")} value={form.tempMax} onChange={(e) => set("tempMax")(e.target.value)} /></div>
+            <div className="space-y-1"><label htmlFor="q-temp-min" className="text-[13px] text-gray/85">{t("common.min")}</label><input id="q-temp-min" className={baseInput} placeholder={t("s3.tempMinPh")} value={form.tempMin} onChange={(e) => set("tempMin")(e.target.value)} /></div>
+            <div className="space-y-1"><label htmlFor="q-temp-max" className="text-[13px] text-gray/85">{t("common.max")}</label><input id="q-temp-max" className={baseInput} placeholder={t("s3.tempMaxPh")} value={form.tempMax} onChange={(e) => set("tempMax")(e.target.value)} /></div>
           </FieldGroup>
         </div>
 
         <div className="grid gap-5 md:grid-cols-2 md:gap-x-6 md:gap-y-3">
-          <div className="order-1"><MonoLabel>{t("s3.thermalPlate")}</MonoLabel></div>
-          <div className="order-7 md:order-2"><MonoLabel>{t("s3.shroud")}</MonoLabel></div>
+          <div className="order-1"><MonoLabel as="span" id="q-thermal-plate-label">{t("s3.thermalPlate")}</MonoLabel></div>
+          <div className="order-7 md:order-2"><MonoLabel as="span" id="q-shroud-label">{t("s3.shroud")}</MonoLabel></div>
 
           <div className="order-2 grid content-start gap-2 md:order-3">
-            <label className="block min-h-[3rem] text-[13px] leading-snug text-gray/85">{t("s3.plateDims")} <span className="text-gray/85">({t("s3.plateNote")})</span></label>
-            <select className={cn(baseSelect, !form.chamberShape && "opacity-60 cursor-not-allowed")} disabled={!form.chamberShape} value={form.plateDimensions} onChange={(e) => set("plateDimensions")(e.target.value)}>
+            <label htmlFor="q-plate-dims" className="block min-h-[3rem] text-[13px] leading-snug text-gray/85">{t("s3.plateDims")} <span className="text-gray/85">({t("s3.plateNote")})</span></label>
+            <select id="q-plate-dims" className={cn(baseSelect, !form.chamberShape && "opacity-60 cursor-not-allowed")} disabled={!form.chamberShape} value={form.plateDimensions} onChange={(e) => set("plateDimensions")(e.target.value)}>
               <option value="">{form.chamberShape ? t("common.selectSize") : t("common.selectOption")}</option>
               {plateOptions.map((o) => <option key={o} value={o}>{o}</option>)}
               {form.chamberShape && <option value="Other">{t("common.other")}</option>}
             </select>
           </div>
           <div className="order-8 grid content-start gap-2 md:order-4">
-            <label className="block min-h-[3rem] text-[13px] leading-snug text-gray/85">{t("s3.shroudConfig")}</label>
-            <select className={baseSelect} value={form.shroudConfig} onChange={(e) => set("shroudConfig")(e.target.value)}>
+            <label htmlFor="q-shroud-config" className="block min-h-[3rem] text-[13px] leading-snug text-gray/85">{t("s3.shroudConfig")}</label>
+            <select id="q-shroud-config" className={baseSelect} value={form.shroudConfig} onChange={(e) => set("shroudConfig")(e.target.value)}>
               <option value="">{t("common.selectOption")}</option>
               <option value="Yes">{t("s4.yesNo.0", "Yes")}</option>
               <option value="No">{t("s4.yesNo.1", "No")}</option>
@@ -845,7 +848,7 @@ export default function TvacQuestionnaire() {
 
           <div className="order-3 md:order-5">
             {form.plateDimensions === "Other" ? (
-              <input className={baseInput} placeholder={t("s3.plateCustomPh")} value={form.plateCustom} onChange={(e) => set("plateCustom")(e.target.value)} />
+              <input className={baseInput} placeholder={t("s3.plateCustomPh")} value={form.plateCustom} onChange={(e) => set("plateCustom")(e.target.value)} aria-label={`${t("s3.plateDims")} — ${t("common.specify")}`} />
             ) : (
               <div className="hidden md:block h-10" aria-hidden="true" />
             )}
@@ -854,41 +857,41 @@ export default function TvacQuestionnaire() {
 
           <div className="order-4 md:order-7">
             <FieldGroup cols={2}>
-              <div className="space-y-1"><label className="text-[13px] text-gray/85">{t("s3.plateTempMin")}</label><input type="number" className={baseInput} placeholder="min. °C" value={form.plateTempMin} onChange={(e) => set("plateTempMin")(e.target.value)} /></div>
-              <div className="space-y-1"><label className="text-[13px] text-gray/85">{t("s3.plateTempMax")}</label><input type="number" className={baseInput} placeholder="max. °C" value={form.plateTempMax} onChange={(e) => set("plateTempMax")(e.target.value)} /></div>
+              <div className="space-y-1"><label htmlFor="q-plate-temp-min" className="text-[13px] text-gray/85">{t("s3.plateTempMin")}</label><input id="q-plate-temp-min" type="number" className={baseInput} placeholder="min. °C" value={form.plateTempMin} onChange={(e) => set("plateTempMin")(e.target.value)} /></div>
+              <div className="space-y-1"><label htmlFor="q-plate-temp-max" className="text-[13px] text-gray/85">{t("s3.plateTempMax")}</label><input id="q-plate-temp-max" type="number" className={baseInput} placeholder="max. °C" value={form.plateTempMax} onChange={(e) => set("plateTempMax")(e.target.value)} /></div>
             </FieldGroup>
           </div>
           <div className="order-10 md:order-8">
             <FieldGroup cols={2}>
-              <div className="space-y-1"><label className="text-[13px] text-gray/85">{t("s3.plateTempMin")}</label><input type="number" className={baseInput} placeholder="min. °C" value={form.shroudTempMin} onChange={(e) => set("shroudTempMin")(e.target.value)} /></div>
-              <div className="space-y-1"><label className="text-[13px] text-gray/85">{t("s3.plateTempMax")}</label><input type="number" className={baseInput} placeholder="max. °C" value={form.shroudTempMax} onChange={(e) => set("shroudTempMax")(e.target.value)} /></div>
+              <div className="space-y-1"><label htmlFor="q-shroud-temp-min" className="text-[13px] text-gray/85">{t("s3.plateTempMin")}</label><input id="q-shroud-temp-min" type="number" className={baseInput} placeholder="min. °C" value={form.shroudTempMin} onChange={(e) => set("shroudTempMin")(e.target.value)} /></div>
+              <div className="space-y-1"><label htmlFor="q-shroud-temp-max" className="text-[13px] text-gray/85">{t("s3.plateTempMax")}</label><input id="q-shroud-temp-max" type="number" className={baseInput} placeholder="max. °C" value={form.shroudTempMax} onChange={(e) => set("shroudTempMax")(e.target.value)} /></div>
             </FieldGroup>
           </div>
 
-          <span className="order-5 block text-card-eyebrow md:order-9">{t("s3.plateCooling")}</span>
-          <span className="order-11 block text-card-eyebrow md:order-10">{t("s3.shroudCooling")}</span>
+          <span className="order-5 block text-card-eyebrow md:order-9" id="q-plate-cooling-label">{t("s3.plateCooling")}</span>
+          <span className="order-11 block text-card-eyebrow md:order-10" id="q-shroud-cooling-label">{t("s3.shroudCooling")}</span>
 
-          <div className="order-6 flex flex-col gap-2 md:order-11">
+          <div role="group" aria-labelledby="q-plate-cooling-label" className="order-6 flex flex-col gap-2 md:order-11">
             {plateCoolOpts.map((o, i) => <CheckItem key={o} label={o} checked={form.plateCooling[i]} onChange={() => toggleAt("plateCooling", i)} />)}
-            <OtherInput value={form.plateCoolingOther} {...setOther("plateCoolingOther")} placeholder={t("common.specify")} />
+            <OtherInput value={form.plateCoolingOther} {...setOther("plateCoolingOther")} placeholder={t("common.specify")} ariaLabel={`${t("s3.plateCooling")} — ${t("common.specify")}`} />
           </div>
-          <div className="order-12 flex flex-col gap-2 md:order-12">
+          <div role="group" aria-labelledby="q-shroud-cooling-label" className="order-12 flex flex-col gap-2 md:order-12">
             {shroudCool.map((o, i) => <CheckItem key={o} label={o} checked={form.shroudCooling[i]} onChange={() => toggleAt("shroudCooling", i)} />)}
-            <OtherInput value={form.shroudCoolingOther} {...setOther("shroudCoolingOther")} placeholder={t("common.specify")} />
+            <OtherInput value={form.shroudCoolingOther} {...setOther("shroudCoolingOther")} placeholder={t("common.specify")} ariaLabel={`${t("s3.shroudCooling")} — ${t("common.specify")}`} />
           </div>
         </div>
 
         <FieldGroup cols={2}>
           <div className="space-y-3">
-            <MonoLabel>{t("s3.sensor")}</MonoLabel>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <MonoLabel as="span" id="q-sensor-label">{t("s3.sensor")}</MonoLabel>
+            <div role="group" aria-labelledby="q-sensor-label" className="grid grid-cols-1 sm:grid-cols-2 gap-2">
               {sensorOpts.map((o, i) => <CheckItem key={o} label={o} checked={form.sensorTypes[i]} onChange={() => toggleAt("sensorTypes", i)} />)}
-              <OtherInput value={form.sensorTypeOther} {...setOther("sensorTypeOther")} placeholder={t("common.specify")} />
+              <OtherInput value={form.sensorTypeOther} {...setOther("sensorTypeOther")} placeholder={t("common.specify")} ariaLabel={`${t("s3.sensor")} — ${t("common.specify")}`} />
             </div>
           </div>
           <div className="space-y-2">
-            <MonoLabel>{t("s3.channels")}</MonoLabel>
-            <input type="text" className={baseInput} value={form.measurementChannels} onChange={(e) => set("measurementChannels")(e.target.value)} />
+            <MonoLabel htmlFor="q-channels">{t("s3.channels")}</MonoLabel>
+            <input id="q-channels" type="text" className={baseInput} value={form.measurementChannels} onChange={(e) => set("measurementChannels")(e.target.value)} />
           </div>
         </FieldGroup>
       </div>
@@ -914,51 +917,51 @@ export default function TvacQuestionnaire() {
           <StepNote />
           <div className="space-y-6">
             <div className="space-y-3">
-              <MonoLabel>{t("s4.elec")}</MonoLabel>
+              <MonoLabel as="span" id="q-elec-label">{t("s4.elec")}</MonoLabel>
               <FieldGroup cols={4}>
-                <div className="space-y-1"><label className="text-[13px] text-gray/85">{t("common.quantity")}</label><input type="number" className={baseInput} placeholder={t("common.qty")} value={form.elecQty} onChange={(e) => set("elecQty")(e.target.value)} /></div>
-                <div className="space-y-1"><label className="text-[13px] text-gray/85">{t("s4.elecVoltage")}</label><input className={baseInput} placeholder="V" value={form.elecVoltage} onChange={(e) => set("elecVoltage")(e.target.value)} /></div>
-                <div className="space-y-1"><label className="text-[13px] text-gray/85">{t("s4.elecCurrent")}</label><input className={baseInput} placeholder="A" value={form.elecCurrent} onChange={(e) => set("elecCurrent")(e.target.value)} /></div>
-                <div className="space-y-1"><label className="text-[13px] text-gray/85">{t("s4.elecNotes")}</label><input className={baseInput} placeholder={t("s4.elecNotesPh")} value={form.elecNotes} onChange={(e) => set("elecNotes")(e.target.value)} /></div>
+                <div className="space-y-1"><label htmlFor="q-elec-qty" className="text-[13px] text-gray/85">{t("common.quantity")}</label><input id="q-elec-qty" type="number" className={baseInput} placeholder={t("common.qty")} value={form.elecQty} onChange={(e) => set("elecQty")(e.target.value)} /></div>
+                <div className="space-y-1"><label htmlFor="q-elec-voltage" className="text-[13px] text-gray/85">{t("s4.elecVoltage")}</label><input id="q-elec-voltage" className={baseInput} placeholder="V" value={form.elecVoltage} onChange={(e) => set("elecVoltage")(e.target.value)} /></div>
+                <div className="space-y-1"><label htmlFor="q-elec-current" className="text-[13px] text-gray/85">{t("s4.elecCurrent")}</label><input id="q-elec-current" className={baseInput} placeholder="A" value={form.elecCurrent} onChange={(e) => set("elecCurrent")(e.target.value)} /></div>
+                <div className="space-y-1"><label htmlFor="q-elec-notes" className="text-[13px] text-gray/85">{t("s4.elecNotes")}</label><input id="q-elec-notes" className={baseInput} placeholder={t("s4.elecNotesPh")} value={form.elecNotes} onChange={(e) => set("elecNotes")(e.target.value)} /></div>
               </FieldGroup>
-              <span className="block text-card-eyebrow">{t("s4.elecConnector")}</span>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+              <span className="block text-card-eyebrow" id="q-elec-connector-label">{t("s4.elecConnector")}</span>
+              <div role="group" aria-labelledby="q-elec-connector-label" className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 {elecConn.map((o, i) => <CheckItem key={o} label={o} checked={form.elecConnector[i]} onChange={() => toggleAt("elecConnector", i)} />)}
-                <OtherInput value={form.elecConnectorOther} {...setOther("elecConnectorOther")} placeholder={t("common.specify")} />
+                <OtherInput value={form.elecConnectorOther} {...setOther("elecConnectorOther")} placeholder={t("common.specify")} ariaLabel={`${t("s4.elecConnector")} — ${t("common.specify")}`} />
               </div>
             </div>
 
             <FieldGroup cols={2}>
               <div className="space-y-3">
-                <MonoLabel>{t("s4.rf")}</MonoLabel>
-                <span className="block text-card-eyebrow">{t("common.type")}</span>
-                <div className="grid grid-cols-2 gap-2">{rfOpts.map((o, i) => <CheckItem key={o} label={o} checked={form.rfTypes[i]} onChange={() => toggleAt("rfTypes", i)} />)}</div>
-                <OtherInput value={form.rfTypeOther} {...setOther("rfTypeOther")} placeholder={t("common.specify")} />
-                <div className="space-y-1"><label className="text-[13px] text-gray/85">{t("common.quantity")}</label><input className={baseInput} placeholder={t("common.qty")} value={form.rfQty} onChange={(e) => set("rfQty")(e.target.value)} /></div>
+                <MonoLabel as="span" id="q-rf-label">{t("s4.rf")}</MonoLabel>
+                <span className="block text-card-eyebrow" id="q-rf-type-label">{t("common.type")}</span>
+                <div role="group" aria-labelledby="q-rf-type-label" className="grid grid-cols-2 gap-2">{rfOpts.map((o, i) => <CheckItem key={o} label={o} checked={form.rfTypes[i]} onChange={() => toggleAt("rfTypes", i)} />)}</div>
+                <OtherInput value={form.rfTypeOther} {...setOther("rfTypeOther")} placeholder={t("common.specify")} ariaLabel={`${t("s4.rf")} — ${t("common.specify")}`} />
+                <div className="space-y-1"><label htmlFor="q-rf-qty" className="text-[13px] text-gray/85">{t("common.quantity")}</label><input id="q-rf-qty" className={baseInput} placeholder={t("common.qty")} value={form.rfQty} onChange={(e) => set("rfQty")(e.target.value)} /></div>
               </div>
               <div className="space-y-3">
-                <MonoLabel>{t("s4.fiber")}</MonoLabel>
-                <span className="block text-card-eyebrow">{t("common.type")}</span>
-                <div className="grid grid-cols-2 gap-2">{fiberOpts.map((o, i) => <CheckItem key={o} label={o} checked={form.fiberTypes[i]} onChange={() => toggleAt("fiberTypes", i)} />)}</div>
-                <OtherInput value={form.fiberTypeOther} {...setOther("fiberTypeOther")} placeholder={t("common.specify")} />
-                <div className="space-y-1"><label className="text-[13px] text-gray/85">{t("common.quantity")}</label><input className={baseInput} placeholder={t("common.qty")} value={form.fiberQty} onChange={(e) => set("fiberQty")(e.target.value)} /></div>
+                <MonoLabel as="span" id="q-fiber-label">{t("s4.fiber")}</MonoLabel>
+                <span className="block text-card-eyebrow" id="q-fiber-type-label">{t("common.type")}</span>
+                <div role="group" aria-labelledby="q-fiber-type-label" className="grid grid-cols-2 gap-2">{fiberOpts.map((o, i) => <CheckItem key={o} label={o} checked={form.fiberTypes[i]} onChange={() => toggleAt("fiberTypes", i)} />)}</div>
+                <OtherInput value={form.fiberTypeOther} {...setOther("fiberTypeOther")} placeholder={t("common.specify")} ariaLabel={`${t("s4.fiber")} — ${t("common.specify")}`} />
+                <div className="space-y-1"><label htmlFor="q-fiber-qty" className="text-[13px] text-gray/85">{t("common.quantity")}</label><input id="q-fiber-qty" className={baseInput} placeholder={t("common.qty")} value={form.fiberQty} onChange={(e) => set("fiberQty")(e.target.value)} /></div>
               </div>
             </FieldGroup>
 
             <FieldGroup cols={2}>
               <div className="space-y-3">
-                <MonoLabel>{t("s4.fluid")}</MonoLabel>
+                <MonoLabel as="span" id="q-fluid-label">{t("s4.fluid")}</MonoLabel>
                 <FieldGroup cols={2}>
-                  <div className="space-y-1"><label className="text-[13px] text-gray/85">{t("common.quantity")}</label><input className={baseInput} placeholder={t("common.qty")} value={form.fluidQty} onChange={(e) => set("fluidQty")(e.target.value)} /></div>
-                  <div className="space-y-1"><label className="text-[13px] text-gray/85">{t("s4.fluidConn")}</label><input className={baseInput} placeholder={t("s4.fluidConnPh")} value={form.fluidConnection} onChange={(e) => set("fluidConnection")(e.target.value)} /></div>
+                  <div className="space-y-1"><label htmlFor="q-fluid-qty" className="text-[13px] text-gray/85">{t("common.quantity")}</label><input id="q-fluid-qty" className={baseInput} placeholder={t("common.qty")} value={form.fluidQty} onChange={(e) => set("fluidQty")(e.target.value)} /></div>
+                  <div className="space-y-1"><label htmlFor="q-fluid-conn" className="text-[13px] text-gray/85">{t("s4.fluidConn")}</label><input id="q-fluid-conn" className={baseInput} placeholder={t("s4.fluidConnPh")} value={form.fluidConnection} onChange={(e) => set("fluidConnection")(e.target.value)} /></div>
                 </FieldGroup>
               </div>
               <div className="space-y-3">
-                <MonoLabel>{t("s4.motion")}</MonoLabel>
-                <span className="block text-card-eyebrow">{t("common.type")}</span>
-                <div className="grid grid-cols-2 gap-2">{motionOpts.map((o, i) => <CheckItem key={o} label={o} checked={form.motionTypes[i]} onChange={() => toggleAt("motionTypes", i)} />)}</div>
-                <OtherInput value={form.motionTypeOther} {...setOther("motionTypeOther")} placeholder={t("common.specify")} />
-                <div className="space-y-1"><label className="text-[13px] text-gray/85">{t("common.quantity")}</label><input className={baseInput} placeholder={t("common.qty")} value={form.motionQty} onChange={(e) => set("motionQty")(e.target.value)} /></div>
+                <MonoLabel as="span" id="q-motion-label">{t("s4.motion")}</MonoLabel>
+                <span className="block text-card-eyebrow" id="q-motion-type-label">{t("common.type")}</span>
+                <div role="group" aria-labelledby="q-motion-type-label" className="grid grid-cols-2 gap-2">{motionOpts.map((o, i) => <CheckItem key={o} label={o} checked={form.motionTypes[i]} onChange={() => toggleAt("motionTypes", i)} />)}</div>
+                <OtherInput value={form.motionTypeOther} {...setOther("motionTypeOther")} placeholder={t("common.specify")} ariaLabel={`${t("s4.motion")} — ${t("common.specify")}`} />
+                <div className="space-y-1"><label htmlFor="q-motion-qty" className="text-[13px] text-gray/85">{t("common.quantity")}</label><input id="q-motion-qty" className={baseInput} placeholder={t("common.qty")} value={form.motionQty} onChange={(e) => set("motionQty")(e.target.value)} /></div>
               </div>
             </FieldGroup>
           </div>
@@ -969,36 +972,36 @@ export default function TvacQuestionnaire() {
           <div className="space-y-6">
             <FieldGroup cols={2}>
               <div className="space-y-3">
-                <MonoLabel>{t("s4.remote")}</MonoLabel>
-                <select className={baseSelect} value={form.remoteAccess} onChange={(e) => set("remoteAccess")(e.target.value)}>
+                <MonoLabel htmlFor="q-remote">{t("s4.remote")}</MonoLabel>
+                <select id="q-remote" className={baseSelect} value={form.remoteAccess} onChange={(e) => set("remoteAccess")(e.target.value)}>
                   <option value="">{t("common.selectOption")}</option>{yesNo.map((o) => <option key={o} value={o}>{o}</option>)}
                 </select>
-                <span className="block text-card-eyebrow">{t("s4.remoteAccess")}</span>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">{remoteOpts.map((o, i) => <CheckItem key={o} label={o} checked={form.remoteOptions[i]} onChange={() => toggleAt("remoteOptions", i)} />)}</div>
+                <span className="block text-card-eyebrow" id="q-remote-options-label">{t("s4.remoteAccess")}</span>
+                <div role="group" aria-labelledby="q-remote-options-label" className="grid grid-cols-1 sm:grid-cols-2 gap-2">{remoteOpts.map((o, i) => <CheckItem key={o} label={o} checked={form.remoteOptions[i]} onChange={() => toggleAt("remoteOptions", i)} />)}</div>
               </div>
               <div className="space-y-2">
-                <MonoLabel>{t("s4.ai")}</MonoLabel>
-                <select className={baseSelect} value={form.ai} onChange={(e) => set("ai")(e.target.value)}>
+                <MonoLabel htmlFor="q-ai">{t("s4.ai")}</MonoLabel>
+                <select id="q-ai" className={baseSelect} value={form.ai} onChange={(e) => set("ai")(e.target.value)}>
                   <option value="">{t("common.selectOption")}</option>{aiOpts.map((o) => <option key={o} value={o}>{o}</option>)}
                 </select>
               </div>
             </FieldGroup>
             <div className="space-y-3">
-              <MonoLabel>{t("s4.comm")}</MonoLabel>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+              <MonoLabel as="span" id="q-comm-label">{t("s4.comm")}</MonoLabel>
+              <div role="group" aria-labelledby="q-comm-label" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
                 {commOpts.map((o, i) => <CheckItem key={o} label={o} checked={form.comm[i]} onChange={() => toggleAt("comm", i)} />)}
-                <OtherInput value={form.commOther} {...setOther("commOther")} placeholder={t("common.specify")} />
+                <OtherInput value={form.commOther} {...setOther("commOther")} placeholder={t("common.specify")} ariaLabel={`${t("s4.comm")} — ${t("common.specify")}`} />
               </div>
             </div>
             <FieldGroup cols={2}>
               <div className="space-y-3">
-                <MonoLabel>{t("s4.logging")}</MonoLabel>
+                <MonoLabel htmlFor="q-logging-notes">{t("s4.logging")}</MonoLabel>
                 <CheckItem label={t("s4.loggingCustom")} checked={form.loggingCustom} onChange={(v) => set("loggingCustom")(v)} />
-                <input className={baseInput} placeholder={t("s4.loggingNotesPh")} value={form.loggingNotes} onChange={(e) => set("loggingNotes")(e.target.value)} />
+                <input id="q-logging-notes" className={baseInput} placeholder={t("s4.loggingNotesPh")} value={form.loggingNotes} onChange={(e) => set("loggingNotes")(e.target.value)} />
               </div>
               <div className="space-y-3">
-                <MonoLabel>{t("s4.export")}</MonoLabel>
-                <div className="grid grid-cols-2 gap-2">{exportOpts.map((o, i) => <CheckItem key={o} label={o} checked={form.exportFormats[i]} onChange={() => toggleAt("exportFormats", i)} />)}</div>
+                <MonoLabel as="span" id="q-export-label">{t("s4.export")}</MonoLabel>
+                <div role="group" aria-labelledby="q-export-label" className="grid grid-cols-2 gap-2">{exportOpts.map((o, i) => <CheckItem key={o} label={o} checked={form.exportFormats[i]} onChange={() => toggleAt("exportFormats", i)} />)}</div>
               </div>
             </FieldGroup>
           </div>
@@ -1007,8 +1010,8 @@ export default function TvacQuestionnaire() {
         <div>
           <SubSectionTitle>{t("s4.safety")}</SubSectionTitle>
           <div className="space-y-3">
-            <MonoLabel>{t("s4.alarm")}</MonoLabel>
-            <div className="flex flex-col gap-2">{alarmOpts.map((o, i) => <CheckItem key={o} label={o} checked={form.alarms[i]} onChange={() => toggleAt("alarms", i)} />)}</div>
+            <MonoLabel as="span" id="q-alarm-label">{t("s4.alarm")}</MonoLabel>
+            <div role="group" aria-labelledby="q-alarm-label" className="flex flex-col gap-2">{alarmOpts.map((o, i) => <CheckItem key={o} label={o} checked={form.alarms[i]} onChange={() => toggleAt("alarms", i)} />)}</div>
           </div>
         </div>
       </div>
@@ -1029,37 +1032,37 @@ export default function TvacQuestionnaire() {
           <StepNote />
           <div className="space-y-6">
             <div className="space-y-3">
-              <MonoLabel>{t("s5.installEnv")}</MonoLabel>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+              <MonoLabel as="span" id="q-install-env-label">{t("s5.installEnv")}</MonoLabel>
+              <div role="group" aria-labelledby="q-install-env-label" className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 <CheckItem label={t("s5.installStandard")} checked={form.installStandard} onChange={(v) => set("installStandard")(v)} />
                 <div className="flex items-center gap-2 flex-wrap">
                   <CheckItem label={t("s5.installCleanroom")} checked={form.installCleanroom.checked} onChange={setOther("installCleanroom").onCheck} />
-                  <input className={cn(baseInput, "flex-1 min-w-[140px] py-2")} placeholder={t("s5.installCleanroomPh")} value={form.installCleanroom.text} onChange={(e) => setOther("installCleanroom").onText(e.target.value)} />
+                  <input className={cn(baseInput, "flex-1 min-w-[140px] py-2")} placeholder={t("s5.installCleanroomPh")} value={form.installCleanroom.text} onChange={(e) => setOther("installCleanroom").onText(e.target.value)} aria-label={`${t("s5.installCleanroom")} — ${t("common.specify")}`} />
                 </div>
-                <OtherInput value={form.installOther} {...setOther("installOther")} placeholder={t("common.specify")} />
+                <OtherInput value={form.installOther} {...setOther("installOther")} placeholder={t("common.specify")} ariaLabel={`${t("s5.installEnv")} — ${t("common.specify")}`} />
               </div>
             </div>
             <div className="space-y-2">
-              <MonoLabel>{t("s5.installSpace")}</MonoLabel>
-              <textarea className={baseTextarea} placeholder={t("s5.installSpacePh")} value={form.installSpace} onChange={(e) => set("installSpace")(e.target.value)} />
+              <MonoLabel htmlFor="q-install-space">{t("s5.installSpace")}</MonoLabel>
+              <textarea id="q-install-space" className={baseTextarea} placeholder={t("s5.installSpacePh")} value={form.installSpace} onChange={(e) => set("installSpace")(e.target.value)} />
             </div>
             <FieldGroup cols={2}>
               <div className="space-y-3">
-                <MonoLabel>{t("s5.power")}</MonoLabel>
-                <div className="flex flex-col gap-2">
+                <MonoLabel as="span" id="q-power-label">{t("s5.power")}</MonoLabel>
+                <div role="group" aria-labelledby="q-power-label" className="flex flex-col gap-2">
                   {powerOpts.map((o, i) => <CheckItem key={o} label={o} checked={form.power[i]} onChange={() => toggleAt("power", i)} />)}
-                  <OtherInput value={form.powerOther} {...setOther("powerOther")} placeholder={t("common.specify")} />
+                  <OtherInput value={form.powerOther} {...setOther("powerOther")} placeholder={t("common.specify")} ariaLabel={`${t("s5.power")} — ${t("common.specify")}`} />
                 </div>
-                <input type="number" className={baseInput} placeholder={t("s5.powerMaxPh")} value={form.powerMax} onChange={(e) => set("powerMax")(e.target.value)} />
+                <input type="number" className={baseInput} placeholder={t("s5.powerMaxPh")} value={form.powerMax} onChange={(e) => set("powerMax")(e.target.value)} aria-label={`${t("s5.power")} — ${t("s5.powerMaxPh")}`} />
               </div>
               <div className="space-y-3">
-                <MonoLabel>{t("s5.utilities")}</MonoLabel>
-                <div className="flex flex-col gap-2">{utilOpts.map((o, i) => <CheckItem key={o} label={o} checked={form.utilities[i]} onChange={() => toggleAt("utilities", i)} />)}</div>
+                <MonoLabel as="span" id="q-utilities-label">{t("s5.utilities")}</MonoLabel>
+                <div role="group" aria-labelledby="q-utilities-label" className="flex flex-col gap-2">{utilOpts.map((o, i) => <CheckItem key={o} label={o} checked={form.utilities[i]} onChange={() => toggleAt("utilities", i)} />)}</div>
               </div>
             </FieldGroup>
             <div className="space-y-2">
-              <MonoLabel>{t("s5.specialReq")}</MonoLabel>
-              <textarea className={baseTextarea} placeholder={t("s5.specialReqPh")} value={form.specialReq} onChange={(e) => set("specialReq")(e.target.value)} />
+              <MonoLabel htmlFor="q-special-req">{t("s5.specialReq")}</MonoLabel>
+              <textarea id="q-special-req" className={baseTextarea} placeholder={t("s5.specialReqPh")} value={form.specialReq} onChange={(e) => set("specialReq")(e.target.value)} />
             </div>
           </div>
         </div>
@@ -1068,20 +1071,20 @@ export default function TvacQuestionnaire() {
           <SubSectionTitle>{t("s5.schedule")}</SubSectionTitle>
           <FieldGroup cols={3}>
             <div className="space-y-2">
-              <MonoLabel>{t("s5.delivery")}</MonoLabel>
-              <select className={baseSelect} value={form.delivery} onChange={(e) => set("delivery")(e.target.value)}>
+              <MonoLabel htmlFor="q-delivery">{t("s5.delivery")}</MonoLabel>
+              <select id="q-delivery" className={baseSelect} value={form.delivery} onChange={(e) => set("delivery")(e.target.value)}>
                 <option value="">{t("common.selectDelivery")}</option>{delivOpts.map((o) => <option key={o} value={o}>{o}</option>)}
               </select>
             </div>
             <div className="space-y-2">
-              <MonoLabel>{t("s5.budget")}</MonoLabel>
-              <select className={baseSelect} value={form.budget} onChange={(e) => set("budget")(e.target.value)}>
+              <MonoLabel htmlFor="q-budget">{t("s5.budget")}</MonoLabel>
+              <select id="q-budget" className={baseSelect} value={form.budget} onChange={(e) => set("budget")(e.target.value)}>
                 <option value="">{t("common.selectBudget")}</option>{budgetOpts.map((o) => <option key={o} value={o}>{o}</option>)}
               </select>
             </div>
             <div className="space-y-2">
-              <MonoLabel>{t("s5.phase")}</MonoLabel>
-              <select className={baseSelect} value={form.phase} onChange={(e) => set("phase")(e.target.value)}>
+              <MonoLabel htmlFor="q-phase">{t("s5.phase")}</MonoLabel>
+              <select id="q-phase" className={baseSelect} value={form.phase} onChange={(e) => set("phase")(e.target.value)}>
                 <option value="">{t("common.selectPhase")}</option>{phaseOpts.map((o) => <option key={o} value={o}>{o}</option>)}
               </select>
             </div>
