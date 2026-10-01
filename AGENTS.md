@@ -1,0 +1,1 @@
+- Load EN/DE non-legal translations through per-language dynamic bundles and legal translations on legal routes only, so each visitor downloads only needed locale content.

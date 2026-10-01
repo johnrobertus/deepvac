@@ -1,77 +1,46 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
+import type { Lang } from "@/lib/routes";
 
-// EN namespaces (source of truth)
-import enCommon from "./locales/en/common.json";
-import enHome from "./locales/en/home.json";
-import enHomeServices from "./locales/en/homeServices.json";
-import enProducts from "./locales/en/products.json";
-import enServices from "./locales/en/services.json";
-import enTeam from "./locales/en/team.json";
-import enCareers from "./locales/en/careers.json";
-import enReferences from "./locales/en/references.json";
-import enCatalogs from "./locales/en/catalogs.json";
-import enContact from "./locales/en/contact.json";
-import enLegal from "./locales/en/legal.json";
-import enSeo from "./locales/en/seo.json";
-import enErrors from "./locales/en/errors.json";
-import enBlog from "./locales/en/blog.json";
-import enQuestionnaire from "./locales/en/questionnaire.json";
+const languageImports = {
+  en: () => import("./bundles/en"),
+  de: () => import("./bundles/de"),
+};
+const legalImports = {
+  en: () => import("./bundles/en-legal"),
+  de: () => import("./bundles/de-legal"),
+};
 
-// DE namespaces (derived, mirrors EN 1:1)
-import deCommon from "./locales/de/common.json";
-import deHome from "./locales/de/home.json";
-import deHomeServices from "./locales/de/homeServices.json";
-import deProducts from "./locales/de/products.json";
-import deServices from "./locales/de/services.json";
-import deTeam from "./locales/de/team.json";
-import deCareers from "./locales/de/careers.json";
-import deReferences from "./locales/de/references.json";
-import deCatalogs from "./locales/de/catalogs.json";
-import deContact from "./locales/de/contact.json";
-import deLegal from "./locales/de/legal.json";
-import deSeo from "./locales/de/seo.json";
-import deErrors from "./locales/de/errors.json";
-import deBlog from "./locales/de/blog.json";
-import deQuestionnaire from "./locales/de/questionnaire.json";
+const languageLoads: Partial<Record<Lang, Promise<void>>> = {};
+const legalLoads: Partial<Record<Lang, Promise<void>>> = {};
+
+export function loadLanguage(lang: Lang): Promise<void> {
+  if (!languageLoads[lang]) {
+    languageLoads[lang] = languageImports[lang]().then(({ default: bundle }) => {
+      for (const [namespace, resource] of Object.entries(bundle)) {
+        i18n.addResourceBundle(lang, namespace, resource, true, true);
+      }
+    }).catch((error: unknown) => {
+      delete languageLoads[lang];
+      throw error;
+    });
+  }
+  return languageLoads[lang];
+}
+
+export function ensureLegal(lang: Lang): Promise<void> {
+  if (!legalLoads[lang]) {
+    legalLoads[lang] = legalImports[lang]().then(({ default: legal }) => {
+      i18n.addResourceBundle(lang, "legal", legal, true, true);
+    }).catch((error: unknown) => {
+      delete legalLoads[lang];
+      throw error;
+    });
+  }
+  return legalLoads[lang];
+}
 
 i18n.use(initReactI18next).init({
-  resources: {
-    en: {
-      common: enCommon,
-      home: enHome,
-      homeServices: enHomeServices,
-      products: enProducts,
-      services: enServices,
-      team: enTeam,
-      careers: enCareers,
-      references: enReferences,
-      catalogs: enCatalogs,
-      contact: enContact,
-      legal: enLegal,
-      seo: enSeo,
-      errors: enErrors,
-      blog: enBlog,
-      questionnaire: enQuestionnaire,
-    },
-    de: {
-      common: deCommon,
-      home: deHome,
-      homeServices: deHomeServices,
-      products: deProducts,
-      services: deServices,
-      team: deTeam,
-      careers: deCareers,
-      references: deReferences,
-      catalogs: deCatalogs,
-      contact: deContact,
-      legal: deLegal,
-      seo: deSeo,
-      errors: deErrors,
-      blog: deBlog,
-      questionnaire: deQuestionnaire,
-    },
-  },
   lng: "en",
   fallbackLng: "en",
   defaultNS: "common",
