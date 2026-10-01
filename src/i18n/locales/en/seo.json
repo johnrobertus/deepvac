@@ -218,5 +218,9 @@
   "blogTvacChamberSpecification": {
     "title": "Writing a TVAC Chamber Specification | Deepvac",
     "description": "How to specify a thermal vacuum chamber so that quotes are comparable: pressure, thermal, interface and verification requirements, and what to leave out."
+  },
+  "blogTvacChamberAcceptanceTesting": {
+    "title": "TVAC Chamber FAT and SAT Checklist | Deepvac",
+    "description": "FAT and SAT for thermal vacuum chambers: pump-down, leak rate, thermal range and stability, interlocks and cleanliness evidence to witness before you sign."
   }
 }
