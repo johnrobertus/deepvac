@@ -141,13 +141,12 @@ export default function PrivacyPolicy() {
 
             <LegalSection title={t("privacy.sections.hosting")}>
               <p>{t("privacy.sections.hostingIntro")}</p>
-              {hostingList.length > 0 && (
-                <ul className="list-disc space-y-1 pl-5 marker:text-accent">
-                  {hostingList.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              )}
+              <div className="pt-1 space-y-1">
+                <p>Hetzner Online GmbH</p>
+                <p>Industriestr. 25</p>
+                <p>91710 Gunzenhausen</p>
+                <p>{countryLabel}</p>
+              </div>
               <p>{t("privacy.sections.hostingNote")}</p>
             </LegalSection>
 
