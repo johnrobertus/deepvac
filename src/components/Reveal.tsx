@@ -1,17 +1,11 @@
 import { useEffect, useLayoutEffect, useRef, ReactNode } from "react";
 import { cn } from "@/lib/utils";
+import { isInitialLoad } from "@/lib/revealState";
 
 interface RevealProps {
   children: ReactNode;
   className?: string;
   delay?: number;
-}
-
-// True until the first client-side navigation. During the initial page load,
-// elements already in the viewport show instantly (seamless prerender takeover).
-let initialLoad = true;
-export function markClientNavigation() {
-  initialLoad = false;
 }
 
 export function Reveal({ children, className, delay = 0 }: RevealProps) {
@@ -20,7 +14,7 @@ export function Reveal({ children, className, delay = 0 }: RevealProps) {
 
   useLayoutEffect(() => {
     const el = ref.current;
-    if (!el || !initialLoad) return;
+    if (!el || !isInitialLoad()) return;
     const r = el.getBoundingClientRect();
     const inView = r.bottom > 0 && r.top < window.innerHeight && r.right > 0 && r.left < window.innerWidth;
     if (!inView) return;

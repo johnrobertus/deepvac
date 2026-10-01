@@ -4,7 +4,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { HelmetProvider } from "react-helmet-async";
 import { LanguageProvider } from "@/components/LanguageProvider";
 import { ScrollToTop } from "./components/ScrollToTop";
-import { markClientNavigation } from "./components/Reveal";
+import { markClientNavigation } from "./lib/revealState";
 import { appRoutes } from "./routes";
 
 const RouteFallback = () => <div className="min-h-screen bg-background" aria-hidden="true" />;
