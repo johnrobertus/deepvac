@@ -163,7 +163,7 @@
   "services": {
     "eyebrow": "Technology & Services",
     "title": "Technology & Services Across the Full TVAC Lifecycle",
-    "description": "Every Deepvac system combines chamber platform, thermal system, and vacuum engineering in one integrated architecture. Around this core, Deepvac builds new chamber systems, modernizes existing installations, and keeps test infrastructure running — from subsystem integration to long-term lifecycle support.",
+    "description": "Every Deepvac system combines chamber platform, thermal system, and vacuum engineering in one integrated architecture. Around this core, Deepvac builds new chamber systems, modernizes existing installations, and keeps test infrastructure running.",
     "tech": [
       {
         "label": "Core technology",
@@ -217,7 +217,7 @@
   "whyDeepvac": {
     "eyebrow": "Why Deepvac",
     "title": "Chamber, Controls & Service from One Source",
-    "description": "Deepvac is a systems provider: chamber hardware, thermal system, vacuum technology, and controls come from one engineering team — accountable from specification through ongoing operation.",
+    "description": "Deepvac is a systems provider: chamber hardware, thermal system, vacuum technology, and controls come from one engineering team.",
     "items": [
       {
         "title": "Modular Platforms & Custom Systems",
@@ -228,8 +228,8 @@
         "description": "Projects start from technical requirements, system architecture, interface definition, and integration logic to create robust application-specific test environments."
       },
       {
-        "title": "Control Technology Developed In-House",
-        "description": "Deepvac develops its control and automation architecture in-house — fully documented, adaptable to your test procedures, and extensible across the system lifecycle. No third-party black box."
+        "title": "Documented, Adaptable Controls",
+        "description": "The control and automation architecture is fully documented, adaptable to your test procedures and extensible across the system lifecycle. No third-party black box."
       },
       {
         "title": "Built for Qualification-Grade Environments",

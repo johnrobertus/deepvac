@@ -110,8 +110,8 @@
     }
   },
   "standardSeries": {
-    "eyebrow": "Products / Standard TVAC",
-    "title": "Standard TVAC",
+    "eyebrow": "Products / Standard Series",
+    "title": "Standard Series",
     "description": "Standardised thermal vacuum chamber platforms with modular configurations and repeatable performance for aerospace qualification, environmental simulation, and research testing.",
     "tSeries": {
       "eyebrow": "Cubic Thermal Vacuum Chambers",
@@ -121,19 +121,19 @@
       "features": [
         {
           "label": "Cubic Geometry",
-          "detail": "Cube-based chamber layout for straightforward payload access, efficient internal volume usage, and flexible fixture integration."
+          "detail": "Full rectangular cross-section: box-shaped units and shelf-style fixturing use the whole volume without losing corners."
         },
         {
-          "label": "Low Temperature Capability",
-          "detail": "Configured for thermal operation down to {{minTemp}}, depending on system configuration and test setup."
+          "label": "Flat Thermal Plate",
+          "detail": "Planar hardware, fixtures and optical benches mount directly on the flat, temperature-controlled plate, configured down to {{minTemp}} depending on system setup."
         },
         {
-          "label": "Ultimate Vacuum",
-          "detail": "Designed for vacuum performance down to {{vacuum}}, depending on chamber size and pumping package."
+          "label": "Full-Face Door",
+          "detail": "The door opens the entire front face: direct access to the whole test volume and fast loading. Working pressure {{vacuum}}."
         },
         {
-          "label": "Control Integration",
-          "detail": "Pre-engineered control system interface with data acquisition and automation support."
+          "label": "Typical Applications",
+          "detail": "Electronics boxes and other box-shaped units, planar-mounted hardware, optical setups and campaigns with frequent specimen changes."
         }
       ]
     },
@@ -145,19 +145,19 @@
       "features": [
         {
           "label": "Cylindrical Geometry",
-          "detail": "Cylindrical chamber layout suited for uniform radial design, efficient shroud integration, and classic vacuum chamber configurations."
+          "detail": "Round cross-section, the classic form for larger thermal vacuum chambers and long test items."
         },
         {
-          "label": "Low Temperature Capability",
-          "detail": "Configured for thermal operation down to {{minTemp}}, depending on system configuration and test setup."
+          "label": "Homogeneous Shroud Coverage",
+          "detail": "The shroud surrounds the test item evenly and creates a uniform radiative environment, configured down to {{minTemp}} depending on system setup."
         },
         {
-          "label": "Ultimate Vacuum",
-          "detail": "Designed for vacuum performance down to {{vacuum}}, depending on chamber size and pumping package."
+          "label": "Pressure-Stable Vessel",
+          "detail": "The round shell carries the external atmospheric pressure efficiently, which favours larger volumes. Working pressure {{vacuum}}."
         },
         {
-          "label": "Control Integration",
-          "detail": "Pre-engineered control system interface with data acquisition and automation support."
+          "label": "Typical Applications",
+          "detail": "Long test items, larger assemblies and radiative thermal balance tests that call for a uniform thermal environment."
         }
       ]
     },

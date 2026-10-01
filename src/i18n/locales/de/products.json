@@ -121,19 +121,19 @@
       "features": [
         {
           "label": "Kubische Geometrie",
-          "detail": "Würfelförmiges Kammerlayout für einfachen Nutzlastzugang, effiziente Innenraumnutzung und flexible Vorrichtungsintegration."
+          "detail": "Voller rechteckiger Querschnitt: Kastenförmige Prüflinge und mehrstöckige Vorrichtungen nutzen das gesamte Volumen, ohne Ecken zu verschenken."
         },
         {
-          "label": "Tieftemperaturfähigkeit",
-          "detail": "Konfiguriert für thermischen Betrieb bis {{minTemp}}, abhängig von Systemkonfiguration und Testaufbau."
+          "label": "Ebene Thermalplatte",
+          "detail": "Planare Hardware, Vorrichtungen und optische Bänke werden direkt auf der ebenen, temperierten Platte montiert, konfigurierbar bis {{minTemp}} je nach Systemaufbau."
         },
         {
-          "label": "Enddruck",
-          "detail": "Ausgelegt für Vakuumleistung bis {{vacuum}}, abhängig von Kammergröße und Pumpenpaket."
+          "label": "Tür über die volle Front",
+          "detail": "Die Tür öffnet die gesamte Frontseite: direkter Zugang zum ganzen Prüfraum und schnelles Beladen. Arbeitsdruck {{vacuum}}."
         },
         {
-          "label": "Steuerungsintegration",
-          "detail": "Standardisierte Steuerungsschnittstelle mit Datenerfassungs- und Automatisierungsunterstützung."
+          "label": "Typische Anwendungen",
+          "detail": "Elektronikboxen und andere kastenförmige Prüflinge, planar montierte Hardware, optische Aufbauten und Kampagnen mit häufigem Prüflingswechsel."
         }
       ]
     },
@@ -145,19 +145,19 @@
       "features": [
         {
           "label": "Zylindrische Geometrie",
-          "detail": "Zylindrisches Kammerlayout für gleichmäßiges Radialdesign, effiziente Shroud-Integration und klassische Vakuumkammer-Konfigurationen."
+          "detail": "Runder Querschnitt, die klassische Bauform für größere Thermalvakuumkammern und lange Prüflinge."
         },
         {
-          "label": "Tieftemperaturfähigkeit",
-          "detail": "Konfiguriert für thermischen Betrieb bis {{minTemp}}, abhängig von Systemkonfiguration und Testaufbau."
+          "label": "Homogene Shroud-Abdeckung",
+          "detail": "Der Shroud umgibt den Prüfling gleichmäßig und schafft eine homogene Strahlungsumgebung, konfigurierbar bis {{minTemp}} je nach Systemaufbau."
         },
         {
-          "label": "Enddruck",
-          "detail": "Ausgelegt für Vakuumleistung bis {{vacuum}}, abhängig von Kammergröße und Pumpenpaket."
+          "label": "Druckstabiler Behälter",
+          "detail": "Der runde Mantel trägt den äußeren Atmosphärendruck effizient, was größeren Volumina zugutekommt. Arbeitsdruck {{vacuum}}."
         },
         {
-          "label": "Steuerungsintegration",
-          "detail": "Standardisierte Steuerungsschnittstelle mit Datenerfassungs- und Automatisierungsunterstützung."
+          "label": "Typische Anwendungen",
+          "detail": "Lange Prüflinge, größere Baugruppen und radiative Thermal-Balance-Tests, die eine gleichmäßige thermische Umgebung erfordern."
         }
       ]
     },
