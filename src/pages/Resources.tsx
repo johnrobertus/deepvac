@@ -85,7 +85,7 @@ const Resources = () => {
             : "Discuss your requirements directly with our engineering team."}
         >
           <Button asChild>
-            <Link to={localizedPath("/contact", lang)}>{t("buttons.requestConsultation")}</Link>
+            <Link to={localizedPath("/contact", lang)}>{t("bookCall.heroCta")}</Link>
           </Button>
           <Button asChild variant="outline">
             <Link to={localizedPath("/products", lang)}>{t("buttons.exploreProducts")}</Link>

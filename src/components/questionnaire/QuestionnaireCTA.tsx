@@ -48,7 +48,7 @@ export function QuestionnaireCTA({
       <Button asChild size={size} variant={buttonVariant} className="font-mono text-xs tracking-wide">
         <Link to={to}>
           <ClipboardList className="w-4 h-4 mr-2" />
-          {t(`cta.questionnaire.${label}`)}
+          {t("nav.configureTvac")}
           <ArrowRight className="w-4 h-4 ml-2" />
         </Link>
       </Button>
@@ -96,7 +96,7 @@ export function QuestionnaireCard({ className }: { className?: string }) {
             <Button asChild size="lg" className="font-mono text-xs tracking-wide shrink-0">
               <Link to={to}>
                 <ClipboardList className="w-4 h-4 mr-2" />
-                {t("cta.questionnaire.open")}
+                {t("nav.configureTvac")}
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </Button>

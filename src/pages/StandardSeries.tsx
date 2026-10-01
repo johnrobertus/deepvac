@@ -129,7 +129,7 @@ const StandardSeries = () => {
         >
           <div className="flex flex-col sm:flex-row flex-wrap gap-3 pt-4">
             <Button asChild size="lg" className="font-mono text-xs tracking-wide w-full sm:w-auto">
-              <Link to={localizedPath("/contact", lang)}>{tc("buttons.requestTechnicalDetails")}</Link>
+              <Link to={localizedPath("/contact", lang)}>{tc("bookCall.heroCta")}</Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="font-mono text-xs tracking-wide w-full sm:w-auto">
               <a href="/brochures/deepvac-standard-series-catalogue-2026.pdf" download onClick={() => trackEvent("brochure_download", { page: "standard-series" })}>{tc("buttons.downloadBrochure")}</a>
@@ -371,11 +371,11 @@ const StandardSeries = () => {
           <Button asChild size="lg" className="font-mono text-xs tracking-wide">
             <Link to={localizedPath("/tvac-questionnaire", lang)}>
               <ClipboardList className="w-4 h-4 mr-2" />
-              {tc("cta.questionnaire.configureCustomVariant")}
+              {tc("nav.configureTvac")}
             </Link>
           </Button>
           <Button asChild variant="outline" size="lg" className="font-mono text-xs tracking-wide">
-            <Link to={`${localizedPath("/contact", lang)}?interest=standard-series`}>{tc("buttons.requestQuote")}</Link>
+            <Link to={`${localizedPath("/contact", lang)}?interest=standard-series`}>{tc("bookCall.heroCta")}</Link>
           </Button>
         </CTABand>
         <p className="container mx-auto px-6 -mt-6 mb-12 flex items-start gap-1.5 text-card-meta text-gray/85 max-w-2xl">

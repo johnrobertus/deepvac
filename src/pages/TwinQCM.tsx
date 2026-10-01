@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { Layout } from "@/components/Layout";
 import { PageShell, Section, CTABand } from "@/components/PageShell";
 import { SectionHeader } from "@/components/SectionHeader";
@@ -68,7 +69,9 @@ const applications = [
   "Assessment of curing conditions for conductive adhesives",
 ];
 
-const TwinQCM = () => (
+const TwinQCM = () => {
+  const { t } = useTranslation("common");
+  return (
   <Layout>
     <PageShell>
       {/* Hero */}
@@ -97,10 +100,10 @@ const TwinQCM = () => (
               </p>
               <div className="flex flex-wrap gap-3 pt-2">
                 <Button asChild size="lg" className="font-mono text-xs tracking-wide">
-                  <Link to="/contact">Request a Technical Consultation</Link>
+                  <Link to="/contact">{t("bookCall.heroCta")}</Link>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="font-mono text-xs tracking-wide">
-                  <Link to="/contact">Discuss Integration</Link>
+                  <Link to="/contact">{t("bookCall.heroCta")}</Link>
                 </Button>
               </div>
             </div>
@@ -303,14 +306,15 @@ const TwinQCM = () => (
         description="From compact thermoelectric configurations to cryogenic QTGA setups, Deepvac integrates NDK Twin-QCM technology into new chambers, retrofit projects, and contamination-sensitive test environments."
       >
         <Button asChild size="lg" className="font-mono text-xs tracking-wide">
-          <Link to="/contact">Request a Technical Consultation</Link>
+          <Link to="/contact">{t("bookCall.heroCta")}</Link>
         </Button>
         <Button asChild variant="outline" size="lg" className="font-mono text-xs tracking-wide">
-          <Link to="/contact">Discuss Integration</Link>
+          <Link to="/contact">{t("bookCall.heroCta")}</Link>
         </Button>
       </CTABand>
     </PageShell>
   </Layout>
-);
+  );
+};
 
 export default TwinQCM;

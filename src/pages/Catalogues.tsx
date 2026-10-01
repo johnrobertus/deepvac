@@ -123,14 +123,14 @@ const Catalogues = () => {
             <h3 className="text-base font-medium text-sand">{t("moreDocumentation.title")}</h3>
             <p className="text-sm text-gray max-w-lg mx-auto">{t("moreDocumentation.description")}</p>
             <Button asChild variant="outline" size="sm">
-              <Link to={localizedPath("/contact", lang)}>{tc("buttons.requestSpecificDocumentation")}</Link>
+              <Link to={localizedPath("/contact", lang)}>{tc("bookCall.heroCta")}</Link>
             </Button>
           </div>
         </Section>
 
         <CTABand title={t("cta.title")} description={t("cta.description")}>
           <Button asChild>
-            <Link to={localizedPath("/contact", lang)}>{tc("buttons.contactEngineering")}</Link>
+            <Link to={localizedPath("/contact", lang)}>{tc("bookCall.heroCta")}</Link>
           </Button>
         </CTABand>
       </PageShell>

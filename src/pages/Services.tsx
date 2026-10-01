@@ -69,7 +69,7 @@ const Services = () => {
         >
           <div className="flex flex-col sm:flex-row flex-wrap gap-3 pt-4">
             <Button asChild size="lg" className="font-mono text-xs tracking-wide w-full sm:w-auto">
-              <Link to={localizedPath("/contact", lang)}>{tc("buttons.discussRequirements")}</Link>
+              <Link to={localizedPath("/contact", lang)}>{tc("bookCall.heroCta")}</Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="font-mono text-xs tracking-wide w-full sm:w-auto">
               <Link to={localizedPath("/products", lang)}>{tc("buttons.exploreChamberProducts")}</Link>
@@ -158,11 +158,11 @@ const Services = () => {
           <Button asChild size="lg" className="font-mono text-xs tracking-wide">
             <Link to={localizedPath("/tvac-questionnaire", lang)}>
               <ClipboardList className="w-4 h-4 mr-2" />
-              {tc("cta.questionnaire.configure")}
+              {tc("nav.configureTvac")}
             </Link>
           </Button>
           <Button asChild variant="outline" size="lg" className="font-mono text-xs tracking-wide">
-            <Link to={localizedPath("/contact", lang)}>{tc("buttons.talkToEngineer")}</Link>
+            <Link to={localizedPath("/contact", lang)}>{tc("bookCall.heroCta")}</Link>
           </Button>
         </CTABand>
         <p className="container mx-auto px-6 -mt-6 mb-12 flex items-start gap-1.5 text-[13px] text-gray/85 leading-relaxed font-mono max-w-2xl">

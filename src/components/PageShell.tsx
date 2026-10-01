@@ -96,7 +96,7 @@ export function CTABand({
             onClick={() => setBookCallOpen(true)}
             className="inline-flex items-center gap-1.5 text-gray hover:text-sand underline underline-offset-4 transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
           >
-            {t("bookCall.linkLabel")}
+            {t("bookCall.talkToSales")}
             <CalendarClock className="w-3.5 h-3.5" aria-hidden="true" />
           </button>
         </p>

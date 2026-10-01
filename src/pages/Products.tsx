@@ -97,7 +97,7 @@ const Products = () => {
         >
           <div className="flex flex-col sm:flex-row flex-wrap gap-3 pt-4">
             <Button asChild size="lg" className="font-mono text-xs tracking-wide w-full sm:w-auto">
-              <Link to={localizedPath("/contact", lang)}>{tc("buttons.requestConsultation")}</Link>
+              <Link to={localizedPath("/contact", lang)}>{tc("bookCall.heroCta")}</Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="font-mono text-xs tracking-wide w-full sm:w-auto">
               <Link to={localizedPath("/catalogs", lang)}>{tc("buttons.downloadProductOverview")}</Link>
@@ -216,7 +216,7 @@ const Products = () => {
               <Link to={localizedPath("/services", lang)}>{tc("buttons.exploreServices")} <ArrowRight className="w-3.5 h-3.5 ml-1" /></Link>
             </Button>
             <Button asChild variant="tertiary">
-              <Link to={localizedPath("/contact", lang)}>{tc("buttons.talkToEngineer")}</Link>
+              <Link to={localizedPath("/contact", lang)}>{tc("bookCall.heroCta")}</Link>
             </Button>
           </div>
         </Section>
@@ -241,14 +241,14 @@ const Products = () => {
           <Button asChild size="lg" className="font-mono text-xs tracking-wide">
             <Link to={localizedPath("/tvac-questionnaire", lang)}>
               <ClipboardList className="w-4 h-4 mr-2" />
-              {tc("cta.questionnaire.configure")}
+              {tc("nav.configureTvac")}
             </Link>
           </Button>
           <Button asChild variant="outline" size="lg" className="font-mono text-xs tracking-wide">
-            <Link to={localizedPath("/contact", lang)}>{tc("buttons.requestQuote")}</Link>
+            <Link to={localizedPath("/contact", lang)}>{tc("bookCall.heroCta")}</Link>
           </Button>
           <Button asChild variant="ghost" size="lg" className="font-mono text-xs tracking-wide text-gray hover:text-sand">
-            <Link to={localizedPath("/contact", lang)}>{tc("buttons.talkToEngineer")}</Link>
+            <Link to={localizedPath("/contact", lang)}>{tc("bookCall.heroCta")}</Link>
           </Button>
         </CTABand>
         <p className="container mx-auto px-6 -mt-6 mb-12 flex items-start gap-1.5 text-[13px] text-gray/85 leading-relaxed font-mono max-w-2xl">
