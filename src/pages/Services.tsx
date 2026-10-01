@@ -45,7 +45,7 @@ const Services = () => {
   const faqItems = t("overview.faq.items", { returnObjects: true }) as Array<{ q: string; a: string }>;
 
   const breadcrumbJsonLd = buildBreadcrumbJsonLd(
-    [{ name: t("overview.title") as string, enPath: "/services" }],
+    [{ name: tc("nav.services") as string, enPath: "/services" }],
     lang,
   );
 
