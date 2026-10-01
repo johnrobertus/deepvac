@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import { useLocation } from "react-router-dom";
 import { Layout } from "@/components/Layout";
-import { PageShell, PageHero, Section, CTABand } from "@/components/PageShell";
+import { PageShell, PageHero, eyebrowBreadcrumbs, Section, CTABand } from "@/components/PageShell";
 import { SectionHeader } from "@/components/SectionHeader";
 import { BentoGrid, BentoCard } from "@/components/BentoGrid";
 import { Button } from "@/components/ui/button";
@@ -84,6 +84,7 @@ const CustomTVAC = () => {
       <PageShell>
         <PageHero
           eyebrow={t("customTvac.eyebrow")}
+          breadcrumbs={eyebrowBreadcrumbs(t("customTvac.eyebrow"), localizedPath("/products", lang))}
           title={t("customTvac.title")}
           description={t("customTvac.description")}
         >
