@@ -1,0 +1,303 @@
+[
+  {
+    "articleKey": "tvacChamberAcceptanceTesting",
+    "enSlug": "tvac-chamber-acceptance-testing",
+    "deSlug": "tvac-kammer-abnahmepruefung",
+    "category": "engineeringGuide",
+    "datePublished": "2026-10-01",
+    "dateModified": "2026-10-01",
+    "seoKey": "blogTvacChamberAcceptanceTesting",
+    "relatedPaths": [
+      "/products/standard-series",
+      "/products/options/helium-leak-test",
+      "/products/options/residual-gas-analysis"
+    ],
+    "relatedArticles": [
+      "leakDetectionBasics",
+      "tvacLeadTimes",
+      "tvacMaintenance"
+    ],
+    "searchIntent": {
+      "en": {
+        "primaryKeyword": "TVAC chamber acceptance test",
+        "primaryQuestion": "Which tests prove that a thermal vacuum chamber meets its specification at FAT and SAT?"
+      },
+      "de": {
+        "primaryKeyword": "Abnahmeprüfung TVAC-Kammer",
+        "primaryQuestion": "Welche Prüfungen belegen bei FAT und SAT, dass eine Thermalvakuumkammer ihr Lastenheft erfüllt?"
+      }
+    },
+    "references": [
+      {
+        "title": "ECSS-Q-ST-20-07C: Quality and safety assurance for space test centres (1 October 2014)",
+        "publisher": "European Cooperation for Space Standardization (ECSS)",
+        "url": "https://ecss.nl/standard/ecss-q-st-20-07c-quality-and-safety-assurance-for-space-test-centres-1-october-2014/"
+      },
+      {
+        "title": "ISO 20485:2017 Non-destructive testing: Leak testing, Tracer gas method",
+        "publisher": "International Organization for Standardization (ISO)",
+        "url": "https://www.iso.org/standard/68190.html"
+      },
+      {
+        "title": "ECSS-E-ST-10-03C Rev.1: Testing (31 May 2022)",
+        "publisher": "European Cooperation for Space Standardization (ECSS)",
+        "url": "https://ecss.nl/standard/ecss-e-st-10-03c-rev-1-testing-31-may-2022/"
+      },
+      {
+        "title": "Standard Series TVAC chambers",
+        "publisher": "Deepvac GmbH",
+        "url": "https://deepvac.space/products/standard-series"
+      }
+    ],
+    "technicalNote": {
+      "en": "Acceptance criteria for a test chamber are set by the procurement specification and the contract. ECSS-E-ST-10-03C Rev.1 explicitly excludes tests of facilities and ground support equipment; the tolerances quoted from it apply to the hardware tests the chamber has to support. The contract, the verification plan and project-specific tailoring remain binding. Deepvac values on the linked pages describe reference configurations; binding values depend on chamber size, pumping and thermal concept, test set-up and quotation.",
+      "de": "Abnahmekriterien für eine Prüfkammer ergeben sich aus dem Lastenheft und dem Vertrag. ECSS-E-ST-10-03C Rev.1 schließt Prüfungen von Anlagen und Bodenhilfsausrüstung ausdrücklich aus; die daraus zitierten Toleranzen gelten für die Hardwaretests, die die Kammer ermöglichen muss. Verbindlich bleiben Vertrag, Verifikationsplan und projektspezifisches Tailoring. Deepvac-Werte auf den verlinkten Seiten beschreiben Referenzkonfigurationen; verbindliche Werte hängen von Kammergröße, Pump- und Thermalkonzept, Testaufbau und Angebot ab."
+    },
+    "en": {
+      "title": "FAT and SAT for a Thermal Vacuum Chamber: What to Witness Before You Sign",
+      "description": "Factory and site acceptance of a TVAC chamber: which vacuum, leak, thermal, interlock and cleanliness tests to witness, which records to demand and how ECSS and ISO frame the criteria.",
+      "seoTitle": "TVAC Chamber FAT and SAT Checklist | Deepvac",
+      "seoDescription": "FAT and SAT for thermal vacuum chambers: pump-down, leak rate, thermal range and stability, interlocks and cleanliness evidence to witness before you sign.",
+      "intro": "A thermal vacuum chamber is accepted twice: once at the builder's works in the factory acceptance test (FAT) and once after installation in the site acceptance test (SAT). Both events end with a signature that transfers risk, triggers payments and starts the warranty, yet the tests behind that signature are often defined late and loosely. This article answers a practical question: which tests and records prove that a chamber meets its specification, and what should a buyer witness rather than accept on paper? It works through the acceptance documents, vacuum and leak performance, thermal performance, controls and interlocks, cleanliness evidence and the checks that only make sense on site.",
+      "sections": [
+        {
+          "title": "Acceptance Starts with the Specification, Not the Test Day",
+          "content": "No ECSS standard defines how a test chamber is accepted. ECSS-E-ST-10-03C Rev.1 governs the testing of space segment equipment and explicitly excludes tests of facilities and ground support equipment from its scope. The acceptance criteria therefore come from the procurement specification and the contract, and they have to be translated into an acceptance test procedure (ATP) well before manufacturing ends. Each specified requirement needs a verification method (test, analysis, inspection or review of design), a measurable pass criterion and the conditions under which it is measured.",
+          "content2": "ECSS-Q-ST-20-07C, which sets quality and safety assurance requirements for space test centres, is useful here because it describes what the future operator of the facility must be able to show: calibrated instrumentation, controlled procedures and traceable records. A chamber accepted without those records leaves the test centre to reconstruct them later. Agreeing the ATP early also prevents the most common FAT dispute, namely a criterion that was never stated together with its measurement conditions.",
+          "bulletsHeading": "Documents to agree before the FAT",
+          "bullets": [
+            "A verification matrix linking every specification clause to a test step, an inspection or an analysis, with the responsible party named.",
+            "Pass criteria with units, measurement location and chamber state, for example empty, clean and dry, with or without a preceding bake-out.",
+            "A list of witness points and hold points, so that the buyer knows which steps may proceed only after attendance.",
+            "Calibration certificates for the gauges, temperature sensors, flow meters and data acquisition used as acceptance evidence.",
+            "The configuration under test: pump set, shroud and plate circuits, controller firmware and software version."
+          ]
+        },
+        {
+          "title": "Vacuum Performance: Pump-Down Time and Base Pressure",
+          "content": "Pump-down time and base pressure are the figures most often quoted and most often misread. Below roughly 1×10⁻³ mbar the gas load in a clean chamber is dominated by water desorbing from the walls, so the result depends on how long the vessel was open, the humidity of the room air and whether it was vented with dry GN₂. A criterion that gives only a pressure and a time, without these conditions, cannot be verified unambiguously.",
+          "content2": "Measurement uncertainty matters as much as the reading. Ionisation gauges are gas-type dependent and are usually calibrated for nitrogen, and ECSS-E-ST-10-03C Rev.1 allows a default tolerance of ±80 % for chamber pressures below 1.3×10⁻³ hPa in hardware tests, which shows how coarse high-vacuum measurement is. Distinguish the operating pressure held during a test with cold shrouds from the ultimate pressure reached after extended pumping; a cold LN₂ shroud cryopumps water and usually lowers the reading considerably.",
+          "bulletsHeading": "What to record during the pump-down demonstration",
+          "bullets": [
+            "The full pressure curve from atmosphere to base pressure with time stamps, not only the end value.",
+            "Chamber history before the test: duration at atmosphere, vent gas, room temperature and relative humidity.",
+            "Gauge type, position on the vessel and calibration date, plus a cross-check between two gauges where their ranges overlap.",
+            "Pressure with shrouds at ambient and with shrouds cold, so that both operating and ultimate values are documented.",
+            "Pump status during the run: foreline pressure, turbomolecular pump speed or cryopump stage temperature."
+          ]
+        },
+        {
+          "title": "Leak Tightness: Rate-of-Rise and Helium Tracer Gas Testing",
+          "content": "A rate-of-rise test isolates the chamber from its pumps and records the pressure increase. The total gas load follows from Q = V × Δp/Δt: a 1,000 litre chamber whose pressure rises by 1×10⁻³ mbar in 100 s has a gas load of 1×10⁻² mbar·l/s. The test cannot separate leaks from outgassing on its own, but the shape of the curve helps. Outgassing flattens over time, while a real leak produces a linear rise for as long as the chamber pressure remains far below atmospheric pressure.",
+          "content2": "Localising and quantifying leaks requires a tracer gas method. ISO 20485:2017 describes the techniques for leak detection with a tracer gas and a tracer gas specific leak detector, including the vacuum method in which helium is sprayed on the outside while the detector samples the evacuated chamber. The detector response should be checked against a calibrated reference leak before and after the test. Cryogenic circuits deserve particular attention, because thermal contraction can open leaks at LN₂ temperature that are invisible at ambient.",
+          "bulletsHeading": "Leak test points worth witnessing",
+          "bullets": [
+            "Door seal and any secondary seals, sprayed systematically from top to bottom so that helium does not drift to an untested joint.",
+            "Electrical, thermocouple and fluid feedthroughs, including LN₂ and GN₂ inlets where they pass through the vessel wall.",
+            "Viewports and their clamping flanges, which combine dissimilar materials and are sensitive to thermal stress.",
+            "Welds on the vessel and on the shroud circuits, the latter ideally tested after at least one cold cycle.",
+            "An integral leak rate in mbar·l/s, recorded together with the detector sensitivity and the reference leak value."
+          ]
+        },
+        {
+          "title": "Thermal Performance: Range, Rates, Uniformity and Stability",
+          "content": "The thermal demonstration should prove four things: the extreme temperatures of the thermal plate and shrouds, the achievable heating and cooling rates, the spatial uniformity across the plate and the stability during a hold. Each figure needs a defined thermal load. An empty chamber ramps faster and holds more uniformly than one carrying a fixture and a test item, so a dummy mass or a resistive heater load that represents the intended use gives more meaningful evidence than an empty run.",
+          "content2": "The required stability follows from the hardware tests the chamber will support. ECSS-E-ST-10-03C Rev.1 sets default thermal vacuum tolerances of +0/−4 K at the minimum and −0/+4 K at the maximum test temperature for equipment, and defines dwell time from the moment the targeted temperature is reached within that tolerance. Shroud and plate control must stay comfortably inside that band, including any overshoot at the end of a ramp. Measuring LN₂ consumption over a full cycle also gives the operator a first realistic figure for running costs.",
+          "bulletsHeading": "Thermal acceptance checks",
+          "bullets": [
+            "Minimum and maximum plate and shroud temperatures, each held long enough to show a stable reading rather than a passing value.",
+            "Heating and cooling rates with the dummy load defined in the ATP, measured both on the load and on the plate.",
+            "A uniformity map from several sensors across the plate surface, with the sensor positions documented in a sketch.",
+            "Overshoot and settling behaviour at the end of each ramp, compared with the agreed tolerance band.",
+            "LN₂ or refrigeration consumption over a complete cycle, with supply pressure and line condition noted."
+          ]
+        },
+        {
+          "title": "Controls, Interlocks and Data Acquisition",
+          "content": "Many chamber faults that put hardware at risk are control faults rather than vacuum or thermal shortcomings. The FAT should therefore exercise every automatic sequence listed in the ATP: pump-down, venting with GN₂, bake-out, thermal cycling and controlled warm-up after a cold phase. Each sequence is run as an operator would run it, from the operator interface, and the logged data are reviewed afterwards rather than only the screen display.",
+          "content2": "Interlocks are tested by fault injection. Simulating a pump failure, a loss of LN₂ supply, a power interruption or a sensor break shows whether the system reaches a safe state, and whether that state protects the test item as well as the chamber. Over-temperature protection should act independently of the control loop. The data acquisition deserves the same scrutiny: channel mapping, sample rate, time stamping and export format decide whether a later test report can be reconstructed.",
+          "bulletsHeading": "Functional tests by fault injection",
+          "bullets": [
+            "Pump or compressor trip during operation, with the expected valve positions and alarm messages recorded.",
+            "Power failure and restart: which state the system resumes and whether any valve moves unexpectedly.",
+            "A venting attempt while cold surfaces are below the dew point, which should be blocked or warned against to prevent condensation.",
+            "Independent over-temperature cut-off triggered by a simulated sensor value and verified at hardware level.",
+            "Each measurement channel checked against a known reference, with channel names matching the documentation."
+          ]
+        },
+        {
+          "title": "Cleanliness Evidence: The Chamber Must Not Be the Contaminant",
+          "content": "A new chamber carries machining fluids, cleaning residues, fingerprints and outgassing from seals and cables. ECSS-E-ST-10-03C Rev.1 requires cleanliness and contamination control in test programmes to conform to ECSS-Q-ST-70-01, so the facility has to be able to show that it does not add molecular or particulate contamination to the test item. That evidence is best produced at the factory, before the chamber leaves a controlled environment.",
+          "content2": "A practical approach is an empty-chamber run after cleaning and bake-out, monitored with a quartz crystal microbalance or witness samples and a residual gas analyser. The RGA spectrum shows whether water, air components or hydrocarbon fragments dominate the residual gas; recurring peaks at higher masses point to oils or polymer outgassing. The acceptance criterion must be agreed in advance, because a figure measured in an empty chamber is a property of the facility, not of a future test item.",
+          "bulletsHeading": "Cleanliness records to request",
+          "bullets": [
+            "Cleaning procedure and the agents used for vessel, shrouds and fixtures, with dates and responsible staff.",
+            "Materials list for all parts inside the vacuum, in particular seals, cable insulation and lubricants.",
+            "Bake-out profile of the empty chamber with temperatures, duration and pressure trend.",
+            "QCM or witness sample results for an empty-chamber run, with the collector temperature stated.",
+            "RGA spectrum of the empty chamber at base pressure, with the mass range and instrument settings."
+          ]
+        },
+        {
+          "title": "Site Acceptance: What Transport and Infrastructure Change",
+          "content": "The SAT verifies that the chamber still meets its specification after transport, rigging and reconnection, and that it works with the site's infrastructure. Vacuum joints may have been opened for shipping, shroud circuits disconnected and sensors removed. The site's utilities are new variables: electrical supply, LN₂ delivery pressure and line insulation, cooling water temperature and flow, compressed air, GN₂ for venting and the exhaust routing of the pumps.",
+          "content2": "A full repeat of the FAT is rarely necessary. A reduced programme usually covers a helium leak test of all joints opened during installation, a pump-down to the specified pressure, at least one thermal cycle with the site's cryogen supply and the interlocks that connect to site systems, such as oxygen deficiency monitoring and emergency stops. Documentation handover belongs to the SAT as well: as-built drawings, P&ID, wiring diagrams, manuals, spare parts lists and training records.",
+          "bulletsHeading": "Closing the SAT",
+          "bullets": [
+            "A punch list that classifies open items by their impact on test capability, with an owner and a target date for each.",
+            "Re-test records for every joint and connection disturbed during transport and installation.",
+            "Thermal cycle results with the site's LN₂ supply, compared with the FAT values under the same load.",
+            "Verified integration with site safety systems, including oxygen monitoring and emergency stop circuits.",
+            "Handover of as-built documentation and software backups, and a clear statement of when the warranty starts."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "Which tests prove that a thermal vacuum chamber meets its specification at FAT and SAT?",
+          "a": "The core set is a pump-down to the specified pressure under documented conditions, a rate-of-rise test and a helium tracer gas leak test, a thermal demonstration of range, rates, uniformity and stability with a defined load, functional tests of sequences and interlocks by fault injection, and cleanliness evidence from an empty-chamber run. The SAT repeats a reduced programme after installation and adds the integration with site utilities and safety systems."
+        },
+        {
+          "q": "Does an ECSS standard define how a test chamber is accepted?",
+          "a": "No. ECSS-E-ST-10-03C Rev.1 covers the testing of space segment equipment and explicitly excludes tests of facilities and ground support equipment. Its tolerances and its definition of dwell time are still useful, because they describe what the chamber must be able to support. ECSS-Q-ST-20-07C sets quality and safety assurance requirements for space test centres, including their facilities and personnel. The acceptance criteria themselves come from the procurement specification and the contract."
+        },
+        {
+          "q": "Should the FAT be run with an empty chamber or with a test load?",
+          "a": "Both have their place. Vacuum performance and cleanliness are usually demonstrated with the empty chamber, because the result then characterises the facility itself. Thermal rates, uniformity and stability should be demonstrated with a dummy mass or a heater load that represents the intended use, since an empty plate ramps faster and settles more evenly than a loaded one. The ATP should define the load by mass, material, heat dissipation and mounting."
+        },
+        {
+          "q": "Is a rate-of-rise test enough to prove leak tightness?",
+          "a": "It is a useful screening test but not sufficient on its own. The pressure rise combines real leaks and outgassing, and in a new chamber outgassing often dominates. A helium tracer gas test, as described in ISO 20485:2017, localises individual leaks and quantifies them with a detector checked against a calibrated reference leak. Leaks that only open at cryogenic temperature additionally need a test during or after a cold phase."
+        },
+        {
+          "q": "What happens if the chamber fails a criterion during the FAT?",
+          "a": "The failure is recorded as a nonconformance with the measured value, the test conditions and the suspected cause. The parties then decide whether the item is corrected and re-tested, accepted through a formal deviation or waiver, or carried to the SAT as a punch list item. The decision should follow the procedure agreed before the FAT, and any re-test should be witnessed under the same conditions as the original attempt."
+        }
+      ],
+      "conclusion": "A chamber acceptance is only as strong as the criteria behind it. Defining measurement conditions, loads and pass values in the acceptance test procedure before manufacturing ends turns the FAT into a verification rather than a demonstration. The most valuable witnessed steps are those that cannot be checked on paper: leak tests after cold cycles, thermal stability under load, interlock behaviour under injected faults and an empty-chamber cleanliness run. The SAT then confirms that transport and site infrastructure have not changed the result."
+    },
+    "de": {
+      "title": "FAT und SAT einer Thermalvakuumkammer: Was Sie vor der Abnahme prüfen sollten",
+      "description": "Werks- und Vor-Ort-Abnahme einer TVAC-Kammer: welche Vakuum-, Dichtheits-, Thermal-, Verriegelungs- und Sauberkeitsprüfungen Sie bezeugen und welche Nachweise Sie verlangen sollten.",
+      "seoTitle": "TVAC-Kammer: FAT und SAT richtig abnehmen | Deepvac",
+      "seoDescription": "FAT und SAT für Thermalvakuumkammern: Abpumpzeit, Leckrate, Temperaturbereich und Stabilität, Verriegelungen und Sauberkeit vor der Unterschrift prüfen.",
+      "intro": "Eine Thermalvakuumkammer wird zweimal abgenommen: einmal im Werk des Herstellers bei der Werksabnahme (Factory Acceptance Test, FAT) und einmal nach der Installation bei der Abnahme vor Ort (Site Acceptance Test, SAT). Beide Termine enden mit einer Unterschrift, die Gefahrübergang, Zahlungen und den Beginn der Gewährleistung auslöst, doch die Prüfungen dahinter werden oft spät und unscharf festgelegt. Dieser Beitrag beantwortet eine praktische Frage: Welche Prüfungen und Nachweise belegen, dass eine Kammer ihr Lastenheft erfüllt, und was sollten Sie als Käufer selbst bezeugen, statt es auf dem Papier zu akzeptieren? Behandelt werden Abnahmedokumente, Vakuum- und Dichtheitsleistung, thermische Leistung, Steuerung und Verriegelungen, Sauberkeitsnachweise sowie die Prüfungen, die erst vor Ort sinnvoll sind, jeweils mit den Normen, die den Rahmen setzen.",
+      "sections": [
+        {
+          "title": "Die Abnahme beginnt mit dem Lastenheft, nicht am Prüftag",
+          "content": "Keine ECSS-Norm legt fest, wie eine Prüfkammer abgenommen wird. ECSS-E-ST-10-03C Rev.1 regelt die Prüfung von Raumfahrtgeräten und schließt Prüfungen von Anlagen und Bodenhilfsausrüstung ausdrücklich aus ihrem Anwendungsbereich aus. Die Abnahmekriterien ergeben sich deshalb aus Lastenheft und Vertrag, und sie müssen lange vor Fertigungsende in eine Abnahmeprüfprozedur (Acceptance Test Procedure, ATP) übersetzt werden. Jede Anforderung braucht eine Verifikationsmethode (Test, Analyse, Inspektion oder Designprüfung), ein messbares Bestehenskriterium und die Bedingungen, unter denen gemessen wird.",
+          "content2": "ECSS-Q-ST-20-07C, die Anforderungen an Qualitäts- und Sicherheitssicherung für Raumfahrt-Testzentren festlegt, hilft hier weiter, weil sie beschreibt, was der spätere Betreiber der Anlage nachweisen können muss: kalibrierte Messtechnik, gelenkte Verfahren und rückverfolgbare Aufzeichnungen. Wird eine Kammer ohne diese Unterlagen abgenommen, muss das Testzentrum sie später rekonstruieren. Eine früh vereinbarte ATP verhindert außerdem den häufigsten Streitpunkt beim FAT: ein Kriterium, das nie zusammen mit seinen Messbedingungen formuliert wurde.",
+          "bulletsHeading": "Vor dem FAT zu vereinbarende Unterlagen",
+          "bullets": [
+            "Eine Verifikationsmatrix, die jede Lastenheftanforderung einem Prüfschritt, einer Inspektion oder einer Analyse zuordnet und die verantwortliche Partei nennt.",
+            "Bestehenskriterien mit Einheiten, Messort und Kammerzustand, zum Beispiel leer, sauber und trocken, mit oder ohne vorheriges Ausheizen.",
+            "Eine Liste der Witness Points und Hold Points, damit Sie wissen, welche Schritte erst nach Ihrer Anwesenheit fortgesetzt werden dürfen.",
+            "Kalibrierscheine für Messröhren, Temperatursensoren, Durchflussmesser und die Messdatenerfassung, die als Abnahmenachweis dienen.",
+            "Die geprüfte Konfiguration: Pumpstand, Shroud- und Plattenkreise, Firmware der Regler und Softwarestand."
+          ]
+        },
+        {
+          "title": "Vakuumleistung: Abpumpzeit und Enddruck",
+          "content": "Abpumpzeit und Enddruck sind die am häufigsten genannten und am häufigsten missverstandenen Kennwerte. Unterhalb von etwa 1×10⁻³ mbar wird die Gaslast einer sauberen Kammer von Wasser dominiert, das von den Wänden desorbiert. Das Ergebnis hängt daher davon ab, wie lange der Behälter offen stand, wie feucht die Raumluft war und ob mit trockenem GN₂ belüftet wurde. Ein Kriterium, das nur einen Druck und eine Zeit nennt, ohne diese Bedingungen, lässt sich nicht eindeutig verifizieren.",
+          "content2": "Die Messunsicherheit ist ebenso wichtig wie der Messwert. Ionisationsvakuummeter sind gasartabhängig und meist auf Stickstoff kalibriert. ECSS-E-ST-10-03C Rev.1 lässt für Hardwaretests bei Kammerdrücken unter 1,3×10⁻³ hPa eine Standardtoleranz von ±80 % zu, was zeigt, wie grob Hochvakuummessung ist. Unterscheiden Sie den Betriebsdruck, der während eines Tests mit kalten Shrouds gehalten wird, vom Enddruck nach längerem Pumpen; ein mit LN₂ gekühlter Shroud pumpt Wasser kryogen ab und senkt den Messwert meist deutlich.",
+          "bulletsHeading": "Was beim Abpumpnachweis aufzuzeichnen ist",
+          "bullets": [
+            "Die vollständige Druckkurve von Atmosphäre bis Enddruck mit Zeitstempeln, nicht nur der Endwert.",
+            "Die Vorgeschichte der Kammer: Dauer an Atmosphäre, Belüftungsgas, Raumtemperatur und relative Luftfeuchte.",
+            "Röhrentyp, Position am Behälter und Kalibrierdatum sowie ein Quervergleich zweier Messröhren in ihrem Überlappungsbereich.",
+            "Druck mit Shrouds bei Raumtemperatur und mit kalten Shrouds, damit Betriebs- und Enddruck belegt sind.",
+            "Pumpenzustand während des Laufs: Vorvakuumdruck, Drehzahl der Turbomolekularpumpe oder Stufentemperatur der Kryopumpe."
+          ]
+        },
+        {
+          "title": "Dichtheit: Druckanstiegsprüfung und Helium-Prüfgasverfahren",
+          "content": "Bei der Druckanstiegsprüfung wird die Kammer von den Pumpen getrennt und der Druckanstieg aufgezeichnet. Die gesamte Gaslast folgt aus Q = V × Δp/Δt: Eine Kammer mit 1.000 Litern, deren Druck in 100 s um 1×10⁻³ mbar steigt, hat eine Gaslast von 1×10⁻² mbar·l/s. Allein kann dieser Test Lecks nicht von Ausgasung trennen, doch der Kurvenverlauf hilft. Ausgasung flacht mit der Zeit ab, während ein echtes Leck einen linearen Anstieg erzeugt, solange der Kammerdruck weit unter dem Atmosphärendruck liegt.",
+          "content2": "Um Lecks zu orten und zu quantifizieren, ist ein Prüfgasverfahren nötig. ISO 20485:2017 beschreibt die Techniken der Lecksuche mit einem Prüfgas und einem prüfgasspezifischen Lecksuchgerät, darunter das Vakuumverfahren, bei dem Helium von außen aufgesprüht wird, während das Gerät die evakuierte Kammer absaugt. Die Anzeige des Lecksuchers sollte vor und nach der Prüfung mit einem kalibrierten Testleck kontrolliert werden. Kryogene Kreise verdienen besondere Aufmerksamkeit, weil thermische Schrumpfung bei LN₂-Temperatur Lecks öffnen kann, die bei Raumtemperatur nicht nachweisbar sind.",
+          "bulletsHeading": "Prüfstellen, die Sie bezeugen sollten",
+          "bullets": [
+            "Türdichtung und eventuelle Zweitdichtungen, systematisch von oben nach unten besprüht, damit Helium nicht zu einer ungeprüften Stelle wandert.",
+            "Elektrische, Thermoelement- und Fluiddurchführungen einschließlich der LN₂- und GN₂-Einspeisungen durch die Behälterwand.",
+            "Schaugläser und ihre Klemmflansche, die unterschiedliche Werkstoffe verbinden und empfindlich auf thermische Spannungen reagieren.",
+            "Schweißnähte am Behälter und an den Shroud-Kreisen, Letztere möglichst nach mindestens einem Kältezyklus geprüft.",
+            "Eine integrale Leckrate in mbar·l/s, dokumentiert zusammen mit der Nachweisempfindlichkeit und dem Wert des Testlecks."
+          ]
+        },
+        {
+          "title": "Thermische Leistung: Bereich, Raten, Homogenität und Stabilität",
+          "content": "Der thermische Nachweis sollte vier Dinge belegen: die Grenztemperaturen von Thermalplatte und Shrouds, die erreichbaren Heiz- und Kühlraten, die räumliche Homogenität über die Platte und die Stabilität während einer Haltephase. Jeder dieser Werte braucht eine definierte thermische Last. Eine leere Kammer fährt schneller und hält gleichmäßiger als eine Kammer mit Vorrichtung und Prüfling. Eine Dummy-Masse oder eine Heizwiderstandslast, die den vorgesehenen Einsatz abbildet, liefert daher aussagekräftigere Nachweise als ein Leerlauf.",
+          "content2": "Die geforderte Stabilität leitet sich aus den Hardwaretests ab, die die Kammer ermöglichen soll. ECSS-E-ST-10-03C Rev.1 legt für Geräte Standardtoleranzen im Thermalvakuum von +0/−4 K bei der minimalen und −0/+4 K bei der maximalen Prüftemperatur fest und definiert die Haltezeit ab dem Zeitpunkt, zu dem die Zieltemperatur innerhalb dieser Toleranz erreicht ist. Die Regelung von Shroud und Platte muss deutlich innerhalb dieses Bandes bleiben, auch beim Überschwingen am Ende einer Rampe. Wird zudem der LN₂-Verbrauch über einen vollständigen Zyklus gemessen, erhält der Betreiber einen ersten realistischen Wert für die Betriebskosten.",
+          "bulletsHeading": "Thermische Abnahmeprüfungen",
+          "bullets": [
+            "Minimal- und Maximaltemperatur von Platte und Shrouds, jeweils so lange gehalten, dass ein stabiler Wert und kein Durchgangswert belegt ist.",
+            "Heiz- und Kühlraten mit der in der ATP festgelegten Dummy-Last, gemessen an der Last und an der Platte.",
+            "Eine Homogenitätskarte aus mehreren Sensoren über die Plattenoberfläche, mit den Sensorpositionen in einer Skizze dokumentiert.",
+            "Überschwingen und Einschwingverhalten am Ende jeder Rampe im Vergleich zum vereinbarten Toleranzband.",
+            "LN₂- oder Kälteverbrauch über einen vollständigen Zyklus, mit Versorgungsdruck und Zustand der Leitungen."
+          ]
+        },
+        {
+          "title": "Steuerung, Verriegelungen und Messdatenerfassung",
+          "content": "Viele Kammerfehler, die Hardware gefährden, sind Steuerungsfehler und keine Schwächen von Vakuum oder Thermik. Beim FAT sollte deshalb jede in der ATP aufgeführte Automatiksequenz durchlaufen werden: Abpumpen, Belüften mit GN₂, Ausheizen, Temperaturwechsel und kontrolliertes Aufwärmen nach einer Kältephase. Jede Sequenz wird so gefahren, wie ein Bediener sie fahren würde, also über die Bedienoberfläche, und anschließend werden die aufgezeichneten Daten geprüft, nicht nur die Bildschirmanzeige.",
+          "content2": "Verriegelungen werden durch Fehlersimulation geprüft. Ein simulierter Pumpenausfall, ein Ausfall der LN₂-Versorgung, eine Stromunterbrechung oder ein Sensorbruch zeigen, ob das System einen sicheren Zustand erreicht und ob dieser Zustand neben der Kammer auch den Prüfling schützt. Der Übertemperaturschutz sollte unabhängig vom Regelkreis wirken. Die Messdatenerfassung verdient dieselbe Sorgfalt: Kanalzuordnung, Abtastrate, Zeitstempel und Exportformat entscheiden darüber, ob sich ein späterer Prüfbericht nachvollziehen lässt.",
+          "bulletsHeading": "Funktionsprüfungen durch Fehlersimulation",
+          "bullets": [
+            "Abschaltung einer Pumpe oder eines Kompressors im Betrieb, mit Aufzeichnung der erwarteten Ventilstellungen und Alarmmeldungen.",
+            "Stromausfall und Wiederanlauf: In welchen Zustand das System zurückkehrt und ob sich ein Ventil unerwartet bewegt.",
+            "Ein Belüftungsversuch, während kalte Flächen unter dem Taupunkt liegen; er sollte gesperrt oder mit einer Warnung versehen sein, um Kondensation zu verhindern.",
+            "Unabhängige Übertemperaturabschaltung, ausgelöst durch einen simulierten Sensorwert und auf Hardwareebene nachgewiesen.",
+            "Jeder Messkanal gegen eine bekannte Referenz geprüft, mit Kanalnamen, die der Dokumentation entsprechen."
+          ]
+        },
+        {
+          "title": "Sauberkeitsnachweis: Die Kammer darf nicht selbst kontaminieren",
+          "content": "Eine neue Kammer trägt Kühlschmierstoffe, Reinigungsrückstände, Fingerabdrücke und Ausgasung aus Dichtungen und Kabeln in sich. ECSS-E-ST-10-03C Rev.1 verlangt, dass Sauberkeit und Kontaminationskontrolle in Testprogrammen ECSS-Q-ST-70-01 entsprechen. Die Anlage muss also zeigen können, dass sie dem Prüfling keine molekulare oder partikuläre Kontamination hinzufügt. Dieser Nachweis wird am besten im Werk erbracht, bevor die Kammer eine kontrollierte Umgebung verlässt.",
+          "content2": "Bewährt hat sich ein Leerlauf der Kammer nach Reinigung und Ausheizen, überwacht mit einer Quarzkristall-Mikrowaage oder Witness-Proben und einem Restgasanalysator. Das RGA-Spektrum zeigt, ob Wasser, Luftbestandteile oder Kohlenwasserstofffragmente das Restgas dominieren; wiederkehrende Peaks bei höheren Massen deuten auf Öle oder ausgasende Polymere hin. Das Abnahmekriterium muss vorab vereinbart werden, denn ein in der leeren Kammer gemessener Wert ist eine Eigenschaft der Anlage und nicht eines künftigen Prüflings.",
+          "bulletsHeading": "Sauberkeitsnachweise, die Sie anfordern sollten",
+          "bullets": [
+            "Reinigungsverfahren und verwendete Mittel für Behälter, Shrouds und Vorrichtungen, mit Datum und verantwortlichem Personal.",
+            "Werkstoffliste aller Teile im Vakuum, insbesondere Dichtungen, Kabelisolationen und Schmierstoffe.",
+            "Ausheizprofil der leeren Kammer mit Temperaturen, Dauer und Druckverlauf.",
+            "Ergebnisse von QCM oder Witness-Proben aus einem Leerlauf, mit Angabe der Kollektortemperatur.",
+            "RGA-Spektrum der leeren Kammer bei Enddruck, mit Massenbereich und Geräteeinstellungen."
+          ]
+        },
+        {
+          "title": "Abnahme vor Ort: Was Transport und Infrastruktur verändern",
+          "content": "Der SAT prüft, ob die Kammer nach Transport, Einbringung und erneutem Anschluss ihr Lastenheft weiterhin erfüllt und ob sie mit der Infrastruktur am Standort zusammenarbeitet. Vakuumverbindungen wurden für den Versand womöglich geöffnet, Shroud-Kreise getrennt und Sensoren ausgebaut. Die Medien vor Ort sind neue Variablen: Stromversorgung, LN₂-Vordruck und Leitungsisolierung, Temperatur und Durchfluss des Kühlwassers, Druckluft, GN₂ zum Belüften und die Abgasführung der Pumpen.",
+          "content2": "Eine vollständige Wiederholung des FAT ist selten nötig. Ein reduziertes Programm umfasst üblicherweise eine Heliumlecksuche an allen bei der Installation geöffneten Verbindungen, ein Abpumpen auf den spezifizierten Druck, mindestens einen Thermalzyklus mit der Kryoversorgung des Standorts und die Verriegelungen, die an Standortsysteme angebunden sind, etwa Sauerstoffmangelüberwachung und Not-Halt. Zum SAT gehört auch die Übergabe der Dokumentation: Bestandszeichnungen, R&I-Fließschema, Stromlaufpläne, Handbücher, Ersatzteillisten und Schulungsnachweise.",
+          "bulletsHeading": "Den SAT abschließen",
+          "bullets": [
+            "Eine Restpunkteliste, die offene Punkte nach ihrem Einfluss auf die Testfähigkeit einstuft und jedem Punkt einen Verantwortlichen und einen Termin zuordnet.",
+            "Nachweise der Wiederholungsprüfung für jede bei Transport und Installation berührte Verbindung.",
+            "Ergebnisse des Thermalzyklus mit der LN₂-Versorgung vor Ort, verglichen mit den FAT-Werten unter derselben Last.",
+            "Nachgewiesene Einbindung in die Sicherheitssysteme des Standorts, einschließlich Sauerstoffüberwachung und Not-Halt-Kreisen.",
+            "Übergabe der Bestandsdokumentation und Software-Sicherungen sowie eine eindeutige Aussage, wann die Gewährleistung beginnt."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "Welche Prüfungen belegen bei FAT und SAT, dass eine Thermalvakuumkammer ihr Lastenheft erfüllt?",
+          "a": "Der Kern besteht aus einem Abpumpen auf den spezifizierten Druck unter dokumentierten Bedingungen, einer Druckanstiegsprüfung und einer Heliumlecksuche, einem thermischen Nachweis von Bereich, Raten, Homogenität und Stabilität mit definierter Last, Funktionsprüfungen von Sequenzen und Verriegelungen durch Fehlersimulation sowie einem Sauberkeitsnachweis aus einem Leerlauf. Der SAT wiederholt nach der Installation ein reduziertes Programm und ergänzt die Einbindung in Medienversorgung und Sicherheitssysteme des Standorts."
+        },
+        {
+          "q": "Regelt eine ECSS-Norm, wie eine Prüfkammer abgenommen wird?",
+          "a": "Nein. ECSS-E-ST-10-03C Rev.1 behandelt die Prüfung von Raumfahrtgeräten und schließt Prüfungen von Anlagen und Bodenhilfsausrüstung ausdrücklich aus. Ihre Toleranzen und ihre Definition der Haltezeit sind trotzdem nützlich, weil sie beschreiben, was die Kammer ermöglichen muss. ECSS-Q-ST-20-07C legt Anforderungen an die Qualitäts- und Sicherheitssicherung von Raumfahrt-Testzentren fest, einschließlich Anlagen und Personal. Die Abnahmekriterien selbst stammen aus Lastenheft und Vertrag."
+        },
+        {
+          "q": "Sollte der FAT mit leerer Kammer oder mit Prüflast gefahren werden?",
+          "a": "Beides hat seinen Platz. Vakuumleistung und Sauberkeit werden meist mit leerer Kammer nachgewiesen, weil das Ergebnis dann die Anlage selbst beschreibt. Heiz- und Kühlraten, Homogenität und Stabilität sollten mit einer Dummy-Masse oder einer Heizlast nachgewiesen werden, die den vorgesehenen Einsatz abbildet, denn eine leere Platte fährt schneller und schwingt gleichmäßiger ein als eine beladene. Die ATP sollte die Last nach Masse, Werkstoff, Wärmeleistung und Befestigung definieren."
+        },
+        {
+          "q": "Reicht eine Druckanstiegsprüfung als Dichtheitsnachweis?",
+          "a": "Sie ist ein guter Suchtest, reicht allein aber nicht aus. Der Druckanstieg vereint echte Lecks und Ausgasung, und bei einer neuen Kammer überwiegt oft die Ausgasung. Eine Heliumlecksuche nach dem in ISO 20485:2017 beschriebenen Prüfgasverfahren ortet einzelne Lecks und quantifiziert sie mit einem Gerät, das gegen ein kalibriertes Testleck geprüft ist. Lecks, die sich erst bei kryogener Temperatur öffnen, erfordern zusätzlich eine Prüfung während oder nach einer Kältephase."
+        },
+        {
+          "q": "Was passiert, wenn die Kammer beim FAT ein Kriterium verfehlt?",
+          "a": "Das Ergebnis wird als Abweichung mit Messwert, Prüfbedingungen und vermuteter Ursache dokumentiert. Danach entscheiden die Parteien, ob nachgebessert und erneut geprüft wird, ob eine formale Sonderfreigabe erfolgt oder ob der Punkt als Restpunkt in den SAT übernommen wird. Die Entscheidung sollte dem vor dem FAT vereinbarten Verfahren folgen, und jede Wiederholungsprüfung sollte unter denselben Bedingungen bezeugt werden wie der ursprüngliche Versuch."
+        }
+      ],
+      "conclusion": "Eine Kammerabnahme ist nur so belastbar wie die Kriterien dahinter. Wer Messbedingungen, Lasten und Grenzwerte vor Fertigungsende in der Abnahmeprüfprozedur festlegt, macht aus dem FAT eine Verifikation statt einer Vorführung. Am wertvollsten sind die bezeugten Schritte, die sich auf dem Papier nicht prüfen lassen: Lecksuche nach Kältezyklen, thermische Stabilität unter Last, Verhalten der Verriegelungen bei simulierten Fehlern und ein Sauberkeitslauf der leeren Kammer. Der SAT bestätigt anschließend, dass Transport und Infrastruktur vor Ort das Ergebnis nicht verändert haben."
+    }
+  }
+]
