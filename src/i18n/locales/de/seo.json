@@ -218,5 +218,9 @@
   "blogTvacChamberSpecification": {
     "title": "TVAC-Kammer-Lastenheft richtig schreiben | Deepvac",
     "description": "Thermalvakuumkammer so spezifizieren, dass Angebote vergleichbar werden: Vakuum-, Thermal-, Schnittstellen- und Verifikationsanforderungen und was wegbleiben kann."
+  },
+  "blogTvacChamberAcceptanceTesting": {
+    "title": "TVAC-Kammer: FAT und SAT richtig abnehmen | Deepvac",
+    "description": "FAT und SAT für Thermalvakuumkammern: Abpumpzeit, Leckrate, Temperaturbereich und Stabilität, Verriegelungen und Sauberkeit vor der Unterschrift prüfen."
   }
 }

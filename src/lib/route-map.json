@@ -992,6 +992,17 @@
     }
   },
   {
+    "en": "/resources/blog/tvac-chamber-acceptance-testing",
+    "de": "/de/ressourcen/blog/tvac-kammer-abnahmepruefung",
+    "seoKey": "blogTvacChamberAcceptanceTesting",
+    "sitemap": {
+      "group": "resources",
+      "priority": 0.55,
+      "changefreq": "monthly",
+      "sources": ["src/content/blog"]
+    }
+  },
+  {
     "en": "/careers",
     "de": "/de/karriere",
     "seoKey": "careers",
