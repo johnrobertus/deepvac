@@ -10,6 +10,7 @@ import { useState } from "react";
 import { brochures, type Brochure } from "@/lib/brochures";
 import { useLanguage } from "@/components/LanguageProvider";
 import { getHreflangs, getCanonical, localizedPath } from "@/lib/routes";
+import { trackEvent } from "@/lib/analytics";
 
 const Catalogues = () => {
   const { t } = useTranslation("catalogs");
@@ -82,8 +83,8 @@ const Catalogues = () => {
                 </div>
                 <div className="pt-2">
                   <Button asChild>
-                    <a href={featured.pdfUrl} target="_blank" rel="noopener noreferrer">
-                      <Download className="w-4 h-4 mr-2" />{tc("buttons.downloadPdf")}
+                    <a href="/brochures/deepvac-standard-series-catalogue-2026.pdf" download onClick={() => trackEvent("brochure_download", { page: "catalogs" })}>
+                      <Download className="w-4 h-4 mr-2" />{tc("buttons.downloadBrochure")}
                     </a>
                   </Button>
                 </div>
@@ -165,8 +166,8 @@ function BrochureCard({ doc }: { doc: Brochure }) {
         <p className="text-card-meta flex-1">{doc.description}</p>
         {hasFile ? (
           <Button asChild variant="tertiary" className="text-xs self-start">
-            <a href={doc.pdfUrl} target="_blank" rel="noopener noreferrer">
-              <Download className="w-3 h-3 mr-1.5" />{tc("buttons.downloadPdf")}
+            <a href={doc.id === "standard-series-2026" ? "/brochures/deepvac-standard-series-catalogue-2026.pdf" : doc.pdfUrl} download={doc.id === "standard-series-2026" ? true : undefined} target={doc.id === "standard-series-2026" ? undefined : "_blank"} rel={doc.id === "standard-series-2026" ? undefined : "noopener noreferrer"} onClick={doc.id === "standard-series-2026" ? () => trackEvent("brochure_download", { page: "catalogs" }) : undefined}>
+              <Download className="w-3 h-3 mr-1.5" />{tc(doc.id === "standard-series-2026" ? "buttons.downloadBrochure" : "buttons.downloadPdf")}
             </a>
           </Button>
         ) : (

@@ -13,7 +13,7 @@ type MicrocopyKey = "microcopy" | "microcopyDetailed" | "microcopyShort" | "none
 interface Props {
   /** Visual emphasis. */
   variant?: Variant;
-  /** Which CTA label to display (i18n key under cta.questionnaire). */
+  /** Legacy label selection; the questionnaire CTA always uses the shared label. */
   label?: LabelKey;
   /** Microcopy line under the button. "none" hides it. */
   microcopy?: MicrocopyKey;
@@ -30,7 +30,6 @@ interface Props {
  */
 export function QuestionnaireCTA({
   variant = "primary",
-  label = "configure",
   microcopy = "microcopy",
   size = "lg",
   className,
