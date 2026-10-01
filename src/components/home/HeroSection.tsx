@@ -312,8 +312,8 @@ export function HeroSection() {
               </Reveal>
 
               <Reveal delay={300}>
-                <div className="mt-2.5 flex flex-wrap items-center gap-x-7 gap-y-3 border-t border-sand/15 pt-5.5">
-                  <span className="font-mono text-[10.5px] uppercase tracking-[0.18em] text-gray">
+                <div className="mt-2.5 flex flex-nowrap items-center gap-x-2.5 border-t border-sand/15 pt-5.5 sm:gap-x-7">
+                  <span className="shrink-0 whitespace-nowrap font-mono text-[9px] uppercase tracking-[0.14em] text-gray sm:text-[10.5px] sm:tracking-[0.18em]">
                     {t("hero.spinoffLabel")}
                   </span>
                   <a
@@ -321,19 +321,19 @@ export function HeroSection() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Institut für Technische Verbrennung, Leibniz Universität Hannover"
-                    className="opacity-90 transition-opacity duration-200 hover:opacity-100"
+                    className="shrink-0 opacity-90 transition-opacity duration-200 hover:opacity-100"
                   >
                     <img
                       src={itvLogo}
                       width={1200}
                       height={726}
                       alt="Institut für Technische Verbrennung"
-                      className="h-11 w-auto sm:h-[58px]"
+                      className="h-9 w-auto sm:h-[58px]"
                       style={{ filter: "brightness(0) invert(1)" }}
                     />
                   </a>
                   <span
-                    className="hidden h-[38px] w-px bg-white/18 sm:block"
+                    className="hidden h-[38px] w-px shrink-0 bg-white/18 sm:block"
                     aria-hidden="true"
                   />
                   <a
@@ -341,14 +341,14 @@ export function HeroSection() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Leibniz Universität Hannover"
-                    className="opacity-90 transition-opacity duration-200 hover:opacity-100"
+                    className="shrink-0 opacity-90 transition-opacity duration-200 hover:opacity-100"
                   >
                     <img
                       src={luhLogo}
                       width={291}
                       height={84}
                       alt="Leibniz Universität Hannover"
-                      className="h-10 w-auto sm:h-[50px]"
+                      className="h-8 w-auto sm:h-[50px]"
                     />
                   </a>
                 </div>
