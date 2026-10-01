@@ -1,3 +1,4 @@
+/// <reference types="node" />
 import fs from "node:fs";
 import path from "node:path";
 import { matchPath } from "react-router-dom";
@@ -11,7 +12,7 @@ import deProducts from "@/i18n/locales/de/products.json";
 type Route = { en: string; de: string; seoKey: string; optionSlug?: string };
 const routes = routeMap as Route[];
 const BLOG_DIR = path.resolve(__dirname, "../content/blog");
-type Post = { enSlug: string; deSlug: string; seoKey: string };
+type Post = { enSlug: string; deSlug: string };
 const posts: Post[] = fs
   .readdirSync(BLOG_DIR)
   .filter((f) => /^part.*\.json$/.test(f))
