@@ -114,6 +114,7 @@ export function StructuredData() {
   const { t: tServices } = useTranslation("services");
   const { t: tBlog } = useTranslation("blog");
   const { t: tSeo } = useTranslation("seo");
+  const { t: tCommon } = useTranslation("common");
 
   const path = pathname.length > 1 ? pathname.replace(/\/+$/, "") : pathname;
   const canonical = getCanonical(path, lang);
@@ -206,6 +207,10 @@ export function StructuredData() {
         lang,
       ),
     );
+  }
+
+  if (matches("/references", "/de/referenzen")) {
+    schemas.push(buildCollectionPage(tCommon("nav.references") as string, tSeo("references.description") as string, canonical, lang));
   }
 
   if (matches("/products/standard-series", "/de/produkte/standard-serie")) {
