@@ -1250,7 +1250,7 @@ export default function TvacQuestionnaire() {
 
           <form onSubmit={handleSubmit} onKeyDown={handleKeyDown} onFocusCapture={(event) => {
             // The wizard focuses its heading on mount and step changes; that is not visitor interaction.
-            if (event.target !== stepHeadingRef.current) requestTurnstile();
+            if (!stepHeadingRef.current?.contains(event.target as Node)) requestTurnstile();
           }} className="space-y-8">
             {/* Focus target on step change */}
             <div ref={stepHeadingRef} tabIndex={-1} className="outline-none focus-visible:ring-2 focus-visible:ring-blue/40 rounded-sm">
