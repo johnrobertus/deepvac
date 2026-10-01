@@ -176,6 +176,29 @@ function normalizeHead(html, meta) {
   });
 }
 
+/** Remove homepage and route-specific SEO from a rendered NotFound page. */
+function cleanNotFoundHead(html, seo) {
+  const headMatch = html.match(/<head[^>]*>([\s\S]*?)<\/head>/i);
+  if (!headMatch) throw new Error("missing document head");
+  let head = headMatch[1];
+  head = head.replace(/<title\b[^>]*>[\s\S]*?<\/title>/gi, "");
+  head = head.replace(/<meta\b[^>]*>/gi, (tag) =>
+    /\b(?:name|property)\s*=\s*["'](?:description|robots|og:[^"']*|twitter:[^"']*)["']/i.test(tag) ? "" : tag,
+  );
+  head = head.replace(/<link\b[^>]*>/gi, (tag) =>
+    /\brel\s*=\s*["']canonical["']/i.test(tag) || /\bhreflang\s*=/i.test(tag) ? "" : tag,
+  );
+  head = head.replace(/<script\b[^>]*\btype\s*=\s*["']application\/ld\+json["'][^>]*>[\s\S]*?<\/script>/gi, "");
+  const notFoundTags = [
+    `<title>${escapeHtml(seo.title)}</title>`,
+    `<meta name="description" content="${escapeAttr(seo.description)}" />`,
+    '<meta name="robots" content="noindex, follow" />',
+  ].join("\n    ");
+  return html.replace(/<head[^>]*>[\s\S]*?<\/head>/i, (original) =>
+    `${original.match(/<head[^>]*>/i)[0]}\n    ${notFoundTags}\n${head}\n</head>`,
+  );
+}
+
 // Also rewrite <html lang="…">
 function setHtmlLang(html, lang) {
   return html.replace(/<html\s+lang="[^"]*"/i, `<html lang="${escapeAttr(lang)}"`);
@@ -221,6 +244,23 @@ async function prerenderOne(page, route, lang, seoEn, seoDe) {
   html = normalizeHead(html, meta);
 
   const outFile = routeOutputPath(routePath);
+  fs.mkdirSync(path.dirname(outFile), { recursive: true });
+  fs.writeFileSync(outFile, html);
+}
+
+async function prerenderNotFound(page, lang, seo) {
+  const url = `${ORIGIN}${lang === "en" ? "/__not-found__" : "/de/__not-found__"}`;
+  const response = await page.goto(url, { waitUntil: "domcontentloaded", timeout: NAV_TIMEOUT_MS });
+  if (!response) throw new Error("no navigation response");
+  if (response.status() >= 400) throw new Error(`HTTP ${response.status()}`);
+  await page.waitForSelector(APP_READY_SELECTOR, { state: "attached", timeout: NAV_TIMEOUT_MS });
+  await page.waitForFunction(
+    () => (document.querySelector("main")?.textContent ?? "").trim().length > 0,
+    { timeout: NAV_TIMEOUT_MS },
+  );
+  await page.waitForTimeout(SETTLE_MS);
+  const html = cleanNotFoundHead(setHtmlLang(await page.content(), lang), seo.notFound);
+  const outFile = path.join(DIST, ...(lang === "de" ? ["de"] : []), "404.html");
   fs.mkdirSync(path.dirname(outFile), { recursive: true });
   fs.writeFileSync(outFile, html);
 }
@@ -273,6 +313,16 @@ async function main() {
         fail++;
         console.warn(`[prerender] ${routePath} failed — keeping static-meta version. Reason: ${err.message}`);
       }
+    }
+  }
+
+  for (const [lang, seo] of [["en", seoEn], ["de", seoDe]]) {
+    try {
+      await prerenderNotFound(page, lang, seo);
+      ok++;
+    } catch (err) {
+      fail++;
+      console.warn(`[prerender] ${lang} 404 failed — continuing. Reason: ${err.message}`);
     }
   }
 
