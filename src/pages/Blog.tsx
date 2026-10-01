@@ -85,7 +85,7 @@ const Blog = () => {
           }
         >
           <Button asChild>
-            <Link to={localizedPath("/contact", lang)}>{tc("buttons.contactEngineering")}</Link>
+            <Link to={localizedPath("/contact", lang)}>{tc("bookCall.heroCta")}</Link>
           </Button>
         </CTABand>
       </PageShell>

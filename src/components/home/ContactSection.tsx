@@ -19,6 +19,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { ConsentMap } from "@/components/ConsentMap";
 import { useLanguage } from "@/components/LanguageProvider";
 import { trackEvent } from "@/lib/analytics";
+import { ensureTurnstileScript } from "@/lib/turnstile";
 
 const TURNSTILE_SITE_KEY = "0x4AAAAAACu_Uqbd5b8IkXxU";
 
@@ -95,9 +96,15 @@ export function ContactSection() {
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
   const [honeypot, setHoneypot] = useState("");
-  const [validationErrors, setValidationErrors] = useState<Partial<Record<keyof FormData | "interests", string>>>({});
+  const [validationErrors, setValidationErrors] = useState<Partial<Record<keyof FormData, string>>>({});
   const turnstileRef = useRef<HTMLDivElement>(null);
   const turnstileWidgetId = useRef<string | null>(null);
+  const [turnstileRequested, setTurnstileRequested] = useState(false);
+
+  const requestTurnstile = () => {
+    ensureTurnstileScript();
+    setTurnstileRequested(true);
+  };
 
   const productInterests = t("interests.products", { returnObjects: true }) as string[];
   const serviceInterests = t("interests.services", { returnObjects: true }) as string[];
@@ -107,17 +114,7 @@ export function ContactSection() {
   const existingSystemOptions = t("existingSystemOptions", { returnObjects: true }) as string[];
 
   useEffect(() => {
-    if (!document.getElementById("cf-turnstile-script")) {
-      const script = document.createElement("script");
-      script.id = "cf-turnstile-script";
-      script.src = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
-      script.async = true; script.defer = true;
-      document.head.appendChild(script);
-    }
-  }, []);
-
-  useEffect(() => {
-    if (!turnstileRef.current) return;
+    if (!turnstileRequested || !turnstileRef.current) return;
     const interval = setInterval(() => {
       if (window.turnstile && turnstileRef.current && !turnstileWidgetId.current) {
         turnstileWidgetId.current = window.turnstile.render(turnstileRef.current, {
@@ -127,7 +124,7 @@ export function ContactSection() {
       }
     }, 200);
     return () => clearInterval(interval);
-  }, [submitted]);
+  }, [submitted, turnstileRequested]);
 
   const set = (field: keyof FormData) => (val: string) => {
     setForm((prev) => ({ ...prev, [field]: val }));
@@ -138,13 +135,10 @@ export function ContactSection() {
 
   const toggleInterest = (label: string) => {
     setInterests((prev) => prev.includes(label) ? prev.filter((i) => i !== label) : [...prev, label]);
-    if (validationErrors.interests) {
-      setValidationErrors((prev) => { const next = { ...prev }; delete next.interests; return next; });
-    }
   };
 
   const validateForm = (): boolean => {
-    const errors: Partial<Record<keyof FormData | "interests", string>> = {};
+    const errors: Partial<Record<keyof FormData, string>> = {};
     if (!form.firstName.trim()) errors.firstName = tc("form.validation.firstNameRequired");
     if (!form.lastName.trim()) errors.lastName = tc("form.validation.lastNameRequired");
     if (!form.email.trim()) {
@@ -153,7 +147,6 @@ export function ContactSection() {
       errors.email = tc("form.validation.emailInvalid");
     }
     if (!form.company.trim()) errors.company = tc("form.validation.companyRequired");
-    if (interests.length === 0) errors.interests = t("validationNew.interestRequired");
     if (form.message.trim().length < 10) errors.message = t("validationNew.messageRequired");
     setValidationErrors(errors);
     return Object.keys(errors).length === 0;
@@ -167,6 +160,7 @@ export function ContactSection() {
 
     setSending(true);
     try {
+      requestTurnstile();
       let turnstileToken = "";
       if (window.turnstile && turnstileWidgetId.current) {
         turnstileToken = window.turnstile.getResponse(turnstileWidgetId.current) || "";
@@ -264,7 +258,7 @@ export function ContactSection() {
               </aside>
 
 
-              <form className="space-y-7" onSubmit={handleSubmit}>
+              <form className="space-y-7" onSubmit={handleSubmit} onFocusCapture={requestTurnstile}>
                 {/* Section 1 — Contact details */}
                 <div className="space-y-5">
                   <span className="mono-label text-blue">{t("sections.contact")}</span>
@@ -285,7 +279,7 @@ export function ContactSection() {
                 {/* Section 2 — Area of interest */}
                 <div className="border-t border-gray/20 pt-6 space-y-4">
                   <div className="space-y-1.5">
-                    <span className="mono-label text-blue">{t("sections.interestTitle")}<span className="text-blue ml-1">*</span></span>
+                    <span className="mono-label text-blue">{t("sections.interestTitle")}</span>
                     <p className="text-[15px] text-sand/85">{t("sections.interestHelper")}</p>
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-5">
@@ -308,7 +302,6 @@ export function ContactSection() {
                       ))}
                     </div>
                   </div>
-                  {validationErrors.interests && <p className="text-[13px] text-red-400">{validationErrors.interests}</p>}
                 </div>
 
                 {/* Section 3 — Project context */}

@@ -41,12 +41,12 @@ export default function Imprint() {
               <h2 className="text-card-title">{t("imprint.businessAddress")}</h2>
               <p>An der Universität 1</p>
               <p>30823 Garbsen</p>
-              <p>Germany</p>
+              <p>{t("imprint.country")}</p>
             </div>
             <div className="space-y-1">
               <h2 className="text-card-title">{t("imprint.contact")}</h2>
-              <p>Phone: +49 157 83027099</p>
-              <p>Email: info@deepvac.space</p>
+              <p>{t("imprint.phoneLabel")}: +49 157 830 270 99</p>
+              <p>{t("imprint.emailLabel")}: info@deepvac.space</p>
             </div>
             <div className="space-y-1">
               <h2 className="text-card-title">{t("imprint.commercialRegister")}</h2>
@@ -54,8 +54,16 @@ export default function Imprint() {
               <p>HRB 230263</p>
             </div>
             <div className="space-y-1">
+              <h2 className="text-card-title">{t("imprint.vatId")}</h2>
+              <p>{t("imprint.vatIdValue")}</p>
+            </div>
+            <div className="space-y-1">
               <h2 className="text-card-title">{t("imprint.shareCapital")}</h2>
               <p>{t("imprint.shareCapitalValue")}</p>
+            </div>
+            <div className="space-y-1">
+              <h2 className="text-card-title">{t("imprint.responsible")}</h2>
+              <p>{t("imprint.responsibleValue")}</p>
             </div>
           </div>
         </Section>

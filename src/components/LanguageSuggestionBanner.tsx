@@ -63,7 +63,8 @@ export function LanguageSuggestionBanner() {
     <div
       role="region"
       aria-label={t("languageBanner.regionLabel")}
-      className="mt-16 border-b border-gray/15 bg-surface"
+      className="fixed inset-x-0 bottom-0 z-50 border-t border-gray/15 bg-surface"
+      style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
     >
       <div className="container-wide flex items-center justify-between gap-4 py-2">
         <div className="flex flex-wrap items-center gap-3 text-[13px] text-gray">

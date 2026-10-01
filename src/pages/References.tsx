@@ -160,7 +160,7 @@ const References = () => {
 
 
         <CTABand title={t("cta.title")} description={t("cta.description")} hideInlinePrompt>
-          <Button onClick={() => setBookCallOpen(true)}>{tc("bookCall.linkLabel")}</Button>
+          <Button onClick={() => setBookCallOpen(true)}>{tc("bookCall.talkToSales")}</Button>
           <Button asChild variant="outline">
             <Link to={localizedPath("/products", lang)}>{tc("buttons.exploreProducts")}</Link>
           </Button>

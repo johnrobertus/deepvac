@@ -128,7 +128,7 @@ export const TestingServices = () => {
 
           <div className="flex flex-col sm:flex-row flex-wrap gap-3 pt-4">
             <Button asChild size="lg" className="font-mono text-xs tracking-wide w-full sm:w-auto">
-              <Link to={`${lp("/contact")}?interest=testing`}>{t("testing.ctaPrimary")}</Link>
+              <Link to={`${lp("/contact")}?interest=testing`}>{tc("bookCall.heroCta")}</Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="font-mono text-xs tracking-wide w-full sm:w-auto">
               <a href="#capabilities">{t("testing.ctaSecondary")}</a>
@@ -368,7 +368,7 @@ export const TestingServices = () => {
           description={t("testing.cta.description")}
         >
           <Button asChild size="lg" className="font-mono text-xs tracking-wide">
-            <Link to={`${lp("/contact")}?interest=testing`}>{t("testing.cta.button")}</Link>
+            <Link to={`${lp("/contact")}?interest=testing`}>{tc("bookCall.heroCta")}</Link>
           </Button>
         </CTABand>
       </PageShell>

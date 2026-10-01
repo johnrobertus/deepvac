@@ -10,6 +10,7 @@ import { useState } from "react";
 import { brochures, type Brochure } from "@/lib/brochures";
 import { useLanguage } from "@/components/LanguageProvider";
 import { getHreflangs, getCanonical, localizedPath } from "@/lib/routes";
+import { trackEvent } from "@/lib/analytics";
 
 const Catalogues = () => {
   const { t } = useTranslation("catalogs");
@@ -82,8 +83,8 @@ const Catalogues = () => {
                 </div>
                 <div className="pt-2">
                   <Button asChild>
-                    <a href={featured.pdfUrl} target="_blank" rel="noopener noreferrer">
-                      <Download className="w-4 h-4 mr-2" />{tc("buttons.downloadPdf")}
+                    <a href="/brochures/deepvac-standard-series-catalogue-2026.pdf" download onClick={() => trackEvent("brochure_download", { page: "catalogs" })}>
+                      <Download className="w-4 h-4 mr-2" />{tc("buttons.downloadBrochure")}
                     </a>
                   </Button>
                 </div>
@@ -123,14 +124,14 @@ const Catalogues = () => {
             <h3 className="text-base font-medium text-sand">{t("moreDocumentation.title")}</h3>
             <p className="text-sm text-gray max-w-lg mx-auto">{t("moreDocumentation.description")}</p>
             <Button asChild variant="outline" size="sm">
-              <Link to={localizedPath("/contact", lang)}>{tc("buttons.requestSpecificDocumentation")}</Link>
+              <Link to={localizedPath("/contact", lang)}>{tc("bookCall.heroCta")}</Link>
             </Button>
           </div>
         </Section>
 
         <CTABand title={t("cta.title")} description={t("cta.description")}>
           <Button asChild>
-            <Link to={localizedPath("/contact", lang)}>{tc("buttons.contactEngineering")}</Link>
+            <Link to={localizedPath("/contact", lang)}>{tc("bookCall.heroCta")}</Link>
           </Button>
         </CTABand>
       </PageShell>

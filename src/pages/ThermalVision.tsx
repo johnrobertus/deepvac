@@ -85,7 +85,7 @@ const ThermalVision = () => {
               className="font-mono text-xs tracking-wide w-full sm:w-auto"
             >
               <Link to={localizedPath("/contact", lang)}>
-                {tc("buttons.requestConsultation")}
+                {tc("bookCall.heroCta")}
               </Link>
             </Button>
           </div>
@@ -186,7 +186,7 @@ const ThermalVision = () => {
 
             <Button asChild variant="outline" className="group/btn">
               <Link to={localizedPath("/contact", lang)}>
-                {tc("buttons.talkToEngineer")}
+                {tc("bookCall.heroCta")}
                 <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover/btn:translate-x-1" />
               </Link>
             </Button>
