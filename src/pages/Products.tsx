@@ -11,6 +11,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { useLanguage } from "@/components/LanguageProvider";
 import { getHreflangs, getCanonical, localizedPath } from "@/lib/routes";
 import { buildBreadcrumbJsonLd } from "@/lib/jsonld";
+import { trackEvent } from "@/lib/analytics";
 import tseriesImg from "@/assets/product-tseries-chamber-glow.jpg";
 import cseriesImg from "@/assets/cseries-chamber.avif";
 import customImg from "@/assets/custom-chamber.avif";
@@ -100,7 +101,7 @@ const Products = () => {
               <Link to={localizedPath("/contact", lang)}>{tc("bookCall.heroCta")}</Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="font-mono text-xs tracking-wide w-full sm:w-auto">
-              <Link to={localizedPath("/catalogs", lang)}>{tc("buttons.downloadProductOverview")}</Link>
+              <a href="/brochures/deepvac-standard-series-catalogue-2026.pdf" download onClick={() => trackEvent("brochure_download", { page: "products" })}>{tc("buttons.downloadBrochure")}</a>
             </Button>
           </div>
         </PageHero>
