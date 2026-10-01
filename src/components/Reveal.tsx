@@ -1,4 +1,4 @@
-import { useEffect, useRef, ReactNode } from "react";
+import { useEffect, useLayoutEffect, useRef, ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
 interface RevealProps {
@@ -7,12 +7,31 @@ interface RevealProps {
   delay?: number;
 }
 
+// True until the first client-side navigation. During the initial page load,
+// elements already in the viewport show instantly (seamless prerender takeover).
+let initialLoad = true;
+export function markClientNavigation() {
+  initialLoad = false;
+}
+
 export function Reveal({ children, className, delay = 0 }: RevealProps) {
   const ref = useRef<HTMLDivElement>(null);
+  const shownInstantly = useRef(false);
+
+  useLayoutEffect(() => {
+    const el = ref.current;
+    if (!el || !initialLoad) return;
+    const r = el.getBoundingClientRect();
+    const inView = r.bottom > 0 && r.top < window.innerHeight && r.right > 0 && r.left < window.innerWidth;
+    if (!inView) return;
+    shownInstantly.current = true;
+    el.classList.add("visible", "reveal-instant");
+    requestAnimationFrame(() => requestAnimationFrame(() => el.classList.remove("reveal-instant")));
+  }, []);
 
   useEffect(() => {
     const el = ref.current;
-    if (!el) return;
+    if (!el || shownInstantly.current) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
