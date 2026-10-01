@@ -328,12 +328,12 @@ export function HeroSection() {
                       width={1200}
                       height={726}
                       alt="Institut für Technische Verbrennung"
-                      className="h-9 w-auto sm:h-[58px]"
+                      className="h-11 w-auto sm:h-[58px]"
                       style={{ filter: "brightness(0) invert(1)" }}
                     />
                   </a>
                   <span
-                    className="hidden h-[38px] w-px shrink-0 bg-white/18 sm:block"
+                    className="h-[38px] w-px shrink-0 bg-white/18"
                     aria-hidden="true"
                   />
                   <a
@@ -348,7 +348,7 @@ export function HeroSection() {
                       width={291}
                       height={84}
                       alt="Leibniz Universität Hannover"
-                      className="h-8 w-auto sm:h-[50px]"
+                      className="h-10 w-auto sm:h-[50px]"
                     />
                   </a>
                 </div>
