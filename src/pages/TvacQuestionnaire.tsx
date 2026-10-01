@@ -615,25 +615,25 @@ export default function TvacQuestionnaire() {
           <StepNote />
           <div className="space-y-6">
             <div className="space-y-2 max-w-md">
-              <MonoLabel>{t("s2.weight")}</MonoLabel>
-              <input inputMode="decimal" className={baseInput} placeholder={t("s2.weightPh")} value={form.dutWeight} onChange={(e) => set("dutWeight")(e.target.value)} />
+              <MonoLabel htmlFor="q-dut-weight">{t("s2.weight")}</MonoLabel>
+              <input id="q-dut-weight" inputMode="decimal" className={baseInput} placeholder={t("s2.weightPh")} value={form.dutWeight} onChange={(e) => set("dutWeight")(e.target.value)} />
             </div>
             <div className="space-y-3">
-              <MonoLabel>{t("s2.dutType")}</MonoLabel>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+              <MonoLabel as="span" id="q-dut-type-label">{t("s2.dutType")}</MonoLabel>
+              <div role="group" aria-labelledby="q-dut-type-label" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
                 {dutOpts.map((o, i) => (
                   <CheckItem key={o} label={o} checked={form.dutTypes[i]} onChange={() => toggleAt("dutTypes", i)} />
                 ))}
-                <OtherInput value={form.dutTypeOther} {...setOther("dutTypeOther")} placeholder={t("common.specify")} />
+                <OtherInput value={form.dutTypeOther} {...setOther("dutTypeOther")} placeholder={t("common.specify")} ariaLabel={`${t("s2.dutType")} — ${t("common.specify")}`} />
               </div>
             </div>
             <div className="space-y-3">
-              <MonoLabel>{t("s2.housing")}</MonoLabel>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+              <MonoLabel as="span" id="q-housing-label">{t("s2.housing")}</MonoLabel>
+              <div role="group" aria-labelledby="q-housing-label" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
                 {housingOpts.map((o, i) => (
                   <CheckItem key={o} label={o} checked={form.housing[i]} onChange={() => toggleAt("housing", i)} />
                 ))}
-                <OtherInput value={form.housingOther} {...setOther("housingOther")} placeholder={t("common.specify")} />
+                <OtherInput value={form.housingOther} {...setOther("housingOther")} placeholder={t("common.specify")} ariaLabel={`${t("s2.housing")} — ${t("common.specify")}`} />
               </div>
             </div>
           </div>
