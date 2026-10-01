@@ -163,7 +163,7 @@
   "services": {
     "eyebrow": "Technologie & Leistungen",
     "title": "Technologie & Leistungen über den gesamten TVAC-Lebenszyklus",
-    "description": "Jedes Deepvac-System vereint Kammerplattform, Thermalsystem und Vakuumtechnik in einer integrierten Architektur. Darauf aufbauend entwickelt Deepvac neue Kammersysteme, modernisiert Bestandsanlagen und hält Testinfrastruktur im Betrieb – von der Subsystem-Integration bis zum langfristigen Lifecycle-Support.",
+    "description": "Jedes Deepvac-System vereint Kammerplattform, Thermalsystem und Vakuumtechnik in einer integrierten Architektur. Darauf aufbauend entwickelt Deepvac neue Kammersysteme, modernisiert Bestandsanlagen und hält Testinfrastruktur im Betrieb.",
     "tech": [
       {
         "label": "Kerntechnologie",
@@ -217,7 +217,7 @@
   "whyDeepvac": {
     "eyebrow": "Warum Deepvac",
     "title": "Kammer, Steuerung und Service aus einer Hand",
-    "description": "Deepvac ist Systemanbieter: Kammerhardware, Thermalsystem, Vakuumtechnik und Steuerung stammen aus einer Entwicklung – mit einem verantwortlichen Engineering-Team von der Spezifikation bis zum laufenden Betrieb.",
+    "description": "Deepvac ist Systemanbieter: Kammerhardware, Thermalsystem, Vakuumtechnik und Steuerung stammen aus einer Entwicklung.",
     "items": [
       {
         "title": "Modulare Plattformen & Custom-Systeme",
@@ -228,8 +228,8 @@
         "description": "Projekte beginnen mit technischen Anforderungen, Systemarchitektur, Schnittstellendefinition und Integrationslogik für robuste, anwendungsspezifische Testumgebungen."
       },
       {
-        "title": "Steuerungstechnik aus eigener Entwicklung",
-        "description": "Die Steuerungs- und Automatisierungsarchitektur wird bei Deepvac selbst entwickelt – vollständig dokumentiert, anpassbar an Ihre Prüfabläufe und über den gesamten Systemlebenszyklus erweiterbar. Keine zugekaufte Blackbox."
+        "title": "Dokumentierte, anpassbare Steuerung",
+        "description": "Die Steuerungs- und Automatisierungsarchitektur ist vollständig dokumentiert, an Ihre Prüfabläufe anpassbar und über die gesamte Lebensdauer der Anlage erweiterbar. Keine zugekaufte Blackbox."
       },
       {
         "title": "Ausgelegt für Qualifikationsprüfungen",

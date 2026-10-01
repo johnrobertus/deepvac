@@ -1,1 +1,7 @@
 - Load EN/DE non-legal translations through per-language dynamic bundles and legal translations on legal routes only, so each visitor downloads only needed locale content.
+- Blog category pages are route-map entries resolved by src/lib/blogCategories.ts and rendered by one BlogCategory page; blog cards and the blog CTA band are shared components, so index and category pages stay identical.
+- Option detail meta descriptions come from the metaDescription field in products.json (app and static meta scripts), so head tags and static HTML match.
+- Routes live in one table in src/routes.tsx (lazyWithPreload components) rendered via useRoutes and preloaded in main.tsx before first render, so prerendered HTML is replaced without a blank fallback.
+- The homepage contact section is a lazy island (LazyContactSection) that loads near the viewport or on #contact, keeping the form out of the initial homepage bundle.
+- Production deploys run lint, vitest and scripts/check-dist.mjs (prerendered head, sitemaps, 404s, structured data) before upload, so broken output never reaches the server.
+- The grouped option catalog is shared by its overview and compact product-page placements, so category order and localized detail links remain consistent.

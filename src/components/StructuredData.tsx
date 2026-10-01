@@ -114,6 +114,7 @@ export function StructuredData() {
   const { t: tServices } = useTranslation("services");
   const { t: tBlog } = useTranslation("blog");
   const { t: tSeo } = useTranslation("seo");
+  const { t: tCommon } = useTranslation("common");
 
   const path = pathname.length > 1 ? pathname.replace(/\/+$/, "") : pathname;
   const canonical = getCanonical(path, lang);
@@ -142,7 +143,7 @@ export function StructuredData() {
 
     schemas.push(
       buildCollectionPage(
-        tProducts("overview.title") as string,
+        tCommon("nav.products") as string,
         tSeo("products.description") as string,
         canonical,
         lang,
@@ -152,7 +153,7 @@ export function StructuredData() {
         "@context": "https://schema.org",
         "@type": "ItemList",
         "@id": itemListId,
-        name: tProducts("overview.title") as string,
+        name: tCommon("nav.products") as string,
         itemListElement: productItems.map((item, index) => ({
           "@type": "ListItem",
           position: index + 1,
@@ -170,7 +171,7 @@ export function StructuredData() {
   if (matches("/services", "/de/leistungen")) {
     schemas.push(
       buildCollectionPage(
-        tServices("overview.title") as string,
+        tCommon("nav.services") as string,
         tSeo("services.description") as string,
         canonical,
         lang,
@@ -201,11 +202,15 @@ export function StructuredData() {
     schemas.push(
       buildCollectionPage(
         tBlog("blog.title") as string,
-        tBlog("blog.seo.description") as string,
+        tSeo("blog.description") as string,
         canonical,
         lang,
       ),
     );
+  }
+
+  if (matches("/references", "/de/referenzen")) {
+    schemas.push(buildCollectionPage(tCommon("nav.references") as string, tSeo("references.description") as string, canonical, lang));
   }
 
   if (matches("/products/standard-series", "/de/produkte/standard-serie")) {

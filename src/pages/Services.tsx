@@ -45,7 +45,7 @@ const Services = () => {
   const faqItems = t("overview.faq.items", { returnObjects: true }) as Array<{ q: string; a: string }>;
 
   const breadcrumbJsonLd = buildBreadcrumbJsonLd(
-    [{ name: t("overview.title") as string, enPath: "/services" }],
+    [{ name: tc("nav.services") as string, enPath: "/services" }],
     lang,
   );
 
@@ -64,7 +64,7 @@ const Services = () => {
       <PageShell>
         <PageHero
           eyebrow={t("overview.eyebrow")}
-          title={t("overview.title")}
+          title={tc("nav.services")}
           description={t("overview.description")}
         >
           <div className="flex flex-col sm:flex-row flex-wrap gap-3 pt-4">

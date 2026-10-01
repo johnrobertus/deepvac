@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import { Layout } from "@/components/Layout";
-import { PageShell, PageHero, Section } from "@/components/PageShell";
+import { PageShell, PageHero, eyebrowBreadcrumbs, Section } from "@/components/PageShell";
 import { Button } from "@/components/ui/button";
 import { TechChip } from "@/components/TechChip";
 import { ArrowRight, Shield, Thermometer, Cpu, RefreshCw } from "lucide-react";
@@ -75,6 +75,7 @@ const ThermalVision = () => {
         <PageHero
           className="pb-8 md:pb-12"
           eyebrow={t("thermalVision.eyebrow")}
+          breadcrumbs={eyebrowBreadcrumbs(t("thermalVision.eyebrow"), localizedPath("/products", lang))}
           title={t("thermalVision.title")}
           description={t("thermalVision.heroDescription")}
         >

@@ -2,7 +2,35 @@ import { cn } from "@/lib/utils";
 import { ReactNode, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { CalendarClock } from "lucide-react";
+import { Link } from "react-router-dom";
 import { BookCallDialog } from "@/components/BookCallDialog";
+
+export interface BreadcrumbItem {
+  label: string;
+  href?: string;
+}
+
+export interface BreadcrumbTrail {
+  items: BreadcrumbItem[];
+  /** Visible separator, kept identical to the eyebrow text it replaces. */
+  separator: string;
+  /** Whether the last item is the current page (aria-current). Defaults to true. */
+  lastIsCurrent?: boolean;
+}
+
+/**
+ * Turns a composite eyebrow such as "Products / Standard TVAC" into a breadcrumb
+ * trail with identical visible text: the first segment links to parentHref,
+ * the last is the current page.
+ */
+export function eyebrowBreadcrumbs(eyebrow: string, parentHref: string): BreadcrumbTrail | undefined {
+  const match = eyebrow.match(/^(.+?)\s+([/\-–])\s+(.+)$/);
+  if (!match) return undefined;
+  return {
+    separator: match[2],
+    items: [{ label: match[1], href: parentHref }, { label: match[3] }],
+  };
+}
 
 interface PageShellProps {
   children: ReactNode;
@@ -23,13 +51,39 @@ interface PageHeroProps {
   description?: string;
   children?: ReactNode;
   className?: string;
+  breadcrumbs?: BreadcrumbTrail;
 }
 
-export function PageHero({ eyebrow, title, description, children, className }: PageHeroProps) {
+export function PageHero({ eyebrow, title, description, children, className, breadcrumbs }: PageHeroProps) {
   return (
     <section className={cn("py-20 md:py-32 px-6", className)}>
       <div className="container max-w-5xl space-y-6">
-        {eyebrow && <span className="text-section-eyebrow">{eyebrow}</span>}
+        {breadcrumbs && breadcrumbs.items.length > 0 ? (
+          <nav aria-label="Breadcrumb">
+            <ol className="text-section-eyebrow flex flex-wrap items-center gap-x-[0.5ch]">
+              {breadcrumbs.items.map((item, i) => {
+                const isLast = i === breadcrumbs.items.length - 1;
+                return (
+                  <li key={`${item.label}-${i}`} className="inline-flex items-center gap-x-[0.5ch]">
+                    {isLast || !item.href ? (
+                      <span aria-current={isLast && breadcrumbs.lastIsCurrent !== false ? "page" : undefined}>{item.label}</span>
+                    ) : (
+                      <Link
+                        to={item.href}
+                        className="underline-offset-4 transition-colors hover:text-sand hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-sm"
+                      >
+                        {item.label}
+                      </Link>
+                    )}
+                    {!isLast && <span aria-hidden="true">{breadcrumbs.separator}</span>}
+                  </li>
+                );
+              })}
+            </ol>
+          </nav>
+        ) : (
+          eyebrow && <span className="text-section-eyebrow">{eyebrow}</span>
+        )}
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-sand">
           {title}
         </h1>

@@ -3,11 +3,12 @@ import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import { useLocation } from "react-router-dom";
 import { Layout } from "@/components/Layout";
-import { PageShell, PageHero, Section, CTABand } from "@/components/PageShell";
+import { PageShell, PageHero, eyebrowBreadcrumbs, Section, CTABand } from "@/components/PageShell";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Button } from "@/components/ui/button";
 import { TechChip } from "@/components/TechChip";
-import { ArrowRight, Maximize, Circle, Thermometer, Gauge, Cpu, Download, ClipboardList, Clock } from "lucide-react";
+import { OptionCatalogList } from "@/components/options/OptionCatalogList";
+import { ArrowRight, Maximize, Circle, Thermometer, Gauge, DoorOpen, Package, Satellite, Download, ClipboardList, Clock } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { useLanguage } from "@/components/LanguageProvider";
 import { getHreflangs, getCanonical, localizedPath } from "@/lib/routes";
@@ -22,15 +23,15 @@ const minTemp = `−190${NBSP}°C`;
 const tSeriesIcons = [
   <Maximize className="w-4 h-4" />,
   <Thermometer className="w-4 h-4" />,
-  <Gauge className="w-4 h-4" />,
-  <Cpu className="w-4 h-4" />,
+  <DoorOpen className="w-4 h-4" />,
+  <Package className="w-4 h-4" />,
 ];
 
 const cSeriesIcons = [
   <Circle className="w-4 h-4" />,
   <Thermometer className="w-4 h-4" />,
   <Gauge className="w-4 h-4" />,
-  <Cpu className="w-4 h-4" />,
+  <Satellite className="w-4 h-4" />,
 ];
 
 const StandardSeries = () => {
@@ -124,6 +125,7 @@ const StandardSeries = () => {
       <PageShell>
         <PageHero
           eyebrow={t("standardSeries.eyebrow")}
+          breadcrumbs={eyebrowBreadcrumbs(t("standardSeries.eyebrow"), localizedPath("/products", lang))}
           title={t("standardSeries.title")}
           description={t("standardSeries.description")}
         >
@@ -282,7 +284,11 @@ const StandardSeries = () => {
               </Link>
             </Button>
           </div>
-          <p className="mt-4 text-[13px] text-gray">
+          <div className="mt-12">
+            <SectionHeader eyebrow={t("options.catalog.eyebrow")} title={t("options.catalog.title")} description={t("options.catalog.hint")} className="mb-10" />
+            <OptionCatalogList compact />
+          </div>
+          <p className="mt-6 text-[13px] text-gray">
             <Link
               to={localizedPath("/products/options", lang)}
               className="inline-flex items-center gap-1 text-blue hover:text-sand underline underline-offset-4 transition-colors"

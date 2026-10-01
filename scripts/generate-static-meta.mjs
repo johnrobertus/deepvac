@@ -59,7 +59,7 @@ function optionSeo(slug, lang) {
 
   return {
     title: `${item.name} | Deepvac`,
-    description: item.description.replace("{{link}}", item.linkLabel ?? ""),
+    description: item.metaDescription ?? item.description.replace("{{link}}", item.linkLabel ?? ""),
   };
 }
 

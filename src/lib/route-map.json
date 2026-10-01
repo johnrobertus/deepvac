@@ -607,6 +607,70 @@
     }
   },
   {
+    "en": "/resources/blog/category/fundamentals",
+    "de": "/de/ressourcen/blog/kategorie/grundlagen",
+    "seoKey": "blogCategoryBasics",
+    "sitemap": {
+      "group": "resources",
+      "priority": 0.5,
+      "changefreq": "weekly",
+      "sources": [
+        "src/pages/BlogCategory.tsx",
+        "src/content/blog",
+        "src/i18n/locales/en/blog.json",
+        "src/i18n/locales/de/blog.json"
+      ]
+    }
+  },
+  {
+    "en": "/resources/blog/category/engineering-guide",
+    "de": "/de/ressourcen/blog/kategorie/engineering-leitfaden",
+    "seoKey": "blogCategoryEngineeringGuide",
+    "sitemap": {
+      "group": "resources",
+      "priority": 0.5,
+      "changefreq": "weekly",
+      "sources": [
+        "src/pages/BlogCategory.tsx",
+        "src/content/blog",
+        "src/i18n/locales/en/blog.json",
+        "src/i18n/locales/de/blog.json"
+      ]
+    }
+  },
+  {
+    "en": "/resources/blog/category/applications",
+    "de": "/de/ressourcen/blog/kategorie/anwendungen",
+    "seoKey": "blogCategoryApplications",
+    "sitemap": {
+      "group": "resources",
+      "priority": 0.5,
+      "changefreq": "weekly",
+      "sources": [
+        "src/pages/BlogCategory.tsx",
+        "src/content/blog",
+        "src/i18n/locales/en/blog.json",
+        "src/i18n/locales/de/blog.json"
+      ]
+    }
+  },
+  {
+    "en": "/resources/blog/category/decision-support",
+    "de": "/de/ressourcen/blog/kategorie/entscheidungshilfen",
+    "seoKey": "blogCategoryDecisionSupport",
+    "sitemap": {
+      "group": "resources",
+      "priority": 0.5,
+      "changefreq": "weekly",
+      "sources": [
+        "src/pages/BlogCategory.tsx",
+        "src/content/blog",
+        "src/i18n/locales/en/blog.json",
+        "src/i18n/locales/de/blog.json"
+      ]
+    }
+  },
+  {
     "en": "/resources/blog/cooling-systems",
     "de": "/de/ressourcen/blog/kuehlsysteme",
     "seoKey": "blogCoolingSystems",
@@ -988,7 +1052,9 @@
       "group": "resources",
       "priority": 0.55,
       "changefreq": "monthly",
-      "sources": ["src/content/blog"]
+      "sources": [
+        "src/content/blog"
+      ]
     }
   },
   {
@@ -999,7 +1065,9 @@
       "group": "resources",
       "priority": 0.55,
       "changefreq": "monthly",
-      "sources": ["src/content/blog"]
+      "sources": [
+        "src/content/blog"
+      ]
     }
   },
   {

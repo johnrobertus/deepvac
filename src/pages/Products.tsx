@@ -73,7 +73,7 @@ const Products = () => {
   };
 
   const breadcrumbJsonLd = buildBreadcrumbJsonLd(
-    [{ name: t("overview.title") as string, enPath: "/products" }],
+    [{ name: tc("nav.products") as string, enPath: "/products" }],
     lang,
   );
 
@@ -93,7 +93,7 @@ const Products = () => {
       <PageShell>
         <PageHero
           eyebrow={t("overview.eyebrow")}
-          title={t("overview.title")}
+          title={tc("nav.products")}
           description={t("overview.description")}
         >
           <div className="flex flex-col sm:flex-row flex-wrap gap-3 pt-4">
@@ -246,9 +246,6 @@ const Products = () => {
             </Link>
           </Button>
           <Button asChild variant="outline" size="lg" className="font-mono text-xs tracking-wide">
-            <Link to={localizedPath("/contact", lang)}>{tc("bookCall.heroCta")}</Link>
-          </Button>
-          <Button asChild variant="ghost" size="lg" className="font-mono text-xs tracking-wide text-gray hover:text-sand">
             <Link to={localizedPath("/contact", lang)}>{tc("bookCall.heroCta")}</Link>
           </Button>
         </CTABand>

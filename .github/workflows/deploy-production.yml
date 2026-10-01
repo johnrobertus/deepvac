@@ -6,13 +6,21 @@ on:
       - main
   workflow_dispatch:
 
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
 
     steps:
       - name: Checkout
         uses: actions/checkout@v5
+        with:
+          # Full history: the sitemap generator derives lastmod from git dates.
+          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v5
@@ -23,14 +31,20 @@ jobs:
       - name: Install dependencies
         run: npm install --legacy-peer-deps
 
+      - name: Lint
+        run: npm run lint
+
+      - name: Unit tests
+        run: npm test
+
       - name: Install Playwright Chromium
         run: npx playwright install --with-deps chromium
 
       - name: Build
         run: npm run build
 
-      - name: Verify build output
-        run: test -f dist/index.html
+      - name: Check build output
+        run: npm run check:dist
 
       - name: Package artifact
         run: tar -czf release.tar.gz -C dist .
@@ -52,33 +66,91 @@ jobs:
 
       - name: Deploy release
         run: |
-          ssh -p "${{ secrets.DEPLOY_PORT }}" "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}" "
-            set -euo pipefail
-            APP_DIR=/var/www/deepvac
-            RELEASE_DIR=\$APP_DIR/releases/${{ github.sha }}
-            ARTIFACT=/tmp/release-${{ github.sha }}.tar.gz
+          ssh -p "${{ secrets.DEPLOY_PORT }}" "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}" 'bash -s' <<'REMOTE'
+          set -euo pipefail
+          APP_DIR=/var/www/deepvac
+          RELEASE_DIR="$APP_DIR/releases/${{ github.sha }}"
+          ARTIFACT="/tmp/release-${{ github.sha }}.tar.gz"
 
-            mkdir -p \$RELEASE_DIR
+          mkdir -p "$RELEASE_DIR"
+          tar -xzf "$ARTIFACT" -C "$RELEASE_DIR"
+          rm -f "$ARTIFACT"
 
-            if [ -L \$APP_DIR/current ]; then
-              CURRENT_TARGET=\$(readlink -f \$APP_DIR/current)
-              ln -sfn \$CURRENT_TARGET \$APP_DIR/previous
+          # 1. Check the release before it goes live. On failure nothing is switched.
+          for f in index.html de/index.html 404.html de/404.html healthz robots.txt sitemap.xml; do
+            if [ ! -s "$RELEASE_DIR/$f" ]; then
+              echo "Release check failed: $f is missing. Nothing was switched."
+              exit 1
             fi
+          done
+          if ! grep -qi '<html' "$RELEASE_DIR/index.html"; then
+            echo "Release check failed: index.html is not HTML. Nothing was switched."
+            exit 1
+          fi
 
-            tar -xzf \$ARTIFACT -C \$RELEASE_DIR
-            test -f \$RELEASE_DIR/index.html
+          # 2. Remember the live release as previous.
+          if [ -L "$APP_DIR/current" ]; then
+            LIVE=$(readlink -f "$APP_DIR/current")
+            if [ "$LIVE" != "$RELEASE_DIR" ]; then
+              ln -sfn "$LIVE" "$APP_DIR/previous.tmp"
+              mv -Tf "$APP_DIR/previous.tmp" "$APP_DIR/previous"
+            fi
+          fi
 
-            ln -sfn \$RELEASE_DIR \$APP_DIR/current
-            rm -f \$ARTIFACT
+          # 3. Switch atomically.
+          ln -sfn "$RELEASE_DIR" "$APP_DIR/current.tmp"
+          mv -Tf "$APP_DIR/current.tmp" "$APP_DIR/current"
+          echo "Live: $RELEASE_DIR"
 
-            ls -1dt \$APP_DIR/releases/* | tail -n +6 | xargs -r rm -rf
-          "
+          # 4. Keep the five newest releases. Never delete the live or the previous release.
+          KEEP_PREVIOUS=$(readlink -f "$APP_DIR/previous" 2>/dev/null || true)
+          ls -1dt "$APP_DIR"/releases/* | tail -n +6 | while read -r dir; do
+            if [ "$dir" != "$RELEASE_DIR" ] && [ "$dir" != "$KEEP_PREVIOUS" ]; then
+              rm -rf "$dir"
+            fi
+          done
+          REMOTE
 
       - name: Smoke test
+        id: smoke
         run: |
-          curl -fsS https://deepvac.space/healthz
-          curl -fsS https://deepvac.space/ | grep -qi "<html"
+          ASSET=$(grep -o '/assets/index-[^"]*\.js' dist/index.html | head -n 1 || true)
+          fail=0
+          check() {
+            url="$1"
+            expect="$2"
+            for attempt in 1 2 3 4 5; do
+              if curl -fsS --max-time 15 "$url" | grep -qF -- "$expect"; then
+                echo "ok   $url"
+                return 0
+              fi
+              sleep 3
+            done
+            echo "FAIL $url (expected to contain: $expect)"
+            return 1
+          }
+          check "https://deepvac.space/healthz" "ok" || fail=1
+          check "https://deepvac.space/" "${ASSET:-<html}" || fail=1
+          check "https://deepvac.space/de" "<html" || fail=1
+          check "https://deepvac.space/products" "<html" || fail=1
+          check "https://deepvac.space/contact" "<html" || fail=1
+          exit $fail
 
-
-
-
+      - name: Roll back after failed smoke test
+        if: failure() && steps.smoke.outcome == 'failure'
+        run: |
+          ssh -p "${{ secrets.DEPLOY_PORT }}" "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}" 'bash -s' <<'REMOTE'
+          set -euo pipefail
+          APP_DIR=/var/www/deepvac
+          if [ ! -L "$APP_DIR/previous" ]; then
+            echo "No previous release found. Manual action needed."
+            exit 1
+          fi
+          TARGET=$(readlink -f "$APP_DIR/previous")
+          ln -sfn "$TARGET" "$APP_DIR/current.tmp"
+          mv -Tf "$APP_DIR/current.tmp" "$APP_DIR/current"
+          echo "Rolled back to $TARGET"
+          REMOTE
+          curl -fsS --max-time 15 https://deepvac.space/healthz
+          echo "The new release failed the smoke test and was rolled back automatically."
+          exit 1
