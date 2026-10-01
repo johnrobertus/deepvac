@@ -6,6 +6,10 @@ import johnPhoto from "@/assets/john-robertus.jpg";
 import antonPhoto from "@/assets/anton-opalikhin.jpg";
 
 const teamPhotos = [johnPhoto, antonPhoto];
+const teamPhotoSizes = [
+  { width: 1260, height: 1280 },
+  { width: 960, height: 1280 },
+];
 const photoPositions = ["50% 18%", "50% 16%"];
 const photoScales = [1.23, 1.05];
 const linkedinUrls = ["", ""];
@@ -33,6 +37,8 @@ export function TeamSection() {
                 <div className="aspect-[4/5] overflow-hidden bg-black">
                   <img
                     src={teamPhotos[i]}
+                    width={teamPhotoSizes[i]?.width}
+                    height={teamPhotoSizes[i]?.height}
                     alt={member.name}
                     className="h-full w-full object-cover"
                     loading="lazy"

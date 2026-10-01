@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import { useLocation } from "react-router-dom";
 import { Layout } from "@/components/Layout";
-import { PageShell, PageHero, Section, CTABand } from "@/components/PageShell";
+import { PageShell, PageHero, eyebrowBreadcrumbs, Section, CTABand } from "@/components/PageShell";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Button } from "@/components/ui/button";
 import { TechChip } from "@/components/TechChip";
@@ -124,6 +124,7 @@ const StandardSeries = () => {
       <PageShell>
         <PageHero
           eyebrow={t("standardSeries.eyebrow")}
+          breadcrumbs={eyebrowBreadcrumbs(t("standardSeries.eyebrow"), localizedPath("/products", lang))}
           title={t("standardSeries.title")}
           description={t("standardSeries.description")}
         >

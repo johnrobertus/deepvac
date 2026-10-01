@@ -379,15 +379,27 @@
   }
 
   /* Scroll reveal */
+  /* Visible by default (prerender, print, no-JS); hidden start state only once JS runs. */
   .reveal {
+    transition: opacity 0.6s var(--ease-industrial), transform 0.6s var(--ease-industrial);
+  }
+
+  html.js-reveal .reveal:not(.visible) {
     opacity: 0;
     transform: translateY(16px);
-    transition: opacity 0.6s var(--ease-industrial), transform 0.6s var(--ease-industrial);
   }
 
   .reveal.visible {
     opacity: 1;
     transform: translateY(0);
+  }
+
+  @media print {
+    .reveal {
+      opacity: 1 !important;
+      transform: none !important;
+      transition: none !important;
+    }
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -446,6 +458,10 @@
 
   .hero-cta-row { padding-top: 0.25rem; }
   .hero-chips { padding-top: 0.25rem; }
+  /* Below 640px: chips read as one compact line of mono text, not buttons. */
+  @media (max-width: 639px) {
+    .hero-chip { padding: 0 !important; }
+  }
 
   .hero-chip {
     padding: 0.5rem 0.875rem;

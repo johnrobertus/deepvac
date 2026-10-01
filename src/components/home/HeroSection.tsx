@@ -107,6 +107,9 @@ export function HeroSection() {
   useEffect(() => {
     if (reducedMotion) return;
     if (typeof window === "undefined") return;
+    // Mobile / data-saver: posters only, never mount the videos.
+    const conn = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection;
+    if (!window.matchMedia("(min-width: 768px)").matches || conn?.saveData === true) return;
 
     let handle: number | null = null;
     let timeout: number | null = null;
@@ -294,12 +297,12 @@ export function HeroSection() {
               </Reveal>
 
               <Reveal delay={250}>
-                <div className="hero-chips flex flex-col gap-2 sm:flex-row sm:flex-wrap">
+                <div className="hero-chips flex flex-row flex-wrap gap-x-3 gap-y-1 sm:gap-2">
                   {Array.isArray(cues) &&
                     cues.map((cue) => (
                       <span
                         key={cue}
-                        className="hero-chip inline-flex w-full items-center gap-1.5 rounded-sm border border-sand/30 bg-background/40 font-mono uppercase tracking-widest text-sand/90 backdrop-blur-sm sm:w-auto"
+                        className="hero-chip inline-flex items-center gap-1.5 font-mono uppercase tracking-widest text-sand/90 sm:rounded-sm sm:border sm:border-sand/30 sm:bg-background/40 sm:backdrop-blur-sm"
                       >
                         <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-blue/80" />
                         {cue}
@@ -322,6 +325,8 @@ export function HeroSection() {
                   >
                     <img
                       src={itvLogo}
+                      width={1200}
+                      height={726}
                       alt="Institut für Technische Verbrennung"
                       className="h-11 w-auto sm:h-[58px]"
                       style={{ filter: "brightness(0) invert(1)" }}
@@ -340,6 +345,8 @@ export function HeroSection() {
                   >
                     <img
                       src={luhLogo}
+                      width={291}
+                      height={84}
                       alt="Leibniz Universität Hannover"
                       className="h-10 w-auto sm:h-[50px]"
                     />
@@ -354,6 +361,8 @@ export function HeroSection() {
                 <div className="hero-funding-card rounded-2xl border border-white/[0.08] bg-white/[0.07] backdrop-blur-md">
                   <img
                     src={i18n.language === "de" ? existFundingHeroDe : existFundingHeroEn}
+                    width={i18n.language === "de" ? 768 : 1600}
+                    height={i18n.language === "de" ? 376 : 907}
                     alt={
                       i18n.language === "de"
                         ? "Gefördert durch Bundesministerium für Wirtschaft und Energie, Europäische Union, EXIST"
