@@ -397,7 +397,7 @@
       "title": "TVAC Automation: What a Modern Chamber Control System Does",
       "description": "Recipe execution, safety interlocks, data logging, alarming and remote access: why reproducible TVAC testing is above all a controls property.",
       "seoTitle": "TVAC Automation: PLC Control and Recipes | Deepvac",
-      "seoDescription": "What a modern TVAC control system does: recipe execution, safety interlocks, data logging, alarming and remote monitoring – plus controls retrofit for old.",
+      "seoDescription": "What a modern TVAC control system does: recipe execution, safety interlocks, data logging, alarms, remote monitoring – and retrofit for legacy chambers.",
       "intro": "A TVAC control system coordinates pumping, thermal conditioning, data acquisition, alarms and protective functions. Recipe execution can automate ramps, dwells and cycles, but unattended operation is acceptable only when the risk assessment, independent limits, safe states, alarm escalation and facility rules support it. The controls architecture should make every commanded and protective action traceable in the test record.",
       "sections": [
         {
