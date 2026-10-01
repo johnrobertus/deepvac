@@ -52,7 +52,6 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     const targetPath = getAlternatePath(pathname, targetLang);
     try {
       await Promise.all([loadLanguage(targetLang), ...(isLegalPath(targetPath) ? [ensureLegal(targetLang)] : [])]);
-      await i18n.changeLanguage(targetLang);
       navigate(targetPath);
     } catch (error) {
       console.error("Translation loading failed:", error);
