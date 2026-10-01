@@ -70,7 +70,7 @@ function ServicePageTemplate({ seoKey, nsKey, heroImage, children }: ServicePage
         <PageHero eyebrow={t(`${nsKey}.eyebrow`)} title={t(`${nsKey}.title`)} description={t(`${nsKey}.description`)}>
           <div className="flex flex-col sm:flex-row flex-wrap gap-3 pt-4">
             <Button asChild size="lg" className="font-mono text-xs tracking-wide w-full sm:w-auto">
-              <Link to={contactHref}>{tc("buttons.discussRequirements")}</Link>
+              <Link to={contactHref}>{tc("bookCall.heroCta")}</Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="font-mono text-xs tracking-wide w-full sm:w-auto">
               <Link to={localizedPath("/services", lang)}>{tc("buttons.allServices")}</Link>
@@ -140,10 +140,10 @@ function ServicePageTemplate({ seoKey, nsKey, heroImage, children }: ServicePage
 
         <CTABand title={t(`${nsKey}.ctaTitle`)} description={t(`${nsKey}.ctaDescription`)}>
           <Button asChild size="lg" className="font-mono text-xs tracking-wide">
-            <Link to={contactHref}>{tc("buttons.talkToEngineer")}</Link>
+            <Link to={contactHref}>{tc("bookCall.heroCta")}</Link>
           </Button>
           <Button asChild variant="outline" size="lg" className="font-mono text-xs tracking-wide">
-            <Link to={contactHref}>{tc("buttons.requestQuote")}</Link>
+            <Link to={contactHref}>{tc("bookCall.heroCta")}</Link>
           </Button>
         </CTABand>
       </PageShell>

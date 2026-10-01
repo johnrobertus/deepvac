@@ -11,6 +11,7 @@ import { ArrowRight, Maximize, Circle, Thermometer, Gauge, Cpu, Download, Clipbo
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { useLanguage } from "@/components/LanguageProvider";
 import { getHreflangs, getCanonical, localizedPath } from "@/lib/routes";
+import { trackEvent } from "@/lib/analytics";
 import tseriesImg from "@/assets/product-tseries-chamber.avif";
 import cseriesImg from "@/assets/cseries-chamber.avif";
 
@@ -128,10 +129,10 @@ const StandardSeries = () => {
         >
           <div className="flex flex-col sm:flex-row flex-wrap gap-3 pt-4">
             <Button asChild size="lg" className="font-mono text-xs tracking-wide w-full sm:w-auto">
-              <Link to={localizedPath("/contact", lang)}>{tc("buttons.requestTechnicalDetails")}</Link>
+              <Link to={localizedPath("/contact", lang)}>{tc("bookCall.heroCta")}</Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="font-mono text-xs tracking-wide w-full sm:w-auto">
-              <Link to={localizedPath("/catalogs", lang)}>{tc("buttons.downloadBrochure")}</Link>
+              <a href="/brochures/deepvac-standard-series-catalogue-2026.pdf" download onClick={() => trackEvent("brochure_download", { page: "standard-series" })}>{tc("buttons.downloadBrochure")}</a>
             </Button>
           </div>
           <div className="flex flex-wrap gap-2 pt-4">
@@ -165,7 +166,7 @@ const StandardSeries = () => {
                 {tFeatures.map((f, i) => (
                   <div key={f.label} className="bento-card rounded-lg p-4 space-y-2">
                     <div className="text-blue">{tSeriesIcons[i]}</div>
-                    <h4 className="text-card-title">{f.label}</h4>
+                     <h3 className="text-card-title">{f.label}</h3>
                     <p className="text-card-body">{f.detail.replace("{{vacuum}}", vacuum).replace("{{minTemp}}", minTemp)}</p>
                   </div>
                 ))}
@@ -200,7 +201,7 @@ const StandardSeries = () => {
                 {cFeatures.map((f, i) => (
                   <div key={f.label} className="bento-card rounded-lg p-4 space-y-2">
                     <div className="text-blue">{cSeriesIcons[i]}</div>
-                    <h4 className="text-card-title">{f.label}</h4>
+                     <h3 className="text-card-title">{f.label}</h3>
                     <p className="text-card-body">{f.detail.replace("{{vacuum}}", vacuum).replace("{{minTemp}}", minTemp)}</p>
                   </div>
                 ))}
@@ -219,7 +220,7 @@ const StandardSeries = () => {
             description={t("standardSeries.techData.description")}
             className="mb-10"
           />
-          <div className="overflow-x-auto rounded-lg border border-gray/15">
+           <div tabIndex={0} role="region" aria-label={t("standardSeries.techData.title")} className="overflow-x-auto rounded-lg border border-gray/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
             <table className="w-full min-w-[720px] text-left">
               <thead>
                 <tr className="border-b border-gray/15 bg-surface">
@@ -343,9 +344,9 @@ const StandardSeries = () => {
               <p className="text-body">{t("standardSeries.brochure.description")}</p>
               <div className="pt-2">
                 <Button asChild className="font-mono text-xs tracking-wide">
-                  <a href="/brochures/deepvac-standard-series-catalogue-2026.pdf" target="_blank" rel="noopener noreferrer">
+                   <a href="/brochures/deepvac-standard-series-catalogue-2026.pdf" download onClick={() => trackEvent("brochure_download", { page: "standard-series" })}>
                     <Download className="w-4 h-4 mr-2" />
-                    {tc("buttons.downloadPdf")}
+                     {tc("buttons.downloadBrochure")}
                   </a>
                 </Button>
               </div>
@@ -370,11 +371,11 @@ const StandardSeries = () => {
           <Button asChild size="lg" className="font-mono text-xs tracking-wide">
             <Link to={localizedPath("/tvac-questionnaire", lang)}>
               <ClipboardList className="w-4 h-4 mr-2" />
-              {tc("cta.questionnaire.configureCustomVariant")}
+              {tc("nav.configureTvac")}
             </Link>
           </Button>
           <Button asChild variant="outline" size="lg" className="font-mono text-xs tracking-wide">
-            <Link to={`${localizedPath("/contact", lang)}?interest=standard-series`}>{tc("buttons.requestQuote")}</Link>
+            <Link to={`${localizedPath("/contact", lang)}?interest=standard-series`}>{tc("bookCall.heroCta")}</Link>
           </Button>
         </CTABand>
         <p className="container mx-auto px-6 -mt-6 mb-12 flex items-start gap-1.5 text-card-meta text-gray/85 max-w-2xl">

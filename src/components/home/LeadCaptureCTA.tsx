@@ -23,12 +23,12 @@ export function LeadCaptureCTA() {
             <p className="mx-auto mt-4 max-w-2xl text-body">{t("home:leadCapture.description")}</p>
             <div className="flex flex-wrap justify-center gap-4 pt-4">
               <Button asChild size="lg" className="font-mono text-xs tracking-wide">
-                <Link to={contactPath}>{t("common:buttons.requestConsultation")}</Link>
+                <Link to={contactPath}>{t("common:bookCall.heroCta")}</Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="font-mono text-xs tracking-wide border-blue/40 text-sand hover:bg-blue/10">
                 <Link to={questionnairePath}>
                   <ClipboardList className="w-4 h-4 mr-2" />
-                  {t("common:cta.questionnaire.configure")}
+                  {t("common:nav.configureTvac")}
                 </Link>
               </Button>
             </div>

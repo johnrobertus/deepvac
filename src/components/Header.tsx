@@ -382,7 +382,7 @@ export function Header() {
 
         <button
           type="button"
-          className="rounded-sm text-sand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background lg:hidden"
+          className="inline-flex h-11 w-11 items-center justify-center -mr-3 rounded-sm text-sand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background lg:hidden"
           onClick={() => setMobileOpen((prev) => !prev)}
           aria-expanded={mobileOpen}
           aria-label={mobileOpen ? "Close navigation" : "Open navigation"}
@@ -392,7 +392,7 @@ export function Header() {
       </div>
 
       {mobileOpen && (
-        <div className="max-h-[calc(100vh-4rem)] overflow-y-auto border-t border-gray/10 bg-surface lg:hidden animate-fade-in">
+        <div className="h-[calc(100dvh-4rem)] overflow-y-auto border-t border-gray/10 bg-surface lg:hidden animate-fade-in">
           <div className="container-wide space-y-6 py-6">
             <MobileSection label={t("nav.products")} items={productsMenu} pathname={pathname} lang={lang} t={t} />
             <MobileSection label={t("nav.engineering")} items={servicesMenu} pathname={pathname} lang={lang} t={t} />

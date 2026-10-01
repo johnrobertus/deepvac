@@ -234,7 +234,7 @@ export function BlogArticlePage({
         >
           <Button asChild>
             <Link to={localizedPath("/contact", lang)}>
-              {tc("buttons.contactEngineering")}
+              {tc("bookCall.heroCta")}
             </Link>
           </Button>
         </CTABand>

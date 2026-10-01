@@ -213,7 +213,7 @@ const Careers = () => {
               <a href="mailto:info@deepvac.space?subject=Careers%20at%20Deepvac">{tc("buttons.emailUs")}</a>
             </Button>
             <Button asChild variant="outline">
-              <Link to={localizedPath("/contact", lang)}>{tc("buttons.contactPage")}</Link>
+              <Link to={localizedPath("/contact", lang)}>{tc("bookCall.heroCta")}</Link>
             </Button>
           </div>
         </CTABand>

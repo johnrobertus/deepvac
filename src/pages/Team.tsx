@@ -101,7 +101,7 @@ const Team = () => {
                       <h3 className="text-lg font-medium text-sand">{member.name}</h3>
                       <span className="mono-label text-blue">{member.role}</span>
                     </div>
-                    <a href="https://www.linkedin.com/company/deepvac-gmbh/" target="_blank" rel="noopener noreferrer" className="text-gray hover:text-blue transition-colors" aria-label={`${member.name} LinkedIn`}>
+                    <a href="https://www.linkedin.com/company/deepvac-gmbh/" target="_blank" rel="noopener noreferrer" className="inline-flex h-11 w-11 items-center justify-center text-gray hover:text-blue transition-colors" aria-label={`${member.name} LinkedIn`}>
                       <Linkedin className="w-4 h-4" />
                     </a>
                   </div>
@@ -155,7 +155,7 @@ const Team = () => {
 
         <CTABand title={t("cta.title")} description={t("cta.description")}>
           <Button asChild>
-            <Link to={localizedPath("/contact", lang)}>{tc("buttons.requestConsultation")}</Link>
+            <Link to={localizedPath("/contact", lang)}>{tc("bookCall.heroCta")}</Link>
           </Button>
           <Button asChild variant="outline">
             <Link to={localizedPath("/careers", lang)}>{tc("buttons.viewOpenPositions")}</Link>

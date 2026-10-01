@@ -390,7 +390,7 @@ const Contact = () => {
                   </div>
                 </div>
                 <Button className="w-full" onClick={() => setBookCallOpen(true)}>
-                  {tc("bookCall.cardButton")}
+                  {tc("bookCall.talkToSales")}
                   <CalendarClock className="h-4 w-4 ml-2" aria-hidden="true" />
                 </Button>
                 <BookCallDialog open={bookCallOpen} onOpenChange={setBookCallOpen} />

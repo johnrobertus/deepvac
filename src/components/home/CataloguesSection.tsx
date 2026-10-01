@@ -7,6 +7,7 @@ import { Download } from "lucide-react";
 import { getFeaturedBrochure } from "@/lib/brochures";
 import { useLanguage } from "@/components/LanguageProvider";
 import { localizedPath } from "@/lib/routes";
+import { trackEvent } from "@/lib/analytics";
 
 export function CataloguesSection() {
   const { t } = useTranslation(["home", "common"]);
@@ -38,9 +39,9 @@ export function CataloguesSection() {
 
                 <div className="pt-2">
                   <Button asChild>
-                    <a href={featured.pdfUrl} target="_blank" rel="noopener noreferrer">
+                    <a href="/brochures/deepvac-standard-series-catalogue-2026.pdf" download onClick={() => trackEvent("brochure_download", { page: "home" })}>
                       <Download className="w-4 h-4 mr-2" />
-                      {t("common:buttons.downloadPdf")}
+                      {t("common:buttons.downloadBrochure")}
                     </a>
                   </Button>
                 </div>
