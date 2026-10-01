@@ -214,13 +214,82 @@ async function logInquiry(
   }
 }
 
-Deno.serve(async (req) => {
+const FUNCTION_VERSION = "send-inquiry 2026-10-01";
+const STATIC_ALLOWED_ORIGINS = new Set([
+  "https://deepvac.space",
+  "https://www.deepvac.space",
+  "http://localhost:8080",
+  "http://localhost:5173",
+]);
+
+function isAllowedOrigin(origin: string): boolean {
+  if (STATIC_ALLOWED_ORIGINS.has(origin)) return true;
+  const extra = (Deno.env.get("ALLOWED_ORIGINS") || "")
+    .split(",").map((o) => o.trim()).filter(Boolean);
+  if (extra.includes(origin)) return true;
+  try {
+    const u = new URL(origin);
+    if (u.protocol === "https:" &&
+      (u.hostname.endsWith(".lovable.app") || u.hostname.endsWith(".lovableproject.com"))) {
+      return true;
+    }
+  } catch { /* invalid origin */ }
+  return false;
+}
+
+function withHeaders(req: Request, res: Response): Response {
+  const headers = new Headers(res.headers);
+  const origin = req.headers.get("origin");
+  if (origin) {
+    if (isAllowedOrigin(origin)) headers.set("Access-Control-Allow-Origin", origin);
+    else headers.delete("Access-Control-Allow-Origin");
+  }
+  headers.append("Vary", "Origin");
+  headers.set("x-deepvac-function-version", FUNCTION_VERSION);
+  return new Response(res.body, { status: res.status, statusText: res.statusText, headers });
+}
+
+function getClientIp(req: Request): string {
+  return req.headers.get("cf-connecting-ip")?.trim() ||
+    req.headers.get("x-real-ip")?.trim() ||
+    req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
+    "unknown";
+}
+
+async function checkRateLimitDb(
+  supabaseAdmin: ReturnType<typeof createClient>,
+  ip: string,
+): Promise<{ allowed: boolean; reason?: string }> {
+  try {
+    const count = async (sinceMs: number) => {
+      const { count, error } = await supabaseAdmin
+        .from("inquiry_logs")
+        .select("id", { count: "exact", head: true })
+        .eq("ip_address", ip)
+        .gte("created_at", new Date(Date.now() - sinceMs).toISOString())
+        .or("source.is.null,source.not.like.healthcheck*");
+      if (error) throw error;
+      return count ?? 0;
+    };
+    const [recent, daily] = await Promise.all([count(10 * 60 * 1000), count(24 * 60 * 60 * 1000)]);
+    if (recent >= 5) return { allowed: false, reason: "rate_limit_10min" };
+    if (daily >= 20) return { allowed: false, reason: "rate_limit_daily" };
+    return { allowed: true };
+  } catch (err) {
+    console.error("DB rate limit failed, using in-memory fallback:", err);
+    return checkRateLimit(ip);
+  }
+}
+
+Deno.serve(async (req) => withHeaders(req, await handle(req)));
+
+async function handle(req: Request): Promise<Response> {
+  console.log(FUNCTION_VERSION);
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
   }
 
-  const ip = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
-    req.headers.get("cf-connecting-ip") || "unknown";
+  const ip = getClientIp(req);
   const userAgent = req.headers.get("user-agent") || "unknown";
 
   const supabaseAdmin = createClient(
@@ -263,7 +332,7 @@ Deno.serve(async (req) => {
     }
 
     // 2. RATE LIMITING
-    const rateCheck = checkRateLimit(ip);
+    const rateCheck = await checkRateLimitDb(supabaseAdmin, ip);
     if (!rateCheck.allowed) {
       await logInquiry(supabaseAdmin, {
         ip_address: ip, user_agent: userAgent,
@@ -453,7 +522,7 @@ Deno.serve(async (req) => {
 
     await logInquiry(supabaseAdmin, {
       ip_address: ip, user_agent: userAgent,
-      status: "success", reason: null,
+      status: "success", reason: data.turnstileToken ? null : "no_turnstile_token",
       email: email, payload_hash: payloadHash, source,
     });
 
@@ -473,7 +542,7 @@ Deno.serve(async (req) => {
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     );
   }
-});
+}
 
 // ============================================================
 // QUESTIONNAIRE HANDLER
@@ -500,7 +569,7 @@ async function handleQuestionnaire(
   }
 
   // 2. RATE LIMITING
-  const rateCheck = checkRateLimit(ip);
+  const rateCheck = await checkRateLimitDb(supabaseAdmin, ip);
   if (!rateCheck.allowed) {
     await logInquiry(supabaseAdmin, {
       ip_address: ip, user_agent: userAgent,
@@ -627,7 +696,7 @@ async function handleQuestionnaire(
   await logInquiry(supabaseAdmin, {
     ip_address: ip, user_agent: userAgent,
 
-    status: "success", reason: null,
+    status: "success", reason: payload.turnstileToken ? null : "no_turnstile_token",
     email, payload_hash: payloadHash, source,
   });
 
