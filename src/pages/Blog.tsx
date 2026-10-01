@@ -15,6 +15,7 @@ const CATEGORY_ORDER = ["basics", "engineeringGuide", "applications", "decisionS
 const Blog = () => {
   const { t } = useTranslation("blog");
   const { t: tc } = useTranslation("common");
+  const { t: tSeo } = useTranslation("seo");
   const { lang } = useLanguage();
   const { pathname } = useLocation();
   const hreflangs = getHreflangs(pathname);
@@ -51,8 +52,8 @@ const Blog = () => {
     <Layout>
       <Helmet>
         <html lang={lang} />
-        <title>{t("blog.seo.title")}</title>
-        <meta name="description" content={t("blog.seo.description")} />
+        <title>{tSeo("blog.title")}</title>
+        <meta name="description" content={tSeo("blog.description")} />
         <link rel="canonical" href={canonical} />
         {hreflangs.map((h) => (
           <link key={h.lang} rel="alternate" hrefLang={h.lang} href={h.href} />

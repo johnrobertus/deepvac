@@ -5,10 +5,6 @@
     "description": "Technische Orientierung, Entscheidungshilfen und Engineering-Betrachtungen für Thermalvakuumsysteme.",
     "readArticle": "Artikel lesen",
     "backToBlog": "Zurück zum Blog",
-    "seo": {
-      "title": "Engineering Blog | Deepvac",
-      "description": "Technische Orientierung zu TVAC-Grundlagen, Engineering-Entscheidungen, Anwendungen, Qualifikationsprüfungen und Beschaffung."
-    },
     "categories": {
       "basics": "Grundlagen",
       "engineeringGuide": "Engineering-Leitfaden",
