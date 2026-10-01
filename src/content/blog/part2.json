@@ -198,6 +198,7 @@
     "datePublished": "2025-08-19",
     "relatedPaths": [
       "/products/options/temperature-sensors",
+      "/products/options/temperature-control-zones",
       "/services/control-systems-design",
       "/products/options/process-connections"
     ],
@@ -424,7 +425,10 @@
     "relatedPaths": [
       "/products/standard-series",
       "/services/subsystem-integration",
-      "/tvac-questionnaire"
+      "/tvac-questionnaire",
+      "/products/options/water-cooling",
+      "/products/options/vibration-isolation",
+      "/products/options/nitrogen-venting"
     ],
     "relatedArticles": [
       "tvacChamberSizing",
