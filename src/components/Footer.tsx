@@ -75,7 +75,7 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-[1.35fr_repeat(3,minmax(0,1fr))]">
           <div className="space-y-5">
             <Link to={lp("/")} className="inline-flex items-center" aria-label="Deepvac home">
-              <img src={deepvacLogo} alt="Deepvac" className="h-6 w-auto" />
+              <img src={deepvacLogo} alt="Deepvac" width={1983} height={402} className="h-6 w-auto" />
             </Link>
 
             <p className="max-w-sm text-[15px] leading-relaxed text-gray">{t("footer.description")}</p>
@@ -152,6 +152,8 @@ export function Footer() {
               >
                 <img
                   src={itvLogo}
+                  width={1200}
+                  height={726}
                   alt="Institut für Technische Verbrennung"
                   className="h-14 w-auto sm:h-[72px]"
                   style={{ filter: "brightness(0) invert(1)" }}
@@ -167,6 +169,8 @@ export function Footer() {
               >
                 <img
                   src={luhLogo}
+                  width={291}
+                  height={84}
                   alt="Leibniz Universität Hannover"
                   className="h-12 w-auto sm:h-[66px]"
                 />

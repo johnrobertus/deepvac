@@ -112,6 +112,19 @@ function startServer() {
   });
 }
 
+// ---------- js-reveal removal ----------
+/** Static HTML must always show Reveal content: drop the JS-only class from <html>. */
+function stripJsReveal(html) {
+  return html.replace(/<html\b[^>]*>/i, (tag) =>
+    tag
+      .replace(/\bclass\s*=\s*(["'])(.*?)\1/i, (_m, q, cls) => {
+        const rest = cls.split(/\s+/).filter((c) => c && c !== "js-reveal").join(" ");
+        return rest ? `class=${q}${rest}${q}` : "";
+      })
+      .replace(/\s+>/, ">"),
+  );
+}
+
 // ---------- JSON-LD de-duplication ----------
 /** Drop JSON-LD blocks identical (after parse/stringify) to another; prefer data-rh copies. Malformed blocks stay. */
 function dedupeJsonLd(html) {
@@ -277,6 +290,7 @@ async function prerenderOne(page, route, lang, seoEn, seoDe) {
   html = normalizeHead(html, meta);
   html = stripTurnstileScripts(html);
   html = dedupeJsonLd(html);
+  html = stripJsReveal(html);
 
   const outFile = routeOutputPath(routePath);
   fs.mkdirSync(path.dirname(outFile), { recursive: true });
@@ -294,7 +308,7 @@ async function prerenderNotFound(page, lang, seo) {
     { timeout: NAV_TIMEOUT_MS },
   );
   await page.waitForTimeout(SETTLE_MS);
-  const html = dedupeJsonLd(stripTurnstileScripts(cleanNotFoundHead(setHtmlLang(await page.content(), lang), seo.notFound)));
+  const html = stripJsReveal(dedupeJsonLd(stripTurnstileScripts(cleanNotFoundHead(setHtmlLang(await page.content(), lang), seo.notFound))));
   const outFile = path.join(DIST, ...(lang === "de" ? ["de"] : []), "404.html");
   fs.mkdirSync(path.dirname(outFile), { recursive: true });
   fs.writeFileSync(outFile, html);

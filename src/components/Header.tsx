@@ -292,7 +292,7 @@ export function Header() {
           className="flex items-center rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           aria-label="Deepvac home"
         >
-          <img src={deepvacLogo} alt="Deepvac" className="h-7 w-auto" />
+          <img src={deepvacLogo} alt="Deepvac" width={1983} height={402} className="h-7 w-auto" />
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex" aria-label="Primary navigation">

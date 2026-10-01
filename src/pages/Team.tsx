@@ -13,8 +13,8 @@ import johnPhoto from "@/assets/john-robertus.jpg";
 import antonPhoto from "@/assets/anton-opalikhin.jpg";
 
 const founderPhotos = [
-  { photo: johnPhoto, photoPosition: "50% 18%", photoScale: 1.23 },
-  { photo: antonPhoto, photoPosition: "50% 16%", photoScale: 1.03 },
+  { photo: johnPhoto, width: 1260, height: 1280, photoPosition: "50% 18%", photoScale: 1.23 },
+  { photo: antonPhoto, width: 960, height: 1280, photoPosition: "50% 16%", photoScale: 1.03 },
 ];
 
 const philosophyIcons = [Settings, Cpu, Users];
@@ -85,6 +85,8 @@ const Team = () => {
                 <div className="aspect-[4/5] overflow-hidden bg-black">
                   <img
                     src={founderPhotos[i].photo}
+                    width={founderPhotos[i].width}
+                    height={founderPhotos[i].height}
                     alt={`${member.name} | ${member.role}`}
                     loading="lazy"
                     className="w-full h-full object-cover"

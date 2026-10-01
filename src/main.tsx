@@ -8,6 +8,9 @@ import i18n, { loadLanguage } from "./i18n";
 import { getLangFromPath } from "./lib/routes";
 import { initPlausible } from "./lib/plausible";
 
+// Reveal start state only applies when JS runs (see .reveal in index.css).
+document.documentElement.classList.add("js-reveal");
+
 const lang = getLangFromPath(window.location.pathname);
 loadLanguage(lang)
   .then(() => i18n.changeLanguage(lang))
