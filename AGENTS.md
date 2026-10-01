@@ -1,2 +1,3 @@
-- Load EN/DE non-legal translations through per-language dynamic bundles and legal translations on legal routes only, so each visitor downloads only needed locale content.- Blog category pages are route-map entries resolved by src/lib/blogCategories.ts and rendered by one BlogCategory page; blog cards and the blog CTA band are shared components, so index and category pages stay identical.
+- Load EN/DE non-legal translations through per-language dynamic bundles and legal translations on legal routes only, so each visitor downloads only needed locale content.
+- Blog category pages are route-map entries resolved by src/lib/blogCategories.ts and rendered by one BlogCategory page; blog cards and the blog CTA band are shared components, so index and category pages stay identical.
 - Option detail meta descriptions come from the metaDescription field in products.json (app and static meta scripts), so head tags and static HTML match.
