@@ -61,7 +61,7 @@ export function ConsentMap({ height = "h-44", mapUrl = DEFAULT_MAP_URL }: Consen
   }
 
   return (
-    <div className={`${height} bg-surface flex flex-col items-center justify-center px-6 text-center`}>
+    <div className="min-h-44 py-6 bg-surface flex flex-col items-center justify-center px-6 text-center">
       <MapPin className="w-5 h-5 text-blue mb-3" />
       <p className="text-card-meta mb-1.5">Deepvac GmbH · An der Universität 1 · 30823 Garbsen · Germany</p>
       <button onClick={handleCopy} className="inline-flex items-center gap-1 text-[13px] text-gray/80 hover:text-gray/85 transition-colors mb-4 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring rounded-sm px-1">
