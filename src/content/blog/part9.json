@@ -1,0 +1,305 @@
+[
+  {
+    "articleKey": "bakeOutCampaignPlanning",
+    "enSlug": "bake-out-campaign-planning",
+    "deSlug": "ausheizkampagne-planen",
+    "category": "engineeringGuide",
+    "datePublished": "2026-10-29",
+    "dateModified": "2026-10-29",
+    "seoKey": "blogBakeOutCampaignPlanning",
+    "relatedPaths": [
+      "/products/options/bake-out",
+      "/products/options/qcm-monitoring",
+      "/products/options/residual-gas-analysis"
+    ],
+    "relatedArticles": [
+      "outgassingBasics",
+      "contaminationControl",
+      "tvacTestCampaign"
+    ],
+    "searchIntent": {
+      "en": {
+        "primaryKeyword": "thermal vacuum bake-out",
+        "primaryQuestion": "How are bake-out parameters derived from cleanliness requirements?"
+      },
+      "de": {
+        "primaryKeyword": "Ausheizen Thermalvakuum",
+        "primaryQuestion": "Wie werden Ausheizparameter aus Sauberkeitsanforderungen abgeleitet?"
+      }
+    },
+    "references": [
+      {
+        "title": "ECSS-Q-ST-70-01C Rev.1: Cleanliness and contamination control (15 October 2025)",
+        "publisher": "European Cooperation for Space Standardization (ECSS)",
+        "url": "https://ecss.nl/standard/ecss-q-st-70-01c-cleanliness-and-contamination-control-15-october-2025/"
+      },
+      {
+        "title": "ECSS-Q-ST-70-02C: Thermal vacuum outgassing test for the screening of space materials (15 November 2008)",
+        "publisher": "European Cooperation for Space Standardization (ECSS)",
+        "url": "https://ecss.nl/standard/ecss-q-st-70-02c-thermal-vacuum-outgassing-test-for-the-screening-of-space-materials/"
+      },
+      {
+        "title": "ASTM E2900: Standard Practice for Spacecraft Hardware Thermal Vacuum Bakeout (current edition E2900-24)",
+        "publisher": "ASTM International",
+        "url": "https://store.astm.org/e2900-19.html"
+      },
+      {
+        "title": "Bake-out option: heated chamber walls for TVAC chambers",
+        "publisher": "Deepvac GmbH",
+        "url": "https://deepvac.space/products/options/bake-out"
+      }
+    ],
+    "technicalNote": {
+      "en": "Standards are summarised here for orientation. The contract, the verification plan, the project contamination control plan and any project-specific tailoring remain binding for bake-out temperatures, durations and termination criteria. Where Deepvac chamber options are referenced, they describe reference configurations; binding values depend on chamber size, pumping and thermal concept, test set-up and the quotation.",
+      "de": "Die Normen sind hier zur Orientierung zusammengefasst. Verbindlich für Ausheiztemperaturen, Dauern und Beendigungskriterien bleiben Vertrag, Verifikationsplan, projektspezifischer Kontaminationskontrollplan und jedes projektspezifische Tailoring. Soweit auf Deepvac-Kammeroptionen verwiesen wird, beschreiben diese Referenzkonfigurationen; verbindliche Werte hängen von Kammergröße, Pump- und Thermalkonzept, Testaufbau und Angebot ab."
+    },
+    "en": {
+      "title": "Bake-Out Campaign Planning: Temperature, Duration, TQCM Criteria and Exit Conditions",
+      "description": "How bake-out temperature, duration, TQCM rate criteria and exit conditions for space hardware are derived from a contamination budget, and which chamber set-up and records make the result defensible.",
+      "seoTitle": "Bake-Out Campaign Planning for Space Hardware | Deepvac",
+      "seoDescription": "Derive bake-out temperature, duration and TQCM exit criteria from the contamination budget, set up the chamber correctly and document a defensible bake-out.",
+      "intro": "A thermal vacuum bake-out is often specified as a temperature and a number of hours, copied from a previous project. That approach says little about whether the hardware will meet its molecular cleanliness requirement once it is in orbit. This article asks how bake-out parameters and termination criteria can be derived from the cleanliness requirements themselves. The answer takes the form of a chain: the contamination budget defines an allowable outgassing rate, the hardware limits define the temperature, a quartz crystal microbalance turns the allowable rate into a measurable exit criterion, and a planned cool-down and record set make the result defensible to the customer and to the next integration step.",
+      "sections": [
+        {
+          "title": "Start from the contamination budget, not from a temperature",
+          "content": "ECSS-Q-ST-70-01C Rev.1 requires cleanliness requirements to be established for contamination-sensitive items and allocated over the product life, from manufacturing and test through launch to end of life. For molecular contamination, the critical figure is the deposit that a sensitive surface, such as an optical element, a radiator or a detector window, can accept before its performance degrades. That end-of-life allowance is shared between ground phases and the in-orbit phase, where the outgassing of the item itself and of its neighbours deposits on cold surfaces.",
+          "content2": "A bake-out is justified when the in-orbit share of that budget would otherwise be exceeded. The planning question is therefore quantitative: which outgassing rate, at the item's in-orbit temperature and view factor to the sensitive surface, still fits the allocation? Only once that rate is known can a termination criterion be written that means something. Without it, a bake-out is a heating exercise whose benefit cannot be demonstrated.",
+          "bulletsHeading": "Inputs to collect before planning",
+          "bullets": [
+            "Contamination-sensitive surfaces, their operating temperatures and their molecular deposit allowance at end of life",
+            "Share of the budget allocated to in-orbit outgassing of the item under consideration",
+            "Geometric relationship between item and sensitive surface: line of sight, vents, view factor",
+            "Material list with screening data (TML, RML, CVCM) and known high-outgassing parts",
+            "Whether the item is baked alone, as a subassembly or at system level"
+          ]
+        },
+        {
+          "title": "Selecting the bake-out temperature",
+          "content": "Outgassing of absorbed water and of volatile organic species is thermally activated, so the desorption rate rises roughly exponentially with temperature. A higher bake-out temperature shortens the campaign substantially, but the ceiling is set by the most temperature-sensitive component, not by the chamber. Adhesives, potting compounds, batteries, optical coatings, detectors, lubricants and parts with mismatched thermal expansion usually define the maximum allowable non-operating temperature.",
+          "content2": "The practical rule is to bake above the highest temperature the item will see in orbit, so that species which would outgas in service are driven off on the ground, while keeping a margin below the qualified non-operating limit of the weakest part. ECSS-Q-ST-70-02C screens materials at 125 °C for 24 hours, which is a useful reference point for material behaviour, but it is not a bake-out specification for assembled hardware. The temperature applies to the hardware, not to the shroud or heater set point, and gradients during heating must stay within what the structure tolerates.",
+          "bulletsHeading": "Temperature definition checklist",
+          "bullets": [
+            "Lowest qualified non-operating limit across all parts, including connectors, harness and labels",
+            "Margin between bake-out temperature and that limit, agreed with the design authority",
+            "Maximum in-orbit temperature of the item, which the bake-out should exceed",
+            "Control sensor location on the hardware and acceptable spread between sensors",
+            "Allowed heating and cooling rates and maximum spatial gradient"
+          ]
+        },
+        {
+          "title": "Configuring the chamber so it is cleaner than the hardware",
+          "content": "A bake-out only works if the outgassed species leave the item and are trapped or pumped, rather than redepositing on it. That requires a chamber whose own background is low: the empty chamber, fixtures and ground support equipment are baked first in a background run, and the QCM signal recorded during that run becomes the reference against which the item is judged. Oil-free pumping avoids introducing hydrocarbons from the pump side.",
+          "content2": "The chamber walls should be at least as warm as the item during the hot phase, while a dedicated cold surface acts as a scavenger: a cold plate, a cryo-trap or an LN₂-cooled panel that collects condensable species. The QCM is placed where it views the item but not the heaters directly, at a crystal temperature chosen for the species of concern. Witness plates in the same position give an independent, analysable deposit.",
+          "bulletsHeading": "Set-up points to verify",
+          "bullets": [
+            "Background bake of empty chamber and fixtures with recorded QCM baseline",
+            "Chamber walls not colder than the item during the hot phase",
+            "Scavenger surface or cryo-trap colder than every other surface in the chamber",
+            "QCM and witness plate line of sight to the item, shielded from heater radiation",
+            "Bagging, gloves and handling materials qualified for low outgassing",
+            "Venting gas specified as dry GN₂ with defined purity"
+          ]
+        },
+        {
+          "title": "Why duration and pressure alone are weak criteria",
+          "content": "ASTM E2900, the standard practice for spacecraft hardware thermal vacuum bakeout, distinguishes a method based on prescribed time and pressure from methods based on QCM measurements. The time and pressure approach is simple to specify and to execute, and it is appropriate when the contamination requirement is moderate. Its limitation is that chamber pressure is not species-specific.",
+          "content2": "In a baked chamber, the residual gas is typically dominated by water and, later, hydrogen. A falling pressure therefore shows that water is leaving the system, but it says little about the low-vapour-pressure organic species, such as siloxanes or plasticisers, that actually condense on optics. Pressure also contains contributions from the chamber walls, fixtures and any leak, so the same pressure can correspond to very different item cleanliness. A fixed duration, in turn, either wastes days when the item is clean early or ends before a contaminated item has reached the required rate. Duration remains useful as a minimum, not as the sole exit condition.",
+          "bulletsHeading": "When time and pressure may be sufficient",
+          "bullets": [
+            "Items without contamination-sensitive surfaces in their field of view",
+            "Hardware whose materials all show low CVCM in screening tests",
+            "Pre-conditioning before a later, QCM-controlled system-level bake-out",
+            "Combined with an RGA scan at the end to confirm absence of heavy organic fragments"
+          ]
+        },
+        {
+          "title": "Deriving a TQCM rate criterion",
+          "content": "A quartz crystal microbalance detects deposited mass through the shift of its resonant frequency; for thin, rigid films the frequency change is proportional to areal mass, so a rate in Hz per hour converts to a mass flux per unit area via the crystal's sensitivity factor. A temperature-controlled QCM (TQCM) holds the crystal at a defined temperature, which determines which species condense. The crystal is usually set at or below the temperature of the sensitive surface it represents, so that what sticks to the crystal would also stick to the optics.",
+          "content2": "The exit criterion is then a deposition rate, corrected for the view factor between item and crystal, that corresponds to the allowable in-orbit outgassing derived in the first step. It must be sustained over a defined window, not touched once. ASTM E2900 describes both a criterion based on the stabilisation of the QCM rate and a measured deposition rate approach; which one applies, and the numerical threshold, remain the responsibility of the user organisation.",
+          "bulletsHeading": "Elements of a rate criterion",
+          "bullets": [
+            "Crystal temperature and its tolerance, linked to the sensitive surface",
+            "Threshold rate in Hz/h with the conversion to mass flux and the view factor used",
+            "Averaging interval and number of consecutive intervals below threshold",
+            "Subtraction of chamber background measured in the empty run",
+            "Treatment of crystal temperature drift and reference crystal compensation",
+            "Optional QCM thermogravimetric analysis at the end to identify deposit volatility"
+          ]
+        },
+        {
+          "title": "Exit conditions, cool-down and abort rules",
+          "content": "The exit condition is a logical combination written into the procedure before the test: hardware at temperature for at least the minimum duration, QCM rate below threshold for the defined window, and, where required, an RGA scan without significant organic fragments at higher mass numbers. Siloxane contamination, for example, appears as characteristic fragment ions, while a dominant 18 peak shows water. Meeting the condition is a recorded event with a time stamp and the responsible signature.",
+          "content2": "Cool-down is the most common place where a good bake-out is lost. If the item cools faster than the surrounding surfaces, it becomes the coldest object in the chamber and collects what has just been driven off. The scavenger surface must stay colder than the item until the item has reached ambient temperature, and the QCM should keep recording. Venting follows only after that, with dry GN₂, and the item is bagged without delay.",
+          "bulletsHeading": "Rules to fix in the procedure",
+          "bullets": [
+            "Order of cool-down: heaters off first, scavenger and cryo-trap cold until item is at ambient",
+            "Venting rate and gas, and time limit to bagging after door opening",
+            "Abort criteria: overtemperature, pressure rise, loss of power or pumping, QCM failure",
+            "Safe-state behaviour of the chamber control system for each abort case",
+            "Restart rules: whether elapsed time counts after an interruption"
+          ]
+        },
+        {
+          "title": "Records that make the bake-out defensible",
+          "content": "A bake-out is evidence for the cleanliness verification, so its records have to allow a third party to reconstruct what happened. ECSS-Q-ST-70-01C Rev.1 places the cleanliness and contamination control activities inside a controlled plan, and ASTM E2900 expects deviations from the defined times, temperatures and configurations to be documented in the bakeout report.",
+          "content2": "In practice, the report links the derivation of the criteria to the measured data. It contains the temperature profiles of all hardware sensors, the pressure history, QCM frequency and crystal temperature data, background run results, RGA spectra at start and end, and the analysis of witness plates, for example by gravimetry or infrared spectroscopy. Any nonconformance, such as a heater failure or an aborted cool-down, is recorded with its disposition. This record set also makes the next bake-out of similar hardware faster to plan.",
+          "bulletsHeading": "Minimum content of the bake-out report",
+          "bullets": [
+            "Reference to the contamination budget and the derivation of the rate threshold",
+            "As-run configuration: fixtures, sensor map, QCM and witness plate positions",
+            "Time-aligned temperature, pressure and QCM data for background run and bake-out",
+            "Time stamp at which the exit condition was met, with supporting data",
+            "Witness plate and RGA results, deviations and nonconformance dispositions"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "How are bake-out parameters derived from cleanliness requirements?",
+          "a": "The starting point is the molecular deposit that each contamination-sensitive surface may accept at end of life, as allocated in the contamination budget. The in-orbit share of that allowance defines a maximum outgassing rate for the item. The bake-out temperature is then chosen above the maximum in-orbit temperature and below the weakest component's non-operating limit, and the allowable rate is converted into a QCM deposition rate threshold that must be held over a defined window."
+        },
+        {
+          "q": "Why is chamber pressure not a good exit criterion on its own?",
+          "a": "Pressure in a heated vacuum chamber is mostly water and, later, hydrogen, and it includes contributions from the chamber walls, fixtures and possible leaks. It does not distinguish the low-vapour-pressure organic species that condense on optics and radiators. A low pressure can therefore coexist with an outgassing rate that still violates the budget. Pressure is useful as a supporting parameter and as a safety limit, but a QCM rate or an RGA check is needed to judge molecular cleanliness."
+        },
+        {
+          "q": "What temperature should the TQCM crystal have during a bake-out?",
+          "a": "The crystal should represent the surface that must be protected. It is usually set at or below the in-orbit temperature of that sensitive surface, so that species which would condense there also condense on the crystal. A colder crystal collects more species and gives a more conservative result. The chosen temperature and its tolerance are written into the procedure, because a drifting crystal temperature changes both the sticking behaviour and the frequency baseline."
+        },
+        {
+          "q": "Can a bake-out be combined with a thermal vacuum test?",
+          "a": "It is common to place a bake-out phase at the start or end of a thermal vacuum test to save chamber time. This works when the hot plateau of the test does not exceed the bake-out temperature limits and the chamber configuration includes the scavenger surface and QCM. The combination has to be planned explicitly, because thermal test cycling and cool-down sequences can redeposit contamination on the item if the order of cold surfaces is not controlled."
+        },
+        {
+          "q": "Does ECSS-Q-ST-70-02C define how flight hardware is baked out?",
+          "a": "No. ECSS-Q-ST-70-02C is a material screening test: small samples are held at 125 °C in vacuum for 24 hours and the total mass loss, recovered mass loss and collected volatile condensable material are determined on a collector held at 25 °C. The results support material selection and help predict which parts of an assembly will dominate outgassing. The bake-out of assembled hardware is planned from the project's cleanliness requirements and practices such as ASTM E2900."
+        }
+      ],
+      "conclusion": "A bake-out becomes a verification step rather than a ritual when its parameters are traced back to the contamination budget. The temperature follows from the in-orbit maximum and the weakest component; the exit criterion follows from the allowable outgassing rate, measured by a TQCM at a representative crystal temperature and corrected for chamber background. A controlled cool-down protects the result, and a complete record set lets customers, auditors and the next integration step rely on it."
+    },
+    "de": {
+      "title": "Ausheizkampagne planen: Temperatur, Dauer, TQCM-Kriterien und Endbedingungen",
+      "description": "Wie Ausheiztemperatur, Dauer, TQCM-Ratenkriterien und Endbedingungen für Raumfahrt-Hardware aus dem Kontaminationsbudget abgeleitet werden und welcher Kammeraufbau und welche Nachweise das Ergebnis belastbar machen.",
+      "seoTitle": "Ausheizkampagne für Raumfahrt-Hardware planen | Deepvac",
+      "seoDescription": "Ausheiztemperatur, Dauer und TQCM-Endkriterien aus dem Kontaminationsbudget ableiten, die Kammer richtig konfigurieren und das Ausheizen sauber dokumentieren.",
+      "intro": "Ein Ausheizen im Thermalvakuum wird oft als Temperatur und Stundenzahl festgelegt, übernommen aus einem früheren Projekt. Ob die Hardware damit im Orbit ihre Anforderung an die molekulare Sauberkeit erfüllt, bleibt offen. Dieser Artikel zeigt, wie sich Ausheizparameter und Beendigungskriterien aus den Sauberkeitsanforderungen selbst ableiten lassen. Die Antwort ist eine Kette: Das Kontaminationsbudget legt eine zulässige Ausgasrate fest, die Grenzwerte der Hardware bestimmen die Temperatur, eine Quarzkristall-Mikrowaage übersetzt die zulässige Rate in ein messbares Endkriterium, und ein geplanter Abkühlablauf sowie vollständige Aufzeichnungen machen das Ergebnis gegenüber Auftraggeber und nächstem Integrationsschritt belastbar.",
+      "sections": [
+        {
+          "title": "Vom Kontaminationsbudget ausgehen, nicht von einer Temperatur",
+          "content": "ECSS-Q-ST-70-01C Rev.1 verlangt, dass für kontaminationsempfindliche Produkte Sauberkeitsanforderungen festgelegt und über den gesamten Lebenszyklus verteilt werden, von Fertigung und Test über den Start bis zum Missionsende. Für molekulare Kontamination ist die entscheidende Größe der Niederschlag, den eine empfindliche Oberfläche wie ein optisches Element, ein Radiator oder ein Detektorfenster aufnehmen darf, bevor ihre Leistung nachlässt. Dieses Budget teilt sich auf Bodenphasen und die Orbitphase auf, in der das Ausgasen des Prüflings und seiner Nachbarn auf kalten Flächen kondensiert.",
+          "content2": "Ein Ausheizen ist gerechtfertigt, wenn der Orbitanteil dieses Budgets sonst überschritten würde. Die Planungsfrage ist daher quantitativ: Welche Ausgasrate bei der Orbittemperatur des Prüflings und seinem Sichtfaktor zur empfindlichen Fläche passt noch in die Zuteilung? Erst wenn diese Rate bekannt ist, lässt sich ein aussagekräftiges Endkriterium formulieren. Ohne sie bleibt das Ausheizen ein Heizvorgang, dessen Nutzen sich nicht nachweisen lässt.",
+          "bulletsHeading": "Eingangsdaten vor der Planung",
+          "bullets": [
+            "Kontaminationsempfindliche Flächen, ihre Betriebstemperaturen und ihr zulässiger molekularer Niederschlag am Missionsende",
+            "Anteil des Budgets, der dem Ausgasen des betrachteten Prüflings im Orbit zugeordnet ist",
+            "Geometrische Beziehung zwischen Prüfling und empfindlicher Fläche: Sichtlinie, Entlüftungen, Sichtfaktor",
+            "Materialliste mit Screeningdaten (TML, RML, CVCM) und bekannten stark ausgasenden Teilen",
+            "Ob der Prüfling einzeln, als Baugruppe oder auf Systemebene ausgeheizt wird"
+          ]
+        },
+        {
+          "title": "Die Ausheiztemperatur festlegen",
+          "content": "Das Ausgasen von absorbiertem Wasser und flüchtigen organischen Stoffen ist thermisch aktiviert; die Desorptionsrate steigt näherungsweise exponentiell mit der Temperatur. Eine höhere Ausheiztemperatur verkürzt die Kampagne deutlich, die Obergrenze setzt jedoch das temperaturempfindlichste Bauteil, nicht die Kammer. Klebstoffe, Vergussmassen, Batterien, optische Beschichtungen, Detektoren, Schmierstoffe und Teile mit unterschiedlicher Wärmeausdehnung bestimmen meist die maximal zulässige Temperatur im ausgeschalteten Zustand.",
+          "content2": "Die praktische Regel lautet: oberhalb der höchsten Orbittemperatur des Prüflings ausheizen, damit Stoffe, die im Betrieb ausgasen würden, bereits am Boden ausgetrieben werden, und dabei einen Abstand zur qualifizierten Nicht-Betriebsgrenze des schwächsten Teils halten. ECSS-Q-ST-70-02C prüft Werkstoffe bei 125 °C über 24 Stunden; das ist ein nützlicher Bezugspunkt für das Materialverhalten, aber keine Ausheizvorgabe für montierte Hardware. Die Temperatur gilt für die Hardware, nicht für Shroud oder Heizer-Sollwert, und Gradienten beim Aufheizen müssen innerhalb dessen bleiben, was die Struktur verträgt.",
+          "bulletsHeading": "Prüfpunkte zur Temperaturdefinition",
+          "bullets": [
+            "Niedrigste qualifizierte Nicht-Betriebsgrenze aller Teile, einschließlich Steckverbinder, Kabelbaum und Etiketten",
+            "Mit der Designverantwortung abgestimmter Abstand zwischen Ausheiztemperatur und dieser Grenze",
+            "Höchste Orbittemperatur des Prüflings, die das Ausheizen überschreiten soll",
+            "Lage des Regelsensors auf der Hardware und zulässige Streuung zwischen den Sensoren",
+            "Zulässige Aufheiz- und Abkühlraten sowie maximaler räumlicher Gradient"
+          ]
+        },
+        {
+          "title": "Die Kammer sauberer machen als die Hardware",
+          "content": "Ausheizen wirkt nur, wenn die ausgegasten Stoffe den Prüfling verlassen und abgepumpt oder ausgefroren werden, statt sich wieder auf ihm niederzuschlagen. Dazu braucht es eine Kammer mit niedrigem Eigenuntergrund: Leere Kammer, Vorrichtungen und Bodenausrüstung werden zuerst in einem Leerlauf ausgeheizt, und das dabei aufgezeichnete QCM-Signal dient als Referenz für die Bewertung des Prüflings. Ölfreies Pumpen verhindert, dass von der Pumpenseite Kohlenwasserstoffe eingetragen werden.",
+          "content2": "Die Kammerwände sollten in der Heißphase mindestens so warm sein wie der Prüfling, während eine eigene kalte Fläche als Fänger dient: eine Kühlplatte, eine Kryofalle oder ein LN₂-gekühltes Paneel, das kondensierbare Stoffe sammelt. Die QCM wird so platziert, dass sie den Prüfling sieht, nicht aber direkt die Heizer, und ihre Kristalltemperatur richtet sich nach den relevanten Stoffen. Witness-Platten an derselben Position liefern einen unabhängigen, analysierbaren Niederschlag.",
+          "bulletsHeading": "Zu prüfende Aufbaupunkte",
+          "bullets": [
+            "Leerlauf-Ausheizen von Kammer und Vorrichtungen mit aufgezeichneter QCM-Basislinie",
+            "Kammerwände in der Heißphase nicht kälter als der Prüfling",
+            "Fängerfläche oder Kryofalle kälter als jede andere Fläche in der Kammer",
+            "Sichtlinie von QCM und Witness-Platte zum Prüfling, abgeschirmt gegen Heizerstrahlung",
+            "Verpackung, Handschuhe und Handhabungsmaterial für geringe Ausgasung qualifiziert",
+            "Belüftungsgas als trockenes GN₂ mit definierter Reinheit festgelegt"
+          ]
+        },
+        {
+          "title": "Warum Dauer und Druck allein schwache Kriterien sind",
+          "content": "ASTM E2900, die Standardpraxis für das thermische Vakuumausheizen von Raumfahrzeug-Hardware, unterscheidet eine Methode mit vorgegebener Zeit und vorgegebenem Druck von Methoden auf Basis von QCM-Messungen. Der Ansatz über Zeit und Druck ist einfach festzulegen und durchzuführen und passt bei moderaten Kontaminationsanforderungen. Seine Grenze liegt darin, dass der Kammerdruck nicht stoffspezifisch ist.",
+          "content2": "In einer ausgeheizten Kammer besteht das Restgas typischerweise überwiegend aus Wasser und später aus Wasserstoff. Ein fallender Druck zeigt daher, dass Wasser das System verlässt, sagt aber wenig über organische Stoffe mit niedrigem Dampfdruck wie Siloxane oder Weichmacher, die tatsächlich auf Optiken kondensieren. Zudem enthält der Druck Beiträge von Kammerwänden, Vorrichtungen und möglichen Lecks; derselbe Druck kann also sehr unterschiedlicher Sauberkeit des Prüflings entsprechen. Eine feste Dauer wiederum verschenkt Tage, wenn der Prüfling früh sauber ist, oder endet, bevor ein belasteter Prüfling die geforderte Rate erreicht. Die Dauer bleibt als Mindestwert sinnvoll, nicht als einzige Endbedingung.",
+          "bulletsHeading": "Wann Zeit und Druck ausreichen können",
+          "bullets": [
+            "Prüflinge ohne kontaminationsempfindliche Flächen in ihrem Sichtfeld",
+            "Hardware, deren Werkstoffe im Screening durchweg niedrige CVCM-Werte zeigen",
+            "Vorkonditionierung vor einem späteren, QCM-gesteuerten Ausheizen auf Systemebene",
+            "In Verbindung mit einem RGA-Scan am Ende, der schwere organische Fragmente ausschließt"
+          ]
+        },
+        {
+          "title": "Ein TQCM-Ratenkriterium ableiten",
+          "content": "Eine Quarzkristall-Mikrowaage erfasst niedergeschlagene Masse über die Verschiebung ihrer Resonanzfrequenz; bei dünnen, starren Schichten ist die Frequenzänderung proportional zur Flächenmasse, sodass sich eine Rate in Hz pro Stunde über den Empfindlichkeitsfaktor des Kristalls in einen Massenstrom pro Fläche umrechnen lässt. Eine temperaturgeregelte QCM (TQCM) hält den Kristall auf einer definierten Temperatur, die bestimmt, welche Stoffe kondensieren. Üblich ist eine Kristalltemperatur gleich oder unter der Temperatur der vertretenen empfindlichen Fläche, damit auf dem Kristall haftet, was auch auf der Optik haften würde.",
+          "content2": "Das Endkriterium ist dann eine Niederschlagsrate, korrigiert um den Sichtfaktor zwischen Prüfling und Kristall, die der im ersten Schritt abgeleiteten zulässigen Orbit-Ausgasung entspricht. Sie muss über ein festgelegtes Zeitfenster eingehalten werden, nicht nur einmal erreicht. ASTM E2900 beschreibt sowohl ein Kriterium über die Stabilisierung der QCM-Rate als auch einen Ansatz mit gemessener Niederschlagsrate; welches gilt und welcher Zahlenwert, liegt in der Verantwortung der anwendenden Organisation.",
+          "bulletsHeading": "Bestandteile eines Ratenkriteriums",
+          "bullets": [
+            "Kristalltemperatur und Toleranz, bezogen auf die empfindliche Fläche",
+            "Schwellenrate in Hz/h mit Umrechnung in Massenstrom und verwendetem Sichtfaktor",
+            "Mittelungsintervall und Anzahl aufeinanderfolgender Intervalle unter der Schwelle",
+            "Abzug des im Leerlauf gemessenen Kammeruntergrunds",
+            "Umgang mit Drift der Kristalltemperatur und Kompensation über einen Referenzkristall",
+            "Optionale QCM-Thermogravimetrie am Ende zur Bestimmung der Flüchtigkeit des Niederschlags"
+          ]
+        },
+        {
+          "title": "Endbedingungen, Abkühlung und Abbruchregeln",
+          "content": "Die Endbedingung ist eine logische Verknüpfung, die vor dem Test in die Prozedur geschrieben wird: Hardware mindestens für die Mindestdauer auf Temperatur, QCM-Rate über das festgelegte Fenster unter der Schwelle und, falls gefordert, ein RGA-Scan ohne nennenswerte organische Fragmente bei höheren Massenzahlen. Siloxankontamination zeigt sich etwa an charakteristischen Fragmentionen, während ein dominanter Peak bei Masse 18 Wasser anzeigt. Das Erreichen der Bedingung ist ein protokolliertes Ereignis mit Zeitstempel und Unterschrift der verantwortlichen Person.",
+          "content2": "Beim Abkühlen geht ein gutes Ausheizergebnis am häufigsten verloren. Kühlt der Prüfling schneller ab als die umgebenden Flächen, wird er zum kältesten Objekt der Kammer und sammelt, was gerade ausgetrieben wurde. Die Fängerfläche muss kälter bleiben als der Prüfling, bis dieser Umgebungstemperatur erreicht hat, und die QCM zeichnet weiter auf. Erst danach wird mit trockenem GN₂ belüftet, und der Prüfling wird ohne Verzögerung verpackt.",
+          "bulletsHeading": "In der Prozedur festzulegende Regeln",
+          "bullets": [
+            "Abkühlreihenfolge: zuerst Heizer aus, Fängerfläche und Kryofalle kalt, bis der Prüfling Umgebungstemperatur hat",
+            "Belüftungsrate und Gas sowie Zeitgrenze bis zum Verpacken nach dem Öffnen der Tür",
+            "Abbruchkriterien: Übertemperatur, Druckanstieg, Ausfall von Strom oder Pumpen, QCM-Ausfall",
+            "Verhalten der Kammersteuerung im sicheren Zustand für jeden Abbruchfall",
+            "Wiederanlaufregeln: ob die abgelaufene Zeit nach einer Unterbrechung angerechnet wird"
+          ]
+        },
+        {
+          "title": "Aufzeichnungen, die das Ausheizen belastbar machen",
+          "content": "Ein Ausheizen ist ein Nachweis für die Sauberkeitsverifikation; seine Aufzeichnungen müssen es Dritten erlauben, den Ablauf nachzuvollziehen. ECSS-Q-ST-70-01C Rev.1 bindet die Tätigkeiten der Sauberkeits- und Kontaminationskontrolle in einen gelenkten Plan ein, und ASTM E2900 erwartet, dass Abweichungen von festgelegten Zeiten, Temperaturen und Konfigurationen im Ausheizbericht dokumentiert werden.",
+          "content2": "In der Praxis verknüpft der Bericht die Herleitung der Kriterien mit den Messdaten. Er enthält die Temperaturverläufe aller Hardwaresensoren, den Druckverlauf, QCM-Frequenz und Kristalltemperatur, die Ergebnisse des Leerlaufs, RGA-Spektren zu Beginn und am Ende sowie die Analyse der Witness-Platten, etwa gravimetrisch oder per Infrarotspektroskopie. Jede Abweichung, etwa ein Heizerausfall oder ein abgebrochener Abkühlvorgang, wird mit ihrer Entscheidung festgehalten. Diese Unterlagen sind die Grundlage für die Freigabe des Prüflings zum nächsten Integrationsschritt und beschleunigen zudem die Planung des nächsten Ausheizens ähnlicher Hardware.",
+          "bulletsHeading": "Mindestinhalt des Ausheizberichts",
+          "bullets": [
+            "Bezug zum Kontaminationsbudget und Herleitung der Schwellenrate",
+            "Tatsächliche Konfiguration: Vorrichtungen, Sensorplan, Positionen von QCM und Witness-Platten",
+            "Zeitlich synchronisierte Temperatur-, Druck- und QCM-Daten für Leerlauf und Ausheizen",
+            "Zeitstempel, zu dem die Endbedingung erfüllt war, mit zugehörigen Daten",
+            "Ergebnisse von Witness-Platten und RGA, Abweichungen und deren Behandlung"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "Wie werden Ausheizparameter aus Sauberkeitsanforderungen abgeleitet?",
+          "a": "Ausgangspunkt ist der molekulare Niederschlag, den jede kontaminationsempfindliche Fläche laut Kontaminationsbudget am Missionsende aufnehmen darf. Der Orbitanteil dieses Werts definiert eine maximale Ausgasrate des Prüflings. Die Ausheiztemperatur wird dann oberhalb der höchsten Orbittemperatur und unterhalb der Nicht-Betriebsgrenze des schwächsten Bauteils gewählt, und die zulässige Rate wird in eine QCM-Schwelle für die Niederschlagsrate übersetzt, die über ein festgelegtes Zeitfenster eingehalten werden muss."
+        },
+        {
+          "q": "Warum ist der Kammerdruck allein kein gutes Endkriterium?",
+          "a": "Der Druck in einer beheizten Vakuumkammer besteht überwiegend aus Wasser und später aus Wasserstoff und enthält Beiträge von Kammerwänden, Vorrichtungen und möglichen Lecks. Er unterscheidet nicht die organischen Stoffe mit niedrigem Dampfdruck, die auf Optiken und Radiatoren kondensieren. Ein niedriger Druck kann daher mit einer Ausgasrate einhergehen, die das Budget weiterhin verletzt. Der Druck taugt als unterstützende Größe und als Sicherheitsgrenze; zur Bewertung der molekularen Sauberkeit braucht es eine QCM-Rate oder eine RGA-Prüfung."
+        },
+        {
+          "q": "Welche Temperatur sollte der TQCM-Kristall beim Ausheizen haben?",
+          "a": "Der Kristall soll die zu schützende Fläche repräsentieren. Er wird meist auf oder unter die Orbittemperatur dieser empfindlichen Fläche eingestellt, damit Stoffe, die dort kondensieren würden, auch auf dem Kristall kondensieren. Ein kälterer Kristall sammelt mehr Stoffe und liefert ein konservativeres Ergebnis. Gewählte Temperatur und Toleranz gehören in die Prozedur, weil eine driftende Kristalltemperatur sowohl das Haftverhalten als auch die Frequenzbasislinie verändert."
+        },
+        {
+          "q": "Lässt sich ein Ausheizen mit einem Thermalvakuumtest kombinieren?",
+          "a": "Häufig wird eine Ausheizphase an den Anfang oder das Ende eines Thermalvakuumtests gelegt, um Kammerzeit zu sparen. Das funktioniert, wenn das heiße Plateau des Tests die Ausheizgrenzen nicht überschreitet und die Kammerkonfiguration Fängerfläche und QCM enthält. Die Kombination muss ausdrücklich geplant werden, weil thermische Zyklen und Abkühlvorgänge Kontamination auf den Prüfling zurückbringen können, wenn die Reihenfolge der kalten Flächen nicht kontrolliert wird."
+        },
+        {
+          "q": "Legt ECSS-Q-ST-70-02C fest, wie Flughardware ausgeheizt wird?",
+          "a": "Nein. ECSS-Q-ST-70-02C ist ein Screeningtest für Werkstoffe: Kleine Proben werden 24 Stunden bei 125 °C im Vakuum gehalten, und Gesamtmassenverlust, wiedergewonnener Massenverlust sowie gesammeltes flüchtiges kondensierbares Material werden auf einem Kollektor bei 25 °C bestimmt. Die Ergebnisse unterstützen die Werkstoffauswahl und zeigen, welche Teile einer Baugruppe das Ausgasen dominieren werden. Das Ausheizen montierter Hardware wird aus den Sauberkeitsanforderungen des Projekts und Praktiken wie ASTM E2900 geplant."
+        }
+      ],
+      "conclusion": "Ein Ausheizen wird zum Verifikationsschritt statt zum Ritual, wenn seine Parameter auf das Kontaminationsbudget zurückgeführt werden. Die Temperatur ergibt sich aus der höchsten Orbittemperatur und dem schwächsten Bauteil; das Endkriterium aus der zulässigen Ausgasrate, gemessen mit einer TQCM bei repräsentativer Kristalltemperatur und bereinigt um den Kammeruntergrund. Ein kontrolliertes Abkühlen sichert das Ergebnis, und vollständige Aufzeichnungen erlauben Auftraggebern, Auditoren und dem nächsten Integrationsschritt, sich darauf zu verlassen."
+    }
+  }
+]

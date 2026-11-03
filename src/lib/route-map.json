@@ -1071,6 +1071,32 @@
     }
   },
   {
+    "en": "/resources/blog/bake-out-campaign-planning",
+    "de": "/de/ressourcen/blog/ausheizkampagne-planen",
+    "seoKey": "blogBakeOutCampaignPlanning",
+    "sitemap": {
+      "group": "resources",
+      "priority": 0.55,
+      "changefreq": "monthly",
+      "sources": [
+        "src/content/blog"
+      ]
+    }
+  },
+  {
+    "en": "/resources/blog/thermal-stabilisation-criteria-dwell-times",
+    "de": "/de/ressourcen/blog/temperaturstabilisierung-haltezeiten",
+    "seoKey": "blogThermalStabilisationCriteriaDwellTimes",
+    "sitemap": {
+      "group": "resources",
+      "priority": 0.55,
+      "changefreq": "monthly",
+      "sources": [
+        "src/content/blog"
+      ]
+    }
+  },
+  {
     "en": "/careers",
     "de": "/de/karriere",
     "seoKey": "careers",

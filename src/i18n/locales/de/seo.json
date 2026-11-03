@@ -238,5 +238,13 @@
   "blogCategoryDecisionSupport": {
     "title": "Entscheidungshilfen für TVAC-Projekte | Deepvac",
     "description": "Entscheidungshilfen für TVAC-Projekte: Kostentreiber, Lieferzeit, eigene Anlage oder externe Prüfung, gebraucht oder neu, Retrofit oder Neubeschaffung."
+  },
+  "blogBakeOutCampaignPlanning": {
+    "title": "Ausheizkampagne für Raumfahrt-Hardware planen | Deepvac",
+    "description": "Ausheiztemperatur, Dauer und TQCM-Endkriterien aus dem Kontaminationsbudget ableiten, die Kammer richtig konfigurieren und das Ausheizen sauber dokumentieren."
+  },
+  "blogThermalStabilisationCriteriaDwellTimes": {
+    "title": "Temperaturstabilisierung und Haltezeiten | Deepvac",
+    "description": "Wie Normen die thermische Stabilisierung im TVAC definieren, wie Ratenkriterien mit thermischen Zeitkonstanten zusammenhängen und was die Haltezeit bestimmt."
   }
 }

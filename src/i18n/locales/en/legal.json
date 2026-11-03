@@ -143,7 +143,7 @@
   "terms": {
     "eyebrow": "Legal",
     "title": "General Terms and Conditions",
-    "effectiveDate": "Effective date: 27 July 2026",
+    "effectiveDate": "Effective date: 3 November 2026",
     "partA": "Part A — General Provisions",
     "partB": "Part B — Performance and Execution",
     "partC": "Part C — Acceptance and Commissioning",
@@ -223,7 +223,9 @@
         "c4": "9.4 Deepvac may require advance payment, milestone payments, or security, especially for custom developments, prototypes, or high-value Orders.",
         "c5": "9.5 The Customer may set off only undisputed or finally adjudicated claims. Rights of retention apply only to claims arising from the same Contract.",
         "c6": "9.6 In case of late payment, statutory default interest under German law applies. Deepvac may charge reasonable reminder and collection costs as permitted by law.",
-        "c7": "9.7 For Deliverables with an agreed delivery period of more than six months from Contract conclusion, the following applies: if Deepvac's procurement costs for materials, components, energy, or freight verifiably change by more than 5 percent in total between Contract conclusion and delivery, each party may request a corresponding adjustment of the affected prices, limited to the verified change in cost and its proportionate effect on the price. If a resulting price increase exceeds 10 percent of the agreed net order value, the Customer may terminate the affected Order with respect to the scope not yet delivered within fourteen calendar days of notification of the adjustment; Services already performed and costs already incurred shall be remunerated."
+        "c7": "9.7 For Deliverables with an agreed delivery period of more than six months from Contract conclusion, the following applies: if Deepvac's procurement costs for materials, components, energy, or freight verifiably change by more than 5 percent in total between Contract conclusion and delivery, each party may request a corresponding adjustment of the affected prices, limited to the verified change in cost and its proportionate effect on the price. If a resulting price increase exceeds 10 percent of the agreed net order value, the Customer may terminate the affected Order with respect to the scope not yet delivered within fourteen calendar days of notification of the adjustment; Services already performed and costs already incurred shall be remunerated.",
+        "c8": "9.8 All prices are stated and payable in euros (EUR) unless expressly agreed otherwise in text form. Payments shall be made by bank transfer to the account stated in the invoice. The Customer bears all bank charges, intermediary bank fees, and currency conversion costs arising on its side, so that Deepvac receives the full invoiced amount. Withholding taxes or similar deductions required under the law of the Customer's country are borne by the Customer and the payment is grossed up accordingly, unless a double taxation treaty provides for relief and the Customer provides the required certificates in time.",
+        "c9": "9.9 For Customers whose registered seat is outside the European Union or the European Economic Area, Deepvac may make performance conditional on full advance payment, an irrevocable and confirmed letter of credit issued or confirmed by a bank acceptable to Deepvac, or another security acceptable to Deepvac. The costs of such security are borne by the Customer."
       },
       "10": {
         "title": "Delivery, Deadlines, and Force Majeure",
@@ -237,7 +239,9 @@
         "title": "Shipping, Risk Transfer, and Packaging",
         "c1": "11.1 Unless otherwise agreed, delivery is FCA Deepvac's business address (Incoterms 2020). Risk transfers upon handover to the carrier nominated by the Customer or, where the Customer collects the goods itself, upon loading onto the collecting vehicle. Deepvac carries out export customs clearance. Where the parties agree on a different Incoterms 2020 rule in text form, the agreed rule governs delivery, transfer of risk, and the allocation of transport-related costs.",
         "c2": "11.2 The Customer bears transport, insurance, customs, export, and import costs unless otherwise agreed.",
-        "c3": "11.3 Packaging is charged at cost unless otherwise agreed. Returnable packaging is accepted only by prior agreement in text form."
+        "c3": "11.3 Packaging is charged at cost unless otherwise agreed. Returnable packaging is accepted only by prior agreement in text form.",
+        "c4": "11.4 For deliveries to destinations outside the European Union, the Customer acts as importer of record and is responsible for import licenses, customs clearance in the country of destination, import duties and taxes, and compliance with local technical, safety, electrical, and regulatory requirements. Deepvac provides the conformity documentation applicable in the European Union. Country-specific certifications, markings, or approvals (for example UL, CSA, or local electrical standards) are owed only if expressly agreed in text form.",
+        "c5": "11.5 Where Deepvac performs Services at Customer sites outside Germany, the Customer shall support Deepvac in a timely manner in obtaining visas, work permits, site access, and local registrations required for Deepvac personnel and subcontractors. Delays caused by missing permits or access are treated as delays in Customer cooperation under clause 8.4."
       },
       "12": {
         "title": "Acceptance and Commissioning",
@@ -264,13 +268,18 @@
         "c5": "13.5 The Customer is responsible for ensuring that the installation site meets the requirements specified by Deepvac, including but not limited to floor load capacity, room dimensions, access routes, power supply, cooling water, compressed air, and ventilation."
       },
       "14": {
-        "title": "Custom Systems and Project Business",
+        "title": "Custom Systems, Project Business, and Engineering Services",
         "c1": "14.1 This clause applies to custom-engineered thermal vacuum systems, application-specific developments, and project-based engineering work.",
         "c2": "14.2 The scope of the project is defined by the agreed specification, statement of work, and project plan. Performance beyond the agreed scope requires a change order under clause 7.",
         "c3": "14.3 Engineering decisions within the agreed specification are at Deepvac's professional discretion unless the Contract requires Customer approval for specific decisions.",
         "c4": "14.4 The Customer shall designate a competent project contact and shall make timely decisions on open points. Delayed decisions entitle Deepvac to adjust the schedule and invoice additional costs.",
         "c5": "14.5 Where the project involves integration with the Customer's existing infrastructure, the Customer is responsible for providing accurate and complete documentation of the existing systems, interfaces, and site conditions.",
-        "c6": "14.6 Deepvac may propose reasonable design alternatives if the originally agreed solution proves technically impracticable or disproportionately costly. Such alternatives require agreement under the change order procedure."
+        "c6": "14.6 Deepvac may propose reasonable design alternatives if the originally agreed solution proves technically impracticable or disproportionately costly. Such alternatives require agreement under the change order procedure.",
+        "c7": "14.7 Where the Order covers engineering, design, or consulting services only (for example concepts, feasibility studies, calculations, drawings, specifications, parts lists, control concepts, or design packages) without the supply or manufacture of hardware by Deepvac (\"Engineering Services\"), clauses 14.8 to 14.11 apply in addition.",
+        "c8": "14.8 The Deliverables of Engineering Services are the documents and data expressly listed in the Order, in the agreed format and level of detail. Unless expressly agreed, Deepvac does not owe manufacturing-ready production documentation, procurement, supplier management, manufacturing supervision, installation, commissioning, or acceptance of the resulting system.",
+        "c9": "14.9 If the Customer or a third party procures components or manufactures, assembles, installs, or operates a system on the basis of Deepvac's Engineering Services, the Customer is solely responsible for the selection and quality of the procured components, for the correct implementation of the design, for the conformity assessment and CE marking of the resulting machine or system, and for its safe operation. Deepvac's liability is governed by clauses 20 and 21 and is limited to damage attributable to a defect in Deepvac's own Deliverables.",
+        "c10": "14.10 Where agreed, Engineering Services are performed in milestones or work packages. Each milestone is reviewed in a milestone meeting; acceptance is governed by clause 12. Comments by the Customer on a milestone that go beyond the agreed specification are change requests under clause 7.",
+        "c11": "14.11 Unless expressly agreed otherwise in text form, the Customer receives, upon full payment, a non-exclusive, perpetual right to use the Deliverables of Engineering Services for the manufacture, operation, maintenance, and modification of the specific system described in the Order, including by third parties acting on the Customer's behalf. Clause 22 applies in all other respects; in particular, Deepvac's pre-existing know-how, calculation methods, and templates remain with Deepvac and are not transferred. Native CAD and source files are delivered only if expressly agreed; otherwise Deliverables are provided in neutral exchange formats (for example PDF, STEP)."
       },
       "15": {
         "title": "Testing Services",
@@ -303,7 +312,7 @@
         "c8": "16.8 Where Deepvac integrates subsystems into an existing system, risk of damage to the existing system due to its pre-existing condition or undisclosed defects remains with the Customer."
       },
       "17": {
-        "title": "Maintenance, Repair, and Service Interventions",
+        "title": "Maintenance, Repair, Service Interventions, and Service Agreements",
         "c1": "17.1 This clause applies to maintenance, repair, preventive servicing, diagnostics, and technical support services.",
         "c2": "17.2 The scope of maintenance and repair work is limited to the services expressly agreed. Implied service levels, guaranteed response times, or guaranteed uptime commitments apply only if expressly agreed in text form.",
         "c3": "17.3 Remote support is provided where technically feasible and agreed. Remote access requires adequate network infrastructure provided by the Customer. Deepvac is not responsible for connectivity issues, network security, or IT infrastructure at the Customer's site.",
@@ -311,7 +320,12 @@
         "c5": "17.5 Deepvac may use reasonable substitute parts or equivalent components if original parts are unavailable, provided they do not materially impair functionality.",
         "c6": "17.6 Repair efforts are based on technical feasibility. Deepvac does not guarantee that older systems can be fully restored to original condition or upgraded to current standards unless expressly agreed.",
         "c7": "17.7 Replaced parts become the property of Deepvac unless the Customer requests their return in the Order. Return of replaced parts may be subject to a handling charge.",
-        "c8": "17.8 The Customer shall provide safe access to the equipment, clear the work area, and ensure compliance with applicable safety regulations during on-site service interventions."
+        "c8": "17.8 The Customer shall provide safe access to the equipment, clear the work area, and ensure compliance with applicable safety regulations during on-site service interventions.",
+        "c9": "17.9 Where the parties conclude a framework, maintenance, support, or service agreement (\"Service Agreement\"), the scope, service levels, rates, and any packages or call-off quantities are defined in that agreement. Unless the Service Agreement provides otherwise: (a) the initial term is twelve months from the agreed start date; (b) the Service Agreement renews automatically for successive periods of twelve months unless terminated by either party in text form with three months' notice to the end of the then-current term; (c) individual call-offs under a Service Agreement are separate Orders within the meaning of these Terms; (d) agreed packages, retainers, or minimum quantities are invoiced in advance for the respective period, and unused services are not refunded unless expressly agreed otherwise.",
+        "c10": "17.10 Deepvac may adjust the rates and prices under a Service Agreement once per contract year, with at least two months' notice to the end of a contract year, in line with the development of its costs (in particular personnel, travel, spare parts, and energy). If the adjustment exceeds five percent per contract year, the Customer may terminate the Service Agreement in text form within four weeks of receiving the notice of adjustment, with effect from the date the adjustment takes effect.",
+        "c11": "17.11 Where response times are agreed, \"response time\" means the time until a qualified Deepvac engineer has started remote diagnosis and contacted the Customer after a service request has been received through the agreed channel within the agreed service hours. Response times do not constitute a commitment to restore operation within a specific time (\"resolution time\"); availability or uptime commitments apply only if expressly agreed in text form. Service hours are Monday to Friday, 08:00 to 17:00 (CET/CEST), excluding public holidays in Lower Saxony, unless agreed otherwise.",
+        "c12": "17.12 On-site interventions are scheduled by mutual agreement. If the Customer cancels or postpones a scheduled on-site intervention less than five working days before the agreed date, or if the intervention cannot be performed for reasons within the Customer's responsibility (for example missing access, site readiness, permits, or availability of the System), Deepvac may invoice the reserved time at the agreed rates and non-refundable travel costs. Working hours outside the agreed service hours, on weekends, or on public holidays are subject to the agreed surcharges or, absent an agreement, to a surcharge of 50 percent (working days outside service hours and Saturdays) or 100 percent (Sundays and public holidays) on the agreed hourly rates.",
+        "c13": "17.13 Where Deepvac provides engineers for technical support, test campaign support, quality assurance, or similar personnel-based services at the Customer's site or facility, Deepvac performs these services as an independent contractor. Deepvac's personnel and subcontractors remain under Deepvac's direction and are not integrated into the Customer's organization; the Customer gives site-related technical and safety instructions only. Services are invoiced on a time and materials basis at the agreed rates unless a fixed price is agreed. The Customer shall provide the required site access, safety briefings, protective equipment, and working conditions. During the term of a Service Agreement and for twelve months thereafter, neither party shall actively solicit for employment personnel of the other party who were involved in performing the Services without the other party's consent in text form; general job advertisements are not solicitation."
       },
       "18": {
         "title": "Software, Control Systems, Data, and Digital Functions",
@@ -387,7 +401,9 @@
         "title": "Export Control and Sanctions",
         "c1": "25.1 Performance may be subject to export control laws, sanctions, and embargoes. The Customer shall provide all information required to assess compliance, including end use and end user information upon request.",
         "c2": "25.2 Deepvac may suspend or refuse performance if it would violate applicable export control or sanctions regulations.",
-        "c3": "25.3 The Customer warrants that it will not use Deliverables for prohibited end uses and will comply with applicable re-export requirements."
+        "c3": "25.3 The Customer warrants that it will not use Deliverables for prohibited end uses and will comply with applicable re-export requirements.",
+        "c4": "25.4 The Customer shall inform Deepvac in text form before Contract conclusion, and in any case before delivery of a Test Item or of technical data, if the Test Item, the technical data, or the intended end use is subject to the U.S. International Traffic in Arms Regulations (ITAR), the U.S. Export Administration Regulations (EAR), the EU Dual-Use Regulation (EU) 2021/821, or comparable national export control regimes, and shall provide the relevant classification. Deepvac may refuse to receive, store, or process export-controlled items or data, or may make performance conditional on the required licenses and on compliance measures agreed in text form. Costs and delays resulting from undeclared or incorrectly declared export-controlled items or data are borne by the Customer.",
+        "c5": "25.5 Deepvac is not registered under ITAR and accepts ITAR-controlled technical data or defense articles only if expressly agreed in text form."
       },
       "26": {
         "title": "Compliance and Safety",
@@ -413,7 +429,8 @@
         "title": "Governing Law, Jurisdiction, and Place of Performance",
         "c1": "29.1 The Contract is governed by the laws of the Federal Republic of Germany, excluding the United Nations Convention on Contracts for the International Sale of Goods.",
         "c2": "29.2 Exclusive place of jurisdiction for all disputes arising out of or in connection with the Contract is Hanover, Germany.",
-        "c3": "29.3 Place of performance is Hanover, Germany, unless otherwise agreed in text form."
+        "c3": "29.3 Place of performance is Hanover, Germany, unless otherwise agreed in text form.",
+        "c4": "29.4 Notwithstanding clause 29.2, if the Customer has its registered seat outside the European Union, the European Economic Area, or Switzerland, all disputes arising out of or in connection with the Contract shall be finally settled in accordance with the Arbitration Rules of the German Arbitration Institute (DIS) without recourse to the ordinary courts of law. The seat of arbitration is Hanover, Germany. The arbitral tribunal consists of a sole arbitrator; if the amount in dispute exceeds EUR 1,000,000, it consists of three arbitrators. The language of the arbitration is English. Deepvac remains entitled to bring claims for payment and applications for interim relief before the state courts at the Customer's seat or in Hanover."
       },
       "30": {
         "title": "Text Form, Language, and Amendments",
