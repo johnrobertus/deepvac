@@ -214,7 +214,8 @@ async function logInquiry(
   }
 }
 
-const FUNCTION_VERSION = "send-inquiry 2026-10-01";
+const FUNCTION_VERSION = "send-inquiry 2026-11-03";
+const NOTIFY_RECIPIENTS = ["robertus@deepvac.space", "Opalikhin@deepvac.space", "sales@deepvac.space"];
 const STATIC_ALLOWED_ORIGINS = new Set([
   "https://deepvac.space",
   "https://www.deepvac.space",
@@ -488,7 +489,7 @@ async function handle(req: Request): Promise<Response> {
       },
       body: JSON.stringify({
         from: "Deepvac <noreply@deepvac.space>",
-        to: ["info@deepvac.space"],
+        to: NOTIFY_RECIPIENTS,
         reply_to: email,
         subject: `${subjectPrefix} – ${company} (${firstName} ${lastName})`,
         html: lines,
@@ -665,7 +666,7 @@ async function handleQuestionnaire(
     },
     body: JSON.stringify({
       from: "Deepvac <noreply@deepvac.space>",
-      to: ["info@deepvac.space"],
+      to: NOTIFY_RECIPIENTS,
       reply_to: email,
       subject,
       html,
