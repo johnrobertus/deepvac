@@ -55,8 +55,8 @@ export default function TermsAndConditions() {
               <p>{t("terms.sections.1.customerText")}</p>
             </LS>
 
-            <SimpleSection n="2" t={t} keys={["c1","c2","c3","c4","c5","c6","c7","c8","c9","c10","c11","c12","c13"]} />
-            <SimpleSection n="3" t={t} keys={["c1","c2","c3","c4"]} />
+            <SimpleSection n="2" t={t} keys={["c1","c2","c3","c4","c5","c6","c7","c8","c9","c10","c11","c12","c13","c14","c15"]} />
+            <SimpleSection n="3" t={t} keys={["c1","c2","c3","c4","c5"]} />
             <SimpleSection n="4" t={t} keys={["c1","c2","c3"]} />
 
             <LS n="5" title={t("terms.sections.5.title")}>
@@ -77,7 +77,7 @@ export default function TermsAndConditions() {
             <SimpleSection n="6" t={t} keys={["c1","c2","c3","c4"]} />
             <SimpleSection n="7" t={t} keys={["c1","c2","c3"]} />
             <SimpleSection n="8" t={t} keys={["c1","c2","c3","c4"]} />
-            <SimpleSection n="9" t={t} keys={["c1","c2","c3","c4","c5","c6","c7","c8","c9"]} />
+            <SimpleSection n="9" t={t} keys={["c1","c2","c3","c4","c5","c6","c7","c8","c9","c10"]} />
 
             <LS n="10" title={t("terms.sections.10.title")}>
               <p>{t("terms.sections.10.c1")}</p>
@@ -87,7 +87,7 @@ export default function TermsAndConditions() {
               <p>{t("terms.sections.10.c4")}</p>
             </LS>
 
-            <SimpleSection n="11" t={t} keys={["c1","c2","c3","c4","c5"]} />
+            <SimpleSection n="11" t={t} keys={["c1","c2","c3","c4","c5","c6"]} />
 
             {/* Part C */}
             <PartHeader label={t("terms.partC")} />
@@ -118,13 +118,13 @@ export default function TermsAndConditions() {
             <SimpleSection n="15" t={t} keys={["c1","c2","c3","c4","c5","c6","c7","c8","c9","c10","c11","c12","c13","c14","c15","c16"]} />
             <SimpleSection n="16" t={t} keys={["c1","c2","c3","c4","c5","c6","c7","c8","c9"]} />
             <SimpleSection n="17" t={t} keys={["c1","c2","c3","c4","c5","c6","c7","c8","c9","c10","c11","c12","c13"]} />
-            <SimpleSection n="18" t={t} keys={["c1","c2","c3","c4","c5","c6","c7","c8","c9","c10","c11","c12"]} />
+            <SimpleSection n="18" t={t} keys={["c1","c2","c3","c4","c5","c6","c7","c8","c9","c10","c11","c12","c13"]} />
 
             {/* Part E */}
             <PartHeader label={t("terms.partE")} />
 
-            <SimpleSection n="19" t={t} keys={["c1","c2","c3","c4","c5"]} />
-            <SimpleSection n="20" t={t} keys={["c1","c2","c3","c4","c5","c6"]} />
+            <SimpleSection n="19" t={t} keys={["c1","c2","c3","c4","c5","c6","c7"]} />
+            <SimpleSection n="20" t={t} keys={["c1","c2","c3","c4","c5","c6","c7"]} />
             <SimpleSection n="21" t={t} keys={["c1","c2","c3","c4","c5","c6","c7","c8","c9"]} />
 
             <LS n="22" title={t("terms.sections.22.title")}>
@@ -136,7 +136,6 @@ export default function TermsAndConditions() {
               <p>{t("terms.sections.22.c6")}</p>
               <p>{t("terms.sections.22.c7")}</p>
               <p>{t("terms.sections.22.c8")}</p>
-              <p>{t("terms.sections.22.c9")}</p>
             </LS>
 
             <LS n="23" title={t("terms.sections.23.title")}>
@@ -153,7 +152,7 @@ export default function TermsAndConditions() {
             </LS>
 
             <SimpleSection n="24" t={t} keys={["c1","c2"]} />
-            <SimpleSection n="25" t={t} keys={["c1","c2","c3","c4","c5"]} />
+            <SimpleSection n="25" t={t} keys={["c1","c2","c3","c4","c5","c6"]} />
             <SimpleSection n="26" t={t} keys={["c1","c2","c3"]} />
 
             <LS n="27" title={t("terms.sections.27.title")}>
@@ -169,7 +168,7 @@ export default function TermsAndConditions() {
 
             <SimpleSection n="28" t={t} keys={["c1","c2","c3"]} />
             <SimpleSection n="29" t={t} keys={["c1","c2","c3","c4"]} />
-            <SimpleSection n="30" t={t} keys={["c1","c2"]} />
+            <SimpleSection n="30" t={t} keys={["c1","c2","c3"]} />
             <SimpleSection n="31" t={t} keys={["c1","c2"]} />
             <SimpleSection n="32" t={t} keys={["c1","c2"]} />
           </div>
