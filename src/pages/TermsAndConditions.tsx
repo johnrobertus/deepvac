@@ -118,7 +118,7 @@ export default function TermsAndConditions() {
             <SimpleSection n="15" t={t} keys={["c1","c2","c3","c4","c5","c6","c7","c8","c9","c10","c11","c12","c13","c14","c15","c16"]} />
             <SimpleSection n="16" t={t} keys={["c1","c2","c3","c4","c5","c6","c7","c8","c9"]} />
             <SimpleSection n="17" t={t} keys={["c1","c2","c3","c4","c5","c6","c7","c8","c9","c10","c11","c12","c13"]} />
-            <SimpleSection n="18" t={t} keys={["c1","c2","c3","c4","c5","c6","c7","c8","c9","c10"]} />
+            <SimpleSection n="18" t={t} keys={["c1","c2","c3","c4","c5","c6","c7","c8","c9","c10","c11","c12"]} />
 
             {/* Part E */}
             <PartHeader label={t("terms.partE")} />
