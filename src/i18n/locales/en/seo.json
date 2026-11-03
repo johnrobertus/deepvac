@@ -242,5 +242,9 @@
   "blogBakeOutCampaignPlanning": {
     "title": "Bake-Out Campaign Planning for Space Hardware | Deepvac",
     "description": "Derive bake-out temperature, duration and TQCM exit criteria from the contamination budget, set up the chamber correctly and document a defensible bake-out."
+  },
+  "blogThermalStabilisationCriteriaDwellTimes": {
+    "title": "TVAC Stabilisation Criteria and Dwell Times | Deepvac",
+    "description": "How standards define thermal stabilisation in TVAC, how rate criteria relate to thermal time constants and what determines the dwell time at hot and cold."
   }
 }

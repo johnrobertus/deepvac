@@ -1,0 +1,300 @@
+[
+  {
+    "articleKey": "thermalStabilisationCriteriaDwellTimes",
+    "enSlug": "thermal-stabilisation-criteria-dwell-times",
+    "deSlug": "temperaturstabilisierung-haltezeiten",
+    "category": "basics",
+    "datePublished": "2026-11-03",
+    "dateModified": "2026-11-03",
+    "seoKey": "blogThermalStabilisationCriteriaDwellTimes",
+    "relatedPaths": [
+      "/services/testing-services",
+      "/products/options/temperature-sensors",
+      "/products/options/temperature-control-zones"
+    ],
+    "relatedArticles": [
+      "temperatureMeasurement",
+      "tvacTestTypes",
+      "tvacTestCampaign"
+    ],
+    "searchIntent": {
+      "en": {
+        "primaryKeyword": "thermal vacuum stabilisation criteria",
+        "primaryQuestion": "How do standards define thermal stabilisation and what determines dwell time?"
+      },
+      "de": {
+        "primaryKeyword": "Temperaturstabilisierung Thermalvakuum",
+        "primaryQuestion": "Wie definieren Normen die thermische Stabilisierung und wovon hängt die Haltezeit ab?"
+      }
+    },
+    "references": [
+      {
+        "title": "ECSS-E-ST-10-03C Rev.1: Space engineering, Testing (31 May 2022)",
+        "publisher": "European Cooperation for Space Standardization (ECSS)",
+        "url": "https://ecss.nl/wp-content/uploads/2022/05/ECSS-E-ST-10-03-Rev.1(31May2022).pdf"
+      },
+      {
+        "title": "GSFC-STD-7000B: General Environmental Verification Standard (GEVS) for GSFC Flight Programs and Projects (28 April 2021)",
+        "publisher": "NASA Goddard Space Flight Center",
+        "url": "https://standards.nasa.gov/system/files/tmp/GSFC-STD-7000B_Approved_Admn%20Ext.pdf"
+      },
+      {
+        "title": "TVAC testing services",
+        "publisher": "Deepvac GmbH",
+        "url": "https://deepvac.space/services/testing-services"
+      }
+    ],
+    "technicalNote": {
+      "en": "Standards are summarised here for orientation; clause and table numbers can differ between editions. The contract, the verification plan, the test specification and any project-specific tailoring remain binding for tolerances, stabilisation criteria and dwell times. Where Deepvac chamber options or services are referenced, they describe reference configurations; binding values depend on chamber size, pumping and thermal concept, test set-up and the quotation.",
+      "de": "Die Normen sind hier zur Orientierung zusammengefasst; Abschnitts- und Tabellennummern können sich zwischen Ausgaben unterscheiden. Verbindlich für Toleranzen, Stabilisierungskriterien und Haltezeiten bleiben Vertrag, Verifikationsplan, Testspezifikation und jedes projektspezifische Tailoring. Soweit auf Deepvac-Kammeroptionen oder Leistungen verwiesen wird, beschreiben diese Referenzkonfigurationen; verbindliche Werte hängen von Kammergröße, Pump- und Thermalkonzept, Testaufbau und Angebot ab."
+    },
+    "en": {
+      "title": "Thermal Stabilisation and Dwell Times in TVAC: When Is Hardware at Temperature?",
+      "description": "How ECSS-E-ST-10-03C Rev.1 and GSFC-STD-7000B define thermal stabilisation, why rate criteria and time constants belong together, and what really determines dwell time in a TVAC test.",
+      "seoTitle": "TVAC Stabilisation Criteria and Dwell Times | Deepvac",
+      "seoDescription": "How standards define thermal stabilisation in TVAC, how rate criteria relate to thermal time constants and what determines the dwell time at hot and cold.",
+      "intro": "Every thermal vacuum test plan contains a sentence such as: once the unit has stabilised, dwell for a given number of hours and perform a functional test. Both halves of that sentence hide engineering decisions. Which sensor has to be stable, within which tolerance, and at what rate of change? How long must the dwell last, and does it start when the shroud reaches its set point or when the hardware does? This article explains how ECSS-E-ST-10-03C Rev.1 and GSFC-STD-7000B frame stabilisation, how the physics of thermal time constants links a rate criterion to the real temperature offset, and which factors set a defensible dwell time.",
+      "sections": [
+        {
+          "title": "What at temperature actually means",
+          "content": "A TVAC chamber controls surfaces: a shroud, a thermal plate or a set of heaters. The hardware follows these boundaries with a delay that depends on its mass, heat capacity and thermal coupling. The test temperature in a specification, however, is almost always defined on the test item, at one or more reference points such as the baseplate of a unit or a temperature reference point named in the thermal model. Confusing the control temperature with the test item temperature is the most common reason for dwell periods that are formally completed but thermally meaningless.",
+          "content2": "The first planning step is therefore to name the sensors that define the test temperature and the sensors that are only monitored. For a unit, this is usually a baseplate or mounting interface sensor; for an assembly or spacecraft, a set of reference points with individual limits. Sensors on the shroud, plate and fixture are recorded to explain the behaviour of the item, but they do not prove that the item is at temperature.",
+          "bulletsHeading": "Points to fix in the test specification",
+          "bullets": [
+            "Control sensor and its location: shroud, thermal plate, heater or test item",
+            "Reference sensors on the test item that define the test temperature",
+            "Monitor-only sensors, including internal sensors read through the item's own telemetry",
+            "Hot and cold limits per reference sensor, with the tolerance band",
+            "Rule for which sensor governs when several reference points disagree"
+          ]
+        },
+        {
+          "title": "How the standards frame stabilisation",
+          "content": "GSFC-STD-7000B defines temperature stabilisation in qualitative terms: the condition reached when the rate of change of temperature has decreased to the point where the test item can be expected to remain within the specified test tolerance for the necessary duration. The definition deliberately links three quantities, rate, tolerance and duration, and leaves the numbers to the test specification. In the absence of a rationale for other values, GEVS uses a temperature tolerance of ±2 °C that includes measurement uncertainty.",
+          "content2": "ECSS-E-ST-10-03C treats the same problem through tolerances and dwell time. The 2012 edition specifies, above 80 K, a tolerance of +0/−4 K at the cold limit and −0/+4 K at the hot limit, so the test level may be exceeded but not undershot, and a measurement accuracy of ±2 K; below 80 K, tolerance and accuracy are defined case by case. The dwell time is defined as the duration needed for internal parts of the equipment to reach temperature, counted from the start of the temperature stabilisation phase. Projects should check these entries against the current Rev.1 text and their tailoring.",
+          "bulletsHeading": "What the standards leave to the project",
+          "bullets": [
+            "Numerical rate of change that counts as stable",
+            "Length of the window over which the rate is evaluated",
+            "Which sensors must satisfy the criterion simultaneously",
+            "Tolerances below 80 K, where ECSS requires case-by-case definition",
+            "Dwell duration, beyond the principle that internal parts must reach temperature"
+          ]
+        },
+        {
+          "title": "The physics behind thermal lag",
+          "content": "A simple lumped model explains most stabilisation behaviour. If a test item with heat capacity C is coupled to its boundary through a conductance G, its temperature approaches the boundary exponentially with a time constant τ = C/G. After one time constant about 63 % of the step is completed, after three about 95 % and after five more than 99 %. In vacuum there is no convection, so G is the sum of conduction through mounting interfaces and radiation to the shroud.",
+          "content2": "Radiation makes the cold end slow. The radiative conductance scales with the cube of absolute temperature, so a coupling that is effective near room temperature becomes much weaker when the item approaches the cold limit: at 150 K it is about one eighth of its value at 300 K, and the time constant grows accordingly. This is why a cold plateau often takes far longer to stabilise than a hot one in the same set-up, and why conductive coupling through a temperature-controlled plate shortens cold stabilisation so effectively.",
+          "bulletsHeading": "Parameters that set the time constant",
+          "bullets": [
+            "Mass and specific heat of the item, including fixtures and harness",
+            "Contact conductance of bolted interfaces and any interface filler",
+            "Emissivity of item and shroud surfaces and the view factor between them",
+            "Absolute temperature level, through the cubic dependence of radiation",
+            "Internal couplings between housing, boards and components"
+          ]
+        },
+        {
+          "title": "Why a rate criterion needs a time constant",
+          "content": "For an exponential approach, the rate of change at any moment equals the remaining offset to the final temperature divided by the time constant. A stabilisation criterion of 1 °C per hour therefore means very different things for different hardware: for an item with a time constant of half an hour, the remaining offset is about 0.5 °C; for a massive item with a time constant of eight hours, it is about 8 °C, well outside a ±2 °C tolerance. A rate criterion is only meaningful when it is chosen with the item's time constant in mind.",
+          "content2": "The practical consequence is that the rate threshold should be derived from the tolerance. If the remaining offset must be small compared with the tolerance band, the allowable rate is roughly that offset divided by the expected time constant. For slow items, a pure rate criterion becomes very tight and is easily masked by sensor noise; an alternative is to fit the exponential approach and evaluate the predicted final temperature, which is the approach often used for thermal balance tests.",
+          "bulletsHeading": "Checks before accepting a rate threshold",
+          "bullets": [
+            "Estimated time constant at hot and at cold, from analysis or previous tests",
+            "Remaining offset implied by the threshold, compared with the tolerance band",
+            "Sensor resolution and noise relative to the expected change over the window",
+            "Evaluation method: two-point difference or linear regression over the window",
+            "Whether the criterion must hold for all reference sensors or a defined subset"
+          ]
+        },
+        {
+          "title": "What determines the dwell time",
+          "content": "Dwell begins when the stabilisation criterion is met on the reference sensors, not when the chamber reaches its set point. Its first purpose is the one in the ECSS definition: internal parts that are thermally coupled to the reference point only weakly, such as components on a circuit board inside a housing, must also reach temperature. Their internal time constant can be much longer than that of the housing, so a dwell of a few internal time constants is the physical minimum.",
+          "content2": "The second purpose is functional. Performance and functional tests are run at the hot and cold extremes, so the dwell must be at least as long as the test sequence, including set-up, data transfer and possible repetitions. Operating and non-operating plateaus, start-up at cold or hot, and self-heating of the powered unit change the thermal state during the dwell and must be considered. GEVS also points to longer dwell times as a way to compensate when temperature cycling is reduced for hardware with a small on-orbit temperature range.",
+          "bulletsHeading": "Inputs for the dwell duration",
+          "bullets": [
+            "Internal time constants of boards and components, from the thermal model",
+            "Duration of the functional or performance test sequence at the plateau",
+            "Need for operating and non-operating phases, and start-up tests at the extremes",
+            "Self-heating of the powered item and its effect on the reference sensor",
+            "Contractual minimum durations and any requirement for repeated tests"
+          ]
+        },
+        {
+          "title": "Thermal balance needs a different definition of stable",
+          "content": "In thermal cycling and thermal vacuum tests, stabilisation is a gate before the dwell; the item only has to be within tolerance. In a thermal balance test, the steady state is itself the measurement. The recorded temperatures are compared with thermal model predictions for correlation, so any residual drift becomes an apparent model error. Steady-state criteria for thermal balance are consequently much tighter than for cycling, and are usually agreed between test engineers and thermal analysts.",
+          "content2": "Because the time constants of large or well-insulated items can reach many hours, waiting for a tight rate threshold can consume days of chamber time. Common responses are to extrapolate the exponential approach to its asymptote and accept a case when the predicted residual is below a stated value, or to run transient correlation instead of pure steady state. Either approach must be described in the test specification before the test, so that the decision to end a case is a recorded application of a rule, not a judgement made at three in the morning.",
+          "bulletsHeading": "Elements of a thermal balance criterion",
+          "bullets": [
+            "Rate threshold per sensor group, linked to the required correlation accuracy",
+            "Minimum duration over which the threshold must hold",
+            "Extrapolation method and acceptable predicted residual, if used",
+            "Stability of boundary conditions: shroud, heater power and absorbed flux",
+            "Treatment of sensors that drift because of known slow paths"
+          ]
+        },
+        {
+          "title": "How chamber and set-up shorten stabilisation",
+          "content": "The chamber cannot change the physics of the item, but it can change the boundary conditions. A shroud or thermal plate with sufficient cooling and heating capacity reaches its set point quickly and holds it without oscillation, so the item sees a clean step. Controlled overdrive, where the boundary is driven beyond the target for a limited time, shortens the approach but must be bounded by the item's limits and by the maximum allowed rate of change, and it has to be documented.",
+          "content2": "Separate temperature control zones allow conductive and radiative boundaries to be set independently, which helps when a unit is mounted on a plate but also radiates to a shroud. Sufficient sensors, placed according to the thermal model, show whether the item is uniform or whether a slow internal path still lags. Recording control and reference temperatures on a common time base, with the moment each criterion was met, makes stabilisation and dwell auditable afterwards.",
+          "bulletsHeading": "Set-up points that affect stabilisation time",
+          "bullets": [
+            "Cooling and heating capacity of shroud and plate relative to the item's heat capacity",
+            "Control loop tuning to avoid oscillation around the set point",
+            "Limits on overdrive: maximum boundary temperature, duration and rate",
+            "Independent zones for conductive and radiative boundaries where needed",
+            "Sensor count and placement derived from the thermal model",
+            "Time-stamped log of stabilisation and dwell start and end per plateau"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "How do standards define thermal stabilisation and what determines dwell time?",
+          "a": "GSFC-STD-7000B defines stabilisation as the point where the rate of change has fallen enough for the item to stay within tolerance for the required duration, and ECSS-E-ST-10-03C defines dwell time as the duration needed for internal parts to reach temperature, counted from the start of stabilisation. Neither fixes a universal number. The dwell time follows from the internal time constants of the hardware and from the length of the functional tests that must be run at the plateau."
+        },
+        {
+          "q": "Is 1 °C per hour a good stabilisation criterion?",
+          "a": "It can be, but only for hardware with a short time constant. For an exponential approach, the remaining offset to the final temperature equals the rate multiplied by the time constant. An item with a time constant of eight hours that changes by 1 °C per hour is still about 8 °C from its final temperature. The threshold should therefore be derived from the tolerance band and the expected time constant at each plateau."
+        },
+        {
+          "q": "Does dwell time start when the shroud reaches its set point?",
+          "a": "No. The test temperature is defined on the test item, at its reference points. Dwell starts when those reference sensors meet the stabilisation criterion within tolerance. The shroud or plate temperature is a control variable; it typically reaches its set point much earlier than the hardware, especially at the cold end, where radiative coupling is weak. Counting dwell from the control temperature shortens the effective soak and can invalidate the functional test."
+        },
+        {
+          "q": "Why does the cold plateau take longer than the hot one?",
+          "a": "In vacuum, much of the heat exchange between item and shroud is radiative, and radiative conductance scales with the cube of absolute temperature. At 150 K it is roughly one eighth of its value at 300 K, so the time constant grows and the approach slows. Conductive coupling through a temperature-controlled plate is far less sensitive to temperature level, which is why mounting the item on a controlled interface shortens cold stabilisation considerably."
+        },
+        {
+          "q": "Can overdriving the shroud shorten stabilisation?",
+          "a": "Yes. Driving the boundary beyond the target temperature for a limited time increases the heat flow and brings the item to temperature faster. The overdrive must stay within the item's non-operating and operating limits, respect any maximum rate of change, and stop early enough to avoid overshoot on the reference sensors. The rule and its limits belong in the test procedure, and the as-run boundary temperatures belong in the test report."
+        }
+      ],
+      "conclusion": "Thermal stabilisation is not a single number but a relation between rate, tolerance and time constant. The standards supply the framework: test temperatures on the item, tolerance bands, and a dwell that lets internal parts reach temperature. The project supplies the numbers, derived from the thermal model and the functional test sequence. Written down before the test and applied to the right sensors, these criteria make each plateau defensible and keep chamber time predictable."
+    },
+    "de": {
+      "title": "Temperaturstabilisierung und Haltezeiten im TVAC: Wann ist Hardware auf Temperatur?",
+      "description": "Wie ECSS-E-ST-10-03C Rev.1 und GSFC-STD-7000B die thermische Stabilisierung definieren, warum Ratenkriterien und Zeitkonstanten zusammengehören und was die Haltezeit im TVAC-Test bestimmt.",
+      "seoTitle": "Temperaturstabilisierung und Haltezeiten | Deepvac",
+      "seoDescription": "Wie Normen die thermische Stabilisierung im TVAC definieren, wie Ratenkriterien mit thermischen Zeitkonstanten zusammenhängen und was die Haltezeit bestimmt.",
+      "intro": "Fast jeder Thermalvakuum-Testplan enthält einen Satz wie: Nach Stabilisierung des Geräts für eine bestimmte Stundenzahl halten und einen Funktionstest durchführen. Beide Satzhälften verbergen technische Entscheidungen. Welcher Sensor muss stabil sein, innerhalb welcher Toleranz und bei welcher Änderungsrate? Wie lange muss die Haltezeit dauern, und beginnt sie, wenn der Shroud seinen Sollwert erreicht, oder erst, wenn die Hardware ihn erreicht? Dieser Artikel erläutert, wie ECSS-E-ST-10-03C Rev.1 und GSFC-STD-7000B die Stabilisierung einordnen, wie die Physik thermischer Zeitkonstanten ein Ratenkriterium mit dem tatsächlichen Temperaturabstand verknüpft und welche Faktoren eine belastbare Haltezeit festlegen.",
+      "sections": [
+        {
+          "title": "Was auf Temperatur tatsächlich bedeutet",
+          "content": "Eine TVAC-Kammer regelt Oberflächen: einen Shroud, eine Thermalplatte oder eine Gruppe von Heizern. Die Hardware folgt diesen Randbedingungen mit einer Verzögerung, die von Masse, Wärmekapazität und thermischer Kopplung abhängt. Die Testtemperatur einer Spezifikation ist dagegen fast immer am Prüfling definiert, an einem oder mehreren Referenzpunkten wie der Grundplatte eines Geräts oder einem im Thermalmodell benannten Temperaturreferenzpunkt. Die Verwechslung von Regeltemperatur und Prüflingstemperatur ist der häufigste Grund für Haltezeiten, die formal erfüllt, thermisch aber ohne Aussage sind.",
+          "content2": "Der erste Planungsschritt besteht daher darin, die Sensoren zu benennen, die die Testtemperatur definieren, und jene, die nur überwacht werden. Bei einem Gerät ist das meist ein Sensor an Grundplatte oder Montageschnittstelle; bei einer Baugruppe oder einem Satelliten eine Gruppe von Referenzpunkten mit eigenen Grenzwerten. Sensoren an Shroud, Platte und Vorrichtung werden aufgezeichnet, um das Verhalten des Prüflings zu erklären, sie belegen aber nicht, dass der Prüfling auf Temperatur ist.",
+          "bulletsHeading": "In der Testspezifikation festzulegende Punkte",
+          "bullets": [
+            "Regelsensor und seine Lage: Shroud, Thermalplatte, Heizer oder Prüfling",
+            "Referenzsensoren am Prüfling, die die Testtemperatur definieren",
+            "Reine Überwachungssensoren, einschließlich interner Sensoren aus der Telemetrie des Prüflings",
+            "Heiß- und Kaltgrenzen je Referenzsensor mit Toleranzband",
+            "Regel, welcher Sensor maßgeblich ist, wenn mehrere Referenzpunkte voneinander abweichen"
+          ]
+        },
+        {
+          "title": "Wie die Normen die Stabilisierung einordnen",
+          "content": "GSFC-STD-7000B definiert die Temperaturstabilisierung qualitativ: als den Zustand, in dem die Temperaturänderungsrate so weit gesunken ist, dass der Prüfling voraussichtlich für die erforderliche Dauer innerhalb der festgelegten Testtoleranz bleibt. Die Definition verknüpft bewusst drei Größen, Rate, Toleranz und Dauer, und überlässt die Zahlenwerte der Testspezifikation. Ohne Begründung für andere Werte verwendet GEVS eine Temperaturtoleranz von ±2 °C, in der die Messunsicherheit enthalten ist.",
+          "content2": "ECSS-E-ST-10-03C behandelt dieselbe Frage über Toleranzen und Haltezeit. Die Ausgabe von 2012 legt oberhalb von 80 K an der Kaltgrenze eine Toleranz von +0/−4 K und an der Heißgrenze von −0/+4 K fest; das Testniveau darf also überschritten, aber nicht unterschritten werden. Die Messgenauigkeit beträgt ±2 K; unterhalb von 80 K werden Toleranz und Genauigkeit fallweise festgelegt. Die Haltezeit ist definiert als die Dauer, die nötig ist, damit innere Teile des Geräts die Temperatur erreichen, gezählt ab Beginn der Stabilisierungsphase. Projekte sollten diese Angaben mit dem aktuellen Text der Rev.1 und ihrem Tailoring abgleichen.",
+          "bulletsHeading": "Was die Normen dem Projekt überlassen",
+          "bullets": [
+            "Zahlenwert der Änderungsrate, die als stabil gilt",
+            "Länge des Zeitfensters, über das die Rate ausgewertet wird",
+            "Welche Sensoren das Kriterium gleichzeitig erfüllen müssen",
+            "Toleranzen unterhalb von 80 K, für die ECSS eine fallweise Festlegung verlangt",
+            "Dauer der Haltezeit über den Grundsatz hinaus, dass innere Teile die Temperatur erreichen müssen"
+          ]
+        },
+        {
+          "title": "Die Physik hinter der thermischen Verzögerung",
+          "content": "Ein einfaches Modell mit konzentrierten Parametern erklärt den größten Teil des Stabilisierungsverhaltens. Ist ein Prüfling mit der Wärmekapazität C über einen Leitwert G an seine Randbedingung gekoppelt, nähert sich seine Temperatur dieser exponentiell mit der Zeitkonstante τ = C/G. Nach einer Zeitkonstante sind etwa 63 % des Sprungs erreicht, nach drei etwa 95 % und nach fünf mehr als 99 %. Im Vakuum gibt es keine Konvektion; G setzt sich aus der Wärmeleitung über Montageschnittstellen und der Strahlung zum Shroud zusammen.",
+          "content2": "Die Strahlung macht das kalte Ende langsam. Der Strahlungsleitwert wächst mit der dritten Potenz der absoluten Temperatur, sodass eine Kopplung, die nahe Raumtemperatur wirksam ist, zur Kaltgrenze hin deutlich schwächer wird: Bei 150 K beträgt sie etwa ein Achtel ihres Werts bei 300 K, und die Zeitkonstante wächst entsprechend. Deshalb stabilisiert sich ein kaltes Plateau im selben Aufbau oft wesentlich langsamer als ein heißes, und deshalb verkürzt eine konduktive Kopplung über eine temperierte Platte die Kaltstabilisierung so wirksam.",
+          "bulletsHeading": "Parameter, die die Zeitkonstante bestimmen",
+          "bullets": [
+            "Masse und spezifische Wärme des Prüflings einschließlich Vorrichtungen und Kabelbaum",
+            "Kontaktleitwert verschraubter Schnittstellen und eventueller Zwischenlagen",
+            "Emissionsgrad von Prüfling- und Shroudoberflächen und Sichtfaktor zwischen ihnen",
+            "Absolutes Temperaturniveau über die kubische Abhängigkeit der Strahlung",
+            "Innere Kopplungen zwischen Gehäuse, Leiterplatten und Bauteilen"
+          ]
+        },
+        {
+          "title": "Warum ein Ratenkriterium eine Zeitkonstante braucht",
+          "content": "Bei exponentieller Annäherung entspricht die Änderungsrate zu jedem Zeitpunkt dem verbleibenden Abstand zur Endtemperatur geteilt durch die Zeitkonstante. Ein Stabilisierungskriterium von 1 °C pro Stunde bedeutet daher für unterschiedliche Hardware sehr Verschiedenes: Bei einem Prüfling mit einer Zeitkonstante von einer halben Stunde beträgt der verbleibende Abstand etwa 0,5 °C, bei einem massiven Prüfling mit acht Stunden Zeitkonstante etwa 8 °C, also weit außerhalb einer Toleranz von ±2 °C. Ein Ratenkriterium ist nur aussagekräftig, wenn es mit Blick auf die Zeitkonstante des Prüflings gewählt wird.",
+          "content2": "Praktisch folgt daraus, dass die Ratenschwelle aus der Toleranz abgeleitet werden sollte. Muss der verbleibende Abstand klein gegenüber dem Toleranzband sein, ergibt sich die zulässige Rate näherungsweise aus diesem Abstand geteilt durch die erwartete Zeitkonstante. Bei trägen Prüflingen wird ein reines Ratenkriterium sehr eng und leicht vom Sensorrauschen überdeckt; eine Alternative ist, die exponentielle Annäherung anzupassen und die vorhergesagte Endtemperatur zu bewerten, wie es bei Thermal-Balance-Tests häufig geschieht.",
+          "bulletsHeading": "Prüfungen vor der Festlegung einer Ratenschwelle",
+          "bullets": [
+            "Geschätzte Zeitkonstante heiß und kalt, aus Analyse oder früheren Tests",
+            "Durch die Schwelle implizierter Restabstand im Vergleich zum Toleranzband",
+            "Sensorauflösung und Rauschen im Verhältnis zur erwarteten Änderung im Zeitfenster",
+            "Auswertemethode: Zweipunktdifferenz oder lineare Regression über das Zeitfenster",
+            "Ob das Kriterium für alle Referenzsensoren oder eine definierte Teilmenge gelten muss"
+          ]
+        },
+        {
+          "title": "Was die Haltezeit bestimmt",
+          "content": "Die Haltezeit beginnt, wenn die Referenzsensoren das Stabilisierungskriterium erfüllen, nicht wenn die Kammer ihren Sollwert erreicht. Ihr erster Zweck ist der aus der ECSS-Definition: Innere Teile, die nur schwach an den Referenzpunkt gekoppelt sind, etwa Bauteile auf einer Leiterplatte in einem Gehäuse, müssen ebenfalls die Temperatur erreichen. Ihre innere Zeitkonstante kann wesentlich länger sein als die des Gehäuses; eine Haltezeit von einigen inneren Zeitkonstanten ist daher das physikalische Minimum.",
+          "content2": "Der zweite Zweck ist funktional. Leistungs- und Funktionstests laufen an den heißen und kalten Extremen, die Haltezeit muss also mindestens so lang sein wie die Testsequenz einschließlich Vorbereitung, Datenübertragung und möglicher Wiederholungen. Betriebs- und Nichtbetriebsplateaus, Einschalten bei Kälte oder Hitze und die Eigenerwärmung des bestromten Geräts verändern den thermischen Zustand während der Haltezeit und müssen berücksichtigt werden. GEVS nennt längere Haltezeiten zudem als Ausgleich, wenn die Temperaturzyklen bei Hardware mit kleinem Temperaturbereich im Orbit reduziert werden.",
+          "bulletsHeading": "Eingangsgrößen für die Dauer der Haltezeit",
+          "bullets": [
+            "Innere Zeitkonstanten von Leiterplatten und Bauteilen aus dem Thermalmodell",
+            "Dauer der Funktions- oder Leistungstestsequenz auf dem Plateau",
+            "Bedarf an Betriebs- und Nichtbetriebsphasen sowie Einschalttests an den Extremen",
+            "Eigenerwärmung des bestromten Prüflings und ihr Einfluss auf den Referenzsensor",
+            "Vertragliche Mindestdauern und eventuelle Anforderungen an Testwiederholungen"
+          ]
+        },
+        {
+          "title": "Thermal Balance braucht eine andere Definition von stabil",
+          "content": "In Thermalzyklen- und Thermalvakuumtests ist die Stabilisierung ein Tor vor der Haltezeit; der Prüfling muss lediglich innerhalb der Toleranz liegen. In einem Thermal-Balance-Test ist der stationäre Zustand selbst die Messung. Die aufgezeichneten Temperaturen werden zur Korrelation mit den Vorhersagen des Thermalmodells verglichen, sodass jede verbleibende Drift als scheinbarer Modellfehler erscheint. Die Kriterien für den stationären Zustand sind daher deutlich enger als bei Zyklentests und werden üblicherweise zwischen Testingenieuren und Thermalanalytikern vereinbart.",
+          "content2": "Da die Zeitkonstanten großer oder gut isolierter Prüflinge viele Stunden erreichen können, kann das Warten auf eine enge Ratenschwelle Tage an Kammerzeit kosten. Übliche Antworten sind, die exponentielle Annäherung bis zur Asymptote zu extrapolieren und einen Testfall zu akzeptieren, wenn der vorhergesagte Rest unter einem festgelegten Wert liegt, oder statt eines reinen stationären Zustands eine transiente Korrelation durchzuführen. Beide Ansätze müssen vor dem Test in der Testspezifikation beschrieben sein, damit die Entscheidung, einen Testfall zu beenden, die protokollierte Anwendung einer Regel ist und kein Urteil um drei Uhr nachts.",
+          "bulletsHeading": "Bestandteile eines Thermal-Balance-Kriteriums",
+          "bullets": [
+            "Ratenschwelle je Sensorgruppe, abgeleitet aus der geforderten Korrelationsgenauigkeit",
+            "Mindestdauer, über die die Schwelle eingehalten werden muss",
+            "Extrapolationsmethode und zulässiger vorhergesagter Rest, falls verwendet",
+            "Stabilität der Randbedingungen: Shroud, Heizleistung und absorbierter Strahlungsfluss",
+            "Umgang mit Sensoren, die wegen bekannter langsamer Wärmepfade driften"
+          ]
+        },
+        {
+          "title": "Wie Kammer und Aufbau die Stabilisierung verkürzen",
+          "content": "Die Kammer ändert nichts an der Physik des Prüflings, wohl aber an den Randbedingungen. Ein Shroud oder eine Thermalplatte mit ausreichender Kühl- und Heizleistung erreicht den Sollwert schnell und hält ihn ohne Schwingung, sodass der Prüfling einen sauberen Sprung sieht. Gezieltes Übersteuern, bei dem die Randbedingung für begrenzte Zeit über das Ziel hinaus gefahren wird, verkürzt die Annäherung, muss aber durch die Grenzwerte des Prüflings und die maximal zulässige Änderungsrate begrenzt und dokumentiert werden.",
+          "content2": "Getrennte Temperaturregelzonen erlauben es, konduktive und radiative Randbedingungen unabhängig einzustellen; das hilft, wenn ein Gerät auf einer Platte montiert ist und zugleich zum Shroud abstrahlt. Ausreichend viele Sensoren, platziert nach dem Thermalmodell, zeigen, ob der Prüfling gleichmäßig temperiert ist oder ob ein langsamer innerer Pfad noch nachläuft. Werden Regel- und Referenztemperaturen auf einer gemeinsamen Zeitbasis aufgezeichnet, zusammen mit dem Zeitpunkt, zu dem jedes Kriterium erfüllt war, lassen sich Stabilisierung und Haltezeit nachträglich prüfen.",
+          "bulletsHeading": "Aufbaupunkte mit Einfluss auf die Stabilisierungszeit",
+          "bullets": [
+            "Kühl- und Heizleistung von Shroud und Platte im Verhältnis zur Wärmekapazität des Prüflings",
+            "Abstimmung des Regelkreises, um Schwingungen um den Sollwert zu vermeiden",
+            "Grenzen des Übersteuerns: maximale Randtemperatur, Dauer und Rate",
+            "Unabhängige Zonen für konduktive und radiative Randbedingungen, wo erforderlich",
+            "Anzahl und Lage der Sensoren, abgeleitet aus dem Thermalmodell",
+            "Protokoll mit Zeitstempeln für Beginn und Ende von Stabilisierung und Haltezeit je Plateau"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "Wie definieren Normen die thermische Stabilisierung und wovon hängt die Haltezeit ab?",
+          "a": "GSFC-STD-7000B definiert Stabilisierung als den Punkt, an dem die Änderungsrate so weit gesunken ist, dass der Prüfling für die erforderliche Dauer innerhalb der Toleranz bleibt. ECSS-E-ST-10-03C definiert die Haltezeit als die Dauer, die innere Teile brauchen, um die Temperatur zu erreichen, gezählt ab Beginn der Stabilisierung. Keine der Normen legt einen allgemeingültigen Zahlenwert fest. Die Haltezeit ergibt sich aus den inneren Zeitkonstanten der Hardware und aus der Länge der Funktionstests, die auf dem Plateau laufen müssen."
+        },
+        {
+          "q": "Ist 1 °C pro Stunde ein gutes Stabilisierungskriterium?",
+          "a": "Es kann eines sein, aber nur für Hardware mit kurzer Zeitkonstante. Bei exponentieller Annäherung entspricht der verbleibende Abstand zur Endtemperatur der Rate multipliziert mit der Zeitkonstante. Ein Prüfling mit acht Stunden Zeitkonstante, der sich noch um 1 °C pro Stunde ändert, liegt etwa 8 °C von seiner Endtemperatur entfernt. Die Schwelle sollte daher für jedes Plateau aus dem Toleranzband und der erwarteten Zeitkonstante abgeleitet werden."
+        },
+        {
+          "q": "Beginnt die Haltezeit, wenn der Shroud seinen Sollwert erreicht?",
+          "a": "Nein. Die Testtemperatur ist am Prüfling definiert, an seinen Referenzpunkten. Die Haltezeit beginnt, wenn diese Referenzsensoren das Stabilisierungskriterium innerhalb der Toleranz erfüllen. Die Temperatur von Shroud oder Platte ist eine Regelgröße; sie erreicht ihren Sollwert meist viel früher als die Hardware, besonders am kalten Ende, wo die Strahlungskopplung schwach ist. Wird die Haltezeit ab der Regeltemperatur gezählt, verkürzt sich die wirksame Durchwärmung, und der Funktionstest kann seine Aussagekraft verlieren."
+        },
+        {
+          "q": "Warum dauert das kalte Plateau länger als das heiße?",
+          "a": "Im Vakuum erfolgt ein großer Teil des Wärmeaustauschs zwischen Prüfling und Shroud über Strahlung, und der Strahlungsleitwert wächst mit der dritten Potenz der absoluten Temperatur. Bei 150 K beträgt er etwa ein Achtel seines Werts bei 300 K; die Zeitkonstante steigt, und die Annäherung verlangsamt sich. Die konduktive Kopplung über eine temperierte Platte hängt deutlich weniger vom Temperaturniveau ab. Deshalb verkürzt die Montage auf einer geregelten Schnittstelle die Kaltstabilisierung erheblich."
+        },
+        {
+          "q": "Lässt sich die Stabilisierung durch Übersteuern des Shrouds verkürzen?",
+          "a": "Ja. Wird die Randbedingung für begrenzte Zeit über die Zieltemperatur hinaus gefahren, steigt der Wärmestrom, und der Prüfling erreicht die Temperatur schneller. Das Übersteuern muss innerhalb der Betriebs- und Nichtbetriebsgrenzen des Prüflings bleiben, eine eventuelle maximale Änderungsrate einhalten und früh genug enden, um ein Überschwingen an den Referenzsensoren zu vermeiden. Regel und Grenzen gehören in die Testprozedur, die tatsächlich gefahrenen Randtemperaturen in den Testbericht."
+        }
+      ],
+      "conclusion": "Thermische Stabilisierung ist kein einzelner Zahlenwert, sondern eine Beziehung zwischen Rate, Toleranz und Zeitkonstante. Die Normen liefern den Rahmen: Testtemperaturen am Prüfling, Toleranzbänder und eine Haltezeit, in der auch innere Teile die Temperatur erreichen. Das Projekt liefert die Zahlen, abgeleitet aus Thermalmodell und Funktionstestsequenz. Vor dem Test festgelegt und auf die richtigen Sensoren angewendet, machen diese Kriterien jedes Plateau belastbar und die Kammerzeit planbar."
+    }
+  }
+]

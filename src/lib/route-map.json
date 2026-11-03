@@ -1084,6 +1084,19 @@
     }
   },
   {
+    "en": "/resources/blog/thermal-stabilisation-criteria-dwell-times",
+    "de": "/de/ressourcen/blog/temperaturstabilisierung-haltezeiten",
+    "seoKey": "blogThermalStabilisationCriteriaDwellTimes",
+    "sitemap": {
+      "group": "resources",
+      "priority": 0.55,
+      "changefreq": "monthly",
+      "sources": [
+        "src/content/blog"
+      ]
+    }
+  },
+  {
     "en": "/careers",
     "de": "/de/karriere",
     "seoKey": "careers",
