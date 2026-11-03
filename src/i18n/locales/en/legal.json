@@ -428,7 +428,8 @@
       "28": {
         "title": "Assignment",
         "c1": "28.1 The Customer may not assign rights or obligations under the Contract without Deepvac's prior written consent.",
-        "c2": "28.2 Deepvac may assign monetary claims to third parties for financing or factoring purposes."
+        "c2": "28.2 Deepvac may assign monetary claims to third parties for financing or factoring purposes.",
+        "c3": "28.3 Deepvac may transfer the Contract, in whole or in part (for example the rights and obligations relating to software licenses, maintenance, or support services), to an Affiliate by notice to the Customer in text form, provided that the Affiliate assumes the transferred obligations. Deepvac remains jointly and severally liable with the Affiliate for obligations that arose before the transfer. The Customer's rights under the Contract are not reduced by the transfer. Deepvac may also perform its obligations through Affiliates; clause 6.2 applies accordingly."
       },
       "29": {
         "title": "Governing Law, Jurisdiction, and Place of Performance",

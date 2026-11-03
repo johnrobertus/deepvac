@@ -167,7 +167,7 @@ export default function TermsAndConditions() {
               <p>{t("terms.sections.27.c3")}</p>
             </LS>
 
-            <SimpleSection n="28" t={t} keys={["c1","c2"]} />
+            <SimpleSection n="28" t={t} keys={["c1","c2","c3"]} />
             <SimpleSection n="29" t={t} keys={["c1","c2","c3","c4"]} />
             <SimpleSection n="30" t={t} keys={["c1","c2"]} />
             <SimpleSection n="31" t={t} keys={["c1","c2"]} />
