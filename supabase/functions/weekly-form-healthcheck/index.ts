@@ -17,7 +17,7 @@ const SUPABASE_URL = Deno.env.get("SUPABASE_URL")!;
 const ANON_KEY = Deno.env.get("SUPABASE_ANON_KEY")!;
 const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY");
 
-const HEALTHCHECK_TO = "info@deepvac.space";
+const HEALTHCHECK_TO = ["robertus@deepvac.space", "Opalikhin@deepvac.space", "sales@deepvac.space"];
 const HEALTHCHECK_FROM = "Deepvac Monitor <noreply@deepvac.space>";
 
 type CheckResult = {
@@ -182,7 +182,7 @@ async function sendSummary(results: CheckResult[]): Promise<void> {
     <hr/>
     <p style="color:#888;font-size:12px;">
       Submissions are tagged with <code>source=healthcheck-weekly-*</code> and can be filtered in <code>inquiry_logs</code>.
-      Two synthetic inquiry emails to info@deepvac.space are expected each week — please ignore them.
+      Two synthetic inquiry emails to the sales team are expected each week — please ignore them.
     </p>`;
 
   try {
@@ -194,7 +194,7 @@ async function sendSummary(results: CheckResult[]): Promise<void> {
       },
       body: JSON.stringify({
         from: HEALTHCHECK_FROM,
-        to: [HEALTHCHECK_TO],
+        to: HEALTHCHECK_TO,
         subject,
         html,
       }),
