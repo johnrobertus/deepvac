@@ -246,5 +246,9 @@
   "blogThermalStabilisationCriteriaDwellTimes": {
     "title": "TVAC Stabilisation Criteria and Dwell Times | Deepvac",
     "description": "How standards define thermal stabilisation in TVAC, how rate criteria relate to thermal time constants and what determines the dwell time at hot and cold."
+  },
+  "blogThermalCycleCountMargins": {
+    "title": "Thermal Cycle Numbers and Margins | Deepvac",
+    "description": "Why ECSS, GEVS and SMC-S-016 differ on thermal cycle numbers and qualification and acceptance margins, and how to compare and tailor them for a TVAC campaign."
   }
 }
