@@ -1,0 +1,300 @@
+[
+  {
+    "articleKey": "thermalCycleCountMargins",
+    "enSlug": "thermal-cycle-count-margins",
+    "deSlug": "thermalzyklen-anzahl-margen",
+    "category": "basics",
+    "datePublished": "2026-11-05",
+    "dateModified": "2026-11-05",
+    "seoKey": "blogThermalCycleCountMargins",
+    "relatedPaths": [
+      "/services/testing-services",
+      "/products/options/temperature-control-zones",
+      "/products/standard-series"
+    ],
+    "relatedArticles": [
+      "aerospaceQualification",
+      "tvacTestTypes",
+      "ecssStandardsOverview"
+    ],
+    "searchIntent": {
+      "en": {
+        "primaryKeyword": "thermal cycling qualification acceptance margins",
+        "primaryQuestion": "Why do ECSS, GEVS and SMC-S-016 prescribe different cycle numbers and margins?"
+      },
+      "de": {
+        "primaryKeyword": "Thermalzyklen Qualifikation Abnahme Margen",
+        "primaryQuestion": "Warum schreiben ECSS, GEVS und SMC-S-016 unterschiedliche Zyklenzahlen und Margen vor?"
+      }
+    },
+    "references": [
+      {
+        "title": "ECSS-E-ST-10-03C Rev.1: Space engineering, Testing (31 May 2022)",
+        "publisher": "European Cooperation for Space Standardization (ECSS)",
+        "url": "https://ecss.nl/home/ecss-e-st-10-03c-rev-1-testing-31-may-2022/"
+      },
+      {
+        "title": "GSFC-STD-7000B: General Environmental Verification Standard (GEVS) for GSFC Flight Programs and Projects (28 April 2021)",
+        "publisher": "NASA Goddard Space Flight Center",
+        "url": "https://standards.nasa.gov/system/files/tmp/GSFC-STD-7000B_Approved_Admn%20Ext.pdf"
+      },
+      {
+        "title": "TVAC testing services",
+        "publisher": "Deepvac GmbH",
+        "url": "https://deepvac.space/services/testing-services"
+      }
+    ],
+    "technicalNote": {
+      "en": "Standards are summarised here for orientation. Cycle numbers, margins, tolerances and the rules for combining vacuum and ambient cycles differ between editions and between equipment, subsystem and system level, so this article deliberately explains their logic rather than reproducing every table. The contract, the verification plan, the test specification and any project-specific tailoring remain binding. Where Deepvac chamber options or services are referenced, they describe reference configurations; binding values depend on chamber size, pumping and thermal concept, test set-up and the quotation.",
+      "de": "Die Normen sind hier zur Orientierung zusammengefasst. Zyklenzahlen, Margen, Toleranzen und die Regeln zur Kombination von Vakuum- und Umgebungszyklen unterscheiden sich zwischen Ausgaben sowie zwischen Geräte-, Subsystem- und Systemebene; dieser Artikel erklärt daher bewusst ihre Logik, statt jede Tabelle wiederzugeben. Verbindlich bleiben Vertrag, Verifikationsplan, Testspezifikation und jedes projektspezifische Tailoring. Soweit auf Deepvac-Kammeroptionen oder Leistungen verwiesen wird, beschreiben diese Referenzkonfigurationen; verbindliche Werte hängen von Kammergröße, Pump- und Thermalkonzept, Testaufbau und Angebot ab."
+    },
+    "en": {
+      "title": "How Many Thermal Cycles, and Why: Qualification and Acceptance Margins Compared",
+      "description": "Why ECSS-E-ST-10-03C Rev.1, GSFC-STD-7000B and SMC-S-016 set different thermal cycle numbers and temperature margins, what each cycle does physically, and how to compare and tailor them.",
+      "seoTitle": "Thermal Cycle Numbers and Margins | Deepvac",
+      "seoDescription": "Why ECSS, GEVS and SMC-S-016 differ on thermal cycle numbers and qualification and acceptance margins, and how to compare and tailor them for a TVAC campaign.",
+      "intro": "A test specification that calls for a certain number of thermal cycles at certain temperatures looks like a simple instruction. Behind it are two separate engineering decisions: how far beyond the expected flight temperatures the hardware is driven, and how often it is driven there. European projects following ECSS-E-ST-10-03C Rev.1, NASA projects following GSFC-STD-7000B and US national security programmes following SMC-S-016 answer both questions differently. This article explains what margins and cycles are meant to prove, which physical damage mechanisms they address, why the three standards weigh them differently, and how to compare or tailor them without mixing incompatible numbers.",
+      "sections": [
+        {
+          "title": "Margin and cycle count answer different questions",
+          "content": "A temperature margin defines the severity of a single excursion: how far beyond the expected flight range the hardware is taken. A cycle count defines the repetition: how many times that excursion is applied. The two serve different purposes. The margin covers uncertainty in thermal predictions and demonstrates that the design works outside its expected envelope. The cycle count addresses damage that accumulates with each temperature change, and it gives latent workmanship defects the opportunity to become visible before launch.",
+          "content2": "All three standards also separate the purpose of a test from the hardware it is run on. Qualification proves the design on a dedicated model and may consume part of its life. Acceptance screens each flight unit for manufacturing defects without consuming significant life. Protoflight combines both on flight hardware: qualification temperatures, usually with a reduced number of cycles or reduced duration, so that the unit is demonstrated without being worn out.",
+          "bulletsHeading": "Terms to define before comparing standards",
+          "bullets": [
+            "Test purpose: qualification, acceptance or protoflight",
+            "Hardware level: equipment or unit, subsystem, or complete space segment element",
+            "Reference temperatures: calculated, predicted, design, acceptance or qualification range",
+            "What counts as one cycle: start and end point, and whether a partial cycle is counted",
+            "Whether cycles are run in vacuum, at ambient pressure, or as a defined combination"
+          ]
+        },
+        {
+          "title": "From predicted temperature to test temperature",
+          "content": "Every margin is added to a reference, and the references differ. GSFC-STD-7000B states its margins relative to the maximum and minimum predicted flight temperatures: for qualification and protoflight, the test temperatures extend 10 °C beyond the predicted extremes; for acceptance, 5 °C. Because the reference is the prediction, the uncertainty of the thermal model is effectively absorbed in the margin, and the predicted values must be traceable to the current analysis.",
+          "content2": "ECSS builds a chain of ranges instead. The thermal analysis delivers calculated temperatures; an uncertainty allowance turns them into predicted temperatures; the design range, the acceptance range and the qualification range follow, each separated by a margin defined in the thermal control and testing standards. The result can end close to the GEVS levels, but the individual steps are different, and a value called a margin in one document is not necessarily the same quantity in another.",
+          "bulletsHeading": "Checks on the temperature chain",
+          "bullets": [
+            "Which thermal model revision the predicted extremes come from",
+            "Whether the model uncertainty is a separate allowance or included in the test margin",
+            "Hot and cold operating limits and non-operating limits, treated separately",
+            "Tolerance band and measurement accuracy at the test plateau",
+            "Component derating limits that may cap the qualification temperature"
+          ]
+        },
+        {
+          "title": "What a thermal cycle does to hardware",
+          "content": "Each temperature change makes materials with different coefficients of thermal expansion strain against each other: solder joints between ceramic packages and printed circuit boards, bonded optics in metallic mounts, potting compounds around wires, bolted joints with dissimilar materials. In the low-cycle fatigue regime, the number of cycles to failure falls steeply as the strain range per cycle grows, a relationship usually described by a Coffin-Manson law. Range and count are therefore linked: a wider range consumes more life per cycle.",
+          "content2": "This explains the different roles of the tests. Acceptance cycling is a screen: a defective joint, a cracked die attach or a marginal crimp tends to fail within the first few cycles, while sound hardware loses only a small fraction of its fatigue life. Qualification cycling is a demonstration: the design must survive more cycles at a wider range than any flight unit will see in testing, so that acceptance testing, retests and the mission itself are covered with margin.",
+          "bulletsHeading": "Damage mechanisms that cycling addresses",
+          "bullets": [
+            "Solder joint fatigue from expansion mismatch between package and board",
+            "Cracking of die attach, wire bonds and ceramic capacitors",
+            "Debonding of adhesives, coatings and optical mounts",
+            "Loosening or preload loss of bolted joints with dissimilar materials",
+            "Intermittent contacts in connectors and crimps that only open at temperature extremes"
+          ]
+        },
+        {
+          "title": "Three standards, three philosophies",
+          "content": "ECSS-E-ST-10-03C Rev.1 is written for the European model philosophy, in which qualification is often performed on a dedicated qualification model and flight units receive acceptance tests. It defines cycle numbers per test type and level, and it allows part of the thermal cycling at equipment level to be performed at ambient pressure, with vacuum cycles retained where vacuum-specific behaviour matters. GSFC-STD-7000B is built around protoflight practice, so many flight units are tested at qualification temperatures, and it addresses hardware with a small on-orbit temperature range by allowing longer dwell times in place of some cycling.",
+          "content2": "SMC-S-016 descends from MIL-STD-1540 and reflects programmes with long production runs of units. It places strong weight on unit-level thermal cycling as a workmanship screen, and it sizes qualification so that the design is shown to tolerate the full acceptance exposure, including possible retests. Its cycle counts at unit level are therefore driven less by a single mission profile and more by the statistics of screening production hardware.",
+          "bulletsHeading": "Where the philosophies differ",
+          "bullets": [
+            "Reference for margins: predicted extremes or a chain of design and acceptance ranges",
+            "Typical model philosophy: dedicated qualification model or protoflight",
+            "Weight given to ambient-pressure cycling compared with vacuum cycling",
+            "Treatment of retests and how they are covered by qualification",
+            "Allowance for hardware with a small flight temperature range"
+          ]
+        },
+        {
+          "title": "Vacuum cycles and ambient cycles",
+          "content": "Thermal cycling at ambient pressure with dry nitrogen or air is faster and cheaper than cycling in vacuum. Convection couples the hardware tightly to the chamber air, transitions are quick and many cycles fit into a day. For screening workmanship defects driven by expansion mismatch, the strain range is what matters, and ambient cycles deliver it efficiently. This is why the standards allow, in defined proportions, ambient cycles to carry part of the cycle count.",
+          "content2": "Vacuum adds effects that ambient cycling cannot reproduce. Heat is exchanged by conduction and radiation only, so internal gradients and hot spots on powered units appear as they will in orbit. Outgassing, cold welding risk on mechanisms, and corona or arcing in the pressure range during pump-down are vacuum phenomena. The vacuum portion of a cycle programme should therefore be sized to verify these behaviours, while the ambient portion delivers the bulk of the screening.",
+          "bulletsHeading": "Questions for splitting the cycle programme",
+          "bullets": [
+            "Which functions depend on vacuum heat transfer, and must be tested hot and cold in vacuum",
+            "Whether powered units have dissipation that changes internal gradients in vacuum",
+            "Risk of corona or arcing in high-voltage circuits during pressure transition",
+            "Condensation protection during ambient cycling, for example with a dry GN₂ purge",
+            "Whether the contract requires a minimum number of cycles in vacuum"
+          ]
+        },
+        {
+          "title": "Comparing and tailoring across standards",
+          "content": "Many programmes inherit more than one standard: a European prime contractor working to ECSS, a payload provider with GEVS heritage, a unit supplier qualified to SMC-S-016. The common mistake is to compare isolated numbers. A smaller margin over a conservative prediction may be more severe than a larger margin over an optimistic one, and a high unit-level cycle count with a narrow range may consume less life than a few cycles over a wide range.",
+          "content2": "A robust comparison works from the physics. For each unit, the test temperatures are traced back to the same thermal model, the number and range of all cycles across qualification, acceptance and retests are listed, and the resulting fatigue exposure is compared with what the design has demonstrated. Heritage qualification under another standard can then be accepted, supplemented with a delta test or rejected on evidence rather than on the label of the standard.",
+          "bulletsHeading": "Elements of a cross-standard comparison",
+          "bullets": [
+            "Test temperatures of each standard, referred to the same predicted extremes",
+            "Total number of cycles per level, separated into vacuum and ambient",
+            "Temperature range and rate of change per cycle",
+            "Planned acceptance cycles plus allowance for retests on the flight unit",
+            "Heritage qualification evidence and the conditions under which it was obtained",
+            "Delta tests needed to close gaps, with their rationale recorded"
+          ]
+        },
+        {
+          "title": "What the cycle count means for chamber time",
+          "content": "The duration of a cycle is not set by the standard alone. It is the sum of the transition to the first extreme, stabilisation of the reference sensors, the dwell including functional tests, the transition to the other extreme and its stabilisation and dwell. Transition rates are limited both by the chamber's heating and cooling capacity and by any maximum rate specified for the hardware. At the cold end, radiative coupling weakens, so stabilisation often takes longer than at the hot end.",
+          "content2": "A thermal plate with conductive coupling and separate temperature control zones shortens transitions and stabilisation for units that can be mounted on an interface. A shroud with adequate LN₂ or GN₂ capacity keeps the cold transitions within plan. Before the campaign, the cycle duration should be estimated from the item's time constants and the chamber's performance, so that the number of cycles translates into a realistic schedule and coolant consumption.",
+          "bulletsHeading": "Inputs for estimating cycle duration",
+          "bullets": [
+            "Heating and cooling capacity of shroud and thermal plate relative to the item",
+            "Maximum allowed rate of temperature change for the hardware",
+            "Time constants at hot and cold, from analysis or previous tests",
+            "Duration of functional tests at each plateau, including start-up tests",
+            "Coolant consumption per cycle and refill logistics for long campaigns"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "Why do ECSS, GEVS and SMC-S-016 prescribe different cycle numbers and margins?",
+          "a": "They grew out of different programme cultures. ECSS supports a model philosophy with dedicated qualification models and builds margins along a chain of predicted, design, acceptance and qualification ranges. GSFC-STD-7000B is built around protoflight testing and states margins relative to predicted extremes. SMC-S-016, derived from MIL-STD-1540, emphasises unit-level cycling to screen production hardware. Each set of numbers is consistent within its own framework, which is why isolated values should not be compared directly."
+        },
+        {
+          "q": "What margins does GSFC-STD-7000B require for thermal vacuum testing?",
+          "a": "GEVS sets qualification and protoflight test temperatures 10 °C beyond the maximum and minimum predicted flight temperatures, and acceptance test temperatures 5 °C beyond them. The predicted values come from the current thermal analysis, so their traceability matters. Component limits can reduce the achievable margin; any reduction is a tailoring decision that has to be justified and agreed rather than a quiet adjustment of the test profile."
+        },
+        {
+          "q": "Can ambient-pressure thermal cycles replace thermal vacuum cycles?",
+          "a": "Partly. The standards allow a defined share of the cycles to be performed at ambient pressure, because the strain range that screens workmanship defects can be applied faster and at lower cost with convective coupling. Vacuum cycles remain necessary to verify behaviour that depends on radiative and conductive heat transfer, internal gradients of powered units, outgassing and pressure-dependent effects such as corona. The applicable standard and contract define the minimum vacuum share."
+        },
+        {
+          "q": "Why does qualification require more cycles than acceptance?",
+          "a": "Acceptance cycling screens each flight unit for latent defects while consuming only a small part of its fatigue life. Qualification has to show that the design survives everything a flight unit will experience: acceptance testing, possible retests and the mission. It therefore applies more cycles, and over a wider temperature range, than acceptance. Protoflight testing applies qualification temperatures on flight hardware with a reduced duration or cycle count to limit the life consumed."
+        },
+        {
+          "q": "Is a narrower range with more cycles equivalent to a wider range with fewer?",
+          "a": "Not in general. Fatigue damage per cycle grows steeply with strain range, so a few wide cycles can consume more life than many narrow ones. Screening effectiveness also depends on reaching temperatures where marginal joints and contacts actually open. An equivalence can be argued with a damage model calibrated for the relevant materials, but it must be documented and agreed with the customer before it replaces a specified cycle programme."
+        }
+      ],
+      "conclusion": "Cycle counts and margins look like arbitrary numbers only when they are read in isolation. Margins cover prediction uncertainty and demonstrate capability beyond the flight envelope; cycles screen workmanship and demonstrate fatigue life. ECSS, GEVS and SMC-S-016 weigh these goals differently because they support different model philosophies. Traced back to the same thermal model and the same damage mechanisms, their requirements can be compared, combined and tailored on evidence, and the resulting cycle programme can be planned in realistic chamber time."
+    },
+    "de": {
+      "title": "Wie viele Thermalzyklen und warum: Qualifikations- und Abnahmemargen im Vergleich",
+      "description": "Warum ECSS-E-ST-10-03C Rev.1, GSFC-STD-7000B und SMC-S-016 unterschiedliche Zyklenzahlen und Temperaturmargen festlegen, was jeder Zyklus physikalisch bewirkt und wie man sie vergleicht.",
+      "seoTitle": "Thermalzyklen: Anzahl und Margen | Deepvac",
+      "seoDescription": "Warum ECSS, GEVS und SMC-S-016 bei Zyklenzahlen sowie Qualifikations- und Abnahmemargen abweichen und wie Sie diese für eine TVAC-Kampagne vergleichen und anpassen.",
+      "intro": "Eine Testspezifikation, die eine bestimmte Anzahl von Thermalzyklen bei bestimmten Temperaturen fordert, wirkt wie eine einfache Anweisung. Dahinter stehen zwei getrennte technische Entscheidungen: wie weit die Hardware über die erwarteten Flugtemperaturen hinaus belastet wird und wie oft. Europäische Projekte nach ECSS-E-ST-10-03C Rev.1, NASA-Projekte nach GSFC-STD-7000B und Programme der US-Sicherheitsraumfahrt nach SMC-S-016 beantworten beide Fragen unterschiedlich. Dieser Artikel erläutert, was Margen und Zyklen nachweisen sollen, welche physikalischen Schädigungsmechanismen sie adressieren, warum die drei Normen sie unterschiedlich gewichten und wie Sie sie vergleichen oder anpassen, ohne unvereinbare Zahlen zu vermischen.",
+      "sections": [
+        {
+          "title": "Marge und Zyklenzahl beantworten verschiedene Fragen",
+          "content": "Eine Temperaturmarge bestimmt die Schärfe einer einzelnen Auslenkung: wie weit die Hardware über den erwarteten Flugbereich hinaus gefahren wird. Eine Zyklenzahl bestimmt die Wiederholung: wie oft diese Auslenkung aufgebracht wird. Beide dienen unterschiedlichen Zwecken. Die Marge deckt Unsicherheiten der thermischen Vorhersage ab und weist nach, dass die Konstruktion auch außerhalb ihres erwarteten Bereichs funktioniert. Die Zyklenzahl adressiert Schäden, die sich mit jedem Temperaturwechsel aufsummieren, und gibt verborgenen Fertigungsfehlern Gelegenheit, sich vor dem Start zu zeigen.",
+          "content2": "Alle drei Normen trennen zudem den Zweck eines Tests von der Hardware, an der er durchgeführt wird. Die Qualifikation weist die Konstruktion an einem eigenen Modell nach und darf einen Teil seiner Lebensdauer verbrauchen. Die Abnahme prüft jede Flugeinheit auf Fertigungsfehler, ohne nennenswert Lebensdauer zu verbrauchen. Protoflight verbindet beides an Flughardware: Qualifikationstemperaturen, meist mit verringerter Zyklenzahl oder Dauer, damit die Einheit nachgewiesen, aber nicht verschlissen wird.",
+          "bulletsHeading": "Begriffe, die vor einem Normenvergleich festzulegen sind",
+          "bullets": [
+            "Testzweck: Qualifikation, Abnahme oder Protoflight",
+            "Hardwareebene: Gerät, Subsystem oder vollständiges Element des Raumsegments",
+            "Bezugstemperaturen: berechneter, vorhergesagter, Auslegungs-, Abnahme- oder Qualifikationsbereich",
+            "Was als ein Zyklus gilt: Start- und Endpunkt sowie Zählung von Teilzyklen",
+            "Ob Zyklen im Vakuum, bei Umgebungsdruck oder in einer festgelegten Kombination gefahren werden"
+          ]
+        },
+        {
+          "title": "Von der vorhergesagten Temperatur zur Testtemperatur",
+          "content": "Jede Marge wird auf eine Bezugsgröße aufgeschlagen, und diese Bezugsgrößen unterscheiden sich. GSFC-STD-7000B gibt seine Margen relativ zu den maximal und minimal vorhergesagten Flugtemperaturen an: Für Qualifikation und Protoflight liegen die Testtemperaturen 10 °C jenseits der vorhergesagten Extreme, für die Abnahme 5 °C. Da die Vorhersage die Bezugsgröße ist, wird die Unsicherheit des Thermalmodells faktisch von der Marge mit abgedeckt, und die vorhergesagten Werte müssen auf die aktuelle Analyse rückführbar sein.",
+          "content2": "ECSS baut stattdessen eine Kette von Bereichen auf. Die Thermalanalyse liefert berechnete Temperaturen; ein Unsicherheitszuschlag macht daraus vorhergesagte Temperaturen; es folgen Auslegungs-, Abnahme- und Qualifikationsbereich, jeweils getrennt durch eine Marge, die in den Normen für Thermalkontrolle und Test festgelegt ist. Das Ergebnis kann nahe an den GEVS-Niveaus liegen, die einzelnen Schritte sind aber verschieden, und ein Wert, der in einem Dokument Marge heißt, ist nicht zwingend dieselbe Größe wie in einem anderen.",
+          "bulletsHeading": "Prüfungen an der Temperaturkette",
+          "bullets": [
+            "Aus welchem Stand des Thermalmodells die vorhergesagten Extreme stammen",
+            "Ob die Modellunsicherheit ein eigener Zuschlag ist oder in der Testmarge enthalten",
+            "Heiße und kalte Betriebsgrenzen sowie Nichtbetriebsgrenzen, getrennt betrachtet",
+            "Toleranzband und Messgenauigkeit auf dem Testplateau",
+            "Derating-Grenzen von Bauteilen, die die Qualifikationstemperatur begrenzen können"
+          ]
+        },
+        {
+          "title": "Was ein Thermalzyklus mit der Hardware macht",
+          "content": "Jeder Temperaturwechsel verspannt Werkstoffe mit unterschiedlichen Wärmeausdehnungskoeffizienten gegeneinander: Lötstellen zwischen Keramikgehäusen und Leiterplatten, geklebte Optiken in metallischen Fassungen, Vergussmassen um Leitungen, Schraubverbindungen aus ungleichen Werkstoffen. Im Bereich der Kurzzeitermüdung sinkt die Zyklenzahl bis zum Versagen steil, wenn die Dehnungsschwingweite je Zyklus wächst; dieser Zusammenhang wird üblicherweise mit einem Coffin-Manson-Ansatz beschrieben. Temperaturbereich und Zyklenzahl hängen daher zusammen: Ein weiterer Bereich verbraucht mehr Lebensdauer je Zyklus.",
+          "content2": "Daraus erklären sich die unterschiedlichen Rollen der Tests. Abnahmezyklen sind ein Sieb: Eine fehlerhafte Lötstelle, eine gerissene Die-Befestigung oder eine grenzwertige Crimpverbindung versagt meist in den ersten Zyklen, während fehlerfreie Hardware nur einen kleinen Teil ihrer Ermüdungslebensdauer verliert. Qualifikationszyklen sind ein Nachweis: Die Konstruktion muss mehr Zyklen über einen weiteren Bereich überstehen, als eine Flugeinheit im Test je sehen wird, damit Abnahme, Wiederholungstests und die Mission selbst mit Reserve abgedeckt sind.",
+          "bulletsHeading": "Schädigungsmechanismen, die Zyklen adressieren",
+          "bullets": [
+            "Ermüdung von Lötstellen durch Ausdehnungsunterschiede zwischen Bauteil und Leiterplatte",
+            "Risse in Die-Befestigung, Bonddrähten und Keramikkondensatoren",
+            "Ablösung von Klebungen, Beschichtungen und Optikfassungen",
+            "Lockern oder Vorspannkraftverlust von Schraubverbindungen aus ungleichen Werkstoffen",
+            "Intermittierende Kontakte in Steckern und Crimps, die erst an Temperaturextremen öffnen"
+          ]
+        },
+        {
+          "title": "Drei Normen, drei Philosophien",
+          "content": "ECSS-E-ST-10-03C Rev.1 ist für die europäische Modellphilosophie geschrieben, in der die Qualifikation häufig an einem eigenen Qualifikationsmodell erfolgt und Flugeinheiten Abnahmetests erhalten. Die Norm legt Zyklenzahlen je Testart und Ebene fest und erlaubt, auf Geräteebene einen Teil der Thermalzyklen bei Umgebungsdruck durchzuführen, während Vakuumzyklen dort erhalten bleiben, wo vakuumspezifisches Verhalten zählt. GSFC-STD-7000B ist um die Protoflight-Praxis herum aufgebaut, sodass viele Flugeinheiten bei Qualifikationstemperaturen getestet werden; für Hardware mit kleinem Temperaturbereich im Orbit erlaubt GEVS längere Haltezeiten anstelle eines Teils der Zyklen.",
+          "content2": "SMC-S-016 stammt von MIL-STD-1540 ab und spiegelt Programme mit langen Fertigungsserien von Geräten wider. Die Norm gewichtet Thermalzyklen auf Geräteebene stark als Fertigungssieb und bemisst die Qualifikation so, dass die Konstruktion die gesamte Abnahmebelastung einschließlich möglicher Wiederholungstests nachweislich verträgt. Ihre Zyklenzahlen auf Geräteebene folgen daher weniger einem einzelnen Missionsprofil als der Statistik des Aussiebens von Serienhardware.",
+          "bulletsHeading": "Wo sich die Philosophien unterscheiden",
+          "bullets": [
+            "Bezugsgröße der Margen: vorhergesagte Extreme oder Kette aus Auslegungs- und Abnahmebereich",
+            "Typische Modellphilosophie: eigenes Qualifikationsmodell oder Protoflight",
+            "Gewicht von Zyklen bei Umgebungsdruck im Vergleich zu Vakuumzyklen",
+            "Umgang mit Wiederholungstests und deren Abdeckung durch die Qualifikation",
+            "Regelung für Hardware mit kleinem Temperaturbereich im Flug"
+          ]
+        },
+        {
+          "title": "Vakuumzyklen und Umgebungszyklen",
+          "content": "Thermalzyklen bei Umgebungsdruck in trockenem Stickstoff oder Luft sind schneller und günstiger als Zyklen im Vakuum. Konvektion koppelt die Hardware eng an die Kammeratmosphäre, Übergänge verlaufen rasch, und viele Zyklen passen in einen Tag. Für das Aussieben von Fertigungsfehlern, die durch Ausdehnungsunterschiede entstehen, ist die Dehnungsschwingweite entscheidend, und Umgebungszyklen bringen sie effizient auf. Deshalb erlauben die Normen, dass Umgebungszyklen in festgelegten Anteilen einen Teil der Zyklenzahl tragen.",
+          "content2": "Das Vakuum fügt Effekte hinzu, die Umgebungszyklen nicht nachbilden können. Wärme wird nur durch Leitung und Strahlung ausgetauscht, sodass innere Gradienten und Hotspots bestromter Geräte so auftreten wie im Orbit. Ausgasung, das Kaltverschweißungsrisiko bei Mechanismen sowie Korona oder Überschläge im Druckbereich während des Abpumpens sind Vakuumphänomene. Der Vakuumanteil eines Zyklenprogramms sollte daher so bemessen sein, dass er diese Verhaltensweisen verifiziert, während der Umgebungsanteil den Großteil des Aussiebens leistet.",
+          "bulletsHeading": "Fragen zur Aufteilung des Zyklenprogramms",
+          "bullets": [
+            "Welche Funktionen vom Wärmeübergang im Vakuum abhängen und heiß wie kalt im Vakuum zu testen sind",
+            "Ob bestromte Geräte eine Verlustleistung haben, die innere Gradienten im Vakuum verändert",
+            "Risiko von Korona oder Überschlägen in Hochspannungskreisen während des Druckübergangs",
+            "Schutz vor Kondensation bei Umgebungszyklen, etwa durch Spülung mit trockenem GN₂",
+            "Ob der Vertrag eine Mindestzahl von Zyklen im Vakuum fordert"
+          ]
+        },
+        {
+          "title": "Vergleichen und Anpassen über Normgrenzen hinweg",
+          "content": "Viele Programme erben mehr als eine Norm: ein europäischer Hauptauftragnehmer nach ECSS, ein Nutzlastlieferant mit GEVS-Herkunft, ein Gerätelieferant mit Qualifikation nach SMC-S-016. Der häufige Fehler besteht darin, einzelne Zahlen zu vergleichen. Eine kleinere Marge auf eine konservative Vorhersage kann schärfer sein als eine größere auf eine optimistische, und eine hohe Zyklenzahl auf Geräteebene mit engem Bereich kann weniger Lebensdauer verbrauchen als wenige Zyklen über einen weiten Bereich.",
+          "content2": "Ein belastbarer Vergleich geht von der Physik aus. Für jedes Gerät werden die Testtemperaturen auf dasselbe Thermalmodell zurückgeführt, Anzahl und Bereich aller Zyklen aus Qualifikation, Abnahme und Wiederholungstests aufgelistet und die daraus folgende Ermüdungsbelastung mit dem verglichen, was die Konstruktion nachgewiesen hat. Eine Heritage-Qualifikation nach einer anderen Norm lässt sich dann anhand von Belegen anerkennen, durch einen Delta-Test ergänzen oder ablehnen, statt nach dem Namen der Norm.",
+          "bulletsHeading": "Bestandteile eines normübergreifenden Vergleichs",
+          "bullets": [
+            "Testtemperaturen jeder Norm, bezogen auf dieselben vorhergesagten Extreme",
+            "Gesamtzahl der Zyklen je Ebene, getrennt nach Vakuum und Umgebungsdruck",
+            "Temperaturbereich und Änderungsrate je Zyklus",
+            "Geplante Abnahmezyklen zuzüglich Reserve für Wiederholungstests an der Flugeinheit",
+            "Belege der Heritage-Qualifikation und die Bedingungen, unter denen sie entstanden sind",
+            "Erforderliche Delta-Tests zum Schließen von Lücken, mit dokumentierter Begründung"
+          ]
+        },
+        {
+          "title": "Was die Zyklenzahl für die Kammerzeit bedeutet",
+          "content": "Die Dauer eines Zyklus wird nicht von der Norm allein bestimmt. Sie ergibt sich aus dem Übergang zum ersten Extrem, der Stabilisierung der Referenzsensoren, der Haltezeit einschließlich Funktionstests, dem Übergang zum anderen Extrem sowie dessen Stabilisierung und Haltezeit. Die Übergangsraten sind sowohl durch die Heiz- und Kühlleistung der Kammer als auch durch eine eventuell für die Hardware festgelegte maximale Rate begrenzt. Am kalten Ende wird die Strahlungskopplung schwächer, sodass die Stabilisierung dort oft länger dauert als am heißen Ende.",
+          "content2": "Eine Thermalplatte mit konduktiver Kopplung und getrennten Temperaturregelzonen verkürzt Übergänge und Stabilisierung für Geräte, die sich auf einer Schnittstelle montieren lassen. Ein Shroud mit ausreichender LN₂- oder GN₂-Kapazität hält die Kaltübergänge im Plan. Vor der Kampagne sollte die Zyklusdauer aus den Zeitkonstanten des Prüflings und der Leistung der Kammer abgeschätzt werden, damit die Zyklenzahl in einen realistischen Zeitplan und Kühlmittelverbrauch übersetzt wird.",
+          "bulletsHeading": "Eingangsgrößen für die Abschätzung der Zyklusdauer",
+          "bullets": [
+            "Heiz- und Kühlleistung von Shroud und Thermalplatte im Verhältnis zum Prüfling",
+            "Maximal zulässige Temperaturänderungsrate der Hardware",
+            "Zeitkonstanten heiß und kalt, aus Analyse oder früheren Tests",
+            "Dauer der Funktionstests je Plateau, einschließlich Einschalttests",
+            "Kühlmittelverbrauch je Zyklus und Nachfülllogistik bei langen Kampagnen"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "Warum schreiben ECSS, GEVS und SMC-S-016 unterschiedliche Zyklenzahlen und Margen vor?",
+          "a": "Sie sind aus unterschiedlichen Programmkulturen entstanden. ECSS unterstützt eine Modellphilosophie mit eigenen Qualifikationsmodellen und baut Margen entlang einer Kette aus vorhergesagtem, Auslegungs-, Abnahme- und Qualifikationsbereich auf. GSFC-STD-7000B ist um Protoflight-Tests herum aufgebaut und gibt Margen relativ zu den vorhergesagten Extremen an. SMC-S-016, abgeleitet von MIL-STD-1540, betont Zyklen auf Geräteebene zum Aussieben von Serienhardware. Jeder Zahlensatz ist in seinem eigenen Rahmen schlüssig; einzelne Werte sollten deshalb nicht direkt verglichen werden."
+        },
+        {
+          "q": "Welche Margen fordert GSFC-STD-7000B für Thermalvakuumtests?",
+          "a": "GEVS legt die Testtemperaturen für Qualifikation und Protoflight 10 °C jenseits der maximal und minimal vorhergesagten Flugtemperaturen fest, für die Abnahme 5 °C jenseits davon. Die vorhergesagten Werte stammen aus der aktuellen Thermalanalyse, ihre Rückführbarkeit ist daher wichtig. Bauteilgrenzen können die erreichbare Marge verringern; jede Verringerung ist eine Tailoring-Entscheidung, die begründet und vereinbart werden muss, und keine stille Anpassung des Testprofils."
+        },
+        {
+          "q": "Können Thermalzyklen bei Umgebungsdruck Thermalvakuumzyklen ersetzen?",
+          "a": "Teilweise. Die Normen erlauben, einen festgelegten Anteil der Zyklen bei Umgebungsdruck durchzuführen, weil sich die Dehnungsschwingweite, die Fertigungsfehler aussiebt, mit konvektiver Kopplung schneller und kostengünstiger aufbringen lässt. Vakuumzyklen bleiben nötig, um Verhalten zu verifizieren, das von Strahlung und Wärmeleitung, inneren Gradienten bestromter Geräte, Ausgasung und druckabhängigen Effekten wie Korona abhängt. Den Mindestanteil im Vakuum legen die anwendbare Norm und der Vertrag fest."
+        },
+        {
+          "q": "Warum verlangt die Qualifikation mehr Zyklen als die Abnahme?",
+          "a": "Abnahmezyklen sieben jede Flugeinheit auf verborgene Fehler aus und verbrauchen dabei nur einen kleinen Teil ihrer Ermüdungslebensdauer. Die Qualifikation muss zeigen, dass die Konstruktion alles übersteht, was eine Flugeinheit erlebt: Abnahmetests, mögliche Wiederholungstests und die Mission. Sie bringt deshalb mehr Zyklen und einen weiteren Temperaturbereich auf als die Abnahme. Protoflight-Tests fahren Qualifikationstemperaturen an Flughardware mit verringerter Dauer oder Zyklenzahl, um den Lebensdauerverbrauch zu begrenzen."
+        },
+        {
+          "q": "Ist ein engerer Bereich mit mehr Zyklen gleichwertig zu einem weiteren Bereich mit weniger?",
+          "a": "Im Allgemeinen nicht. Die Ermüdungsschädigung je Zyklus steigt steil mit der Dehnungsschwingweite, sodass wenige weite Zyklen mehr Lebensdauer verbrauchen können als viele enge. Die Wirksamkeit des Aussiebens hängt zudem davon ab, Temperaturen zu erreichen, bei denen grenzwertige Verbindungen und Kontakte tatsächlich öffnen. Eine Gleichwertigkeit lässt sich mit einem für die beteiligten Werkstoffe kalibrierten Schädigungsmodell begründen, muss aber dokumentiert und mit dem Kunden vereinbart sein, bevor sie ein festgelegtes Zyklenprogramm ersetzt."
+        }
+      ],
+      "conclusion": "Zyklenzahlen und Margen wirken nur dann willkürlich, wenn man sie isoliert liest. Margen decken Vorhersageunsicherheiten ab und weisen Leistungsfähigkeit jenseits des Flugbereichs nach; Zyklen sieben Fertigungsfehler aus und weisen Ermüdungslebensdauer nach. ECSS, GEVS und SMC-S-016 gewichten diese Ziele unterschiedlich, weil sie unterschiedliche Modellphilosophien unterstützen. Auf dasselbe Thermalmodell und dieselben Schädigungsmechanismen zurückgeführt, lassen sich ihre Anforderungen belegbar vergleichen, kombinieren und anpassen, und das daraus folgende Zyklenprogramm lässt sich in realistischer Kammerzeit planen."
+    }
+  }
+]
