@@ -246,5 +246,9 @@
   "blogThermalStabilisationCriteriaDwellTimes": {
     "title": "Temperaturstabilisierung und Haltezeiten | Deepvac",
     "description": "Wie Normen die thermische Stabilisierung im TVAC definieren, wie Ratenkriterien mit thermischen Zeitkonstanten zusammenhängen und was die Haltezeit bestimmt."
+  },
+  "blogThermalCycleCountMargins": {
+    "title": "Thermalzyklen: Anzahl und Margen | Deepvac",
+    "description": "Warum ECSS, GEVS und SMC-S-016 bei Zyklenzahlen sowie Qualifikations- und Abnahmemargen abweichen und wie Sie diese für eine TVAC-Kampagne vergleichen und anpassen."
   }
 }

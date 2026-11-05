@@ -1097,6 +1097,19 @@
     }
   },
   {
+    "en": "/resources/blog/thermal-cycle-count-margins",
+    "de": "/de/ressourcen/blog/thermalzyklen-anzahl-margen",
+    "seoKey": "blogThermalCycleCountMargins",
+    "sitemap": {
+      "group": "resources",
+      "priority": 0.55,
+      "changefreq": "monthly",
+      "sources": [
+        "src/content/blog"
+      ]
+    }
+  },
+  {
     "en": "/careers",
     "de": "/de/karriere",
     "seoKey": "careers",
